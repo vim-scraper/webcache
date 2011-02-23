@@ -1,0 +1,316 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+  <link rel="Stylesheet" type="text/css" href="/css/style.css" >
+  <title>spinner.vim - fast buffer/file/tab/window switching plugin with only 3 keys. : vim online</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <meta name="KEYWORDS" content="Vim, Vi IMproved, text editor, home, documentation, tips, scripts, news">
+  <link rel="shortcut icon" type="image/x-icon" href="/images/vim_shortcut.ico">
+</head>
+
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff"> 
+
+<!-- HEADER, SPONSOR IMAGE, VIM IMAGE AND BOOK AD -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+  <td class="lightbg">&nbsp;&nbsp;&nbsp;</td>
+  <td class="lightbg" align="left"><a href="/sponsor/index.php"><img src="/images/sponsorvim.gif" alt="sponsor Vim development" border="0"></a></td>
+    <td class="lightbg" align="center"><a href="/index.php"><img src="/images/vim_header.gif" border="0" alt="Vim logo"></a></td>
+    <td class="lightbg" align="right"><a href="http://iccf-holland.org/click5.html"><img src="/images/buyhelplearn.gif" alt="Vim Book Ad" border="0"></a></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="darkbg"><img src="/images/spacer.gif" width="1" height="10" alt=""></td>
+  </tr>
+</table>
+<!-- THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+  <col width="180">
+  <col width="1">
+
+  <tr valign="top">
+    <td class="sidebar">
+      <table width="180" cellpadding="4" cellspacing="0" border="0">
+        <tr valign="top">
+          <td class="sidebar">
+
+<!-- INCLUDE THE PAGE NAVIGATION -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+    <tr>
+        <td><small>not logged in (<a href="/login.php">login</a>)</small></td>
+    </tr>
+    <tr><td>
+<small>&nbsp;</small>
+<form action="http://www.google.com/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-3005259998294962:bvyni59kjr1" />
+    <input type="hidden" name="ie" value="ISO-8859-1" />
+    <input type="text" name="q" size="20" />
+    <br>
+    <input type="submit" name="sa" value="Search" />
+  </div>
+</form>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+    </td></tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="1"></td>
+    </tr>
+    <tr>
+        <td class="darkbg"><img src="/images/spacer.gif" alt='' border="0" height="3"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="2"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/index.php">Home</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/search.php">Advanced search</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/about.php">About Vim</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/community.php">Community</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/news/news.php">News</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/sponsor/index.php">Sponsoring</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/trivia.php">Trivia</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/docs.php">Documentation</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/download.php">Download</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/scripts/index.php">Scripts</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/tips/index.php">Tips</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/account/index.php">My Account</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/huh.php">Site Help</a></td>
+        </tr>
+</table>
+
+            <table width="172" cellpadding="0" cellspacing="0" border="0">
+              <tr><td><img src="/images/spacer.gif" alt="" border="0" width="1" height="8"></td></tr>
+              <tr><td class="darkbg"><img src="/images/spacer.gif" width="1" height="3" alt=""></td></tr>
+            </table>
+            <br>
+
+<!-- INCLUDE THE PAGE SIDEBAR TEXT -->
+&nbsp;
+
+          </td>
+        </tr>
+      </table>
+    </td>
+
+    <td class="darkbg"><img src="/images/spacer.gif" width="1" height="1" border="0" alt=""><br></td>
+    <td>
+      <table width="100%" cellpadding="10" cellspacing="0" border="0" bordercolor="red">
+        <tr>
+          <td valign="top">
+
+<span class="txth1">spinner.vim : fast buffer/file/tab/window switching plugin with only 3 keys.</span> 
+
+<br>
+<br>
+
+<!-- karma table -->
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
+  <td>
+    Rating <b>28/10</b>,
+    Downloaded by 314  </td>
+  <td class="lightbg">
+  <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
+  </td>
+  <td>
+    <a href="http://vim.wikia.com/wiki/Script:2877">Vim wiki</a>
+  </td>  
+</tr>
+</table>
+<p>
+
+<table cellspacing="0" cellpadding="0" border="0">
+<tr><td class="prompt">created by</td></tr>
+<tr><td><a href="/account/profile.php?user_id=9013">omi taku</a></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">script type</td></tr>
+<tr><td>utility</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">description</td></tr>
+<tr><td>Introduction:<br>a basic idea is easy pressable key,<br>and quickly switchable search type .<br><br>Basic Usage:<br>Default defined key map is<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;C-CR&gt;&nbsp;&nbsp;&nbsp;&nbsp; open next item .<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;S-CR&gt;&nbsp;&nbsp;&nbsp;&nbsp; open previous item .<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;C-S-CR&gt;&nbsp;&nbsp; switch spinner.vim search mode .<br><br>spinner.vim search mode is switching, when you press &lt;C-S-CR&gt;.<br>Defined search mode is<br>&nbsp;&nbsp;&nbsp;&nbsp;1. open next/previous buffer (initial) .<br>&nbsp;&nbsp;&nbsp;&nbsp;2. open next/previous file in currently opened file directory .<br>&nbsp;&nbsp;&nbsp;&nbsp;3. open next/previous most recently edited file (last 10 files) .<br>&nbsp;&nbsp;&nbsp;&nbsp;4. open next/previous tab .<br>&nbsp;&nbsp;&nbsp;&nbsp;5. open next/previous window .<br>&nbsp;&nbsp;&nbsp;&nbsp;6. open next/previous quickfix line .<br>&nbsp;&nbsp;&nbsp;&nbsp;7. open next/previous quickfix file .<br><br>Spinner Search Mode Details:<br>1.open next/previous buffer (initial) .<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;C-CR&gt; open next buffer.<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;S-CR&gt; open previous buffer.<br>&nbsp;&nbsp;same with :bnext, :bNext .<br><br>2.open next/previous file in currently opened file directory .<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;C-CR&gt; open alphabetically next file.<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;S-CR&gt; open alphabetically previous file .<br>&nbsp;&nbsp;opening files are searched in currently opened file directory.<br><br>&nbsp;&nbsp;current test version use code from<br>&nbsp;&nbsp;nextfile : open the next or previous file<br>&nbsp;&nbsp;(<a href="/scripts/script.php?script_id=2605">vimscript #2605</a>)<br><br>3.open next/previous most recently edited file (last 10 files) .<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;C-CR&gt; open alphabetically next file.<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;S-CR&gt; open alphabetically previous file .<br><br>&nbsp;&nbsp;recently edited file path are stored at openinig file (limit 10 item).<br>&nbsp;&nbsp;stored file is placed at<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$HOME/.vim_spinner_mru_files , or<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$VIM/.vim_spinner_mru_files , or<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$USERPROFILE/_vim_spinner_mru_files .<br><br>&nbsp;&nbsp;current test version use code from<br>&nbsp;&nbsp;mru.vim : Plugin to manage Most Recently Used (MRU) files<br>&nbsp;&nbsp;(<a href="/scripts/script.php?script_id=521">vimscript #521</a>)<br><br>4.open next/previous tab .<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;C-CR&gt; go to next tab.<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;S-CR&gt; go to previous tab.<br>&nbsp;&nbsp;same with :tabnext, :tabNext .<br><br>5.open next/previous window .<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;C-CR&gt; move cursor to next splitted window.<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;S-CR&gt; move cursor to previous splitted window.<br><br>6.open next/previous quickfix line .<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;C-CR&gt; go to next error in quickfix list.<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;S-CR&gt; go to previous error in quickfix list.<br>&nbsp;&nbsp;same with :cnext, :cNext .<br><br>7.open next/previous quickfix file .<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;C-CR&gt; go to next error file in quickfix list.<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;S-CR&gt; go to previous error file in quickfix list.<br>&nbsp;&nbsp;same with :cnfile, :cNfile .<br><br>Other Usage:<br>switch search mode with number.<br>&nbsp;&nbsp;&nbsp;&nbsp;1&lt;C-S-CR&gt;&nbsp;&nbsp;set switch spinner.vim mode to buffer type.<br>&nbsp;&nbsp;&nbsp;&nbsp;2&lt;C-S-CR&gt;&nbsp;&nbsp;set switch spinner.vim mode to same_directory_file type.<br>&nbsp;&nbsp;&nbsp;&nbsp;3&lt;C-S-CR&gt;&nbsp;&nbsp;set switch spinner.vim mode to most_recently_edited type.<br>&nbsp;&nbsp;&nbsp;&nbsp;4&lt;C-S-CR&gt;&nbsp;&nbsp;set switch spinner.vim mode to tab type.<br>&nbsp;&nbsp;&nbsp;&nbsp;5&lt;C-S-CR&gt;&nbsp;&nbsp;set switch spinner.vim mode to window type.<br>&nbsp;&nbsp;&nbsp;&nbsp;6&lt;C-S-CR&gt;&nbsp;&nbsp;set switch spinner.vim mode to quickfix type.<br>&nbsp;&nbsp;&nbsp;&nbsp;7&lt;C-S-CR&gt;&nbsp;&nbsp;set switch spinner.vim mode to quickfix_file type.<br><br>this key map display current spinner search mode.<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;A-CR&gt;&nbsp;&nbsp;&nbsp;&nbsp; display current spinner mode .<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;M-CR&gt;&nbsp;&nbsp;&nbsp;&nbsp; display current spinner mode .<br><br>Configurations:<br>Action Key Map:<br>&nbsp;&nbsp;&nbsp;&nbsp;let g:spinner_nextitem_key = {mapping}<br>&nbsp;&nbsp;&nbsp;&nbsp;let g:spinner_previousitem_key = {mapping}<br>&nbsp;&nbsp;&nbsp;&nbsp;let g:spinner_switchmode_key = {mapping}<br>&nbsp;&nbsp;&nbsp;&nbsp;let g:spinner_displaymode_key = {mapping}<br><br>&nbsp;&nbsp;&nbsp;&nbsp;for example,<br>&nbsp;&nbsp;&nbsp;&nbsp;let g:spinner_nextitem_key = ',n'<br>&nbsp;&nbsp;&nbsp;&nbsp;let g:spinner_previousitem_key = ',p'<br>&nbsp;&nbsp;&nbsp;&nbsp;let g:spinner_switchmode_key = ',s'<br>&nbsp;&nbsp;&nbsp;&nbsp;let g:spinner_displaymode_key = ',d'<br><br>caution!!<br>&nbsp;&nbsp;&nbsp;&nbsp;default mapping is for GUI. default mapping do not work on<br>&nbsp;&nbsp;&nbsp;&nbsp;Windows DOS prompt, PowerShell, Mac OSX Terminal,,,<br><br>Initial Search Type:<br>&nbsp;&nbsp;let g:spinner_initial_search_type = {seach type number}<br><br>&nbsp;&nbsp;for example,<br>&nbsp;&nbsp;let g:spinner_initial_search_type = 2<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1 : buffer (default)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2 : same_directory_file<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3 : most_recently_edited<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4 : tab<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5 : window<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6 : quickfix<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7 : quickfix_file<br><br>Source Repository:<br>&nbsp;&nbsp;&nbsp;&nbsp;<a target="_blank" href="https://code.google.com/p/spinner-vim-plugin/">https://code.google.com/p/spinner-vim-plugin/</A><br></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">install details</td></tr>
+<tr><td>1. open spinner-vim-plugin.vba with Vim editor.<br>2. extract spinner-vim-plugin with :source command.<br><br>&nbsp;&nbsp;&nbsp;&nbsp;source %<br></td></tr>
+<tr><td>&nbsp;</td></tr>
+</table>
+
+<!-- rating table -->
+<form name="rating">
+<input type="hidden" name="script_id" value="2877">
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>rate this script</b></td>
+  <td valign="middle">
+    <input type="radio" name="rating" value="life_changing">Life Changing
+    <input type="radio" name="rating" value="helpful">Helpful
+    <input type="radio" name="rating" value="unfulfilling">Unfulfilling&nbsp;
+    <input type="submit" value="rate">
+  </td>
+</tr>
+</table>
+</form>
+<span class="txth2">script versions</span> (<a href="add_script_version.php?script_id=2877">upload new version</a>)
+<p>
+Click on the package to download.
+<p>
+
+<table cellspacing="2" cellpadding="4" border="0" width="100%">
+<tr class='tableheader'>
+        <th valign="top">package</th>
+    <th valign="top">script version</th>
+    <th valign="top">date</th>
+    <th valign="top">Vim version</th>
+    <th valign="top">user</th>
+    <th valign="top">release notes</th>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=11903">spinner-vim-plugin.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.0</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-12-15</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=9013">omi taku</a></i></td>
+    <td class="rowodd" valign="top" width="2000">to vimball archive.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=11885">spinner.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.5.2</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-12-09</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=9013">omi taku</a></i></td>
+    <td class="roweven" valign="top" width="2000">- update plugins initialize logic.<br>- same_directory_file mode will not open $PATHEXT extension file.<br>&nbsp;&nbsp;(for Windows)</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=11848">spinner.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.5.1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-12-03</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=9013">omi taku</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- update some displaying messages.<br>- add spinner.vim help document.<br>- fix most_recently_edited mode initialize bug.<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=11841">spinner.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.5</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-12-02</i></td>
+    <td class="roweven" valign="top" nowrap>7.2</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=9013">omi taku</a></i></td>
+    <td class="roweven" valign="top" width="2000">Initial upload</td>
+</tr>
+</table>
+<!-- finish off the framework -->
+          </td>
+        </tr>
+      </table>
+    </td>
+
+  </tr>
+</table>
+
+<!-- END OF THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr><td colspan="4" bgcolor="#000000"><img src="/images/spacer.gif" height="2" width="1" alt=""></td></tr>
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr>
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+
+    <td align="left" valign="top"><small>
+      If you have questions or remarks about this site, visit the
+      <a href="http://vimonline.sf.net">vimonline development</a> pages.
+      Please use this site responsibly.
+      <br> 
+      
+      Questions about <a href="http://www.vim.org/about.php">Vim</a> should go
+      to the <a href="http://www.vim.org/maillist.php">maillist</a>.
+      Help Bram <a href="http://iccf-holland.org/">help Uganda</a>.
+      </small>
+	&nbsp;
+	&nbsp;
+
+	<!-- Start of StatCounter Code -->
+	<script type="text/javascript" language="javascript">
+	var sc_project=1417324; 
+	var sc_invisible=1; 
+	var sc_partition=11; 
+	var sc_security="d41633bc"; 
+	</script>
+
+	<script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script><noscript><a href="http://www.statcounter.com/" target="_blank"><img  src="http://c12.statcounter.com/counter.php?sc_project=1417324&java=0&security=d41633bc&invisible=0" alt="free tracking" border="0"></a> </noscript>
+	<!-- End of StatCounter Code -->
+          </td>
+
+    <td align="right" valign="top">
+      		<a href="http://sourceforge.net/projects/vim" rel="nofollow"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=8&type=1" width="88" height="31" border="0" alt="SourceForge.net Logo" /></a>
+    </td>
+
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+  </tr>
+
+    
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  
+  </tr>
+</table>
+
+</body>
+</html>
+

@@ -1,0 +1,452 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+  <link rel="Stylesheet" type="text/css" href="/css/style.css" >
+  <title>pyflakes.vim - PyFlakes on-the-fly Python code checking : vim online</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <meta name="KEYWORDS" content="Vim, Vi IMproved, text editor, home, documentation, tips, scripts, news">
+  <link rel="shortcut icon" type="image/x-icon" href="/images/vim_shortcut.ico">
+</head>
+
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff"> 
+
+<!-- HEADER, SPONSOR IMAGE, VIM IMAGE AND BOOK AD -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+  <td class="lightbg">&nbsp;&nbsp;&nbsp;</td>
+  <td class="lightbg" align="left"><a href="/sponsor/index.php"><img src="/images/sponsorvim.gif" alt="sponsor Vim development" border="0"></a></td>
+    <td class="lightbg" align="center"><a href="/index.php"><img src="/images/vim_header.gif" border="0" alt="Vim logo"></a></td>
+    <td class="lightbg" align="right"><a href="http://iccf-holland.org/click5.html"><img src="/images/buyhelplearn.gif" alt="Vim Book Ad" border="0"></a></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="darkbg"><img src="/images/spacer.gif" width="1" height="10" alt=""></td>
+  </tr>
+</table>
+<!-- THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+  <col width="180">
+  <col width="1">
+
+  <tr valign="top">
+    <td class="sidebar">
+      <table width="180" cellpadding="4" cellspacing="0" border="0">
+        <tr valign="top">
+          <td class="sidebar">
+
+<!-- INCLUDE THE PAGE NAVIGATION -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+    <tr>
+        <td><small>not logged in (<a href="/login.php">login</a>)</small></td>
+    </tr>
+    <tr><td>
+<small>&nbsp;</small>
+<form action="http://www.google.com/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-3005259998294962:bvyni59kjr1" />
+    <input type="hidden" name="ie" value="ISO-8859-1" />
+    <input type="text" name="q" size="20" />
+    <br>
+    <input type="submit" name="sa" value="Search" />
+  </div>
+</form>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+    </td></tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="1"></td>
+    </tr>
+    <tr>
+        <td class="darkbg"><img src="/images/spacer.gif" alt='' border="0" height="3"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="2"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/index.php">Home</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/search.php">Advanced search</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/about.php">About Vim</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/community.php">Community</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/news/news.php">News</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/sponsor/index.php">Sponsoring</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/trivia.php">Trivia</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/docs.php">Documentation</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/download.php">Download</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/scripts/index.php">Scripts</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/tips/index.php">Tips</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/account/index.php">My Account</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/huh.php">Site Help</a></td>
+        </tr>
+</table>
+
+            <table width="172" cellpadding="0" cellspacing="0" border="0">
+              <tr><td><img src="/images/spacer.gif" alt="" border="0" width="1" height="8"></td></tr>
+              <tr><td class="darkbg"><img src="/images/spacer.gif" width="1" height="3" alt=""></td></tr>
+            </table>
+            <br>
+
+<!-- INCLUDE THE PAGE SIDEBAR TEXT -->
+&nbsp;
+
+          </td>
+        </tr>
+      </table>
+    </td>
+
+    <td class="darkbg"><img src="/images/spacer.gif" width="1" height="1" border="0" alt=""><br></td>
+    <td>
+      <table width="100%" cellpadding="10" cellspacing="0" border="0" bordercolor="red">
+        <tr>
+          <td valign="top">
+
+<span class="txth1">pyflakes.vim : PyFlakes on-the-fly Python code checking</span> 
+
+<br>
+<br>
+
+<!-- karma table -->
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
+  <td>
+    Rating <b>539/151</b>,
+    Downloaded by 6234  </td>
+  <td class="lightbg">
+  <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
+  </td>
+  <td>
+    <a href="http://vim.wikia.com/wiki/Script:2441">Vim wiki</a>
+  </td>  
+</tr>
+</table>
+<p>
+
+<table cellspacing="0" cellpadding="0" border="0">
+<tr><td class="prompt">created by</td></tr>
+<tr><td><a href="/account/profile.php?user_id=15504">@kevinwatters  </a></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">script type</td></tr>
+<tr><td>ftplugin</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">description</td></tr>
+<tr><td>like/use/enjoy/need/jonesfor pyflakes.vim? donate a little cash here to help me keep improving it: <a target="_blank" href="http://bit.ly/gp4FCA">http://bit.ly/gp4FCA</A><br><br>IMPORTANT: Your vim must have Python 2.5, at least. Enter &quot;:python import sys; print sys.version&quot; to see which version you have.&nbsp;&nbsp;The newest version of Vim, 7.3, comes bundled with Python 2.7 support.<br><br>pyflakes-vim highlights common Python errors like misspelling a variable name on the fly. It also warns about unused imports, redefined functions, etc.<br><br>This plugin is fast enough that it registers itself with vim hooks for leaving insert mode and saving a buffer, so that the warnings are always up to date. See pyflakes.vim if you want to change this behavior.<br><br>NOTES:<br> * an improved pyflakes module is INCLUDED with this plugin, so you don't need to install it separately<br> * quickfix entries are created for each error, so you can use commands like :cc to jump to errors.<br> * this plugin uses the SpellBad highlight to show errors. if you'd like to change the color or style of this highlight, you can do something like this in your .vimrc:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if has(&quot;gui_running&quot;) <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;highlight SpellBad term=underline gui=undercurl guisp=Orange <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;endif <br><br>To stay up on development, you can watch the public repos at<br><br><a target="_blank" href="http://github.com/kevinw/pyflakes-vim">http://github.com/kevinw/pyflakes-vim</A><br><a target="_blank" href="http://github.com/kevinw/pyflakes">http://github.com/kevinw/pyflakes</A><br><br>KNOWN ISSUES<br><br>- The highlighting for syntax errors is often way off, and results in no other errors being detected.<br>- In Python 2.5, typing a with statement before you have from __future__ import with results in a vim error<br></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">install details</td></tr>
+<tr><td>1. Make sure your vimrc has &quot;filetype plugin indent on&quot; so that pyflake-vim's ftplugin files are loaded automatically when you open a Python buffer.<br>2. Drop extracted files in ~/.vim/ftplugin/python.<br>3. That's it!<br><br>See the README for more info.<br></td></tr>
+<tr><td>&nbsp;</td></tr>
+</table>
+
+<!-- rating table -->
+<form name="rating">
+<input type="hidden" name="script_id" value="2441">
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>rate this script</b></td>
+  <td valign="middle">
+    <input type="radio" name="rating" value="life_changing">Life Changing
+    <input type="radio" name="rating" value="helpful">Helpful
+    <input type="radio" name="rating" value="unfulfilling">Unfulfilling&nbsp;
+    <input type="submit" value="rate">
+  </td>
+</tr>
+</table>
+</form>
+<span class="txth2">script versions</span> (<a href="add_script_version.php?script_id=2441">upload new version</a>)
+<p>
+Click on the package to download.
+<p>
+
+<table cellspacing="2" cellpadding="4" border="0" width="100%">
+<tr class='tableheader'>
+        <th valign="top">package</th>
+    <th valign="top">script version</th>
+    <th valign="top">date</th>
+    <th valign="top">Vim version</th>
+    <th valign="top">user</th>
+    <th valign="top">release notes</th>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=14403">pyflakes-vim.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>3.01</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-11-30</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=15504">@kevinwatters  </a></i></td>
+    <td class="rowodd" valign="top" width="2000">Add __file__ as an automatic builtin.<br><br><a target="_blank" href="https://github.com/kevinw/pyflakes-vim/commit/5dc4416f6434fd0db12d21b6c1f4d0764c8757fe">https://github.com/kevinw/pyflakes-vim/commit/5dc4416f6434fd0db12d21b6c1f4d0764c8757fe</A><br><br>Move pyflakes.vim and pyflakes library into ftplugin/python for easier pathogen installation.<br><br><a target="_blank" href="https://github.com/kevinw/pyflakes-vim/commit/086d5e1d5f87f7cdd0588f8149bf08115a8ae229">https://github.com/kevinw/pyflakes-vim/commit/086d5e1d5f87f7cdd0588f8149bf08115a8ae229</A></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=14288">pyflakes-vim.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>3.0</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-11-17</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=15504">@kevinwatters  </a></i></td>
+    <td class="roweven" valign="top" width="2000">Upgraded the included pyflakes module to trunk r17946 from <a target="_blank" href="http://divmod.org/trac/wiki/DivmodPyflakes">http://divmod.org/trac/wiki/DivmodPyflakes</A>, which adds support for Python 2.7 constructs like set comprehensions and dict comprehensions.&nbsp;&nbsp;Modified pyflakes 0.4.0 to retain column information.<br><br>Modified pyflakes.vim to be compatible with &quot;stock&quot; PyFlakes.<br><br>Changes in pyflakes.vim: <a target="_blank" href="https://github.com/kevinw/pyflakes-vim/commit/8a7e19b6578b0986cb7a88a6c10d6cd907af2057">https://github.com/kevinw/pyflakes-vim/commit/8a7e19b6578b0986cb7a88a6c10d6cd907af2057</A><br><br>Changes to stock PyFlakes 0.4.0: <a target="_blank" href="https://github.com/kevinw/pyflakes/commit/8f62656c96b7cf66b7ad6cac0d9e3881e55f389f">https://github.com/kevinw/pyflakes/commit/8f62656c96b7cf66b7ad6cac0d9e3881e55f389f</A>#</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=14215">pyflakes-vim.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.02</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-11-09</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=15504">@kevinwatters  </a></i></td>
+    <td class="rowodd" valign="top" width="2000">Avoid a &quot;Press ENTER&quot; prompt when showing long error messages in narrow windows by truncating them to the number of columns. <br><br><a target="_blank" href="https://github.com/kevinw/pyflakes-vim/commit/ddeb0bf2d7db7916a62339f42c18c7a12468cd37">https://github.com/kevinw/pyflakes-vim/commit/ddeb0bf2d7db7916a62339f42c18c7a12468cd37</A></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=14045">pyflakes-vim.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.01</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-10-12</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=15504">@kevinwatters  </a></i></td>
+    <td class="roweven" valign="top" width="2000">Add configuration option g:pyflakes_use_quickfix. Add<br><br>let g:pyflakes_use_quickfix = 0<br><br>to disable quickfix support.<br><br><a target="_blank" href="http://github.com/kevinw/pyflakes-vim/commit/10fb7c382ce94470ae47848d1ac84925381c036f">http://github.com/kevinw/pyflakes-vim/commit/10fb7c382ce94470ae47848d1ac84925381c036f</A></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13378">pyflakes-vim.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.0</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-07-21</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=15504">@kevinwatters  </a></i></td>
+    <td class="rowodd" valign="top" width="2000">Add quickfix support! Thanks Phui Hock.<br><br>You can now use quickfix commands like :cc to jump to errors.<br><br><a target="_blank" href="http://github.com/kevinw/pyflakes-vim/commit/64ebcffe3de49fe34ca12b11292b792dc323709f">http://github.com/kevinw/pyflakes-vim/commit/64ebcffe3de49fe34ca12b11292b792dc323709f</A></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13300">pyflakes-vim.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.64</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-07-07</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=15504">@kevinwatters  </a></i></td>
+    <td class="roweven" valign="top" width="2000">Do not decode source code encoding line and the lines preceed it, if found.<br><br>Thanks phuihock.<br><br><a target="_blank" href="http://github.com/kevinw/pyflakes-vim/commit/1dffdbe91034f7a2bb6a16efe43d9bd9a466d11a">http://github.com/kevinw/pyflakes-vim/commit/1dffdbe91034f7a2bb6a16efe43d9bd9a466d11a</A></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13229">pyflakes-vim.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.63</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-06-21</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=15504">@kevinwatters  </a></i></td>
+    <td class="rowodd" valign="top" width="2000">Don't warn about duplicate functions with property decorators @prop.setter and @prop.deleter.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13208">pyflakes-vim.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.62</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-06-17</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=15504">@kevinwatters  </a></i></td>
+    <td class="roweven" valign="top" width="2000">Minor 2.5 compatibility fix.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13200">pyflakes-vim.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.61</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-06-16</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=15504">@kevinwatters  </a></i></td>
+    <td class="rowodd" valign="top" width="2000">Don't miss class decorators when walking the AST.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=12763">pyflakes-vim.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.60</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-04-01</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=15504">@kevinwatters  </a></i></td>
+    <td class="roweven" valign="top" width="2000">Show a clear error message if vim was compiled without Python, or with a version of Python older than 2.5.<br><br><a target="_blank" href="http://github.com/kevinw/pyflakes-vim/commit/5eaf3bc1d7508da2994657c4f77458f4064d26e2">http://github.com/kevinw/pyflakes-vim/commit/5eaf3bc1d7508da2994657c4f77458f4064d26e2</A></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=12555">pyflakes-vim.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.59</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-03-04</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=15504">@kevinwatters  </a></i></td>
+    <td class="rowodd" valign="top" width="2000">Minor fix for an exception when opening files.<br><br><a target="_blank" href="http://github.com/kevinw/pyflakes-vim/commit/783b3aa3de1fddb082f0810300bac5a831a97941">http://github.com/kevinw/pyflakes-vim/commit/783b3aa3de1fddb082f0810300bac5a831a97941</A></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=12009">pyflakes-vim.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.58</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-01-04</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=15504">@kevinwatters  </a></i></td>
+    <td class="roweven" valign="top" width="2000">Fix for 1.57 file encoding exception.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=11978">pyflakes-vim.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.57</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-12-29</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=15504">@kevinwatters  </a></i></td>
+    <td class="rowodd" valign="top" width="2000">Fixes <a target="_blank" href="http://github.com/kevinw/pyflakes-vim/issues/#issue/7">http://github.com/kevinw/pyflakes-vim/issues/#issue/7</A> and <a target="_blank" href="http://github.com/kevinw/pyflakes-vim/issues/#issue/8">http://github.com/kevinw/pyflakes-vim/issues/#issue/8</A><br><br>Files in unusual encodings should open correctly now.<br>Files ending with a trailing comment and no newline should also compile correctly now.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=11524">pyflakes-vim.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.56</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-10-13</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=15504">@kevinwatters  </a></i></td>
+    <td class="roweven" valign="top" width="2000"><a target="_blank" href="http://github.com/kevinw/pyflakes-vim/commit/f12c0881f83964e35b2d3ad2299d111cec53dd9f">http://github.com/kevinw/pyflakes-vim/commit/f12c0881f83964e35b2d3ad2299d111cec53dd9f</A><br><br>Fixes <a target="_blank" href="http://github.com/kevinw/pyflakes/issues#issue/1">http://github.com/kevinw/pyflakes/issues#issue/1</A><br><br>Apparently CursorMoved can get called early, before RunPyflakes has run. <br>If this happens, just return.<br><br>Thanks EnTeQuAk.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=11396">pyflakes-vim.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.55</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-09-17</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=15504">@kevinwatters  </a></i></td>
+    <td class="rowodd" valign="top" width="2000"><a target="_blank" href="http://github.com/kevinw/pyflakes-vim/commit/083bc2e65649a9cf10a7c1bcd22151a4083ddeb7">http://github.com/kevinw/pyflakes-vim/commit/083bc2e65649a9cf10a7c1bcd22151a4083ddeb7</A><br><br>Highlight the whole line for SyntaxErrors.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=10971">pyflakes-vim.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.5</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-07-08</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=15504">@kevinwatters  </a></i></td>
+    <td class="roweven" valign="top" width="2000"><a target="_blank" href="http://github.com/kevinw/pyflakes-vim/commit/b8f2f366b1322a5ffefede30ddb3339102d2f28c">http://github.com/kevinw/pyflakes-vim/commit/b8f2f366b1322a5ffefede30ddb3339102d2f28c</A><br><br>Ignore stderr during ast.parse, since it will otherwise show as VIM error <br>messages. Thanks Denis Bilenko.<br><br>Eventually we should parse some of the warnings. For example:<br><br>&nbsp;&nbsp;foo.py:33: Warning: 'as' will become a reserved keyword in Python 2.6<br><br>This could become a visible warning.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=10551">pyflakes-vim.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.4</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-05-06</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=15504">@kevinwatters  </a></i></td>
+    <td class="rowodd" valign="top" width="2000"><a target="_blank" href="http://github.com/kevinw/pyflakes-vim/commit/6ec1fbbce32876e315b370409ca55c97d232d125">http://github.com/kevinw/pyflakes-vim/commit/6ec1fbbce32876e315b370409ca55c97d232d125</A><br><br>Restrict dd, dw, etc mappings to the local Python buffer.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=10434">pyflakes-vim.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.3</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-04-21</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=15504">@kevinwatters  </a></i></td>
+    <td class="roweven" valign="top" width="2000">Some fixes based on suggestions from Brandon Low:<br><br> - changed highlight call from hard coding a curly underline to linking with the &quot;SpellBad&quot; style. This is more friendly vim on terminals. If you'd like the old brighter orange undercurl from previous versions, add the following to your .vimrc:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;if has(&quot;gui_running&quot;)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;highlight SpellBad term=underline gui=undercurl guisp=Orange<br>&nbsp;&nbsp;&nbsp;&nbsp;endif<br><br> - added the :PyflakesUpdate command (runs pyflakes and updates the message area)<br> - hooked dd, dw, u, and &lt;C-R&gt; to also call :PyflakesUpdate so common text operations will invoke PyFlakes<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=10193">pyflakes-vim.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.2</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-03-12</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=15504">@kevinwatters  </a></i></td>
+    <td class="rowodd" valign="top" width="2000">- Include compatibility fixes for Python 2.6's _ast changes in visit_FunctionDef and for visit_ExceptHandler. Thanks Herve Cauwelier. <br>- Include pyflakes.scripts in the &quot;packages&quot; option for setup. Thanks Herve Cauwelier. <br>- Fix for names incorrectly marked undefined in nested list comprehensions. <br>- Add &quot;__builtins__&quot; to the list of predefined names. <br>- Bind names for *args and **kwargs in functions and lambdas. </td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=9528">pyflakes-vim.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.1</b></td>
+    <td class="roweven" valign="top" nowrap><i>2008-11-19</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=15504">@kevinwatters  </a></i></td>
+    <td class="roweven" valign="top" width="2000">Updated pyflakes/checker.py to fix AST fixes from <a target="_blank" href="http://github.com/kevinw/pyflakes/commit/bdc1acde85df3bf0a8f5ef1ec26e9121667c9d0a">http://github.com/kevinw/pyflakes/commit/bdc1acde85df3bf0a8f5ef1ec26e9121667c9d0a</A></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=9503">pyflakes-vim.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.0</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2008-11-15</i></td>
+    <td class="rowodd" valign="top" nowrap>7.2</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=15504">@kevinwatters  </a></i></td>
+    <td class="rowodd" valign="top" width="2000">Initial upload</td>
+</tr>
+</table>
+<!-- finish off the framework -->
+          </td>
+        </tr>
+      </table>
+    </td>
+
+  </tr>
+</table>
+
+<!-- END OF THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr><td colspan="4" bgcolor="#000000"><img src="/images/spacer.gif" height="2" width="1" alt=""></td></tr>
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr>
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+
+    <td align="left" valign="top"><small>
+      If you have questions or remarks about this site, visit the
+      <a href="http://vimonline.sf.net">vimonline development</a> pages.
+      Please use this site responsibly.
+      <br> 
+      
+      Questions about <a href="http://www.vim.org/about.php">Vim</a> should go
+      to the <a href="http://www.vim.org/maillist.php">maillist</a>.
+      Help Bram <a href="http://iccf-holland.org/">help Uganda</a>.
+      </small>
+	&nbsp;
+	&nbsp;
+
+	<!-- Start of StatCounter Code -->
+	<script type="text/javascript" language="javascript">
+	var sc_project=1417324; 
+	var sc_invisible=1; 
+	var sc_partition=11; 
+	var sc_security="d41633bc"; 
+	</script>
+
+	<script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script><noscript><a href="http://www.statcounter.com/" target="_blank"><img  src="http://c12.statcounter.com/counter.php?sc_project=1417324&java=0&security=d41633bc&invisible=0" alt="free tracking" border="0"></a> </noscript>
+	<!-- End of StatCounter Code -->
+          </td>
+
+    <td align="right" valign="top">
+      		<a href="http://sourceforge.net/projects/vim" rel="nofollow"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=8&type=1" width="88" height="31" border="0" alt="SourceForge.net Logo" /></a>
+    </td>
+
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+  </tr>
+
+    
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  
+  </tr>
+</table>
+
+</body>
+</html>
+

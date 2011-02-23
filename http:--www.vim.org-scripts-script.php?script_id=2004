@@ -1,0 +1,404 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+  <link rel="Stylesheet" type="text/css" href="/css/style.css" >
+  <title>ColorSchemeMenuMaker - Auto-generates menu containing your colorschemes (keywords: color scheme menu) : vim online</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <meta name="KEYWORDS" content="Vim, Vi IMproved, text editor, home, documentation, tips, scripts, news">
+  <link rel="shortcut icon" type="image/x-icon" href="/images/vim_shortcut.ico">
+</head>
+
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff"> 
+
+<!-- HEADER, SPONSOR IMAGE, VIM IMAGE AND BOOK AD -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+  <td class="lightbg">&nbsp;&nbsp;&nbsp;</td>
+  <td class="lightbg" align="left"><a href="/sponsor/index.php"><img src="/images/sponsorvim.gif" alt="sponsor Vim development" border="0"></a></td>
+    <td class="lightbg" align="center"><a href="/index.php"><img src="/images/vim_header.gif" border="0" alt="Vim logo"></a></td>
+    <td class="lightbg" align="right"><a href="http://iccf-holland.org/click5.html"><img src="/images/buyhelplearn.gif" alt="Vim Book Ad" border="0"></a></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="darkbg"><img src="/images/spacer.gif" width="1" height="10" alt=""></td>
+  </tr>
+</table>
+<!-- THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+  <col width="180">
+  <col width="1">
+
+  <tr valign="top">
+    <td class="sidebar">
+      <table width="180" cellpadding="4" cellspacing="0" border="0">
+        <tr valign="top">
+          <td class="sidebar">
+
+<!-- INCLUDE THE PAGE NAVIGATION -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+    <tr>
+        <td><small>not logged in (<a href="/login.php">login</a>)</small></td>
+    </tr>
+    <tr><td>
+<small>&nbsp;</small>
+<form action="http://www.google.com/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-3005259998294962:bvyni59kjr1" />
+    <input type="hidden" name="ie" value="ISO-8859-1" />
+    <input type="text" name="q" size="20" />
+    <br>
+    <input type="submit" name="sa" value="Search" />
+  </div>
+</form>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+    </td></tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="1"></td>
+    </tr>
+    <tr>
+        <td class="darkbg"><img src="/images/spacer.gif" alt='' border="0" height="3"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="2"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/index.php">Home</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/search.php">Advanced search</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/about.php">About Vim</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/community.php">Community</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/news/news.php">News</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/sponsor/index.php">Sponsoring</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/trivia.php">Trivia</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/docs.php">Documentation</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/download.php">Download</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/scripts/index.php">Scripts</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/tips/index.php">Tips</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/account/index.php">My Account</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/huh.php">Site Help</a></td>
+        </tr>
+</table>
+
+            <table width="172" cellpadding="0" cellspacing="0" border="0">
+              <tr><td><img src="/images/spacer.gif" alt="" border="0" width="1" height="8"></td></tr>
+              <tr><td class="darkbg"><img src="/images/spacer.gif" width="1" height="3" alt=""></td></tr>
+            </table>
+            <br>
+
+<!-- INCLUDE THE PAGE SIDEBAR TEXT -->
+&nbsp;
+
+          </td>
+        </tr>
+      </table>
+    </td>
+
+    <td class="darkbg"><img src="/images/spacer.gif" width="1" height="1" border="0" alt=""><br></td>
+    <td>
+      <table width="100%" cellpadding="10" cellspacing="0" border="0" bordercolor="red">
+        <tr>
+          <td valign="top">
+
+<span class="txth1">ColorSchemeMenuMaker : Auto-generates menu containing your colorschemes (keywords: color scheme menu)</span> 
+
+<br>
+<br>
+
+<!-- karma table -->
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
+  <td>
+    Rating <b>99/36</b>,
+    Downloaded by 2778  </td>
+  <td class="lightbg">
+  <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
+  </td>
+  <td>
+    <a href="http://vim.wikia.com/wiki/Script:2004">Vim wiki</a>
+  </td>  
+</tr>
+</table>
+<p>
+
+<table cellspacing="0" cellpadding="0" border="0">
+<tr><td class="prompt">created by</td></tr>
+<tr><td><a href="/account/profile.php?user_id=12386">erik falor</a></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">script type</td></tr>
+<tr><td>color scheme</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">description</td></tr>
+<tr><td>Are you in the mood for a blue desktop, but don't want to take the time to go through all of your installed color scheme files just to find the ones you want?&nbsp;&nbsp;Or do you like to make each of your Vim windows a different color to easily identify which editor contains which projects?<br><br>If so, this plugin is for you.<br><br>This script crawls through the directories in your &runtimepath searching for installed colorscheme files.&nbsp;&nbsp;When it finds a colorscheme, it adds it to a menu called ColorSchemes where it is sorted by the predominant color used.&nbsp;&nbsp;Color schemes are also stored alphabetically by name in this menu.&nbsp;&nbsp;This way, you can have all of your blue themes at your fingertips.&nbsp;&nbsp;Or if you just remember the name, you can quickly browse to it.<br><br>This script works by analysing the guibg option of the Normal highlight group to determine which basic color to file the scheme under.&nbsp;&nbsp;It will place each theme in one of the following categories: black, blue, cyan, darkgrey, green, grey, offwhite, orange, purple, red, white, yellow, or unknown if no background color is specified.&nbsp;&nbsp;It uses a heuristic that is still a work in progress, so it doesn't always guess the color correctly.&nbsp;&nbsp;For that matter, people have a hard time deciding what category a color might fall under, so it may always be a work in progress!<br><br>If you install new color schemes, force a re-scan by clicking 'Rebuild Menu' in the ColorSchemes menu.&nbsp;&nbsp;'Reload Menu' simply forces Vim to re-source an already generated menu file.<br><br>A menu entry that appears with an asterisk before it indicates a color scheme that contains more than one &quot;hi Normal&quot; command.&nbsp;&nbsp;This script assumes that the first such command encountered is the one that will be executed.&nbsp;&nbsp;Such entries are not guaranteed to be sorted correctly.<br><br>Since version 0.6, this script includes an autoload plugin that facilitates tweaking the color selection algorithm.<br>This autoload plugin contains a Perl script which generates an HTML page that shows the Normal background color for each installed theme, along with the plugin's guess at which category it should be filed under.&nbsp;&nbsp;The embedded Perl script calls the very same functions the plugin uses, letting you quickly assess the results of your changes.&nbsp;&nbsp;The plugin keeps track of the three previous guesses, and highlights the colorschemes that have been affected by your changes.&nbsp;&nbsp;<br><br>More details are found in plugin/ColorSchemeMenuMaker.vim.<br><br>If you can make any improvements, I'd love to see them!<br></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">install details</td></tr>
+<tr><td>Unpack the archive in your $HOME/.vim (or $HOME/vimfiles, you poor, poor Win32 user) directory. The next time you start an instance of Vim, it will detect that the file ColorSchemes.vim is not present, and will add all of your color schemes to the menu.&nbsp;&nbsp;ColorSchemes.vim is written in the the same directory the main plugin is located.<br><br>Subsequently, Vim will use the generated file instead of re-scanning all of your color schemes.<br><br>Send feedback to ewfalor -at- gmail -dot- com</td></tr>
+<tr><td>&nbsp;</td></tr>
+</table>
+
+<!-- rating table -->
+<form name="rating">
+<input type="hidden" name="script_id" value="2004">
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>rate this script</b></td>
+  <td valign="middle">
+    <input type="radio" name="rating" value="life_changing">Life Changing
+    <input type="radio" name="rating" value="helpful">Helpful
+    <input type="radio" name="rating" value="unfulfilling">Unfulfilling&nbsp;
+    <input type="submit" value="rate">
+  </td>
+</tr>
+</table>
+</form>
+<span class="txth2">script versions</span> (<a href="add_script_version.php?script_id=2004">upload new version</a>)
+<p>
+Click on the package to download.
+<p>
+
+<table cellspacing="2" cellpadding="4" border="0" width="100%">
+<tr class='tableheader'>
+        <th valign="top">package</th>
+    <th valign="top">script version</th>
+    <th valign="top">date</th>
+    <th valign="top">Vim version</th>
+    <th valign="top">user</th>
+    <th valign="top">release notes</th>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=9824">ColorSchemeMenuMaker.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.0.1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-01-15</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=12386">erik falor</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Fixed bug when rebuilding menu more than once and the number of colorschemes contained in the menu changes.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=8498">ColorSchemeMenuMaker.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.0</b></td>
+    <td class="roweven" valign="top" nowrap><i>2008-03-27</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=12386">erik falor</a></i></td>
+    <td class="roweven" valign="top" width="2000">No reported problems for quite a while; I feel this<br>plugin is no longer beta-quality.<br>ReloadColorsMenu and RebuildColorsMenu commands will<br>only remove menu items created by this plugin.&nbsp;&nbsp;Other<br>items placed in the ColorSchemes menu aren't destroyed<br>when refreshing the menu unless absolutely necessary.<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=8088">ColorSchemeMenuMaker.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.10.1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2007-12-26</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=12386">erik falor</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Fixed bug: generated menu called non-existent function.<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=8066">ColorSchemeMenuMaker.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.10</b></td>
+    <td class="roweven" valign="top" nowrap><i>2007-12-18</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=12386">erik falor</a></i></td>
+    <td class="roweven" valign="top" width="2000">Menus sorted in case-insensitive fashion.&nbsp;&nbsp;If this change breaks your muscle-memory, set the global var g:csmmIgnoreCase to 0 in your .vimrc to get the old behavior.&nbsp;&nbsp;Super thanks to Bill McCarthy for suggesting this.<br><br>Functions ReloadColors(), RefreshColors(), and their corresponding commands renamed to ReloadColorsMenu() and RebuildColorsMenu().<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=7841">ColorSchemeMenuMaker.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.9.1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2007-10-29</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=12386">erik falor</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Repackaged as zipfile - too many problems with vimballs.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=7819">ColorSchemeMenuMaker.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.9</b></td>
+    <td class="roweven" valign="top" nowrap><i>2007-10-23</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=12386">erik falor</a></i></td>
+    <td class="roweven" valign="top" width="2000">Tries not to create submenus which are too tall to fit on the screen.&nbsp;&nbsp;By default, generated submenus are split so as to contain fewer than 45 items.&nbsp;&nbsp;This number may be overridden via g:MaxEntriesPerSubmenu.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=7774">ColorSchemeMenuMaker.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.8.1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2007-10-10</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=12386">erik falor</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Shuangshi Jie bugfix: changed to Unix line endings.<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=7750">ColorSchemeMenuMaker.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.8</b></td>
+    <td class="roweven" valign="top" nowrap><i>2007-10-04</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=12386">erik falor</a></i></td>
+    <td class="roweven" valign="top" width="2000">Avoid loading menu in console mode.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=7698">ColorSchemeMenuMaker.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.7</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2007-09-20</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=12386">erik falor</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Fixed some bugs in SDK mode.&nbsp;&nbsp;Tweaked IsDarkGrey().</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=7674">ColorSchemeMenuMaker.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.6</b></td>
+    <td class="roweven" valign="top" nowrap><i>2007-09-14</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=12386">erik falor</a></i></td>
+    <td class="roweven" valign="top" width="2000">SDK mode lets you quickly see effects of changes to color detection algorithm.&nbsp;&nbsp;See <br>plugin/ColorSchemeMenuMaker.vim for details. <br>Added purple submenu. <br>Fixed yellow vs. green - robinhood now shows up with green themes.<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=7623">ColorSchemeMenuMaker.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.5</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2007-09-06</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=12386">erik falor</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Store the generated menu under the same directory this file is located.&nbsp;&nbsp;Thanks to Vincent Vandalon for pointing out that not all folks have a ~/vimfiles directory under WinXP.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=7589">ColorSchemeMenuMaker.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.4</b></td>
+    <td class="roweven" valign="top" nowrap><i>2007-08-30</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=12386">erik falor</a></i></td>
+    <td class="roweven" valign="top" width="2000">Switched to Unix line endings.&nbsp;&nbsp;Look for rgb.txt under /usr/share/X11 to accomodate Gentoo Linux.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=7586">ColorSchemeMenuMaker.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.3</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2007-08-30</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=12386">erik falor</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Now works on Linux by looking for rgb.txt in /usr/X11R6/lib/X11 instead of $VIMRUNTIME.&nbsp;&nbsp;If your rgb.txt is kept somewhere else, store that absolute pathname in your .vimrc in a variable called g:rgbtxt.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=7576">ColorSchemeMenuMaker.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.2</b></td>
+    <td class="roweven" valign="top" nowrap><i>2007-08-29</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=12386">erik falor</a></i></td>
+    <td class="roweven" valign="top" width="2000">Menu categories include a count of contained items.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=7575">ColorSchemeMenuMaker.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2007-08-28</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=12386">erik falor</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Initial upload</td>
+</tr>
+</table>
+<!-- finish off the framework -->
+          </td>
+        </tr>
+      </table>
+    </td>
+
+  </tr>
+</table>
+
+<!-- END OF THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr><td colspan="4" bgcolor="#000000"><img src="/images/spacer.gif" height="2" width="1" alt=""></td></tr>
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr>
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+
+    <td align="left" valign="top"><small>
+      If you have questions or remarks about this site, visit the
+      <a href="http://vimonline.sf.net">vimonline development</a> pages.
+      Please use this site responsibly.
+      <br> 
+      
+      Questions about <a href="http://www.vim.org/about.php">Vim</a> should go
+      to the <a href="http://www.vim.org/maillist.php">maillist</a>.
+      Help Bram <a href="http://iccf-holland.org/">help Uganda</a>.
+      </small>
+	&nbsp;
+	&nbsp;
+
+	<!-- Start of StatCounter Code -->
+	<script type="text/javascript" language="javascript">
+	var sc_project=1417324; 
+	var sc_invisible=1; 
+	var sc_partition=11; 
+	var sc_security="d41633bc"; 
+	</script>
+
+	<script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script><noscript><a href="http://www.statcounter.com/" target="_blank"><img  src="http://c12.statcounter.com/counter.php?sc_project=1417324&java=0&security=d41633bc&invisible=0" alt="free tracking" border="0"></a> </noscript>
+	<!-- End of StatCounter Code -->
+          </td>
+
+    <td align="right" valign="top">
+      		<a href="http://sourceforge.net/projects/vim" rel="nofollow"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=8&type=1" width="88" height="31" border="0" alt="SourceForge.net Logo" /></a>
+    </td>
+
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+  </tr>
+
+    
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  
+  </tr>
+</table>
+
+</body>
+</html>
+

@@ -1,0 +1,612 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+  <link rel="Stylesheet" type="text/css" href="/css/style.css" >
+  <title>vimwiki - Personal Wiki for Vim : vim online</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <meta name="KEYWORDS" content="Vim, Vi IMproved, text editor, home, documentation, tips, scripts, news">
+  <link rel="shortcut icon" type="image/x-icon" href="/images/vim_shortcut.ico">
+</head>
+
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff"> 
+
+<!-- HEADER, SPONSOR IMAGE, VIM IMAGE AND BOOK AD -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+  <td class="lightbg">&nbsp;&nbsp;&nbsp;</td>
+  <td class="lightbg" align="left"><a href="/sponsor/index.php"><img src="/images/sponsorvim.gif" alt="sponsor Vim development" border="0"></a></td>
+    <td class="lightbg" align="center"><a href="/index.php"><img src="/images/vim_header.gif" border="0" alt="Vim logo"></a></td>
+    <td class="lightbg" align="right"><a href="http://iccf-holland.org/click5.html"><img src="/images/buyhelplearn.gif" alt="Vim Book Ad" border="0"></a></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="darkbg"><img src="/images/spacer.gif" width="1" height="10" alt=""></td>
+  </tr>
+</table>
+<!-- THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+  <col width="180">
+  <col width="1">
+
+  <tr valign="top">
+    <td class="sidebar">
+      <table width="180" cellpadding="4" cellspacing="0" border="0">
+        <tr valign="top">
+          <td class="sidebar">
+
+<!-- INCLUDE THE PAGE NAVIGATION -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+    <tr>
+        <td><small>not logged in (<a href="/login.php">login</a>)</small></td>
+    </tr>
+    <tr><td>
+<small>&nbsp;</small>
+<form action="http://www.google.com/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-3005259998294962:bvyni59kjr1" />
+    <input type="hidden" name="ie" value="ISO-8859-1" />
+    <input type="text" name="q" size="20" />
+    <br>
+    <input type="submit" name="sa" value="Search" />
+  </div>
+</form>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+    </td></tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="1"></td>
+    </tr>
+    <tr>
+        <td class="darkbg"><img src="/images/spacer.gif" alt='' border="0" height="3"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="2"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/index.php">Home</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/search.php">Advanced search</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/about.php">About Vim</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/community.php">Community</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/news/news.php">News</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/sponsor/index.php">Sponsoring</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/trivia.php">Trivia</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/docs.php">Documentation</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/download.php">Download</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/scripts/index.php">Scripts</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/tips/index.php">Tips</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/account/index.php">My Account</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/huh.php">Site Help</a></td>
+        </tr>
+</table>
+
+            <table width="172" cellpadding="0" cellspacing="0" border="0">
+              <tr><td><img src="/images/spacer.gif" alt="" border="0" width="1" height="8"></td></tr>
+              <tr><td class="darkbg"><img src="/images/spacer.gif" width="1" height="3" alt=""></td></tr>
+            </table>
+            <br>
+
+<!-- INCLUDE THE PAGE SIDEBAR TEXT -->
+&nbsp;
+
+          </td>
+        </tr>
+      </table>
+    </td>
+
+    <td class="darkbg"><img src="/images/spacer.gif" width="1" height="1" border="0" alt=""><br></td>
+    <td>
+      <table width="100%" cellpadding="10" cellspacing="0" border="0" bordercolor="red">
+        <tr>
+          <td valign="top">
+
+<span class="txth1">vimwiki : Personal Wiki for Vim</span> 
+
+<br>
+<br>
+
+<!-- karma table -->
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
+  <td>
+    Rating <b>2806/726</b>,
+    Downloaded by 6274  </td>
+  <td class="lightbg">
+  <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
+  </td>
+  <td>
+    <a href="http://vim.wikia.com/wiki/Script:2226">Vim wiki</a>
+  </td>  
+</tr>
+</table>
+<p>
+
+<table cellspacing="0" cellpadding="0" border="0">
+<tr><td class="prompt">created by</td></tr>
+<tr><td><a href="/account/profile.php?user_id=14343">Maxim Kim</a></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">script type</td></tr>
+<tr><td>utility</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">description</td></tr>
+<tr><td>A Personal Wiki For Vim Plugin<br>==============================================================================<br>Screenshots are available on <a target="_blank" href="http://code.google.com/p/vimwiki/">http://code.google.com/p/vimwiki/</A> <br>There are also zipped vimwiki files there in case you do not like vimball archives.<br><br>Vimwiki quick reference card <a target="_blank" href="http://habamax.ru/myvim/data/vimwikiqrc.pdf">http://habamax.ru/myvim/data/vimwikiqrc.pdf</A> by J.A.J. Pater.<br>Thx Gager Jacob for the update.<br><br><br>Prerequisites<br>==============================================================================<br>Make sure you have these settings in your vimrc file: <br><br>set nocompatible<br>filetype plugin on<br>syntax on<br><br>Without them Vimwiki will not work properly.<br><br><br>Intro<br>==============================================================================<br>Vimwiki is a personal wiki for Vim -- a number of linked text files that have<br>their own syntax highlighting.<br><br>With vimwiki you can<br>&nbsp;&nbsp;&nbsp;&nbsp;- organize notes and ideas<br>&nbsp;&nbsp;&nbsp;&nbsp;- manage todo-lists<br>&nbsp;&nbsp;&nbsp;&nbsp;- write documentation<br><br>To do a quick start press &lt;Leader&gt;ww (this is usually \ww) to go to your index<br>wiki file. By default it is located in:<br>&nbsp;&nbsp;&nbsp;&nbsp;~/vimwiki/index.wiki<br><br>Feed it with the following example:<br><br>= My knowledge base =<br>&nbsp;&nbsp;&nbsp;&nbsp;* MyUrgentTasks -- things to be done _yesterday_!!!<br>&nbsp;&nbsp;&nbsp;&nbsp;* ProjectGutenberg -- good books are power.<br>&nbsp;&nbsp;&nbsp;&nbsp;* ScratchPad -- various temporary stuff.<br><br><br>Notice that ProjectGutenberg, MyUrgentTasks and ScratchPad highlighted as<br>errors. These are links in CamelCase form that do not exists yet. (CamelCase<br>form -- capitalized word connected with other capitalized words)<br><br>Place cursor on ProjectGutenberg and press &lt;Enter&gt;. Now you are in<br>ProjectGutenberg. Edit and save it, then press Backspace to return to parent<br>wiki page. You should see the difference now -- ProjectGutenberg is<br>highlighted as a link.<br><br><br>For the various options see :h vimwiki-options.<br><br><br>Basic Markup<br>==============================================================================<br>see :h vimwiki-syntax<br><br>*bold* -- bold <br>_italic_ -- italic <br>WikiWord -- link to WikiWord <br>[[wiki link]] -- link with spaces<br>[[wiki link][description]] -- link with description<br>[[wiki link|description]] -- link with description<br><br>Lists:<br>* bullet list item 1<br>&nbsp;&nbsp;&nbsp;&nbsp;- bullet list item 2<br>&nbsp;&nbsp;&nbsp;&nbsp;- bullet list item 3<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* bullet list item 4<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* bullet list item 5<br>* bullet list item 6<br>* bullet list item 7<br>&nbsp;&nbsp;&nbsp;&nbsp;- bullet list item 8<br>&nbsp;&nbsp;&nbsp;&nbsp;- bullet list item 9<br><br># numbered list item 1<br># numbered list item 2<br>&nbsp;&nbsp;&nbsp;&nbsp;# numbered list item 3<br>&nbsp;&nbsp;&nbsp;&nbsp;# numbered list item 4<br><br>= Header1 =<br>== Header2 ==<br>=== Header3 ===<br><br><br>Key bindings<br>==============================================================================<br>see :h vimwiki-mappings<br><br>normal mode: <br>&lt;Leader&gt;ww -- Open default wiki index file.<br>&lt;Leader&gt;wt -- Open default wiki index file in a new tab.<br>&lt;Leader&gt;ws -- Select and open wiki index file.<br>&lt;Leader&gt;wd -- Delete wiki file you are in.<br>&lt;Leader&gt;wr -- Rename wiki file you are in.<br>&lt;Enter&gt; -- Folow/Create wiki link<br>&lt;Shift-Enter&gt; -- Split and folow/create wiki link<br>&lt;Ctrl-Enter&gt; -- Vertical split and folow/create wiki link<br>&lt;Backspace&gt; -- Go back to parent(previous) wiki link<br>&lt;Tab&gt; -- Find next wiki link<br>&lt;Shift-Tab&gt; -- Find previous wiki link<br><br><br>Commands<br>==============================================================================<br>:Vimwiki2HTML -- Convert current wiki link to HTML<br>:VimwikiAll2HTML -- Convert all your wiki links to HTML<br></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">install details</td></tr>
+<tr><td>Windows:<br>========<br>1. Unpack. <br>2. Open vimwiki-N-N.vba with Vim. (N-N is version number ie 1-1) <br>3. Source it with :so % command <br><br>Linux:<br>======<br>1. Open vimwiki-N-N.vba.gz with Vim. (N-N is version number ie 1-1) <br>2. Source it with :so % command <br></td></tr>
+<tr><td>&nbsp;</td></tr>
+</table>
+
+<!-- rating table -->
+<form name="rating">
+<input type="hidden" name="script_id" value="2226">
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>rate this script</b></td>
+  <td valign="middle">
+    <input type="radio" name="rating" value="life_changing">Life Changing
+    <input type="radio" name="rating" value="helpful">Helpful
+    <input type="radio" name="rating" value="unfulfilling">Unfulfilling&nbsp;
+    <input type="submit" value="rate">
+  </td>
+</tr>
+</table>
+</form>
+<span class="txth2">script versions</span> (<a href="add_script_version.php?script_id=2226">upload new version</a>)
+<p>
+Click on the package to download.
+<p>
+
+<table cellspacing="2" cellpadding="4" border="0" width="100%">
+<tr class='tableheader'>
+        <th valign="top">package</th>
+    <th valign="top">script version</th>
+    <th valign="top">date</th>
+    <th valign="top">Vim version</th>
+    <th valign="top">user</th>
+    <th valign="top">release notes</th>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13756">vimwiki-1-1-1.vba.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.1.1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-09-03</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=14343">Maxim Kim</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Follow up bugfix release.<br>* FIX: Issue 122: Dot character in vimwiki's directory path isn't escaped.<br>* FIX: Issue 123: Where is Vimwiki2HTML and other commands? Sometimes filetype is not set up to vimwiki.<br>* FIX: Issue 124: Highlight group not found: Normal</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13667">vimwiki-1-1.vba.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.1</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-08-24</i></td>
+    <td class="roweven" valign="top" nowrap>7.3</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=14343">Maxim Kim</a></i></td>
+    <td class="roweven" valign="top" width="2000"><br>* NEW: Issue 57: Make it possible to have pre block inside list item.<br>* NEW: Issue 82: Add quick goto command. See |:VimwikiGoto|.<br>* NEW: Issue 83: Quick switch in diary. See |:VimwikiDiaryNextDay| and<br>&nbsp;&nbsp;|:VimwikiDiaryPrevDay| commands.<br>* FIX: Issue 84: Vimwiki rename removed the WikiWord display name.<br>* FIX: Issue 85: Errors if you have '~' subdirectory in a wiki directory.<br>* FIX: Issue 86: Existed links '[[WikiLink1|Alias1]] | [[WikiLink2]]' are<br>&nbsp;&nbsp;highlighted as a single link.<br>* FIX: Issue 88: Underline text. See |g:vimwiki_valid_html_tags|.<br>* FIX: Issue 92: Wikies in a subdir could be renamed to an empty file.<br>* FIX: Issue 93: Use alias name in html title. See |vimwiki-title|.<br>* FIX: Issue 94: Relative links to PHP files are broken. See<br>&nbsp;&nbsp;|g:vimwiki_file_exts| for details.<br>* FIX: Issue 96: Closing bracket at the end of weblink shouldn't be a part<br>&nbsp;&nbsp;of that link.<br>* FIX: Issue 97: Error opening weblink in a browser if it has # inside.<br>* FIX: Issue 99: Vim is not responing while opening arbitrary wiki file.<br>* FIX: Issue 100: Additional content on diary index page could be<br>&nbsp;&nbsp;corrupted.<br>* NEW: Issue 101: Customized HTML tags. See |g:vimwiki_valid_html_tags|<br>* NEW: Issue 102: Conceal feature usage. See |g:vimwiki_conceallevel|.<br>* FIX: Issue 103: Always highlight links to non-wiki files as existed.<br>* FIX: Issue 104: vimwiki#nested_syntax needs 'keepend' to avoid contained<br>&nbsp;&nbsp;language syntax eat needed '}}}'.<br>* FIX: Issue 105: &lt;i_CR&gt; on a todo list item with [ ] doesn't create new<br>&nbsp;&nbsp;todo list item.<br>* FIX: Issue 106: With MediaWiki syntax &lt;C-Space&gt; on a child todo list<br>&nbsp;&nbsp;item produce errors.<br>* FIX: Issue 107: With MediaWiki syntax &lt;C-Space&gt; on a list item creates<br>&nbsp;&nbsp;todo list item without space between * and [ ].<br>* FIX: Issue 110: Syntax highlighting doesn't work for indented codeblock.<br>* FIX: Issue 115: Nested Perl syntax highlighting differs from regular<br>&nbsp;&nbsp;one.<br>* MISC: Many vimwiki commands were renamed from Vimwiki.*Word to<br>&nbsp;&nbsp;Vimwiki.*Link. VimwikiGoHome is renamed to VimwikiIndex,<br>&nbsp;&nbsp;VimwikiTabGoHome to VimwikiTabIndex.<br>* MISC: vimwiki-option-gohome is removed.<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=12995">vimwiki-1-0.vba.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.0</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-05-12</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=14343">Maxim Kim</a></i></td>
+    <td class="rowodd" valign="top" width="2000">* NEW: Issue 41: Table cell and column text objects. See `vimwiki-text-objects`.<br>* NEW: Issue 42: Commands to move table columns left and right. See `:VimwikiTableMoveColumnLeft` and `:VimwikiTableMoveColumnRight`.<br>* NEW: Issue 44: `&lt;S-Tab&gt;` should move cursor to the previous table cell.<br>* NEW: Issue 45: It should be possible to indent tables. Indented tables are centered in html.<br>* NEW: Issue 46: Do not htmlize some wiki pages (blacklist). New placeholder is added: `%nohtml`. See `vimwiki-nohtml`.<br>* FIX: Issue 47: Lists aren't HTMLized properly.<br>* FIX: Issue 48: With autochdir it is impossible to have path_html such as `d:\vimwiki\html\`<br>* FIX: Issue 49: Table is not HTMLized properly at the end of wiki page.<br>* FIX: Issue 50: Inline formatting is not performed in table cells.<br>* FIX: Issue 51: Cannot insert '-' (minus) into table cells of the first column.<br>* FIX: Issue 52: Table cell width is incorrect when double wide characters are used (ie. Chinese). Check `g:vimwiki_CJK_length`.<br>* NEW: Issue 53: Wiki markup can not nested. (Use links and inline markup in Headers).<br>* NEW: Issue 54: Highlight for placeholders.<br>* NEW: Issue 56: Directory indexes. See `g:vimwiki_dir_link` option and `:VimwikiGenerateLinks` command.<br>* NEW: Issue 58: Html new lines with `&lt;br /&gt;`. Could be inserted with `&lt;S-CR&gt;` in insert mode.<br>* FIX: Issue 59: List item's text can't be started from `*`.<br>* NEW: Issue 60: Links inside completed gtd-items.<br>* NEW: Issue 61: Headers numbering. See `g:vimwiki_html_header_numbering` and `g:vimwiki_html_header_numbering_sym` options.<br>* FIX: Issue 63: Table cannot have leading empty cells in html.<br>* FIX: Issue 65: Table separator is not htmlized right if on top of the table.<br>* FIX: Issue 66: Table empty cells are very small in html.<br>* FIX: Issue 67: Wrong html conversion of multilined list item with bold text on the start of next line.<br>* FIX: Issue 68: auto-indent problem with langmap.<br>* FIX: Issue 73: Link navigation by Tab. &quot;Escaped&quot; wiki-word should be skipped for navigation with `&lt;tab&gt;`.<br>* FIX: Issue 75: `code` syntax doesn't display correctly in toc.<br>* FIX: Issue 77: Diary index only showing link to today's diary entry file for extensions other than '.wiki'.<br>* FIX: Issue 79: Further calendar.vim integration -- add sign to calendar date if it has corresponding diary page.<br>* FIX: Issue 80: Debian Lenny GUI Vim 7.2 has problems with toggling inner todo list items.<br>* FIX: Issue 81: Don't convert `WikiWord` as a link in html when `let g:vimwiki_camel_case = 0`<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=12476">vimwiki-0-9-9.vba.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.9.9</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-02-23</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=14343">Maxim Kim</a></i></td>
+    <td class="roweven" valign="top" width="2000">* NEW: Diary. Help in making daily notes. See ':h vimwiki-diary'. Now you<br>&nbsp;&nbsp;can really easy add information into vimwiki that should be sorted out<br>&nbsp;&nbsp;later.<br>* NEW: Tables are redesigned. Syntax is changed. Now they are<br>&nbsp;&nbsp;auto-formattable. You can navigate them with &lt;tab&gt; and &lt;cr&gt; in insert<br>&nbsp;&nbsp;mode. See 'vimwiki-syntax-tables' and 'vimwiki-tables' for more details. <br>* NEW: Keyword STARTED: is added.<br>* NEW: Words TODO:, DONE:, STARTED:, XXX:, FIXME:, FIXED: are highlighed<br>&nbsp;&nbsp;inside headers.<br>* FIX: Export to html external links with 'file://' protocol. Ex:<br>&nbsp;&nbsp;'[<a target="_blank" href="file:///home/user1/book.pdf">file:///home/user1/book.pdf</A> my book]'.<br>* FIX: Menu is corrupted if wiki's path contains spaces.<br>* FIX: Settings 'wrap' and 'linebreak' are removed from ftplugin. Add them<br>&nbsp;&nbsp;into your personal settings file '.vim/after/ftplugin/vimwiki.vim' if<br>&nbsp;&nbsp;needed.<br>* NEW: Headers are highlighted in different colors by default.&nbsp;&nbsp;See ':h<br>&nbsp;&nbsp;g:vimwiki_hl_headers' to turn it off.<br>* FIX: Issue 40: Links with russian subdirs don't work.<br>* NEW: It is now possible to generate HTML files automatically on page<br>&nbsp;&nbsp;save. See ':h vimwiki-option-auto_export'.<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=12151">vimwiki-0-9-801.vba.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.9.801</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-01-21</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=14343">Maxim Kim</a></i></td>
+    <td class="rowodd" valign="top" width="2000">* Issue 39:	Not a critical error in doc/vimwiki.txt</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=12137">vimwiki_0_9_8.vba.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.9.8</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-01-20</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=14343">Maxim Kim</a></i></td>
+    <td class="roweven" valign="top" width="2000">* NEW: Rename g:vimwiki_fold_empty_lines to g:vimwiki_fold_trailing_empty_lines.<br>* NEW: One can use - along with * to start unordered list item.<br>* NEW: List items could be started from the first column.&nbsp;&nbsp;As a result some<br>&nbsp;&nbsp;limitations appeared:<br>&nbsp;&nbsp;&nbsp;&nbsp;* a space after *, - or # for a list item is mandatory.<br>&nbsp;&nbsp;&nbsp;&nbsp;* g:vimwiki_fold_trailing_empty_lines if set to 0 folds one trailing<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;empty line.<br>* NEW: Folding is off by default. Use g:vimwiki_folding to enable it.<br>* NEW: Speed up vimwiki's folding a bit. Should lag a bit less in a long todo lists.<br>* NEW: Centered headers. Start header with at least one space to make it html centered.<br>* NEW: Change in default css: header's colors.<br>* NEW: Vimwiki is aware of GetLatestVimScripts now. <br>* FIX: Use &lt;del&gt; tag instead of custom &lt;span class=&quot;strike&quot;&gt; in html.<br>* FIX: There are no text styling in htmlized quoted text.<br>* FIX: set default value of g:vimwiki_fold_lists to 0 as written in this help.<br>* FIX: Issue 33: Folded list items have wrong indentation when 'tabs' are used.<br>* FIX: Issue 34: vimwiki#subdir got wrong dir when VimwikiGet('path') is a<br>&nbsp;&nbsp;symbolic link. Thanks lilydjwg for the patch.<br>* FIX: Issue 28: todo-list auto-indent enhancement. New item should always be unchecked.<br>* FIX: Issue 36: Change the name of the :Search command to :VimwikiSearch<br>&nbsp;&nbsp;as it conflicts with MultipleSearch. Alias :VWS is also available.<br>* NEW: You can generate 'Table of contents' of your wiki page. See :h vimwiki-toc for details.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=11889">vimwiki_0_9_701_vba.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.9.701</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-12-11</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=14343">Maxim Kim</a></i></td>
+    <td class="rowodd" valign="top" width="2000">* FIX: Issue 30: Highlighting doesn't work for checked list item.<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=11886">vimwiki_0_9_7_vba.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.9.7</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-12-09</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=14343">Maxim Kim</a></i></td>
+    <td class="roweven" valign="top" width="2000">* NEW: Default checkbox symbols are changed to [ ], [.], [o], [O], [X].<br>&nbsp;&nbsp;You can change them using |g:vimwiki-listsyms| variable.<br>* NEW: Color group names are renamed from wikiBold, wikiItalic, etc to<br>&nbsp;&nbsp;VimwikiBold, VimwikiItalic, etc.<br>* NEW: Open external links in a browser. There are default browsers<br>&nbsp;&nbsp;defined in |g:vimwiki_browsers| list. You can also redefine<br>&nbsp;&nbsp;|VimwikiWeblinkHandler| function to open weblinks in other programs.<br>* NEW: Issue 25: Toggle the states of multiple TODO list items at a time<br>&nbsp;&nbsp;(in VISUAL and in VISUAL LINE modes)<br>* NEW: Issue 26: Highlight code snippets in vimwiki's pre. See<br>&nbsp;&nbsp;|vimwiki-option-nested_syntaxes|. Thanks kriomant.<br>* NEW: Issue 27: Automatic garbage deletion from html directory.<br>* NEW: Save all open vimwiki buffers before export to html.<br>* NEW: Issue 29: Custom :Search command.<br>* NEW: Header text objects are now expandable in VISUAL mode. Tap 'vah' to<br>&nbsp;&nbsp;select a header. Tap again 'ah' to expand selection further. Thanks<br>&nbsp;&nbsp;Andy Wokula.<br>* FIX: Folding settings are reset to vim defaults in a new tab (think of<br>&nbsp;&nbsp;\wt) so you cannot hide things in folds.<br>* FIX: https links in form of [<a target="_blank" href="https://hello.world.com">https://hello.world.com</A>] are not exported<br>&nbsp;&nbsp;into html. Thanks Saurabh Sarpal for the patch.<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=11562">vimwiki_0_9_6_vba.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.9.6</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-10-22</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=14343">Maxim Kim</a></i></td>
+    <td class="rowodd" valign="top" width="2000">* NEW: You can have multiline list items. See |vimwiki-syntax-lists|.<br>* NEW: You can ignore newlines in multiline list items when do export to<br>&nbsp;&nbsp;html. See |g:vimwiki_list_ignore_newline| option.<br>* NEW: Different checkbox symbols [.], [:], [o] are added. See<br>&nbsp;&nbsp;|vimwiki-todo-lists|.<br>* NEW: Now there is no longer syntax of preformatted text that is started<br>&nbsp;&nbsp;by a whitespace.<br>* NEW: Blockquotes. See |vimwiki-syntax-blockquote|.<br>* NEW: Per wiki folding option (vimwiki-option-folding) is removed. Global<br>&nbsp;&nbsp;|g:vimwiki_folding| and |g:vimwiki_fold_lists| are added.<br>* NEW: Due to being quite slow folding of list items is off by default.<br>&nbsp;&nbsp;Use |g:vimwiki_fold_lists| to turn it on.<br>* NEW: If you want replace some symbols in a wikifilename use<br>&nbsp;&nbsp;|g:vimwiki_badsyms| option (Andreas Baldeau).<br>* FIX: Command |:VimwikiToggleListItem| doesn't work for one of the two<br>&nbsp;&nbsp;wikies opened at the same time with different syntaxes.<br>* FIX: Command |:VimwikiToggleListItem| do not switch parent checkboxes if<br>&nbsp;&nbsp;there are non-checkbox list items available.<br>* FIX: Issue 24: Link error in html when write [[one.two.three]].<br>* FIX: Rename WikiWord to something with a colon (:) does nasty things.<br>* FIX: Command |:VimwikiToggleListItem| do not switch right if there are<br>&nbsp;&nbsp;list items without checkboxes in the list.<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=11389">vimwiki_0_9_5_vba.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.9.5</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-09-16</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=14343">Maxim Kim</a></i></td>
+    <td class="roweven" valign="top" width="2000">&nbsp;&nbsp;* NEW: Added g:vimwiki_global_ext to control creation of temporary wikies in a dirs that are not listed in g:vimwiki_list.<br>&nbsp;&nbsp;* NEW: Added g:vimwiki_hl_headers to highlight headers with different predefined colors.<br>&nbsp;&nbsp;* NEW: Checked [x] items are not highlighted with Comment syntax group by default. Use g:vimwiki_hl_cb_checked to turn it on.<br>&nbsp;&nbsp;* NEW: Added new syntax for links: [[link address][link description]].<br>&nbsp;&nbsp;* NEW: Added &lt;C-@&gt; allias of &lt;C-Space&gt; mapping for *nix systems.<br>&nbsp;&nbsp;* NEW: Added g:vimwiki_camel_case. Set it to 0 if you do not want CamelCased WikiWords to be linkified.<br>&nbsp;&nbsp;* FIX: Links with g:viwmiki_stripsym (default '_') [[My_Link|Text]] are not highlighted when created.<br>&nbsp;&nbsp;* FIX: indent/vimwiki.vim is obsolete. If you upgrade from previous versions remove it. It causes wrong list indentation if noexpandtab is set.<br>&nbsp;&nbsp;* FIX: If tabs and spaces are used to indent list items html export gives error. Thanks Klaus Ethgen for report.<br>&nbsp;&nbsp;* FIX: Some html export fixes.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=11076">vimwiki_0_9_4_vba.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.9.4</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-07-28</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=14343">Maxim Kim</a></i></td>
+    <td class="rowodd" valign="top" width="2000">&nbsp;&nbsp;* NEW: Links with directories: [[dir_name/Link|Text]]. Thanks Jie Wu.<br>&nbsp;&nbsp;* NEW: Added %root_path% template variable to get relative root dir of path_html. See vimwiki-option-html_header.<br>&nbsp;&nbsp;* FIX: Indent incorrect for vim without &quot;float&quot; compile option. Thanks Julian Kooij.<br>&nbsp;&nbsp;* FIX: Convert to html doesn't work right with links like [[foo::bar]].<br>&nbsp;&nbsp;* FIX: Rename wikiword doesn't work right when rename WikiWord to [[WikiWord blablabla]].<br>&nbsp;&nbsp;* FIX: Renaming of links with description doesn't work.<br>&nbsp;&nbsp;* FIX: Weblinks with commas are not highlighted.<br>&nbsp;&nbsp;* MISC: Some changes in default css file.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=10808">vimwiki_0_9_3_vba.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.9.3</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-06-12</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=14343">Maxim Kim</a></i></td>
+    <td class="roweven" valign="top" width="2000">&nbsp;&nbsp;* NEW: g:vimwiki_menu option is a string which is menu path. So one can use let g:vimwiki_menu = 'Plugin.Vimwiki' to set the menu to the right place.<br>&nbsp;&nbsp;* NEW: g:vimwiki_fold_empty_lines -- don't or do fold in empty lines between headers. See :h g:vimwiki_fold_empty_lines<br>&nbsp;&nbsp;* FIX: Encoding error when running vimwiki in Windows XP Japanese.&nbsp;&nbsp;Thanks KarasAya.<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=10563">vimwiki_0_9_2c_vba.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.9.2c</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-05-09</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=14343">Maxim Kim</a></i></td>
+    <td class="rowodd" valign="top" width="2000">&nbsp;&nbsp;* FIX: Regression bug. Export to HTML of `[[link|desc]]` is wrong.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=10532">vimwiki_0_9_2b_vba.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.9.2b</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-05-05</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=14343">Maxim Kim</a></i></td>
+    <td class="roweven" valign="top" width="2000">I was playing with python and vimball archives -- as a result CRLFs in a recent vba file. Anyway I hope those evil CRLFs in the past.<br><br>&nbsp;&nbsp;* FIX: Installation on Linux doesn't work. (Dos line endings in Vimball archive file).<br>&nbsp;&nbsp;* FIX: Clear out FlexWiki ftplugin's setup. Now you don't have to hack filetype.vim to get rid of unexpected ':setlocal bomb' from FlexWiki's ftplugin.<br>&nbsp;&nbsp;* FIX: When write done: it will show another done: in html file.<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=10518">vimwiki_0_9_2a_vba.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.9.2a</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-05-04</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=14343">Maxim Kim</a></i></td>
+    <td class="rowodd" valign="top" width="2000">FIX: Remove dos line endings from some files.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=10506">vimwiki_0_9_2_vba.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.9.2</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-05-02</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=14343">Maxim Kim</a></i></td>
+    <td class="roweven" valign="top" width="2000">&nbsp;&nbsp;* NEW: Option 'folding' added to turn folding on/off.<br>&nbsp;&nbsp;* NEW: Header text object. See :h vimwiki-text-objects.<br>&nbsp;&nbsp;* NEW: Add/remove Header levels with '=' and '-'. See :h vimwiki_=.<br>&nbsp;&nbsp;* NEW: Vimwiki GUI menu to select available wikies. See :h g:vimwiki_menu.<br>&nbsp;&nbsp;* NEW: You can specify the name of your css file now. See :h vimwiki-option-css_name<br>&nbsp;&nbsp;* NEW: You can add styles to image links, see :h vimwiki-syntax-links.<br>&nbsp;&nbsp;* FIX: History doesn't work after :VimwikiRenameWord.<br>&nbsp;&nbsp;* FIX: Some of wikipedia links are not correctly highlighted. Links with parentheses.<br>&nbsp;&nbsp;* MISC: Renamed vimwiki_gtd to vimwiki_lst.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=10389">vimwiki_0_9_1_vba.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.9.1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-04-12</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=14343">Maxim Kim</a></i></td>
+    <td class="rowodd" valign="top" width="2000">&nbsp;&nbsp;* [new] HTML Table cell text alignment, see :h vimwiki-syntax-tables.<br>&nbsp;&nbsp;* [new] Wikipage history simplified. Each vimwiki buffer now holds b:vimwiki_prev_word which is list of [PrevWord, getpos()].<br>&nbsp;&nbsp;* [new] If highlight for groups wikiHeader1..wikiHeader6 exist (defined in a colorscheme) -- use it. Otherwise use Title highlight for all Headers.<br>&nbsp;&nbsp;* [fix] Warn only once if 'html_header' or 'html_footer' does not exist.<br>&nbsp;&nbsp;* [fix] Wrong folding for the text after the last nested list item.<br>&nbsp;&nbsp;* [fix] Bold and Italic aren't highlighted in tables without spaces between || and * or _. ||*bold*||_asdf_ || (Thanks Brett Stahlman)</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=10324">vimwiki_0_9_0_vba.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.9</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-03-30</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=14343">Maxim Kim</a></i></td>
+    <td class="roweven" valign="top" width="2000">&nbsp;&nbsp;* [new] You can add classes to 'pre' tag -- :h vimwiki-syntax-preformatted. This might be useful for coloring some programming code with external js tools like google syntax highlighter.<br>&nbsp;&nbsp;* [new] !WikiPage is not highlighted. It is just a plain word WikiPage in HTML, without exclamation mark<br>&nbsp;&nbsp;* [new] Definition lists, see :h vimwiki-syntax-lists.<br>&nbsp;&nbsp;* [new] New implementation of :h VimwikiRenameWord. CAUTION: It was tested on 2 computers only, backup your wiki before use it. Email me if it doesn't work for you.<br>&nbsp;&nbsp;* [new] HTML: convert [ ] to html checkboxes.<br>&nbsp;&nbsp;* [new] Default CSS: gray out checked items. <br>&nbsp;&nbsp;* [fix] Less than 3 characters are not highlighted in Bold and Italic.<br>&nbsp;&nbsp;* [fix] Added vimwiki autocmd group to avoid clashes with user defined autocmds.<br>&nbsp;&nbsp;* [fix] Pressing ESC while :h :VimwikiUISelect opens current wiki index file.&nbsp;&nbsp;Should cancel wiki selection.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=10251">vimwiki_0_8_3.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.8.3</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-03-19</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=14343">Maxim Kim</a></i></td>
+    <td class="rowodd" valign="top" width="2000">&nbsp;&nbsp;* [new] &lt;C-Space&gt; on a list item creates checkbox.<br>&nbsp;&nbsp;* [fix] With * in the first column, &lt;CR&gt; shouldn't insert more * (default syntax).<br>&nbsp;&nbsp;* [fix] With MediaWiki's ** [ ], &lt;CR&gt; should insert it on the next line.<br>&nbsp;&nbsp;* [fix] HTML export should use 'fileencoding' instead of 'encoding'.<br>&nbsp;&nbsp;* [fix] Code cleanup.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=10207">vimwiki_0_8_2.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.8.2</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-03-14</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=14343">Maxim Kim</a></i></td>
+    <td class="roweven" valign="top" width="2000">&nbsp;&nbsp;* [del] Removed google syntax file.<br>&nbsp;&nbsp;* [new] Default vimwiki syntax is a subset of google's one. Header's has been changed from !Header to =Header=. It is easier to maintain only 2 syntaxes. See :h vimwiki-syntax-headers.<br>&nbsp;&nbsp;* [new] Multiline paragraphs -- less longlines.<br>&nbsp;&nbsp;* [new] Comments. See :h vimwiki-syntax-comments.<br>&nbsp;&nbsp;* [del] Removed setlocal textwidth = 0 from ftplugin.<br>&nbsp;&nbsp;* [fix] New regexps for bold, italic, bolditalic.<br>&nbsp;&nbsp;* [fix] The last item in List sometimes fold-in incorrectly.<br>&nbsp;&nbsp;* [fix] Minor tweaks on default css.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=10179">vimwiki_0_8_1.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.8.1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-03-11</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=14343">Maxim Kim</a></i></td>
+    <td class="rowodd" valign="top" width="2000">&nbsp;&nbsp;* [new] Vimwiki's foldmethod changed from syntax to expr. Foldtext is changed to be nicer with folded list items.<br>&nbsp;&nbsp;* [new] Fold/outline list items.<br>&nbsp;&nbsp;* [new] It is possible now to edit wiki files in arbitrary directories which is not in g:vimwiki_list's paths. New WikiWords are created in the path of the current WikiWord.<br>&nbsp;&nbsp;* [new] User can remap Vimwiki's built in mappings.<br>&nbsp;&nbsp;* [new] Added g:vimwiki_use_mouse. It is off by default.<br>&nbsp;&nbsp;* [fix] Removed &lt;C-h&gt; mapping.<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=10124">vimwiki_0_8.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.8</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-03-05</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=14343">Maxim Kim</a></i></td>
+    <td class="roweven" valign="top" width="2000">NOTE: g:vimwiki_home is obsolete now!!!<br>&nbsp;&nbsp;* NEW Multiple wikies support. A lot of options have been changed, see :h vimwiki-options<br>&nbsp;&nbsp;* NEW Auto create directories.<br>&nbsp;&nbsp;* NEW Checked list item highlighted as comment.<br>&nbsp;&nbsp;* FIX Multiple set ft=vimwiki for each buffer disabled. Vimwiki should load its buffers a bit faster now.<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=10061">vimwiki_0_7_1.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.7.1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-02-28</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=14343">Maxim Kim</a></i></td>
+    <td class="rowodd" valign="top" width="2000">* NEW: &lt;Plug&gt;VimwikiToggleListItem added to be able to remap &lt;C-Space&gt; to anything user prefers more.<br>* FIX: Toggleable list items do not work with MediaWiki markup.<br>* FIX: Changing g:vimwiki_home_html to path with ~ while vimwiki is loaded gives errors for HTML export.<br>* DEL: Command :VimwikiExploreHome.<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=10010">vimwiki_0_7_0.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.7</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-02-23</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=14343">Maxim Kim</a></i></td>
+    <td class="roweven" valign="top" width="2000"> * NEW: GTD stuff -- toggleable list items. See h: vimwiki-gtd.<br> * FIX: Headers do not fold inner headers. (Thanks Brett Stahlman)<br> * FIX: Remove last blank lines from preformatted text at the end of file (HTML).<br> * DEL: Removed g:vimwiki_smartCR option.<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=9973">vimwiki_0_6_2.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.6.2</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-02-15</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=14343">Maxim Kim</a></i></td>
+    <td class="rowodd" valign="top" width="2000">&nbsp;&nbsp;&nbsp;&nbsp;* NEW: [[link|description]] is available now.<br>&nbsp;&nbsp;&nbsp;&nbsp;* FIX: Barebone links (ie: <a target="_blank" href="http://bla-bla-bla.org/h.pl?id=98">http://bla-bla-bla.org/h.pl?id=98</A>) get extra escaping of ? and friends so they become invalid in HTML.<br>&nbsp;&nbsp;&nbsp;&nbsp;* FIX: In linux going to [[wiki with whitespaces]] and then pressing BS to go back to prev wikipage produce error. (Thanks Brendon Bensel for the fix)<br>&nbsp;&nbsp;&nbsp;&nbsp;* FIX: Remove setlocal encoding and fileformat from vimwiki ftplugin.<br>&nbsp;&nbsp;&nbsp;&nbsp;* FIX: Some tweaks on default style.css<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=9933">vimwiki_0_6_1.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.6.1</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-02-08</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=14343">Maxim Kim</a></i></td>
+    <td class="roweven" valign="top" width="2000">&nbsp;&nbsp;&nbsp;&nbsp;* FIX: [blablabla bla] shouldn't be converted to a link.<br>&nbsp;&nbsp;&nbsp;&nbsp;* FIX: Remove extra annoing empty strings from PRE tag made from<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;whitespaces in HTML export.<br>&nbsp;&nbsp;&nbsp;&nbsp;* FIX: Moved functions related to HTML converting to new autoload module<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;to increase a bit vimwiki startup time.<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=9912">vimwiki_0_6.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.6</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-02-04</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=14343">Maxim Kim</a></i></td>
+    <td class="rowodd" valign="top" width="2000"> * NEW: Header and footer templates. See g:vimwiki_html_header and g:vimwiki_html_footer in help.<br> * FIX: :Vimwiki2HTML does not recognize ~ as part of a valid path.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=9848">vimwiki_0_5_3.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.5.3</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-01-20</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=14343">Maxim Kim</a></i></td>
+    <td class="roweven" valign="top" width="2000">* FIX: Fixed :VimwikiRenameWord. Error when g:vimwiki_home had whitespaces in path.<br>* FIX: :VimwikiSplitWord and :VimwikiVSplitWord didn't work.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=9841">vimwiki_0_5_2.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.5.2</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-01-19</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=14343">Maxim Kim</a></i></td>
+    <td class="rowodd" valign="top" width="2000">&nbsp;&nbsp;&nbsp;&nbsp;* NEW: Added :VimwikiGoHome, :VimwikiTabGoHome and :VimwikiExploreHome commands.<br>&nbsp;&nbsp;&nbsp;&nbsp;* NEW: Added &lt;Leader&gt;wt mapping to open vimwiki index file in a new tab.<br>&nbsp;&nbsp;&nbsp;&nbsp;* NEW: Added g:vimwiki_gohome option that controls how :VimwikiGoHome works when current buffer is changed. (Thanks Timur Zaripov)<br>&nbsp;&nbsp;&nbsp;&nbsp;* FIX: Fixed :VimwikiRenameWord. Very bad behaviour when autochdir isn't set up.<br>&nbsp;&nbsp;&nbsp;&nbsp;* FIX: Fixed commands :Wiki2HTML and :WikiAll2HTML to be available only for vimwiki buffers.<br>&nbsp;&nbsp;&nbsp;&nbsp;* FIX: Renamed :Wiki2HTML and :WikiAll2HTML to :Vimwiki2HTML and :VimwikiAll2HTML commands.<br>&nbsp;&nbsp;&nbsp;&nbsp;* FIX: Help file corrections. </td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=9604">vimwiki_0_5_1.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.5.1</b></td>
+    <td class="roweven" valign="top" nowrap><i>2008-12-03</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=14343">Maxim Kim</a></i></td>
+    <td class="roweven" valign="top" width="2000">&nbsp;&nbsp;* [new] Help is created.<br>&nbsp;&nbsp;* [new] Now you can fold headers.<br>&nbsp;&nbsp;* [new] &lt;Plug&gt;VimwikiGoHome and &lt;Plug&gt;VimwikiExploreHome were added.<br>&nbsp;&nbsp;* [fix] Bug with {{{HelloWikiWord}}} export to HTML is fixed.<br>&nbsp;&nbsp;* [del] Sync option removed from: Syntax highlighting for preformatted text&nbsp;&nbsp;{{{ }}}.<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=9253">vimwiki_0_5.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.5</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2008-09-15</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=14343">Maxim Kim</a></i></td>
+    <td class="rowodd" valign="top" width="2000">&nbsp;&nbsp;* DONE: vimwiki default markup to HTML conversion improved.<br>&nbsp;&nbsp;* DONE: Added basic `GoogleWiki` and `MediaWiki` markup languages.<br>&nbsp;&nbsp;* DONE: Chinese `[[complex wiki words]]`.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=8744">vimwiki_0_4.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.4</b></td>
+    <td class="roweven" valign="top" nowrap><i>2008-06-02</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=14343">Maxim Kim</a></i></td>
+    <td class="roweven" valign="top" width="2000">&nbsp;&nbsp;* DONE: vimwiki=&gt;HTML converter in plain vim language.<br>&nbsp;&nbsp;* DONE: Plugin autoload.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=8725">vimwiki_0_3_4.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.3.4</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2008-05-26</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=14343">Maxim Kim</a></i></td>
+    <td class="rowodd" valign="top" width="2000">&nbsp;&nbsp;* FIXED: Backup files (.wiki~) caused a bunch of errors while opening wiki files.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=8714">vimwiki_0_3_3.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.3.3</b></td>
+    <td class="roweven" valign="top" nowrap><i>2008-05-23</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=14343">Maxim Kim</a></i></td>
+    <td class="roweven" valign="top" width="2000">&nbsp;&nbsp;* FIXED: `[[wiki word with dots at the end...]]` didn't work.<br>&nbsp;&nbsp;* DONE: Added error handling for `delete wiki word` function.<br>&nbsp;&nbsp;* DONE: Added keybindings `o` and `O` for list items when g:vimwiki_smartCR=1.<br>&nbsp;&nbsp;* DONE: Added keybinding `&lt;Leader&gt;wh` to visit wiki home directory.<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=8696">vimwiki_0_3_2.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.3.2</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2008-05-16</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=14343">Maxim Kim</a></i></td>
+    <td class="rowodd" valign="top" width="2000">FIXED: Renaming - error if complex wiki word contains %. <br>FIXED: Syntax highlighting for preformatted text . Sync option added. <br>FIXED: smartCR bug fix.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=8695">vimwiki_0_3_1.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.3.1</b></td>
+    <td class="roweven" valign="top" nowrap><i>2008-05-16</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=14343">Maxim Kim</a></i></td>
+    <td class="roweven" valign="top" width="2000">DONE: Use mouse to follow links. Left double-click to follow WikiPage, Rightclick then Leftclick to go back.<br>FIXED: Renaming - [[hello world?]] to [[hello? world]] links are not updated. <br>FIXED: Buffers menu after renaming is the same as before renaming.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=8690">vimwiki_0_3.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.3</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2008-05-15</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=14343">Maxim Kim</a></i></td>
+    <td class="rowodd" valign="top" width="2000">DONE: - Highlight non-existent WikiWords. <br>DONE: - delete current WikiWord (&lt;Leader&gt;wd) <br>DONE: - g:vimwiki_smartCR=2 =&gt; use vim comments (see :h comments :h formatoptions) feature to deal with list items. (thx - Dmitry Alexandrov) <br>DONE: Add highlighting to TODO:, DONE:, FIXED:. <br>DONE: Rename current WikiWord - be careful on Windows you cannot rename wikiword to WikiWord. After renaming update all links to that renamed WikiWord <br>FIXED: Bug - do not duplicate WikiWords in wiki history. <br>FIXED: after renaming [[wiki word]] twice buffers are not deleted <br>FIXED: when renaming from [[wiki word]] to WikiWord result is [[WikiWord]] <br>FIXED: more than one complex words on one line is bugging each other when try go to one of them. [[bla bla bla]] [[dodo dodo dodo]] becomes bla bla bla ]] [[dodo dodo dodo</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=8657">vimwiki_0_2_2.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.2.2</b></td>
+    <td class="roweven" valign="top" nowrap><i>2008-05-07</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=14343">Maxim Kim</a></i></td>
+    <td class="roweven" valign="top" width="2000">Added keybindings to split/vertsplit when following WikiWords.<br>&lt;S-CR&gt; - split WikiWord&nbsp;&nbsp;<br>&lt;C-CR&gt; - vertical split WikiWord<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=8649">vimwiki_0_2_1.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.2.1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2008-05-06</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=14343">Maxim Kim</a></i></td>
+    <td class="rowodd" valign="top" width="2000">install on linux now works.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=8646">vimwiki_0_2.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.2</b></td>
+    <td class="roweven" valign="top" nowrap><i>2008-05-05</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=14343">Maxim Kim</a></i></td>
+    <td class="roweven" valign="top" width="2000">&nbsp;&nbsp;* (+) Add part of Google's Wiki syntax.<br>&nbsp;&nbsp;* (+) Add auto insert # with ENTER.<br>&nbsp;&nbsp;* (+) On/Off auto insert bullet with ENTER.<br>&nbsp;&nbsp;* (+) Strip `[[complex wiki name]]` from symbols that cannot be used in file names.<br>&nbsp;&nbsp;* (+) Links to non-wiki files. Non wiki files are files with extensions ie `[[hello world.txt]]` or `[[my homesite.html]]`<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=8644">vimwiki_0_1.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2008-05-04</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=14343">Maxim Kim</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Initial upload</td>
+</tr>
+</table>
+<!-- finish off the framework -->
+          </td>
+        </tr>
+      </table>
+    </td>
+
+  </tr>
+</table>
+
+<!-- END OF THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr><td colspan="4" bgcolor="#000000"><img src="/images/spacer.gif" height="2" width="1" alt=""></td></tr>
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr>
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+
+    <td align="left" valign="top"><small>
+      If you have questions or remarks about this site, visit the
+      <a href="http://vimonline.sf.net">vimonline development</a> pages.
+      Please use this site responsibly.
+      <br> 
+      
+      Questions about <a href="http://www.vim.org/about.php">Vim</a> should go
+      to the <a href="http://www.vim.org/maillist.php">maillist</a>.
+      Help Bram <a href="http://iccf-holland.org/">help Uganda</a>.
+      </small>
+	&nbsp;
+	&nbsp;
+
+	<!-- Start of StatCounter Code -->
+	<script type="text/javascript" language="javascript">
+	var sc_project=1417324; 
+	var sc_invisible=1; 
+	var sc_partition=11; 
+	var sc_security="d41633bc"; 
+	</script>
+
+	<script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script><noscript><a href="http://www.statcounter.com/" target="_blank"><img  src="http://c12.statcounter.com/counter.php?sc_project=1417324&java=0&security=d41633bc&invisible=0" alt="free tracking" border="0"></a> </noscript>
+	<!-- End of StatCounter Code -->
+          </td>
+
+    <td align="right" valign="top">
+      		<a href="http://sourceforge.net/projects/vim" rel="nofollow"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=8&type=1" width="88" height="31" border="0" alt="SourceForge.net Logo" /></a>
+    </td>
+
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+  </tr>
+
+    
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  
+  </tr>
+</table>
+
+</body>
+</html>
+

@@ -1,0 +1,372 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+  <link rel="Stylesheet" type="text/css" href="/css/style.css" >
+  <title>camelcasemotion - Motion through CamelCaseWords and underscore_notation. : vim online</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <meta name="KEYWORDS" content="Vim, Vi IMproved, text editor, home, documentation, tips, scripts, news">
+  <link rel="shortcut icon" type="image/x-icon" href="/images/vim_shortcut.ico">
+</head>
+
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff"> 
+
+<!-- HEADER, SPONSOR IMAGE, VIM IMAGE AND BOOK AD -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+  <td class="lightbg">&nbsp;&nbsp;&nbsp;</td>
+  <td class="lightbg" align="left"><a href="/sponsor/index.php"><img src="/images/sponsorvim.gif" alt="sponsor Vim development" border="0"></a></td>
+    <td class="lightbg" align="center"><a href="/index.php"><img src="/images/vim_header.gif" border="0" alt="Vim logo"></a></td>
+    <td class="lightbg" align="right"><a href="http://iccf-holland.org/click5.html"><img src="/images/buyhelplearn.gif" alt="Vim Book Ad" border="0"></a></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="darkbg"><img src="/images/spacer.gif" width="1" height="10" alt=""></td>
+  </tr>
+</table>
+<!-- THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+  <col width="180">
+  <col width="1">
+
+  <tr valign="top">
+    <td class="sidebar">
+      <table width="180" cellpadding="4" cellspacing="0" border="0">
+        <tr valign="top">
+          <td class="sidebar">
+
+<!-- INCLUDE THE PAGE NAVIGATION -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+    <tr>
+        <td><small>not logged in (<a href="/login.php">login</a>)</small></td>
+    </tr>
+    <tr><td>
+<small>&nbsp;</small>
+<form action="http://www.google.com/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-3005259998294962:bvyni59kjr1" />
+    <input type="hidden" name="ie" value="ISO-8859-1" />
+    <input type="text" name="q" size="20" />
+    <br>
+    <input type="submit" name="sa" value="Search" />
+  </div>
+</form>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+    </td></tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="1"></td>
+    </tr>
+    <tr>
+        <td class="darkbg"><img src="/images/spacer.gif" alt='' border="0" height="3"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="2"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/index.php">Home</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/search.php">Advanced search</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/about.php">About Vim</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/community.php">Community</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/news/news.php">News</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/sponsor/index.php">Sponsoring</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/trivia.php">Trivia</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/docs.php">Documentation</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/download.php">Download</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/scripts/index.php">Scripts</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/tips/index.php">Tips</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/account/index.php">My Account</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/huh.php">Site Help</a></td>
+        </tr>
+</table>
+
+            <table width="172" cellpadding="0" cellspacing="0" border="0">
+              <tr><td><img src="/images/spacer.gif" alt="" border="0" width="1" height="8"></td></tr>
+              <tr><td class="darkbg"><img src="/images/spacer.gif" width="1" height="3" alt=""></td></tr>
+            </table>
+            <br>
+
+<!-- INCLUDE THE PAGE SIDEBAR TEXT -->
+&nbsp;
+
+          </td>
+        </tr>
+      </table>
+    </td>
+
+    <td class="darkbg"><img src="/images/spacer.gif" width="1" height="1" border="0" alt=""><br></td>
+    <td>
+      <table width="100%" cellpadding="10" cellspacing="0" border="0" bordercolor="red">
+        <tr>
+          <td valign="top">
+
+<span class="txth1">camelcasemotion : Motion through CamelCaseWords and underscore_notation.</span> 
+
+<br>
+<br>
+
+<!-- karma table -->
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
+  <td>
+    Rating <b>131/47</b>,
+    Downloaded by 2241  </td>
+  <td class="lightbg">
+  <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
+  </td>
+  <td>
+    <a href="http://vim.wikia.com/wiki/Script:1905">Vim wiki</a>
+  </td>  
+</tr>
+</table>
+<p>
+
+<table cellspacing="0" cellpadding="0" border="0">
+<tr><td class="prompt">created by</td></tr>
+<tr><td><a href="/account/profile.php?user_id=9713">Ingo Karkat</a></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">script type</td></tr>
+<tr><td>utility</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">description</td></tr>
+<tr><td>DESCRIPTION<br>Vim provides many built-in motions, e.g. to move to the next word, or end of<br>the current word. Most programming languages use either CamelCase<br>(&quot;anIdentifier&quot;) or underscore_notation (&quot;an_identifier&quot;) naming conventions<br>for identifiers. The best way to navigate inside those identifiers using Vim<br>built-in motions is the [count]f{char} motion, i.e. f{uppercase-char} or f_,<br>respectively. But we can make this easier: <br><br>This script defines motions ',w', ',b' and ',e' (similar to 'w', 'b', 'e'),<br>which do not move word-wise (forward/backward), but Camel-wise; i.e. to word<br>boundaries and uppercase letters. The motions also work on underscore notation,<br>where words are delimited by underscore ('_') characters. From here on, both<br>CamelCase and underscore_notation entities are referred to as &quot;words&quot; (in double<br>quotes). Just like with the regular motions, a [count] can be prepended to move<br>over multiple &quot;words&quot; at once. Outside of &quot;words&quot; (e.g. in non-keyword<br>characters like // or ;), the new motions move just like the regular motions. <br><br>Vim provides a built-in 'iw' text object called 'inner word', which works in<br>operator-pending and visual mode. Analog to that, this script defines inner<br>&quot;word&quot; motions 'i,w', 'i,b' and 'i,e', which select the &quot;word&quot; (or multiple<br>&quot;words&quot; if a [count] is given) where the cursor is located. <br><br>USAGE<br>Use the new motions',w',',b' and ',e' in normal mode, operator-pending mode (cp.<br>:help operator), and visual mode. For example, type 'bc,w' to change 'Camel' in<br>'CamelCase' to something else. <br><br>EXAMPLE: motions<br>Given the following CamelCase identifiers in a source code fragment:<br>&nbsp;&nbsp;&nbsp;&nbsp;set Script31337PathAndNameWithoutExtension11=%~dpn0<br>&nbsp;&nbsp;&nbsp;&nbsp;set Script31337PathANDNameWITHOUTExtension11=%~dpn0<br>and the corresponding identifiers in underscore_notation:<br>&nbsp;&nbsp;&nbsp;&nbsp;set script_31337_path_and_name_without_extension_11=%~dpn0<br>&nbsp;&nbsp;&nbsp;&nbsp;set SCRIPT_31337_PATH_AND_NAME_WITHOUT_EXTENSION_11=%~dpn0<br><br>,w moves to ([x] is cursor position): [s]et, [s]cript, [3]1337, [p]ath,<br>&nbsp;&nbsp;&nbsp;&nbsp;[a]nd, [n]ame, [w]ithout, [e]xtension, [1]1, [d]pn0, dpn[0], [s]et<br>,b moves to: [d]pn0, [1]1, [e]xtension, [w]ithout, ...<br>,e moves to: se[t], scrip[t], 3133[7], pat[h], an[d], nam[e], withou[t],<br>&nbsp;&nbsp;&nbsp;&nbsp;extensio[n], 1[1], dpn[0]<br><br>EXAMPLE: inner motions<br>Given the following identifier, with the cursor positioned at [x]:<br>&nbsp;&nbsp;&nbsp;&nbsp;script_31337_path_and_na[m]e_without_extension_11<br><br>v3i,w selects script_31337_path_and_[name_without_extension_]11<br>v3i,b selects script_31337_[path_and_name]_without_extension_11<br>v3i,e selects script_31337_path_and_[name_without_extension]_11<br>Instead of visual mode, you can also use c3i,w to change, d3i,w to delete,<br>gU3i,w to upper-case, and so on. <br><br>Source: Based on <a target="_blank" href="http://vim.wikia.com/wiki/Moving_through_camel_case_words">http://vim.wikia.com/wiki/Moving_through_camel_case_words</A> by<br>Anthony Van Ham.</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">install details</td></tr>
+<tr><td>INSTALLATION<br>This script is packaged as a vimball. If you have the &quot;gunzip&quot; decompressor<br>in your PATH, simply edit the *.vba.gz package in Vim; otherwise, decompress<br>the archive first, e.g. using WinZip. Inside Vim, install by sourcing the<br>vimball or via the :UseVimball command. <br>&nbsp;&nbsp;&nbsp;&nbsp;vim camelcasemotion.vba.gz<br>&nbsp;&nbsp;&nbsp;&nbsp;:so %<br>To uninstall, use the :RmVimball command. <br><br>DEPENDENCIES<br>- Requires Vim 7.0 or higher. <br><br>CONFIGURATION<br>If you want to use different mappings, map your keys to the<br>&lt;Plug&gt;CamelCaseMotion_? mapping targets _before_ sourcing this script (e.g. in<br>your .vimrc).&nbsp;&nbsp;<br><br>EXAMPLE: Replace the default 'w', 'b' and 'e' mappings instead of defining<br>additional mappings',w', ',b' and ',e':<br>&nbsp;&nbsp;&nbsp;&nbsp;map &lt;silent&gt; w &lt;Plug&gt;CamelCaseMotion_w<br>&nbsp;&nbsp;&nbsp;&nbsp;map &lt;silent&gt; b &lt;Plug&gt;CamelCaseMotion_b<br>&nbsp;&nbsp;&nbsp;&nbsp;map &lt;silent&gt; e &lt;Plug&gt;CamelCaseMotion_e<br>&nbsp;&nbsp;&nbsp;&nbsp;sunmap w<br>&nbsp;&nbsp;&nbsp;&nbsp;sunmap b<br>&nbsp;&nbsp;&nbsp;&nbsp;sunmap e<br><br>EXAMPLE: Replace default 'iw' text-object and define 'ib' and 'ie' motions:<br>&nbsp;&nbsp;&nbsp;&nbsp;omap &lt;silent&gt; iw &lt;Plug&gt;CamelCaseMotion_iw<br>&nbsp;&nbsp;&nbsp;&nbsp;xmap &lt;silent&gt; iw &lt;Plug&gt;CamelCaseMotion_iw<br>&nbsp;&nbsp;&nbsp;&nbsp;omap &lt;silent&gt; ib &lt;Plug&gt;CamelCaseMotion_ib<br>&nbsp;&nbsp;&nbsp;&nbsp;xmap &lt;silent&gt; ib &lt;Plug&gt;CamelCaseMotion_ib<br>&nbsp;&nbsp;&nbsp;&nbsp;omap &lt;silent&gt; ie &lt;Plug&gt;CamelCaseMotion_ie<br>&nbsp;&nbsp;&nbsp;&nbsp;xmap &lt;silent&gt; ie &lt;Plug&gt;CamelCaseMotion_ie</td></tr>
+<tr><td>&nbsp;</td></tr>
+</table>
+
+<!-- rating table -->
+<form name="rating">
+<input type="hidden" name="script_id" value="1905">
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>rate this script</b></td>
+  <td valign="middle">
+    <input type="radio" name="rating" value="life_changing">Life Changing
+    <input type="radio" name="rating" value="helpful">Helpful
+    <input type="radio" name="rating" value="unfulfilling">Unfulfilling&nbsp;
+    <input type="submit" value="rate">
+  </td>
+</tr>
+</table>
+</form>
+<span class="txth2">script versions</span> (<a href="add_script_version.php?script_id=1905">upload new version</a>)
+<p>
+Click on the package to download.
+<p>
+
+<table cellspacing="2" cellpadding="4" border="0" width="100%">
+<tr class='tableheader'>
+        <th valign="top">package</th>
+    <th valign="top">script version</th>
+    <th valign="top">date</th>
+    <th valign="top">Vim version</th>
+    <th valign="top">user</th>
+    <th valign="top">release notes</th>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=10530">camelcasemotion.vba.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.50</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-05-05</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=9713">Ingo Karkat</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- Do not create mappings for select mode; according to|Select-mode|, printable<br>&nbsp;&nbsp;character commands should delete the selection and insert the typed<br>&nbsp;&nbsp;characters. Now using :xmap to only target visual mode. <br>- Moved functions from plugin to separate autoload script. <br>- Split off documentation into separate help file. Now packaging as VimBall. </td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=8708">camelcasemotion.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.40.017</b></td>
+    <td class="roweven" valign="top" nowrap><i>2008-05-19</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=9713">Ingo Karkat</a></i></td>
+    <td class="roweven" valign="top" width="2000">BF: Now using :normal! to be independent from any user mappings. Thanks to Neil Walker for the patch.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=8612">camelcasemotion.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.40.016</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2008-04-28</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=9713">Ingo Karkat</a></i></td>
+    <td class="rowodd" valign="top" width="2000">BF: Wrong forward motion stop at the second digit if a word starts with multiple numbers (e.g. 1234.56789). Thanks to Wasim Ahmed for reporting this. </td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=8599">camelcasemotion.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.40.015</b></td>
+    <td class="roweven" valign="top" nowrap><i>2008-04-24</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=9713">Ingo Karkat</a></i></td>
+    <td class="roweven" valign="top" width="2000">ENH: Added inner &quot;word&quot; text objects 'i,w' etc. that work analoguous to the built-in 'iw' text object. Thanks to David Kotchan for this suggestion. </td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=8587">camelcasemotion.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.30.014</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2008-04-20</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=9713">Ingo Karkat</a></i></td>
+    <td class="rowodd" valign="top" width="2000">The motions now also stop at non-keyword boundaries, just like the regular motions. This has no effect inside a CamelCaseWord or inside underscore_notation, but it makes the motions behave like the regular motions (which is important if you replace the default motions). Thanks to Mun Johl for reporting this. </td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=8536">camelcasemotion.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.30.013</b></td>
+    <td class="roweven" valign="top" nowrap><i>2008-04-09</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=9713">Ingo Karkat</a></i></td>
+    <td class="roweven" valign="top" width="2000">Allowing users to use mappings different than ,w ,b ,e by defining &lt;Plug&gt;CamelCaseMotion_? target mappings. This can even be used to replace the default 'w', 'b' and 'e' mappings, as suggested by Mun Johl. <br>Now requires VIM 7.0 or higher. </td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=7210">camelcasemotion.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.20.012</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2007-06-06</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=9713">Ingo Karkat</a></i></td>
+    <td class="rowodd" valign="top" width="2000">BF: Corrected motions through mixed CamelCase_and_UnderScore words by re-ordering and narrowing the search patterns.&nbsp;&nbsp;</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=7189">camelcasemotion.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.20.011</b></td>
+    <td class="roweven" valign="top" nowrap><i>2007-06-02</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=9713">Ingo Karkat</a></i></td>
+    <td class="roweven" valign="top" width="2000">Thanks again to Joseph Barker for discussing the complicated visual mode mapping on the vim-dev mailing list and coming up with a great simplification. </td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=7177">camelcasemotion.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.20.010</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2007-05-30</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=9713">Ingo Karkat</a></i></td>
+    <td class="rowodd" valign="top" width="2000">ENH: The visual mode motions now also (mostly) work with the (default) setting 'set selection=inclusive' / 'behave xterm', instead of selecting one character too much. So far, you had to 'set selection=exclusive' / 'behave mswin'. </td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=7176">camelcasemotion.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.10.009</b></td>
+    <td class="roweven" valign="top" nowrap><i>2007-05-30</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=9713">Ingo Karkat</a></i></td>
+    <td class="roweven" valign="top" width="2000">Incorporated major improvements and simplifications done by Joseph Barker:<br>Operator-pending and visual mode motions now accept [count] of more than 9. <br>Visual selections can now be extended from either end. <br>Instead of misusing the :[range], the special variable v:count1 is used. Custom commands are not needed anymore. <br>Operator-pending and visual mode mappings are now generic: There's only a single mapping for ,w that can be repeated, rather than having a separate mapping for 1,w 2,w 3,w ...<br>BF: The operator-pending and visual mode ,e mapping doesn't work properly when it reaches the end of line; the final character of the moved-over &quot;word&quot; remains. Fixed this problem unless the &quot;word&quot; is at the very end of the buffer. <br>BF: Degenerate CamelCaseWords that consist of only a single uppercase letter (e.g. &quot;P&quot; in &quot;MapPRoblem&quot;) are skipped by all motions. Thanks to Joseph Barker for reporting this. <br>BF: In CamelCaseWords that consist of uppercase letters followed by decimals (e.g. &quot;MyUPPER123Problem&quot;, the uppercase &quot;word&quot; is skipped by all motions. </td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=7152">camelcasemotion.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.00.007</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2007-05-22</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=9713">Ingo Karkat</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Initial upload</td>
+</tr>
+</table>
+<!-- finish off the framework -->
+          </td>
+        </tr>
+      </table>
+    </td>
+
+  </tr>
+</table>
+
+<!-- END OF THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr><td colspan="4" bgcolor="#000000"><img src="/images/spacer.gif" height="2" width="1" alt=""></td></tr>
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr>
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+
+    <td align="left" valign="top"><small>
+      If you have questions or remarks about this site, visit the
+      <a href="http://vimonline.sf.net">vimonline development</a> pages.
+      Please use this site responsibly.
+      <br> 
+      
+      Questions about <a href="http://www.vim.org/about.php">Vim</a> should go
+      to the <a href="http://www.vim.org/maillist.php">maillist</a>.
+      Help Bram <a href="http://iccf-holland.org/">help Uganda</a>.
+      </small>
+	&nbsp;
+	&nbsp;
+
+	<!-- Start of StatCounter Code -->
+	<script type="text/javascript" language="javascript">
+	var sc_project=1417324; 
+	var sc_invisible=1; 
+	var sc_partition=11; 
+	var sc_security="d41633bc"; 
+	</script>
+
+	<script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script><noscript><a href="http://www.statcounter.com/" target="_blank"><img  src="http://c12.statcounter.com/counter.php?sc_project=1417324&java=0&security=d41633bc&invisible=0" alt="free tracking" border="0"></a> </noscript>
+	<!-- End of StatCounter Code -->
+          </td>
+
+    <td align="right" valign="top">
+      		<a href="http://sourceforge.net/projects/vim" rel="nofollow"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=8&type=1" width="88" height="31" border="0" alt="SourceForge.net Logo" /></a>
+    </td>
+
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+  </tr>
+
+    
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  
+  </tr>
+</table>
+
+</body>
+</html>
+

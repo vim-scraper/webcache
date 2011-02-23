@@ -1,0 +1,436 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+  <link rel="Stylesheet" type="text/css" href="/css/style.css" >
+  <title>ywchaos - Journal taking and diary making, to record all the chaos of your life :) : vim online</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <meta name="KEYWORDS" content="Vim, Vi IMproved, text editor, home, documentation, tips, scripts, news">
+  <link rel="shortcut icon" type="image/x-icon" href="/images/vim_shortcut.ico">
+</head>
+
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff"> 
+
+<!-- HEADER, SPONSOR IMAGE, VIM IMAGE AND BOOK AD -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+  <td class="lightbg">&nbsp;&nbsp;&nbsp;</td>
+  <td class="lightbg" align="left"><a href="/sponsor/index.php"><img src="/images/sponsorvim.gif" alt="sponsor Vim development" border="0"></a></td>
+    <td class="lightbg" align="center"><a href="/index.php"><img src="/images/vim_header.gif" border="0" alt="Vim logo"></a></td>
+    <td class="lightbg" align="right"><a href="http://iccf-holland.org/click5.html"><img src="/images/buyhelplearn.gif" alt="Vim Book Ad" border="0"></a></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="darkbg"><img src="/images/spacer.gif" width="1" height="10" alt=""></td>
+  </tr>
+</table>
+<!-- THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+  <col width="180">
+  <col width="1">
+
+  <tr valign="top">
+    <td class="sidebar">
+      <table width="180" cellpadding="4" cellspacing="0" border="0">
+        <tr valign="top">
+          <td class="sidebar">
+
+<!-- INCLUDE THE PAGE NAVIGATION -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+    <tr>
+        <td><small>not logged in (<a href="/login.php">login</a>)</small></td>
+    </tr>
+    <tr><td>
+<small>&nbsp;</small>
+<form action="http://www.google.com/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-3005259998294962:bvyni59kjr1" />
+    <input type="hidden" name="ie" value="ISO-8859-1" />
+    <input type="text" name="q" size="20" />
+    <br>
+    <input type="submit" name="sa" value="Search" />
+  </div>
+</form>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+    </td></tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="1"></td>
+    </tr>
+    <tr>
+        <td class="darkbg"><img src="/images/spacer.gif" alt='' border="0" height="3"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="2"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/index.php">Home</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/search.php">Advanced search</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/about.php">About Vim</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/community.php">Community</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/news/news.php">News</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/sponsor/index.php">Sponsoring</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/trivia.php">Trivia</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/docs.php">Documentation</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/download.php">Download</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/scripts/index.php">Scripts</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/tips/index.php">Tips</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/account/index.php">My Account</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/huh.php">Site Help</a></td>
+        </tr>
+</table>
+
+            <table width="172" cellpadding="0" cellspacing="0" border="0">
+              <tr><td><img src="/images/spacer.gif" alt="" border="0" width="1" height="8"></td></tr>
+              <tr><td class="darkbg"><img src="/images/spacer.gif" width="1" height="3" alt=""></td></tr>
+            </table>
+            <br>
+
+<!-- INCLUDE THE PAGE SIDEBAR TEXT -->
+&nbsp;
+
+          </td>
+        </tr>
+      </table>
+    </td>
+
+    <td class="darkbg"><img src="/images/spacer.gif" width="1" height="1" border="0" alt=""><br></td>
+    <td>
+      <table width="100%" cellpadding="10" cellspacing="0" border="0" bordercolor="red">
+        <tr>
+          <td valign="top">
+
+<span class="txth1">ywchaos : Journal taking and diary making, to record all the chaos of your life :)</span> 
+
+<br>
+<br>
+
+<!-- karma table -->
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
+  <td>
+    Rating <b>13/9</b>,
+    Downloaded by 583  </td>
+  <td class="lightbg">
+  <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
+  </td>
+  <td>
+    <a href="http://vim.wikia.com/wiki/Script:2845">Vim wiki</a>
+  </td>  
+</tr>
+</table>
+<p>
+
+<table cellspacing="0" cellpadding="0" border="0">
+<tr><td class="prompt">created by</td></tr>
+<tr><td><a href="/account/profile.php?user_id=17429">Yue Wu</a></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">script type</td></tr>
+<tr><td>utility</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">description</td></tr>
+<tr><td>It's at the very early stage. If you feel the script is useful but still not so convenient in the journal taking and chaos orgnizing with vim in KISS way, any feedback is welcome, if you have thoughts on improvement, any advice is appreciated! My email is:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ywupub AT gmail DOT com<br><br>1. Journal recording.<br><br>Hit the key &lt;Leader&gt;n (&lt;Leader&gt; normally means \ on your keyboard if you haven't changed the &lt;Leader&gt; definition.) to create a new journal entry. ywchaos will insert a new entry with timestamp under today's datestamp for you.<br><br>2. Tag support.<br><br>you can add a tag with the format of &quot;@tag&quot;(Without the double quotes) at anywhere you want in a file, or use &quot;@tag1|tag2&quot; for creating multi-tags, you can also use &quot;@tag:subtag&quot; to define sub-tags. &lt;tab&gt; can be used for autocompletion after '@', '|' or ':'.<br>After a &quot;@tag&quot; has been defined, next time you edit ywchaos file, ywchaos will add the &quot;tag&quot; to TAGS list region which is on the very first part of the file. You can also use &lt;Leader&gt;&lt;C-l&gt; to reflesh the TAGS list region manually.<br><br>(subtag support is experimental, not so convenient for subtag adding at present, you much create tag then :subtag for every subtag.)<br><br>3. Folding & highlighting & picture supporting.<br><br>ywchaos folds the file according to the datestamp[mm/dd/yyyy], the timestamp[hh:mm:ss], and the snip. Just a few highlightings(tags, journal entries) for ywchaos itself are supported at present, ywchaos is to manage the..., chaos, so I've no idea which stuffs should be highlighted, if you have a good advice, please let me know.<br><br>BUT great news is, you can insert any other different filetypes of snip as you like, and use their syntaxs to hightlight(if they exists), so ywchaos can actually support all highlightings as vim supports! Only syntax is supported, not indentation. I don't know if filetype's indentation can be integrated in one file, if you know, please let me know.<br><br>ywchaos makes the insertion of picture is easy, you can hit &lt;Leader&gt;i, select the html tag, then use the auto completion to insert a &lt;img src=&gt; tag(auto-completion for file name after '=' is supported), then you can rename ywchaos file from foo.ywchaos to foo.html, then see the pictures in your browser.<br><br>Special note for txtfmt users: you can use set ft=ywchaos.txtfmt, instead of simply ft=ywchaos to make ywchaos and txtfmt[<a target="_blank" href="http://www.vim.org/scripts/script.php?script_id=2208">http://www.vim.org/scripts/script.php?script_id=2208</A>] work together. Thanks Brett Stahlman for such nice script to turn vim into a word processor :) You could go to <a target="_blank" href="http://txtfmt.webs.com/ywchaos.htm">http://txtfmt.webs.com/ywchaos.htm</A> for the screenshots!<br><br>4. keybinding:<br><br>&lt;Leader&gt;n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Create a new journal entry with the format of &quot;$datestamp\n$timestamp&quot; and start editing.<br><br>&lt;Leader&gt;i&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ywchaos will prompt you to insert html tags or other filetype of snips as you like(auto-completion is supported), and use the corresponding syntax to highlight the html tag or snip region.<br><br>&lt;Tab&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; When on TAGS list region, unfolds all the entries which have the tag under the cursor, another &lt;Tab&gt; will restore to old fold way, otherwise do folding/unfolding toggling. When in insert mode, &lt;tab&gt; will try to complete the tag name after '@' or '|'.<br><br>&lt;Leader&gt;&lt;C-l&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Refresh the TAGS list region manually.<br><br>&lt;C-]&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; To vimgrep the tag(auto-completion is supported) for current file.<br><br>5. A sample test.ywchaos(Trick: you can name it to test.htm to view the picture):<br><br>------------------------------------------------<br>&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf-8&quot;/&gt;<br>&lt;pre style=&quot;word-wrap: break-word; white-space: pre-wrap; white-space: -moz-pre-wrap&quot; &gt;<br>&lt;TAGS&gt;<br>Chinese <br>Programming&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;C<br>vim&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ywchaos<br>&#20013;&#25991; <br>&lt;/TAGS&gt;<br><br>Logo pic:<br>&lt;img src=<a target="_blank" href="http://www.google.com/intl/en_ALL/images/logo.gif">http://www.google.com/intl/en_ALL/images/logo.gif</A> &gt;<br><br>11/18/2009<br>22:40:40 @&#20013;&#25991;|Chinese<br>&#36825;&#26159;&#20013;&#25991;&#27979;&#35797;. This is a test for Chinese.<br>11/08/2009 <br>15:52:00 @vim:ywchaos <br>I've created a new ywchaos entry in vim. <br>It's not so good, I'll email developer to improve it! <br><br>Following the a C snip that I'm learning for programming! @Programming:C <br>&lt;BEGINSNIP=c&gt; <br>#include &lt;stdio.h&gt; <br>/* Just for example. */<br>main() <br>{ <br>&nbsp;&nbsp;&nbsp;&nbsp;int i; <br>&nbsp;&nbsp;&nbsp;&nbsp;printf(&quot;Hello, ywchaos!\n&quot;); <br>} <br>&lt;ENDSNIP=c&gt; <br><br>vim:ft=ywchaos:<br>------------------------------------------------<br><br>6. Thanks:<br><br>Christian Brabandt for the help with the function that gets tags in file.<br>Xbeta for the inspiration of html tag support[<a target="_blank" href="http://xbeta.info/pre-txt.htm">http://xbeta.info/pre-txt.htm</A>]</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">install details</td></tr>
+<tr><td>1. Unzip(tar jxvf) ywchaos.tar.bz2 into your ~/.vim/(or vimfiles/ when on windows).<br><br>ywchaos has the following files:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;plugin/ywchaos.vim<br>&nbsp;&nbsp;&nbsp;&nbsp;ftplugin/ywchaos.vim<br>&nbsp;&nbsp;&nbsp;&nbsp;syntax/ywchaos.vim<br><br>2. Create a new file with a line at the very end of the file:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;vim:ft=ywchaos:<br><br>3. That's all. Now close the file then re-open it. If modeline is annoying, you can add one line in your ~/.vimrc:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;au BufRead,BufNewFile *.ywchaos set ft=ywchaos<br><br>Then next time when you want to create a new ywchaos file, named it with foo.ywchaos is enough.</td></tr>
+<tr><td>&nbsp;</td></tr>
+</table>
+
+<!-- rating table -->
+<form name="rating">
+<input type="hidden" name="script_id" value="2845">
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>rate this script</b></td>
+  <td valign="middle">
+    <input type="radio" name="rating" value="life_changing">Life Changing
+    <input type="radio" name="rating" value="helpful">Helpful
+    <input type="radio" name="rating" value="unfulfilling">Unfulfilling&nbsp;
+    <input type="submit" value="rate">
+  </td>
+</tr>
+</table>
+</form>
+<span class="txth2">script versions</span> (<a href="add_script_version.php?script_id=2845">upload new version</a>)
+<p>
+Click on the package to download.
+<p>
+
+<table cellspacing="2" cellpadding="4" border="0" width="100%">
+<tr class='tableheader'>
+        <th valign="top">package</th>
+    <th valign="top">script version</th>
+    <th valign="top">date</th>
+    <th valign="top">Vim version</th>
+    <th valign="top">user</th>
+    <th valign="top">release notes</th>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=12468">ywchaos-0.14.tar.bz2</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.14</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-02-23</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=17429">Yue Wu</a></i></td>
+    <td class="rowodd" valign="top" width="2000">1) Reserved first two lines for html pre tags to fix html encoding issue, please see the example file and adjust for your own file.<br>2) Changed folding functions. Now use &lt;tab&gt; in tags list region to toggle tags view or dates view.<br>3) Fixed bug in new entry creation.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=12339">ywchaos-0.13.tar.bz2</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.13</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-02-08</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=17429">Yue Wu</a></i></td>
+    <td class="roweven" valign="top" width="2000">1. Implemented html syntax, now you can rename ywchaos file to .html to view the pictures.<br>2. Added simplist html tags insertion & completion support.<br>3. Changed Tag list region to start from 2nd line. 1st line reserves for html pre tag.<br>Please take the test file in the document for a try!</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=11895">ywchaos-0.12.tar.bz2</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.12</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-12-13</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=17429">Yue Wu</a></i></td>
+    <td class="rowodd" valign="top" width="2000">1. Fixed bug that cursor position may change after refresh the TAGS list region.<br>2. Improved the highlight after tag name changed.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=11817">ywchaos-0.11.tar.bz2</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.11</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-11-27</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=17429">Yue Wu</a></i></td>
+    <td class="roweven" valign="top" width="2000">1) Tag grep(&lt;C-]&gt;) and tag outlining(&lt;TAB&gt;) now differ well with the subtags sharing a same name which in different parent tags.<br>2) Improved TAGS list region generation function.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=11770">ywchaos-0.10.tar.bz2</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.10</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-11-20</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=17429">Yue Wu</a></i></td>
+    <td class="rowodd" valign="top" width="2000">1) Improved TAGS list region generating function to prevent the lost of TAGS header.<br>2) Fixed the bug of messing up the highlighting when inserting multi filetypes of snips.<br>3) Fixed bug of vimgrep(&lt;C-]&gt;) for the multi-tag & subtag's matching.<br>4) Ignore case in tags highlighting.<br>5) Improved highlighting. Highlights accroding to English *word* and Chinese *charactors* .<br>6) Removed '@' from the option of 'iskwd'.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=11736">ywchaos-0.9.tar.bz2</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.9</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-11-16</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=17429">Yue Wu</a></i></td>
+    <td class="roweven" valign="top" width="2000">1. Arrange the subtags alphabetically.<br>2. Improved &lt;Tab&gt; for subtag completion.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=11729">ywchaos-0.8.tar.bz2</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.8</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-11-15</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=17429">Yue Wu</a></i></td>
+    <td class="rowodd" valign="top" width="2000">1) Fixed &lt;C-]&gt; not working for the new format of TAGS list region.<br>2) Improved TAGS list region generating function.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=11721">ywchaos-0.7_2.tar.bz2</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.7_2</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-11-13</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=17429">Yue Wu</a></i></td>
+    <td class="roweven" valign="top" width="2000">Fixed a bug with the var undefined...</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=11720">ywchaos-0.7.tar.bz2</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.7</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-11-13</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=17429">Yue Wu</a></i></td>
+    <td class="rowodd" valign="top" width="2000">UPGRATE NOTE!!!: Delete the TAGSLINE manually please, new version use a different fomat which is called TAGS list region now. Please see the document and the sample file for detail.<br>1) Tagsline format has changed to TAGS list region. Also note that the modeline should be change to the end of file if you use modeline.<br>2) Added sub-tags supported which defined by @tag:subtag.<br>3) Improved to test condition that if &lt;tab&gt; should try to complete on '|' and ':'.<br>4) Fixed minor highlighting bug.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=11705">ywchaos-0.6.tar.bz2</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.6</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-11-11</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=17429">Yue Wu</a></i></td>
+    <td class="roweven" valign="top" width="2000">1) Added &lt;tab&gt; autocompetion for tag name when in insert mode after '@' and '|'.<br>2) Added folding support on snips.<br>3) Added syntax of @tag1|tag2 to support multi-tags.<br>4) Improved syntax highlighting.<br>5) Removed useless buffer variable.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=11704">ywchaos-0.5_2.tar.bz2</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.5_2</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-11-10</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=17429">Yue Wu</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Fixed bug that snips can't be highlighted when start editing.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=11703">ywchaos-0.5.tar.bz2</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.5</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-11-10</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=17429">Yue Wu</a></i></td>
+    <td class="roweven" valign="top" width="2000">Supports inserting any other filetypes of snip and their highlightings!</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=11695">ywchaos-0.4.tar.bz2</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.4</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-11-09</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=17429">Yue Wu</a></i></td>
+    <td class="rowodd" valign="top" width="2000">1) Suppressed &lt;Tab&gt; no fold found's warning.<br>2) Fixed bug of &lt;Tab&gt; behavior on TAGSLINE.<br>3) Added &lt;Leader&gt;&lt;C-l&gt; for easing the TAGSLINE refresh.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=11691">ywchaos-0.3.tar.bz2</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.3</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-11-09</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=17429">Yue Wu</a></i></td>
+    <td class="roweven" valign="top" width="2000">TAGSLINE treament improved.<br>&lt;Tab&gt; key map improved.<br>Accept 'yy' and 'yyyy' as year string, but 'yyyy' is recommended.<br>Minor bugs fixed.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=11687">ywchaos-0.2.tar.bz2</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.2</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-11-08</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=17429">Yue Wu</a></i></td>
+    <td class="rowodd" valign="top" width="2000">1. More highlightings support.<br>2. Timestamp format changed to show second now.<br>3. Timestamp entry can be folded now.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=11674">ywchaos-0.1_2.tar.bz2</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.1_2</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-11-07</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=17429">Yue Wu</a></i></td>
+    <td class="roweven" valign="top" width="2000">Fixed wrong package suffix, sorry for inconvenient!</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=11673">ywchaos-0.1_2.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.1_2</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-11-07</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=17429">Yue Wu</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Fixed non-work highlighting and some minor bugs.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=11672">ywchaos-0.1_1.tar.bz2</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.1_1</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-11-07</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=17429">Yue Wu</a></i></td>
+    <td class="roweven" valign="top" width="2000">Fix function name typo.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=11671">ywchaos-0.1.tar.bz2</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-11-07</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=17429">Yue Wu</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Initial upload</td>
+</tr>
+</table>
+<!-- finish off the framework -->
+          </td>
+        </tr>
+      </table>
+    </td>
+
+  </tr>
+</table>
+
+<!-- END OF THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr><td colspan="4" bgcolor="#000000"><img src="/images/spacer.gif" height="2" width="1" alt=""></td></tr>
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr>
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+
+    <td align="left" valign="top"><small>
+      If you have questions or remarks about this site, visit the
+      <a href="http://vimonline.sf.net">vimonline development</a> pages.
+      Please use this site responsibly.
+      <br> 
+      
+      Questions about <a href="http://www.vim.org/about.php">Vim</a> should go
+      to the <a href="http://www.vim.org/maillist.php">maillist</a>.
+      Help Bram <a href="http://iccf-holland.org/">help Uganda</a>.
+      </small>
+	&nbsp;
+	&nbsp;
+
+	<!-- Start of StatCounter Code -->
+	<script type="text/javascript" language="javascript">
+	var sc_project=1417324; 
+	var sc_invisible=1; 
+	var sc_partition=11; 
+	var sc_security="d41633bc"; 
+	</script>
+
+	<script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script><noscript><a href="http://www.statcounter.com/" target="_blank"><img  src="http://c12.statcounter.com/counter.php?sc_project=1417324&java=0&security=d41633bc&invisible=0" alt="free tracking" border="0"></a> </noscript>
+	<!-- End of StatCounter Code -->
+          </td>
+
+    <td align="right" valign="top">
+      		<a href="http://sourceforge.net/projects/vim" rel="nofollow"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=8&type=1" width="88" height="31" border="0" alt="SourceForge.net Logo" /></a>
+    </td>
+
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+  </tr>
+
+    
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  
+  </tr>
+</table>
+
+</body>
+</html>
+

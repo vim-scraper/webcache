@@ -1,0 +1,324 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+  <link rel="Stylesheet" type="text/css" href="/css/style.css" >
+  <title>notes.vim - Easy note taking in Vim : vim online</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <meta name="KEYWORDS" content="Vim, Vi IMproved, text editor, home, documentation, tips, scripts, news">
+  <link rel="shortcut icon" type="image/x-icon" href="/images/vim_shortcut.ico">
+</head>
+
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff"> 
+
+<!-- HEADER, SPONSOR IMAGE, VIM IMAGE AND BOOK AD -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+  <td class="lightbg">&nbsp;&nbsp;&nbsp;</td>
+  <td class="lightbg" align="left"><a href="/sponsor/index.php"><img src="/images/sponsorvim.gif" alt="sponsor Vim development" border="0"></a></td>
+    <td class="lightbg" align="center"><a href="/index.php"><img src="/images/vim_header.gif" border="0" alt="Vim logo"></a></td>
+    <td class="lightbg" align="right"><a href="http://iccf-holland.org/click5.html"><img src="/images/buyhelplearn.gif" alt="Vim Book Ad" border="0"></a></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="darkbg"><img src="/images/spacer.gif" width="1" height="10" alt=""></td>
+  </tr>
+</table>
+<!-- THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+  <col width="180">
+  <col width="1">
+
+  <tr valign="top">
+    <td class="sidebar">
+      <table width="180" cellpadding="4" cellspacing="0" border="0">
+        <tr valign="top">
+          <td class="sidebar">
+
+<!-- INCLUDE THE PAGE NAVIGATION -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+    <tr>
+        <td><small>not logged in (<a href="/login.php">login</a>)</small></td>
+    </tr>
+    <tr><td>
+<small>&nbsp;</small>
+<form action="http://www.google.com/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-3005259998294962:bvyni59kjr1" />
+    <input type="hidden" name="ie" value="ISO-8859-1" />
+    <input type="text" name="q" size="20" />
+    <br>
+    <input type="submit" name="sa" value="Search" />
+  </div>
+</form>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+    </td></tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="1"></td>
+    </tr>
+    <tr>
+        <td class="darkbg"><img src="/images/spacer.gif" alt='' border="0" height="3"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="2"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/index.php">Home</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/search.php">Advanced search</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/about.php">About Vim</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/community.php">Community</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/news/news.php">News</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/sponsor/index.php">Sponsoring</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/trivia.php">Trivia</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/docs.php">Documentation</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/download.php">Download</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/scripts/index.php">Scripts</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/tips/index.php">Tips</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/account/index.php">My Account</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/huh.php">Site Help</a></td>
+        </tr>
+</table>
+
+            <table width="172" cellpadding="0" cellspacing="0" border="0">
+              <tr><td><img src="/images/spacer.gif" alt="" border="0" width="1" height="8"></td></tr>
+              <tr><td class="darkbg"><img src="/images/spacer.gif" width="1" height="3" alt=""></td></tr>
+            </table>
+            <br>
+
+<!-- INCLUDE THE PAGE SIDEBAR TEXT -->
+&nbsp;
+
+          </td>
+        </tr>
+      </table>
+    </td>
+
+    <td class="darkbg"><img src="/images/spacer.gif" width="1" height="1" border="0" alt=""><br></td>
+    <td>
+      <table width="100%" cellpadding="10" cellspacing="0" border="0" bordercolor="red">
+        <tr>
+          <td valign="top">
+
+<span class="txth1">notes.vim : Easy note taking in Vim</span> 
+
+<br>
+<br>
+
+<!-- karma table -->
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
+  <td>
+    Rating <b>21/6</b>,
+    Downloaded by 255  </td>
+  <td class="lightbg">
+  <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
+  </td>
+  <td>
+    <a href="http://vim.wikia.com/wiki/Script:3375">Vim wiki</a>
+  </td>  
+</tr>
+</table>
+<p>
+
+<table cellspacing="0" cellpadding="0" border="0">
+<tr><td class="prompt">created by</td></tr>
+<tr><td><a href="/account/profile.php?user_id=14483">Peter Odding</a></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">script type</td></tr>
+<tr><td>utility</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">description</td></tr>
+<tr><td>The notes.vim plug-in makes it easy to manage your notes in Vim by providing several (automatic) commands and an advanced syntax mode. For more information about the plug-in please refer to its homepage or the project page on GitHub:<br><br> • <a target="_blank" href="http://peterodding.com/code/vim/notes/">http://peterodding.com/code/vim/notes/</A><br> • <a target="_blank" href="http://github.com/xolox/vim-notes">http://github.com/xolox/vim-notes</A><br><br>If you have questions, bug reports, suggestions, etc. the author can be contacted at peter@peterodding.com. If you like this plug-in please vote for it below!</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">install details</td></tr>
+<tr><td>Unzip the most recent ZIP archive file (see below) inside your Vim profile directory (usually this is &quot;~/.vim&quot; on UNIX and &quot;%USERPROFILE%\vimfiles&quot; on Windows), restart Vim and execute the command &quot;:helptags ~/.vim/doc&quot; (use &quot;:helptags ~\vimfiles\doc&quot; instead on Windows). To get started execute &quot;:Note&quot; or &quot;:edit note:&quot;, this will start a new note that contains instructions on how to continue from there (and how to use the plug-in in general).</td></tr>
+<tr><td>&nbsp;</td></tr>
+</table>
+
+<!-- rating table -->
+<form name="rating">
+<input type="hidden" name="script_id" value="3375">
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>rate this script</b></td>
+  <td valign="middle">
+    <input type="radio" name="rating" value="life_changing">Life Changing
+    <input type="radio" name="rating" value="helpful">Helpful
+    <input type="radio" name="rating" value="unfulfilling">Unfulfilling&nbsp;
+    <input type="submit" value="rate">
+  </td>
+</tr>
+</table>
+</form>
+<span class="txth2">script versions</span> (<a href="add_script_version.php?script_id=3375">upload new version</a>)
+<p>
+Click on the package to download.
+<p>
+
+<table cellspacing="2" cellpadding="4" border="0" width="100%">
+<tr class='tableheader'>
+        <th valign="top">package</th>
+    <th valign="top">script version</th>
+    <th valign="top">date</th>
+    <th valign="top">Vim version</th>
+    <th valign="top">user</th>
+    <th valign="top">release notes</th>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=14703">notes.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.8.2</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2011-01-07</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=14483">Peter Odding</a></i></td>
+    <td class="rowodd" valign="top" width="2000"> • Enable naming new notes with :NewNote arguments:<br>&nbsp;&nbsp; <a target="_blank" href="https://github.com/xolox/vim-notes/commit/94e10b3bbdc2b609bcbf">https://github.com/xolox/vim-notes/commit/94e10b3bbdc2b609bcbf</A><br><br> • Rename :NewNote to :Note, make it edit existing notes:<br>&nbsp;&nbsp; <a target="_blank" href="https://github.com/xolox/vim-notes/commit/8274b26e48212cb75577">https://github.com/xolox/vim-notes/commit/8274b26e48212cb75577</A><br><br> • Simplify automatic renaming (now more reliable):<br>&nbsp;&nbsp; <a target="_blank" href="https://github.com/xolox/vim-notes/commit/9d0a9dd7f9746525c875">https://github.com/xolox/vim-notes/commit/9d0a9dd7f9746525c875</A><br><br> • Completion for :Note command:<br>&nbsp;&nbsp; <a target="_blank" href="https://github.com/xolox/vim-notes/commit/21c8699880876d3f584f">https://github.com/xolox/vim-notes/commit/21c8699880876d3f584f</A></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=14701">notes.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.7.20</b></td>
+    <td class="roweven" valign="top" nowrap><i>2011-01-07</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=14483">Peter Odding</a></i></td>
+    <td class="roweven" valign="top" width="2000"> • Compatibility with Pathogen by using relative paths:<br>&nbsp;&nbsp; <a target="_blank" href="https://github.com/xolox/vim-notes/commit/9aa85d093a4515930ac4">https://github.com/xolox/vim-notes/commit/9aa85d093a4515930ac4</A><br><br> • Bug fix for URL highlighting (trailing punctuation):<br>&nbsp;&nbsp; <a target="_blank" href="https://github.com/xolox/vim-notes/commit/79eea085d726ba9f9864">https://github.com/xolox/vim-notes/commit/79eea085d726ba9f9864</A><br><br> • Bug fix: Always keep cached note names up to date:<br>&nbsp;&nbsp; <a target="_blank" href="https://github.com/xolox/vim-notes/commit/9a044fbd479f87c1e864">https://github.com/xolox/vim-notes/commit/9a044fbd479f87c1e864</A><br><br> • Dynamically update note name highlighting:<br>&nbsp;&nbsp; <a target="_blank" href="https://github.com/xolox/vim-notes/commit/a30b997ea2ad7042abd0">https://github.com/xolox/vim-notes/commit/a30b997ea2ad7042abd0</A><br><br> • Only update note name highlighting when necessary:<br>&nbsp;&nbsp; <a target="_blank" href="https://github.com/xolox/vim-notes/commit/46e29787ed9f4ee749d6">https://github.com/xolox/vim-notes/commit/46e29787ed9f4ee749d6</A><br><br> • Forget about notes that are never saved:<br>&nbsp;&nbsp; <a target="_blank" href="https://github.com/xolox/vim-notes/commit/2a1a704c81520d45f64b">https://github.com/xolox/vim-notes/commit/2a1a704c81520d45f64b</A><br><br> • Bug fix: Restore highlighting of URL schemes:<br>&nbsp;&nbsp; <a target="_blank" href="https://github.com/xolox/vim-notes/commit/e8d694bd292cf0385797">https://github.com/xolox/vim-notes/commit/e8d694bd292cf0385797</A><br><br> • Bug fix: Restore note name highlighting after reload:<br>&nbsp;&nbsp; <a target="_blank" href="https://github.com/xolox/vim-notes/commit/e47ca92357efd98150f6">https://github.com/xolox/vim-notes/commit/e47ca92357efd98150f6</A><br><br> • Bug fix: Update note name highlighting when reloading syntax:<br>&nbsp;&nbsp; <a target="_blank" href="https://github.com/xolox/vim-notes/commit/3e4ec8fe4b2f68cdedc7">https://github.com/xolox/vim-notes/commit/3e4ec8fe4b2f68cdedc7</A><br><br> • Change remaining &quot;:hi link&quot; commands to &quot;:hi def link&quot;:<br>&nbsp;&nbsp; <a target="_blank" href="https://github.com/xolox/vim-notes/commit/507aaac7960cfe958c6d">https://github.com/xolox/vim-notes/commit/507aaac7960cfe958c6d</A><br><br> • Highlighting for line numbers in filenames:<br>&nbsp;&nbsp; <a target="_blank" href="https://github.com/xolox/vim-notes/commit/7a476d8e29cc023424a8">https://github.com/xolox/vim-notes/commit/7a476d8e29cc023424a8</A><br><br> • Highlighting for FIXME markers:<br>&nbsp;&nbsp; <a target="_blank" href="https://github.com/xolox/vim-notes/commit/3e4f5a34f0cfb880b397">https://github.com/xolox/vim-notes/commit/3e4f5a34f0cfb880b397</A><br><br> • Remove BufWritePost automatic commands:<br>&nbsp;&nbsp; <a target="_blank" href="https://github.com/xolox/vim-notes/commit/16f46000a0caf430a88d">https://github.com/xolox/vim-notes/commit/16f46000a0caf430a88d</A></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=14604">notes.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.7.7</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-12-23</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=14483">Peter Odding</a></i></td>
+    <td class="rowodd" valign="top" width="2000"> • Document the `:edit note:' shortcut:<br>&nbsp;&nbsp; <a target="_blank" href="https://github.com/xolox/vim-notes/commit/bd9b7920bfb9f3e1e0bf">https://github.com/xolox/vim-notes/commit/bd9b7920bfb9f3e1e0bf</A><br><br> • Automatically rename notes when their title is changed:<br>&nbsp;&nbsp; <a target="_blank" href="https://github.com/xolox/vim-notes/commit/26741868c3b576afdeb7">https://github.com/xolox/vim-notes/commit/26741868c3b576afdeb7</A></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=14601">notes.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.7.6</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-12-22</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=14483">Peter Odding</a></i></td>
+    <td class="roweven" valign="top" width="2000"> • Download & Vim scripts links in README, support automatic updates with GLVS:<br>&nbsp;&nbsp; <a target="_blank" href="https://github.com/xolox/vim-notes/commit/c16227bbf3855c27344e">https://github.com/xolox/vim-notes/commit/c16227bbf3855c27344e</A><br><br> • Ignore punctuation after URLs:<br>&nbsp;&nbsp; <a target="_blank" href="https://github.com/xolox/vim-notes/commit/72ea4edd8f9c3cf8fe40">https://github.com/xolox/vim-notes/commit/72ea4edd8f9c3cf8fe40</A><br><br> • Bug fix for italic highlighting:<br>&nbsp;&nbsp; <a target="_blank" href="https://github.com/xolox/vim-notes/commit/e5e60d755a48acb3bce8">https://github.com/xolox/vim-notes/commit/e5e60d755a48acb3bce8</A></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=14600">notes.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.7.4</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-12-22</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=14483">Peter Odding</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Initial upload</td>
+</tr>
+</table>
+<!-- finish off the framework -->
+          </td>
+        </tr>
+      </table>
+    </td>
+
+  </tr>
+</table>
+
+<!-- END OF THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr><td colspan="4" bgcolor="#000000"><img src="/images/spacer.gif" height="2" width="1" alt=""></td></tr>
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr>
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+
+    <td align="left" valign="top"><small>
+      If you have questions or remarks about this site, visit the
+      <a href="http://vimonline.sf.net">vimonline development</a> pages.
+      Please use this site responsibly.
+      <br> 
+      
+      Questions about <a href="http://www.vim.org/about.php">Vim</a> should go
+      to the <a href="http://www.vim.org/maillist.php">maillist</a>.
+      Help Bram <a href="http://iccf-holland.org/">help Uganda</a>.
+      </small>
+	&nbsp;
+	&nbsp;
+
+	<!-- Start of StatCounter Code -->
+	<script type="text/javascript" language="javascript">
+	var sc_project=1417324; 
+	var sc_invisible=1; 
+	var sc_partition=11; 
+	var sc_security="d41633bc"; 
+	</script>
+
+	<script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script><noscript><a href="http://www.statcounter.com/" target="_blank"><img  src="http://c12.statcounter.com/counter.php?sc_project=1417324&java=0&security=d41633bc&invisible=0" alt="free tracking" border="0"></a> </noscript>
+	<!-- End of StatCounter Code -->
+          </td>
+
+    <td align="right" valign="top">
+      		<a href="http://sourceforge.net/projects/vim" rel="nofollow"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=8&type=1" width="88" height="31" border="0" alt="SourceForge.net Logo" /></a>
+    </td>
+
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+  </tr>
+
+    
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  
+  </tr>
+</table>
+
+</body>
+</html>
+

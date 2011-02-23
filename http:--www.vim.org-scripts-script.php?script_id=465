@@ -1,0 +1,532 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+  <link rel="Stylesheet" type="text/css" href="/css/style.css" >
+  <title>vimspell - ispell or aspell based spell checker with fly-spelling : vim online</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <meta name="KEYWORDS" content="Vim, Vi IMproved, text editor, home, documentation, tips, scripts, news">
+  <link rel="shortcut icon" type="image/x-icon" href="/images/vim_shortcut.ico">
+</head>
+
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff"> 
+
+<!-- HEADER, SPONSOR IMAGE, VIM IMAGE AND BOOK AD -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+  <td class="lightbg">&nbsp;&nbsp;&nbsp;</td>
+  <td class="lightbg" align="left"><a href="/sponsor/index.php"><img src="/images/sponsorvim.gif" alt="sponsor Vim development" border="0"></a></td>
+    <td class="lightbg" align="center"><a href="/index.php"><img src="/images/vim_header.gif" border="0" alt="Vim logo"></a></td>
+    <td class="lightbg" align="right"><a href="http://iccf-holland.org/click5.html"><img src="/images/buyhelplearn.gif" alt="Vim Book Ad" border="0"></a></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="darkbg"><img src="/images/spacer.gif" width="1" height="10" alt=""></td>
+  </tr>
+</table>
+<!-- THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+  <col width="180">
+  <col width="1">
+
+  <tr valign="top">
+    <td class="sidebar">
+      <table width="180" cellpadding="4" cellspacing="0" border="0">
+        <tr valign="top">
+          <td class="sidebar">
+
+<!-- INCLUDE THE PAGE NAVIGATION -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+    <tr>
+        <td><small>not logged in (<a href="/login.php">login</a>)</small></td>
+    </tr>
+    <tr><td>
+<small>&nbsp;</small>
+<form action="http://www.google.com/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-3005259998294962:bvyni59kjr1" />
+    <input type="hidden" name="ie" value="ISO-8859-1" />
+    <input type="text" name="q" size="20" />
+    <br>
+    <input type="submit" name="sa" value="Search" />
+  </div>
+</form>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+    </td></tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="1"></td>
+    </tr>
+    <tr>
+        <td class="darkbg"><img src="/images/spacer.gif" alt='' border="0" height="3"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="2"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/index.php">Home</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/search.php">Advanced search</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/about.php">About Vim</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/community.php">Community</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/news/news.php">News</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/sponsor/index.php">Sponsoring</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/trivia.php">Trivia</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/docs.php">Documentation</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/download.php">Download</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/scripts/index.php">Scripts</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/tips/index.php">Tips</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/account/index.php">My Account</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/huh.php">Site Help</a></td>
+        </tr>
+</table>
+
+            <table width="172" cellpadding="0" cellspacing="0" border="0">
+              <tr><td><img src="/images/spacer.gif" alt="" border="0" width="1" height="8"></td></tr>
+              <tr><td class="darkbg"><img src="/images/spacer.gif" width="1" height="3" alt=""></td></tr>
+            </table>
+            <br>
+
+<!-- INCLUDE THE PAGE SIDEBAR TEXT -->
+&nbsp;
+
+          </td>
+        </tr>
+      </table>
+    </td>
+
+    <td class="darkbg"><img src="/images/spacer.gif" width="1" height="1" border="0" alt=""><br></td>
+    <td>
+      <table width="100%" cellpadding="10" cellspacing="0" border="0" bordercolor="red">
+        <tr>
+          <td valign="top">
+
+<span class="txth1">vimspell : ispell or aspell based spell checker with fly-spelling</span> 
+
+<br>
+<br>
+
+<!-- karma table -->
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
+  <td>
+    Rating <b>1914/702</b>,
+    Downloaded by 28551  </td>
+  <td class="lightbg">
+  <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
+  </td>
+  <td>
+    <a href="http://vim.wikia.com/wiki/Script:465">Vim wiki</a>
+  </td>  
+</tr>
+</table>
+<p>
+
+<table cellspacing="0" cellpadding="0" border="0">
+<tr><td class="prompt">created by</td></tr>
+<tr><td><a href="/account/profile.php?user_id=1196">Mathieu Clabaut</a></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">script type</td></tr>
+<tr><td>utility</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">description</td></tr>
+<tr><td>***** note to VIM 7 users ! *****<br>Version 7 of vim integrates a native spellchecker which outperforms&nbsp;&nbsp;vimspell script.<br>As such I will not maintain anymore vimspell script, and you are advised to delete all<br>related files from your plugin/ and doc/ directory, and use the native spellchecker instead.<br>******************************<br><br>This script is based on Claudio Fleiner's spell checker and uses ispell (or aspell) <br>to highlight spelling errors, and provides mappings (including a popup menu opened <br>by right clicking on a mispelled word) to correct them, with suggestions. <br><br>It is possible to set up the script to do automatic spellchecking (à la<br>word --- the current visible window is checked, and errors are highlighted on the fly).<br>For that, just redefine the spell_auto_type variable (let spell_auto_type=&quot;tex,doc,mail&quot;) in such a maner <br>that all the filetypes for which you want on the fly spell check are listed (&quot;none&quot;, and &quot;all&quot; token are treated).<br>&nbsp;&nbsp;&nbsp;&nbsp; <br>Much more documentation on all options can be found at the beginning of the script, or <br>after having install it, by typing the command &quot;:help vimspell&quot;.<br><br>Feedback (suggestions, bug report, questions,...) is welcome .... <br><br>You can subscribe to a mailing list to receive annoucement for new versions by sending a mail<br>here at vimspell.announce-request@ml.free.fr&nbsp;&nbsp;with subscribe in the subject.</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">install details</td></tr>
+<tr><td>Copy vimspell.vim into your ~/.vim/plugin directory<br>The help file shall be automagically installed when launching VIM.</td></tr>
+<tr><td>&nbsp;</td></tr>
+</table>
+
+<!-- rating table -->
+<form name="rating">
+<input type="hidden" name="script_id" value="465">
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>rate this script</b></td>
+  <td valign="middle">
+    <input type="radio" name="rating" value="life_changing">Life Changing
+    <input type="radio" name="rating" value="helpful">Helpful
+    <input type="radio" name="rating" value="unfulfilling">Unfulfilling&nbsp;
+    <input type="submit" value="rate">
+  </td>
+</tr>
+</table>
+</form>
+<span class="txth2">script versions</span> (<a href="add_script_version.php?script_id=465">upload new version</a>)
+<p>
+Click on the package to download.
+<p>
+
+<table cellspacing="2" cellpadding="4" border="0" width="100%">
+<tr class='tableheader'>
+        <th valign="top">package</th>
+    <th valign="top">script version</th>
+    <th valign="top">date</th>
+    <th valign="top">Vim version</th>
+    <th valign="top">user</th>
+    <th valign="top">release notes</th>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=4580">vimspell.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.100</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2005-09-14</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=1196">Mathieu Clabaut</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- UTF-8 bug workaroud (hack from Huidae Cho),<br>- Ability to type 01 to 09 to select one of the first 9 alternatives (patch<br>&nbsp;&nbsp;from M.Sureshkumar),<br>- Suppression of some debugging output,<br>- Some corrections to better work under windows and notably, addition of&nbsp;&nbsp; default shell handlling for windows thanks to Wojciech Pietron.<br>- Silent some warnings.<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=3744">vimspell.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.95</b></td>
+    <td class="roweven" valign="top" nowrap><i>2005-01-04</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=1196">Mathieu Clabaut</a></i></td>
+    <td class="roweven" valign="top" width="2000">- Correcting spell errors when typechecking lines with ` inside.<br>- Apply patch from Olaf Conradi to manage the cases when mapping already <br>&nbsp;&nbsp;exists for &lt;Space&gt;, '.' and so one in insert mode.<br>- Correction to use the new aspell command line interface<br>- workaround inoremap preventing abbreviations expensions in vim 6.3 (however, <br>&nbsp;&nbsp;there are still some unwanted behaviour).<br>- Better language recognition for mail filetypes.<br>- Include some longstanding patches from Alex Efros. (Use of \k instead of \w <br>&nbsp;&nbsp;in regexp, and better usage of language specific iskeyword.)<br>- Take csh into account. Addition of 'spell_shell' variable and associated <br>&nbsp;&nbsp;documentation.<br>- Correction of line quoting bug which appeared in tex/latex file (bug <br>&nbsp;&nbsp;reported by Yann&nbsp;&nbsp;Golanski).<br>- Add Hugo Hass patch : spell_guess_max_lines<br>- Addition of filetype &quot;text&quot; and &quot;&quot; to spell_markup_ft option.<br>- Add some FAQ documentation, improve the documentation about spell_markup_ft<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=2966">vimspell.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.84</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2004-04-22</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=1196">Mathieu Clabaut</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Add mail to the default content of 'spell_markup_ft' variable (errors where not highlighted anymore during mail composition).</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=2962">vimspell.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.83</b></td>
+    <td class="roweven" valign="top" nowrap><i>2004-04-21</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=1196">Mathieu Clabaut</a></i></td>
+    <td class="roweven" valign="top" width="2000">Bug correction - highlighting inside cluster was badly set, depending on when SpellSetupBuffer was called<br>Addition fo auto jump option (jump to next error after correction).<br>Correction of a bug where cursor was jumping when on the last line of a file.<br>Correction of html file highlightings.<br>Correction of spell_guess_language_ft usage (wasn't taken into account).<br>Performance issue : check of @Spell cluster existence in syntax highlightings was removed, and replaced by heuristic and manula configuration. see spell_markup_ft variable.<br><br>Many thanks to&nbsp;&nbsp;Paul Jolly, Tomas Hoger, Michaeljohn Clement, Hugo Haas and Markus Braun. </td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=2957">vimspell.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.78</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2004-04-20</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=1196">Mathieu Clabaut</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- Add a language auto-detection function.<br>- Corrects a bug which causes delays during buffer switching (function SpellTuneCommentSyntax).<br>- Correction for bug wich prevents use of alternatives number 10 and 20<br>- Use of alternatives usable even when spellchecking is not automatically done<br>- Samm optimization to improve buffer switching latency.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=2953">vimspell.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.73</b></td>
+    <td class="roweven" valign="top" nowrap><i>2004-04-19</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=1196">Mathieu Clabaut</a></i></td>
+    <td class="roweven" valign="top" width="2000">- at most 20 alternatives are now proposed (was 10)<br>- 'r'eplace choice was remove (was broken, and of no much use).</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=2951">vimspell.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.72</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2004-04-19</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=1196">Mathieu Clabaut</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- Correction of a performance issue (syntax match was continuously append, which slow down vim after some times).<br>- Correction of a bug, which cause unwanted behavior when the user hit another key than those proposed to correct spell errors.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=2496">vimspell.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.70</b></td>
+    <td class="roweven" valign="top" nowrap><i>2003-11-19</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=1196">Mathieu Clabaut</a></i></td>
+    <td class="roweven" valign="top" width="2000">- Spell checking in insert mode does not break undo stack anymore, thanks to<br>&nbsp;&nbsp;Hari Krishna Dara.<br>- Jumping to next error now works, even if some text is not spellchecked<br>&nbsp;&nbsp;(like comments).<br>- Bug with /si and aspell corrected<br>- Use @Spell cluster to spell specific region according to the highlighting<br>&nbsp;&nbsp;definitions (Idea from vim@vim.org discussion and from engspchk.vim. Thanks<br>&nbsp;&nbsp;to Mr.Campbell)<br>- Suppress menu bug, when changing language by calling directly<br>&nbsp;&nbsp;:SpellChangeLanguage.<br>- Some minor documentation improvement.<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=2312">vimspell.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.68</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2003-09-08</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=1196">Mathieu Clabaut</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- Remove &quot;silent&quot; keyword which (for some unknown reason) prevent mapping to<br>&nbsp;&nbsp;replaceword (1,2,..) to be removed,<br>- Bug workaround to prevent coma to be added to 'iskeyword' option (thanks to<br>&nbsp;&nbsp;Mark Waggoner)<br>- Bug correction when line contained \,<br>- Bad filetype recognition bug correction,<br>- SpellCheckLine correction. Spell checked was not done after each word,<br>- aunmenu warning correction...<br>- more menus,<br>- more bugs to be corrected :(<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=2201">vimspell.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.67</b></td>
+    <td class="roweven" valign="top" nowrap><i>2003-08-04</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=1196">Mathieu Clabaut</a></i></td>
+    <td class="roweven" valign="top" width="2000">previous upload failed...</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=2199">vimspell.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.67</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2003-08-03</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=1196">Mathieu Clabaut</a></i></td>
+    <td class="rowodd" valign="top" width="2000">New function: popup menu with &lt;RightMouse&gt; to select alternative.<br>Make spell_filter option working.<br>Ensure usage of /bin/sh instead of [t]csh variants (problem with double<br>quotes).<br>Include Sandra schrödter patch for SpellCaseAccept problem.<br>Add a map to '.' as a hook to spell check current line in insert mode.<br>Documentation update.<br>Cleaning of help autoinstallation functions (Guo Peng Wen).<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=2190">vimspell.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.64</b></td>
+    <td class="roweven" valign="top" nowrap><i>2003-07-28</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=1196">Mathieu Clabaut</a></i></td>
+    <td class="roweven" valign="top" width="2000">- Include patch of Philippe Sum to make vimspell work with windows (untested).<br>- Disable hlsearch when doing &lt;leader&gt;sp and &lt;leader&gt;sn.<br>- Save and restore backspace option when spell_insert_mode is set.<br>- Do not check current window if spell_auto_enable is not set or set to 0.<br>- In insert mode, do not check current line when no new words were inserted (fastest operation when typing several spaces).<br>- Correct bug where error highlighting vanished when reentering a buffer already checked (as a result, less computation are done when switching).<br>Add Markus Braun patch to remove SpellProposeAlternatives mapping when hitting ESC key.<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=2176">vimspell.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.61</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2003-07-21</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=1196">Mathieu Clabaut</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Include Guopeng Wen to <br> - fix error in SpellCheckLanguage when there is no menu.<br> - fix SpellSetupBuffer behaviuor when autocommand are enables.<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=2174">vimspell.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.60</b></td>
+    <td class="roweven" valign="top" nowrap><i>2003-07-21</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=1196">Mathieu Clabaut</a></i></td>
+    <td class="roweven" valign="top" width="2000">Some escaping bug corrections.<br>Documentation updated.<br>Escape Space in filename.<br>Cursor position restoring in SpellCheckWindow.<br>Iskeyword is now set globally. <br>LoadIsKeyword function is suppress. SpellSaveIskeyword is only call when setting up buffer.<br>Inclusion of Guopeng Wen&nbsp;&nbsp;patch to minimize overhead<br>of vimspell use when no menu are used and when no autospell is done.<br>Add faq about minimizing vimspell overhead.<br>Inclusion of Markus Braun patch:<br>- s:SpellSetupBuffer() call s:SpellSetSpellchecker() only when it was not called before<br>- Right calculation of the window top and bottom position, even if fold are&nbsp;&nbsp;present (idea from Mark Hillebrand, who used this in his FirstWinLine() and&nbsp;&nbsp;LastWinLine())<br>Verify that mapleader is defined before being used.<br>Add language and filetype dependant 'iskeyword' options...<br>Minor menu enhancment.<br>Bug ands todolist update.<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=1969">vimspell.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.49</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2003-05-06</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=1196">Mathieu Clabaut</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Bug correction: SpellCheckLine didn't work when the line contained quotes.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=1967">vimspell.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.48</b></td>
+    <td class="roweven" valign="top" nowrap><i>2003-05-05</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=1196">Mathieu Clabaut</a></i></td>
+    <td class="roweven" valign="top" width="2000">&nbsp;&nbsp;- Experimental on the fly spell checking in insert mode. Thanks to Mikolaj Machowski<br>&nbsp;&nbsp; (new options spell_insert_mode).<br>&nbsp;&nbsp;- Addition of &quot;none&quot; and &quot;all&quot; token for the spell_auto_type<br>&nbsp;&nbsp;&nbsp;&nbsp;variable.<br>&nbsp;&nbsp;- FAQ section in documentation.<br>&nbsp;&nbsp;- Beginning of a solution for auto help installation bug (the help<br>&nbsp;&nbsp;&nbsp;&nbsp;file was not installed when vimspell was not in a user writeable<br>&nbsp;&nbsp;&nbsp;&nbsp;directory. Thanks to Peter Kaagman<br>&nbsp;&nbsp;- Some documentation addition and correction.<br>&nbsp;&nbsp;- Some code cleaning and ordering.<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=1818">vimspell.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.46</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2003-03-17</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=1196">Mathieu Clabaut</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Apply patches from Markus Braun (many thanks to him):<br> - removed the need of sed, sort, awk external tools<br> - removed the spell_fly_error variables<br> - fixed small bug when proposing alternatives.<br>Fix small bug when manually calling SpellSetLanguage. Kindly reported by JF L.<br>Remove highlighting when changing language or spell checker.<br>Minor cosmetic changes.<br>Add Markus Braun Patch which display spell check stats.<br>Do not load vimspell when 'compatible' is set.<br>Small bug when unletting undefined variable.<br>Language menu initialization is now correct.<br>Update TODO list.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=1782">vimspell.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.40</b></td>
+    <td class="roweven" valign="top" nowrap><i>2003-03-06</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=1196">Mathieu Clabaut</a></i></td>
+    <td class="roweven" valign="top" width="2000">New feature : auto-installation of vimspell help file <br>Documentation correction and polishing (it now follows the help format).<br>Add &lt;Leader&gt;sA map for SpellAutoDisable<br>Rework of vimspell option documentation.<br>Correct Spellexit function.<br>&lt;Leader&gt;sq now call SpellAutoDisable instead of SpellExit.<br>SpellChecker is call in auto mode when window loose focus.<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=1604">vimspell.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.33</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2003-01-06</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=1196">Mathieu Clabaut</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Add preliminary support of spell errors highlighting in comments.<br>Correct nasty bug, which causes lost of data when auto spell check was<br>selected and the number of lines of the text was less than the window height.<br>Correct bug when serching for next or previous errors.<br>Cursor position is now restored after a spell check.<br>Thanks to Markus Braun &lt;Markus.Braun@krawel.de&gt; and Igor Goldenberg<br>&lt;igold@igold.pp.ru&gt;.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=1552">vimspell.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.30</b></td>
+    <td class="roweven" valign="top" nowrap><i>2002-12-16</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=1196">Mathieu Clabaut</a></i></td>
+    <td class="roweven" valign="top" width="2000">Add parameters to tune vimspell menu position.<br>Correct bug, which prevents user defined spell_language_list to be used.<br>Correct a bug, which reactivate auto-spell when entering a buffer, even if it<br>was previously disable.<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=1546">vimspell.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.28</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2002-12-11</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=1196">Mathieu Clabaut</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Small patch to 'spell_auto_type' usage (all buffer with no filetype were spell<br>checked by default).<br>Add credits.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=1545">vimspell.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.26</b></td>
+    <td class="roweven" valign="top" nowrap><i>2002-12-11</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=1196">Mathieu Clabaut</a></i></td>
+    <td class="roweven" valign="top" width="2000">Correct spell_auto_type behaviour. There was a bug which made AutoSpell enable for all file types.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=1544">vimspell.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.25</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2002-12-11</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=1196">Mathieu Clabaut</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Correct bug with aspell (add word to local dictionary didn't work), kindly reported by Andrew McCarthy &lt;andrewmc-vim@celt.dias.ie&gt; and Alberto Ornaghi &lt;alor@sikurezza.org&gt;</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=1542">vimspell.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.23</b></td>
+    <td class="roweven" valign="top" nowrap><i>2002-12-10</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=1196">Mathieu Clabaut</a></i></td>
+    <td class="roweven" valign="top" width="2000">Add (requested) documentation about setting up on-the-fly spell check,<br>add spell_auto_type and spell_no_readonly variables to tune when on-the-fly<br>spell checking is done.<br>Still on bug about highlighting (see TODO list in documentation section), if someone wants to tackle it....</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=1538">vimspell.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.22</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2002-12-09</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=1196">Mathieu Clabaut</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Bug correction : Spellcheck on the fly for the visible window now preserve<br>informations from previous global spellcheck (&lt;Leader&gt;ss).<br>Dictionnaries are rescan whenever the spellchecker is changed.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=1525">vimspell.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.20</b></td>
+    <td class="roweven" valign="top" nowrap><i>2002-12-02</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=1196">Mathieu Clabaut</a></i></td>
+    <td class="roweven" valign="top" width="2000">Documentation and minor modifications.<br>Add&nbsp;&nbsp;filetype and spell checker dependant options (support by default tex,html,sgml, and nroff or email modes).<br>English corrections.<br>Make several variables bufferwise (language, spell_executable,...)<br>Add functions and menu to change spellchecker<br>Correct bugs.<br>Add a better dictionaries detection for aspell.<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=1496">vimspell.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.17</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2002-11-27</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=1196">Mathieu Clabaut</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Correct a bug when applying suggestion on a word at the beginning of the buffer.<br>Thanks to Markus Braun.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=1494">vimspell.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.16</b></td>
+    <td class="roweven" valign="top" nowrap><i>2002-11-27</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=1196">Mathieu Clabaut</a></i></td>
+    <td class="roweven" valign="top" width="2000">Add credits,<br>Use update instead of write,<br>Replace &lt;ESC&gt; default mapping by &lt;Leader&gt;<br>Correct nasty bug (SpellIgnore)<br>Improve menus.<br>Improve dictionnaries auto-detection.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=1463">vimspell.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.14</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2002-11-25</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=1196">Mathieu Clabaut</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Much more parametrization (see documentation at the beginning of the script).<br>Use aspell or ispell.<br>Use as many language as available. Auto detect availables dictionnaries.<br>More functionnal menu.<br>Bug correction.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=1382">vimspell.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.13</b></td>
+    <td class="roweven" valign="top" nowrap><i>2002-11-07</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=1196">Mathieu Clabaut</a></i></td>
+    <td class="roweven" valign="top" width="2000">Comments and a bit of documentation.<br>Some cleaning.<br><br>need some more parametrization and cleaning.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=1350">vimspell.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.12</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2002-10-30</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=1196">Mathieu Clabaut</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Initial upload</td>
+</tr>
+</table>
+<!-- finish off the framework -->
+          </td>
+        </tr>
+      </table>
+    </td>
+
+  </tr>
+</table>
+
+<!-- END OF THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr><td colspan="4" bgcolor="#000000"><img src="/images/spacer.gif" height="2" width="1" alt=""></td></tr>
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr>
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+
+    <td align="left" valign="top"><small>
+      If you have questions or remarks about this site, visit the
+      <a href="http://vimonline.sf.net">vimonline development</a> pages.
+      Please use this site responsibly.
+      <br> 
+      
+      Questions about <a href="http://www.vim.org/about.php">Vim</a> should go
+      to the <a href="http://www.vim.org/maillist.php">maillist</a>.
+      Help Bram <a href="http://iccf-holland.org/">help Uganda</a>.
+      </small>
+	&nbsp;
+	&nbsp;
+
+	<!-- Start of StatCounter Code -->
+	<script type="text/javascript" language="javascript">
+	var sc_project=1417324; 
+	var sc_invisible=1; 
+	var sc_partition=11; 
+	var sc_security="d41633bc"; 
+	</script>
+
+	<script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script><noscript><a href="http://www.statcounter.com/" target="_blank"><img  src="http://c12.statcounter.com/counter.php?sc_project=1417324&java=0&security=d41633bc&invisible=0" alt="free tracking" border="0"></a> </noscript>
+	<!-- End of StatCounter Code -->
+          </td>
+
+    <td align="right" valign="top">
+      		<a href="http://sourceforge.net/projects/vim" rel="nofollow"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=8&type=1" width="88" height="31" border="0" alt="SourceForge.net Logo" /></a>
+    </td>
+
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+  </tr>
+
+    
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  
+  </tr>
+</table>
+
+</body>
+</html>
+

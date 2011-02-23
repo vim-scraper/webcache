@@ -1,0 +1,428 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+  <link rel="Stylesheet" type="text/css" href="/css/style.css" >
+  <title>YankRing.vim - Maintains a history of previous yanks, changes and deletes : vim online</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <meta name="KEYWORDS" content="Vim, Vi IMproved, text editor, home, documentation, tips, scripts, news">
+  <link rel="shortcut icon" type="image/x-icon" href="/images/vim_shortcut.ico">
+</head>
+
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff"> 
+
+<!-- HEADER, SPONSOR IMAGE, VIM IMAGE AND BOOK AD -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+  <td class="lightbg">&nbsp;&nbsp;&nbsp;</td>
+  <td class="lightbg" align="left"><a href="/sponsor/index.php"><img src="/images/sponsorvim.gif" alt="sponsor Vim development" border="0"></a></td>
+    <td class="lightbg" align="center"><a href="/index.php"><img src="/images/vim_header.gif" border="0" alt="Vim logo"></a></td>
+    <td class="lightbg" align="right"><a href="http://iccf-holland.org/click5.html"><img src="/images/buyhelplearn.gif" alt="Vim Book Ad" border="0"></a></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="darkbg"><img src="/images/spacer.gif" width="1" height="10" alt=""></td>
+  </tr>
+</table>
+<!-- THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+  <col width="180">
+  <col width="1">
+
+  <tr valign="top">
+    <td class="sidebar">
+      <table width="180" cellpadding="4" cellspacing="0" border="0">
+        <tr valign="top">
+          <td class="sidebar">
+
+<!-- INCLUDE THE PAGE NAVIGATION -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+    <tr>
+        <td><small>not logged in (<a href="/login.php">login</a>)</small></td>
+    </tr>
+    <tr><td>
+<small>&nbsp;</small>
+<form action="http://www.google.com/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-3005259998294962:bvyni59kjr1" />
+    <input type="hidden" name="ie" value="ISO-8859-1" />
+    <input type="text" name="q" size="20" />
+    <br>
+    <input type="submit" name="sa" value="Search" />
+  </div>
+</form>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+    </td></tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="1"></td>
+    </tr>
+    <tr>
+        <td class="darkbg"><img src="/images/spacer.gif" alt='' border="0" height="3"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="2"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/index.php">Home</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/search.php">Advanced search</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/about.php">About Vim</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/community.php">Community</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/news/news.php">News</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/sponsor/index.php">Sponsoring</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/trivia.php">Trivia</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/docs.php">Documentation</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/download.php">Download</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/scripts/index.php">Scripts</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/tips/index.php">Tips</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/account/index.php">My Account</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/huh.php">Site Help</a></td>
+        </tr>
+</table>
+
+            <table width="172" cellpadding="0" cellspacing="0" border="0">
+              <tr><td><img src="/images/spacer.gif" alt="" border="0" width="1" height="8"></td></tr>
+              <tr><td class="darkbg"><img src="/images/spacer.gif" width="1" height="3" alt=""></td></tr>
+            </table>
+            <br>
+
+<!-- INCLUDE THE PAGE SIDEBAR TEXT -->
+&nbsp;
+
+          </td>
+        </tr>
+      </table>
+    </td>
+
+    <td class="darkbg"><img src="/images/spacer.gif" width="1" height="1" border="0" alt=""><br></td>
+    <td>
+      <table width="100%" cellpadding="10" cellspacing="0" border="0" bordercolor="red">
+        <tr>
+          <td valign="top">
+
+<span class="txth1">YankRing.vim : Maintains a history of previous yanks, changes and deletes</span> 
+
+<br>
+<br>
+
+<!-- karma table -->
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
+  <td>
+    Rating <b>798/230</b>,
+    Downloaded by 9371  </td>
+  <td class="lightbg">
+  <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
+  </td>
+  <td>
+    <a href="http://vim.wikia.com/wiki/Script:1234">Vim wiki</a>
+  </td>  
+</tr>
+</table>
+<p>
+
+<table cellspacing="0" cellpadding="0" border="0">
+<tr><td class="prompt">created by</td></tr>
+<tr><td><a href="/account/profile.php?user_id=837">David Fishburn</a></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">script type</td></tr>
+<tr><td>utility</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">description</td></tr>
+<tr><td>Vim already maintains a list of numbered registers containing the last 9 deletes.&nbsp;&nbsp;These previous deletes can be referenced using [register]p, so &quot;1p will paste the last delete, &quot;2p the 2nd last delete.&nbsp;&nbsp;For more information see |quote_number|.<br><br>Vim does not provide any mechanism to reference previous yanked, deleted or changed text.&nbsp;&nbsp;In Emacs this feature is called the &quot;kill ring&quot;.<br><br>The YankRing plugin allows the user to configure the number of yanked, deleted and changed text.&nbsp;&nbsp;A split window can be used to choose which element(s) from the yankring you wish to paste.&nbsp;&nbsp;Alternately after text has been pasted (using p), it can be replaced with a previous value from the yankring with a single key stroke.<br><br>The captured text is stored in a file (location configurable) and is instantly available (also configurable) to any other instance of Vim also running on the same machine.<br><br>Storing the capture text in a file allows the text to be shared easily between multiple instances of Vim running in X, Windows, SSH or Screen.<br><br>A tutorial is included to take you through the various features of the plugin.&nbsp;&nbsp;After you have installed the plugin just run:<br>&nbsp;&nbsp;&nbsp;&nbsp; :h yankring.txt<br>&nbsp;&nbsp;&nbsp;&nbsp; :h yankring-tutorial<br><br>The yankring can be interacted with in two ways:&nbsp;&nbsp;a GUI or via maps.<br><br>The yankring supports all of Vim motions and text-objects.&nbsp;&nbsp;There are very few new keystrokes the user must learn.&nbsp;&nbsp; One keystroke to open the yankring to choose which item to paste is all that is required.&nbsp;&nbsp;It has been designed work seamlessly with Vim<br><br>All the mappings and behaviours are configurable via global variables you can optionally specify in your vimrc.<br><br>The plugin can be toggled on and off, and supports:<br>&nbsp;&nbsp;&nbsp;&nbsp;Ranges<br>&nbsp;&nbsp;&nbsp;&nbsp;Registers<br>&nbsp;&nbsp;&nbsp;&nbsp;Counts<br>&nbsp;&nbsp;&nbsp;&nbsp;All visual modes (characterwise, linewise and blockwise)<br>&nbsp;&nbsp;&nbsp;&nbsp;All motions<br>&nbsp;&nbsp;&nbsp;&nbsp;All text-objects<br><br>Examples:<br>&nbsp;&nbsp;&nbsp;&nbsp;yy - Adds the current line to the yankring.<br>&nbsp;&nbsp;&nbsp;&nbsp;dd - Adds the current line to the yankring and deletes it.<br>&nbsp;&nbsp; 5yw - Adds 5 words to the yankring.<br>&nbsp;&nbsp;&quot;ade - Deletes the word, and puts it into both the yankring and the &quot;a register.<br>&nbsp;&nbsp;&nbsp;&nbsp;cw - Changes the word and stores the previous value in the yankring.<br>10&quot;zyy - Places 10 lines into both the yankring and the &quot;z register.<br> :1,4YRYankRange&nbsp;&nbsp; - Similar to 1,4y<br> :3,$YRDeleteRange&nbsp;&nbsp;- Similar to 3,$d<br><br>If you wish to paste previous values from the yankring and do not want to use the GUI, there are only two additional maps you must learn (these are configurable via your vimrc if needed).&nbsp;&nbsp;The purpose of the yankring is to gain access to previously yanked (or deleted) elements.&nbsp;&nbsp;The YRReplace command will replace the previously pasted text with a different entry from the yankring.&nbsp;&nbsp;By default, I choose &lt;C-P&gt; (P for previous) to replace the text last pasted while moving backwards through your previous text from the yankring and &lt;C-N&gt; (N for next) to replace the previous paste while moving forward through the yankring.<br><br>A separate buffer window to allow you to easily interact with the contents of the yankring.&nbsp;&nbsp;The window is similar to many other plugins: TagList, SelectBuf and so on.&nbsp;&nbsp;You can use the mouse or standard Vim keys (p, gp, P, ...).&nbsp;&nbsp;Visual mode is used to support counts, pasting multiple times and reversing the order of pasted elements.<br><br>The GUI significantly simplifies your interaction with the yankring for basic functions.&nbsp;&nbsp;But often it useful to take advantage of the more powerful features of the yankring.<br><br>Here is a small section from the tutorial (using maps) so you have some idea of how you interact with the plugin gaining access to previous yanks.&nbsp;&nbsp;Using the GUI for basic operations is self explanatory.<br><br>:h yankring-tutorial<br><br>---- Partial Tutorial ----<br>To understand how to use the yankring, the following example should demonstrate the various features.<br><br>Assume we have this buffer: <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;one<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;two<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;three<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;four<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;five<br><br>Now yank (yy) each line separately starting at line 1.&nbsp;&nbsp;Display the<br>contents of the yankring. <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:YRShow&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--- YankRing ---<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Elem&nbsp;&nbsp;Content<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5&nbsp;&nbsp;&nbsp;&nbsp; five^@<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4&nbsp;&nbsp;&nbsp;&nbsp; four^@<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3&nbsp;&nbsp;&nbsp;&nbsp; three^@<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2&nbsp;&nbsp;&nbsp;&nbsp; two^@<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;&nbsp; one^@<br>Since we yanked the text starting at line 1 and finishing at line 5, the most current yankring element is the last one, the contents of line 5.&nbsp;&nbsp;<br>&quot;five^@&quot; is displayed, the &quot;^@&quot; is a newline character (since we issued a &quot;yy&quot;).<br><br>Now, go to the end of the file and press p.&nbsp;&nbsp;The resulting buffer appears as: <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;one<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;two<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;three<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;four<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;five<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;five<br>Now press &lt;C-P&gt; to move backwards through the yankring, this results in: <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;one<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;two<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;three<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;four<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;five<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;four<br>Now press 2&lt;C-P&gt;.&nbsp;&nbsp;This would be the same as pressing &lt;C-P&gt; two times in a row.&nbsp;&nbsp;This results in: <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;one<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;two<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;three<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;four<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;five<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;two<br>Now press &lt;C-N&gt; to move forwards through the yankring, this results in: <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;one<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;two<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;three<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;four<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;five<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;three<br><br>You can create a map to display a buffer displaying the yankring's contents:<br>&nbsp;&nbsp;&nbsp;&nbsp;nnoremap &lt;silent&gt; &lt;F11&gt; :YRShow&lt;CR&gt;<br><br>YRShow creates a new split buffer (you can configure where it should be and it's size)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:YRShow&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AutoClose=1;Cmds:&lt;enter&gt;,[g]p,[p]P,d,r,a,u,q,&lt;space&gt;;Help=?<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--- YankRing ---<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Elem&nbsp;&nbsp;Content<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3&nbsp;&nbsp;&nbsp;&nbsp; three^@<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2&nbsp;&nbsp;&nbsp;&nbsp; two^@<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;&nbsp; one^@<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5&nbsp;&nbsp;&nbsp;&nbsp; five^@<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4&nbsp;&nbsp;&nbsp;&nbsp; four^@<br>You can simply hit &quot;p&quot;, &lt;enter&gt;, double click on an item and it will be pasted into your document.&nbsp;&nbsp;The window will automatically close (by default) after you have made a choice.&nbsp;&nbsp;The element will be pasted into the correct buffer if you have multiple split windows.<br><br>You can paste multiple items using visual mode.<br>You can also remove items from the yankring.<br><br>---- Partial Tutorial ----<br><br>Concentrating on the last line of the buffer you could see how we were able to replace our pasted text with lines yanked previously.&nbsp;&nbsp;This is a feature Vim only has for deletes, and is limited to 9.&nbsp;&nbsp;This plugin enables the same features for both yanks, deletes and changes, the size of the history is configurable.<br><br><br><br></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">install details</td></tr>
+<tr><td>YankRing 4.0 and above, uses new features of Vim 7.2 which allows it to support all motions and text-objects Vim provides.&nbsp;&nbsp;<br>If you are using Vim 7.1 or below it will still work as it did in previous versions.<br>YankRing 3.0, Vim 7 is required.<br>YankRing 2.2 requires Vim 6.2 or higher.<br><br>Copy the yankring.vim script to your $HOME/.vim/plugin (or $VIM/vimfiles/plugin for windows) directory.&nbsp;&nbsp;<br>Copy yankring.txt to your $HOME/.vim/doc (or $VIM/vimfiles/doc for windows) directory.<br><br>To update the Vim Help, run:<br>:helptags $HOME/.vim/doc&nbsp;&nbsp;(Unix)<br>:helptags $VIM/vimfiles/doc&nbsp;&nbsp;(Windows) </td></tr>
+<tr><td>&nbsp;</td></tr>
+</table>
+
+<!-- rating table -->
+<form name="rating">
+<input type="hidden" name="script_id" value="1234">
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>rate this script</b></td>
+  <td valign="middle">
+    <input type="radio" name="rating" value="life_changing">Life Changing
+    <input type="radio" name="rating" value="helpful">Helpful
+    <input type="radio" name="rating" value="unfulfilling">Unfulfilling&nbsp;
+    <input type="submit" value="rate">
+  </td>
+</tr>
+</table>
+</form>
+<span class="txth2">script versions</span> (<a href="add_script_version.php?script_id=1234">upload new version</a>)
+<p>
+Click on the package to download.
+<p>
+
+<table cellspacing="2" cellpadding="4" border="0" width="100%">
+<tr class='tableheader'>
+        <th valign="top">package</th>
+    <th valign="top">script version</th>
+    <th valign="top">date</th>
+    <th valign="top">Vim version</th>
+    <th valign="top">user</th>
+    <th valign="top">release notes</th>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13554">yankring_110.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>11.0</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-08-12</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=837">David Fishburn</a></i></td>
+    <td class="rowodd" valign="top" width="2000">NF: Documented the global variables to customize the location of the YankRing menu.<br><br>NF: The YankRing menu now shows the maps used for the default actions to help learn them more easily.<br><br>NF: Added g:yankring_menu_root and g:yankring_menu_priority (David Barsam).<br><br>NF: Added a warning indicating a stored value has been truncated based on g:yankring_max_element_length and a new option to suppress this warning, g:yankring_warn_on_truncate (Hans-Günter).<br><br>BF: The YRAfterMaps() function (if it exists) was not re-run if YRToggle was used to disable and enable the YankRing.<br><br>BF: Multibyte strings may not have been pasted correctly (Dr. Chip).<br><br>BF: When pasting a string of 1111's, and additional -1 could also be included in the output.<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=12258">yankring_100.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>10.0</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-02-01</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=837">David Fishburn</a></i></td>
+    <td class="roweven" valign="top" width="2000">NF: Change the buffer name to [YankRing] to resemble other non-user buffers.<br><br>NF: Added g:yankring_min_element_length which can prevent items from being added to the YankRing if they are too small.&nbsp;&nbsp;For example, single character deletes (Vedran M).<br><br>BF: When shifting focus back to Vim, the YankRing may incorrectly report: &quot;YR:Failed to change to the yankring buffer, please contact author&quot;.<br><br>BF: When entering Vim for the first time and hitting &quot;p&quot; nothing was pasted (Mark Huiskes).<br><br>BF: When entering Vim for the first time and the yankring_clipboard_monitor = 1, the clipboard entry was not automatically added to the yankring.<br><br>BF: When overriding the default and setting g:yankring_window_use_bottom = 0, the YankRing would report the error (Sergey Khorev):&nbsp;&nbsp;E21: Cannot make changes, 'modifiable' is off<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=11289">yankring_90.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>9.0</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-08-30</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=837">David Fishburn</a></i></td>
+    <td class="rowodd" valign="top" width="2000">BF: You cannot execute a macro with &quot;:normal @a&quot;.&nbsp;&nbsp;It is still not possible, but you can execute it with &quot;:normal! @a&quot; (A S Budden).&nbsp;&nbsp;<br>BF: When g:yankring_persist = 0 the YankRing could go into an infinite loop (A S Budden).&nbsp;&nbsp;<br>BF: When replaying a macro which used any of the zap keys (f,F,t,T,/,?) you were prompted again for the string to match on (Ovidiu C).<br>BF: When checking the clipboard for changes (g:yankring_clipboard_monitor == 1) only add the item if it is not already in the ring.&nbsp;&nbsp;Previously, the item was moved to the top of the YankRing each time you flipped focus.<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=9731">yankring_80.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>8.0</b></td>
+    <td class="roweven" valign="top" nowrap><i>2008-12-30</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=837">David Fishburn</a></i></td>
+    <td class="roweven" valign="top" width="2000">NF: Changed the implementation of YRGetSearch() (David Liang).<br>BF: Under some unknown circumstances, the yankring can fail to change to the correct buffer.&nbsp;&nbsp;Put in code to double check and abort.<br>BF: Yanking and pasting a line which ends in a backslash resulted in the backslash being replaced by &quot;@@@&quot;.<br>BF: When repeating a command (&quot;.&quot;) which used any of the zap keys (f,F,t,T,/,?) you were prompted again for the string to match on (Vasilii Pascal).<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=9504">yankring_70.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>7.0</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2008-11-15</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=837">David Fishburn</a></i></td>
+    <td class="rowodd" valign="top" width="2000">NF: Added support for the / and ? motions so that y/search is supported (Vasilii Pascal).<br>NF: When the YankRing window is displayed (or updated) an additional check is made against the default register.&nbsp;&nbsp;If it has changed since the YankRing recorded it, the value will be added to the history.<br>NF: Added support for more motions h, j, k, l, H, M, L, ^, 0, -, +, _.&nbsp;&nbsp;And a pile of g motions g_, g^, gm, g$, gk, gj, gg, ge, gE.<br>NF: The YankRing window will display a message it is operating in a limited mode if not using Vim 7.2 or the correct patch level.<br>BF: Correction to some internal code which could lead to an endless loop (John Beckett).<br>BF: Opening and closing the YankRing window with &quot;set report=0&quot; reported &quot;1 line less&quot; messages (Bill McCarthy).<br>BF: Changed the default value of g:yankring_paste_check_default_buffer to check if the default paste buffer has changed when pressing 'p'.&nbsp;&nbsp;For example, if a plugin has changed the default registers it will be pasted rather than the top item from the YankRing.<br>BF: YRMapsDelete did not remove all the maps created by the YankRing.<br>BF: Under particular circumstances, yanking text with embedded @ characters were not properly stored and retrieved from the YankRing (Andrew Long).<br>BF: Changed to use xmaps instead of vmaps so that the maps only work in visual mode and not select mode (David Liang).<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=9421">yankring_61.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>6.1</b></td>
+    <td class="roweven" valign="top" nowrap><i>2008-10-31</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=837">David Fishburn</a></i></td>
+    <td class="roweven" valign="top" width="2000">BF: If the g:yankring_history_dir contains spaces (default on Windows) an error was reported.&nbsp;&nbsp;A simple work around was to let g:yankring_history_dir = 'c:\Vim' or no spaces (Matt).&nbsp;&nbsp;<br>All Windows users should download this version.<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=9415">yankring_60.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>6.0</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2008-10-30</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=837">David Fishburn</a></i></td>
+    <td class="rowodd" valign="top" width="2000">NF: The YankRing now maintains the history in a file.&nbsp;&nbsp;This means if you are running multiple instances of Vim, they all see the same yankring whether you are using X, Windows, SSH or Screen.<br>NF: The location and name of the file is configurable by the user.<br>NF: The g:yankring_separator is no longer used and has been removed.<br>NF: The g:yankring_max_element_length can be used to limit the size of an element in the yankring.<br>NF: The g:yankring_share_between_instances can be used to indicate whether each instance of Vim running on a machine should share the history file or whether each should have their own individual history file.<br>NF: The g:yankring_clipboard_monitor can be used to indicate whether changes to the system clipboard should be added to the YankRing (default is on).<br>NF: The YankRing window can toggle the clipboard monitor by pressing 'c'.&nbsp;&nbsp;See the help in the window by pressing ?.<br>NF: Added some highlighting to the YankRing window (Marty Grenfell).<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=9263">yankring_50.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>5.0</b></td>
+    <td class="roweven" valign="top" nowrap><i>2008-09-22</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=837">David Fishburn</a></i></td>
+    <td class="roweven" valign="top" width="2000">NF: The yankring can recognize certain Vim commands which do not change the contents of a buffer and not attempt to capture it.<br>NF: The global variables which allow you to customize the behaviour are now space separated instead of comma separated.&nbsp;&nbsp;This provides greater flexibility but will require you to modify your vimrc (if you have customized it). (Andy Wokula)<br>BF: If using &lt;C-O&gt; from within insert mode, the yankring inserted characters into the buffer instead of capturing the changes, this was fixed by Andy Wokula (Agathoklis Hatzimanikas).<br>BF: The yankring did not properly account for all the different forms of counts &quot;5yy&quot; worked but &quot;y5y&quot; did not (Edwin Shao).<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=9098">yankring_41.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>4.1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2008-08-09</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=837">David Fishburn</a></i></td>
+    <td class="rowodd" valign="top" width="2000">NF: The yankring now allows you to override which operators should be ignored (yankring_ignore_operator).&nbsp;&nbsp;By default this is set for the standard Vim operators which do not modify any registers (Examples: = and gu) (Andy Wokula).<br>NF: The yankring did not map v_x (Matt Tolton).<br>BF: The expression register (quote=) was not accounted for correctly (Agathoklis Hatzimanikas).<br>BF: Using the v:operator variable must be escaped when used in a regular expression.<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=8849">yankring_40.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>4.0</b></td>
+    <td class="roweven" valign="top" nowrap><i>2008-06-24</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=837">David Fishburn</a></i></td>
+    <td class="roweven" valign="top" width="2000">NF: The yankring by default now captures all |text-objects| and all motions (|motion.txt|) which Vim supports.&nbsp;&nbsp;Version 3.0 only supported a subset of the basic motion commands.<br>NF: Prior to this version only predefined maps triggered the capture of data into the yankring.&nbsp;&nbsp;These maps only supported yanks and deletes.&nbsp;&nbsp;The yankring now also supports operator-pending mode, which allows a greater range of operations to be automatically captured and added to the yankring.&nbsp;&nbsp;<br>Operating pending mode functionality requires Vim 7.2 or Vim 7.1 with patch #205.&nbsp;&nbsp;If using Vim 7.1 you can determine this with: <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; echo has(&quot;patch205&quot;)<br>NF: Prior to this version only yanks and deletes were registered in the yankring.&nbsp;&nbsp;Changes are now also captured into the yankring.<br>NF: The yankring will also capture the system cliboard when focus is returned to the vim window.&nbsp;&nbsp;This is useful if you copy text between applications.<br>NF: The yankring window always opened bottom horizontal.&nbsp;&nbsp;Now it can be opened top or bottom and horizontal or vertically.&nbsp;&nbsp;This can be controlled via variables in your .vimrc.<br>BF: The yankring has an option to persist between instances of Vim by storing the values in global variables within the viminfo.&nbsp;&nbsp;This has led to some unusual ordering of items in the ring from conflicts between instances.&nbsp;&nbsp;This option has been turn off by default.<br>BF: Their was an issue with yanking using y$.<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=7629">yankring_30.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>3.0</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2007-09-07</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=837">David Fishburn</a></i></td>
+    <td class="rowodd" valign="top" width="2000">NF: Converted the yankring to use the new Vim7's List object which means it is no longer compatible with Vim6.<br>NF: By default the yankring will now maintain the yankring's items persistently by default.&nbsp;&nbsp;It does this via the |viminfo| file. This means the contents of the yankring rely on the internal variables of only 1 Vim instance.<br>BF: YRToggle was not unmapping 'gp' and 'gP'.<br>BF: YRSearch prompted the user for a regex even if one was provided on the command line.<br>BF: If g:yankring_manage_numbered_reg is enabled, the &quot;.&quot; operator did not correctly repeat the previous action (Pedro DeRose).</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=4692">yankring_22.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.2</b></td>
+    <td class="roweven" valign="top" nowrap><i>2005-10-21</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=837">David Fishburn</a></i></td>
+    <td class="roweven" valign="top" width="2000">BF: If you pressed '?' to toggle the display of the help in the<br>yankring window, the yankring window would close.&nbsp;&nbsp;This also applied to<br>'a', which allowed you to toggle the autoclose feature.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=4667">yankring_21.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2005-10-11</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=837">David Fishburn</a></i></td>
+    <td class="rowodd" valign="top" width="2000">NF: Much improved usability, the yankring now has a &quot;GUI&quot; to service <br>&nbsp;&nbsp;&nbsp;&nbsp;the yankring.&nbsp;&nbsp;If YRShow or YRSearch is used, a split buffer is<br>&nbsp;&nbsp;&nbsp;&nbsp;opened which displays all the elements in the yankring.&nbsp;&nbsp;There<br>&nbsp;&nbsp;&nbsp;&nbsp;are a number of maps that allow you to interact with the<br>&nbsp;&nbsp;&nbsp;&nbsp;contents.&nbsp;&nbsp;The window can be positioned vertically or<br>&nbsp;&nbsp;&nbsp;&nbsp;horizontally as well as being sized all through options <br>&nbsp;&nbsp;&nbsp;&nbsp;specified in your vimrc.<br>NF: Added the ability for the yankring to override Vim's numbered <br>&nbsp;&nbsp;&nbsp;&nbsp;registers.&nbsp;&nbsp;Instead of the numbered registers holding the last<br>&nbsp;&nbsp;&nbsp;&nbsp;yanked value, and the 9 previous deletes, they will now reflect<br>&nbsp;&nbsp;&nbsp;&nbsp;the top 10 items in the yankring.&nbsp;&nbsp;This allows you to reference<br>&nbsp;&nbsp;&nbsp;&nbsp;them directly with &quot;5p.<br>NF: YRPop can now delete any items from the yankring, rather <br>&nbsp;&nbsp;&nbsp;&nbsp;that just from the top.<br>NF: YRSetTop has been removed, it is no longer required as the<br>&nbsp;&nbsp;&nbsp;&nbsp;internal representation of the yankring has changed.<br>BF: If g:yankring_ignore_duplicate is set (which is the default)<br>&nbsp;&nbsp;&nbsp;&nbsp;you could get some unpredicable results when moving <br>&nbsp;&nbsp;&nbsp;&nbsp;backwards and forwards (&lt;C-P&gt; and &lt;C-N&gt;) through the <br>&nbsp;&nbsp;&nbsp;&nbsp;previous values.<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=4512">yankring_20_beta1a.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.0 Beta1a</b></td>
+    <td class="roweven" valign="top" nowrap><i>2005-08-22</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=837">David Fishburn</a></i></td>
+    <td class="roweven" valign="top" width="2000">Some people reported an error when selecting the first item from the yankring. </td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=4503">yankring_20_beta1.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.0 Beta1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2005-08-20</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=837">David Fishburn</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Added a new split buffer that allows you to visually interact with the yankring.&nbsp;&nbsp;This makes using it much better, no more commands you need to remember.<br>Previous commands are still available.&nbsp;&nbsp;The new buffer is configurable.&nbsp;&nbsp;Please see the tutorial for further details.<br><br>Feedback is greatly appreciated.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=4256">yankring_16.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.6</b></td>
+    <td class="roweven" valign="top" nowrap><i>2005-05-07</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=837">David Fishburn</a></i></td>
+    <td class="roweven" valign="top" width="2000">NF: YRSearch is similar to YRGetElem.&nbsp;&nbsp;Given a regular expression it will interactively display all the elements in the yankring that match the regular expression.&nbsp;&nbsp;You can enter the number of the element to paste it.&nbsp;&nbsp;If you have many elements within the yankring, this can help you identify them more easily.<br>NF: Updated the default history size from 30 to 100, which is partially the reason for the YRSearch command.<br>NF: By default it supports &quot;gp&quot; and &quot;gP&quot;, in addition to &quot;p&quot; and &quot;P&quot;.<br>NF: Added support for the expression register (:h quote=).&nbsp;&nbsp;Here is an example of how it is used:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;=&quot;X&quot;&lt;CR&gt;P<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=4110">yankring_15.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.5</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2005-04-01</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=837">David Fishburn</a></i></td>
+    <td class="rowodd" valign="top" width="2000">NF: The yankring now respects the cpoptions setting, if 'y' is included and you press '.', the previous yank command is executed and added to the yankring.&nbsp;&nbsp;You can also add this behaviour by setting this in your |vimrc|: <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; let g:yankring_dot_repeat_yank = 1<br><br>NF: Duplicates will not be added to the yankring by default.&nbsp;&nbsp;If a duplicate is found, the element will be moved to the top of the yankring.&nbsp;&nbsp;This can be controlled by setting this in your |vimrc|: <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; let g:yankring_ignore_duplicate = 0 (1 is default)<br><br>BF: Regression from version 1.4, the '.' operator may incorrectly insert garbage.<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=4086">yankring_14.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.4</b></td>
+    <td class="roweven" valign="top" nowrap><i>2005-03-27</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=837">David Fishburn</a></i></td>
+    <td class="roweven" valign="top" width="2000">NF: YRToggle has been updated.&nbsp;&nbsp;If you toggle the yankring off (disable) the maps it creates are removed.&nbsp;&nbsp;Calling YRToggle again will recreate the maps.&nbsp;&nbsp;This truly disables the yankring, where the previous version attempted to do this via code.<br>BF: Using the '.' operator was not corrected replaying operations that did not move text in some way (g~t_) changed the case of the text but a '.' did not replay it.<br>BF: When replacing previously pasted text the yankring did not respect what key was used to paste the text originally.&nbsp;&nbsp;All replaced items were pasted using 'p', even if you had originally pasted the text with 'P'.<br></td>
+</tr>
+</table>
+<!-- finish off the framework -->
+          </td>
+        </tr>
+      </table>
+    </td>
+
+  </tr>
+</table>
+
+<!-- END OF THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr><td colspan="4" bgcolor="#000000"><img src="/images/spacer.gif" height="2" width="1" alt=""></td></tr>
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr>
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+
+    <td align="left" valign="top"><small>
+      If you have questions or remarks about this site, visit the
+      <a href="http://vimonline.sf.net">vimonline development</a> pages.
+      Please use this site responsibly.
+      <br> 
+      
+      Questions about <a href="http://www.vim.org/about.php">Vim</a> should go
+      to the <a href="http://www.vim.org/maillist.php">maillist</a>.
+      Help Bram <a href="http://iccf-holland.org/">help Uganda</a>.
+      </small>
+	&nbsp;
+	&nbsp;
+
+	<!-- Start of StatCounter Code -->
+	<script type="text/javascript" language="javascript">
+	var sc_project=1417324; 
+	var sc_invisible=1; 
+	var sc_partition=11; 
+	var sc_security="d41633bc"; 
+	</script>
+
+	<script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script><noscript><a href="http://www.statcounter.com/" target="_blank"><img  src="http://c12.statcounter.com/counter.php?sc_project=1417324&java=0&security=d41633bc&invisible=0" alt="free tracking" border="0"></a> </noscript>
+	<!-- End of StatCounter Code -->
+          </td>
+
+    <td align="right" valign="top">
+      		<a href="http://sourceforge.net/projects/vim" rel="nofollow"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=8&type=1" width="88" height="31" border="0" alt="SourceForge.net Logo" /></a>
+    </td>
+
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+  </tr>
+
+    
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  
+  </tr>
+</table>
+
+</body>
+</html>
+

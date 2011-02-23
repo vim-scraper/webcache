@@ -1,0 +1,300 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+  <link rel="Stylesheet" type="text/css" href="/css/style.css" >
+  <title>vimplate - template system for vim  (example for C++, Perl, LaTeX and make) : vim online</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <meta name="KEYWORDS" content="Vim, Vi IMproved, text editor, home, documentation, tips, scripts, news">
+  <link rel="shortcut icon" type="image/x-icon" href="/images/vim_shortcut.ico">
+</head>
+
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff"> 
+
+<!-- HEADER, SPONSOR IMAGE, VIM IMAGE AND BOOK AD -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+  <td class="lightbg">&nbsp;&nbsp;&nbsp;</td>
+  <td class="lightbg" align="left"><a href="/sponsor/index.php"><img src="/images/sponsorvim.gif" alt="sponsor Vim development" border="0"></a></td>
+    <td class="lightbg" align="center"><a href="/index.php"><img src="/images/vim_header.gif" border="0" alt="Vim logo"></a></td>
+    <td class="lightbg" align="right"><a href="http://iccf-holland.org/click5.html"><img src="/images/buyhelplearn.gif" alt="Vim Book Ad" border="0"></a></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="darkbg"><img src="/images/spacer.gif" width="1" height="10" alt=""></td>
+  </tr>
+</table>
+<!-- THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+  <col width="180">
+  <col width="1">
+
+  <tr valign="top">
+    <td class="sidebar">
+      <table width="180" cellpadding="4" cellspacing="0" border="0">
+        <tr valign="top">
+          <td class="sidebar">
+
+<!-- INCLUDE THE PAGE NAVIGATION -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+    <tr>
+        <td><small>not logged in (<a href="/login.php">login</a>)</small></td>
+    </tr>
+    <tr><td>
+<small>&nbsp;</small>
+<form action="http://www.google.com/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-3005259998294962:bvyni59kjr1" />
+    <input type="hidden" name="ie" value="ISO-8859-1" />
+    <input type="text" name="q" size="20" />
+    <br>
+    <input type="submit" name="sa" value="Search" />
+  </div>
+</form>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+    </td></tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="1"></td>
+    </tr>
+    <tr>
+        <td class="darkbg"><img src="/images/spacer.gif" alt='' border="0" height="3"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="2"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/index.php">Home</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/search.php">Advanced search</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/about.php">About Vim</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/community.php">Community</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/news/news.php">News</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/sponsor/index.php">Sponsoring</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/trivia.php">Trivia</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/docs.php">Documentation</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/download.php">Download</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/scripts/index.php">Scripts</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/tips/index.php">Tips</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/account/index.php">My Account</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/huh.php">Site Help</a></td>
+        </tr>
+</table>
+
+            <table width="172" cellpadding="0" cellspacing="0" border="0">
+              <tr><td><img src="/images/spacer.gif" alt="" border="0" width="1" height="8"></td></tr>
+              <tr><td class="darkbg"><img src="/images/spacer.gif" width="1" height="3" alt=""></td></tr>
+            </table>
+            <br>
+
+<!-- INCLUDE THE PAGE SIDEBAR TEXT -->
+&nbsp;
+
+          </td>
+        </tr>
+      </table>
+    </td>
+
+    <td class="darkbg"><img src="/images/spacer.gif" width="1" height="1" border="0" alt=""><br></td>
+    <td>
+      <table width="100%" cellpadding="10" cellspacing="0" border="0" bordercolor="red">
+        <tr>
+          <td valign="top">
+
+<span class="txth1">vimplate : template system for vim&nbsp;&nbsp;(example for C++, Perl, LaTeX and make)</span> 
+
+<br>
+<br>
+
+<!-- karma table -->
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
+  <td>
+    Rating <b>182/56</b>,
+    Downloaded by 1987  </td>
+  <td class="lightbg">
+  <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
+  </td>
+  <td>
+    <a href="http://vim.wikia.com/wiki/Script:1311">Vim wiki</a>
+  </td>  
+</tr>
+</table>
+<p>
+
+<table cellspacing="0" cellpadding="0" border="0">
+<tr><td class="prompt">created by</td></tr>
+<tr><td><a href="/account/profile.php?user_id=5415">Urs Stotz</a></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">script type</td></tr>
+<tr><td>utility</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">description</td></tr>
+<tr><td> 1. Description<br> 2. Usage<br> 3. Subroutines<br> 4. Example<br> 5. Documentation<br> 6. Depends<br> 7. Installation<br><br><br>1. Description&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*vimplate-description*<br> <br>Vimplate provides an extensible and powerful template processing system.<br>It is based on Perl and Template-Toolkit.<br>You can create templates for program code, makefiles, letters, html pages,<br>latex etc. As example vimplate contains templates for C++, LaTeX, Perl<br>and Makefile.<br>With vimplate you can write templates which interact with the user.<br>For themes are the functions choice() and input().<br>You can choose different locale for the function date() and locale().<br>You can write your own perl code directly in the templates.<br><br>In case you find my template useful,<br>or have suggestions for improvements, please let me know.<br><br>If you write a new template,<br>and&nbsp;&nbsp;would like me to add it to the vimplate package<br>please send it to: stotz@gmx.ch<br><br><br>2. Usage&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*vimplate-usage*<br><br>Usage:<br>&nbsp;&nbsp;:Vimplate &lt;template&gt; [options]<br>&nbsp;&nbsp;&nbsp;&nbsp;choice &lt;template&gt; whit &lt;TAB&gt; (command line completion is supported).<br>&nbsp;&nbsp;&nbsp;&nbsp;With &lt;TAB&gt; all templates are listed.<br>&nbsp;&nbsp;&nbsp;&nbsp;[options]<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-user|u=&lt;username&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Use the information form user &lt;username&gt; while parsing templates.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-dir|d=&lt;templatedir&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Search templatefiles in &lt;templatedir&gt;.<br><br><br>3. Subroutines&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *vimplate-subroutines*<br><br>&nbsp;&nbsp;locale()&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for locale please see: man locale<br>&nbsp;&nbsp;[% loc=locale() %]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;get the current locale<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;and write it to the variable loc<br>&nbsp;&nbsp;[% locale('C') %]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; set global the current locale to C<br>&nbsp;&nbsp;[% locale('de_DE') %]&nbsp;&nbsp;&nbsp;&nbsp; set global the current locale to de_DE<br>&nbsp;&nbsp;date()&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for date please see: man date<br>&nbsp;&nbsp;[% date('%c') %]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print the current date<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;with the current locale setting<br>&nbsp;&nbsp;[% date('de_DE', '%c') %] print the current date with the locale de_DE<br>&nbsp;&nbsp;input()<br>&nbsp;&nbsp;[% var=input() %]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; read input from user<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;and write it to the variable var<br>&nbsp;&nbsp;choice()<br>&nbsp;&nbsp;[% day=choice('day:', 'Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa') %]<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let the user choice between different values<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;and write it to the variable day<br><br>&nbsp;&nbsp;please try :Vimplate Test<br><br><br>4. Example&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*vimplate-example*<br><br>a LaTeX Template:<br>&nbsp;&nbsp;<a target="_blank" href="http://typedef.ch/vimplate/example/LaTeX.tt.html">http://typedef.ch/vimplate/example/LaTeX.tt.html</A><br>the generated LaTeX File:<br>&nbsp;&nbsp;<a target="_blank" href="http://typedef.ch/vimplate/example/Example.tex.html">http://typedef.ch/vimplate/example/Example.tex.html</A><br>a Makefile Template for LaTeX:<br>&nbsp;&nbsp;<a target="_blank" href="http://typedef.ch/vimplate/example/Makefile-LaTeX.tt.html">http://typedef.ch/vimplate/example/Makefile-LaTeX.tt.html</A><br>the generated Makefile:<br>&nbsp;&nbsp;<a target="_blank" href="http://typedef.ch/vimplate/example/Makefile.html">http://typedef.ch/vimplate/example/Makefile.html</A><br>c++ Templates:<br>&nbsp;&nbsp;<a target="_blank" href="http://typedef.ch/vimplate/example/hpp-default.tt.html">http://typedef.ch/vimplate/example/hpp-default.tt.html</A><br>&nbsp;&nbsp;<a target="_blank" href="http://typedef.ch/vimplate/example/cpp-default.tt.html">http://typedef.ch/vimplate/example/cpp-default.tt.html</A><br>the generated class:<br>&nbsp;&nbsp;<a target="_blank" href="http://typedef.ch/vimplate/example/Example.hpp.html">http://typedef.ch/vimplate/example/Example.hpp.html</A><br>&nbsp;&nbsp;<a target="_blank" href="http://typedef.ch/vimplate/example/Example.cpp.html">http://typedef.ch/vimplate/example/Example.cpp.html</A><br>the generated class with doxygen:<br>&nbsp;&nbsp;<a target="_blank" href="http://typedef.ch/vimplate/example/ExampleDoxy.hpp.html">http://typedef.ch/vimplate/example/ExampleDoxy.hpp.html</A><br>&nbsp;&nbsp;<a target="_blank" href="http://typedef.ch/vimplate/example/ExampleDoxy.cpp.html">http://typedef.ch/vimplate/example/ExampleDoxy.cpp.html</A><br>a perl Template:<br>&nbsp;&nbsp;<a target="_blank" href="http://typedef.ch/vimplate/example/perl.tt.html">http://typedef.ch/vimplate/example/perl.tt.html</A><br>the genereated program:<br>&nbsp;&nbsp;<a target="_blank" href="http://typedef.ch/vimplate/example/Example.pl.html">http://typedef.ch/vimplate/example/Example.pl.html</A><br>the genereated program with Log4Perl:<br>&nbsp;&nbsp;<a target="_blank" href="http://typedef.ch/vimplate/example/ExampleLog.pl.html">http://typedef.ch/vimplate/example/ExampleLog.pl.html</A><br><br>Example:<br>&nbsp;&nbsp;the template letter.tt:<br>&nbsp;&nbsp;&nbsp;&nbsp;________________________________________________________<br>&nbsp;&nbsp;&nbsp;&nbsp;[%<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sex=choice('sex: ', 'female', 'male')<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; name=input('name: ')<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; location=input('your location: ')<br>&nbsp;&nbsp;&nbsp;&nbsp;-%]<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [% ucfirst(location) %], [% date('C', '%b %d, %Y') %]<br><br>&nbsp;&nbsp;&nbsp;&nbsp;Dear [% IF sex=='female'; 'Ms'; ELSE; 'Mr'; END %] [% ucfirst(name) %]<br><br>&nbsp;&nbsp;&nbsp;&nbsp;...<br><br>&nbsp;&nbsp;&nbsp;&nbsp;Sincerely<br><br>&nbsp;&nbsp;&nbsp;&nbsp;[% user.firstname %] [% user.lastname %]<br>&nbsp;&nbsp;&nbsp;&nbsp;________________________________________________________<br><br>&nbsp;&nbsp;run vim:<br>&nbsp;&nbsp;&nbsp;&nbsp;:Vimplate letter<br>&nbsp;&nbsp;&nbsp;&nbsp;sex:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0) female<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1) male<br>&nbsp;&nbsp;&nbsp;&nbsp;0<br>&nbsp;&nbsp;&nbsp;&nbsp;name: Meier<br>&nbsp;&nbsp;&nbsp;&nbsp;your location: Olten<br><br>&nbsp;&nbsp;your input was:<br>&nbsp;&nbsp;&nbsp;&nbsp;:Vimplate letter&lt;CR&gt;0&lt;CR&gt;Meier&lt;CR&gt;Olten&lt;CR&gt;<br><br>&nbsp;&nbsp;this will produce this letter:<br>&nbsp;&nbsp;&nbsp;&nbsp;________________________________________________________<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Olten, Jul 11, 2005<br><br>&nbsp;&nbsp;&nbsp;&nbsp;Dear Ms Meier<br><br>&nbsp;&nbsp;&nbsp;&nbsp;...<br><br>&nbsp;&nbsp;&nbsp;&nbsp;Sincerely<br><br>&nbsp;&nbsp;&nbsp;&nbsp;Urs Stotz<br>&nbsp;&nbsp;&nbsp;&nbsp;________________________________________________________<br><br>Example:<br>&nbsp;&nbsp;the template hpp-default.tt:<br>&nbsp;&nbsp;&nbsp;&nbsp;________________________________________________________<br>&nbsp;&nbsp;&nbsp;&nbsp;[% classname=input('Class name: ')<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; doxygen=choice('with Doxygen comments: ', 'no', 'yes')<br>&nbsp;&nbsp;&nbsp;&nbsp;-%]<br>&nbsp;&nbsp;&nbsp;&nbsp;#ifndef [% uc(classname) %]_HPP<br>&nbsp;&nbsp;&nbsp;&nbsp;#define [% uc(classname) %]_HPP<br><br>&nbsp;&nbsp;&nbsp;&nbsp;[% IF doxygen=='yes' -%]<br>&nbsp;&nbsp;&nbsp;&nbsp;/**<br>&nbsp;&nbsp;&nbsp;&nbsp; * @brief [% classname %] ... short description ...<br>&nbsp;&nbsp;&nbsp;&nbsp; * @author [% user.firstname %] [% user.lastname %] &lt;[% user.mail %]&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp; * @date [% date('%Y-%m-%d') %]<br>&nbsp;&nbsp;&nbsp;&nbsp; * ... description ...<br>&nbsp;&nbsp;&nbsp;&nbsp; */<br><br>&nbsp;&nbsp;&nbsp;&nbsp;[% END -%]<br>&nbsp;&nbsp;&nbsp;&nbsp;class [% classname %]<br>&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public:<br>&nbsp;&nbsp;&nbsp;&nbsp;[% IF doxygen=='yes' -%]<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/**<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; * Default constructor<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; */<br>&nbsp;&nbsp;&nbsp;&nbsp;[% END -%]<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[% classname %]();<br>&nbsp;&nbsp;&nbsp;&nbsp;[% IF doxygen=='yes' -%]<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/**<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; * Copy constructor<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; * @param other reference on object to copy<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; */<br>&nbsp;&nbsp;&nbsp;&nbsp;[% END -%]<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[% classname %](const [% classname %]& other);<br>&nbsp;&nbsp;&nbsp;&nbsp;[% IF doxygen=='yes' -%]<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/**<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; * Assignment operator<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; * @param other reference on object to copy<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; * @return reference on initialisated object<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; */<br>&nbsp;&nbsp;&nbsp;&nbsp;[% END -%]<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[% classname %]& operator=(const [% classname %]& other);<br>&nbsp;&nbsp;&nbsp;&nbsp;[% IF doxygen=='yes' -%]<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/**<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; * Destructor<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; */<br>&nbsp;&nbsp;&nbsp;&nbsp;[% END -%]<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;virtual ~[% classname %]();<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;private:<br>&nbsp;&nbsp;&nbsp;&nbsp;[% IF doxygen=='yes' -%]<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/**<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; * Base initialisation should be called<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; * at beginning of each constructor<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; */<br>&nbsp;&nbsp;&nbsp;&nbsp;[% END -%]<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;void init();<br>&nbsp;&nbsp;&nbsp;&nbsp;[% IF doxygen=='yes' -%]<br><br>&nbsp;&nbsp;&nbsp;&nbsp;/**<br>&nbsp;&nbsp;&nbsp;&nbsp; * Method to copy each member (deep copy)<br>&nbsp;&nbsp;&nbsp;&nbsp; * @param other reference on object to copy<br>&nbsp;&nbsp;&nbsp;&nbsp; */<br>&nbsp;&nbsp;&nbsp;&nbsp;[% END -%]<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;void init(const [% classname %]& other);<br>&nbsp;&nbsp;&nbsp;&nbsp;};<br><br>&nbsp;&nbsp;&nbsp;&nbsp;#endif /* #ifndef [% uc(classname) %]_HPP */<br>&nbsp;&nbsp;&nbsp;&nbsp;________________________________________________________<br><br>&nbsp;&nbsp;run vim:<br>&nbsp;&nbsp;&nbsp;&nbsp;:Vimplate hpp-default<br>&nbsp;&nbsp;&nbsp;&nbsp;Class name: Parent<br>&nbsp;&nbsp;&nbsp;&nbsp;with Doxygen comments:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0) no<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1) yes<br>&nbsp;&nbsp;&nbsp;&nbsp;1<br><br>&nbsp;&nbsp;your input was:<br>&nbsp;&nbsp;&nbsp;&nbsp;:Vimplate hpp-default&lt;CR&gt;Parent&lt;CR&gt;1&lt;CR&gt;<br><br>&nbsp;&nbsp;this will produce this c++ include file:<br>&nbsp;&nbsp;&nbsp;&nbsp;________________________________________________________<br>&nbsp;&nbsp;&nbsp;&nbsp;#ifndef PARENT_HPP<br>&nbsp;&nbsp;&nbsp;&nbsp;#define PARENT_HPP<br><br>&nbsp;&nbsp;&nbsp;&nbsp;/**<br>&nbsp;&nbsp;&nbsp;&nbsp; * @brief Parent ... short description ...<br>&nbsp;&nbsp;&nbsp;&nbsp; * @author Urs Stotz &lt;stotz@gmx.ch&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp; * @date 2005-07-18<br>&nbsp;&nbsp;&nbsp;&nbsp; * ... description ...<br>&nbsp;&nbsp;&nbsp;&nbsp; */<br><br>&nbsp;&nbsp;&nbsp;&nbsp;class Parent<br>&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/**<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; * Default constructor<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; */<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Parent();<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/**<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; * Copy constructor<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; * @param other reference on object to copy<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; */<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Parent(const Parent& other);<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/**<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; * Assignment operator<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; * @param other reference on object to copy<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; * @return reference on initialisated object<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; */<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Parent& operator=(const Parent& other);<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/**<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; * Destructor<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; */<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;virtual ~Parent();<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;private:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/**<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; * Base initialisation should be called<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; * at beginning of each constructor<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; */<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;void init();<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/**<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; * Method to copy each member (deep copy)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; * @param other reference on object to copy<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; */<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;void init(const Parent& other);<br>&nbsp;&nbsp;&nbsp;&nbsp;};<br><br>&nbsp;&nbsp;&nbsp;&nbsp;#endif /* #ifndef PARENT_HPP */<br>&nbsp;&nbsp;&nbsp;&nbsp;________________________________________________________<br><br><br>5. Documentation&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*vimplate-documentation*<br><br>Documentation:<br>&nbsp;&nbsp;- <a target="_blank" href="http://typedef.ch/vimplate">http://typedef.ch/vimplate</A><br>&nbsp;&nbsp;- <a target="_blank" href="http://www.template-toolkit.org/docs.html">http://www.template-toolkit.org/docs.html</A><br>&nbsp;&nbsp;- <a target="_blank" href="http://perldoc.perl.org/perl.html">http://perldoc.perl.org/perl.html</A><br><br>Todo:<br>&nbsp;&nbsp;- better exception handling<br>&nbsp;&nbsp;- write more templates<br><br>License:<br>&nbsp;&nbsp;This program is free software; you can redistribute it and/or modify it<br>&nbsp;&nbsp;under the terms of the GNU General Public License, version 2, as published<br>&nbsp;&nbsp;by the Free Software Foundation.<br><br>&nbsp;&nbsp;This program is distributed in the hope that it will be useful, but<br>&nbsp;&nbsp;WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY<br>&nbsp;&nbsp;or FITNESS FOR A PARTICULAR PURPOSE.&nbsp;&nbsp;See the GNU General Public License<br>&nbsp;&nbsp;for more details.<br><br>&nbsp;&nbsp;A copy of the GNU GPL is available as /usr/share/common-licenses/GPL-2<br>&nbsp;&nbsp;on Debian systems, or on the World Wide Web at<br>&nbsp;&nbsp;<a target="_blank" href="http://www.gnu.org/copyleft/gpl.html">http://www.gnu.org/copyleft/gpl.html</A><br>&nbsp;&nbsp;You can also obtain it by writing to the Free Software Foundation, Inc.,<br>&nbsp;&nbsp;59 Temple Place - Suite 330, Boston, MA 02111-1307, USA<br><br>Copyright:<br>&nbsp;&nbsp;Copyright (c) 2005, Urs Stotz &lt;stotz@gmx.ch&gt;<br><br>Version:<br>&nbsp;&nbsp;vimplate 0.2.3</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">install details</td></tr>
+<tr><td>6. Depends:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *vimplate-depends*<br><br>Debian Users:<br>Vimplate is part of vim-scripts &gt;= 7.0.5&nbsp;&nbsp;thanks: Stefano Zacchiroli and Michael Piefel<br>&nbsp;&nbsp;apt-get install vim-scripts<br><br>&nbsp;&nbsp;Perl<br>&nbsp;&nbsp;&nbsp;&nbsp;<a target="_blank" href="http://www.perl.org">http://www.perl.org</A><br>&nbsp;&nbsp;&nbsp;&nbsp;Windows users:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a target="_blank" href="http://www.activestate.com/Products/ActivePerl">http://www.activestate.com/Products/ActivePerl</A><br>&nbsp;&nbsp;Template-Toolkit<br>&nbsp;&nbsp;&nbsp;&nbsp;<a target="_blank" href="http://search.cpan.org/~abw/Template-Toolkit-2.14">http://search.cpan.org/~abw/Template-Toolkit-2.14</A><br>&nbsp;&nbsp;&nbsp;&nbsp;or apt-get install libtemplate-perl<br>&nbsp;&nbsp;&nbsp;&nbsp;or perl -MCPAN -e&quot;install Template&quot;<br>&nbsp;&nbsp;&nbsp;&nbsp;Windows users:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ppm install<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a target="_blank" href="http://openinteract.sourceforge.net/ppmpackages/AppConfig.ppd">http://openinteract.sourceforge.net/ppmpackages/AppConfig.ppd</A><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ppm install<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a target="_blank" href="http://openinteract.sourceforge.net/ppmpackages/Template-Toolkit.ppd">http://openinteract.sourceforge.net/ppmpackages/Template-Toolkit.ppd</A><br><br>Suggests:<br>&nbsp;&nbsp;TT2 syntax:<br>&nbsp;&nbsp;&nbsp;&nbsp;<a target="_blank" href="http://www.vim.org/scripts/script.php?script_id=830">http://www.vim.org/scripts/script.php?script_id=830</A><br><br><br>7. Installation&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*vimplate-installation*<br><br>Installation steps:<br>&nbsp;&nbsp;1. change to your $HOME/.vim directory<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (on windows: set the variable HOME<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; set HOME=c:\vim)<br>&nbsp;&nbsp;2. untar vimplate.tar.gz: gzip -dc vimplate.tar.gz |tar xpvf -<br>&nbsp;&nbsp;3. move the vimplate into your preferred directory<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for example in $HOME/bin or /usr/local/bin<br>&nbsp;&nbsp;4. move the directory Template with the example templates<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;to the place that you prefer<br>&nbsp;&nbsp;5. edit your $HOME/.vimrc and set the variable Vimplate to<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;to the place where vimplate is located<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for example let Vimplate = &quot;$HOME/bin/vimplate&quot;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(on windows: let Vimplate = &quot;%HOME%/bin/vimplate.cmd&quot; )<br>&nbsp;&nbsp;6. run vimplate to create your configuration file $HOME/.vimplaterc<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for example $HOME/bin/vimplate -createconfig<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(on windows: %HOME%/bin/vimplate.cmd -createconfig&quot; )<br>&nbsp;&nbsp;7. edit your $HOME/.vimplaterc<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (on windows: %HOME%/_vimplaterc)<br>&nbsp;&nbsp;8. change to the $HOME/.vim/doc directory,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;start Vim and run the &quot;:helptags .&quot; command to process the<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;taglist help file. (see: |helptags| )<br>&nbsp;&nbsp;9. happy vimplating</td></tr>
+<tr><td>&nbsp;</td></tr>
+</table>
+
+<!-- rating table -->
+<form name="rating">
+<input type="hidden" name="script_id" value="1311">
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>rate this script</b></td>
+  <td valign="middle">
+    <input type="radio" name="rating" value="life_changing">Life Changing
+    <input type="radio" name="rating" value="helpful">Helpful
+    <input type="radio" name="rating" value="unfulfilling">Unfulfilling&nbsp;
+    <input type="submit" value="rate">
+  </td>
+</tr>
+</table>
+</form>
+<span class="txth2">script versions</span> (<a href="add_script_version.php?script_id=1311">upload new version</a>)
+<p>
+Click on the package to download.
+<p>
+
+<table cellspacing="2" cellpadding="4" border="0" width="100%">
+<tr class='tableheader'>
+        <th valign="top">package</th>
+    <th valign="top">script version</th>
+    <th valign="top">date</th>
+    <th valign="top">Vim version</th>
+    <th valign="top">user</th>
+    <th valign="top">release notes</th>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=4504">vimplate-0.2.3.tar.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.2.3</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2005-08-20</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=5415">Urs Stotz</a></i></td>
+    <td class="rowodd" valign="top" width="2000">The perl vimplate script is running now also on Windows.<br>A vim help added.<br>Dokumentation written for Windows ActiveState Perl User.<br>Templates for C++, Perl, LaTeX and make revised.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=4438">vimplate-0.2.2.tar.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.2.2</b></td>
+    <td class="roweven" valign="top" nowrap><i>2005-07-18</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=5415">Urs Stotz</a></i></td>
+    <td class="roweven" valign="top" width="2000">Better templates for C++. Now with choose between Doxygen comments or non comments.<br>Vimplate should be running on Windows when there Template-Toolkit is installed.</td>
+</tr>
+</table>
+<!-- finish off the framework -->
+          </td>
+        </tr>
+      </table>
+    </td>
+
+  </tr>
+</table>
+
+<!-- END OF THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr><td colspan="4" bgcolor="#000000"><img src="/images/spacer.gif" height="2" width="1" alt=""></td></tr>
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr>
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+
+    <td align="left" valign="top"><small>
+      If you have questions or remarks about this site, visit the
+      <a href="http://vimonline.sf.net">vimonline development</a> pages.
+      Please use this site responsibly.
+      <br> 
+      
+      Questions about <a href="http://www.vim.org/about.php">Vim</a> should go
+      to the <a href="http://www.vim.org/maillist.php">maillist</a>.
+      Help Bram <a href="http://iccf-holland.org/">help Uganda</a>.
+      </small>
+	&nbsp;
+	&nbsp;
+
+	<!-- Start of StatCounter Code -->
+	<script type="text/javascript" language="javascript">
+	var sc_project=1417324; 
+	var sc_invisible=1; 
+	var sc_partition=11; 
+	var sc_security="d41633bc"; 
+	</script>
+
+	<script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script><noscript><a href="http://www.statcounter.com/" target="_blank"><img  src="http://c12.statcounter.com/counter.php?sc_project=1417324&java=0&security=d41633bc&invisible=0" alt="free tracking" border="0"></a> </noscript>
+	<!-- End of StatCounter Code -->
+          </td>
+
+    <td align="right" valign="top">
+      		<a href="http://sourceforge.net/projects/vim" rel="nofollow"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=8&type=1" width="88" height="31" border="0" alt="SourceForge.net Logo" /></a>
+    </td>
+
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+  </tr>
+
+    
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  
+  </tr>
+</table>
+
+</body>
+</html>
+

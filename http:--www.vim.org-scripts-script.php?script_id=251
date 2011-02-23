@@ -1,0 +1,308 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+  <link rel="Stylesheet" type="text/css" href="/css/style.css" >
+  <title>lid.vim - Plugin to integrate GNU id-utils tool with Vim : vim online</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <meta name="KEYWORDS" content="Vim, Vi IMproved, text editor, home, documentation, tips, scripts, news">
+  <link rel="shortcut icon" type="image/x-icon" href="/images/vim_shortcut.ico">
+</head>
+
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff"> 
+
+<!-- HEADER, SPONSOR IMAGE, VIM IMAGE AND BOOK AD -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+  <td class="lightbg">&nbsp;&nbsp;&nbsp;</td>
+  <td class="lightbg" align="left"><a href="/sponsor/index.php"><img src="/images/sponsorvim.gif" alt="sponsor Vim development" border="0"></a></td>
+    <td class="lightbg" align="center"><a href="/index.php"><img src="/images/vim_header.gif" border="0" alt="Vim logo"></a></td>
+    <td class="lightbg" align="right"><a href="http://iccf-holland.org/click5.html"><img src="/images/buyhelplearn.gif" alt="Vim Book Ad" border="0"></a></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="darkbg"><img src="/images/spacer.gif" width="1" height="10" alt=""></td>
+  </tr>
+</table>
+<!-- THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+  <col width="180">
+  <col width="1">
+
+  <tr valign="top">
+    <td class="sidebar">
+      <table width="180" cellpadding="4" cellspacing="0" border="0">
+        <tr valign="top">
+          <td class="sidebar">
+
+<!-- INCLUDE THE PAGE NAVIGATION -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+    <tr>
+        <td><small>not logged in (<a href="/login.php">login</a>)</small></td>
+    </tr>
+    <tr><td>
+<small>&nbsp;</small>
+<form action="http://www.google.com/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-3005259998294962:bvyni59kjr1" />
+    <input type="hidden" name="ie" value="ISO-8859-1" />
+    <input type="text" name="q" size="20" />
+    <br>
+    <input type="submit" name="sa" value="Search" />
+  </div>
+</form>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+    </td></tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="1"></td>
+    </tr>
+    <tr>
+        <td class="darkbg"><img src="/images/spacer.gif" alt='' border="0" height="3"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="2"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/index.php">Home</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/search.php">Advanced search</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/about.php">About Vim</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/community.php">Community</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/news/news.php">News</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/sponsor/index.php">Sponsoring</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/trivia.php">Trivia</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/docs.php">Documentation</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/download.php">Download</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/scripts/index.php">Scripts</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/tips/index.php">Tips</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/account/index.php">My Account</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/huh.php">Site Help</a></td>
+        </tr>
+</table>
+
+            <table width="172" cellpadding="0" cellspacing="0" border="0">
+              <tr><td><img src="/images/spacer.gif" alt="" border="0" width="1" height="8"></td></tr>
+              <tr><td class="darkbg"><img src="/images/spacer.gif" width="1" height="3" alt=""></td></tr>
+            </table>
+            <br>
+
+<!-- INCLUDE THE PAGE SIDEBAR TEXT -->
+&nbsp;
+
+          </td>
+        </tr>
+      </table>
+    </td>
+
+    <td class="darkbg"><img src="/images/spacer.gif" width="1" height="1" border="0" alt=""><br></td>
+    <td>
+      <table width="100%" cellpadding="10" cellspacing="0" border="0" bordercolor="red">
+        <tr>
+          <td valign="top">
+
+<span class="txth1">lid.vim : Plugin to integrate GNU id-utils tool with Vim</span> 
+
+<br>
+<br>
+
+<!-- karma table -->
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
+  <td>
+    Rating <b>95/29</b>,
+    Downloaded by 2019  </td>
+  <td class="lightbg">
+  <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
+  </td>
+  <td>
+    <a href="http://vim.wikia.com/wiki/Script:251">Vim wiki</a>
+  </td>  
+</tr>
+</table>
+<p>
+
+<table cellspacing="0" cellpadding="0" border="0">
+<tr><td class="prompt">created by</td></tr>
+<tr><td><a href="/account/profile.php?user_id=244">Yegappan Lakshmanan</a></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">script type</td></tr>
+<tr><td>utility</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">description</td></tr>
+<tr><td>Overview<br>The lid.vim Vim plugin provides a way to interact with the lid tool to<br>lookup keywords in the ID database.<br><br>For more information about id utilities (lid, aid, etc), visit the <br>following pages: <br><br>&nbsp;&nbsp;&nbsp;&nbsp;<a target="_blank" href="http://www.delorie.com/gnu/docs/id-utils/id-utils_toc.html">http://www.delorie.com/gnu/docs/id-utils/id-utils_toc.html</A> <br>&nbsp;&nbsp;&nbsp;&nbsp;<a target="_blank" href="http://www.gnu.org/software/idutils/idutils.html">http://www.gnu.org/software/idutils/idutils.html</A> <br><br>You can download the id-utils binaries for MS-Windows from: <br><br>&nbsp;&nbsp;&nbsp;&nbsp;<a target="_blank" href="http://gnuwin32.sourceforge.net/packages/id-utils.htm">http://gnuwin32.sourceforge.net/packages/id-utils.htm</A><br><br>Usage<br>You can lookup keywords in the ID database using the 'Lid' command. For<br>example,<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:Lid&lt;Enter&gt; <br><br>This will prompt you for the keyword to lookup.&nbsp;&nbsp;The default is the current<br>keyword under the cursor.&nbsp;&nbsp;You can retrieve previously entered keywords<br>using the up and down arrow keys. You can cancel the lookup by pressing the<br>escape key.<br><br>You can map a key to invoke the Lid command:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nnoremap &lt;silent&gt; &lt;F4&gt; :Lid &lt;C-R&gt;&lt;C-W&gt;&lt;CR&gt;<br><br>Add the above mapping to your ~/.vimrc file.<br><br>You can also specify the keyword to the Lid command like this:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:Lid &lt;keyword&gt;<br><br>In the above command format, you can press the &lt;Tab&gt; key to expand<br>keywords from a tags file.<br><br>You can use the &quot;-p&quot; and &quot;-v&quot; option to the 'Lid' command to selectively<br>display lines from the lid output. You can use the &quot;-p&quot; option to the 'Lid'<br>command to list only those lid matches that contain a pattern. You can use<br>the &quot;-v&quot; option to the 'Lid' command to list only those lid matches that<br>does not contain a pattern. Only one of the &quot;-p&quot; or &quot;-v&quot; options can be used<br>at a time.<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :Lid -p<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :Lid -v<br><br>If you use the any one of the above options, you will prompted to enter the<br>pattern you are interested in.<br><br>The output of the lid command will be listed in the Vim quickfix window.<br>1. You can select a line in the quickfix window and press &lt;Enter&gt; or double<br>&nbsp;&nbsp; click on a match to jump to that line.<br>2. You can use the &quot;:cnext&quot; and &quot;:cprev&quot; commands to the jump to the next or<br>&nbsp;&nbsp; previous output line.<br>3. You can use the &quot;:colder&quot; and &quot;:cnewer&quot; commands to go between multiple<br>&nbsp;&nbsp; Lid quickfix output windows.<br>4. The quickfix window need not be opened always to use the lid output.<br>&nbsp;&nbsp; You can close the quickfix window and use the quickfix commands to jump<br>&nbsp;&nbsp; to the lid matches.&nbsp;&nbsp;Use the &quot;:copen&quot; command to open the quickfix<br>&nbsp;&nbsp; window again.<br><br>For more information about other quickfix commands read &quot;:help quickfix&quot;<br><br>Configuration<br>By changing the following variables you can configure the behavior of this<br>plugin. Set the following variables in your .vimrc file using the 'let'<br>command.<br><br>The path to the lid executable is specified by the 'LID_Cmd' variable.&nbsp;&nbsp;By<br>default, this variable is set to lid. You can change the lid executable path<br>by setting the 'LID_Cmd' variable:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let LID_Cmd = '/my/path/lid'<br><br>By default, this plugin uses 'ID' as the name of the database.&nbsp;&nbsp;This is<br>defined by the 'LID_File' variable.&nbsp;&nbsp;You can change the name/location of the<br>ID database by setting the 'LID_File' variable:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let LID_File = '/my/path/ID'<br><br>You can also specify more than one ID file names in the LID_File variable.<br>The ID file names should be separated by a ',' character.<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let LID_File = '/my/path1/ID,/my/path2/ID,/my/path3/ID'<br><br>The plugin will use the first ID file name and run lid using that filename.<br>If a match is found, it will return the results. If a match is not found,<br>then the second ID file name will be used and this will be repeated till<br>either a match is found or all the specified ID file names are processed.<br><br>If more than one ID file is specified using the 'LID_File' variable, you can<br>set the 'LID_Search_Multiple_ID_Files' variable to 1 to always search for a<br>keyword in all the specified ID files. By default,<br>'LID_Search_Multiple_ID_Files' variable is set to one. All the specified ID<br>files are searched for the keyword. <br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let LID_Search_Multiple_ID_Files = 0<br><br>By default, when you invoke the :Lid command the quickfix window will be<br>opened with the lid output.&nbsp;&nbsp;You can disable opening the quickfix window,<br>by setting the 'LID_OpenQuickfixWindow' variable to 1:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let LID_OpenQuickfixWindow = 1<br><br>You can manually open the quickfix window using the :cwindow command.<br><br>The 'LID_Shell_Quote_Char' variable specifies the character to use to<br>escape the keyword before passing it to the lid command.&nbsp;&nbsp;By default,<br>for MS-Windows systems, no shell quote character is set.&nbsp;&nbsp;For other<br>systems, &quot;'&quot; is used as the the shell quote character.&nbsp;&nbsp;You can change<br>this by setting the 'LID_Shell_Quote_Char' variable:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let LID_Shell_Quote_Char = '&quot;'<br><br>By default, the ID file specified by the LID_File variable will be used.&nbsp;&nbsp;If<br>you set the 'LID_Prompt_ID_Filename' variable to 1, then every time the LID<br>command will prompt for the location of the ID file.&nbsp;&nbsp;The default ID file<br>location displayed will be the last used value.&nbsp;&nbsp;You can again set the<br>'LID_Prompt_ID_Filename' variable back to 0, to turn off this prompt.&nbsp;&nbsp;The<br>last supplied ID file will be used for further Lid invocations.<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let LID_Prompt_ID_Filename = 1<br><br>By default, when the lid output is displayed, the cursor will be<br>automatically positioned at the first matching line.&nbsp;&nbsp;You can set the<br>LID_Jump_To_Match variable to 0 to prevent this.&nbsp;&nbsp;In this case, only the<br>output from LID will be displayed.<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let LID_Jump_To_Match = 0<br></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">install details</td></tr>
+<tr><td>1. Copy the lid.vim script to the .vim/plugin directory. Refer to <br>&nbsp;&nbsp;&nbsp;&nbsp; 'help add-plugin', 'help add-global-plugin' and 'help runtimepath' for <br>&nbsp;&nbsp;&nbsp;&nbsp; more details.<br>2. Set the LID_Cmd variable to point to the lid utility path.<br>3. Restart Vim.<br>4. You can use the &quot;:Lid&quot; command to search for a keyword.<br></td></tr>
+<tr><td>&nbsp;</td></tr>
+</table>
+
+<!-- rating table -->
+<form name="rating">
+<input type="hidden" name="script_id" value="251">
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>rate this script</b></td>
+  <td valign="middle">
+    <input type="radio" name="rating" value="life_changing">Life Changing
+    <input type="radio" name="rating" value="helpful">Helpful
+    <input type="radio" name="rating" value="unfulfilling">Unfulfilling&nbsp;
+    <input type="submit" value="rate">
+  </td>
+</tr>
+</table>
+</form>
+<span class="txth2">script versions</span> (<a href="add_script_version.php?script_id=251">upload new version</a>)
+<p>
+Click on the package to download.
+<p>
+
+<table cellspacing="2" cellpadding="4" border="0" width="100%">
+<tr class='tableheader'>
+        <th valign="top">package</th>
+    <th valign="top">script version</th>
+    <th valign="top">date</th>
+    <th valign="top">Vim version</th>
+    <th valign="top">user</th>
+    <th valign="top">release notes</th>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=2028">lid.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.4</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2003-05-29</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=244">Yegappan Lakshmanan</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Fixed a problem in searching multiple ID files when some of the ID files are not present.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=1221">lid.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.3</b></td>
+    <td class="roweven" valign="top" nowrap><i>2002-09-18</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=244">Yegappan Lakshmanan</a></i></td>
+    <td class="roweven" valign="top" width="2000">Added optional support for searching a keyword always in more than one ID file.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=733">gid.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2002-03-30</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=244">Yegappan Lakshmanan</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Updated script comments.</td>
+</tr>
+</table>
+<!-- finish off the framework -->
+          </td>
+        </tr>
+      </table>
+    </td>
+
+  </tr>
+</table>
+
+<!-- END OF THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr><td colspan="4" bgcolor="#000000"><img src="/images/spacer.gif" height="2" width="1" alt=""></td></tr>
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr>
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+
+    <td align="left" valign="top"><small>
+      If you have questions or remarks about this site, visit the
+      <a href="http://vimonline.sf.net">vimonline development</a> pages.
+      Please use this site responsibly.
+      <br> 
+      
+      Questions about <a href="http://www.vim.org/about.php">Vim</a> should go
+      to the <a href="http://www.vim.org/maillist.php">maillist</a>.
+      Help Bram <a href="http://iccf-holland.org/">help Uganda</a>.
+      </small>
+	&nbsp;
+	&nbsp;
+
+	<!-- Start of StatCounter Code -->
+	<script type="text/javascript" language="javascript">
+	var sc_project=1417324; 
+	var sc_invisible=1; 
+	var sc_partition=11; 
+	var sc_security="d41633bc"; 
+	</script>
+
+	<script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script><noscript><a href="http://www.statcounter.com/" target="_blank"><img  src="http://c12.statcounter.com/counter.php?sc_project=1417324&java=0&security=d41633bc&invisible=0" alt="free tracking" border="0"></a> </noscript>
+	<!-- End of StatCounter Code -->
+          </td>
+
+    <td align="right" valign="top">
+      		<a href="http://sourceforge.net/projects/vim" rel="nofollow"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=8&type=1" width="88" height="31" border="0" alt="SourceForge.net Logo" /></a>
+    </td>
+
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+  </tr>
+
+    
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  
+  </tr>
+</table>
+
+</body>
+</html>
+

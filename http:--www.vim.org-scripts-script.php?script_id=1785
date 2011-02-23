@@ -1,0 +1,420 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+  <link rel="Stylesheet" type="text/css" href="/css/style.css" >
+  <title>javacomplete - Omni Completion for JAVA : vim online</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <meta name="KEYWORDS" content="Vim, Vi IMproved, text editor, home, documentation, tips, scripts, news">
+  <link rel="shortcut icon" type="image/x-icon" href="/images/vim_shortcut.ico">
+</head>
+
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff"> 
+
+<!-- HEADER, SPONSOR IMAGE, VIM IMAGE AND BOOK AD -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+  <td class="lightbg">&nbsp;&nbsp;&nbsp;</td>
+  <td class="lightbg" align="left"><a href="/sponsor/index.php"><img src="/images/sponsorvim.gif" alt="sponsor Vim development" border="0"></a></td>
+    <td class="lightbg" align="center"><a href="/index.php"><img src="/images/vim_header.gif" border="0" alt="Vim logo"></a></td>
+    <td class="lightbg" align="right"><a href="http://iccf-holland.org/click5.html"><img src="/images/buyhelplearn.gif" alt="Vim Book Ad" border="0"></a></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="darkbg"><img src="/images/spacer.gif" width="1" height="10" alt=""></td>
+  </tr>
+</table>
+<!-- THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+  <col width="180">
+  <col width="1">
+
+  <tr valign="top">
+    <td class="sidebar">
+      <table width="180" cellpadding="4" cellspacing="0" border="0">
+        <tr valign="top">
+          <td class="sidebar">
+
+<!-- INCLUDE THE PAGE NAVIGATION -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+    <tr>
+        <td><small>not logged in (<a href="/login.php">login</a>)</small></td>
+    </tr>
+    <tr><td>
+<small>&nbsp;</small>
+<form action="http://www.google.com/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-3005259998294962:bvyni59kjr1" />
+    <input type="hidden" name="ie" value="ISO-8859-1" />
+    <input type="text" name="q" size="20" />
+    <br>
+    <input type="submit" name="sa" value="Search" />
+  </div>
+</form>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+    </td></tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="1"></td>
+    </tr>
+    <tr>
+        <td class="darkbg"><img src="/images/spacer.gif" alt='' border="0" height="3"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="2"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/index.php">Home</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/search.php">Advanced search</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/about.php">About Vim</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/community.php">Community</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/news/news.php">News</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/sponsor/index.php">Sponsoring</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/trivia.php">Trivia</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/docs.php">Documentation</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/download.php">Download</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/scripts/index.php">Scripts</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/tips/index.php">Tips</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/account/index.php">My Account</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/huh.php">Site Help</a></td>
+        </tr>
+</table>
+
+            <table width="172" cellpadding="0" cellspacing="0" border="0">
+              <tr><td><img src="/images/spacer.gif" alt="" border="0" width="1" height="8"></td></tr>
+              <tr><td class="darkbg"><img src="/images/spacer.gif" width="1" height="3" alt=""></td></tr>
+            </table>
+            <br>
+
+<!-- INCLUDE THE PAGE SIDEBAR TEXT -->
+&nbsp;
+
+          </td>
+        </tr>
+      </table>
+    </td>
+
+    <td class="darkbg"><img src="/images/spacer.gif" width="1" height="1" border="0" alt=""><br></td>
+    <td>
+      <table width="100%" cellpadding="10" cellspacing="0" border="0" bordercolor="red">
+        <tr>
+          <td valign="top">
+
+<span class="txth1">javacomplete : Omni Completion for JAVA</span> 
+
+<br>
+<br>
+
+<!-- karma table -->
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
+  <td>
+    Rating <b>269/114</b>,
+    Downloaded by 7237  </td>
+  <td class="lightbg">
+  <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
+  </td>
+  <td>
+    <a href="http://vim.wikia.com/wiki/Script:1785">Vim wiki</a>
+  </td>  
+</tr>
+</table>
+<p>
+
+<table cellspacing="0" cellpadding="0" border="0">
+<tr><td class="prompt">created by</td></tr>
+<tr><td><a href="/account/profile.php?user_id=11701">fang cheng</a></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">script type</td></tr>
+<tr><td>ftplugin</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">description</td></tr>
+<tr><td>This is javacomplete, an omni-completion script of JAVA language for vim 7.<br><br>It includes javacomplete.vim, java_parser.vim, Reflection.java, and <br>javacomplete.txt<br><br>Features:<br>- List members of a class, including (static) fields, (static) methods and ctors.<br>- List classes or subpackages of a package.<br>- Provide parameters information of a method, list all overload methods.<br>- Complete an incomplete word.<br>- Provide a complete JAVA parser written in Vim script language.<br>- Use the JVM to obtain most information.<br>- Use the embedded parser to obtain the class information from source files.<br>- Tags generated by ctags can also be used.<br>- JSP is supported, Builtin objects such as request, session can be recognized.<br>&nbsp;&nbsp;The classes and jar files in the WEB-INF will be appended automatically to classpath.<br><br><br>Requirements:<br>It works on all the platforms where<br>- Vim version 7.0 and above<br>- JDK version 1.1 and above<br>existed <br><br>Input context:<br>It recognize nearly all kinds of Primary Expressions (see langspec-3.0)<br>except for &quot;Primary.new Indentifier&quot;. Casting conversion is also supported.<br>Samples of input contexts are as following:	('|' indicates cursor)<br>&nbsp;&nbsp;&nbsp;&nbsp;(1). after '.', list members of a class or a package<br>&nbsp;&nbsp;&nbsp;&nbsp;- package.|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; subpackages and classes of a package<br>&nbsp;&nbsp;&nbsp;&nbsp;- Type.|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;static members of the 'Type' class and &quot;class&quot;<br>&nbsp;&nbsp;&nbsp;&nbsp;- var.| or field.|&nbsp;&nbsp;&nbsp;&nbsp; members of a variable or a field<br>&nbsp;&nbsp;&nbsp;&nbsp;- method().|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; members of result of method()<br>&nbsp;&nbsp;&nbsp;&nbsp;- this.|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; members of the current class<br>&nbsp;&nbsp;&nbsp;&nbsp;- ClassName.this.|&nbsp;&nbsp;members of the qualified class<br>&nbsp;&nbsp;&nbsp;&nbsp;- super.|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; members of the super class<br>&nbsp;&nbsp;&nbsp;&nbsp;- array.|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;members of an array object<br>&nbsp;&nbsp;&nbsp;&nbsp;- array[i].|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; array access, return members of the element of array<br>&nbsp;&nbsp;&nbsp;&nbsp;- &quot;String&quot;.|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String literal, return members of java.lang.String<br>&nbsp;&nbsp;&nbsp;&nbsp;- int.| or void.|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; primitive type or pseudo-type, return &quot;class&quot;<br>&nbsp;&nbsp;&nbsp;&nbsp;- int[].|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; array type, return members of a array type and &quot;class&quot;<br>&nbsp;&nbsp;&nbsp;&nbsp;- java.lang.String[].|<br>&nbsp;&nbsp;&nbsp;&nbsp;- new int[].|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; members of the new array instance<br>&nbsp;&nbsp;&nbsp;&nbsp;- new java.lang.String[i=1][].|<br>&nbsp;&nbsp;&nbsp;&nbsp;- new Type().|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;members of the new class instance <br>&nbsp;&nbsp;&nbsp;&nbsp;- Type.class.|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;class literal, return members of java.lang.Class<br>&nbsp;&nbsp;&nbsp;&nbsp;- void.class.| or int.class.|<br>&nbsp;&nbsp;&nbsp;&nbsp;- ((Type)var).|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; cast var as Type, return members of Type.<br>&nbsp;&nbsp;&nbsp;&nbsp;- (var.method()).|&nbsp;&nbsp; same with &quot;var.|&quot;<br>&nbsp;&nbsp;&nbsp;&nbsp;- (new Class()).|&nbsp;&nbsp;&nbsp;&nbsp;same with &quot;new Class().|&quot;<br><br>&nbsp;&nbsp; (2). after '(', list matching methods with parameters information.<br>&nbsp;&nbsp;&nbsp;&nbsp;- method(|)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; methods matched<br>&nbsp;&nbsp;&nbsp;&nbsp;- var.method(|)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; methods matched<br>&nbsp;&nbsp;&nbsp;&nbsp;- new ClassName(|)&nbsp;&nbsp;constructors matched<br>&nbsp;&nbsp;&nbsp;&nbsp;- this(|)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;constructors of current class matched<br>&nbsp;&nbsp;&nbsp;&nbsp;- super(|)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; constructors of super class matched<br>&nbsp;&nbsp;&nbsp;&nbsp;Any place between '(' and ')' will be supported soon.<br>&nbsp;&nbsp;&nbsp;&nbsp;Help information of javadoc is not supported yet.<br><br>&nbsp;&nbsp; (3). after an incomplete word, list all the matched beginning with it.<br>&nbsp;&nbsp;&nbsp;&nbsp;- var.ab|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;subset of members of var beginning with `ab`<br>&nbsp;&nbsp;&nbsp;&nbsp;- ab|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;list of all maybes<br><br>&nbsp;&nbsp; (4). import statement<br>&nbsp;&nbsp;&nbsp;&nbsp;- &quot; import&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; java.util.|&quot;<br>&nbsp;&nbsp;&nbsp;&nbsp;- &quot; import&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; java.ut|&quot;<br>&nbsp;&nbsp;&nbsp;&nbsp;- &quot; import&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ja|&quot;<br>&nbsp;&nbsp;&nbsp;&nbsp;- &quot; import&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; java.lang.Character.|&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;e.g. &quot;Subset&quot;<br>&nbsp;&nbsp;&nbsp;&nbsp;- &quot; import static java.lang.Math.|&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;e.g. &quot;PI, abs&quot;<br><br>&nbsp;&nbsp; (5). package declaration<br>&nbsp;&nbsp;&nbsp;&nbsp;- &quot; package&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; com.|&quot;<br><br>&nbsp;&nbsp; The above are in simple expression.<br>&nbsp;&nbsp; (6). after compound expression:<br>&nbsp;&nbsp;&nbsp;&nbsp;- PrimaryExpr.var.|<br>&nbsp;&nbsp;&nbsp;&nbsp;- PrimaryExpr.method().|<br>&nbsp;&nbsp;&nbsp;&nbsp;- PrimaryExpr.method(|)<br>&nbsp;&nbsp;&nbsp;&nbsp;- PrimaryExpr.var.ab|<br>&nbsp;&nbsp;&nbsp;&nbsp;e.g.<br>&nbsp;&nbsp;&nbsp;&nbsp;- &quot;java.lang&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;. System.in .|&quot;<br>&nbsp;&nbsp;&nbsp;&nbsp;- &quot;java.lang.System.getenv().|&quot;<br>&nbsp;&nbsp;&nbsp;&nbsp;- &quot;int.class.toString().|&quot;<br>&nbsp;&nbsp;&nbsp;&nbsp;- &quot;list.toArray().|&quot;<br>&nbsp;&nbsp;&nbsp;&nbsp;- &quot;new ZipFile(path).|&quot;<br>&nbsp;&nbsp;&nbsp;&nbsp;- &quot;new ZipFile(path).entries().|&quot;<br><br>&nbsp;&nbsp; (7). Nested expression:<br>&nbsp;&nbsp;&nbsp;&nbsp;- &quot;System.out.println( str.| )&quot;<br>&nbsp;&nbsp;&nbsp;&nbsp;- &quot;System.out.println(str.charAt(| )&quot;<br>&nbsp;&nbsp;&nbsp;&nbsp;- &quot;for (int i = 0; i &lt; str.|; i++)&quot;<br>&nbsp;&nbsp;&nbsp;&nbsp;- &quot;for ( Object o : a.getCollect| )&quot;<br><br><br>Limitations:<br>The embedded parser works a bit slower than expected.<br><br>TODO:<br>-&nbsp;&nbsp;Improve performance of the embedded parser. Incremental parser.<br>-&nbsp;&nbsp;Add quick information using balloonexpr, ballooneval, balloondelay.<br>-&nbsp;&nbsp;Add javadoc<br>-&nbsp;&nbsp;Give a hint for class name conflict in different packages.<br>-&nbsp;&nbsp;Support parameter information for template<br>-&nbsp;&nbsp;Make it faster and more robust.<br><br>Screenshots:<br>members of a package, <a target="_blank" href="http://blog.chinaunix.net/photo/44758_070917101010.jpg">http://blog.chinaunix.net/photo/44758_070917101010.jpg</A><br>members of a type, <a target="_blank" href="http://blog.chinaunix.net/photo/44758_070917101048.jpg">http://blog.chinaunix.net/photo/44758_070917101048.jpg</A><br>local variable, <a target="_blank" href="http://blog.chinaunix.net/photo/44758_070917101134.jpg">http://blog.chinaunix.net/photo/44758_070917101134.jpg</A><br>special reference super, <a target="_blank" href="http://blog.chinaunix.net/photo/44758_070917101158.jpg">http://blog.chinaunix.net/photo/44758_070917101158.jpg</A><br>object of method result,&nbsp;&nbsp;<a target="_blank" href="http://blog.chinaunix.net/photo/44758_070917101236.jpg">http://blog.chinaunix.net/photo/44758_070917101236.jpg</A><br><br>FeedBack:<br>Any problem, bug or suggest are welcome to send to fangread@yahoo.com.cn<br><br>BTW, If you want to get more functions on writting java program besides code completion,<br>you can try VJDE. <a target="_blank" href="http://www.vim.org/scripts/script.php?script_id=1213">http://www.vim.org/scripts/script.php?script_id=1213</A></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">install details</td></tr>
+<tr><td>1. Unzip javacomplete.zip to a directory of 'runtimepath', e.g.<br>$HOME/.vim (unix/linux), $VIM/vimfiles (windows).<br>	&gt; unzip javacomplete.zip -d ~/.vim<br><br>&nbsp;&nbsp;&nbsp;&nbsp;To update Vim help tags, run vim and run command: <br>	:helptags $HOME/.vim/doc<br>&nbsp;&nbsp;&nbsp;&nbsp;or<br>	:helptags $VIM/vimfiles/doc<br><br>NOTE: javacomplete.vim, java_parser.vim and Reflection.java should be in one<br>autoload directory of 'runtimepath'.<br>javacomplete.txt should be in one doc directory of 'runtimepath'.<br><br>2. Set 'omnifunc' option. e.g.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:setlocal omnifunc=javacomplete#Complete<br>&nbsp;&nbsp;Or, use autocmd: <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&quot; Only do this part when compiled with support for autocommands.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:if has(&quot;autocmd&quot;)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;autocmd Filetype java setlocal omnifunc=javacomplete#Complete<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:endif<br>&nbsp;&nbsp;You can add this command to your .vimrc or _vimrc.<br><br>3. Set 'completefunc' option to show parameters information IF YOU LIKE. e.g.<br>	:setlocal completefunc=javacomplete#CompleteParamsInfo<br>You can map as follows for better display:<br>	:inoremap &lt;buffer&gt; &lt;C-X&gt;&lt;C-U&gt; &lt;C-X&gt;&lt;C-U&gt;&lt;C-P&gt;<br>	:inoremap &lt;buffer&gt; &lt;C-S-Space&gt; &lt;C-X&gt;&lt;C-U&gt;&lt;C-P&gt;<br><br>4. Reflection.java will be automatcally compiled and placed to $HOME when you<br>use first time. Assure that Reflection.java is in the same directory with<br>javacomplete.vim to be searched in autoload subdirectory of &rtp. <br>If no Reflection.class is generated, check that you have the write permission<br>in $HOME directory.<br>If a previous Reflection.java is not compatible with the new version<br>javacomplete.vim, please compile Reflection.java manually.<br></td></tr>
+<tr><td>&nbsp;</td></tr>
+</table>
+
+<!-- rating table -->
+<form name="rating">
+<input type="hidden" name="script_id" value="1785">
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>rate this script</b></td>
+  <td valign="middle">
+    <input type="radio" name="rating" value="life_changing">Life Changing
+    <input type="radio" name="rating" value="helpful">Helpful
+    <input type="radio" name="rating" value="unfulfilling">Unfulfilling&nbsp;
+    <input type="submit" value="rate">
+  </td>
+</tr>
+</table>
+</form>
+<span class="txth2">script versions</span> (<a href="add_script_version.php?script_id=1785">upload new version</a>)
+<p>
+Click on the package to download.
+<p>
+
+<table cellspacing="2" cellpadding="4" border="0" width="100%">
+<tr class='tableheader'>
+        <th valign="top">package</th>
+    <th valign="top">script version</th>
+    <th valign="top">date</th>
+    <th valign="top">Vim version</th>
+    <th valign="top">user</th>
+    <th valign="top">release notes</th>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=14914">javacomplete0.77.1.2.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.77.1.2</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2011-01-30</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=11701">fang cheng</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Fixed the bug caused by that globpath() (vim version &lt; 7.2) does not support the 3rd parameter.<br>Thanks to Sam Lidder's patch.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=14244">javacomplete.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.77.1.1</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-11-12</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=11701">fang cheng</a></i></td>
+    <td class="roweven" valign="top" width="2000">Fixed to ignore the 'suffixes' and 'wildignore' options.<br>Reflection.class can not be found if :set wildignore=*.class</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=7716">javacomplete.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.77.1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2007-09-25</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=11701">fang cheng</a></i></td>
+    <td class="rowodd" valign="top" width="2000">+ Supported showing method parameters information in any place between parenthesises.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=7692">javacomplete.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.77</b></td>
+    <td class="roweven" valign="top" nowrap><i>2007-09-18</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=11701">fang cheng</a></i></td>
+    <td class="roweven" valign="top" width="2000">+ Supported new contexts &quot;jav|&quot;, &quot;var|&quot;, just after an incomplete word.<br>+ Supported accessible static imported members, add new context &quot;abs(|)&quot;.<br>+ Supported accessible inherited members.<br>- [Reflection.java]Improved getting paths of all system jar files for different JDKs in different platforms.<br>- Rewrote some core functions.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=7584">javacomplete.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.76.8</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2007-08-30</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=11701">fang cheng</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- Improved support of JSP: appending automatically jar or classpath under WEB-INF.<br>- Supported local and anonymous classes.<br>- Improved searching type or symbol name.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=7573">javacomplete.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.76.7</b></td>
+    <td class="roweven" valign="top" nowrap><i>2007-08-28</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=11701">fang cheng</a></i></td>
+    <td class="roweven" valign="top" width="2000">- Improved process of type arguments of generic type and method parameters.<br>- Reorganize codes in javacomplete#Complete()<br>- Fixed case of &quot;new java.util.zip.ZipFile().|&quot;</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=7548">javacomplete.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.76.6</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2007-08-23</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=11701">fang cheng</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- Improved recognizing methods, ctors, and variable declarators declared in most common form.<br>- Optimized code and fixed bugs.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=7540">javacomplete.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.76.5</b></td>
+    <td class="roweven" valign="top" nowrap><i>2007-08-21</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=11701">fang cheng</a></i></td>
+    <td class="roweven" valign="top" width="2000">- Optimized code: s:modeAndEXPR(), formalParameter(), and others.<br>- Added quick recognizing fields or methods declared in most common form.<br>- Fixed bug: &quot;foo().|&quot;, &quot;getFoo().foo().|&quot;, &quot;for (Enumeration entries = ; entries.|; )&quot;.<br>- Supported input contexts: &quot;((Object)o).|&quot;, &quot;((Object)o).getClass().|&quot;, &quot;new ZipFile(path).|&quot;, &quot;(new String().)|&quot;.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=7517">javacomplete.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.76.4.1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2007-08-17</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=11701">fang cheng</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- Made a major improvement of Reflection. REMEMBER to DELETE the old Reflection.class.<br>- Support accessible nested classes from reflection.<br>- Support import static members and import accessible nested classes.<br>- Improved input contexts: &quot;int.class.toString().|&quot;, &quot;list.toArray().|&quot;.<br>- Fixed recognition of &quot;this(|)&quot;, &quot;method1(|)&quot;<br>- Added the 'kind' letter to distinguish between classes and packages.<br>- Fixed a bug when Reflection.java is in the path which contains space.<br>- Better support for JSP.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=7484">javacomplete.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.76.3</b></td>
+    <td class="roweven" valign="top" nowrap><i>2007-08-10</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=11701">fang cheng</a></i></td>
+    <td class="roweven" valign="top" width="2000">- Make an improvement for JSP file.<br>- Add an option 'searchdecl' set by javacomplete#SetSearchdeclMethod().<br>- Clear cache when set options affecting classpath.<br>- Improved DoGetPackageList() and s:GenerateImports().<br>- Replace codes searching list of string with index().<br>- Removed the unclear s:tokens and s:modifier_keywords in java_parser.<br>- Add java_parser#GetSnapshot() and java_parser#Restore().<br>- Fixed a bug when no top level class defined</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=7468">javacomplete.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.76.2</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2007-08-08</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=11701">fang cheng</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- Add inherited fields and methods to local class.<br>- Combine members of local packages and loadable packages.<br>- Add quick recognition of package or import. <br>- Fix failing to list members of nested class.<br>- Improved java_parser.<br>- [Reflection] Return a modifier value as a string because it more than 32bit.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=7451">javacomplete.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.76.1</b></td>
+    <td class="roweven" valign="top" nowrap><i>2007-08-05</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=11701">fang cheng</a></i></td>
+    <td class="roweven" valign="top" width="2000">- Support new language features in JAVA 5 and above.<br>- The embedded JAVA parser is full-featured now, adding supports for parsing statement, block or expression.<br>- Java_parser.vim is an autoload script now.<br>- Support JDK1.1.<br>- Improve for 'this' or 'super'.<br>- Support searching toplevel class in current directory, same package or in sourcepath.<br>- Supports input context: &quot;StringLiteral&quot;.|, &quot;int.|&quot;, &quot;void.|&quot;<br>- Add java compiler option, default 'javac'<br>- Add JVM launcher option, default 'java'<br>- Automatcally compile Reflection.java and place it to $HOME.<br>- Easier to install and use.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=6738">javacomplete.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.75beta</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2007-02-13</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=11701">fang cheng</a></i></td>
+    <td class="rowodd" valign="top" width="2000">&quot; 	Add java_parser.vim.<br>&quot; 	Add b:sourcepath option.<br>&quot; 	Improve recognition of classes defined in current buffer or in source path.<br>&quot; 	Support generating class information from tags instead of returning list directly.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=6712">javacomplete.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.74</b></td>
+    <td class="roweven" valign="top" nowrap><i>2007-02-03</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=11701">fang cheng</a></i></td>
+    <td class="roweven" valign="top" width="2000">Support jre1.2 (and above).<br>Support input context like &quot;boolean.class.|&quot;<br>Handle java primitive types such as 'int'.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=6701">javacomplete.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.73</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2007-02-01</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=11701">fang cheng</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Fix bug that CLASSPATH not used when b:classpath or g:java_classpath not set.<br>Fix bug that call filter() without making a copy for incomplete.<br>Improve recognition of declaration of this class</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=6695">javacomplete.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.72</b></td>
+    <td class="roweven" valign="top" nowrap><i>2007-01-31</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=11701">fang cheng</a></i></td>
+    <td class="roweven" valign="top" width="2000">Fix bugs in nested expression:<br>&quot;System.out.println( str.| )&quot;<br>&quot;System.out.println(str.charAt(| )&quot;<br>&quot;for (int i = 0; i &lt; str.|; i++)&quot;</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=6677">javacomplete.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.71</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2007-01-28</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=11701">fang cheng</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Initial upload</td>
+</tr>
+</table>
+<!-- finish off the framework -->
+          </td>
+        </tr>
+      </table>
+    </td>
+
+  </tr>
+</table>
+
+<!-- END OF THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr><td colspan="4" bgcolor="#000000"><img src="/images/spacer.gif" height="2" width="1" alt=""></td></tr>
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr>
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+
+    <td align="left" valign="top"><small>
+      If you have questions or remarks about this site, visit the
+      <a href="http://vimonline.sf.net">vimonline development</a> pages.
+      Please use this site responsibly.
+      <br> 
+      
+      Questions about <a href="http://www.vim.org/about.php">Vim</a> should go
+      to the <a href="http://www.vim.org/maillist.php">maillist</a>.
+      Help Bram <a href="http://iccf-holland.org/">help Uganda</a>.
+      </small>
+	&nbsp;
+	&nbsp;
+
+	<!-- Start of StatCounter Code -->
+	<script type="text/javascript" language="javascript">
+	var sc_project=1417324; 
+	var sc_invisible=1; 
+	var sc_partition=11; 
+	var sc_security="d41633bc"; 
+	</script>
+
+	<script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script><noscript><a href="http://www.statcounter.com/" target="_blank"><img  src="http://c12.statcounter.com/counter.php?sc_project=1417324&java=0&security=d41633bc&invisible=0" alt="free tracking" border="0"></a> </noscript>
+	<!-- End of StatCounter Code -->
+          </td>
+
+    <td align="right" valign="top">
+      		<a href="http://sourceforge.net/projects/vim" rel="nofollow"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=8&type=1" width="88" height="31" border="0" alt="SourceForge.net Logo" /></a>
+    </td>
+
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+  </tr>
+
+    
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  
+  </tr>
+</table>
+
+</body>
+</html>
+

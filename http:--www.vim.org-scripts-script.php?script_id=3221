@@ -1,0 +1,356 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+  <link rel="Stylesheet" type="text/css" href="/css/style.css" >
+  <title>indexer.tar.gz  - indexing all files in project with ctags (can work as add-on for project.tar.gz) : vim online</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <meta name="KEYWORDS" content="Vim, Vi IMproved, text editor, home, documentation, tips, scripts, news">
+  <link rel="shortcut icon" type="image/x-icon" href="/images/vim_shortcut.ico">
+</head>
+
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff"> 
+
+<!-- HEADER, SPONSOR IMAGE, VIM IMAGE AND BOOK AD -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+  <td class="lightbg">&nbsp;&nbsp;&nbsp;</td>
+  <td class="lightbg" align="left"><a href="/sponsor/index.php"><img src="/images/sponsorvim.gif" alt="sponsor Vim development" border="0"></a></td>
+    <td class="lightbg" align="center"><a href="/index.php"><img src="/images/vim_header.gif" border="0" alt="Vim logo"></a></td>
+    <td class="lightbg" align="right"><a href="http://iccf-holland.org/click5.html"><img src="/images/buyhelplearn.gif" alt="Vim Book Ad" border="0"></a></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="darkbg"><img src="/images/spacer.gif" width="1" height="10" alt=""></td>
+  </tr>
+</table>
+<!-- THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+  <col width="180">
+  <col width="1">
+
+  <tr valign="top">
+    <td class="sidebar">
+      <table width="180" cellpadding="4" cellspacing="0" border="0">
+        <tr valign="top">
+          <td class="sidebar">
+
+<!-- INCLUDE THE PAGE NAVIGATION -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+    <tr>
+        <td><small>not logged in (<a href="/login.php">login</a>)</small></td>
+    </tr>
+    <tr><td>
+<small>&nbsp;</small>
+<form action="http://www.google.com/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-3005259998294962:bvyni59kjr1" />
+    <input type="hidden" name="ie" value="ISO-8859-1" />
+    <input type="text" name="q" size="20" />
+    <br>
+    <input type="submit" name="sa" value="Search" />
+  </div>
+</form>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+    </td></tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="1"></td>
+    </tr>
+    <tr>
+        <td class="darkbg"><img src="/images/spacer.gif" alt='' border="0" height="3"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="2"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/index.php">Home</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/search.php">Advanced search</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/about.php">About Vim</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/community.php">Community</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/news/news.php">News</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/sponsor/index.php">Sponsoring</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/trivia.php">Trivia</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/docs.php">Documentation</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/download.php">Download</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/scripts/index.php">Scripts</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/tips/index.php">Tips</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/account/index.php">My Account</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/huh.php">Site Help</a></td>
+        </tr>
+</table>
+
+            <table width="172" cellpadding="0" cellspacing="0" border="0">
+              <tr><td><img src="/images/spacer.gif" alt="" border="0" width="1" height="8"></td></tr>
+              <tr><td class="darkbg"><img src="/images/spacer.gif" width="1" height="3" alt=""></td></tr>
+            </table>
+            <br>
+
+<!-- INCLUDE THE PAGE SIDEBAR TEXT -->
+&nbsp;
+
+          </td>
+        </tr>
+      </table>
+    </td>
+
+    <td class="darkbg"><img src="/images/spacer.gif" width="1" height="1" border="0" alt=""><br></td>
+    <td>
+      <table width="100%" cellpadding="10" cellspacing="0" border="0" bordercolor="red">
+        <tr>
+          <td valign="top">
+
+<span class="txth1">indexer.tar.gz  : indexing all files in project with ctags (can work as add-on for project.tar.gz)</span> 
+
+<br>
+<br>
+
+<!-- karma table -->
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
+  <td>
+    Rating <b>23/8</b>,
+    Downloaded by 576  </td>
+  <td class="lightbg">
+  <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
+  </td>
+  <td>
+    <a href="http://vim.wikia.com/wiki/Script:3221">Vim wiki</a>
+  </td>  
+</tr>
+</table>
+<p>
+
+<table cellspacing="0" cellpadding="0" border="0">
+<tr><td class="prompt">created by</td></tr>
+<tr><td><a href="/account/profile.php?user_id=20962">Dmitry Frank</a></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">script type</td></tr>
+<tr><td>utility</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">description</td></tr>
+<tr><td>IMPORTANT! You need patched version of ctags (5.8.1) to make this plugin work correctly (starting from Indexer version 2.0), because of bug in ctags 5.8. You can read detailed info about this bug and download pathed version here: <a target="_blank" href="http://dfrank.ru/ctags581/en.html">http://dfrank.ru/ctags581/en.html</A><br><br>PLEASE NOTE that in version 1.3 default name of project settings directory has been changed from &quot;.vim&quot; to &quot;.vimprj&quot; to avoid conflicts with standard ~/.vim directory. If you are using this feature and your project settings dir is &quot;.vim&quot;, please rename it.<br>--------------------------------------------------------------<br><br>This plugin automatically indexes your project files using ctags and keeps tags up-to-date (at every save of file from project tags will be updated). This can be very useful when it's used together with plugins omnicppcomplete (for c, c++ development), code_complete.vim and other plugins that using tags.&nbsp;&nbsp;You also will be able to jump from function call to its definition just by pressing Ctrl-] or g]<br><br>This plugin can work as add-on for project.tar.gz plugin ( <a target="_blank" href="http://www.vim.org/scripts/script.php?script_id=69">http://www.vim.org/scripts/script.php?script_id=69</A> ). Indexer reads project file, parses it and builds tags for all files in project. But it also works fine without project.tar.gz.<br><br><br>Actually, if you are using project.tar.gz plugin and your projects file is default (~/.vimprojects), then setting Indexer up is very easily: you can just copy indexer.vim to your plugins directory, start Vim and open any file from your project.&nbsp;&nbsp;The indexer plugin will detect that opened file is a file from project and automatically start ctags for each file in this project.&nbsp;&nbsp;It also set &path and &tags options for Vim.<br><br>If you are using project.tar.gz, but you have another projects file, you should set option g:indexer_projectsSettingsFilename in your vimrc.<br><br>If you don't use project.tar.gz then you can use &quot;.indexer_files&quot; to define projects and files to index.&nbsp;&nbsp;Default location of this file is &quot;~/.indexer_files&quot;. You can change it by modifying variable g:indexer_indexerListFilename<br><br>Syntax of this file is simple, propably the best way to explain it is to show an example:<br>--------------------- example ~/.indexer_files -----------------------<br>[CoolProject] <br> <br>/home/user/myproject/src/*.c <br>/home/user/myproject/src/*.h <br>/home/user/myproject/inc/*.h <br> <br>[AnotherProject] <br> <br>/home/user/myproject2**/*.c <br>/home/user/myproject2**/*.h <br>-------------------------------------------------------------------------------<br><br>If you have many projects and you are lazy to put every project in<br>this file, you can put in your ~/.indexer_files something like this:<br><br>--------------------- example ~/.indexer_files -----------------------<br>[PROJECTS_PARENT filter=&quot;*.c *.h *.cpp&quot;]<br>~/workspace<br>-------------------------------------------------------------------------------<br><br>The keyword is PROJECTS_PARENT.<br>In this way, every directory in ~/workspace will be interpreted as separate<br>project, and you can open any file from any project in ~/workspace, and the <br>whole proper project will be indexed.<br><br><br>And, finally, it can autodetect project root. So, you can move your project to another place in filesystem, and all files will be indexed anyway.&nbsp;&nbsp;More detailed help see in options, variable &quot;g:indexer_lookForProjectDir&quot;.<br><br>You need PATCHED ctags to be installed to make this plugin work. <a target="_blank" href="http://dfrank.ru/ctags581/en.html">http://dfrank.ru/ctags581/en.html</A><br><br>You also need SED for better result. If you're using Unix-like system, then SED is already in your system (99.99%), if you're using Windows, then the best way is to install Cygwin ( <a target="_blank" href="http://cygwin.org">http://cygwin.org</A> ). NOTE that i tested this Windows version of SED: ( <a target="_blank" href="http://gnuwin32.sourceforge.net/packages/sed.htm">http://gnuwin32.sourceforge.net/packages/sed.htm</A> ), it is not work correctly. Cygwin's SED works fine.<br><br>I have tested it both on Linux and Windows, in Vim 7.3<br>If you have any troubles using this plugin, feel free to email me.<br></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">install details</td></tr>
+<tr><td>Decompress and untar in your ~/.vim directory (or <br>equivalent).&nbsp;&nbsp;Inside Vim, enter this: <br>&nbsp;&nbsp; :helptags ~/.vim/doc <br>(or equivalent directory) <br>(Enter &quot;:help add-global-plugin&quot; to determine the directory to <br>untar it into.) <br><br>Then enter <br>&nbsp;&nbsp;:help indexer <br>for information</td></tr>
+<tr><td>&nbsp;</td></tr>
+</table>
+
+<!-- rating table -->
+<form name="rating">
+<input type="hidden" name="script_id" value="3221">
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>rate this script</b></td>
+  <td valign="middle">
+    <input type="radio" name="rating" value="life_changing">Life Changing
+    <input type="radio" name="rating" value="helpful">Helpful
+    <input type="radio" name="rating" value="unfulfilling">Unfulfilling&nbsp;
+    <input type="submit" value="rate">
+  </td>
+</tr>
+</table>
+</form>
+<span class="txth2">script versions</span> (<a href="add_script_version.php?script_id=3221">upload new version</a>)
+<p>
+Click on the package to download.
+<p>
+
+<table cellspacing="2" cellpadding="4" border="0" width="100%">
+<tr class='tableheader'>
+        <th valign="top">package</th>
+    <th valign="top">script version</th>
+    <th valign="top">date</th>
+    <th valign="top">Vim version</th>
+    <th valign="top">user</th>
+    <th valign="top">release notes</th>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=14270">indexer-2.01.tar.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.01</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-11-15</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=20962">Dmitry Frank</a></i></td>
+    <td class="rowodd" valign="top" width="2000">The only thing changed is that maximum command length on Windows systems decreased from 8186 to 8000, because of on some systems 8186 is too large, i don't know, why. I hope 8000 will work at all Windows systems (XP or later).<br>Thanks to Dan Price again.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=14234">indexer-2.0.tar.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.0</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-11-11</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=20962">Dmitry Frank</a></i></td>
+    <td class="roweven" valign="top" width="2000">IMPORTANT! You need patched version of ctags (5.8.1) to make this version of plugin work correctly, because of bug in ctags 5.8. You can read detailed info about this bug and download pathed version here: <a target="_blank" href="http://dfrank.ru/ctags581/en.html">http://dfrank.ru/ctags581/en.html</A> <br><br>* Solved trouble with large projects: if there's very many files in your project and command to ctags is too long, then ctags calling several times with &quot;-a&quot; key. (Again: to make this work you need patched version of ctags); <br>* option &quot;DontSpecifyFilesIfPossible&quot; working with .vimprojects file too now <br>* when using append at filesave, old tags removing from tags file by SED. (this is needed to exclude garbage in tags file)<br>Thanks to Dan Price for ideas and inspiration :)</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13919">indexer-1.8.tar.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.8</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-09-26</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=20962">Dmitry Frank</a></i></td>
+    <td class="rowodd" valign="top" width="2000">* Fixed some bugs (thanks to Julian Kooij)</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13803">indexer-1.7.tar.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.7</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-09-10</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=20962">Dmitry Frank</a></i></td>
+    <td class="roweven" valign="top" width="2000">* Fixed bug that caused not all comments in .vimprojects was parsed correctly (thanks to Alexander Q).<br>* Fixed some little bugs.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13741">indexer-1.6.tar.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.6</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-09-01</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=20962">Dmitry Frank</a></i></td>
+    <td class="rowodd" valign="top" width="2000">* For every projects creating unique tags file to avoid conflicts (thanks to Torkve)</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13738">indexer-1.5.tar.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.5</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-08-31</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=20962">Dmitry Frank</a></i></td>
+    <td class="roweven" valign="top" width="2000">* Fixed bug that caused paths with spaces wasn't parsed correctly. <br>* Added PROJECTS_PARENT .indexer_files feature (possibility to define directory with many projects inside).</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13731">indexer-1.4.tar.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.4</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-08-30</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=20962">Dmitry Frank</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Fixed bug that caused paths with &quot;~&quot; wasn't parsed correctly (thanks Makoto Nokata)</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13724">indexer-1.3.tar.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.3</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-08-30</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=20962">Dmitry Frank</a></i></td>
+    <td class="roweven" valign="top" width="2000">* Fixed some bugs<br>* Default name of project settings directory has been changed from &quot;.vim&quot; to &quot;.vimprj&quot; to avoid conflicts with standard ~/.vim directory. If you are using this feature and your project settings dir is &quot;.vim&quot;, please rename it.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13685">indexer-1.2.tar.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.2</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-08-26</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=20962">Dmitry Frank</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Initial upload</td>
+</tr>
+</table>
+<!-- finish off the framework -->
+          </td>
+        </tr>
+      </table>
+    </td>
+
+  </tr>
+</table>
+
+<!-- END OF THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr><td colspan="4" bgcolor="#000000"><img src="/images/spacer.gif" height="2" width="1" alt=""></td></tr>
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr>
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+
+    <td align="left" valign="top"><small>
+      If you have questions or remarks about this site, visit the
+      <a href="http://vimonline.sf.net">vimonline development</a> pages.
+      Please use this site responsibly.
+      <br> 
+      
+      Questions about <a href="http://www.vim.org/about.php">Vim</a> should go
+      to the <a href="http://www.vim.org/maillist.php">maillist</a>.
+      Help Bram <a href="http://iccf-holland.org/">help Uganda</a>.
+      </small>
+	&nbsp;
+	&nbsp;
+
+	<!-- Start of StatCounter Code -->
+	<script type="text/javascript" language="javascript">
+	var sc_project=1417324; 
+	var sc_invisible=1; 
+	var sc_partition=11; 
+	var sc_security="d41633bc"; 
+	</script>
+
+	<script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script><noscript><a href="http://www.statcounter.com/" target="_blank"><img  src="http://c12.statcounter.com/counter.php?sc_project=1417324&java=0&security=d41633bc&invisible=0" alt="free tracking" border="0"></a> </noscript>
+	<!-- End of StatCounter Code -->
+          </td>
+
+    <td align="right" valign="top">
+      		<a href="http://sourceforge.net/projects/vim" rel="nofollow"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=8&type=1" width="88" height="31" border="0" alt="SourceForge.net Logo" /></a>
+    </td>
+
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+  </tr>
+
+    
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  
+  </tr>
+</table>
+
+</body>
+</html>
+

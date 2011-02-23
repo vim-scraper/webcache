@@ -1,0 +1,316 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+  <link rel="Stylesheet" type="text/css" href="/css/style.css" >
+  <title>AutoUpload - Put file to remote location with one click : vim online</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <meta name="KEYWORDS" content="Vim, Vi IMproved, text editor, home, documentation, tips, scripts, news">
+  <link rel="shortcut icon" type="image/x-icon" href="/images/vim_shortcut.ico">
+</head>
+
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff"> 
+
+<!-- HEADER, SPONSOR IMAGE, VIM IMAGE AND BOOK AD -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+  <td class="lightbg">&nbsp;&nbsp;&nbsp;</td>
+  <td class="lightbg" align="left"><a href="/sponsor/index.php"><img src="/images/sponsorvim.gif" alt="sponsor Vim development" border="0"></a></td>
+    <td class="lightbg" align="center"><a href="/index.php"><img src="/images/vim_header.gif" border="0" alt="Vim logo"></a></td>
+    <td class="lightbg" align="right"><a href="http://iccf-holland.org/click5.html"><img src="/images/buyhelplearn.gif" alt="Vim Book Ad" border="0"></a></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="darkbg"><img src="/images/spacer.gif" width="1" height="10" alt=""></td>
+  </tr>
+</table>
+<!-- THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+  <col width="180">
+  <col width="1">
+
+  <tr valign="top">
+    <td class="sidebar">
+      <table width="180" cellpadding="4" cellspacing="0" border="0">
+        <tr valign="top">
+          <td class="sidebar">
+
+<!-- INCLUDE THE PAGE NAVIGATION -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+    <tr>
+        <td><small>not logged in (<a href="/login.php">login</a>)</small></td>
+    </tr>
+    <tr><td>
+<small>&nbsp;</small>
+<form action="http://www.google.com/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-3005259998294962:bvyni59kjr1" />
+    <input type="hidden" name="ie" value="ISO-8859-1" />
+    <input type="text" name="q" size="20" />
+    <br>
+    <input type="submit" name="sa" value="Search" />
+  </div>
+</form>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+    </td></tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="1"></td>
+    </tr>
+    <tr>
+        <td class="darkbg"><img src="/images/spacer.gif" alt='' border="0" height="3"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="2"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/index.php">Home</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/search.php">Advanced search</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/about.php">About Vim</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/community.php">Community</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/news/news.php">News</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/sponsor/index.php">Sponsoring</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/trivia.php">Trivia</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/docs.php">Documentation</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/download.php">Download</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/scripts/index.php">Scripts</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/tips/index.php">Tips</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/account/index.php">My Account</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/huh.php">Site Help</a></td>
+        </tr>
+</table>
+
+            <table width="172" cellpadding="0" cellspacing="0" border="0">
+              <tr><td><img src="/images/spacer.gif" alt="" border="0" width="1" height="8"></td></tr>
+              <tr><td class="darkbg"><img src="/images/spacer.gif" width="1" height="3" alt=""></td></tr>
+            </table>
+            <br>
+
+<!-- INCLUDE THE PAGE SIDEBAR TEXT -->
+&nbsp;
+
+          </td>
+        </tr>
+      </table>
+    </td>
+
+    <td class="darkbg"><img src="/images/spacer.gif" width="1" height="1" border="0" alt=""><br></td>
+    <td>
+      <table width="100%" cellpadding="10" cellspacing="0" border="0" bordercolor="red">
+        <tr>
+          <td valign="top">
+
+<span class="txth1">AutoUpload : Put file to remote location with one click</span> 
+
+<br>
+<br>
+
+<!-- karma table -->
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
+  <td>
+    Rating <b>17/5</b>,
+    Downloaded by 876  </td>
+  <td class="lightbg">
+  <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
+  </td>
+  <td>
+    <a href="http://vim.wikia.com/wiki/Script:1192">Vim wiki</a>
+  </td>  
+</tr>
+</table>
+<p>
+
+<table cellspacing="0" cellpadding="0" border="0">
+<tr><td class="prompt">created by</td></tr>
+<tr><td><a href="/account/profile.php?user_id=6793">Mariusz Gniazdowski</a></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">script type</td></tr>
+<tr><td>utility</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">description</td></tr>
+<tr><td>Usage:<br>1. Create autoupload.info (or .autoupload.info) file. Files like those are called 'maps'.<br><br>2. Each line in map is an entry in format:<br>	filename : {ftp|dav|scp|etc...}://address<br>		or<br>	filename | {ftp|dav|scp|etc...}://address<br><br>&nbsp;&nbsp; &gt;&gt; Address must end with file name! &lt;&lt;<br>&nbsp;&nbsp; Example entry:<br>&nbsp;&nbsp; localfile.txt | <a target="_blank" href="scp://me@mymachine.com/tmp/remfile.txt">scp://me@mymachine.com/tmp/remfile.txt</A><br><br>3. Or as an alternative:<br>&nbsp;&nbsp;&nbsp;&nbsp;- to first or last lines of buffer to upload add pattern:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [text]{white}autoupload:remotepath1[;remotepath2[...]]<br> Example line:<br> autoupload:<a target="_blank" href="scp://me@mymachine.com/tmp/remfile.txt">scp://me@mymachine.com/tmp/remfile.txt</A> ;<a target="_blank" href="ftp://a@b.com/c.txt">ftp://a@b.com/c.txt</A><br><br>4. Then while editing some file pressing &lt;Leader&gt;up ('u' key and 'p' key) will cause script to:<br>&nbsp;&nbsp; - read autoupload.info (.autoupload.info) from dir in which active buffer is stored (or from absolute path if customized that way), or scan first and last lines of active buffer,<br>&nbsp;&nbsp; - store buffer into remote location(s) extracted.<br><br>If no entry for actual buffer is found in autoupload.info, then .autoupload.info is examined.<br><br>Customization:<br><br>g:autoUploadMaps (default: &quot;autoupload.info:.autoupload.info&quot;)<br><br>File names/paths to maps.<br><br>Can contain multiple file names separated&nbsp;&nbsp;by : or |&nbsp;&nbsp;Files will be examined in order given in this variable.&nbsp;&nbsp;Paths can be:<br>- absolute,<br>- realtive - they will be appended to path in which actual buffer is stored!<br><br>g:autoUploadScanLines (default: 3)<br><br>Script&nbsp;&nbsp;can&nbsp;&nbsp;scan last&nbsp;&nbsp;and&nbsp;&nbsp;first lines of a buffer for pattern:<br>[text]{white}autoupload:remotepath1[;remotepath2[...]]<br>Fields are separated by ';'&nbsp;&nbsp;or&nbsp;&nbsp;'|'.&nbsp;&nbsp;';' is used because ':' is always a part of protocol for example ftp://... <br>This variable&nbsp;&nbsp;contains number of&nbsp;&nbsp;lines&nbsp;&nbsp;to scan.<br><br>g:autoUploadModelineStart (default: 'autoupload:')<br><br>Pattern which 'modeline' should begin with. Can contain regex.<br><br>g:autoUploadUseBuffer (default: 1, possible: 0, 1, 2)<br><br>If&nbsp;&nbsp;g:autoUploadUseBuffer&nbsp;&nbsp;is&nbsp;&nbsp;set to 0, then no scan is done.<br>If&nbsp;&nbsp;g:autoUploadUseBuffer&gt;g:autoUploadUseMaps then&nbsp;&nbsp;script will scan&nbsp;&nbsp;buffer&nbsp;&nbsp;before&nbsp;&nbsp;maps.<br>If g:autoUploadUseBuffer&lt;=g:autoUploadUseMaps then&nbsp;&nbsp;script will scan&nbsp;&nbsp;maps&nbsp;&nbsp;before&nbsp;&nbsp;buffer.<br><br>g:autoUploadUseMaps (default: 1, possible: 0, 1, 2)<br>If&nbsp;&nbsp;g:autoUploadUseMaps is set to 0 , then no no maps are searched.<br>If g:autoUploadUseMaps=&gt;g:autoUploadUseBuffer then&nbsp;&nbsp;script will&nbsp;&nbsp;scan&nbsp;&nbsp;maps before&nbsp;&nbsp;buffer.<br>If&nbsp;&nbsp;g:autoUploadUseMaps&lt;g:autoUploadUseBuffer then&nbsp;&nbsp;script will&nbsp;&nbsp;scan&nbsp;&nbsp;buffer before&nbsp;&nbsp;maps.<br><br>g:autoUploadStopAfterFirstUpload (default: 1)<br><br>If set to 1 then&nbsp;&nbsp;maximum one upload&nbsp;&nbsp;will be done&nbsp;&nbsp;no matter&nbsp;&nbsp;how many maps will&nbsp;&nbsp;have proper entries&nbsp;&nbsp;and&nbsp;&nbsp;how&nbsp;&nbsp;many proper entries will be in one map. In&nbsp;&nbsp;other&nbsp;&nbsp;words: Find first remote&nbsp;&nbsp;location that is assigned to actual buffer, use it and return to editor.&nbsp;&nbsp;This one variable turns off all multiple upload possibilities.<br><br>g:autoUploadStopAfterFirstMap	(default: 1)<br><br>If 1, then processing of maps will stop after first&nbsp;&nbsp;map&nbsp;&nbsp;that&nbsp;&nbsp;had&nbsp;&nbsp;at&nbsp;&nbsp;least one matching entry.&nbsp;&nbsp;So you can assign&nbsp;&nbsp;multiple remote locations to one file using one map&nbsp;&nbsp;and&nbsp;&nbsp;if variable g:autoUploadStopAfterFirstUpload&nbsp;&nbsp;will be set to 0 then multiple uploads of the same file will be taken according to data in first map that has matching entry.<br><br>Combinations of two last options:<br><br>g:autoUploadStopAfterFirstUpload = 0<br>g:autoUploadStopAfterFirstMap	= 1<br><br>This will do multiple uploads to addresses taken from only one map&nbsp;&nbsp;( first one that has some match).<br><br>g:autoUploadStopAfterFirstUpload = 0<br>g:autoUploadStopAfterFirstMap	= 0<br><br>This will&nbsp;&nbsp;upload&nbsp;&nbsp;current&nbsp;&nbsp;buffer&nbsp;&nbsp;to&nbsp;&nbsp;every assigned remote location - multiple locations per map and multiple maps will be used.<br><br>:call MG_AutoUpload()		Map this to some key combination<br><br>Example_customization:<br>	let g:autoUploadMaps = &quot;.autoupload.info:/root/.remote.inf&quot;<br>	let g:autoUploadStopAfterFirstUpload = 0<br>	nnoremap &lt;F12&gt; :call MG_AutoUpload()&lt;CR&gt;<br><br>Worth_to_read:<br>:help netrw<br><br>Warning:<br>Global map files are dangerous because file names can repeat (index.php main.c, etc). You should use it for special cases only.<br></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">install details</td></tr>
+<tr><td>Copy it into plugins directory.</td></tr>
+<tr><td>&nbsp;</td></tr>
+</table>
+
+<!-- rating table -->
+<form name="rating">
+<input type="hidden" name="script_id" value="1192">
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>rate this script</b></td>
+  <td valign="middle">
+    <input type="radio" name="rating" value="life_changing">Life Changing
+    <input type="radio" name="rating" value="helpful">Helpful
+    <input type="radio" name="rating" value="unfulfilling">Unfulfilling&nbsp;
+    <input type="submit" value="rate">
+  </td>
+</tr>
+</table>
+</form>
+<span class="txth2">script versions</span> (<a href="add_script_version.php?script_id=1192">upload new version</a>)
+<p>
+Click on the package to download.
+<p>
+
+<table cellspacing="2" cellpadding="4" border="0" width="100%">
+<tr class='tableheader'>
+        <th valign="top">package</th>
+    <th valign="top">script version</th>
+    <th valign="top">date</th>
+    <th valign="top">Vim version</th>
+    <th valign="top">user</th>
+    <th valign="top">release notes</th>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=3817">autoupload.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.2</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2005-01-30</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=6793">Mariusz Gniazdowski</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Remote locations can now be contained in buffers (in 'modelines'). Bugfixes.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=3812">autoupload.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.1</b></td>
+    <td class="roweven" valign="top" nowrap><i>2005-01-29</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=6793">Mariusz Gniazdowski</a></i></td>
+    <td class="roweven" valign="top" width="2000">Feature enhancements: multiple 'maps' files, multiple uploads, more verbosity, absolute paths.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=3811">autoupload.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.01</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2005-01-29</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=6793">Mariusz Gniazdowski</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Serious bug fixed ( file name like &quot;bbcc&quot; was matching file name &quot;aabbcc&quot; and uploaded at wrong address )</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=3807">autoupload.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.0</b></td>
+    <td class="roweven" valign="top" nowrap><i>2005-01-28</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=6793">Mariusz Gniazdowski</a></i></td>
+    <td class="roweven" valign="top" width="2000">Initial upload</td>
+</tr>
+</table>
+<!-- finish off the framework -->
+          </td>
+        </tr>
+      </table>
+    </td>
+
+  </tr>
+</table>
+
+<!-- END OF THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr><td colspan="4" bgcolor="#000000"><img src="/images/spacer.gif" height="2" width="1" alt=""></td></tr>
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr>
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+
+    <td align="left" valign="top"><small>
+      If you have questions or remarks about this site, visit the
+      <a href="http://vimonline.sf.net">vimonline development</a> pages.
+      Please use this site responsibly.
+      <br> 
+      
+      Questions about <a href="http://www.vim.org/about.php">Vim</a> should go
+      to the <a href="http://www.vim.org/maillist.php">maillist</a>.
+      Help Bram <a href="http://iccf-holland.org/">help Uganda</a>.
+      </small>
+	&nbsp;
+	&nbsp;
+
+	<!-- Start of StatCounter Code -->
+	<script type="text/javascript" language="javascript">
+	var sc_project=1417324; 
+	var sc_invisible=1; 
+	var sc_partition=11; 
+	var sc_security="d41633bc"; 
+	</script>
+
+	<script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script><noscript><a href="http://www.statcounter.com/" target="_blank"><img  src="http://c12.statcounter.com/counter.php?sc_project=1417324&java=0&security=d41633bc&invisible=0" alt="free tracking" border="0"></a> </noscript>
+	<!-- End of StatCounter Code -->
+          </td>
+
+    <td align="right" valign="top">
+      		<a href="http://sourceforge.net/projects/vim" rel="nofollow"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=8&type=1" width="88" height="31" border="0" alt="SourceForge.net Logo" /></a>
+    </td>
+
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+  </tr>
+
+    
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  
+  </tr>
+</table>
+
+</body>
+</html>
+

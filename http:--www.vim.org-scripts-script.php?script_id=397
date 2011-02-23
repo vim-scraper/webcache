@@ -1,0 +1,484 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+  <link rel="Stylesheet" type="text/css" href="/css/style.css" >
+  <title>ShowFunc.vim - Creates a list of all tags / functions from a window, all windows or buffers. : vim online</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <meta name="KEYWORDS" content="Vim, Vi IMproved, text editor, home, documentation, tips, scripts, news">
+  <link rel="shortcut icon" type="image/x-icon" href="/images/vim_shortcut.ico">
+</head>
+
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff"> 
+
+<!-- HEADER, SPONSOR IMAGE, VIM IMAGE AND BOOK AD -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+  <td class="lightbg">&nbsp;&nbsp;&nbsp;</td>
+  <td class="lightbg" align="left"><a href="/sponsor/index.php"><img src="/images/sponsorvim.gif" alt="sponsor Vim development" border="0"></a></td>
+    <td class="lightbg" align="center"><a href="/index.php"><img src="/images/vim_header.gif" border="0" alt="Vim logo"></a></td>
+    <td class="lightbg" align="right"><a href="http://iccf-holland.org/click5.html"><img src="/images/buyhelplearn.gif" alt="Vim Book Ad" border="0"></a></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="darkbg"><img src="/images/spacer.gif" width="1" height="10" alt=""></td>
+  </tr>
+</table>
+<!-- THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+  <col width="180">
+  <col width="1">
+
+  <tr valign="top">
+    <td class="sidebar">
+      <table width="180" cellpadding="4" cellspacing="0" border="0">
+        <tr valign="top">
+          <td class="sidebar">
+
+<!-- INCLUDE THE PAGE NAVIGATION -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+    <tr>
+        <td><small>not logged in (<a href="/login.php">login</a>)</small></td>
+    </tr>
+    <tr><td>
+<small>&nbsp;</small>
+<form action="http://www.google.com/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-3005259998294962:bvyni59kjr1" />
+    <input type="hidden" name="ie" value="ISO-8859-1" />
+    <input type="text" name="q" size="20" />
+    <br>
+    <input type="submit" name="sa" value="Search" />
+  </div>
+</form>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+    </td></tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="1"></td>
+    </tr>
+    <tr>
+        <td class="darkbg"><img src="/images/spacer.gif" alt='' border="0" height="3"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="2"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/index.php">Home</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/search.php">Advanced search</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/about.php">About Vim</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/community.php">Community</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/news/news.php">News</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/sponsor/index.php">Sponsoring</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/trivia.php">Trivia</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/docs.php">Documentation</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/download.php">Download</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/scripts/index.php">Scripts</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/tips/index.php">Tips</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/account/index.php">My Account</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/huh.php">Site Help</a></td>
+        </tr>
+</table>
+
+            <table width="172" cellpadding="0" cellspacing="0" border="0">
+              <tr><td><img src="/images/spacer.gif" alt="" border="0" width="1" height="8"></td></tr>
+              <tr><td class="darkbg"><img src="/images/spacer.gif" width="1" height="3" alt=""></td></tr>
+            </table>
+            <br>
+
+<!-- INCLUDE THE PAGE SIDEBAR TEXT -->
+&nbsp;
+
+          </td>
+        </tr>
+      </table>
+    </td>
+
+    <td class="darkbg"><img src="/images/spacer.gif" width="1" height="1" border="0" alt=""><br></td>
+    <td>
+      <table width="100%" cellpadding="10" cellspacing="0" border="0" bordercolor="red">
+        <tr>
+          <td valign="top">
+
+<span class="txth1">ShowFunc.vim : Creates a list of all tags / functions from a window, all windows or buffers.</span> 
+
+<br>
+<br>
+
+<!-- karma table -->
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
+  <td>
+    Rating <b>201/93</b>,
+    Downloaded by 10257  </td>
+  <td class="lightbg">
+  <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
+  </td>
+  <td>
+    <a href="http://vim.wikia.com/wiki/Script:397">Vim wiki</a>
+  </td>  
+</tr>
+</table>
+<p>
+
+<table cellspacing="0" cellpadding="0" border="0">
+<tr><td class="prompt">created by</td></tr>
+<tr><td><a href="/account/profile.php?user_id=987">Dave Vehrs</a></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">script type</td></tr>
+<tr><td>utility</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">description</td></tr>
+<tr><td>This script creates a hyperlink list of all the tags (i.e. functions, subroutines, classes, macros or procedures) from a single buffer, all open windows or buffers and displays them in a dynamically sized cwindow.<br><br>Supported File types with Exuberant Ctags version 5.5.4 (and newer):&nbsp;&nbsp;Asm, Asp, Awk, Beta, C, C++, c#, Cobol, Eiffel, Erlang, Fortran, Java, Javascript, Lisp, Lua, Make, Pascal, Perl, PHP, Python, PL/SQL,&nbsp;&nbsp;REXX, Ruby, Scheme, Shell, SLang, SML, SQL, Tcl, Vera, Verilog, Vim, YACC......and any user defined (i.e. --regex-lang=) types. <br><br>Default Key Mappings:<br>&lt;F1&gt;&nbsp;&nbsp;&nbsp;&nbsp;Run scan and open cwindow.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>To reassign add the following to your .vimrc:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;map&nbsp;&nbsp;NewKey&nbsp;&nbsp; &lt;Plug&gt;ShowFunc<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;map! NewKey&nbsp;&nbsp; &lt;Plug&gt;ShowFunc<br>For example to change the &lt;F1&gt; mapping to &lt;F7&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;map&nbsp;&nbsp;&lt;F7&gt;&nbsp;&nbsp; &lt;Plug&gt;ShowFunc<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;map! &lt;F7&gt;&nbsp;&nbsp; &lt;Plug&gt;ShowFunc<br><br>ShowFunc Window commands:<br>c&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Close cwindow.<br>h&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Display help dialog.<br>r&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Refresh.<br>s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Change file sort, results will appear in either alphabetical or file order.&nbsp;&nbsp;(Default: file order)<br>t&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Change scan type, results will be from either the current file, all open windows or all open buffers.&nbsp;&nbsp;(Default: all open buffers)</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">install details</td></tr>
+<tr><td>Put this file in the vim plugins directory (~/.vim/plugin/) to load it automatically, or load it with :so ShowFunc.vim.<br><br>You need Exuberant CTags installed for this function to work.<br>Website: <a target="_blank" href="http://ctags.sourceforge.net/">http://ctags.sourceforge.net/</A><br>Debian: apt-get install exuberant-ctags<br><br>History:<br>This script grew from an idea posted by Flemming Madsen on <a href="/tips/tip.php?tip_id=79">vimtip #79</a>.</td></tr>
+<tr><td>&nbsp;</td></tr>
+</table>
+
+<!-- rating table -->
+<form name="rating">
+<input type="hidden" name="script_id" value="397">
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>rate this script</b></td>
+  <td valign="middle">
+    <input type="radio" name="rating" value="life_changing">Life Changing
+    <input type="radio" name="rating" value="helpful">Helpful
+    <input type="radio" name="rating" value="unfulfilling">Unfulfilling&nbsp;
+    <input type="submit" value="rate">
+  </td>
+</tr>
+</table>
+</form>
+<span class="txth2">script versions</span> (<a href="add_script_version.php?script_id=397">upload new version</a>)
+<p>
+Click on the package to download.
+<p>
+
+<table cellspacing="2" cellpadding="4" border="0" width="100%">
+<tr class='tableheader'>
+        <th valign="top">package</th>
+    <th valign="top">script version</th>
+    <th valign="top">date</th>
+    <th valign="top">Vim version</th>
+    <th valign="top">user</th>
+    <th valign="top">release notes</th>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=11071">ShowFunc.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.5.8</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-07-27</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=987">Dave Vehrs</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Fixed a C++ file type error thanks to a report from Gynvael Coldwind.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=5491">ShowFunc.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.5.7</b></td>
+    <td class="roweven" valign="top" nowrap><i>2006-03-28</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=987">Dave Vehrs</a></i></td>
+    <td class="roweven" valign="top" width="2000">Per request by Diederik Van der Boor, added ability to filter the variables kinds that ctags outputs (ver 5.5 or newer).</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=5341">ShowFunc.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.5.6</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2006-02-28</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=987">Dave Vehrs</a></i></td>
+    <td class="rowodd" valign="top" width="2000">First Vim 7 patches.&nbsp;&nbsp;Added setlocal statusline support to update the cwindow name.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=4440">ShowFunc.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.5.5</b></td>
+    <td class="roweven" valign="top" nowrap><i>2005-07-20</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=987">Dave Vehrs</a></i></td>
+    <td class="roweven" valign="top" width="2000">Patches from two Windows users (David Rennalls and Bill McCarthy).&nbsp;&nbsp;Fixes in cleanup, documentaion, and autocmds.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=3762">ShowFunc.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.5.4</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2005-01-13</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=987">Dave Vehrs</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Script cleanup.&nbsp;&nbsp;Added MyLastWindow function (when closing windows, tests last window to see if its a Cwindow, if it is then close vim session). </td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=3548">ShowFunc.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.5.3</b></td>
+    <td class="roweven" valign="top" nowrap><i>2004-10-15</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=987">Dave Vehrs</a></i></td>
+    <td class="roweven" valign="top" width="2000">Fixed custom fold text for cwindow.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=2376">ShowFunc.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.5.2</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2003-10-06</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=987">Dave Vehrs</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Improved Exuberant Ctags version checking.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=2352">ShowFunc.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.5.1</b></td>
+    <td class="roweven" valign="top" nowrap><i>2003-09-24</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=987">Dave Vehrs</a></i></td>
+    <td class="roweven" valign="top" width="2000">Bug fixes</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=2343">ShowFunc.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.5</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2003-09-21</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=987">Dave Vehrs</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Created a more generic grep format so that explicit type definitions are no longer necessary (eliminating the SetGrepFormat function).&nbsp;&nbsp;Modified the SetGrepPrg function to detect Ctags versions earlier than 5.5.&nbsp;&nbsp;Supportted filetypes for Ctags versions 5.4 are statically assigned.&nbsp;&nbsp;With Ctags versions 5.5 (and later) supported filetypes are detected dynamically (including those defined by regular expressions (--regex-&lt;LANG&gt;).<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=1883">ShowFunc.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.4.5</b></td>
+    <td class="roweven" valign="top" nowrap><i>2003-04-01</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=987">Dave Vehrs</a></i></td>
+    <td class="roweven" valign="top" width="2000">More error handling improvements, including tests for the correct version of ctags, and keymap assignment.&nbsp;&nbsp;Thanks to Mark Thomas for his assistance in finding and fixing a bug in the executable detection on Windows.&nbsp;&nbsp;</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=1819">ShowFunc.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.4.4</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2003-03-17</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=987">Dave Vehrs</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Improved error handling.&nbsp;&nbsp;Improved SetFoldText().</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=1814">ShowFunc.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.4.3</b></td>
+    <td class="roweven" valign="top" nowrap><i>2003-03-15</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=987">Dave Vehrs</a></i></td>
+    <td class="roweven" valign="top" width="2000">Automatically fold output on filename for multiple file scans (all buffers or windows).&nbsp;&nbsp; <br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=1809">ShowFunc.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.4.2</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2003-03-13</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=987">Dave Vehrs</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Rewrote the SetGrepFormat and SetGrepPrg functions.&nbsp;&nbsp;Added support for all tags for all languages (28) that exuberant ctags supports. </td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=1650">ShowFunc.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.4.1</b></td>
+    <td class="roweven" valign="top" nowrap><i>2003-01-19</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=987">Dave Vehrs</a></i></td>
+    <td class="roweven" valign="top" width="2000">Fixed multi-window scan display issue. Improved dynamic cwindow sizing.&nbsp;&nbsp;Added basic help dialog.&nbsp;&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=1574">ShowFunc.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.4</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2002-12-21</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=987">Dave Vehrs</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Changed user interface. Eliminated multiple key-mappings.&nbsp;&nbsp;Pressing F1 runs the default scan, and opens the cwindow.&nbsp;&nbsp;Scan sort and type can be changed by pressing the s and t keys respectively.&nbsp;&nbsp;Combined scan type functions into one (ShowFuncOpen) and bought back the all open windows scan.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=1521">ShowFunc.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.3</b></td>
+    <td class="roweven" valign="top" nowrap><i>2002-12-01</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=987">Dave Vehrs</a></i></td>
+    <td class="roweven" valign="top" width="2000">Fixed buffer display issue (Thanks to <a href="/tips/tip.php?tip_id=133">vimtip#133</a>). Fixed window height test for TestWinH and OpenCWin.&nbsp;&nbsp;Changed MultiWin (scans all open windows) to MultiBuf (scans all open buffers). Basic multiple file handling is complete.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=1514">ShowFunc.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.3Beta3</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2002-11-29</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=987">Dave Vehrs</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Split SetFileType into two ( SetGrepFormat, and SetGrepPrg ). Set &...&vim to insure proper '\ multiline translation. Added keymapping testing to protect against conflicting with existing user configurations and to make it easy to remap when necessary. Thanks to Luc Hermitte <br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=1442">ShowFunc.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.3Beta2</b></td>
+    <td class="roweven" valign="top" nowrap><i>2002-11-20</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=987">Dave Vehrs</a></i></td>
+    <td class="roweven" valign="top" width="2000">Fixed multiple file cwindow refresh issue (grep vs. grepa).&nbsp;&nbsp;General clean up.<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=1427">ShowFunc.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.3Beta</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2002-11-16</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=987">Dave Vehrs</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Added multiple file support.&nbsp;&nbsp;Restructured script.&nbsp;&nbsp;</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=1314">ShowFunc.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.2.1</b></td>
+    <td class="roweven" valign="top" nowrap><i>2002-10-17</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=987">Dave Vehrs</a></i></td>
+    <td class="roweven" valign="top" width="2000">Added unknown filetype handling.&nbsp;&nbsp;Added status messages('ShowFunc:').&nbsp;&nbsp;Fixed key-mappings .&nbsp;&nbsp;</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=1228">ShowFunc.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.2</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2002-09-22</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=987">Dave Vehrs</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Fixed redraw bug so that it works with the winmanager plugin (<a href="/scripts/script.php?script_id=95">vimscript#95</a>).&nbsp;&nbsp;</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=1182">ShowFunc.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.1.3</b></td>
+    <td class="roweven" valign="top" nowrap><i>2002-09-02</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=987">Dave Vehrs</a></i></td>
+    <td class="roweven" valign="top" width="2000">Fixed Fortran and Pascal patches, Thanks the Ajit Thakkar, and Engelbert Gruber.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=1167">ShowFunc.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.1.1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2002-08-26</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=987">Dave Vehrs</a></i></td>
+    <td class="rowodd" valign="top" width="2000">ooops.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=1166">ShowFunc.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.1</b></td>
+    <td class="roweven" valign="top" nowrap><i>2002-08-26</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=987">Dave Vehrs</a></i></td>
+    <td class="roweven" valign="top" width="2000">Patches to Fortran (thanks to Ajit Thakkar), Pascal, and Python support.&nbsp;&nbsp;</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=1161">ShowFunc.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.0</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2002-08-24</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=987">Dave Vehrs</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Initial upload</td>
+</tr>
+</table>
+<!-- finish off the framework -->
+          </td>
+        </tr>
+      </table>
+    </td>
+
+  </tr>
+</table>
+
+<!-- END OF THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr><td colspan="4" bgcolor="#000000"><img src="/images/spacer.gif" height="2" width="1" alt=""></td></tr>
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr>
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+
+    <td align="left" valign="top"><small>
+      If you have questions or remarks about this site, visit the
+      <a href="http://vimonline.sf.net">vimonline development</a> pages.
+      Please use this site responsibly.
+      <br> 
+      
+      Questions about <a href="http://www.vim.org/about.php">Vim</a> should go
+      to the <a href="http://www.vim.org/maillist.php">maillist</a>.
+      Help Bram <a href="http://iccf-holland.org/">help Uganda</a>.
+      </small>
+	&nbsp;
+	&nbsp;
+
+	<!-- Start of StatCounter Code -->
+	<script type="text/javascript" language="javascript">
+	var sc_project=1417324; 
+	var sc_invisible=1; 
+	var sc_partition=11; 
+	var sc_security="d41633bc"; 
+	</script>
+
+	<script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script><noscript><a href="http://www.statcounter.com/" target="_blank"><img  src="http://c12.statcounter.com/counter.php?sc_project=1417324&java=0&security=d41633bc&invisible=0" alt="free tracking" border="0"></a> </noscript>
+	<!-- End of StatCounter Code -->
+          </td>
+
+    <td align="right" valign="top">
+      		<a href="http://sourceforge.net/projects/vim" rel="nofollow"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=8&type=1" width="88" height="31" border="0" alt="SourceForge.net Logo" /></a>
+    </td>
+
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+  </tr>
+
+    
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  
+  </tr>
+</table>
+
+</body>
+</html>
+

@@ -1,0 +1,324 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+  <link rel="Stylesheet" type="text/css" href="/css/style.css" >
+  <title>VST - Vim reStructured Text : vim online</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <meta name="KEYWORDS" content="Vim, Vi IMproved, text editor, home, documentation, tips, scripts, news">
+  <link rel="shortcut icon" type="image/x-icon" href="/images/vim_shortcut.ico">
+</head>
+
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff"> 
+
+<!-- HEADER, SPONSOR IMAGE, VIM IMAGE AND BOOK AD -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+  <td class="lightbg">&nbsp;&nbsp;&nbsp;</td>
+  <td class="lightbg" align="left"><a href="/sponsor/index.php"><img src="/images/sponsorvim.gif" alt="sponsor Vim development" border="0"></a></td>
+    <td class="lightbg" align="center"><a href="/index.php"><img src="/images/vim_header.gif" border="0" alt="Vim logo"></a></td>
+    <td class="lightbg" align="right"><a href="http://iccf-holland.org/click5.html"><img src="/images/buyhelplearn.gif" alt="Vim Book Ad" border="0"></a></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="darkbg"><img src="/images/spacer.gif" width="1" height="10" alt=""></td>
+  </tr>
+</table>
+<!-- THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+  <col width="180">
+  <col width="1">
+
+  <tr valign="top">
+    <td class="sidebar">
+      <table width="180" cellpadding="4" cellspacing="0" border="0">
+        <tr valign="top">
+          <td class="sidebar">
+
+<!-- INCLUDE THE PAGE NAVIGATION -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+    <tr>
+        <td><small>not logged in (<a href="/login.php">login</a>)</small></td>
+    </tr>
+    <tr><td>
+<small>&nbsp;</small>
+<form action="http://www.google.com/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-3005259998294962:bvyni59kjr1" />
+    <input type="hidden" name="ie" value="ISO-8859-1" />
+    <input type="text" name="q" size="20" />
+    <br>
+    <input type="submit" name="sa" value="Search" />
+  </div>
+</form>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+    </td></tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="1"></td>
+    </tr>
+    <tr>
+        <td class="darkbg"><img src="/images/spacer.gif" alt='' border="0" height="3"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="2"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/index.php">Home</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/search.php">Advanced search</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/about.php">About Vim</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/community.php">Community</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/news/news.php">News</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/sponsor/index.php">Sponsoring</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/trivia.php">Trivia</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/docs.php">Documentation</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/download.php">Download</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/scripts/index.php">Scripts</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/tips/index.php">Tips</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/account/index.php">My Account</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/huh.php">Site Help</a></td>
+        </tr>
+</table>
+
+            <table width="172" cellpadding="0" cellspacing="0" border="0">
+              <tr><td><img src="/images/spacer.gif" alt="" border="0" width="1" height="8"></td></tr>
+              <tr><td class="darkbg"><img src="/images/spacer.gif" width="1" height="3" alt=""></td></tr>
+            </table>
+            <br>
+
+<!-- INCLUDE THE PAGE SIDEBAR TEXT -->
+&nbsp;
+
+          </td>
+        </tr>
+      </table>
+    </td>
+
+    <td class="darkbg"><img src="/images/spacer.gif" width="1" height="1" border="0" alt=""><br></td>
+    <td>
+      <table width="100%" cellpadding="10" cellspacing="0" border="0" bordercolor="red">
+        <tr>
+          <td valign="top">
+
+<span class="txth1">VST : Vim reStructured Text</span> 
+
+<br>
+<br>
+
+<!-- karma table -->
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
+  <td>
+    Rating <b>193/59</b>,
+    Downloaded by 2832  </td>
+  <td class="lightbg">
+  <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
+  </td>
+  <td>
+    <a href="http://vim.wikia.com/wiki/Script:1334">Vim wiki</a>
+  </td>  
+</tr>
+</table>
+<p>
+
+<table cellspacing="0" cellpadding="0" border="0">
+<tr><td class="prompt">created by</td></tr>
+<tr><td><a href="/account/profile.php?user_id=488">Mikolaj Machowski</a></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">script type</td></tr>
+<tr><td>utility</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">description</td></tr>
+<tr><td>Requires Vim7.<br><br>VST is script which makes possible to export text files with simple markup to HTML or LaTeX format or S5 HTML presentation. Script doesn't require any external dependency and will work on any platform Vim7 is available. VST is implementation of reStructuredText.<br><br>Supported elements of inline markup:<br><br>- emphasised text (italic)<br>- strongly emphasised text (bold)<br>- hyperlinks (in various syntax forms)<br>- custom decorations (among them: sub, sup, big, small)<br><br>Elements of documents structure:<br><br>- paragraphs<br>- block quotes<br>- ordered lists<br>- unordered lists<br>- option lists<br>- footnotes<br>- citations<br>- images<br>- preformatted text<br>- colorized preformatted text (HTML export only)<br>- tables<br>- admonitions<br>- table of contents<br><br>Also bunch of auxiliary commands which should ease writing of document and navigating (folding, text table of contents, lists or declared links, replacements)<br><br>Latest version of script:<br><a target="_blank" href="http://skawina.eu.org/mikolaj/vst.zip">http://skawina.eu.org/mikolaj/vst.zip</A><br><br>Help file in text form:<br><a target="_blank" href="http://skawina.eu.org/mikolaj/vst.txt">http://skawina.eu.org/mikolaj/vst.txt</A><br><br>Following versions of help file was produced without any modifications to HTML or LaTeX source:<br><br>HTML:<br><a target="_blank" href="http://skawina.eu.org/mikolaj/vst.html">http://skawina.eu.org/mikolaj/vst.html</A><br><br>LaTeX file exported from vst.txt:<br><a target="_blank" href="http://skawina.eu.org/mikolaj/vst.tex">http://skawina.eu.org/mikolaj/vst.tex</A><br><br>PDF file produced from vst.tex:<br><a target="_blank" href="http://skawina.eu.org/mikolaj/vst.pdf">http://skawina.eu.org/mikolaj/vst.pdf</A><br></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">install details</td></tr>
+<tr><td>Unzip vst.zip from level of ~/.vim. It contains data files and documentation in doc2 directory.<br>To use just do :source vst.vim and for default HTML export do<br>:Vst<br>Short help about script<br>:Vst help</td></tr>
+<tr><td>&nbsp;</td></tr>
+</table>
+
+<!-- rating table -->
+<form name="rating">
+<input type="hidden" name="script_id" value="1334">
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>rate this script</b></td>
+  <td valign="middle">
+    <input type="radio" name="rating" value="life_changing">Life Changing
+    <input type="radio" name="rating" value="helpful">Helpful
+    <input type="radio" name="rating" value="unfulfilling">Unfulfilling&nbsp;
+    <input type="submit" value="rate">
+  </td>
+</tr>
+</table>
+</form>
+<span class="txth2">script versions</span> (<a href="add_script_version.php?script_id=1334">upload new version</a>)
+<p>
+Click on the package to download.
+<p>
+
+<table cellspacing="2" cellpadding="4" border="0" width="100%">
+<tr class='tableheader'>
+        <th valign="top">package</th>
+    <th valign="top">script version</th>
+    <th valign="top">date</th>
+    <th valign="top">Vim version</th>
+    <th valign="top">user</th>
+    <th valign="top">release notes</th>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=6377">vst.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.4</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2006-11-04</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=488">Mikolaj Machowski</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- FIX: Vst link broken<br>- FIX: & in URLs double encoded<br>- FIX: broken chained links with uppercase letters<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=6356">vst.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.3</b></td>
+    <td class="roweven" valign="top" nowrap><i>2006-10-31</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=488">Mikolaj Machowski</a></i></td>
+    <td class="roweven" valign="top" width="2000">&nbsp;&nbsp;- ADD: show number of directive line and percentage position in file for<br>&nbsp;&nbsp;&nbsp;&nbsp;easier navigation when folding by directive<br>&nbsp;&nbsp;- ADD: proper encryption of URIs (amp, percentage)<br>&nbsp;&nbsp;- ADD: make preproc auxiliary command recursive<br>&nbsp;&nbsp;- ADD: fold according to level of headers: fold1, fold2, etc.<br>&nbsp;&nbsp;- ADD: recursive folding: foldr<br>&nbsp;&nbsp;- ADD: [LaTeX] containers as ghost commands<br>&nbsp;&nbsp;- ADD: [LaTeX] Generator line (debug purposes)<br>&nbsp;&nbsp;- CHG: make folding by directive more flexible<br>&nbsp;&nbsp;- CHG: improve layout of fold texts with centered titles<br>&nbsp;&nbsp;- CHG: improve layout of text table of contents with centered titles<br>&nbsp;&nbsp;- CHG: level of recursiveness is now &maxfuncdepth/2 (50 should be enough<br>&nbsp;&nbsp;&nbsp;&nbsp;for everybody!)<br>&nbsp;&nbsp;- CHG: [HTML] when source are lists starting from no-one use transitional<br>&nbsp;&nbsp;&nbsp;&nbsp;doctype, otherwise strict<br>&nbsp;&nbsp;- CHG: [HTML] &quot;Downgrade&quot; to HTML 4.01 (no sense to use XHTML doctype when<br>&nbsp;&nbsp;&nbsp;&nbsp;using content text/html)<br>&nbsp;&nbsp;- FIX: length of ornaments inserted with &lt;C-B&gt;o<br>&nbsp;&nbsp;- FIX: show output of auxiliary commands depending on table<br>&nbsp;&nbsp;- FIX: presence of apostrophes in section titles could cause problems in folding<br>&nbsp;&nbsp;- FIX: internal links in fancy formatted text could be broken<br>&nbsp;&nbsp;- FIX: unnecessary creation of targets from links broken in several lines<br>&nbsp;&nbsp;- FIX: minor fixes in docs<br>&nbsp;&nbsp;- FIX: optimizations, 10-15% speed gains<br>&nbsp;&nbsp;- FIX: [LaTeX] too much whitespace at the end of footnotes<br>&nbsp;&nbsp;- FIX: [LaTeX] internal links work again<br>&nbsp;&nbsp;- FIX: [S5] uploaded CSS files for web page to make presentation work (sorry<br>&nbsp;&nbsp;&nbsp;&nbsp;George!)<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=6278">vst.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.2</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2006-10-13</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=488">Mikolaj Machowski</a></i></td>
+    <td class="rowodd" valign="top" width="2000">&nbsp;&nbsp;- ADD: &lt;C-B&gt;o auxiliary mapping for ornaments<br>&nbsp;&nbsp;- ADD: section numbers in fold auxiliary command<br>&nbsp;&nbsp;- ADD: section numbers in toc auxiliary command<br>&nbsp;&nbsp;- ADD: [LaTeX] raw directive accepts tex, not only latex argument<br>&nbsp;&nbsp;- CHG: don't look for including commands in auxiliary commands - massive<br>&nbsp;&nbsp;&nbsp;&nbsp;speed gains<br>&nbsp;&nbsp;- CHG: [LaTeX] change default font size for 12pt<br>&nbsp;&nbsp;- FIX: [HTML] all styles from multiple 2html directives are in &lt;head&gt;<br>&nbsp;&nbsp;- FIX: [HTML] @ in 2html directive was breaking syntax highlighting<br>&nbsp;&nbsp;- FIX: [HTML] restore validity of generated documents<br>&nbsp;&nbsp;- FIX: [LaTeX] bug with _ in filenames in raw latex file option<br>&nbsp;&nbsp;- FIX: many minor bugs<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=5980">vst.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.1</b></td>
+    <td class="roweven" valign="top" nowrap><i>2006-07-23</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=488">Mikolaj Machowski</a></i></td>
+    <td class="roweven" valign="top" width="2000">&nbsp;&nbsp;- ADD: support for ltrim, rtrim, trim for regular replacement<br>&nbsp;&nbsp;- CHG: `including commands`_ are working recursively now<br>&nbsp;&nbsp;- FIX: wrong indentation of included files<br>&nbsp;&nbsp;- FIX: problems with backslash as last character in line<br>&nbsp;&nbsp;- FIX: minor fixes in docs<br>&nbsp;&nbsp;- FIX: [pdf] incorrect call of cursor function<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=5905">vst.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.0</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2006-07-01</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=488">Mikolaj Machowski</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Tons of imrovements and bugfixes from last vim-online release. Finally stable 1.0 because of final Vim7. Enjoy!</td>
+</tr>
+</table>
+<!-- finish off the framework -->
+          </td>
+        </tr>
+      </table>
+    </td>
+
+  </tr>
+</table>
+
+<!-- END OF THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr><td colspan="4" bgcolor="#000000"><img src="/images/spacer.gif" height="2" width="1" alt=""></td></tr>
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr>
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+
+    <td align="left" valign="top"><small>
+      If you have questions or remarks about this site, visit the
+      <a href="http://vimonline.sf.net">vimonline development</a> pages.
+      Please use this site responsibly.
+      <br> 
+      
+      Questions about <a href="http://www.vim.org/about.php">Vim</a> should go
+      to the <a href="http://www.vim.org/maillist.php">maillist</a>.
+      Help Bram <a href="http://iccf-holland.org/">help Uganda</a>.
+      </small>
+	&nbsp;
+	&nbsp;
+
+	<!-- Start of StatCounter Code -->
+	<script type="text/javascript" language="javascript">
+	var sc_project=1417324; 
+	var sc_invisible=1; 
+	var sc_partition=11; 
+	var sc_security="d41633bc"; 
+	</script>
+
+	<script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script><noscript><a href="http://www.statcounter.com/" target="_blank"><img  src="http://c12.statcounter.com/counter.php?sc_project=1417324&java=0&security=d41633bc&invisible=0" alt="free tracking" border="0"></a> </noscript>
+	<!-- End of StatCounter Code -->
+          </td>
+
+    <td align="right" valign="top">
+      		<a href="http://sourceforge.net/projects/vim" rel="nofollow"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=8&type=1" width="88" height="31" border="0" alt="SourceForge.net Logo" /></a>
+    </td>
+
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+  </tr>
+
+    
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  
+  </tr>
+</table>
+
+</body>
+</html>
+

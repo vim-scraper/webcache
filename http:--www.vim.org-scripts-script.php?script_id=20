@@ -1,0 +1,388 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+  <link rel="Stylesheet" type="text/css" href="/css/style.css" >
+  <title>jcommenter.vim - A script for automatically generating JavaDoc comments : vim online</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <meta name="KEYWORDS" content="Vim, Vi IMproved, text editor, home, documentation, tips, scripts, news">
+  <link rel="shortcut icon" type="image/x-icon" href="/images/vim_shortcut.ico">
+</head>
+
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff"> 
+
+<!-- HEADER, SPONSOR IMAGE, VIM IMAGE AND BOOK AD -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+  <td class="lightbg">&nbsp;&nbsp;&nbsp;</td>
+  <td class="lightbg" align="left"><a href="/sponsor/index.php"><img src="/images/sponsorvim.gif" alt="sponsor Vim development" border="0"></a></td>
+    <td class="lightbg" align="center"><a href="/index.php"><img src="/images/vim_header.gif" border="0" alt="Vim logo"></a></td>
+    <td class="lightbg" align="right"><a href="http://iccf-holland.org/click5.html"><img src="/images/buyhelplearn.gif" alt="Vim Book Ad" border="0"></a></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="darkbg"><img src="/images/spacer.gif" width="1" height="10" alt=""></td>
+  </tr>
+</table>
+<!-- THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+  <col width="180">
+  <col width="1">
+
+  <tr valign="top">
+    <td class="sidebar">
+      <table width="180" cellpadding="4" cellspacing="0" border="0">
+        <tr valign="top">
+          <td class="sidebar">
+
+<!-- INCLUDE THE PAGE NAVIGATION -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+    <tr>
+        <td><small>not logged in (<a href="/login.php">login</a>)</small></td>
+    </tr>
+    <tr><td>
+<small>&nbsp;</small>
+<form action="http://www.google.com/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-3005259998294962:bvyni59kjr1" />
+    <input type="hidden" name="ie" value="ISO-8859-1" />
+    <input type="text" name="q" size="20" />
+    <br>
+    <input type="submit" name="sa" value="Search" />
+  </div>
+</form>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+    </td></tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="1"></td>
+    </tr>
+    <tr>
+        <td class="darkbg"><img src="/images/spacer.gif" alt='' border="0" height="3"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="2"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/index.php">Home</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/search.php">Advanced search</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/about.php">About Vim</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/community.php">Community</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/news/news.php">News</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/sponsor/index.php">Sponsoring</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/trivia.php">Trivia</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/docs.php">Documentation</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/download.php">Download</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/scripts/index.php">Scripts</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/tips/index.php">Tips</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/account/index.php">My Account</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/huh.php">Site Help</a></td>
+        </tr>
+</table>
+
+            <table width="172" cellpadding="0" cellspacing="0" border="0">
+              <tr><td><img src="/images/spacer.gif" alt="" border="0" width="1" height="8"></td></tr>
+              <tr><td class="darkbg"><img src="/images/spacer.gif" width="1" height="3" alt=""></td></tr>
+            </table>
+            <br>
+
+<!-- INCLUDE THE PAGE SIDEBAR TEXT -->
+&nbsp;
+
+          </td>
+        </tr>
+      </table>
+    </td>
+
+    <td class="darkbg"><img src="/images/spacer.gif" width="1" height="1" border="0" alt=""><br></td>
+    <td>
+      <table width="100%" cellpadding="10" cellspacing="0" border="0" bordercolor="red">
+        <tr>
+          <td valign="top">
+
+<span class="txth1">jcommenter.vim : A script for automatically generating JavaDoc comments</span> 
+
+<br>
+<br>
+
+<!-- karma table -->
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
+  <td>
+    Rating <b>338/156</b>,
+    Downloaded by 7352  </td>
+  <td class="lightbg">
+  <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
+  </td>
+  <td>
+    <a href="http://vim.wikia.com/wiki/Script:20">Vim wiki</a>
+  </td>  
+</tr>
+</table>
+<p>
+
+<table cellspacing="0" cellpadding="0" border="0">
+<tr><td class="prompt">created by</td></tr>
+<tr><td><a href="/account/profile.php?user_id=53">Kalle Björklid</a></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">script type</td></tr>
+<tr><td>utility</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">description</td></tr>
+<tr><td>Updated 29.12.2002 KB<br><br>Description:<br>Generates JavaDoc (and some other) comments for java-sources. This is triggered by executing the JCommentWriter()-function while the cursor is over something meaningfull, or if a selection exists, the selected text is parsed and the comment template is generated based on that.<br><br>The following comments are generated (in the appropriate situations):<br>1. File comments: user specifies the template, generated when the cursor is on the first line of the file.<br>2. Class comments: generated when on top of a class declaration<br>3. Method comments: generated when on top of a metod declaration. @return, @params, and @throws are generated, if applicable. If executed on a method declaration which already has JavaDoc-comments, updates the javadoc-comments by removing/adding tags as needed.<br>4.&nbsp;&nbsp;Field comments. Simply adds an empty JavaDoc-comment template above the field declaration<br>5. Copy @&lt;name&gt; -tags. When executed on @something, creates a tag with the same name directly above the line the cursor is currently on.<br>6. @throws for RuntimeExceptions. When executed on a line containing something like &quot;throw new RuntimeException()&quot;, a @throws-tag is added to the previous JavaDoc-comment.<br>7. Block-end comments. When executed on a line containing a '}'-character and possibly some whitespace (but nothing else), generates a one-line-comment describing what block the '}' is terminating. For example, the comment for &quot;aVeryLongMethod&quot; is&nbsp;&nbsp;&quot;// END: aVeryLongMethod&quot;.<br><br>There are a bunch of other functions to support the comment generation (see the start of the script for full documentation). The style of the comment templates is configurable (see the file for configuration and description of the options)</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">install details</td></tr>
+<tr><td>Add the jcommenter.vim to your macros-folder (or whatever).<br>Here's what I have in my .vimrc:<br><br>&nbsp;&nbsp;autocmd FileType java let b:jcommenter_class_author='Kalle Björklid (bjorklid@st.jyu.fi)'<br>&nbsp;&nbsp;autocmd FileType java let b:jcommenter_file_author='Kalle Björklid (bjorklid@st.jyu.fi)'<br>&nbsp;&nbsp;autocmd FileType java source $VIM/macros/jcommenter.vim<br>&nbsp;&nbsp;autocmd FileType java map &lt;M-c&gt; :call JCommentWriter()&lt;CR&gt;<br><br>So I use Alt-c for commenting the file/methods/attributes/classes.</td></tr>
+<tr><td>&nbsp;</td></tr>
+</table>
+
+<!-- rating table -->
+<form name="rating">
+<input type="hidden" name="script_id" value="20">
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>rate this script</b></td>
+  <td valign="middle">
+    <input type="radio" name="rating" value="life_changing">Life Changing
+    <input type="radio" name="rating" value="helpful">Helpful
+    <input type="radio" name="rating" value="unfulfilling">Unfulfilling&nbsp;
+    <input type="submit" value="rate">
+  </td>
+</tr>
+</table>
+</form>
+<span class="txth2">script versions</span> (<a href="add_script_version.php?script_id=20">upload new version</a>)
+<p>
+Click on the package to download.
+<p>
+
+<table cellspacing="2" cellpadding="4" border="0" width="100%">
+<tr class='tableheader'>
+        <th valign="top">package</th>
+    <th valign="top">script version</th>
+    <th valign="top">date</th>
+    <th valign="top">Vim version</th>
+    <th valign="top">user</th>
+    <th valign="top">release notes</th>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=1587">jcommenter.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.3.1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2002-12-29</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=53">Kalle Björklid</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Fixed two bugs concerning the modifications for 1.3</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=1586">jcommenter.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.3</b></td>
+    <td class="roweven" valign="top" nowrap><i>2002-12-29</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=53">Kalle Björklid</a></i></td>
+    <td class="roweven" valign="top" width="2000">Added check to see whether the script is already loaded<br>Option to have an empty line automatically added before the generated comment if there was none previously. See config (&quot;b:jcommenter_add_empty_line&quot;).<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=371">jcommenter.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.2.1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2001-11-25</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=53">Kalle Björklid</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Added support for generating modelines.<br>User requests:<br>Added possibility to have default tag values.<br>Added possibility to have space between tag groups.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=302">jcommenter.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.2</b></td>
+    <td class="roweven" valign="top" nowrap><i>2001-10-24</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=53">Kalle Björklid</a></i></td>
+    <td class="roweven" valign="top" width="2000">A bunch of new features (some seem to be actually useful ;-) :<br>Complete method comment updating: now adds/removes @return- and @param-tags form existing doc comments if no more applicable.<br>Added a new public function (+ mappings for it) for searching incomplete doc-comments (This is nice - a quick way to complete comments and to jump to next incomplete comment)<br>If executed on a line like &quot;throw new RuntimeExeception()&quot; will add an exception declaration to prev. javadoc comments.<br>Corrected a problem where updating didn't work if a new parameter's name began the same way than an existing one's.<br>Now behaves correctly when &quot;extra stuff&quot; (after the '{') is included in the range.<br>Added mapping for insert-mode to config-file.<br>Added an abbreviation (see config-file)<br>Now adds the method/class/if/while/for... name as an ending comment when executed on a line containing only whitespace and a '}'.<br>Comment generation can now be virtually fully automated by using an abbreviation for '{' (which is presented in the config-file).</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=278">jcommenter.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.12</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2001-10-16</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=53">Kalle Björklid</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Fixed a problem which caused all methods to be interperted as constructors (no @return-tag generated).</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=105">jcommenter.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.11</b></td>
+    <td class="roweven" valign="top" nowrap><i>2001-08-14</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=53">Kalle Björklid</a></i></td>
+    <td class="roweven" valign="top" width="2000">Fixed an error concerning the removal of the return tag when updating the comments (the buffer was partially deleted from the line where the @return tag was to EOF)</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=101">jcommenter.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2001-08-12</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=53">Kalle Björklid</a></i></td>
+    <td class="rowodd" valign="top" width="2000">This is again a .vim file (and not a zip). The configuration file is pasted at the beginning of the script. Again, see the script<br>for instructions.<br><br>Can now choose between '@throws' and '@exception' tags.<br>When executed on single-line comments (&quot;/** blah blah */&quot;) expands them into multiline comments preserving the text<br>Partial method documentation comment updating (adds tags instead of writing a new template)</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=97">jcommenter.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.0</b></td>
+    <td class="roweven" valign="top" nowrap><i>2001-08-11</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=53">Kalle Björklid</a></i></td>
+    <td class="roweven" valign="top" width="2000">A note:<br>since there was two files in this version of the script, I zipped them. However, if you download the file, it has .vim-extension, so you have to rename it.<br>I'm really sorry for the inconvience.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=96">jcommenter.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.0</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2001-08-11</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=53">Kalle Björklid</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Did a complete rewrite of the script-code (this is the main reason for the version-number leap).<br>A separate config-file, which should be modified to reflect the user's preferences.<br>More variables for better customization.<br>Due to the rewrite, should now be more robust<br>Cursor movement and auto-start insert mode<br>Better control over the look of the comment templates<br><br>Read new installation and configuration instructions from the .vim files</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=47">jcommenter.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.41</b></td>
+    <td class="roweven" valign="top" nowrap><i>2001-07-15</i></td>
+    <td class="roweven" valign="top" nowrap>5.7</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=53">Kalle Björklid</a></i></td>
+    <td class="roweven" valign="top" width="2000">Fixed the problem with final method parameters.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=39">jcommenter.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.4</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2001-07-06</i></td>
+    <td class="rowodd" valign="top" nowrap>5.7</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=53">Kalle Björklid</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Recognizes now methods that have whitespaces just before the '('.<br>The file comments can now be completely redefined without editing the script.<br>The comment-skeleton for fields is changed to correspond with the Sun's code conventions.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=27">jcommenter.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.3</b></td>
+    <td class="roweven" valign="top" nowrap><i>2001-06-17</i></td>
+    <td class="roweven" valign="top" nowrap>5.7</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=53">Kalle Björklid</a></i></td>
+    <td class="roweven" valign="top" width="2000">- Recognices interfaces (same as classes)<br>- improved recognition for methods/attributes<br>- Added tag copying:<br>&nbsp;&nbsp; For example, when executed on the following line:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* @throws IOException If cannot read file<br>&nbsp;&nbsp; the result is:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* @throws IOException If cannot read file<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* @throws<br>&nbsp;&nbsp; Not that life changing, but quite nice when you want to document those<br>&nbsp;&nbsp; RuntimeExceptions, or need to add another paramter.<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=25">jcommenter.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.2 beta</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2001-06-13</i></td>
+    <td class="rowodd" valign="top" nowrap>5.7</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=53">Kalle Björklid</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Initial upload</td>
+</tr>
+</table>
+<!-- finish off the framework -->
+          </td>
+        </tr>
+      </table>
+    </td>
+
+  </tr>
+</table>
+
+<!-- END OF THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr><td colspan="4" bgcolor="#000000"><img src="/images/spacer.gif" height="2" width="1" alt=""></td></tr>
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr>
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+
+    <td align="left" valign="top"><small>
+      If you have questions or remarks about this site, visit the
+      <a href="http://vimonline.sf.net">vimonline development</a> pages.
+      Please use this site responsibly.
+      <br> 
+      
+      Questions about <a href="http://www.vim.org/about.php">Vim</a> should go
+      to the <a href="http://www.vim.org/maillist.php">maillist</a>.
+      Help Bram <a href="http://iccf-holland.org/">help Uganda</a>.
+      </small>
+	&nbsp;
+	&nbsp;
+
+	<!-- Start of StatCounter Code -->
+	<script type="text/javascript" language="javascript">
+	var sc_project=1417324; 
+	var sc_invisible=1; 
+	var sc_partition=11; 
+	var sc_security="d41633bc"; 
+	</script>
+
+	<script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script><noscript><a href="http://www.statcounter.com/" target="_blank"><img  src="http://c12.statcounter.com/counter.php?sc_project=1417324&java=0&security=d41633bc&invisible=0" alt="free tracking" border="0"></a> </noscript>
+	<!-- End of StatCounter Code -->
+          </td>
+
+    <td align="right" valign="top">
+      		<a href="http://sourceforge.net/projects/vim" rel="nofollow"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=8&type=1" width="88" height="31" border="0" alt="SourceForge.net Logo" /></a>
+    </td>
+
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+  </tr>
+
+    
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  
+  </tr>
+</table>
+
+</body>
+</html>
+

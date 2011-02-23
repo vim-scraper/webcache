@@ -1,0 +1,300 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+  <link rel="Stylesheet" type="text/css" href="/css/style.css" >
+  <title>PyScratch - allows processing of Python/Ruby/Perl/Lua commands directly in Vim buffer : vim online</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <meta name="KEYWORDS" content="Vim, Vi IMproved, text editor, home, documentation, tips, scripts, news">
+  <link rel="shortcut icon" type="image/x-icon" href="/images/vim_shortcut.ico">
+</head>
+
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff"> 
+
+<!-- HEADER, SPONSOR IMAGE, VIM IMAGE AND BOOK AD -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+  <td class="lightbg">&nbsp;&nbsp;&nbsp;</td>
+  <td class="lightbg" align="left"><a href="/sponsor/index.php"><img src="/images/sponsorvim.gif" alt="sponsor Vim development" border="0"></a></td>
+    <td class="lightbg" align="center"><a href="/index.php"><img src="/images/vim_header.gif" border="0" alt="Vim logo"></a></td>
+    <td class="lightbg" align="right"><a href="http://iccf-holland.org/click5.html"><img src="/images/buyhelplearn.gif" alt="Vim Book Ad" border="0"></a></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="darkbg"><img src="/images/spacer.gif" width="1" height="10" alt=""></td>
+  </tr>
+</table>
+<!-- THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+  <col width="180">
+  <col width="1">
+
+  <tr valign="top">
+    <td class="sidebar">
+      <table width="180" cellpadding="4" cellspacing="0" border="0">
+        <tr valign="top">
+          <td class="sidebar">
+
+<!-- INCLUDE THE PAGE NAVIGATION -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+    <tr>
+        <td><small>not logged in (<a href="/login.php">login</a>)</small></td>
+    </tr>
+    <tr><td>
+<small>&nbsp;</small>
+<form action="http://www.google.com/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-3005259998294962:bvyni59kjr1" />
+    <input type="hidden" name="ie" value="ISO-8859-1" />
+    <input type="text" name="q" size="20" />
+    <br>
+    <input type="submit" name="sa" value="Search" />
+  </div>
+</form>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+    </td></tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="1"></td>
+    </tr>
+    <tr>
+        <td class="darkbg"><img src="/images/spacer.gif" alt='' border="0" height="3"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="2"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/index.php">Home</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/search.php">Advanced search</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/about.php">About Vim</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/community.php">Community</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/news/news.php">News</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/sponsor/index.php">Sponsoring</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/trivia.php">Trivia</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/docs.php">Documentation</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/download.php">Download</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/scripts/index.php">Scripts</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/tips/index.php">Tips</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/account/index.php">My Account</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/huh.php">Site Help</a></td>
+        </tr>
+</table>
+
+            <table width="172" cellpadding="0" cellspacing="0" border="0">
+              <tr><td><img src="/images/spacer.gif" alt="" border="0" width="1" height="8"></td></tr>
+              <tr><td class="darkbg"><img src="/images/spacer.gif" width="1" height="3" alt=""></td></tr>
+            </table>
+            <br>
+
+<!-- INCLUDE THE PAGE SIDEBAR TEXT -->
+&nbsp;
+
+          </td>
+        </tr>
+      </table>
+    </td>
+
+    <td class="darkbg"><img src="/images/spacer.gif" width="1" height="1" border="0" alt=""><br></td>
+    <td>
+      <table width="100%" cellpadding="10" cellspacing="0" border="0" bordercolor="red">
+        <tr>
+          <td valign="top">
+
+<span class="txth1">PyScratch : allows processing of Python/Ruby/Perl/Lua commands directly in Vim buffer</span> 
+
+<br>
+<br>
+
+<!-- karma table -->
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
+  <td>
+    Rating <b>9/3</b>,
+    Downloaded by 97  </td>
+  <td class="lightbg">
+  <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
+  </td>
+  <td>
+    <a href="http://vim.wikia.com/wiki/Script:3327">Vim wiki</a>
+  </td>  
+</tr>
+</table>
+<p>
+
+<table cellspacing="0" cellpadding="0" border="0">
+<tr><td class="prompt">created by</td></tr>
+<tr><td><a href="/account/profile.php?user_id=23015">Herbert Sitz</a></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">script type</td></tr>
+<tr><td>utility</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">description</td></tr>
+<tr><td>PyScratch is a simple plugin that lets you use any Vim buffer as a scratchpad for running and viewing the output of Python, Ruby, Perl, and Lua commands.&nbsp;&nbsp;(Note the name 'PyScratch' is no longer accurate and will probably be changed.)&nbsp;&nbsp;This plugin can also be found at github:<br><a target="_blank" href="https://github.com/hsitz/PyScratch">https://github.com/hsitz/PyScratch</A><br><br>You can watch a screencast of PyScratch at:<br><a target="_blank" href="http://vimeo.com/16871727">http://vimeo.com/16871727</A><br>--------------------------------------------------<br>NOTE:&nbsp;&nbsp;You can get tab completion of your Python commands by using any of the <br>available methods of completion in Vim.&nbsp;&nbsp;I've tried the Pydiction <br>tab-completion plugin and recommend that anyone using PyScratch install Pydiction <br>( <a target="_blank" href="http://www.vim.org/scripts/script.php?script_id=850">http://www.vim.org/scripts/script.php?script_id=850</A> ) <br>---------------------------------------------------<br>NOTE2:&nbsp;&nbsp;Also works with RUBY, PERL, and LUA.<br>The name PyScratch is now misleading, since code has been modified to work<br>with Ruby, Perl, and/or Lua.&nbsp;&nbsp;The global variable g:script_language can<br>be set to 'python,'ruby','perl', or 'lua', and controls which interpreter<br>is used to process '&gt;&gt;&gt;' commands and code blocks.&nbsp;&nbsp;Support for any<br>interpreter you use must be compiled into your Vim.&nbsp;&nbsp;Note also that usng Perl <br>is a little different from the other languages, because Vim does not<br>support Perl's 'print' or 'say' commands.&nbsp;&nbsp;Instead 'VIM::Msg' is used<br>to specify printed output.&nbsp;&nbsp; See :help perl for more.<br>-------------------------------------------------- <br><br>The PyScratch plugin consists of a single vimscript file that a Vim user can<br>install by placing it in their 'plugin' directory.<br><br>PyScratch requires a Vim executable compiled with Python support. It has been<br>tested with Python26 but version should not matter.<br><br>Over last few years several different plugins have been designed to send <br>commands in a Vim buffer out to a shell for processing (typically scripting the <br>'Gnu Screen utility), where the output can be viewed.&nbsp;&nbsp;This works well, but for <br>languages where Vim has built-in support some people might prefer executing the <br>commands and getting output right in the Vim buffer.&nbsp;&nbsp;All this takes is <br>redirecting the output from a supported language's command to the user's buffer <br>instead of to a message buffer.&nbsp;&nbsp;This technique is possible only for the <br>languages where Vim offers compile-in support, which include Python, Perl, <br>Ruby, Lua, MZScheme (anything else?)&nbsp;&nbsp;This plugin is specific to Python but it <br>should be relatively easy to extend to other supported languages.<br><br>When the PyScratch plugin is loaded you can process Python commands and get <br>Python output in your Vim buffer in several different ways:<br><br>(1)&nbsp;&nbsp;Prepend a '&gt;&gt;&gt;' user prompt as first characters in a line, then press <br>&lt;enter&gt;.&nbsp;&nbsp;The command will be evaluated and results will be shown beginning in <br>the next line.&nbsp;&nbsp;Commands that provide no output have the command itself <br>mirrored as output as confirmation that they have been processed.&nbsp;&nbsp;You will <br>typically want to issue Python print commands, and these can be abbreviated <br>with 'p' instead of 'print'.&nbsp;&nbsp;Some examples:<br><br>&gt;&gt;&gt; print 8 + 16<br>24<br>&gt;&gt;&gt; p 8 + 16<br>24<br>&gt;&gt;&gt; import sys<br>( import sys )<br>&gt;&gt;&gt; for i in range(5): print i<br>1<br>2<br>3<br>4<br>5<br>&gt;&gt;&gt; etc. etc.<br><br>(2)&nbsp;&nbsp;You can execute a block of lines at one time by visually selecting them <br>and pressing &lt;ctrl_enter&gt;.&nbsp;&nbsp;The block should be a clean block of code with no <br>user prompt chars (i.e, '&gt;&gt;&gt;') at left margin.&nbsp;&nbsp;Output will be returned below <br>the block of lines.&nbsp;&nbsp;Note that this method uses &lt;ctrl-enter&gt; rather than the <br>simple &lt;enter&gt; of the single-line-prompt method.<br><br>(3)&nbsp;&nbsp;It's not part of the plugin, but an entire file of Python can be executed <br>with the Vim command:&nbsp;&nbsp; pyfile &lt;filename&gt;.&nbsp;&nbsp;The plugin does not capture any <br>output from this command, however functions defined in the file can may then be <br>accessed in the Vim buffer using single-line-prompt Python commands or the <br>block-select Python processing.<br><br>The plugin has a couple of lines defining a syntax region for error messages <br>and a highlight command that displays them in red.&nbsp;&nbsp;This may be overwritten by <br>a syntax file that clears all syntax settings so if you want to use these you <br>may want to move the syntax and the highlight command to a syntax and color <br>file, respectively.<br><br>This is just a Sunday afternoon hack and there are lots of little tweaks and <br>improvements that could be added.&nbsp;&nbsp; I'd be happy to hear comments or <br>suggestions. . . <br></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">install details</td></tr>
+<tr><td>Put the pyscratch.vim file in your .vim/plugin or vimfiles/plugin directory.&nbsp;&nbsp;Functionality will then be available in any Vim buffer.</td></tr>
+<tr><td>&nbsp;</td></tr>
+</table>
+
+<!-- rating table -->
+<form name="rating">
+<input type="hidden" name="script_id" value="3327">
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>rate this script</b></td>
+  <td valign="middle">
+    <input type="radio" name="rating" value="life_changing">Life Changing
+    <input type="radio" name="rating" value="helpful">Helpful
+    <input type="radio" name="rating" value="unfulfilling">Unfulfilling&nbsp;
+    <input type="submit" value="rate">
+  </td>
+</tr>
+</table>
+</form>
+<span class="txth2">script versions</span> (<a href="add_script_version.php?script_id=3327">upload new version</a>)
+<p>
+Click on the package to download.
+<p>
+
+<table cellspacing="2" cellpadding="4" border="0" width="100%">
+<tr class='tableheader'>
+        <th valign="top">package</th>
+    <th valign="top">script version</th>
+    <th valign="top">date</th>
+    <th valign="top">Vim version</th>
+    <th valign="top">user</th>
+    <th valign="top">release notes</th>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=14329">PyScratch-015.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.15</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-11-20</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=23015">Herbert Sitz</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Added support for Ruby, Perl, and Lua</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=14273">PyScratch-0-11.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.11</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-11-16</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=23015">Herbert Sitz</a></i></td>
+    <td class="roweven" valign="top" width="2000">Fixed major bug that interfered with entering &lt;CR&gt; when in insert mode.</td>
+</tr>
+</table>
+<!-- finish off the framework -->
+          </td>
+        </tr>
+      </table>
+    </td>
+
+  </tr>
+</table>
+
+<!-- END OF THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr><td colspan="4" bgcolor="#000000"><img src="/images/spacer.gif" height="2" width="1" alt=""></td></tr>
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr>
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+
+    <td align="left" valign="top"><small>
+      If you have questions or remarks about this site, visit the
+      <a href="http://vimonline.sf.net">vimonline development</a> pages.
+      Please use this site responsibly.
+      <br> 
+      
+      Questions about <a href="http://www.vim.org/about.php">Vim</a> should go
+      to the <a href="http://www.vim.org/maillist.php">maillist</a>.
+      Help Bram <a href="http://iccf-holland.org/">help Uganda</a>.
+      </small>
+	&nbsp;
+	&nbsp;
+
+	<!-- Start of StatCounter Code -->
+	<script type="text/javascript" language="javascript">
+	var sc_project=1417324; 
+	var sc_invisible=1; 
+	var sc_partition=11; 
+	var sc_security="d41633bc"; 
+	</script>
+
+	<script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script><noscript><a href="http://www.statcounter.com/" target="_blank"><img  src="http://c12.statcounter.com/counter.php?sc_project=1417324&java=0&security=d41633bc&invisible=0" alt="free tracking" border="0"></a> </noscript>
+	<!-- End of StatCounter Code -->
+          </td>
+
+    <td align="right" valign="top">
+      		<a href="http://sourceforge.net/projects/vim" rel="nofollow"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=8&type=1" width="88" height="31" border="0" alt="SourceForge.net Logo" /></a>
+    </td>
+
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+  </tr>
+
+    
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  
+  </tr>
+</table>
+
+</body>
+</html>
+

@@ -1,0 +1,364 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+  <link rel="Stylesheet" type="text/css" href="/css/style.css" >
+  <title>Mark - Highlight several words in different colors simultaneously. (#1238 continued) : vim online</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <meta name="KEYWORDS" content="Vim, Vi IMproved, text editor, home, documentation, tips, scripts, news">
+  <link rel="shortcut icon" type="image/x-icon" href="/images/vim_shortcut.ico">
+</head>
+
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff"> 
+
+<!-- HEADER, SPONSOR IMAGE, VIM IMAGE AND BOOK AD -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+  <td class="lightbg">&nbsp;&nbsp;&nbsp;</td>
+  <td class="lightbg" align="left"><a href="/sponsor/index.php"><img src="/images/sponsorvim.gif" alt="sponsor Vim development" border="0"></a></td>
+    <td class="lightbg" align="center"><a href="/index.php"><img src="/images/vim_header.gif" border="0" alt="Vim logo"></a></td>
+    <td class="lightbg" align="right"><a href="http://iccf-holland.org/click5.html"><img src="/images/buyhelplearn.gif" alt="Vim Book Ad" border="0"></a></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="darkbg"><img src="/images/spacer.gif" width="1" height="10" alt=""></td>
+  </tr>
+</table>
+<!-- THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+  <col width="180">
+  <col width="1">
+
+  <tr valign="top">
+    <td class="sidebar">
+      <table width="180" cellpadding="4" cellspacing="0" border="0">
+        <tr valign="top">
+          <td class="sidebar">
+
+<!-- INCLUDE THE PAGE NAVIGATION -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+    <tr>
+        <td><small>not logged in (<a href="/login.php">login</a>)</small></td>
+    </tr>
+    <tr><td>
+<small>&nbsp;</small>
+<form action="http://www.google.com/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-3005259998294962:bvyni59kjr1" />
+    <input type="hidden" name="ie" value="ISO-8859-1" />
+    <input type="text" name="q" size="20" />
+    <br>
+    <input type="submit" name="sa" value="Search" />
+  </div>
+</form>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+    </td></tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="1"></td>
+    </tr>
+    <tr>
+        <td class="darkbg"><img src="/images/spacer.gif" alt='' border="0" height="3"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="2"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/index.php">Home</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/search.php">Advanced search</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/about.php">About Vim</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/community.php">Community</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/news/news.php">News</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/sponsor/index.php">Sponsoring</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/trivia.php">Trivia</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/docs.php">Documentation</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/download.php">Download</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/scripts/index.php">Scripts</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/tips/index.php">Tips</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/account/index.php">My Account</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/huh.php">Site Help</a></td>
+        </tr>
+</table>
+
+            <table width="172" cellpadding="0" cellspacing="0" border="0">
+              <tr><td><img src="/images/spacer.gif" alt="" border="0" width="1" height="8"></td></tr>
+              <tr><td class="darkbg"><img src="/images/spacer.gif" width="1" height="3" alt=""></td></tr>
+            </table>
+            <br>
+
+<!-- INCLUDE THE PAGE SIDEBAR TEXT -->
+&nbsp;
+
+          </td>
+        </tr>
+      </table>
+    </td>
+
+    <td class="darkbg"><img src="/images/spacer.gif" width="1" height="1" border="0" alt=""><br></td>
+    <td>
+      <table width="100%" cellpadding="10" cellspacing="0" border="0" bordercolor="red">
+        <tr>
+          <td valign="top">
+
+<span class="txth1">Mark : Highlight several words in different colors simultaneously. (#1238 continued)</span> 
+
+<br>
+<br>
+
+<!-- karma table -->
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
+  <td>
+    Rating <b>117/33</b>,
+    Downloaded by 1331  </td>
+  <td class="lightbg">
+  <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
+  </td>
+  <td>
+    <a href="http://vim.wikia.com/wiki/Script:2666">Vim wiki</a>
+  </td>  
+</tr>
+</table>
+<p>
+
+<table cellspacing="0" cellpadding="0" border="0">
+<tr><td class="prompt">created by</td></tr>
+<tr><td><a href="/account/profile.php?user_id=9713">Ingo Karkat</a></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">script type</td></tr>
+<tr><td>utility</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">description</td></tr>
+<tr><td>DESCRIPTION<br>This script adds mappings and a :Mark command to highlight several words in<br>different colors simultaneously, similar to the built-in 'hlsearch'<br>highlighting of search results and the * star command. For example, when you<br>are browsing a big program file, you could highlight multiple identifiers in<br>parallel. This will make it easier to trace the source code.<br><br>This is a continuation of <a href="/scripts/script.php?script_id=1238">vimscript #1238</a> by Yuheng Xie, who apparently<br>doesn't maintain his original version anymore and cannot be reached via the<br>email address in his profile. This script offers the following advantages over<br>the original:<br>- Much faster, all colored words can now be highlighted, no more clashes with<br>&nbsp;&nbsp;syntax highlighting (due to use of matchadd()). <br>- Many bug fixes. <br>- Jumps behave like the built-in search, including wrap and error messages. <br>- Like the built-in commands, jumps take an optional [count] to quickly skip<br>&nbsp;&nbsp;over some marks. <br><br>RELATED WORKS<br>- MultipleSearch (<a href="/scripts/script.php?script_id=479">vimscript #479</a>) can highlight in a single window and in all<br>&nbsp;&nbsp;buffers, but still relies on the :syntax highlighting method, which is<br>&nbsp;&nbsp;slower and less reliable. <br>- <a target="_blank" href="http://vim.wikia.com/wiki/Highlight_multiple_words">http://vim.wikia.com/wiki/Highlight_multiple_words</A> offers control over the<br>&nbsp;&nbsp;color used by mapping the 1-9 keys on the numeric keypad, persistence, and<br>&nbsp;&nbsp;highlights only a single window. <br><br>USAGE<br>Highlighting:<br>&lt;Leader&gt;m		Mark or unmark the word under the cursor, similar to<br>			the |star| command. <br>			Likewise, 'ignorecase' is used, 'smartcase' is not.<br>{Visual}&lt;Leader&gt;m	Mark or unmark the visual selection. <br>&lt;Leader&gt;r		Manually input a regular expression to highlight. <br>{Visual}&lt;Leader&gt;r	(Based on the visual selection.) <br>&lt;Leader&gt;n		Clear the mark under the cursor / all marks. <br><br>:Mark {regexp}		Mark or unmark {regexp}. <br>:Mark			Clear all marks. <br><br>Searching:<br><br>[count]*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [count]#<br>[count]&lt;Leader&gt;* [count]&lt;Leader&gt;#<br>[count]&lt;Leader&gt;/ [count]&lt;Leader&gt;?<br>			Use these six keys to jump to the [count]'th next /<br>			previous occurrence of a mark. <br>			You could also use Vim's / and ? to search, since the<br>			mark patterns are (optionally, see configuration)<br>			added to the search history, too. <br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cursor over mark&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cursor not over mark<br> ---------------------------------------------------------------------------<br>&nbsp;&nbsp;&lt;Leader&gt;* Jump to the next occurrence of&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Jump to the next occurrence of<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;current mark, and remember it&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;last mark&quot;. <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;as &quot;last mark&quot;. <br><br>&nbsp;&nbsp;&lt;Leader&gt;/ Jump to the next occurrence of&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Same as left. <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ANY mark. <br><br>&nbsp;&nbsp; *&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If &lt;Leader&gt;* is the most recently&nbsp;&nbsp; Do Vim's original * command. <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;used, do a &lt;Leader&gt;*; otherwise<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(&lt;Leader&gt;/ is the most recently<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;used), do a &lt;Leader&gt;/. </td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">install details</td></tr>
+<tr><td>INSTALLATION<br>This script is packaged as a vimball. If you have the &quot;gunzip&quot; decompressor<br>in your PATH, simply edit the *.vba.gz package in Vim; otherwise, decompress<br>the archive first, e.g. using WinZip. Inside Vim, install by sourcing the<br>vimball or via the :UseVimball command. <br>&nbsp;&nbsp;&nbsp;&nbsp;vim mark.vba.gz<br>&nbsp;&nbsp;&nbsp;&nbsp;:so %<br>To uninstall, use the :RmVimball command. <br><br>DEPENDENCIES<br>- Requires Vim 7.1 with &quot;matchadd()&quot;, or Vim 7.2 or higher. <br><br>CONFIGURATION<br>You may define your own colors or more than the default 6 highlightings in<br>your vimrc file (or anywhere before this plugin is sourced), in the following<br>form (where N = 1..): <br>&nbsp;&nbsp;&nbsp;&nbsp;highlight MarkWordN ctermbg=Cyan ctermfg=Black guibg=#8CCBEA guifg=Black<br><br>The search type highlighting (in the search message) can be changed via: <br>&nbsp;&nbsp;&nbsp;&nbsp;highlight link SearchSpecialSearchType MoreMsg<br><br>By default, any marked words are also added to the search (/) and input (@)<br>history; if you don't want that, remove the corresponding symbols from: <br>&nbsp;&nbsp;&nbsp;&nbsp;let g:mwHistAdd = &quot;/@&quot;<br><br>You can use different mappings by mapping to the &lt;Plug&gt;Mark... mappings before<br>this plugin is sourced. To remove the default overriding of * and #, use: <br>&nbsp;&nbsp;&nbsp;&nbsp;nmap &lt;Plug&gt;IgnoreMarkSearchNext &lt;Plug&gt;MarkSearchNext<br>&nbsp;&nbsp;&nbsp;&nbsp;nmap &lt;Plug&gt;IgnoreMarkSearchPrev &lt;Plug&gt;MarkSearchPrev</td></tr>
+<tr><td>&nbsp;</td></tr>
+</table>
+
+<!-- rating table -->
+<form name="rating">
+<input type="hidden" name="script_id" value="2666">
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>rate this script</b></td>
+  <td valign="middle">
+    <input type="radio" name="rating" value="life_changing">Life Changing
+    <input type="radio" name="rating" value="helpful">Helpful
+    <input type="radio" name="rating" value="unfulfilling">Unfulfilling&nbsp;
+    <input type="submit" value="rate">
+  </td>
+</tr>
+</table>
+</form>
+<span class="txth2">script versions</span> (<a href="add_script_version.php?script_id=2666">upload new version</a>)
+<p>
+Click on the package to download.
+<p>
+
+<table cellspacing="2" cellpadding="4" border="0" width="100%">
+<tr class='tableheader'>
+        <th valign="top">package</th>
+    <th valign="top">script version</th>
+    <th valign="top">date</th>
+    <th valign="top">Vim version</th>
+    <th valign="top">user</th>
+    <th valign="top">release notes</th>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=14741">mark.vba.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.4.1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2011-01-13</i></td>
+    <td class="rowodd" valign="top" nowrap>7.2</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=9713">Ingo Karkat</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- FIX: Using a named register for capturing the visual selection on {Visual}&lt;Leader&gt;m and {Visual}&lt;Leader&gt;r clobbered the unnamed register. Now using the unnamed register. </td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13424">mark.vba.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.4.0</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-07-29</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=9713">Ingo Karkat</a></i></td>
+    <td class="roweven" valign="top" width="2000">ENH: The MarkSearch mappings (&lt;Leader&gt;[*#/?]) add the original cursor position to the jump list, like the built-in [/?*#nN] commands. This allows to use the regular jump commands for mark matches, like with regular search matches. </td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=12423">mark.vba.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.3.3</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-02-19</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=9713">Ingo Karkat</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- BUG: Clearing of an accidental zero-width match (e.g. via :Mark \zs) results in endless loop. Thanks to Andy Wokula for the patch. </td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=11744">mark.vba.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.3.2</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-11-17</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=9713">Ingo Karkat</a></i></td>
+    <td class="roweven" valign="top" width="2000">BUG: Creation of literal pattern via '\V' in {Visual}&lt;Leader&gt;m mapping collided with individual escaping done in &lt;Leader&gt;m mapping so that an escaped '\*' would be interpreted as a multi item when both modes are used for marking. Thanks to Andy Wokula for the patch. </td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=11122">mark.vba.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.3.1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-08-03</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=9713">Ingo Karkat</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- Now working correctly when 'smartcase' is set. All mappings and the :Mark command use 'ignorecase', but not 'smartcase'. </td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=10956">mark.vba.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.3.0</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-07-06</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=9713">Ingo Karkat</a></i></td>
+    <td class="roweven" valign="top" width="2000">- All jump commands now take an optional [count], so you can quickly skip over some marks, as with the built-in */# and n/N commands. For this, the entire core search algorithm has been rewritten. The script's logic has been simplified through the use of Vim 7 features like Lists. <br>- Now also printing a Vim-alike search error message when 'nowrapscan' is set. </td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=10947">mark.vba.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.2.0</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-07-05</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=9713">Ingo Karkat</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- Split off functions into autoload script. <br>- Initialization of global variables and autocommands is now done lazily on<br>&nbsp;&nbsp;the first use, not during loading of the plugin. This reduces Vim startup<br>&nbsp;&nbsp;time and footprint as long as the functionality isn't yet used. <br>- Split off documentation into separate help file. Now packaging as VimBall.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=10928">mark.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.1.0</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-07-02</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=9713">Ingo Karkat</a></i></td>
+    <td class="roweven" valign="top" width="2000">THIS VERSION REQUIRES VIM 7.2 / 7.1 with patches, BUT IT'S WORTH UPDATING! <br>- Replaced highlighting via :syntax with matchadd() / matchdelete(). This<br>&nbsp;&nbsp;requires Vim 7.2 / 7.1 with patches. This method is faster, there are no<br>&nbsp;&nbsp;more clashes with syntax highlighting (:match always has preference), and<br>&nbsp;&nbsp;the background highlighting does not disappear under 'cursorline'. <br>- Using winrestcmd() to fix effects of :windo: By entering a window, its<br>&nbsp;&nbsp;height is potentially increased from 0 to 1. <br>- Handling multiple tabs by calling s:UpdateScope() on the TabEnter event. </td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=10774">mark.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.0.0</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-06-08</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=9713">Ingo Karkat</a></i></td>
+    <td class="rowodd" valign="top" width="2000">THIS VERSION REQUIRES VIM 7.0! <br>- Now using Vim List for g:mwWord and thus requiring Vim 7. g:mwCycle is now zero-based, but the syntax groups &quot;MarkWordx&quot; are still one-based. <br>- Factored :syntax operations out of s:DoMark() and s:UpdateMark() so that they can all be done in a single :windo. <br>- Normal mode &lt;Plug&gt;MarkSet now has the same semantics as its visual mode cousin: If the cursor is on an existing mark, the mark is removed. Beforehand, one could only remove a visually selected mark via again selecting it. Now, one simply can invoke the mapping when on such a mark. </td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=10766">mark.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.6.1</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-06-07</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=9713">Ingo Karkat</a></i></td>
+    <td class="roweven" valign="top" width="2000">Initial upload</td>
+</tr>
+</table>
+<!-- finish off the framework -->
+          </td>
+        </tr>
+      </table>
+    </td>
+
+  </tr>
+</table>
+
+<!-- END OF THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr><td colspan="4" bgcolor="#000000"><img src="/images/spacer.gif" height="2" width="1" alt=""></td></tr>
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr>
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+
+    <td align="left" valign="top"><small>
+      If you have questions or remarks about this site, visit the
+      <a href="http://vimonline.sf.net">vimonline development</a> pages.
+      Please use this site responsibly.
+      <br> 
+      
+      Questions about <a href="http://www.vim.org/about.php">Vim</a> should go
+      to the <a href="http://www.vim.org/maillist.php">maillist</a>.
+      Help Bram <a href="http://iccf-holland.org/">help Uganda</a>.
+      </small>
+	&nbsp;
+	&nbsp;
+
+	<!-- Start of StatCounter Code -->
+	<script type="text/javascript" language="javascript">
+	var sc_project=1417324; 
+	var sc_invisible=1; 
+	var sc_partition=11; 
+	var sc_security="d41633bc"; 
+	</script>
+
+	<script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script><noscript><a href="http://www.statcounter.com/" target="_blank"><img  src="http://c12.statcounter.com/counter.php?sc_project=1417324&java=0&security=d41633bc&invisible=0" alt="free tracking" border="0"></a> </noscript>
+	<!-- End of StatCounter Code -->
+          </td>
+
+    <td align="right" valign="top">
+      		<a href="http://sourceforge.net/projects/vim" rel="nofollow"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=8&type=1" width="88" height="31" border="0" alt="SourceForge.net Logo" /></a>
+    </td>
+
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+  </tr>
+
+    
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  
+  </tr>
+</table>
+
+</body>
+</html>
+

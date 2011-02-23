@@ -1,0 +1,524 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+  <link rel="Stylesheet" type="text/css" href="/css/style.css" >
+  <title>cvsmenu.vim (updated) - CVS(NT) integration plugin (Script #58 continued since 2005) : vim online</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <meta name="KEYWORDS" content="Vim, Vi IMproved, text editor, home, documentation, tips, scripts, news">
+  <link rel="shortcut icon" type="image/x-icon" href="/images/vim_shortcut.ico">
+</head>
+
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff"> 
+
+<!-- HEADER, SPONSOR IMAGE, VIM IMAGE AND BOOK AD -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+  <td class="lightbg">&nbsp;&nbsp;&nbsp;</td>
+  <td class="lightbg" align="left"><a href="/sponsor/index.php"><img src="/images/sponsorvim.gif" alt="sponsor Vim development" border="0"></a></td>
+    <td class="lightbg" align="center"><a href="/index.php"><img src="/images/vim_header.gif" border="0" alt="Vim logo"></a></td>
+    <td class="lightbg" align="right"><a href="http://iccf-holland.org/click5.html"><img src="/images/buyhelplearn.gif" alt="Vim Book Ad" border="0"></a></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="darkbg"><img src="/images/spacer.gif" width="1" height="10" alt=""></td>
+  </tr>
+</table>
+<!-- THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+  <col width="180">
+  <col width="1">
+
+  <tr valign="top">
+    <td class="sidebar">
+      <table width="180" cellpadding="4" cellspacing="0" border="0">
+        <tr valign="top">
+          <td class="sidebar">
+
+<!-- INCLUDE THE PAGE NAVIGATION -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+    <tr>
+        <td><small>not logged in (<a href="/login.php">login</a>)</small></td>
+    </tr>
+    <tr><td>
+<small>&nbsp;</small>
+<form action="http://www.google.com/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-3005259998294962:bvyni59kjr1" />
+    <input type="hidden" name="ie" value="ISO-8859-1" />
+    <input type="text" name="q" size="20" />
+    <br>
+    <input type="submit" name="sa" value="Search" />
+  </div>
+</form>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+    </td></tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="1"></td>
+    </tr>
+    <tr>
+        <td class="darkbg"><img src="/images/spacer.gif" alt='' border="0" height="3"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="2"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/index.php">Home</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/search.php">Advanced search</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/about.php">About Vim</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/community.php">Community</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/news/news.php">News</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/sponsor/index.php">Sponsoring</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/trivia.php">Trivia</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/docs.php">Documentation</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/download.php">Download</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/scripts/index.php">Scripts</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/tips/index.php">Tips</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/account/index.php">My Account</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/huh.php">Site Help</a></td>
+        </tr>
+</table>
+
+            <table width="172" cellpadding="0" cellspacing="0" border="0">
+              <tr><td><img src="/images/spacer.gif" alt="" border="0" width="1" height="8"></td></tr>
+              <tr><td class="darkbg"><img src="/images/spacer.gif" width="1" height="3" alt=""></td></tr>
+            </table>
+            <br>
+
+<!-- INCLUDE THE PAGE SIDEBAR TEXT -->
+&nbsp;
+
+          </td>
+        </tr>
+      </table>
+    </td>
+
+    <td class="darkbg"><img src="/images/spacer.gif" width="1" height="1" border="0" alt=""><br></td>
+    <td>
+      <table width="100%" cellpadding="10" cellspacing="0" border="0" bordercolor="red">
+        <tr>
+          <td valign="top">
+
+<span class="txth1">cvsmenu.vim (updated) : CVS(NT) integration plugin (Script #58 continued since 2005)</span> 
+
+<br>
+<br>
+
+<!-- karma table -->
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
+  <td>
+    Rating <b>124/42</b>,
+    Downloaded by 3845  </td>
+  <td class="lightbg">
+  <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
+  </td>
+  <td>
+    <a href="http://vim.wikia.com/wiki/Script:1245">Vim wiki</a>
+  </td>  
+</tr>
+</table>
+<p>
+
+<table cellspacing="0" cellpadding="0" border="0">
+<tr><td class="prompt">created by</td></tr>
+<tr><td><a href="/account/profile.php?user_id=6184">Yongwei Wu</a></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">script type</td></tr>
+<tr><td>utility</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">description</td></tr>
+<tr><td>Supports most cvs commands and adds some extended functions. It also works with CVSNT quite well and has some support for multiple encodings. Part of the top-level menus are as follows (screen shot: <a target="_blank" href="http://wyw.dcweb.cn/download.asp?path=vim&file=vim_session.png">http://wyw.dcweb.cn/download.asp?path=vim&file=vim_session.png</A>):<br><br>- Info<br>- Setting (switches and update)<br>- Keyword<br>- Directory (directory operations; screen shot: <a target="_blank" href="http://wyw.dcweb.cn/download.asp?path=vim&file=cvs_localstatus.png">http://wyw.dcweb.cn/download.asp?path=vim&file=cvs_localstatus.png</A>)<br>- Extra (operations on a specific revision, etc.)<br>- Diff (in the split-window style of Vim; screen shot: <a target="_blank" href="http://wyw.dcweb.cn/download.asp?path=vim&file=cvs_diff.png">http://wyw.dcweb.cn/download.asp?path=vim&file=cvs_diff.png</A>)<br>- Annotate (screen shot: <a target="_blank" href="http://wyw.dcweb.cn/download.asp?path=vim&file=cvs_annotate.png">http://wyw.dcweb.cn/download.asp?path=vim&file=cvs_annotate.png</A>)<br>- History<br>- Log (screen shot: <a target="_blank" href="http://wyw.dcweb.cn/download.asp?path=vim&file=cvs_log.png">http://wyw.dcweb.cn/download.asp?path=vim&file=cvs_log.png</A>)<br>- Status<br>- Local status (offline: displays status and version info)<br>- Check out<br>- Query update (like WinCVS/gCVS)<br>- Update (conflicts will be highlighted)<br>- Add<br>- Commit<br><br>The output can be sorted and is often clickable: it is easy to open conflicting files, etc. It works on single files as well as on whole directories, when called from fileexplorer. It also includes highlighting / mappings to navigate through cvs output or show conflicts.<br><br>The menu is displayed in GUI versions of Vim. However, it is useful even in text-only Vim. --- You may choose to use `wildmenu', or you can use key sequences similar to the hot keys in menu. E.g. `alt-c, i' is used to commit with the GUI menu; so `,ci' could be used in text-mode Vim to commit. The leader key, currently `,', can be easily modified in the script.<br><br>This is the re-release of Mr Thorsten Maerz's original script (<a href="/scripts/script.php?script_id=58">vimscript #58</a>), which was last updated in 2002. It now includes many bug fixes and enhancements. The latest revision of the cvsmenu script can also be found in the SourceForge CVS:<br><br>:pserver:anonymous@ezytools.cvs.sourceforge.net:/cvsroot/ezytools/VimTools/cvsmenu.vim<br><br>CvsMenu is able to update itself using this anonymous CVS. Find the menu items under `CVS &gt; Settings &gt; Install'.</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">install details</td></tr>
+<tr><td>Copy to the Vim plugin directory: generally ~/.vim/plugin in UNIXs, and $VIM\vimfiles\plugin (or $HOME\vimfiles\plugin) in Windows.<br><br>Choose `CVS &gt; Settings &gt; Install &gt; Install updates' in the menu, or the shortcut `,cgii', to checkout and install the latest script and documentation.</td></tr>
+<tr><td>&nbsp;</td></tr>
+</table>
+
+<!-- rating table -->
+<form name="rating">
+<input type="hidden" name="script_id" value="1245">
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>rate this script</b></td>
+  <td valign="middle">
+    <input type="radio" name="rating" value="life_changing">Life Changing
+    <input type="radio" name="rating" value="helpful">Helpful
+    <input type="radio" name="rating" value="unfulfilling">Unfulfilling&nbsp;
+    <input type="submit" value="rate">
+  </td>
+</tr>
+</table>
+</form>
+<span class="txth2">script versions</span> (<a href="add_script_version.php?script_id=1245">upload new version</a>)
+<p>
+Click on the package to download.
+<p>
+
+<table cellspacing="2" cellpadding="4" border="0" width="100%">
+<tr class='tableheader'>
+        <th valign="top">package</th>
+    <th valign="top">script version</th>
+    <th valign="top">date</th>
+    <th valign="top">Vim version</th>
+    <th valign="top">user</th>
+    <th valign="top">release notes</th>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=11423">cvsmenu.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.150</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-09-24</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=6184">Yongwei Wu</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Fix the issue that &quot;CVS &gt; Revert changes&quot; discards tag/branch information;<br>Fix some issues related to fileencoding.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=8868">cvsmenu.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.147</b></td>
+    <td class="roweven" valign="top" nowrap><i>2008-06-29</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=6184">Yongwei Wu</a></i></td>
+    <td class="roweven" valign="top" width="2000">Fix the issue that the global fileencoding can be accidentally changed by &quot;let &fileencoding=&quot;; fix the problem that the log message is not converted to the CVScmdencoding.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=8101">cvsmenu.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.145</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2007-12-29</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=6184">Yongwei Wu</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Fix the bug that the local status is not automatically refreshed when committing a file not in the current directory.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=7839">cvsmenu.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.144</b></td>
+    <td class="roweven" valign="top" nowrap><i>2007-10-26</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=6184">Yongwei Wu</a></i></td>
+    <td class="roweven" valign="top" width="2000">Fix the bug that shortcut keys cannot be created in Unix when the path of cvsmenu.vim contains spaces.<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=7737">cvsmenu.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.143</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2007-10-01</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=6184">Yongwei Wu</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Fix the bug that the file path cannot contain spaces (in Unix and Cygwin).</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=7088">cvsmenu.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.142</b></td>
+    <td class="roweven" valign="top" nowrap><i>2007-05-09</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=6184">Yongwei Wu</a></i></td>
+    <td class="roweven" valign="top" width="2000">Shorten `CVScvsoutputencoding' to `CVScmdencoding';<br>Add a new control variable g:CVSfileencoding to ensure the result of CVS-Diff and CVS-Annotate is correct;<br>Set the appropriate fileencoding in CVSDoCommand.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=6316">cvsmenu.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.140</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2006-10-22</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=6184">Yongwei Wu</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Re-enable password piping on Windows (tested to work with CVSNT 2.5.02 Build 2115) to make update cvsmenu.vim smoother; Change the name pattern of temporary log message file to make CVSeasylogmessage work with different versions of CVS (tested with more than 4 different CVS clients); Make some minor bug fixes.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=6311">cvsmenu.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.136</b></td>
+    <td class="roweven" valign="top" nowrap><i>2006-10-20</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=6184">Yongwei Wu</a></i></td>
+    <td class="roweven" valign="top" width="2000">When vimming a CVS log message, ensure there is an empty line at the beginning, make editing start in insert mode, and make a normal-mode ENTER finish editing (can be disabled by put `let g:CVSeasylogmessage=0' in (.|_)vimrc).</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=6304">cvsmenu.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.135</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2006-10-19</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=6184">Yongwei Wu</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Display a message and cease to CVS diff if the file is newly added; allow using `q' to close the CVS history window.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=6286">cvsmenu.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.133</b></td>
+    <td class="roweven" valign="top" nowrap><i>2006-10-16</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=6184">Yongwei Wu</a></i></td>
+    <td class="roweven" valign="top" width="2000">Use the corresponding version instead of the most recent version in the repository to Diff, as the command line `cvs diff ...' does.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=6280">cvsmenu.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.132</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2006-10-13</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=6184">Yongwei Wu</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Fix the display problem of `Directory &gt; Local status'; clean up the code a little.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=6264">cvsmenu.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.127</b></td>
+    <td class="roweven" valign="top" nowrap><i>2006-10-10</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=6184">Yongwei Wu</a></i></td>
+    <td class="roweven" valign="top" width="2000">Fix the bug that `Checkout to' does not work.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=6159">cvsmenu.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.126</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2006-09-11</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=6184">Yongwei Wu</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Allow non-ASCII filename to be used when encoding=utf-8.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=6134">cvsmenu.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.125</b></td>
+    <td class="roweven" valign="top" nowrap><i>2006-09-02</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=6184">Yongwei Wu</a></i></td>
+    <td class="roweven" valign="top" width="2000">Truncate the Vim title after the file name so that the file name is always visible when the directory name is long.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=6082">cvsmenu.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.124</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2006-08-20</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=6184">Yongwei Wu</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Map `q' to quickly close the buffer opened by cvs annotate and cvs log.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=5734">cvsmenu.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.123</b></td>
+    <td class="roweven" valign="top" nowrap><i>2006-05-21</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=6184">Yongwei Wu</a></i></td>
+    <td class="roweven" valign="top" width="2000">Update broken links and make self-update work again.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=5687">cvsmenu.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.122</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2006-05-13</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=6184">Yongwei Wu</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Update CVS info due to the SourceForge site change to make updating itself continue to work.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=4770">cvsmenu.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.121</b></td>
+    <td class="roweven" valign="top" nowrap><i>2005-11-16</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=6184">Yongwei Wu</a></i></td>
+    <td class="roweven" valign="top" width="2000">- Use extracted cvs command (w/o `-q' etc.) to match with CVSdontconvertfor; - Ensure correct message escaping on Windows when shell=cmd.exe (regardless of shellxquote); - Documentation is updated to reflect my changes: be sure to use `CVS - Settings - Install - Install updates' (or `Download updates' followed by `Install buffer as help' on the help file buffer) to get it.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=4725">cvsmenu.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.118</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2005-11-09</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=6184">Yongwei Wu</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- Deal with &quot;`&quot; correctly under Unix;<br>- Make no-reload-prompt trick work when the committed file is not in the current directory.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=4713">cvsmenu.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.116</b></td>
+    <td class="roweven" valign="top" nowrap><i>2005-11-01</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=6184">Yongwei Wu</a></i></td>
+    <td class="roweven" valign="top" width="2000">- Do not allow to commit if the current file has not a name;<br>- Fix a bug when executing `:w file' on an unsaved named buffer.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=4673">cvsmenu.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.114</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2005-10-14</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=6184">Yongwei Wu</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- Work around a problem that unedit of CVSNT may prompt to revert changes;<br>- Allow the ouput encoding of cvs be different from the Vim encoding (e.g., to make Chinese in annotate and the error message of CVSNT display correctly, one may now use `let CVScvsoutputencoding=&quot;gbk&quot;' in .vimrc).</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=4612">cvsmenu.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.112</b></td>
+    <td class="roweven" valign="top" nowrap><i>2005-09-22</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=6184">Yongwei Wu</a></i></td>
+    <td class="roweven" valign="top" width="2000">- Rename CVSaddspaceafterannotate to CVSspacesinannotate;<br>- Display two missing parameters in CVS - Info;<br>- Avoid the reload prompt after commit;<br>- Do not allow to commit if the current buffer is modified.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=4414">cvsmenu.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.109</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2005-07-07</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=6184">Yongwei Wu</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Fix problems with CVS annotation highlighting.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=4351">cvsmenu.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.107</b></td>
+    <td class="roweven" valign="top" nowrap><i>2005-06-08</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=6184">Yongwei Wu</a></i></td>
+    <td class="roweven" valign="top" width="2000">- Allow space adjustment of output of &quot;CVS - Annotate&quot;&nbsp;&nbsp;(assign a positive value to g:CVSaddspaceafterannotate) so that files that use TABs can align better.<br>- Output of &quot;CVS - Annotate&quot; is now highlighted.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=4207">cvsmenu.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.104</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2005-04-28</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=6184">Yongwei Wu</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- Do not remap keys for new buffers output by cvs annotate, history, and log.<br>- Correct the help message for output buffer.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=4184">cvsmenu.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.102</b></td>
+    <td class="roweven" valign="top" nowrap><i>2005-04-19</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=6184">Yongwei Wu</a></i></td>
+    <td class="roweven" valign="top" width="2000">Make menu commands like &quot;CVS - Directory - Update&quot; work in insert mode.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=4175">cvsmenu.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.100</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2005-04-17</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=6184">Yongwei Wu</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Do not reload-after-commit after a directory commit (to avoid an error).<br><br>Fix CVSInstallAsPlugin and CVSInstallAsHelp so that the plugin and its help are installed to where the script is currently installed.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=4121">cvsmenu.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.97</b></td>
+    <td class="roweven" valign="top" nowrap><i>2005-04-04</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=6184">Yongwei Wu</a></i></td>
+    <td class="roweven" valign="top" width="2000">Fix the broken key mapping. Now it is possible to use key sequences similar to the menu hot keys. E.g. `alt-c, i' is used to commit when the GUI menu exists; so `,ci' could be used in text-mode Vim to commit.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=4089">cvsmenu.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.96</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2005-03-28</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=6184">Yongwei Wu</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Make sure the special characters &quot;&&quot;, &quot;&lt;&quot;, &quot;&gt;&quot;, &quot;|&quot;, and &quot;^&quot; are handled correctly if shell is cmd.exe and shellxquote is \&quot; (there will be miscellaneous gotchas if the shell is command.com or shellxquote is empty).<br><br>Change the prefixing spaces in menu items to appending spaces to make wildmenu users happier (when wim includes longest).</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=4058">cvsmenu.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.94</b></td>
+    <td class="roweven" valign="top" nowrap><i>2005-03-22</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=6184">Yongwei Wu</a></i></td>
+    <td class="roweven" valign="top" width="2000">Initial upload</td>
+</tr>
+</table>
+<!-- finish off the framework -->
+          </td>
+        </tr>
+      </table>
+    </td>
+
+  </tr>
+</table>
+
+<!-- END OF THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr><td colspan="4" bgcolor="#000000"><img src="/images/spacer.gif" height="2" width="1" alt=""></td></tr>
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr>
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+
+    <td align="left" valign="top"><small>
+      If you have questions or remarks about this site, visit the
+      <a href="http://vimonline.sf.net">vimonline development</a> pages.
+      Please use this site responsibly.
+      <br> 
+      
+      Questions about <a href="http://www.vim.org/about.php">Vim</a> should go
+      to the <a href="http://www.vim.org/maillist.php">maillist</a>.
+      Help Bram <a href="http://iccf-holland.org/">help Uganda</a>.
+      </small>
+	&nbsp;
+	&nbsp;
+
+	<!-- Start of StatCounter Code -->
+	<script type="text/javascript" language="javascript">
+	var sc_project=1417324; 
+	var sc_invisible=1; 
+	var sc_partition=11; 
+	var sc_security="d41633bc"; 
+	</script>
+
+	<script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script><noscript><a href="http://www.statcounter.com/" target="_blank"><img  src="http://c12.statcounter.com/counter.php?sc_project=1417324&java=0&security=d41633bc&invisible=0" alt="free tracking" border="0"></a> </noscript>
+	<!-- End of StatCounter Code -->
+          </td>
+
+    <td align="right" valign="top">
+      		<a href="http://sourceforge.net/projects/vim" rel="nofollow"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=8&type=1" width="88" height="31" border="0" alt="SourceForge.net Logo" /></a>
+    </td>
+
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+  </tr>
+
+    
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  
+  </tr>
+</table>
+
+</body>
+</html>
+

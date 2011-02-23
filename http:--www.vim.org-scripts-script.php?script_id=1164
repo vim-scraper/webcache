@@ -1,0 +1,324 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+  <link rel="Stylesheet" type="text/css" href="/css/style.css" >
+  <title>EditJava - lookup source file for classname under cursor : vim online</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <meta name="KEYWORDS" content="Vim, Vi IMproved, text editor, home, documentation, tips, scripts, news">
+  <link rel="shortcut icon" type="image/x-icon" href="/images/vim_shortcut.ico">
+</head>
+
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff"> 
+
+<!-- HEADER, SPONSOR IMAGE, VIM IMAGE AND BOOK AD -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+  <td class="lightbg">&nbsp;&nbsp;&nbsp;</td>
+  <td class="lightbg" align="left"><a href="/sponsor/index.php"><img src="/images/sponsorvim.gif" alt="sponsor Vim development" border="0"></a></td>
+    <td class="lightbg" align="center"><a href="/index.php"><img src="/images/vim_header.gif" border="0" alt="Vim logo"></a></td>
+    <td class="lightbg" align="right"><a href="http://iccf-holland.org/click5.html"><img src="/images/buyhelplearn.gif" alt="Vim Book Ad" border="0"></a></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="darkbg"><img src="/images/spacer.gif" width="1" height="10" alt=""></td>
+  </tr>
+</table>
+<!-- THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+  <col width="180">
+  <col width="1">
+
+  <tr valign="top">
+    <td class="sidebar">
+      <table width="180" cellpadding="4" cellspacing="0" border="0">
+        <tr valign="top">
+          <td class="sidebar">
+
+<!-- INCLUDE THE PAGE NAVIGATION -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+    <tr>
+        <td><small>not logged in (<a href="/login.php">login</a>)</small></td>
+    </tr>
+    <tr><td>
+<small>&nbsp;</small>
+<form action="http://www.google.com/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-3005259998294962:bvyni59kjr1" />
+    <input type="hidden" name="ie" value="ISO-8859-1" />
+    <input type="text" name="q" size="20" />
+    <br>
+    <input type="submit" name="sa" value="Search" />
+  </div>
+</form>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+    </td></tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="1"></td>
+    </tr>
+    <tr>
+        <td class="darkbg"><img src="/images/spacer.gif" alt='' border="0" height="3"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="2"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/index.php">Home</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/search.php">Advanced search</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/about.php">About Vim</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/community.php">Community</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/news/news.php">News</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/sponsor/index.php">Sponsoring</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/trivia.php">Trivia</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/docs.php">Documentation</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/download.php">Download</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/scripts/index.php">Scripts</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/tips/index.php">Tips</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/account/index.php">My Account</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/huh.php">Site Help</a></td>
+        </tr>
+</table>
+
+            <table width="172" cellpadding="0" cellspacing="0" border="0">
+              <tr><td><img src="/images/spacer.gif" alt="" border="0" width="1" height="8"></td></tr>
+              <tr><td class="darkbg"><img src="/images/spacer.gif" width="1" height="3" alt=""></td></tr>
+            </table>
+            <br>
+
+<!-- INCLUDE THE PAGE SIDEBAR TEXT -->
+&nbsp;
+
+          </td>
+        </tr>
+      </table>
+    </td>
+
+    <td class="darkbg"><img src="/images/spacer.gif" width="1" height="1" border="0" alt=""><br></td>
+    <td>
+      <table width="100%" cellpadding="10" cellspacing="0" border="0" bordercolor="red">
+        <tr>
+          <td valign="top">
+
+<span class="txth1">EditJava : lookup source file for classname under cursor</span> 
+
+<br>
+<br>
+
+<!-- karma table -->
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
+  <td>
+    Rating <b>14/5</b>,
+    Downloaded by 588  </td>
+  <td class="lightbg">
+  <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
+  </td>
+  <td>
+    <a href="http://vim.wikia.com/wiki/Script:1164">Vim wiki</a>
+  </td>  
+</tr>
+</table>
+<p>
+
+<table cellspacing="0" cellpadding="0" border="0">
+<tr><td class="prompt">created by</td></tr>
+<tr><td><a href="/account/profile.php?user_id=6544">richard emberson</a></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">script type</td></tr>
+<tr><td>utility</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">description</td></tr>
+<tr><td>Place cursor over a java classname and enter the scripts map key sequence (I&nbsp;&nbsp;map it to &quot;,g&quot;). The base java file name is &lt;cword&gt; . &quot;.java&quot; <br><br>First if the cursor is over a package classname like 'java.util.Map', then if the cursor is over 'Map', the java/util/Map.java file is opened else if the cursor is over, say, 'util', then the java/util directory is opened. <br><br>Otherwise, the script looks for a file with the filename in local directory and&nbsp;&nbsp;if it exists, opens it.<br><br>If not, it looks for an explicit import file with the filename, if it can be found&nbsp;&nbsp;in the java source path, then it opens it. If not found, use 'locate' command to look for filename plus import package directories prepended. If found then open it.<br><br>If not, it looks for a file in &quot;$JAVA_HOME/src/java/lang&quot; and if found opens it. <br><br>If not it then looks for a match using any of the implicit import statements, those ending in * and in the java source path. If found open it. Otherwise use 'locate' command to search for filename plus import package path prepended and if found open it.<br><br>Lastly, if not found by any of the above methods it then attempts to find a file using the package path. The current file might be in a parallel junit directory or in some parallel directory structure. If this is found in the java source path then it is opened otherwise it uses &quot;locate' command to search for the file and if found opens it.<br><br>EditJava plus the bufexplorer.vim script, <br>the &quot;edit cwd&quot; Tip #2:<br>map ,d :e &lt;C-R&gt;=expand(&quot;%:p:h&quot;)&lt;CR&gt;&lt;CR&gt;&nbsp;&nbsp;<br>and the mapping allowing one to toggle between files<br>map gg :e#^M <br>with the buffer edit commands (where N is an integer)<br>:bp<br>:bpN<br>:bn<br>:bpN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>provide one with a collection of tools to view and navigate Java sources.<br></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">install details</td></tr>
+<tr><td>Place script in your vim script directory:<br>$HOME/vimscripts/javae.vim<br><br>Add the following to your .vimrc file:<br><br>&quot; Set my Leader character<br>let mapleader = &quot;,&quot;<br><br>&quot; Source javae.vim<br>source $HOME/vimscripts/javae.vim<br><br>&quot; Create a java source path in .vimrc <br>&quot; (I currently have 17 source paths in my .vimrc):<br>let $JAVASOURCEPATH =&quot;$JAVA_HOME/src&quot; .<br>&nbsp;&nbsp;\&quot;,$HOME/java/xerces/xerces/src&quot; .<br>&nbsp;&nbsp;\&quot;,$HOME/java/xerces/xalan/src&quot; .<br>&nbsp;&nbsp;\&quot;,$HOME/java/jboss/jboss&quot; .<br>&nbsp;&nbsp;\&quot;,$HOME/myproject/src/java&quot;<br><br>&quot; Creating a mapping to call the script in .vimrc:<br>&quot; goto<br>map &lt;Leader&gt;g :call EditJava('e',$JAVASOURCEPATH)&lt;CR&gt; <br>&quot; open horizontal<br>map &lt;Leader&gt;h :call EditJava('sp',$JAVASOURCEPATH)&lt;CR&gt;<br>&quot; open vertical<br>map &lt;Leader&gt;v :call EditJava('vsp',$JAVASOURCEPATH)&lt;CR&gt;<br><br>Define behavior<br>Set g:javae_use_locate_cmd&nbsp;&nbsp;to 0 if you do not wish to use a 'locate&quot; command. The default is to use the 'locate' command:<br>let g:javae_use_locate_cmd = 1<br><br>Set the name of the 'locate' command. The default value for g:javae_locate_cmd is &quot;slocate&quot;. If you wish to use a different command put the folloing in your .vimrc:<br>let g:javae_locate_cmd = &lt;command_name&gt;<br><br>If using a 'locate' command, then one can force javae to allways prompt even when there is only one match by setting g:javae_locateopen_alwaysprompt to 1. <br>The default is to only prompt when there is more than one file:<br>let g:javae_locateopen_alwaysprompt = 0<br><br>Also, one can set whether or not to get an error message if in response to a prompt an incorrect value is entered. To not see any error messages set g:javae_locateopen_showerror to 0. The default is to see error messages<br>let g:javae_locateopen_showerror = 1<br><br>When switching to another buffer the current buffer may need to be saved. The g:javae_automatic_update flag allows one to control this behavior. Setting it to 0:<br>let g:javae_syntax_based = 0<br>will not automatically update the current buffer if it needs to be saved allowing you to automatically see the new buffer, rather you must first manually save the current buffer and re-run the search.<br>The default is to allow for automatic updates:<br>let g:javae_syntax_based = 1.<br><br>Import statements do not occur after the first class or interface declaration. While searching the current file for all import statements one can either read each line of the current file or stop after the first class or interface declaration. In addition, what looks like an import statement might be in a comment. If the flag g:javae_syntax_based is set to 0:<br>let g:javae_syntax_based=0<br>then each line in the file is read. <br>On the other hand if it is set to 1:<br>let g:javae_syntax_based = 1<br>the default value, then the search for import statements skips comments and stops after the first class or interface declaration. The reason one might not wish to use the g:javae_syntax_based flag is that under the covers java syntax values are used to determine when one is in a comment or declaration and if the user has modified the default java syntax values found in java.vim, then the syntax base code may not work.<br><br></td></tr>
+<tr><td>&nbsp;</td></tr>
+</table>
+
+<!-- rating table -->
+<form name="rating">
+<input type="hidden" name="script_id" value="1164">
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>rate this script</b></td>
+  <td valign="middle">
+    <input type="radio" name="rating" value="life_changing">Life Changing
+    <input type="radio" name="rating" value="helpful">Helpful
+    <input type="radio" name="rating" value="unfulfilling">Unfulfilling&nbsp;
+    <input type="submit" value="rate">
+  </td>
+</tr>
+</table>
+</form>
+<span class="txth2">script versions</span> (<a href="add_script_version.php?script_id=1164">upload new version</a>)
+<p>
+Click on the package to download.
+<p>
+
+<table cellspacing="2" cellpadding="4" border="0" width="100%">
+<tr class='tableheader'>
+        <th valign="top">package</th>
+    <th valign="top">script version</th>
+    <th valign="top">date</th>
+    <th valign="top">Vim version</th>
+    <th valign="top">user</th>
+    <th valign="top">release notes</th>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=3796">javae.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.4</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2005-01-25</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=6544">richard emberson</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Now looks a the package path to see if the file being searched for is in a parallel directory structure. Whether or not to automatically save the current buffer, if needed, is controled by a flag. Lastly, java syntax can be used to identify when the first class/interface declaration has occurred and the search for import statements should stop.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=3776">javae.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.3</b></td>
+    <td class="roweven" valign="top" nowrap><i>2005-01-17</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=6544">richard emberson</a></i></td>
+    <td class="roweven" valign="top" width="2000">Added ability to use the system &quot;locate&quot; command to<br>find the java file if it can not be located in the java path<br>explicitly passed in as a paramenter. Also, fixed a couple<br>of bugs.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=3742">javae.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.2</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2005-01-03</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=6544">richard emberson</a></i></td>
+    <td class="rowodd" valign="top" width="2000">The entry point function, 'EditJava', now takes a command <br>argument which is executed if a matching file or directory is <br>found. This allows the user to parameterize the call with their <br>choice of opening a new window for the source file, e.g., the <br>command can be:<br>e, vsplit, new, split, vertical, sview, vnew , etc.<br><br>Also, the 'EditJava' method was refactored.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=3733">javae.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.1</b></td>
+    <td class="roweven" valign="top" nowrap><i>2004-12-27</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=6544">richard emberson</a></i></td>
+    <td class="roweven" valign="top" width="2000">Now if there is a package path classname such as java.util.Map<br>in ones code, then with cursor over Map, the Map.java file<br>is opened and if cursor is over for example 'util' then the<br>java/util directory is opened. All of the other means of opening<br>the java file under the cursor are still there.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=3725">javae.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.0</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2004-12-23</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=6544">richard emberson</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Initial upload</td>
+</tr>
+</table>
+<!-- finish off the framework -->
+          </td>
+        </tr>
+      </table>
+    </td>
+
+  </tr>
+</table>
+
+<!-- END OF THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr><td colspan="4" bgcolor="#000000"><img src="/images/spacer.gif" height="2" width="1" alt=""></td></tr>
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr>
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+
+    <td align="left" valign="top"><small>
+      If you have questions or remarks about this site, visit the
+      <a href="http://vimonline.sf.net">vimonline development</a> pages.
+      Please use this site responsibly.
+      <br> 
+      
+      Questions about <a href="http://www.vim.org/about.php">Vim</a> should go
+      to the <a href="http://www.vim.org/maillist.php">maillist</a>.
+      Help Bram <a href="http://iccf-holland.org/">help Uganda</a>.
+      </small>
+	&nbsp;
+	&nbsp;
+
+	<!-- Start of StatCounter Code -->
+	<script type="text/javascript" language="javascript">
+	var sc_project=1417324; 
+	var sc_invisible=1; 
+	var sc_partition=11; 
+	var sc_security="d41633bc"; 
+	</script>
+
+	<script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script><noscript><a href="http://www.statcounter.com/" target="_blank"><img  src="http://c12.statcounter.com/counter.php?sc_project=1417324&java=0&security=d41633bc&invisible=0" alt="free tracking" border="0"></a> </noscript>
+	<!-- End of StatCounter Code -->
+          </td>
+
+    <td align="right" valign="top">
+      		<a href="http://sourceforge.net/projects/vim" rel="nofollow"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=8&type=1" width="88" height="31" border="0" alt="SourceForge.net Logo" /></a>
+    </td>
+
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+  </tr>
+
+    
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  
+  </tr>
+</table>
+
+</body>
+</html>
+

@@ -1,0 +1,492 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+  <link rel="Stylesheet" type="text/css" href="/css/style.css" >
+  <title>formatvim - Convert current file to colored HTML, BBCode or whatever : vim online</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <meta name="KEYWORDS" content="Vim, Vi IMproved, text editor, home, documentation, tips, scripts, news">
+  <link rel="shortcut icon" type="image/x-icon" href="/images/vim_shortcut.ico">
+</head>
+
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff"> 
+
+<!-- HEADER, SPONSOR IMAGE, VIM IMAGE AND BOOK AD -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+  <td class="lightbg">&nbsp;&nbsp;&nbsp;</td>
+  <td class="lightbg" align="left"><a href="/sponsor/index.php"><img src="/images/sponsorvim.gif" alt="sponsor Vim development" border="0"></a></td>
+    <td class="lightbg" align="center"><a href="/index.php"><img src="/images/vim_header.gif" border="0" alt="Vim logo"></a></td>
+    <td class="lightbg" align="right"><a href="http://iccf-holland.org/click5.html"><img src="/images/buyhelplearn.gif" alt="Vim Book Ad" border="0"></a></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="darkbg"><img src="/images/spacer.gif" width="1" height="10" alt=""></td>
+  </tr>
+</table>
+<!-- THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+  <col width="180">
+  <col width="1">
+
+  <tr valign="top">
+    <td class="sidebar">
+      <table width="180" cellpadding="4" cellspacing="0" border="0">
+        <tr valign="top">
+          <td class="sidebar">
+
+<!-- INCLUDE THE PAGE NAVIGATION -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+    <tr>
+        <td><small>not logged in (<a href="/login.php">login</a>)</small></td>
+    </tr>
+    <tr><td>
+<small>&nbsp;</small>
+<form action="http://www.google.com/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-3005259998294962:bvyni59kjr1" />
+    <input type="hidden" name="ie" value="ISO-8859-1" />
+    <input type="text" name="q" size="20" />
+    <br>
+    <input type="submit" name="sa" value="Search" />
+  </div>
+</form>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+    </td></tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="1"></td>
+    </tr>
+    <tr>
+        <td class="darkbg"><img src="/images/spacer.gif" alt='' border="0" height="3"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="2"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/index.php">Home</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/search.php">Advanced search</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/about.php">About Vim</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/community.php">Community</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/news/news.php">News</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/sponsor/index.php">Sponsoring</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/trivia.php">Trivia</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/docs.php">Documentation</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/download.php">Download</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/scripts/index.php">Scripts</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/tips/index.php">Tips</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/account/index.php">My Account</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/huh.php">Site Help</a></td>
+        </tr>
+</table>
+
+            <table width="172" cellpadding="0" cellspacing="0" border="0">
+              <tr><td><img src="/images/spacer.gif" alt="" border="0" width="1" height="8"></td></tr>
+              <tr><td class="darkbg"><img src="/images/spacer.gif" width="1" height="3" alt=""></td></tr>
+            </table>
+            <br>
+
+<!-- INCLUDE THE PAGE SIDEBAR TEXT -->
+&nbsp;
+
+          </td>
+        </tr>
+      </table>
+    </td>
+
+    <td class="darkbg"><img src="/images/spacer.gif" width="1" height="1" border="0" alt=""><br></td>
+    <td>
+      <table width="100%" cellpadding="10" cellspacing="0" border="0" bordercolor="red">
+        <tr>
+          <td valign="top">
+
+<span class="txth1">formatvim : Convert current file to colored HTML, BBCode or whatever</span> 
+
+<br>
+<br>
+
+<!-- karma table -->
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
+  <td>
+    Rating <b>4/1</b>,
+    Downloaded by 327  </td>
+  <td class="lightbg">
+  <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
+  </td>
+  <td>
+    <a href="http://vim.wikia.com/wiki/Script:3113">Vim wiki</a>
+  </td>  
+</tr>
+</table>
+<p>
+
+<table cellspacing="0" cellpadding="0" border="0">
+<tr><td class="prompt">created by</td></tr>
+<tr><td><a href="/account/profile.php?user_id=18939">ZyX ZyX</a></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">script type</td></tr>
+<tr><td>utility</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">description</td></tr>
+<tr><td>There are some things that included out-of-the-box 2html.vim plugin does not support, so I ended in writing my own format.vim script:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;— 'list' and 'listchars' (tab, trail, eol, conceal, including the case when 'list' is on and 'lcs' does not contain tab)<br>&nbsp;&nbsp;&nbsp;&nbsp;— Foreground colors for lines with differencies (if I am not mistaking, implemented in latest 2html)<br>&nbsp;&nbsp;&nbsp;&nbsp;— Normal special character coloring<br>&nbsp;&nbsp;&nbsp;&nbsp;— Background color for the whole line with differencies and folds, not just for text<br>&nbsp;&nbsp;&nbsp;&nbsp;— Tags linked to their definition (slow, HTML only (unless you write specification by yourself), but partially on by default, also implemented by <a href="/scripts/script.php?script_id=2252">vimscript #2252</a> for 2html)<br>&nbsp;&nbsp;&nbsp;&nbsp;— Side-by-side diff (also present in latest 2html version)<br>&nbsp;&nbsp;&nbsp;&nbsp;— Full conceal support, including 'cole', 'lcs:conceal' and saving information about actual text present<br>&nbsp;&nbsp;&nbsp;&nbsp;— Foldcolumn support (2html generates foldcolumn only if dynamic_folds is on, and this foldcolumn is different from what Vim actually displays)<br>&nbsp;&nbsp;&nbsp;&nbsp;— My killer feature: exporting to any format you can write specification for. (for example, bbcode; bbcode specification for unixforum.org is included in the distribution)<br><br>Examples:<br><a target="_blank" href="http://kp-pav.narod2.ru/formatvim-2.2.1-side-by-side-diff.html">http://kp-pav.narod2.ru/formatvim-2.2.1-side-by-side-diff.html</A><br><a target="_blank" href="http://kp-pav.narod2.ru/formatvim-2.2.1-diff.html">http://kp-pav.narod2.ru/formatvim-2.2.1-diff.html</A><br><a target="_blank" href="http://kp-pav.narod2.ru/formatvim-2.2.1-AllFolds.html">http://kp-pav.narod2.ru/formatvim-2.2.1-AllFolds.html</A> (if you want to open/close fold permanently, not only at hover, either click anywhere inside the fold or click its header)<br><a target="_blank" href="http://kp-pav.narod2.ru/formatvim-2.3.2-formatconcealed-1.html">http://kp-pav.narod2.ru/formatvim-2.3.2-formatconcealed-1.html</A><br><a target="_blank" href="http://kp-pav.narod2.ru/formatvim-2.3.2-formatconcealed-2.html">http://kp-pav.narod2.ru/formatvim-2.3.2-formatconcealed-2.html</A> (hover to see actual text present in the line)<br><br>Documentation: <a target="_blank" href="http://vimpluginloader.sourceforge.net/doc/format.txt.html">http://vimpluginloader.sourceforge.net/doc/format.txt.html</A><br>Project page: <a target="_blank" href="http://sourceforge.net/projects/formatvim">http://sourceforge.net/projects/formatvim</A><br>Dependencies (you do not need to install them by yourself, see installation details):<br><a href="/scripts/script.php?script_id=3184">vimscript #3184</a>, <a target="_blank" href="http://sourceforge.net/projects/vimpluginloader">http://sourceforge.net/projects/vimpluginloader</A><br><a href="/scripts/script.php?script_id=3186">vimscript #3186</a>, <a target="_blank" href="http://sourceforge.net/projects/vimstuff">http://sourceforge.net/projects/vimstuff</A><br><a href="/scripts/script.php?script_id=3187">vimscript #3187</a>, <a target="_blank" href="http://sourceforge.net/projects/vimargumentchec">http://sourceforge.net/projects/vimargumentchec</A><br><a href="/scripts/script.php?script_id=3188">vimscript #3188</a>, <a target="_blank" href="http://sourceforge.net/projects/vimcompcrtr">http://sourceforge.net/projects/vimcompcrtr</A></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">install details</td></tr>
+<tr><td>You can install this plugin using scriptmanager (<a href="/scripts/script.php?script_id=2905">vimscript #2905</a>) plugin (install scriptmanager, call scriptmanager#Install([&quot;formatvim&quot;]) and add ``call scriptmanager#Activate([&quot;formatvim&quot;])'' to your .vimrc, then reload vim. Vim-addon-manager will install all dependencies for you). You can also use archives attached to this page, they contain plugin with all dependencies, so you do not need to fetch them yourself.<br><br>Gentoo users can use the following mercurial overlay: <a target="_blank" href="http://vimpluginloader.hg.sourceforge.net">http://vimpluginloader.hg.sourceforge.net</A>:8000/hgroot/vimpluginloader/pluginloader-overlay.</td></tr>
+<tr><td>&nbsp;</td></tr>
+</table>
+
+<!-- rating table -->
+<form name="rating">
+<input type="hidden" name="script_id" value="3113">
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>rate this script</b></td>
+  <td valign="middle">
+    <input type="radio" name="rating" value="life_changing">Life Changing
+    <input type="radio" name="rating" value="helpful">Helpful
+    <input type="radio" name="rating" value="unfulfilling">Unfulfilling&nbsp;
+    <input type="submit" value="rate">
+  </td>
+</tr>
+</table>
+</form>
+<span class="txth2">script versions</span> (<a href="add_script_version.php?script_id=3113">upload new version</a>)
+<p>
+Click on the package to download.
+<p>
+
+<table cellspacing="2" cellpadding="4" border="0" width="100%">
+<tr class='tableheader'>
+        <th valign="top">package</th>
+    <th valign="top">script version</th>
+    <th valign="top">date</th>
+    <th valign="top">Vim version</th>
+    <th valign="top">user</th>
+    <th valign="top">release notes</th>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=14574">formatvim-2.5.tar.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.5</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-12-19</i></td>
+    <td class="rowodd" valign="top" nowrap>7.3</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=18939">ZyX ZyX</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Switched to new FormatCommand arguments model</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=14569">formatvim-2.4.3.tar.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.4.3</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-12-18</i></td>
+    <td class="roweven" valign="top" nowrap>9999</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=18939">ZyX ZyX</a></i></td>
+    <td class="roweven" valign="top" width="2000">Reposting bundle due to core plugins update</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=14476">formatvim-2.4.3.tar.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.4.3</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-12-11</i></td>
+    <td class="rowodd" valign="top" nowrap>7.3</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=18939">ZyX ZyX</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Removed yamlvim dependency, added tokens format specification and @~@ and @^@, fixed formatting of closed folds</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=14323">formatvim-2.4.2.tar.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.4.2</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-11-20</i></td>
+    <td class="roweven" valign="top" nowrap>9999</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=18939">ZyX ZyX</a></i></td>
+    <td class="roweven" valign="top" width="2000">Reposting bundle due to core plugins update</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=14190">formatvim-2.4.2.tar.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.4.2</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-11-06</i></td>
+    <td class="rowodd" valign="top" nowrap>7.3</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=18939">ZyX ZyX</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Moved color lists to config/formatvim/colors-*.yaml, made it possible to override colors</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13788">formatvim-2.3.4.tar.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.3.4</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-09-09</i></td>
+    <td class="roweven" valign="top" nowrap>7.2</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=18939">ZyX ZyX</a></i></td>
+    <td class="roweven" valign="top" width="2000">Added %!{cmd}!% format specification, added lcs:conceal support, added support for the case when 'lcs' does not have tab and 'list' is on, lots of bugfixes</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13707">formatvim-2.3.3.tar.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.3.3</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-08-28</i></td>
+    <td class="rowodd" valign="top" nowrap>7.2</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=18939">ZyX ZyX</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Added tests, fixed one bug</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13706">formatvim-2.3.2.tar.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.3.2</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-08-28</i></td>
+    <td class="roweven" valign="top" nowrap>7.2</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=18939">ZyX ZyX</a></i></td>
+    <td class="roweven" valign="top" width="2000">Fixed displaying of blank lines</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13704">formatvim-2.3.1.tar.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.3.1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-08-28</i></td>
+    <td class="rowodd" valign="top" nowrap>7.2</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=18939">ZyX ZyX</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Added relative numbering support</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13702">formatvim-2.3.tar.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.3</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-08-28</i></td>
+    <td class="roweven" valign="top" nowrap>7.2</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=18939">ZyX ZyX</a></i></td>
+    <td class="roweven" valign="top" width="2000">Added concealed characters support</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13616">formatvim-2.2.1.tar.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.2.1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-08-18</i></td>
+    <td class="rowodd" valign="top" nowrap>7.2</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=18939">ZyX ZyX</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Fixed some validator errors</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13572">formatvim-2.2.tar.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.2</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-08-14</i></td>
+    <td class="roweven" valign="top" nowrap>7.2</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=18939">ZyX ZyX</a></i></td>
+    <td class="roweven" valign="top" width="2000">Added support for tags</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13520">formatvim-2.1.tar.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-08-08</i></td>
+    <td class="rowodd" valign="top" nowrap>7.2</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=18939">ZyX ZyX</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Added support for more then two diff windows, some other fixes</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13488">format-2.0.tar.xz</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.0</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-08-04</i></td>
+    <td class="roweven" valign="top" nowrap>7.2</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=18939">ZyX ZyX</a></i></td>
+    <td class="roweven" valign="top" width="2000">Added experimental side-by-side diff creation, added cursor position support (unfinished, disabled by default), major changes to format specification, some fixes</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13269">format-1.8.2.tar.xz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.8.2</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-06-30</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=18939">ZyX ZyX</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Added «KeepColorCache» option, improved «bbcode-unixforum» format specification, some other fixes.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13266">format-1.8.1.tar.xz</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.8.1</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-06-30</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=18939">ZyX ZyX</a></i></td>
+    <td class="roweven" valign="top" width="2000">Made «linestart'»and «lineend» keys optional, some fixes</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13265">format-1.8.tar.xz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.8</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-06-30</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=18939">ZyX ZyX</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Added FormatCommand options that override both default and user settings.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13260">format-1.7.tar.xz</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.7</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-06-28</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=18939">ZyX ZyX</a></i></td>
+    <td class="roweven" valign="top" width="2000">Added «html-vimwiki» format.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13140">format-1.6.tar.xz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.6</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-06-06</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=18939">ZyX ZyX</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Added commandline completion</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13137">format-1.5.tar.xz</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.5</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-06-06</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=18939">ZyX ZyX</a></i></td>
+    <td class="roweven" valign="top" width="2000">Added AllFolds option (for html format specification it is just like g:html_dynamic_folds for 2html, but you are free to write something else), ~8% perfomance improvement.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13133">format-1.4.tar.xz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.4</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-06-06</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=18939">ZyX ZyX</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Added &quot;nolf&quot; (joins everything in a single line) and &quot;haslf&quot; (allow format specification to define line breaks) format specification options.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13131">format-1.3.tar.xz</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.3</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-06-06</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=18939">ZyX ZyX</a></i></td>
+    <td class="roweven" valign="top" width="2000">Added lcs:nbsp handling, some fixes</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13119">format-1.2.1.tar.xz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.2.1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-06-06</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=18939">ZyX ZyX</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Greatly improved performance (~37% for ShowProgress=0, ~53% for ShowProgress=1 and ~43% for ShowProgress=2).</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13118">format-1.2.tar.xz</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.2</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-06-05</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=18939">ZyX ZyX</a></i></td>
+    <td class="roweven" valign="top" width="2000">Added ShowProgress option (adds progressbar). Note that ShowProgress=2 makes my script ~30% slower while ShowProgress=1 slows down only for ~5%.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13117">format-1.1.tar.xz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-06-05</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=18939">ZyX ZyX</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Added NoLineNR (removes line numbering) and CollapsFiller (collapses too long diff fillers) options.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13116">format-1.0.tar.xz</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.0</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-06-05</i></td>
+    <td class="roweven" valign="top" nowrap>7.2</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=18939">ZyX ZyX</a></i></td>
+    <td class="roweven" valign="top" width="2000">Initial upload</td>
+</tr>
+</table>
+<!-- finish off the framework -->
+          </td>
+        </tr>
+      </table>
+    </td>
+
+  </tr>
+</table>
+
+<!-- END OF THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr><td colspan="4" bgcolor="#000000"><img src="/images/spacer.gif" height="2" width="1" alt=""></td></tr>
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr>
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+
+    <td align="left" valign="top"><small>
+      If you have questions or remarks about this site, visit the
+      <a href="http://vimonline.sf.net">vimonline development</a> pages.
+      Please use this site responsibly.
+      <br> 
+      
+      Questions about <a href="http://www.vim.org/about.php">Vim</a> should go
+      to the <a href="http://www.vim.org/maillist.php">maillist</a>.
+      Help Bram <a href="http://iccf-holland.org/">help Uganda</a>.
+      </small>
+	&nbsp;
+	&nbsp;
+
+	<!-- Start of StatCounter Code -->
+	<script type="text/javascript" language="javascript">
+	var sc_project=1417324; 
+	var sc_invisible=1; 
+	var sc_partition=11; 
+	var sc_security="d41633bc"; 
+	</script>
+
+	<script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script><noscript><a href="http://www.statcounter.com/" target="_blank"><img  src="http://c12.statcounter.com/counter.php?sc_project=1417324&java=0&security=d41633bc&invisible=0" alt="free tracking" border="0"></a> </noscript>
+	<!-- End of StatCounter Code -->
+          </td>
+
+    <td align="right" valign="top">
+      		<a href="http://sourceforge.net/projects/vim" rel="nofollow"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=8&type=1" width="88" height="31" border="0" alt="SourceForge.net Logo" /></a>
+    </td>
+
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+  </tr>
+
+    
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  
+  </tr>
+</table>
+
+</body>
+</html>
+

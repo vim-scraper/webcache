@@ -1,0 +1,300 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+  <link rel="Stylesheet" type="text/css" href="/css/style.css" >
+  <title>fontsize.vim - Increment or decrement font size via keypresses : vim online</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <meta name="KEYWORDS" content="Vim, Vi IMproved, text editor, home, documentation, tips, scripts, news">
+  <link rel="shortcut icon" type="image/x-icon" href="/images/vim_shortcut.ico">
+</head>
+
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff"> 
+
+<!-- HEADER, SPONSOR IMAGE, VIM IMAGE AND BOOK AD -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+  <td class="lightbg">&nbsp;&nbsp;&nbsp;</td>
+  <td class="lightbg" align="left"><a href="/sponsor/index.php"><img src="/images/sponsorvim.gif" alt="sponsor Vim development" border="0"></a></td>
+    <td class="lightbg" align="center"><a href="/index.php"><img src="/images/vim_header.gif" border="0" alt="Vim logo"></a></td>
+    <td class="lightbg" align="right"><a href="http://iccf-holland.org/click5.html"><img src="/images/buyhelplearn.gif" alt="Vim Book Ad" border="0"></a></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="darkbg"><img src="/images/spacer.gif" width="1" height="10" alt=""></td>
+  </tr>
+</table>
+<!-- THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+  <col width="180">
+  <col width="1">
+
+  <tr valign="top">
+    <td class="sidebar">
+      <table width="180" cellpadding="4" cellspacing="0" border="0">
+        <tr valign="top">
+          <td class="sidebar">
+
+<!-- INCLUDE THE PAGE NAVIGATION -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+    <tr>
+        <td><small>not logged in (<a href="/login.php">login</a>)</small></td>
+    </tr>
+    <tr><td>
+<small>&nbsp;</small>
+<form action="http://www.google.com/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-3005259998294962:bvyni59kjr1" />
+    <input type="hidden" name="ie" value="ISO-8859-1" />
+    <input type="text" name="q" size="20" />
+    <br>
+    <input type="submit" name="sa" value="Search" />
+  </div>
+</form>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+    </td></tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="1"></td>
+    </tr>
+    <tr>
+        <td class="darkbg"><img src="/images/spacer.gif" alt='' border="0" height="3"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="2"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/index.php">Home</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/search.php">Advanced search</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/about.php">About Vim</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/community.php">Community</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/news/news.php">News</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/sponsor/index.php">Sponsoring</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/trivia.php">Trivia</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/docs.php">Documentation</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/download.php">Download</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/scripts/index.php">Scripts</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/tips/index.php">Tips</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/account/index.php">My Account</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/huh.php">Site Help</a></td>
+        </tr>
+</table>
+
+            <table width="172" cellpadding="0" cellspacing="0" border="0">
+              <tr><td><img src="/images/spacer.gif" alt="" border="0" width="1" height="8"></td></tr>
+              <tr><td class="darkbg"><img src="/images/spacer.gif" width="1" height="3" alt=""></td></tr>
+            </table>
+            <br>
+
+<!-- INCLUDE THE PAGE SIDEBAR TEXT -->
+&nbsp;
+
+          </td>
+        </tr>
+      </table>
+    </td>
+
+    <td class="darkbg"><img src="/images/spacer.gif" width="1" height="1" border="0" alt=""><br></td>
+    <td>
+      <table width="100%" cellpadding="10" cellspacing="0" border="0" bordercolor="red">
+        <tr>
+          <td valign="top">
+
+<span class="txth1">fontsize.vim : Increment or decrement font size via keypresses</span> 
+
+<br>
+<br>
+
+<!-- karma table -->
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
+  <td>
+    Rating <b>11/7</b>,
+    Downloaded by 517  </td>
+  <td class="lightbg">
+  <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
+  </td>
+  <td>
+    <a href="http://vim.wikia.com/wiki/Script:2809">Vim wiki</a>
+  </td>  
+</tr>
+</table>
+<p>
+
+<table cellspacing="0" cellpadding="0" border="0">
+<tr><td class="prompt">created by</td></tr>
+<tr><td><a href="/account/profile.php?user_id=13094">Michael Henry</a></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">script type</td></tr>
+<tr><td>utility</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">description</td></tr>
+<tr><td>===============================================================================<br>Introduction&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*fontsize-intro*<br><br>This plugin provides convenient mappings for changing the font size in Gvim.<br><br>&nbsp;&nbsp;&lt;Leader&gt;==&nbsp;&nbsp;&nbsp;&nbsp;Begin &quot;font size&quot; mode<br>&nbsp;&nbsp;&lt;Leader&gt;++&nbsp;&nbsp;&nbsp;&nbsp;Increment font size<br>&nbsp;&nbsp;&lt;Leader&gt;--&nbsp;&nbsp;&nbsp;&nbsp;Decrement font size<br>&nbsp;&nbsp;&lt;Leader&gt;00&nbsp;&nbsp;&nbsp;&nbsp;Revert to default font size<br><br>(Note that by default, &lt;Leader&gt; is the backslash character, so for example<br>&lt;Leader&gt;++ is invoked by pressing \++ from normal mode.)<br><br>The above mappings initiate a &quot;font size&quot; mode in which the following<br>additional individual keys become active:<br><br>&nbsp;&nbsp;+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Increment font size (may also use = to avoid shift key)<br>&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Decrement font size<br>&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Revert to default font size<br>&nbsp;&nbsp;!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Save current size as new default<br>&nbsp;&nbsp;q&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Quit &quot;font size&quot; mode<br>&nbsp;&nbsp;&lt;SPACE&gt;&nbsp;&nbsp;&nbsp;&nbsp;Quit &quot;font size&quot; mode<br>&nbsp;&nbsp;&lt;CR&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Quit &quot;font size&quot; mode<br><br>Other keys pressed will exit &quot;font size&quot; mode and perform their normal<br>function.<br><br>In addition, &quot;font size&quot; mode will automatically timeout after |timeoutlen|<br>milliseconds have elapsed without a keypress, because &quot;font size&quot; mode is<br>based on mappings.<br><br>Details on customization are found in the |fontsize-customization| section<br>of the included documentation.<br><br>===============================================================================<br>Customization&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *fontsize-customization*<br><br>The default value of |timeoutlen| is 1000 milliseconds (1 second), which might<br>be too fast.&nbsp;&nbsp;The author uses the following setting in his |vimrc|: &gt;<br><br>&nbsp;&nbsp;&quot; Slow down mapping timeout from default 1000 milliseconds.<br>&nbsp;&nbsp;set timeoutlen=3000<br><br>You may change the mappings that initiate &quot;font size&quot; mode by creating<br>your own mappings in your |vimrc|file.&nbsp;&nbsp;For example, use these mappings<br>to use single characters instead of doubled ones:<br><br>&nbsp;&nbsp;nmap &lt;silent&gt; &lt;Leader&gt;=&nbsp;&nbsp;&lt;Plug&gt;FontsizeBegin<br>&nbsp;&nbsp;nmap &lt;silent&gt; &lt;Leader&gt;+&nbsp;&nbsp;&lt;Plug&gt;FontsizeInc<br>&nbsp;&nbsp;nmap &lt;silent&gt; &lt;Leader&gt;-&nbsp;&nbsp;&lt;Plug&gt;FontsizeDec<br>&nbsp;&nbsp;nmap &lt;silent&gt; &lt;Leader&gt;0&nbsp;&nbsp;&lt;Plug&gt;FontsizeDefault<br><br>Or, use a single mapping to begin &quot;font size&quot; mode and disable other mappings:<br><br>&nbsp;&nbsp;nmap &lt;silent&gt; &lt;F8&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Plug&gt;FontsizeBegin<br>&nbsp;&nbsp;nmap &lt;silent&gt; &lt;SID&gt;DisableFontsizeInc&nbsp;&nbsp;&nbsp;&nbsp; &lt;Plug&gt;FontsizeInc<br>&nbsp;&nbsp;nmap &lt;silent&gt; &lt;SID&gt;DisableFontsizeDec&nbsp;&nbsp;&nbsp;&nbsp; &lt;Plug&gt;FontsizeDec<br>&nbsp;&nbsp;nmap &lt;silent&gt; &lt;SID&gt;DisableFontsizeDefault &lt;Plug&gt;FontsizeDefault<br><br>Any mapping to &lt;Plug&gt;FontsizeXxx overrides the default mappings, even if that<br>mapping is meaningless like &lt;SID&gt;SomeRandomName.<br><br>Normally, the plugin detects the default font size from 'guifont&quot;.&nbsp;&nbsp;This may<br>be overridden in the |vimrc| file.&nbsp;&nbsp;E.g., to set the default to 12: &gt;<br><br>&nbsp;&nbsp;let g:fontsize#defaultSize = 12<br><br>If your Gvim uses a different encoding for 'guifont' than what's found in<br>'encoding', you can set g:fontsize#encoding in your |vimrc| file to convert<br>the font names.&nbsp;&nbsp;For example, on Chinese Windows XP, the fonts are encoded in<br>&quot;gbk&quot;, so if you use &quot;utf8&quot; for your 'encoding', you'd use the following: &gt;<br><br>&nbsp;&nbsp;let g:fontsize#encoding = &quot;gbk&quot;<br><br>(Converting font name encodings requires the +iconv feature.)</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">install details</td></tr>
+<tr><td>Must be installed using the Vimball plugin, found here:<br><a target="_blank" href="http://vim.sourceforge.net/scripts/script.php?script_id=1502">http://vim.sourceforge.net/scripts/script.php?script_id=1502</A><br><br>Open fontsize-x.y.z.vba with Vim: &gt;<br><br>&nbsp;&nbsp;vim fontsize-x.y.z.vba<br><br>With the Vimball open in Vim, extract the files with the :source command: &gt;<br><br>&nbsp;&nbsp;:source %<br></td></tr>
+<tr><td>&nbsp;</td></tr>
+</table>
+
+<!-- rating table -->
+<form name="rating">
+<input type="hidden" name="script_id" value="2809">
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>rate this script</b></td>
+  <td valign="middle">
+    <input type="radio" name="rating" value="life_changing">Life Changing
+    <input type="radio" name="rating" value="helpful">Helpful
+    <input type="radio" name="rating" value="unfulfilling">Unfulfilling&nbsp;
+    <input type="submit" value="rate">
+  </td>
+</tr>
+</table>
+</form>
+<span class="txth2">script versions</span> (<a href="add_script_version.php?script_id=2809">upload new version</a>)
+<p>
+Click on the package to download.
+<p>
+
+<table cellspacing="2" cellpadding="4" border="0" width="100%">
+<tr class='tableheader'>
+        <th valign="top">package</th>
+    <th valign="top">script version</th>
+    <th valign="top">date</th>
+    <th valign="top">Vim version</th>
+    <th valign="top">user</th>
+    <th valign="top">release notes</th>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=11568">fontsize-0.2.0.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.2.0</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-10-23</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=13094">Michael Henry</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Version 0.2.0&nbsp;&nbsp;&nbsp;&nbsp;Date&nbsp;&nbsp;&nbsp;&nbsp;2009-10-21&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *fontsize-changelog-0.2.0*<br><br>&nbsp;&nbsp;- Changed &lt;Leader&gt;== to enter &quot;font size&quot; mode without changing the <br>&nbsp;&nbsp;&nbsp;&nbsp;font size.<br><br>&nbsp;&nbsp;- Fixed regex for win32 and others to not require colon after size field<br>&nbsp;&nbsp;&nbsp;&nbsp;(e.g., &quot;fontname:h12&quot; works, don't need &quot;fontname:h12:cANSI&quot;).&nbsp;&nbsp;Added<br>&nbsp;&nbsp;&nbsp;&nbsp;regex support for other platforms.<br><br>&nbsp;&nbsp;- Added g:fontsize_encoding feature to handle different encodings for<br>&nbsp;&nbsp;&nbsp;&nbsp;&guifont and &guifontwide.<br><br>&nbsp;&nbsp;- Handles empty &guifont better now (but cannot change font size in that<br>&nbsp;&nbsp;&nbsp;&nbsp;case).<br><br>&nbsp;&nbsp;- Added documentation sections for TODO, ChangeLog.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=11518">fontsize-0.1.0.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.1.0</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-10-11</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=13094">Michael Henry</a></i></td>
+    <td class="roweven" valign="top" width="2000">Initial upload</td>
+</tr>
+</table>
+<!-- finish off the framework -->
+          </td>
+        </tr>
+      </table>
+    </td>
+
+  </tr>
+</table>
+
+<!-- END OF THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr><td colspan="4" bgcolor="#000000"><img src="/images/spacer.gif" height="2" width="1" alt=""></td></tr>
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr>
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+
+    <td align="left" valign="top"><small>
+      If you have questions or remarks about this site, visit the
+      <a href="http://vimonline.sf.net">vimonline development</a> pages.
+      Please use this site responsibly.
+      <br> 
+      
+      Questions about <a href="http://www.vim.org/about.php">Vim</a> should go
+      to the <a href="http://www.vim.org/maillist.php">maillist</a>.
+      Help Bram <a href="http://iccf-holland.org/">help Uganda</a>.
+      </small>
+	&nbsp;
+	&nbsp;
+
+	<!-- Start of StatCounter Code -->
+	<script type="text/javascript" language="javascript">
+	var sc_project=1417324; 
+	var sc_invisible=1; 
+	var sc_partition=11; 
+	var sc_security="d41633bc"; 
+	</script>
+
+	<script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script><noscript><a href="http://www.statcounter.com/" target="_blank"><img  src="http://c12.statcounter.com/counter.php?sc_project=1417324&java=0&security=d41633bc&invisible=0" alt="free tracking" border="0"></a> </noscript>
+	<!-- End of StatCounter Code -->
+          </td>
+
+    <td align="right" valign="top">
+      		<a href="http://sourceforge.net/projects/vim" rel="nofollow"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=8&type=1" width="88" height="31" border="0" alt="SourceForge.net Logo" /></a>
+    </td>
+
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+  </tr>
+
+    
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  
+  </tr>
+</table>
+
+</body>
+</html>
+

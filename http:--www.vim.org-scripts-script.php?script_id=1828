@@ -1,0 +1,340 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+  <link rel="Stylesheet" type="text/css" href="/css/style.css" >
+  <title>writebackup - Write backups of current file with date file extension. : vim online</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <meta name="KEYWORDS" content="Vim, Vi IMproved, text editor, home, documentation, tips, scripts, news">
+  <link rel="shortcut icon" type="image/x-icon" href="/images/vim_shortcut.ico">
+</head>
+
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff"> 
+
+<!-- HEADER, SPONSOR IMAGE, VIM IMAGE AND BOOK AD -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+  <td class="lightbg">&nbsp;&nbsp;&nbsp;</td>
+  <td class="lightbg" align="left"><a href="/sponsor/index.php"><img src="/images/sponsorvim.gif" alt="sponsor Vim development" border="0"></a></td>
+    <td class="lightbg" align="center"><a href="/index.php"><img src="/images/vim_header.gif" border="0" alt="Vim logo"></a></td>
+    <td class="lightbg" align="right"><a href="http://iccf-holland.org/click5.html"><img src="/images/buyhelplearn.gif" alt="Vim Book Ad" border="0"></a></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="darkbg"><img src="/images/spacer.gif" width="1" height="10" alt=""></td>
+  </tr>
+</table>
+<!-- THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+  <col width="180">
+  <col width="1">
+
+  <tr valign="top">
+    <td class="sidebar">
+      <table width="180" cellpadding="4" cellspacing="0" border="0">
+        <tr valign="top">
+          <td class="sidebar">
+
+<!-- INCLUDE THE PAGE NAVIGATION -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+    <tr>
+        <td><small>not logged in (<a href="/login.php">login</a>)</small></td>
+    </tr>
+    <tr><td>
+<small>&nbsp;</small>
+<form action="http://www.google.com/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-3005259998294962:bvyni59kjr1" />
+    <input type="hidden" name="ie" value="ISO-8859-1" />
+    <input type="text" name="q" size="20" />
+    <br>
+    <input type="submit" name="sa" value="Search" />
+  </div>
+</form>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+    </td></tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="1"></td>
+    </tr>
+    <tr>
+        <td class="darkbg"><img src="/images/spacer.gif" alt='' border="0" height="3"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="2"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/index.php">Home</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/search.php">Advanced search</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/about.php">About Vim</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/community.php">Community</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/news/news.php">News</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/sponsor/index.php">Sponsoring</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/trivia.php">Trivia</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/docs.php">Documentation</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/download.php">Download</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/scripts/index.php">Scripts</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/tips/index.php">Tips</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/account/index.php">My Account</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/huh.php">Site Help</a></td>
+        </tr>
+</table>
+
+            <table width="172" cellpadding="0" cellspacing="0" border="0">
+              <tr><td><img src="/images/spacer.gif" alt="" border="0" width="1" height="8"></td></tr>
+              <tr><td class="darkbg"><img src="/images/spacer.gif" width="1" height="3" alt=""></td></tr>
+            </table>
+            <br>
+
+<!-- INCLUDE THE PAGE SIDEBAR TEXT -->
+&nbsp;
+
+          </td>
+        </tr>
+      </table>
+    </td>
+
+    <td class="darkbg"><img src="/images/spacer.gif" width="1" height="1" border="0" alt=""><br></td>
+    <td>
+      <table width="100%" cellpadding="10" cellspacing="0" border="0" bordercolor="red">
+        <tr>
+          <td valign="top">
+
+<span class="txth1">writebackup : Write backups of current file with date file extension.</span> 
+
+<br>
+<br>
+
+<!-- karma table -->
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
+  <td>
+    Rating <b>40/16</b>,
+    Downloaded by 1977  </td>
+  <td class="lightbg">
+  <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
+  </td>
+  <td>
+    <a href="http://vim.wikia.com/wiki/Script:1828">Vim wiki</a>
+  </td>  
+</tr>
+</table>
+<p>
+
+<table cellspacing="0" cellpadding="0" border="0">
+<tr><td class="prompt">created by</td></tr>
+<tr><td><a href="/account/profile.php?user_id=9713">Ingo Karkat</a></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">script type</td></tr>
+<tr><td>utility</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">description</td></tr>
+<tr><td>DESCRIPTION<br>This is a poor man's revision control system, a primitive alternative to CVS,<br>RCS, Subversion, etc., which works with no additional software and almost any<br>file system. <br>The :WriteBackup command writes subsequent backups of the current file with a<br>'current date + counter' file extension (format '.YYYYMMDD[a-z]'). The first<br>backup of a day has letter 'a' appended, the next 'b', and so on. (So that a<br>file can be backed up up to 26 times on any given day.) <br><br>By default, backups are created in the same directory as the original file,<br>but they can also be placed in a directory relative to the original file, or<br>in one common backup directory for all files (similar to Vim's 'backupdir'<br>option), or even in a file-specific location that is determined via a<br>user-provided callback function. <br><br>RELATED WORKS<br>- The writebackupVersionControl.vim plugin (<a href="/scripts/script.php?script_id=1829">vimscript #1829</a>) complements<br>&nbsp;&nbsp;this script with additional commands and enhances the :WriteBackup command<br>&nbsp;&nbsp;with more checks, but is not required. <br>- The writebackupToAdjacentDir.vim plugin (<a href="/scripts/script.php?script_id=3107">vimscript #3107</a>) implements a<br>&nbsp;&nbsp;WriteBackup-dynamic-backupdir configuration that puts the backup files in<br>&nbsp;&nbsp;an adjacent backup directory if one exists. This helps where the backups<br>&nbsp;&nbsp;cannot be placed into the same directory. <br><br>USAGE<br>:WriteBackup[!]<br>			Write the whole current buffer to the next available<br>			backup file with a '.YYYYMMDD[a-z]' file extension. <br>			If the last backup is identical with the current<br>			buffer contents, no (redundant) backup is written. <br>			With [!], creation of a new backup file is forced: <br>			- even if the last backup is identical<br>			- even when no more backup versions (for this day) are<br>			&nbsp;&nbsp;available (the last '.YYYYMMDDz' backup gets<br>			&nbsp;&nbsp;overwritten, even if it is readonly)<br><br>PS: In addition to this Vim plugin, I also provide the basic writebackup<br>functionality outside of Vim as VBScript and Korn Shell script versions at<br><a target="_blank" href="http://ingo-karkat.de/downloads/tools/writebackup/index.html">http://ingo-karkat.de/downloads/tools/writebackup/index.html</A></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">install details</td></tr>
+<tr><td>INSTALLATION<br>This script is packaged as a vimball. If you have the &quot;gunzip&quot; decompressor<br>in your PATH, simply edit the *.vba.gz package in Vim; otherwise, decompress<br>the archive first, e.g. using WinZip. Inside Vim, install by sourcing the<br>vimball or via the :UseVimball command. <br>&nbsp;&nbsp;&nbsp;&nbsp;vim writebackup.vba.gz<br>&nbsp;&nbsp;&nbsp;&nbsp;:so %<br>To uninstall, use the :RmVimball command. <br><br>DEPENDENCIES<br>- Requires Vim 7.0 or higher. <br>- The writebackupVersionControl plugin (<a href="/scripts/script.php?script_id=1829">vimscript #1829</a>) complements this<br>&nbsp;&nbsp;script with addtional commands and enhances the :WriteBackup command with<br>&nbsp;&nbsp;additional checks, but is not required. <br><br>CONFIGURATION<br>For a permanent configuration, put the following commands into your vimrc file<br>(see :help vimrc). Note: With version 1.30, the variable was renamed from<br>g:writebackup_BackupDir. Please update your configuration! <br><br>To put backups into another directory, specify a backup directory via <br>&nbsp;&nbsp;&nbsp;&nbsp;let g:WriteBackup_BackupDir = 'D:\backups'<br><br>A directory starting with './' or '../' (or the backslashed-variants '.&#039 for<br>MS-DOS et al.) puts the backup file relative to where the backed-up file is.<br>The leading '.' is replaced with the path name of the current file: <br>&nbsp;&nbsp;&nbsp;&nbsp;let g:WriteBackup_BackupDir = './backups'<br><br>If you want to automatically create a non-existing backup directory,<br>dynamically determine the backup directory based on the current filespec or<br>any other changing circumstances, you can set a custom callback function: <br><br>&nbsp;&nbsp;&nbsp;&nbsp;function MyResolveBackupDir(originalFilespec, isQueryOnly) ...<br>&nbsp;&nbsp;&nbsp;&nbsp;let g:WriteBackup_BackupDir = function('MyResolveBackupDir')<br><br>You can override this global setting for specific buffers via a buffer-scoped<br>variable, which can be set by an autocmd, ftplugin, or manually: <br>&nbsp;&nbsp;&nbsp;&nbsp;let b:WriteBackup_BackupDir = 'X:\special\backup\folder'<br><br>If the writebackupVersionControl plugin is installed, no backup is written if<br>there is an identical predecessor, so you don't need to remember whether<br>you've already backed up the current file; no redundant backups will be<br>created. If you don't like this check, turn it off via: <br>&nbsp;&nbsp;&nbsp;&nbsp;let g:WriteBackup_AvoidIdenticalBackups = 0<br><br>In case you already have other custom Vim commands starting with W, you can<br>define a shorter command alias ':W' in your vimrc to save some keystrokes. I<br>like the parallelism between ':w' for a normal write and ':W' for a backup<br>write. <br>&nbsp;&nbsp;&nbsp;&nbsp;command -bar -bang W :WriteBackup&lt;bang&gt;</td></tr>
+<tr><td>&nbsp;</td></tr>
+</table>
+
+<!-- rating table -->
+<form name="rating">
+<input type="hidden" name="script_id" value="1828">
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>rate this script</b></td>
+  <td valign="middle">
+    <input type="radio" name="rating" value="life_changing">Life Changing
+    <input type="radio" name="rating" value="helpful">Helpful
+    <input type="radio" name="rating" value="unfulfilling">Unfulfilling&nbsp;
+    <input type="submit" value="rate">
+  </td>
+</tr>
+</table>
+</form>
+<span class="txth2">script versions</span> (<a href="add_script_version.php?script_id=1828">upload new version</a>)
+<p>
+Click on the package to download.
+<p>
+
+<table cellspacing="2" cellpadding="4" border="0" width="100%">
+<tr class='tableheader'>
+        <th valign="top">package</th>
+    <th valign="top">script version</th>
+    <th valign="top">date</th>
+    <th valign="top">Vim version</th>
+    <th valign="top">user</th>
+    <th valign="top">release notes</th>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=10694">writebackup.vba.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.10</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-05-28</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=9713">Ingo Karkat</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Replaced simple filespec escaping with built-in fnameescape() function (or<br>emulation for Vim 7.0 / 7.1) via escapings.vim wrapper.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=10045">writebackup.vba.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.00</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-02-26</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=9713">Ingo Karkat</a></i></td>
+    <td class="roweven" valign="top" width="2000">- Using separate autoload script to help speed up VIM startup. This is an<br>&nbsp;&nbsp;incompatible change that also requires the corresponding<br>&nbsp;&nbsp;writebackupVersionControl plugin version. *** PLEASE UPDATE<br>&nbsp;&nbsp;writebackupVersionControl (<a href="/scripts/script.php?script_id=1829">vimscript #1829</a>), too, if you're using it ***<br>- ENH: Disallowing backup of backup file if the writebackupVersionControl<br>&nbsp;&nbsp;plugin is installed. <br>- ENH: No backup is written if there is an identical previous backup. This<br>&nbsp;&nbsp;requires the writebackupVersionControl plugin and can be configured via<br>&nbsp;&nbsp;g:WriteBackup_AvoidIdenticalBackups. </td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=9980">writebackup.vba.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.31.013</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-02-16</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=9713">Ingo Karkat</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Split off documentation into separate help file. Now packaging as VimBall. </td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=9950">writebackup.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.30.011</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-02-11</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=9713">Ingo Karkat</a></i></td>
+    <td class="roweven" valign="top" width="2000">ENH: The backup directory can now be determined dynamically through a callback function. <br>Renamed configuration variable from g:writebackup_BackupDir to g:WriteBackup_BackupDir. *** PLEASE UPDATE YOUR CONFIGURATION ***<br>BF: Now also allowing relative backup dir in an upper directory (i.e. g:WriteBackup_BackupDir starting with '../'. <br>BF: Unnamed buffers were backed up as '.YYYYMMDDa'. <br>Now setting v:errmsg on errors and using ErrorMsg instead of Error highlight group. </td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=8839">writebackup.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.20.006</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2008-06-23</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=9713">Ingo Karkat</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Minor change: Added -bar to :WriteBackup, so that commands can be chained together.&nbsp;&nbsp;</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=7688">writebackup.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.20.005</b></td>
+    <td class="roweven" valign="top" nowrap><i>2007-09-18</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=9713">Ingo Karkat</a></i></td>
+    <td class="roweven" valign="top" width="2000">ENH: Added support for writing backup files into a different directory (either one static backup dir or relative to the original file) via g:writebackup_BackupDir configuration, as suggested by Vincent DiCarlo. <br>Now requiring VIM 7.0 or later, because it's using lists. <br>BF: Special ex command characters ' \%#' must be escaped for ':w' command. </td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=6883">writebackup.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.00.004</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2007-03-16</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=9713">Ingo Karkat</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Initial upload</td>
+</tr>
+</table>
+<!-- finish off the framework -->
+          </td>
+        </tr>
+      </table>
+    </td>
+
+  </tr>
+</table>
+
+<!-- END OF THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr><td colspan="4" bgcolor="#000000"><img src="/images/spacer.gif" height="2" width="1" alt=""></td></tr>
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr>
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+
+    <td align="left" valign="top"><small>
+      If you have questions or remarks about this site, visit the
+      <a href="http://vimonline.sf.net">vimonline development</a> pages.
+      Please use this site responsibly.
+      <br> 
+      
+      Questions about <a href="http://www.vim.org/about.php">Vim</a> should go
+      to the <a href="http://www.vim.org/maillist.php">maillist</a>.
+      Help Bram <a href="http://iccf-holland.org/">help Uganda</a>.
+      </small>
+	&nbsp;
+	&nbsp;
+
+	<!-- Start of StatCounter Code -->
+	<script type="text/javascript" language="javascript">
+	var sc_project=1417324; 
+	var sc_invisible=1; 
+	var sc_partition=11; 
+	var sc_security="d41633bc"; 
+	</script>
+
+	<script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script><noscript><a href="http://www.statcounter.com/" target="_blank"><img  src="http://c12.statcounter.com/counter.php?sc_project=1417324&java=0&security=d41633bc&invisible=0" alt="free tracking" border="0"></a> </noscript>
+	<!-- End of StatCounter Code -->
+          </td>
+
+    <td align="right" valign="top">
+      		<a href="http://sourceforge.net/projects/vim" rel="nofollow"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=8&type=1" width="88" height="31" border="0" alt="SourceForge.net Logo" /></a>
+    </td>
+
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+  </tr>
+
+    
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  
+  </tr>
+</table>
+
+</body>
+</html>
+

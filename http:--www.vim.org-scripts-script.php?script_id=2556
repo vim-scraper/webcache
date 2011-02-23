@@ -1,0 +1,500 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+  <link rel="Stylesheet" type="text/css" href="/css/style.css" >
+  <title>myprojects - Organize/Navigate projects of files (like IDE/buffer explorer/project.vim)  : vim online</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <meta name="KEYWORDS" content="Vim, Vi IMproved, text editor, home, documentation, tips, scripts, news">
+  <link rel="shortcut icon" type="image/x-icon" href="/images/vim_shortcut.ico">
+</head>
+
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff"> 
+
+<!-- HEADER, SPONSOR IMAGE, VIM IMAGE AND BOOK AD -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+  <td class="lightbg">&nbsp;&nbsp;&nbsp;</td>
+  <td class="lightbg" align="left"><a href="/sponsor/index.php"><img src="/images/sponsorvim.gif" alt="sponsor Vim development" border="0"></a></td>
+    <td class="lightbg" align="center"><a href="/index.php"><img src="/images/vim_header.gif" border="0" alt="Vim logo"></a></td>
+    <td class="lightbg" align="right"><a href="http://iccf-holland.org/click5.html"><img src="/images/buyhelplearn.gif" alt="Vim Book Ad" border="0"></a></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="darkbg"><img src="/images/spacer.gif" width="1" height="10" alt=""></td>
+  </tr>
+</table>
+<!-- THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+  <col width="180">
+  <col width="1">
+
+  <tr valign="top">
+    <td class="sidebar">
+      <table width="180" cellpadding="4" cellspacing="0" border="0">
+        <tr valign="top">
+          <td class="sidebar">
+
+<!-- INCLUDE THE PAGE NAVIGATION -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+    <tr>
+        <td><small>not logged in (<a href="/login.php">login</a>)</small></td>
+    </tr>
+    <tr><td>
+<small>&nbsp;</small>
+<form action="http://www.google.com/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-3005259998294962:bvyni59kjr1" />
+    <input type="hidden" name="ie" value="ISO-8859-1" />
+    <input type="text" name="q" size="20" />
+    <br>
+    <input type="submit" name="sa" value="Search" />
+  </div>
+</form>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+    </td></tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="1"></td>
+    </tr>
+    <tr>
+        <td class="darkbg"><img src="/images/spacer.gif" alt='' border="0" height="3"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="2"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/index.php">Home</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/search.php">Advanced search</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/about.php">About Vim</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/community.php">Community</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/news/news.php">News</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/sponsor/index.php">Sponsoring</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/trivia.php">Trivia</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/docs.php">Documentation</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/download.php">Download</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/scripts/index.php">Scripts</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/tips/index.php">Tips</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/account/index.php">My Account</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/huh.php">Site Help</a></td>
+        </tr>
+</table>
+
+            <table width="172" cellpadding="0" cellspacing="0" border="0">
+              <tr><td><img src="/images/spacer.gif" alt="" border="0" width="1" height="8"></td></tr>
+              <tr><td class="darkbg"><img src="/images/spacer.gif" width="1" height="3" alt=""></td></tr>
+            </table>
+            <br>
+
+<!-- INCLUDE THE PAGE SIDEBAR TEXT -->
+&nbsp;
+
+          </td>
+        </tr>
+      </table>
+    </td>
+
+    <td class="darkbg"><img src="/images/spacer.gif" width="1" height="1" border="0" alt=""><br></td>
+    <td>
+      <table width="100%" cellpadding="10" cellspacing="0" border="0" bordercolor="red">
+        <tr>
+          <td valign="top">
+
+<span class="txth1">myprojects : Organize/Navigate projects of files (like IDE/buffer explorer/project.vim) </span> 
+
+<br>
+<br>
+
+<!-- karma table -->
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
+  <td>
+    Rating <b>53/21</b>,
+    Downloaded by 1878  </td>
+  <td class="lightbg">
+  <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
+  </td>
+  <td>
+    <a href="http://vim.wikia.com/wiki/Script:2556">Vim wiki</a>
+  </td>  
+</tr>
+</table>
+<p>
+
+<table cellspacing="0" cellpadding="0" border="0">
+<tr><td class="prompt">created by</td></tr>
+<tr><td><a href="/account/profile.php?user_id=16679">Frederic Hardy</a></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">script type</td></tr>
+<tr><td>utility</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">description</td></tr>
+<tr><td>You can use it to set up a list of frequently-accessed files for easy navigation.<br>The list of files will be displayed in a window on the left side of the Vim window.<br>Unlike project.vim, myprojects.vim use indentation instead of mark to define folder.<br>Main features are file exploration, tags generation, filtering, working directory definition, vim session management, F1 to F12 mapping definition, make definition, errorformat definition, buffers explorer and svn checkout/update/add/commit/revert/diff/blame/info/resolved/log support.<br>Please, report any bug to myprojects.vim[..at..]mageekbox.net.<br>Help for debug is welcome !</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">install details</td></tr>
+<tr><td>Download vimball, open it with vim, and do :so %.<br>After that, reopen vim and do &lt;leader&gt;p (ie \p if &lt;leader&gt; has its default value) or :MyProjectsToggle.<br>It's an alpha-version (release early, release often), so do regular :GLVS to be up-to-date (see :h GLVS for more information).<br>&lt;leader&gt;-p open panel like command :MyProjectsToggle.<br>You can also map &quot;&lt;Plug&gt;MyProjectsToggle&quot; to open panel : map &lt;silent&gt; &lt;Tab&gt; &lt;Plug&gt;MyProjectsToggle.<br>In panel :<br>&lt;Return&gt; open file or folder under cursor.<br>&lt;2-Leftmouse&gt; open file or folder under mouse cursor.<br>&lt;S-Return&gt; open file or folder under cursor in an horizontaly splitted window.<br>&lt;S-2-Leftmouse&gt; open file or folder under mouse cursor in an horizontaly splitted window.<br>&lt;C-Return&gt; open file or folder under cursor in a verticaly splitted window.<br>&lt;C-2-Leftmouse&gt; open file or folder under mouse cursor in a verticaly splitted window.<br>&lt;C-Tab&gt; go to previous window.<br>&lt;C-Right&gt; increase panel size of g:myprojects_resize_step.<br>&lt;C-l&gt; increase panel size of g:myprojects_resize_step.<br>&lt;C-Left&gt; decrease panel size of g:myprojects_resize_step.<br>&lt;C-h&gt; decrease panel size of g:myprojects_resize_step.<br>&lt;C-Space&gt; set panel fullscreen, or set it to its size before &lt;C-Space&gt;.<br>&lt;LocalLeader&gt;d delete file under cursor.<br>&lt;LocalLeader&gt;c create a project.<br>&lt;LocalLeader&gt;r refresh line where is cursor.<br>&lt;LocalLeader&gt;R refresh folder where is cursor.<br>&lt;LocalLeader&gt;g make grep against folder where is cursor.<br>&lt;LocalLeader&gt;t generate tags file for project where is cursor.<br>&lt;LocalLeader&gt;e explore folder where is cursor.<br>&lt;LocalLeader&gt;E explore folder where is cursor in an horizontaly splitted window.<br>&lt;LocalLeader&gt;a append file under cursor to buffer in previous window.<br>&lt;LocalLeader&gt;s save session for project where is cursor.<br>&lt;LocalLeader&gt;S load session for project where is cursor.<br>&lt;LocalLeader&gt;&lt;A-s&gt; delete session for project where is cursor.<br>&lt;LocalLeader&gt;p set path for file or folder under cursor.<br>&lt;LocalLeader&gt;P update nested path for file or folder under cursor.<br>&lt;LocalLeader&gt;f set filter for folder where is curosr.<br>&lt;LocalLeader&gt;F update nested filter for file or folder where is cursor.<br>&lt;LocalLeader&gt;w set workigng directory for file or folder where is cursor.<br>&lt;LocalLeader&gt;W update nested working directory for folder where is cursor.<br>&lt;LocalLeader&gt;m set F1 to F12 mappings for file or folder where is cursor.<br>&lt;LocalLeader&gt;M update nested mappings for file or folder where is cursor.<br>&lt;LocalLeader&gt;i display in status line path of filer or folder under cursor.<br>&lt;LocalLeader&gt;v display in status line myprojects.vim's version.<br>&lt;LocalLeader&gt;V display in status line myprojects.vim's file.<br>&lt;LocalLeader&gt;b display buffers of project where is cursor.<br>&lt;LocalLeader&gt;ss do a svn status for file or folder under cursor and display result in a separate window.<br>&lt;LocalLeader&gt;sc do a svn commit for file or folder under cursor, you can select file and define log message in a separate window.<br>&lt;LocalLeader&gt;su do a svn update for file or folder under cursor and display result in a separate window.<br>&lt;LocalLeader&gt;sd do a svn diff for file under cursor and display result in two separate window in diff mode.<br>&lt;LocalLeader&gt;sb do a svn blame for file under cursor and display result in a window.<br>&lt;LocalLeader&gt;sr do a svn revert for file under cursor and display result in a separate window.<br>&lt;LocalLeader&gt;sa do a svn add for file under cursor and display result in a separate window.<br>&lt;LocalLeader&gt;sC do a svn checkout and create the corresponding project.<br>&lt;LocalLeader&gt;si do a svn info on current file or folder.<br>&lt;LocalLeader&gt;sl do a svn log on current file or folder.<br>&lt;LocalLeader&gt;src do a svn resolved on current file or folder.<br>&lt;LocalLeader&gt;k define make program (see :h :make for more informations) for current file/folder.<br>&lt;LocalLeader&gt;K update make program (see :h :make for more informations) for current file/folder.<br>&lt;LocalLeader&gt;ef define errorformat (see :h errorformat for more informations) for current file/folder.<br>&lt;LocalLeader&gt;Ef update errorformat (see :h errorformat for more informations) for current file/folder.<br>&lt;LocalLeader&gt;df define project type's preferences (path, working directory, mappings, etc).<br>&lt;LocalLeader&gt;te set test attribute value, use to find test file of a file open from myprojects.<br>&lt;LocalLeader&gt;Te update test attribute value. <br>&lt;LocalLeader&gt;et from a file opened from myprojects open its test file (if 'foo.php' was opened from myprojects.vim and test attribute's value is '.test.php', &lt;localLeader&gt;et open the file 'foot.test.php' in a horizontaly splitted window).<br>You can open file in svn window like in myproject's panel.<br>You can do a diff from working window with &lt;A-d&gt;.<br>By default, LocalLeader is '\&#039.<br>You can remap it with &quot;let maplocalleader = ','&quot; in your .vimrc, for example.<br>Folder can have filters against file on your hard drive.<br>Filters are vim patterns (see :h patterns for more informations).<br>If a working directory is defined on a folder or its parents, a &quot;cd&quot; vim command is done when a file in the folder is open, see :h :cd for more informations.<br>Moreover, you can define normal mapping for &lt;F1&gt; to &lt;F12&gt; for each folder in a project.<br>For example, you can map F10 with :!php -l %:p 2&gt;&1&lt;CR&gt; to check php syntax of a php file opened with myprojects.<br>You can also define make and errorformat for each file or folder, see :h make and :h errorformat for more information.<br>GetLatestVimScripts is also supported, see :h GLVS for more information about it.<br>g:myprojects_width variable set the panel's width, default is 30.<br>g:myprojects_file variable set the myproject's file name, default is ~/.myprojects.<br>g:myprojects_tags_file variable set the tags file name, default is .tags.<br>g:myprojects_auto_close variable close the panel when a file is open, default is 0.<br>g:myprojects_auto_open variable open automaticaly myprojects.vim at vim startup.<br>g:myprojects_syntax variable activate syntax highlighting, default is 1.<br>g:myprojects_display_empty_folder variable display empty folder, default is 0.<br>g:myprojects_auto_resize variable resize the panel to its default size when a file is open, default is 0.<br>g:myprojects_resize_step define the step used to resize panel with &lt;C-Left&gt; and &lt;C-Right&gt;, default is 10.<br>g:myprojects_display_number display line number in panel, default is 0.<br>g:myprojects_display_path_in_statusline display path of current file in status line, default is 1.<br>g:myprojects_cursorline display cursor line, default is 1.<br>g:myprojects_cursorcolumn display cursor column, default is 1.<br>g:myprojects_foldcolumn display folder column, default is 0, see :h foldcolumn for more informations.<br>ctags or exctags must be installed to generate tags file.<br>g:myprojects_tags_generator define tag generator utility, default is 'exctags'.<br>g:myprojects_new_file_on_bottom add new file on bottom of folder on refresh, default is 1.<br>g:myprojects_svn_sort sort path in svn window, default is 1.<br>g:myprojects_autowrite auto save g:myprojects_file after refresh, default is 1.<br>You can override default value of these variables with &quot;let g:myprojects_svn_sort = 0&quot; in your .vimrc, for example.</td></tr>
+<tr><td>&nbsp;</td></tr>
+</table>
+
+<!-- rating table -->
+<form name="rating">
+<input type="hidden" name="script_id" value="2556">
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>rate this script</b></td>
+  <td valign="middle">
+    <input type="radio" name="rating" value="life_changing">Life Changing
+    <input type="radio" name="rating" value="helpful">Helpful
+    <input type="radio" name="rating" value="unfulfilling">Unfulfilling&nbsp;
+    <input type="submit" value="rate">
+  </td>
+</tr>
+</table>
+</form>
+<span class="txth2">script versions</span> (<a href="add_script_version.php?script_id=2556">upload new version</a>)
+<p>
+Click on the package to download.
+<p>
+
+<table cellspacing="2" cellpadding="4" border="0" width="100%">
+<tr class='tableheader'>
+        <th valign="top">package</th>
+    <th valign="top">script version</th>
+    <th valign="top">date</th>
+    <th valign="top">Vim version</th>
+    <th valign="top">user</th>
+    <th valign="top">release notes</th>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=11227">myprojects.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.0.107</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-08-21</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=16679">Frederic Hardy</a></i></td>
+    <td class="rowodd" valign="top" width="2000">All my apologize, the previous vimball was incorrect.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=10713">myprojects.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.0.105</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-06-02</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=16679">Frederic Hardy</a></i></td>
+    <td class="roweven" valign="top" width="2000">Remove bug in svn blame.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=10684">myprojects.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.0.104</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-05-27</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=16679">Frederic Hardy</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Remove bug in update of mappings.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=10596">myprojects.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.0.103</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-05-15</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=16679">Frederic Hardy</a></i></td>
+    <td class="roweven" valign="top" width="2000">Improve svn checkout which now use preferences.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=10595">myprojects.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.0.102</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-05-15</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=16679">Frederic Hardy</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Remove bug in svn checkout processus.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=10586">myprojects.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.0.101</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-05-13</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=16679">Frederic Hardy</a></i></td>
+    <td class="roweven" valign="top" width="2000">Remove bug in svn conflict resolution, file can now be opened from svn conflict window.<br>Remove bug in grep.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=10555">myprojects.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.0.100</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-05-07</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=16679">Frederic Hardy</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Add autowrite management after set or update of an attribute (path, cd, make, errorformat, mappings, etc).<br>&quot;|&quot; are now correclty escaped in mappings.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=10549">myprojects.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.0.99</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-05-06</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=16679">Frederic Hardy</a></i></td>
+    <td class="roweven" valign="top" width="2000">Improve speed.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=10545">myprojects.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.0.98</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-05-06</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=16679">Frederic Hardy</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Remove bugs in loadMyProjectsAttribute() and svnDiff().</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=10544">myprojects.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.0.97</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-05-06</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=16679">Frederic Hardy</a></i></td>
+    <td class="roweven" valign="top" width="2000">Remove bug in buffer management.<br>Add autowrite on refresh with g:myprojets_autowrite.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=10522">myprojects.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.0.96</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-05-04</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=16679">Frederic Hardy</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Remove bug in svn log.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=10521">myprojects.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.0.95</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-05-04</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=16679">Frederic Hardy</a></i></td>
+    <td class="roweven" valign="top" width="2000">Add svn log support with &lt;LocalLeader&gt;sl.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=10519">myprojects.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.0.94</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-05-04</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=16679">Frederic Hardy</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Remove bug about test in project creation, thanks to alexis for its feedback about that.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=10497">myprojects.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.0.93</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-04-30</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=16679">Frederic Hardy</a></i></td>
+    <td class="roweven" valign="top" width="2000">If there are several potential test file for the current file, a list is submitted to user to choose the right file.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=10495">myprojects.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.0.92</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-04-30</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=16679">Frederic Hardy</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Remove bug in test file searching.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=10494">myprojects.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.0.91</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-04-30</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=16679">Frederic Hardy</a></i></td>
+    <td class="roweven" valign="top" width="2000">Test extension is managed in preferences.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=10492">myprojects.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.0.90</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-04-30</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=16679">Frederic Hardy</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Remove bug in project buffer management.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=10486">myprojects.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.0.88</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-04-29</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=16679">Frederic Hardy</a></i></td>
+    <td class="roweven" valign="top" width="2000">Remove bug in window management (thanks to alexis).<br>Remove bug in refresh management.<br>Upgrade from any previous version is very recommanded.<br>Add test file support.<br>If test attribute is defined on a file or a folder, &lt;LocalLeader&gt;et in a file opened from myprojects.vim open the associated test file.<br>For example, if opened file is 'foo.php', and test attribute value is 'Test.php', &lt;LocalLeader&gt;et open the file 'fooTest.php' if it exists in myprojects.vim panel.<br>&lt;LocalLeader&gt;te set test attribute value.<br>&lt;LocalLeader&gt;Te update test attribute value.<br>This attribute is not currently supported in preferences. </td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=10469">myprojects.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.0.87</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-04-28</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=16679">Frederic Hardy</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Remove bug in refresh method to keep make and errorformat attribute.<br>Add &lt;LocalLeader&gt;ra to refresh attributes in a file open with myprojects.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=10409">myprojects.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.0.80</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-04-17</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=16679">Frederic Hardy</a></i></td>
+    <td class="roweven" valign="top" width="2000">Use inputsecret() to get svn password on checkout.<br>Deleted files in myprojects are not re-add on refresh (if you want to re-add them, remove refresh attribute).<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=10352">myprojects.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.0.70</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-04-06</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=16679">Frederic Hardy</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Remapping of &lt;LeftMouse&gt; and &lt;S-LeftMouse&gt; to display path in status line only if g:myprojects_display_path_in_statusline is set to 1.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=10303">myprojects.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.0.60</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-03-27</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=16679">Frederic Hardy</a></i></td>
+    <td class="roweven" valign="top" width="2000">Optimization in session management.<br>Remove bug in buffer deletion in project's buffer.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=10270">myprojects.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.0.50</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-03-23</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=16679">Frederic Hardy</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Add svn add (&lt;A-a&gt;) and svn revert (&lt;A-r&gt;) support.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=10183">myprojects.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.0.30</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-03-12</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=16679">Frederic Hardy</a></i></td>
+    <td class="roweven" valign="top" width="2000">Add appendFile() method.<br>&lt;C-a&gt; on a file in panel now append its content to file in previous window.<br>Remove a bug in session management.<br>Moreover, if a file in panel does not exist on your hard drive when you open it, its buffer will be created.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=10150">myprojects.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.0.20</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-03-09</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=16679">Frederic Hardy</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Project creation now works from an empty file.<br>Changing working directory when a file is opened now works.<br>Thanks to seeschloss and jeff ;) which have detected these bugs.<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=10080">myprojects.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.0.10</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-03-02</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=16679">Frederic Hardy</a></i></td>
+    <td class="roweven" valign="top" width="2000">Remove a bug in s:open() about mapping.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=10039">myprojects.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.0.1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-02-26</i></td>
+    <td class="rowodd" valign="top" nowrap>7.2</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=16679">Frederic Hardy</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Initial upload</td>
+</tr>
+</table>
+<!-- finish off the framework -->
+          </td>
+        </tr>
+      </table>
+    </td>
+
+  </tr>
+</table>
+
+<!-- END OF THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr><td colspan="4" bgcolor="#000000"><img src="/images/spacer.gif" height="2" width="1" alt=""></td></tr>
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr>
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+
+    <td align="left" valign="top"><small>
+      If you have questions or remarks about this site, visit the
+      <a href="http://vimonline.sf.net">vimonline development</a> pages.
+      Please use this site responsibly.
+      <br> 
+      
+      Questions about <a href="http://www.vim.org/about.php">Vim</a> should go
+      to the <a href="http://www.vim.org/maillist.php">maillist</a>.
+      Help Bram <a href="http://iccf-holland.org/">help Uganda</a>.
+      </small>
+	&nbsp;
+	&nbsp;
+
+	<!-- Start of StatCounter Code -->
+	<script type="text/javascript" language="javascript">
+	var sc_project=1417324; 
+	var sc_invisible=1; 
+	var sc_partition=11; 
+	var sc_security="d41633bc"; 
+	</script>
+
+	<script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script><noscript><a href="http://www.statcounter.com/" target="_blank"><img  src="http://c12.statcounter.com/counter.php?sc_project=1417324&java=0&security=d41633bc&invisible=0" alt="free tracking" border="0"></a> </noscript>
+	<!-- End of StatCounter Code -->
+          </td>
+
+    <td align="right" valign="top">
+      		<a href="http://sourceforge.net/projects/vim" rel="nofollow"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=8&type=1" width="88" height="31" border="0" alt="SourceForge.net Logo" /></a>
+    </td>
+
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+  </tr>
+
+    
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  
+  </tr>
+</table>
+
+</body>
+</html>
+

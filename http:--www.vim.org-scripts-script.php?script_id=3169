@@ -1,0 +1,388 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+  <link rel="Stylesheet" type="text/css" href="/css/style.css" >
+  <title>luainspect.vim - Semantic highlighting for Lua in Vim : vim online</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <meta name="KEYWORDS" content="Vim, Vi IMproved, text editor, home, documentation, tips, scripts, news">
+  <link rel="shortcut icon" type="image/x-icon" href="/images/vim_shortcut.ico">
+</head>
+
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff"> 
+
+<!-- HEADER, SPONSOR IMAGE, VIM IMAGE AND BOOK AD -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+  <td class="lightbg">&nbsp;&nbsp;&nbsp;</td>
+  <td class="lightbg" align="left"><a href="/sponsor/index.php"><img src="/images/sponsorvim.gif" alt="sponsor Vim development" border="0"></a></td>
+    <td class="lightbg" align="center"><a href="/index.php"><img src="/images/vim_header.gif" border="0" alt="Vim logo"></a></td>
+    <td class="lightbg" align="right"><a href="http://iccf-holland.org/click5.html"><img src="/images/buyhelplearn.gif" alt="Vim Book Ad" border="0"></a></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="darkbg"><img src="/images/spacer.gif" width="1" height="10" alt=""></td>
+  </tr>
+</table>
+<!-- THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+  <col width="180">
+  <col width="1">
+
+  <tr valign="top">
+    <td class="sidebar">
+      <table width="180" cellpadding="4" cellspacing="0" border="0">
+        <tr valign="top">
+          <td class="sidebar">
+
+<!-- INCLUDE THE PAGE NAVIGATION -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+    <tr>
+        <td><small>not logged in (<a href="/login.php">login</a>)</small></td>
+    </tr>
+    <tr><td>
+<small>&nbsp;</small>
+<form action="http://www.google.com/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-3005259998294962:bvyni59kjr1" />
+    <input type="hidden" name="ie" value="ISO-8859-1" />
+    <input type="text" name="q" size="20" />
+    <br>
+    <input type="submit" name="sa" value="Search" />
+  </div>
+</form>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+    </td></tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="1"></td>
+    </tr>
+    <tr>
+        <td class="darkbg"><img src="/images/spacer.gif" alt='' border="0" height="3"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="2"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/index.php">Home</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/search.php">Advanced search</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/about.php">About Vim</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/community.php">Community</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/news/news.php">News</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/sponsor/index.php">Sponsoring</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/trivia.php">Trivia</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/docs.php">Documentation</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/download.php">Download</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/scripts/index.php">Scripts</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/tips/index.php">Tips</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/account/index.php">My Account</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/huh.php">Site Help</a></td>
+        </tr>
+</table>
+
+            <table width="172" cellpadding="0" cellspacing="0" border="0">
+              <tr><td><img src="/images/spacer.gif" alt="" border="0" width="1" height="8"></td></tr>
+              <tr><td class="darkbg"><img src="/images/spacer.gif" width="1" height="3" alt=""></td></tr>
+            </table>
+            <br>
+
+<!-- INCLUDE THE PAGE SIDEBAR TEXT -->
+&nbsp;
+
+          </td>
+        </tr>
+      </table>
+    </td>
+
+    <td class="darkbg"><img src="/images/spacer.gif" width="1" height="1" border="0" alt=""><br></td>
+    <td>
+      <table width="100%" cellpadding="10" cellspacing="0" border="0" bordercolor="red">
+        <tr>
+          <td valign="top">
+
+<span class="txth1">luainspect.vim : Semantic highlighting for Lua in Vim</span> 
+
+<br>
+<br>
+
+<!-- karma table -->
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
+  <td>
+    Rating <b>6/3</b>,
+    Downloaded by 342  </td>
+  <td class="lightbg">
+  <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
+  </td>
+  <td>
+    <a href="http://vim.wikia.com/wiki/Script:3169">Vim wiki</a>
+  </td>  
+</tr>
+</table>
+<p>
+
+<table cellspacing="0" cellpadding="0" border="0">
+<tr><td class="prompt">created by</td></tr>
+<tr><td><a href="/account/profile.php?user_id=14483">Peter Odding</a></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">script type</td></tr>
+<tr><td>syntax</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">description</td></tr>
+<tr><td>This Vim plug-in uses the LuaInspect tool to (automatically) perform semantic highlighting of variables in Lua source code. It was inspired by lua2-mode (for Emacs) and the SciTE plug-in included with LuaInspect. For more information about the plug-in please refer to its homepage or the project page on GitHub:<br><br> • <a target="_blank" href="http://peterodding.com/code/vim/lua-inspect/">http://peterodding.com/code/vim/lua-inspect/</A><br> • <a target="_blank" href="http://github.com/xolox/vim-lua-inspect">http://github.com/xolox/vim-lua-inspect</A><br><br>If you have questions, bug reports, suggestions, etc. the author can be contacted at peter@peterodding.com. If you like this plug-in please vote for it below!</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">install details</td></tr>
+<tr><td>Unzip the most recent ZIP archive file (see below) inside your Vim profile directory (usually this is &quot;~/.vim&quot; on UNIX and &quot;%USERPROFILE%\vimfiles&quot; on Windows), restart Vim and execute the command &quot;:helptags ~/.vim/doc&quot; (use &quot;:helptags ~\vimfiles\doc&quot; instead on Windows). Now try it out: Edit a Lua file and within a few seconds semantic highlighting should be enabled automatically!<br><br>Note that on Windows a command prompt window pops up whenever LuaInspect is run as an external process. If this bothers you then you can install my shell.vim plug-in (see <a href="/scripts/script.php?script_id=3123">vimscript #3123</a>) which includes a DLL that works around this issue. Once you’ve installed both plug-ins it should work out of the box!</td></tr>
+<tr><td>&nbsp;</td></tr>
+</table>
+
+<!-- rating table -->
+<form name="rating">
+<input type="hidden" name="script_id" value="3169">
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>rate this script</b></td>
+  <td valign="middle">
+    <input type="radio" name="rating" value="life_changing">Life Changing
+    <input type="radio" name="rating" value="helpful">Helpful
+    <input type="radio" name="rating" value="unfulfilling">Unfulfilling&nbsp;
+    <input type="submit" value="rate">
+  </td>
+</tr>
+</table>
+</form>
+<span class="txth2">script versions</span> (<a href="add_script_version.php?script_id=3169">upload new version</a>)
+<p>
+Click on the package to download.
+<p>
+
+<table cellspacing="2" cellpadding="4" border="0" width="100%">
+<tr class='tableheader'>
+        <th valign="top">package</th>
+    <th valign="top">script version</th>
+    <th valign="top">date</th>
+    <th valign="top">Vim version</th>
+    <th valign="top">user</th>
+    <th valign="top">release notes</th>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=14034">luainspect.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.4.7</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-10-09</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=14483">Peter Odding</a></i></td>
+    <td class="rowodd" valign="top" width="2000"> • Improve syntax error messages for unnamed buffers:<br>&nbsp;&nbsp; <a target="_blank" href="http://github.com/xolox/vim-lua-inspect/commit/3cbe412883edda9ce4cc">http://github.com/xolox/vim-lua-inspect/commit/3cbe412883edda9ce4cc</A><br><br> • Make parse_text() more robust against missing buffer variables:<br>&nbsp;&nbsp; <a target="_blank" href="http://github.com/xolox/vim-lua-inspect/commit/bc013227961f7dc24818">http://github.com/xolox/vim-lua-inspect/commit/bc013227961f7dc24818</A><br><br> • Bug fix: Focus doesn't return to original window:<br>&nbsp;&nbsp; <a target="_blank" href="http://github.com/xolox/vim-lua-inspect/commit/806dcb21f9f7be1de715">http://github.com/xolox/vim-lua-inspect/commit/806dcb21f9f7be1de715</A></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13627">luainspect.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.4.5</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-08-19</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=14483">Peter Odding</a></i></td>
+    <td class="roweven" valign="top" width="2000"> • Always clear previously overlayed highlighting:<br>&nbsp;&nbsp; <a target="_blank" href="http://github.com/xolox/vim-lua-inspect/commit/62942b011979937fba84ea4795f7a5c593323f31">http://github.com/xolox/vim-lua-inspect/commit/62942b011979937fba84ea4795f7a5c593323f31</A><br><br> • Bug fix for `E776: No location list':<br>&nbsp;&nbsp; <a target="_blank" href="http://github.com/xolox/vim-lua-inspect/commit/47b25952b638bb02f69c7fb479cbb2d57c806a94">http://github.com/xolox/vim-lua-inspect/commit/47b25952b638bb02f69c7fb479cbb2d57c806a94</A><br><br> • Make argument count warnings highlight only function names:<br>&nbsp;&nbsp; <a target="_blank" href="http://github.com/xolox/vim-lua-inspect/commit/22b75bcf657d4f55e48cce3801613ee3e3086af1">http://github.com/xolox/vim-lua-inspect/commit/22b75bcf657d4f55e48cce3801613ee3e3086af1</A><br><br>Lots of miscellaneous changes (see <a target="_blank" href="http://github.com/xolox/vim-lua-inspect/commits/">http://github.com/xolox/vim-lua-inspect/commits/</A>) to make the plug-in compatible with the newest release of LuaInspect, which itself includes bug fixes that fix bugs in this plug-in (e.g. when you add some empty lines to the start of a Lua buffer the highlighting would break, this turned out to be a bug in the Metalua lexer).</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13590">luainspect.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.4.3</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-08-16</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=14483">Peter Odding</a></i></td>
+    <td class="rowodd" valign="top" width="2000"> • Bug fix: Strip newlines from warnings:<br>&nbsp;&nbsp; <a target="_blank" href="http://github.com/xolox/vim-lua-inspect/commit/59ba90c6c496dfe929cb83b896fe4e594d06354a">http://github.com/xolox/vim-lua-inspect/commit/59ba90c6c496dfe929cb83b896fe4e594d06354a</A><br><br> • Ignore LuaInspect status messages on stderr (only applies when not using if-lua):<br>&nbsp;&nbsp; <a target="_blank" href="http://github.com/xolox/vim-lua-inspect/commit/fd3920c5fd7faba9881a2b89525b5caa7753baa8">http://github.com/xolox/vim-lua-inspect/commit/fd3920c5fd7faba9881a2b89525b5caa7753baa8</A><br><br> • Enable renaming variables that only differ in case:<br>&nbsp;&nbsp; <a target="_blank" href="http://github.com/xolox/vim-lua-inspect/commit/14b1ff64e29b6333d492a9fc8dfddb0427ee449e">http://github.com/xolox/vim-lua-inspect/commit/14b1ff64e29b6333d492a9fc8dfddb0427ee449e</A></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13581">luainspect.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.4</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-08-15</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=14483">Peter Odding</a></i></td>
+    <td class="roweven" valign="top" width="2000">Some new features and lots of bug fixes:<br><br> • Support dark colorschemes following scite.lua:<br>&nbsp;&nbsp; <a target="_blank" href="http://github.com/xolox/vim-lua-inspect/commit/c6a8ecf5067329540d70a313336d28cd33dbf4f9">http://github.com/xolox/vim-lua-inspect/commit/c6a8ecf5067329540d70a313336d28cd33dbf4f9</A><br><br> • Bug fix: Show error highlighting only in Lua buffers:<br>&nbsp;&nbsp; <a target="_blank" href="http://github.com/xolox/vim-lua-inspect/commit/2d671c489bdf42dfe68b289588c09e0a18c7ce0b">http://github.com/xolox/vim-lua-inspect/commit/2d671c489bdf42dfe68b289588c09e0a18c7ce0b</A><br><br> • Bug fix: Overlay argument count highlighting:<br>&nbsp;&nbsp; <a target="_blank" href="http://github.com/xolox/vim-lua-inspect/commit/7f9cbd60cbbc949ddb5c809eac2ba3a88dad44a6">http://github.com/xolox/vim-lua-inspect/commit/7f9cbd60cbbc949ddb5c809eac2ba3a88dad44a6</A><br><br> • Split plug-in into command definitions / autoload functions:<br>&nbsp;&nbsp; <a target="_blank" href="http://github.com/xolox/vim-lua-inspect/commit/527e1b76a06c04baf2b9b597f1fbd5e0ef02fca4">http://github.com/xolox/vim-lua-inspect/commit/527e1b76a06c04baf2b9b597f1fbd5e0ef02fca4</A><br><br> • if-lua now includes io.*; remove workaround<br>&nbsp;&nbsp; <a target="_blank" href="http://github.com/xolox/vim-lua-inspect/commit/5f3bdbafcc5258487e94cf55dae9cde5374d97d1">http://github.com/xolox/vim-lua-inspect/commit/5f3bdbafcc5258487e94cf55dae9cde5374d97d1</A><br><br> • Time plug-in execution for all actions:<br>&nbsp;&nbsp; <a target="_blank" href="http://github.com/xolox/vim-lua-inspect/commit/2a33bcb6876ef1bd0705ea8738ee0e5c735fff42">http://github.com/xolox/vim-lua-inspect/commit/2a33bcb6876ef1bd0705ea8738ee0e5c735fff42</A> <br><br> • Use real buffer names instead of ‘noname.lua’:<br>&nbsp;&nbsp; <a target="_blank" href="http://github.com/xolox/vim-lua-inspect/commit/2e93bdd4f3de8a39fc22a6f2d29021a5873d057b">http://github.com/xolox/vim-lua-inspect/commit/2e93bdd4f3de8a39fc22a6f2d29021a5873d057b</A><br><br> • Improved highlighting for argument count warnings:<br>&nbsp;&nbsp; <a target="_blank" href="http://github.com/xolox/vim-lua-inspect/commit/17bb37cefb7e562cacc0d076c6189aaf92026aca">http://github.com/xolox/vim-lua-inspect/commit/17bb37cefb7e562cacc0d076c6189aaf92026aca</A><br><br> • Use LuaInspect's get_value_details() function:<br>&nbsp;&nbsp; <a target="_blank" href="http://github.com/xolox/vim-lua-inspect/commit/cca74e2556c351e91e150bcf33b69f537b4a2644">http://github.com/xolox/vim-lua-inspect/commit/cca74e2556c351e91e150bcf33b69f537b4a2644</A><br><br> • Show warnings by LuaInspect in location list:<br>&nbsp;&nbsp; <a target="_blank" href="http://github.com/xolox/vim-lua-inspect/commit/f0eeca23130a1bbff1293e7203dcde8f7340d06a">http://github.com/xolox/vim-lua-inspect/commit/f0eeca23130a1bbff1293e7203dcde8f7340d06a</A><br><br> • The packages for version 0.3.3 and 0.3.6 below should have been self contained but I failed to include the LuaInspect sources. This has been fixed now. Sorry about that!</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13555">luainspect.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.3.6</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-08-12</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=14483">Peter Odding</a></i></td>
+    <td class="rowodd" valign="top" width="2000"> • Warn user + show tooltips for syntax errors:<br>&nbsp;&nbsp; <a target="_blank" href="http://github.com/xolox/vim-lua-inspect/commit/b0b58008127bcecae658922707370f0df915847c">http://github.com/xolox/vim-lua-inspect/commit/b0b58008127bcecae658922707370f0df915847c</A><br><br> • Better highlighting of selected variables:<br>&nbsp;&nbsp; <a target="_blank" href="http://github.com/xolox/vim-lua-inspect/commit/026fdd42bca366b95a271c3b8c9fa78cbc17c0f9">http://github.com/xolox/vim-lua-inspect/commit/026fdd42bca366b95a271c3b8c9fa78cbc17c0f9</A><br><br> • Highlight wrong function argument count:<br>&nbsp;&nbsp; <a target="_blank" href="http://github.com/xolox/vim-lua-inspect/commit/72a058e773a97781eaa731567faf1f2268576563">http://github.com/xolox/vim-lua-inspect/commit/72a058e773a97781eaa731567faf1f2268576563</A></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13549">luainspect.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.3.3</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-08-11</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=14483">Peter Odding</a></i></td>
+    <td class="roweven" valign="top" width="2000"> • &lt;F2&gt; mapping to rename all occurrences of variable:<br>&nbsp;&nbsp; <a target="_blank" href="http://github.com/xolox/vim-lua-inspect/commit/0c52221a952874807e50d668b0c89511378bdb10">http://github.com/xolox/vim-lua-inspect/commit/0c52221a952874807e50d668b0c89511378bdb10</A><br><br> • 'gd' mapping to jump to variable declaration:<br>&nbsp;&nbsp; <a target="_blank" href="http://github.com/xolox/vim-lua-inspect/commit/bb99531941ca10ffd9b77a2a9dcd83a354a022cf">http://github.com/xolox/vim-lua-inspect/commit/bb99531941ca10ffd9b77a2a9dcd83a354a022cf</A><br><br> • Tooltips to show variable details like state/type/signature/value:<br>&nbsp;&nbsp; <a target="_blank" href="http://github.com/xolox/vim-lua-inspect/commit/dc640de6799ba3da5f70073828da91ffaf0b596a">http://github.com/xolox/vim-lua-inspect/commit/dc640de6799ba3da5f70073828da91ffaf0b596a</A></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13536">luainspect.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.2.4</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-08-10</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=14483">Peter Odding</a></i></td>
+    <td class="rowodd" valign="top" width="2000"> • Highlight syntax errors as spelling errors:<br>&nbsp;&nbsp; <a target="_blank" href="http://github.com/xolox/vim-lua-inspect/commit/f5b367d8dd7d9d6da1fb359ab19b0e44c49161f7">http://github.com/xolox/vim-lua-inspect/commit/f5b367d8dd7d9d6da1fb359ab19b0e44c49161f7</A><br><br> • Support automatic updates using GLVS plug-in:<br>&nbsp;&nbsp; <a target="_blank" href="http://github.com/xolox/vim-lua-inspect/commit/4c2c0bfd45e86dbfdbedf66c20425a3b4e9426a6">http://github.com/xolox/vim-lua-inspect/commit/4c2c0bfd45e86dbfdbedf66c20425a3b4e9426a6</A></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13533">luainspect.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.2.2</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-08-10</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=14483">Peter Odding</a></i></td>
+    <td class="roweven" valign="top" width="2000"> • Now works on Windows and disables easytags.vim:<br>&nbsp;&nbsp; <a target="_blank" href="http://github.com/xolox/vim-lua-inspect/commit/ce2b578242ccf3d4eef658accc7e4711f34fbbbc">http://github.com/xolox/vim-lua-inspect/commit/ce2b578242ccf3d4eef658accc7e4711f34fbbbc</A><br><br> • Converted the plug-in to a self contained package: Unzip and you're off!<br>&nbsp;&nbsp; <a target="_blank" href="http://github.com/xolox/vim-lua-inspect/commit/43307cbb3a99b3a6075640151626f50846ced474">http://github.com/xolox/vim-lua-inspect/commit/43307cbb3a99b3a6075640151626f50846ced474</A><br><br> • Don't show command prompts on Windows (integration with my shell.vim plug-in):<br>&nbsp;&nbsp; <a target="_blank" href="http://github.com/xolox/vim-lua-inspect/commit/2689c2d1896d47c6aa3fa2d919d06d353cf0c17f">http://github.com/xolox/vim-lua-inspect/commit/2689c2d1896d47c6aa3fa2d919d06d353cf0c17f</A></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13519">luainspect.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.2.1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-08-07</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=14483">Peter Odding</a></i></td>
+    <td class="rowodd" valign="top" width="2000"> • Highlight occurrences of variable under text cursor:<br>&nbsp;&nbsp; <a target="_blank" href="http://github.com/xolox/vim-lua-inspect/commit/6a0430cff4f4806a89732037437562ef3c36d0a0">http://github.com/xolox/vim-lua-inspect/commit/6a0430cff4f4806a89732037437562ef3c36d0a0</A><br><br> • Don't parse the text when it hasn't been changed:<br>&nbsp;&nbsp; <a target="_blank" href="http://github.com/xolox/vim-lua-inspect/commit/a9205704796749a0556ce6e7a7959654b3983caa">http://github.com/xolox/vim-lua-inspect/commit/a9205704796749a0556ce6e7a7959654b3983caa</A><br><br> • Use new LuaInspect API (without incremental parsing for now):<br>&nbsp;&nbsp; <a target="_blank" href="http://github.com/xolox/vim-lua-inspect/commit/a14b977c69b6682054e80b9bcceb1c0f797fcd21">http://github.com/xolox/vim-lua-inspect/commit/a14b977c69b6682054e80b9bcceb1c0f797fcd21</A><br><br> • Use if-lua by default (because of if-lua-corelibs.diff):<br>&nbsp;&nbsp; <a target="_blank" href="http://github.com/xolox/vim-lua-inspect/commit/7bec1f49c6f12bbdde1f6d5a3470a9f66a8e34e2">http://github.com/xolox/vim-lua-inspect/commit/7bec1f49c6f12bbdde1f6d5a3470a9f66a8e34e2</A><br><br> • Support disabling plug-in for specific buffers:<br>&nbsp;&nbsp; <a target="_blank" href="http://github.com/xolox/vim-lua-inspect/commit/3e5967143918c6bc383fae0442f10210c81be0f8">http://github.com/xolox/vim-lua-inspect/commit/3e5967143918c6bc383fae0442f10210c81be0f8</A></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13417">luainspect.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.1.4</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-07-28</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=14483">Peter Odding</a></i></td>
+    <td class="roweven" valign="top" width="2000"> • Don't perform semantic highlighting in 'diff' mode:<br>&nbsp;&nbsp; <a target="_blank" href="http://github.com/xolox/vim-lua-inspect/commit/47a223e11b469d871f8968c7f5bb7543d0f54e2c">http://github.com/xolox/vim-lua-inspect/commit/47a223e11b469d871f8968c7f5bb7543d0f54e2c</A><br><br> • Add word boundaries to Vim search patterns:<br>&nbsp;&nbsp; <a target="_blank" href="http://github.com/xolox/vim-lua-inspect/commit/59637bd8e2843b51780866f10899f759aa07c416">http://github.com/xolox/vim-lua-inspect/commit/59637bd8e2843b51780866f10899f759aa07c416</A><br><br> • (Performance) improvements suggested by Luis Carvalho:<br>&nbsp;&nbsp; <a target="_blank" href="http://github.com/xolox/vim-lua-inspect/commit/7de26617d1f659a3e173f8be5ed0305fee6a83a9">http://github.com/xolox/vim-lua-inspect/commit/7de26617d1f659a3e173f8be5ed0305fee6a83a9</A><br><br> • `ErrorMsg' has better highlighting between colorschemes than `Error':<br>&nbsp;&nbsp; <a target="_blank" href="http://github.com/xolox/vim-lua-inspect/commit/63dc4bb0f8094b45c7abe416d1ccbc28426d54cc">http://github.com/xolox/vim-lua-inspect/commit/63dc4bb0f8094b45c7abe416d1ccbc28426d54cc</A><br><br> • Simplified wrapper as suggested by David Manura:<br>&nbsp;&nbsp; <a target="_blank" href="http://github.com/xolox/vim-lua-inspect/commit/ed34601710a09222ef3351082c40cc249eae9821">http://github.com/xolox/vim-lua-inspect/commit/ed34601710a09222ef3351082c40cc249eae9821</A></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13415">luainspect.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.1.3</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-07-27</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=14483">Peter Odding</a></i></td>
+    <td class="rowodd" valign="top" width="2000"> • Enable users to define styles which the plug-in won't override:<br>&nbsp;&nbsp; <a target="_blank" href="http://github.com/xolox/vim-lua-inspect/commit/67777a75f4b9f4896d5818b57611d34c82a0187c">http://github.com/xolox/vim-lua-inspect/commit/67777a75f4b9f4896d5818b57611d34c82a0187c</A><br><br> • Enable highlighting on user defined events:<br>&nbsp;&nbsp; <a target="_blank" href="http://github.com/xolox/vim-lua-inspect/commit/d07a1ff10cbd78d5e16c28d234b5e37bc0de88ad">http://github.com/xolox/vim-lua-inspect/commit/d07a1ff10cbd78d5e16c28d234b5e37bc0de88ad</A></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13414">luainspect.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.1.2</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-07-27</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=14483">Peter Odding</a></i></td>
+    <td class="roweven" valign="top" width="2000">README improvements, miscellaneous other changes: <a target="_blank" href="http://github.com/xolox/vim-lua-inspect/commit/ec4e1c31facda80b316a5062fe71a4fe40e07f84">http://github.com/xolox/vim-lua-inspect/commit/ec4e1c31facda80b316a5062fe71a4fe40e07f84</A></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13413">luainspect.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-07-27</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=14483">Peter Odding</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Initial upload</td>
+</tr>
+</table>
+<!-- finish off the framework -->
+          </td>
+        </tr>
+      </table>
+    </td>
+
+  </tr>
+</table>
+
+<!-- END OF THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr><td colspan="4" bgcolor="#000000"><img src="/images/spacer.gif" height="2" width="1" alt=""></td></tr>
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr>
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+
+    <td align="left" valign="top"><small>
+      If you have questions or remarks about this site, visit the
+      <a href="http://vimonline.sf.net">vimonline development</a> pages.
+      Please use this site responsibly.
+      <br> 
+      
+      Questions about <a href="http://www.vim.org/about.php">Vim</a> should go
+      to the <a href="http://www.vim.org/maillist.php">maillist</a>.
+      Help Bram <a href="http://iccf-holland.org/">help Uganda</a>.
+      </small>
+	&nbsp;
+	&nbsp;
+
+	<!-- Start of StatCounter Code -->
+	<script type="text/javascript" language="javascript">
+	var sc_project=1417324; 
+	var sc_invisible=1; 
+	var sc_partition=11; 
+	var sc_security="d41633bc"; 
+	</script>
+
+	<script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script><noscript><a href="http://www.statcounter.com/" target="_blank"><img  src="http://c12.statcounter.com/counter.php?sc_project=1417324&java=0&security=d41633bc&invisible=0" alt="free tracking" border="0"></a> </noscript>
+	<!-- End of StatCounter Code -->
+          </td>
+
+    <td align="right" valign="top">
+      		<a href="http://sourceforge.net/projects/vim" rel="nofollow"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=8&type=1" width="88" height="31" border="0" alt="SourceForge.net Logo" /></a>
+    </td>
+
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+  </tr>
+
+    
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  
+  </tr>
+</table>
+
+</body>
+</html>
+

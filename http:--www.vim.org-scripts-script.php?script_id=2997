@@ -1,0 +1,316 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+  <link rel="Stylesheet" type="text/css" href="/css/style.css" >
+  <title>utlx_interwiki.vim - A scheme that adds interwiki linking to the script UTL  : vim online</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <meta name="KEYWORDS" content="Vim, Vi IMproved, text editor, home, documentation, tips, scripts, news">
+  <link rel="shortcut icon" type="image/x-icon" href="/images/vim_shortcut.ico">
+</head>
+
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff"> 
+
+<!-- HEADER, SPONSOR IMAGE, VIM IMAGE AND BOOK AD -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+  <td class="lightbg">&nbsp;&nbsp;&nbsp;</td>
+  <td class="lightbg" align="left"><a href="/sponsor/index.php"><img src="/images/sponsorvim.gif" alt="sponsor Vim development" border="0"></a></td>
+    <td class="lightbg" align="center"><a href="/index.php"><img src="/images/vim_header.gif" border="0" alt="Vim logo"></a></td>
+    <td class="lightbg" align="right"><a href="http://iccf-holland.org/click5.html"><img src="/images/buyhelplearn.gif" alt="Vim Book Ad" border="0"></a></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="darkbg"><img src="/images/spacer.gif" width="1" height="10" alt=""></td>
+  </tr>
+</table>
+<!-- THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+  <col width="180">
+  <col width="1">
+
+  <tr valign="top">
+    <td class="sidebar">
+      <table width="180" cellpadding="4" cellspacing="0" border="0">
+        <tr valign="top">
+          <td class="sidebar">
+
+<!-- INCLUDE THE PAGE NAVIGATION -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+    <tr>
+        <td><small>not logged in (<a href="/login.php">login</a>)</small></td>
+    </tr>
+    <tr><td>
+<small>&nbsp;</small>
+<form action="http://www.google.com/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-3005259998294962:bvyni59kjr1" />
+    <input type="hidden" name="ie" value="ISO-8859-1" />
+    <input type="text" name="q" size="20" />
+    <br>
+    <input type="submit" name="sa" value="Search" />
+  </div>
+</form>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+    </td></tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="1"></td>
+    </tr>
+    <tr>
+        <td class="darkbg"><img src="/images/spacer.gif" alt='' border="0" height="3"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="2"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/index.php">Home</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/search.php">Advanced search</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/about.php">About Vim</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/community.php">Community</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/news/news.php">News</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/sponsor/index.php">Sponsoring</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/trivia.php">Trivia</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/docs.php">Documentation</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/download.php">Download</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/scripts/index.php">Scripts</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/tips/index.php">Tips</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/account/index.php">My Account</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/huh.php">Site Help</a></td>
+        </tr>
+</table>
+
+            <table width="172" cellpadding="0" cellspacing="0" border="0">
+              <tr><td><img src="/images/spacer.gif" alt="" border="0" width="1" height="8"></td></tr>
+              <tr><td class="darkbg"><img src="/images/spacer.gif" width="1" height="3" alt=""></td></tr>
+            </table>
+            <br>
+
+<!-- INCLUDE THE PAGE SIDEBAR TEXT -->
+&nbsp;
+
+          </td>
+        </tr>
+      </table>
+    </td>
+
+    <td class="darkbg"><img src="/images/spacer.gif" width="1" height="1" border="0" alt=""><br></td>
+    <td>
+      <table width="100%" cellpadding="10" cellspacing="0" border="0" bordercolor="red">
+        <tr>
+          <td valign="top">
+
+<span class="txth1">utlx_interwiki.vim : A scheme that adds interwiki linking to the script UTL </span> 
+
+<br>
+<br>
+
+<!-- karma table -->
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
+  <td>
+    Rating <b>12/3</b>,
+    Downloaded by 114  </td>
+  <td class="lightbg">
+  <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
+  </td>
+  <td>
+    <a href="http://vim.wikia.com/wiki/Script:2997">Vim wiki</a>
+  </td>  
+</tr>
+</table>
+<p>
+
+<table cellspacing="0" cellpadding="0" border="0">
+<tr><td class="prompt">created by</td></tr>
+<tr><td><a href="/account/profile.php?user_id=17122">Marko Mahni&#269;</a></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">script type</td></tr>
+<tr><td>utility</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">description</td></tr>
+<tr><td>A scheme for the <a href="/scripts/script.php?script_id=293">vimscript#293</a> (UTL) that adds interwiki linking.<br>Requires <a href="/scripts/script.php?script_id=293">vimscript#293</a>. By default it supports UTL version 3.0.<br>To use with UTL 2.0, see Customization below.<br><br>A wiki can be defined anywhere in the current file like this:<br><br>&nbsp;&nbsp; [wp]: <a target="_blank" href="http://en.wikipedia.org/wiki">http://en.wikipedia.org/wiki</A><br><br>A link from the current file to a page on the wiki may look like this:<br><br>&nbsp;&nbsp; <a target="_blank" href="iw://wp/Vim_">iw://wp/Vim_</A>(text_editor)<br><br>By placing the cursor on the link, and executing :Utl, the link will be<br>internally expanded to<br><br>&nbsp;&nbsp; <a target="_blank" href="http://en.wikipedia.org/wiki/Vim_">http://en.wikipedia.org/wiki/Vim_</A>(text_editor)<br><br>and passed to UTL which will open the URL in the preferred program.<br>See <a href="/scripts/script.php?script_id=293">vimscript#293</a> for more information.<br><br>The URL can contain a placeholder '%p' that will be replaced with<br>the path of an interwiki link, for example<br><br>&nbsp;&nbsp; [script]: <a target="_blank" href="http://www.vim.org/scripts/script.php?script_id">http://www.vim.org/scripts/script.php?script_id</A>=%p<br>&nbsp;&nbsp; '<a target="_blank" href="iw://script/2997">iw://script/2997</A>' --&gt; <a target="_blank" href="http://www.vim.org/scripts/script.php?script_id=2997">http://www.vim.org/scripts/script.php?script_id=2997</A><br><br><br>Global wikis can be defined in .vimrc:<br><br>&nbsp;&nbsp; let g:utlextra_interwikis = {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\ 'LOG': ['/path/to/log', '.txt'],<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\ 'google': '<a target="_blank" href="http://www.google.com/search?q">http://www.google.com/search?q</A>=%p',<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\ }<br><br>This defines a wiki named LOG that is in the directory '/path/to/log' and<br>uses files with the extension '.txt'. To jump to a log entry from anywhere<br>an URL like the following can be used:<br><br>&nbsp;&nbsp; <a target="_blank" href="iw://LOG/201002#tn=2010-02-27">iw://LOG/201002#tn=2010-02-27</A><br>&nbsp;&nbsp; <br>which will be expanded to:<br>&nbsp;&nbsp; <br>&nbsp;&nbsp; <a target="_blank" href="file:///path/to/log/201002.txt#tn=2010-02-27">file:///path/to/log/201002.txt#tn=2010-02-27</A><br><br>The extension .txt is added only if the path in the URL (/201002 in this case)<br>doesn't have one.<br><br>If at some point the log files are moved to another directory, all references<br>to the log entries will be valid if the value for '/path/to/log' is changed <br>in g:utlextra_interwikis.<br><br>The second interwiki, 'google' displays the results of a google search. Because<br>it doesn't have a default extension it is defined as a simple string.<br>The link <a target="_blank" href="iw://google/vim">iw://google/vim</A>+editor will be expanded to<br><br>&nbsp;&nbsp; <a target="_blank" href="http://www.google.com/search=vim">http://www.google.com/search=vim</A>+editor<br><br>('%p' is replaced by 'vim+editor') and displayed in the browser.<br><br>The format of g:utlextra_interwikis is similar to the format used in<br><a href="/scripts/script.php?script_id=861">vimscript#861</a> (Viki/Deplate). In fact if the 'intervikis' are defined<br>for Viki/Deplate, they will be imported by this script (interwikis<br>defined in g:utlextra_interwikis take precedence).<br><br>If interwikis are defined globally and also in the current file, locally<br>defined interwikis take precedence.<br><br>The format of an interwiki definition is:<br><br>&nbsp;&nbsp; [name]: URL | default_extension<br><br>where default_extension starts with a dot. The format may change in the future<br>to avoid confilcts with other markup applications, for example:<br><br>&nbsp;&nbsp; [w=name]: URL | default_extension<br><br>(please report confilcts and suggest alternatives on vim wiki).<br><br>Interwikis can also be defined in comments, but only a limited set of<br>comments is currently supported and the feature has not been extensively<br>tested:<br>&nbsp;&nbsp; &quot; [wiki]:...<br>&nbsp;&nbsp; * [wiki]:...<br>&nbsp;&nbsp; # [wiki]:...<br>&nbsp;&nbsp; // [wiki]:...<br>&nbsp;&nbsp; /* [wiki]:...<br><br>If the interwiki URL uses an empty wikiname, the link will be transformed<br>as a link inside the current wiki. The path of the current file will be<br>matched to all defined interwikis and if found, the settings for that wiki<br>will be used. If a wiki isn't defined, the target file will have the same<br>extension as the current file (if the path in URL doesn't already have an<br>extension).<br>&nbsp;&nbsp; <br>&nbsp;&nbsp; '<a target="_blank" href="iw:///localfile">iw:///localfile</A>'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--&gt; ./localfile.txt<br>&nbsp;&nbsp; '<a target="_blank" href="iw:///localfile.viki">iw:///localfile.viki</A>'&nbsp;&nbsp; --&gt; ./localfile.viki<br>&nbsp;&nbsp; '<a target="_blank" href="iw://./localfile">iw://./localfile</A>'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --&gt; ./localfile.txt<br><br><br>Customization:<br><br>g:utlextra_interwiki_scheme = 'iw'<br>&nbsp;&nbsp; Change the scheme to use instead of 'iw'. Multiple schemes can<br>&nbsp;&nbsp; be used for interwiki linking, for example 'iw,wiki'.<br><br>g:utlextra_utl_version = 3<br>&nbsp;&nbsp; Which version of UTL is installed. The interface for defining<br>&nbsp;&nbsp; additional schemas handlded by UTL has changed between versions<br>&nbsp;&nbsp; 2 and 3. This script supports version 3 by default.<br>&nbsp;&nbsp; Set to 2 to use with UTL 2.0.<br><br>g:utlextra_import_viki = 1<br>&nbsp;&nbsp; Set to 1 to import interwikis from Viki/Deplate.<br>&nbsp;&nbsp; Set to 0 to skip importation.<br><br>g:utlextra_interwiki_match_case = 0<br>&nbsp;&nbsp; If set to 1, the exact case must be used for interwiki names.<br>&nbsp;&nbsp; If set to 0, first a case-sensitive match will be performed<br>&nbsp;&nbsp; and if it fails a case insensitive will be used.<br><br></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">install details</td></tr>
+<tr><td>Unpack into ~/.vim directory.<br><br>Add the follwing line to .vimrc to specify the installed version of UTL:<br>&nbsp;&nbsp; let g:utlextra_utl_version = 2<br>(you can check the version of UTL with :h utl)<br><br>If the wrong version of UTL is specified, you will get an error like:<br>&nbsp;&nbsp; E118: Too many arguments for function: Utl_AddressScheme_iw&nbsp;&nbsp;&nbsp;&nbsp;<br><br>Prerequisites:<br>&nbsp;&nbsp; * install <a href="/scripts/script.php?script_id=293">vimscript#293</a> (UTL)<br></td></tr>
+<tr><td>&nbsp;</td></tr>
+</table>
+
+<!-- rating table -->
+<form name="rating">
+<input type="hidden" name="script_id" value="2997">
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>rate this script</b></td>
+  <td valign="middle">
+    <input type="radio" name="rating" value="life_changing">Life Changing
+    <input type="radio" name="rating" value="helpful">Helpful
+    <input type="radio" name="rating" value="unfulfilling">Unfulfilling&nbsp;
+    <input type="submit" value="rate">
+  </td>
+</tr>
+</table>
+</form>
+<span class="txth2">script versions</span> (<a href="add_script_version.php?script_id=2997">upload new version</a>)
+<p>
+Click on the package to download.
+<p>
+
+<table cellspacing="2" cellpadding="4" border="0" width="100%">
+<tr class='tableheader'>
+        <th valign="top">package</th>
+    <th valign="top">script version</th>
+    <th valign="top">date</th>
+    <th valign="top">Vim version</th>
+    <th valign="top">user</th>
+    <th valign="top">release notes</th>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15035">utlx_interwiki.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.4</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2011-02-17</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=17122">Marko Mahni&#269;</a></i></td>
+    <td class="rowodd" valign="top" width="2000">* documentation added<br>* minor fixes</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=12524">utlx_interwiki.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.3</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-02-28</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=17122">Marko Mahni&#269;</a></i></td>
+    <td class="roweven" valign="top" width="2000">Added parameter %p to interwiki URL definition</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=12517">utlx_interwiki.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.2</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-02-28</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=17122">Marko Mahni&#269;</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Added support for UTL 2.0</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=12515">utlx_interwiki.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.1</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-02-27</i></td>
+    <td class="roweven" valign="top" nowrap>7.2</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=17122">Marko Mahni&#269;</a></i></td>
+    <td class="roweven" valign="top" width="2000">Initial upload</td>
+</tr>
+</table>
+<!-- finish off the framework -->
+          </td>
+        </tr>
+      </table>
+    </td>
+
+  </tr>
+</table>
+
+<!-- END OF THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr><td colspan="4" bgcolor="#000000"><img src="/images/spacer.gif" height="2" width="1" alt=""></td></tr>
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr>
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+
+    <td align="left" valign="top"><small>
+      If you have questions or remarks about this site, visit the
+      <a href="http://vimonline.sf.net">vimonline development</a> pages.
+      Please use this site responsibly.
+      <br> 
+      
+      Questions about <a href="http://www.vim.org/about.php">Vim</a> should go
+      to the <a href="http://www.vim.org/maillist.php">maillist</a>.
+      Help Bram <a href="http://iccf-holland.org/">help Uganda</a>.
+      </small>
+	&nbsp;
+	&nbsp;
+
+	<!-- Start of StatCounter Code -->
+	<script type="text/javascript" language="javascript">
+	var sc_project=1417324; 
+	var sc_invisible=1; 
+	var sc_partition=11; 
+	var sc_security="d41633bc"; 
+	</script>
+
+	<script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script><noscript><a href="http://www.statcounter.com/" target="_blank"><img  src="http://c12.statcounter.com/counter.php?sc_project=1417324&java=0&security=d41633bc&invisible=0" alt="free tracking" border="0"></a> </noscript>
+	<!-- End of StatCounter Code -->
+          </td>
+
+    <td align="right" valign="top">
+      		<a href="http://sourceforge.net/projects/vim" rel="nofollow"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=8&type=1" width="88" height="31" border="0" alt="SourceForge.net Logo" /></a>
+    </td>
+
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+  </tr>
+
+    
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  
+  </tr>
+</table>
+
+</body>
+</html>
+

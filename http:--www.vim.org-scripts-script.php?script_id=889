@@ -1,0 +1,364 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+  <link rel="Stylesheet" type="text/css" href="/css/style.css" >
+  <title>EvalSelection.vim - evaluate selected code (vim, bash, ruby, python, perl, (mz)scheme, tcl, R, SPSS) : vim online</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <meta name="KEYWORDS" content="Vim, Vi IMproved, text editor, home, documentation, tips, scripts, news">
+  <link rel="shortcut icon" type="image/x-icon" href="/images/vim_shortcut.ico">
+</head>
+
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff"> 
+
+<!-- HEADER, SPONSOR IMAGE, VIM IMAGE AND BOOK AD -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+  <td class="lightbg">&nbsp;&nbsp;&nbsp;</td>
+  <td class="lightbg" align="left"><a href="/sponsor/index.php"><img src="/images/sponsorvim.gif" alt="sponsor Vim development" border="0"></a></td>
+    <td class="lightbg" align="center"><a href="/index.php"><img src="/images/vim_header.gif" border="0" alt="Vim logo"></a></td>
+    <td class="lightbg" align="right"><a href="http://iccf-holland.org/click5.html"><img src="/images/buyhelplearn.gif" alt="Vim Book Ad" border="0"></a></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="darkbg"><img src="/images/spacer.gif" width="1" height="10" alt=""></td>
+  </tr>
+</table>
+<!-- THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+  <col width="180">
+  <col width="1">
+
+  <tr valign="top">
+    <td class="sidebar">
+      <table width="180" cellpadding="4" cellspacing="0" border="0">
+        <tr valign="top">
+          <td class="sidebar">
+
+<!-- INCLUDE THE PAGE NAVIGATION -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+    <tr>
+        <td><small>not logged in (<a href="/login.php">login</a>)</small></td>
+    </tr>
+    <tr><td>
+<small>&nbsp;</small>
+<form action="http://www.google.com/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-3005259998294962:bvyni59kjr1" />
+    <input type="hidden" name="ie" value="ISO-8859-1" />
+    <input type="text" name="q" size="20" />
+    <br>
+    <input type="submit" name="sa" value="Search" />
+  </div>
+</form>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+    </td></tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="1"></td>
+    </tr>
+    <tr>
+        <td class="darkbg"><img src="/images/spacer.gif" alt='' border="0" height="3"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="2"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/index.php">Home</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/search.php">Advanced search</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/about.php">About Vim</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/community.php">Community</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/news/news.php">News</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/sponsor/index.php">Sponsoring</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/trivia.php">Trivia</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/docs.php">Documentation</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/download.php">Download</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/scripts/index.php">Scripts</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/tips/index.php">Tips</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/account/index.php">My Account</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/huh.php">Site Help</a></td>
+        </tr>
+</table>
+
+            <table width="172" cellpadding="0" cellspacing="0" border="0">
+              <tr><td><img src="/images/spacer.gif" alt="" border="0" width="1" height="8"></td></tr>
+              <tr><td class="darkbg"><img src="/images/spacer.gif" width="1" height="3" alt=""></td></tr>
+            </table>
+            <br>
+
+<!-- INCLUDE THE PAGE SIDEBAR TEXT -->
+&nbsp;
+
+          </td>
+        </tr>
+      </table>
+    </td>
+
+    <td class="darkbg"><img src="/images/spacer.gif" width="1" height="1" border="0" alt=""><br></td>
+    <td>
+      <table width="100%" cellpadding="10" cellspacing="0" border="0" bordercolor="red">
+        <tr>
+          <td valign="top">
+
+<span class="txth1">EvalSelection.vim : evaluate selected code (vim, bash, ruby, python, perl, (mz)scheme, tcl, R, SPSS)</span> 
+
+<br>
+<br>
+
+<!-- karma table -->
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
+  <td>
+    Rating <b>18/6</b>,
+    Downloaded by 2335  </td>
+  <td class="lightbg">
+  <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
+  </td>
+  <td>
+    <a href="http://vim.wikia.com/wiki/Script:889">Vim wiki</a>
+  </td>  
+</tr>
+</table>
+<p>
+
+<table cellspacing="0" cellpadding="0" border="0">
+<tr><td class="prompt">created by</td></tr>
+<tr><td><a href="/account/profile.php?user_id=4037">Tom Link</a></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">script type</td></tr>
+<tr><td>utility</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">description</td></tr>
+<tr><td>Evaluate source code selected in a visual region. The result can be displayed <br>in an interaction log, appended to the text, replace the text, or saved in the <br>@e register. This is useful for performing small text manipulation tasks or <br>calculations that aren't worth the trouble of creating a new file or switching <br>to a different program, but which are too big for being handled in the command <br>line.<br><br>The key bindings follow this scheme:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;Leader&gt;e{LANGUAGE}{MODE} :: work on the visual region<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;Leader&gt;E{LANGUAGE}{MODE} :: work on the contents of the e-register<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;Leader&gt;x{MODE}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :: work on the visual region (derives LANGUAGE <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; from the buffer's 'filetype')<br><br>LANGUAGE being one of:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;v :: vim (comments at the end of line after vim code could cause problems)<br>&nbsp;&nbsp;&nbsp;&nbsp;r :: ruby (requires compiled-in ruby support)<br>&nbsp;&nbsp;&nbsp;&nbsp;s :: sh (using system())<br>&nbsp;&nbsp;&nbsp;&nbsp;e :: calculator, evaluate formula (using either ruby, python, perl, tcl, <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; or vim)<br><br>I haven't actually tested the following three bindings because I use <br>neither of them. Anyway, as I happen to use a Vim with +tcl, +python and <br>+perl support compiled in, I added them to the standard bindings:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;y :: python (requires compiled-in python support)<br>&nbsp;&nbsp;&nbsp;&nbsp;p :: perl (requires compiled-in perl support)<br>&nbsp;&nbsp;&nbsp;&nbsp;t :: tcl (requires compiled-in tcl support)<br>&nbsp;&nbsp;&nbsp;&nbsp;z :: mzscheme (requires compiled-in mzscheme support)<br><br>If ruby-support is compiled in, the following languages are available too <br>(but see |EvalSelection-Interaction| below):<br>&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;c :: scheme<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;set g:evalSelectionSchemeInterpreter to &quot;Gauche&quot; or &quot;Chicken&quot;<br>&nbsp;&nbsp;&nbsp;&nbsp;l :: lisp<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;set g:evalSelectionLispInterpreter to &quot;CLisp&quot;<br>&nbsp;&nbsp;&nbsp;&nbsp;o :: ocaml<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;set g:evalSelectionOCamlInterpreter to &quot;OCaml&quot; or &quot;OCamlClean&quot;<br>&nbsp;&nbsp;&nbsp;&nbsp;R :: R<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;set g:evalSelectionRInterpreter &quot;R&quot;, &quot;RClean&quot;, or &quot;RDCOM&quot;<br>&nbsp;&nbsp;&nbsp;&nbsp;S :: SPSS<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;limited support (no return values), the (one-way) communication with <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SPSS is done via OLE automation<br><br>MODE being one of:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;x :: just evaluate and put the result in the e-register<br>&nbsp;&nbsp;&nbsp;&nbsp;e :: the same as x<br>&nbsp;&nbsp;&nbsp;&nbsp;p :: echo/print the result on the command line<br>&nbsp;&nbsp;&nbsp;&nbsp;a :: append the result to visual region<br>&nbsp;&nbsp;&nbsp;&nbsp;r :: replace visual region with the result<br>&nbsp;&nbsp;&nbsp;&nbsp;l :: insert the result in a temporary interaction log<br><br><br>Commands:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;EvalSelectionCmdLine LANG :: Simulate a command line for LANG; due to the <br>&nbsp;&nbsp;&nbsp;&nbsp;primitive handling of input/output, no input commands (like read, get kind <br>&nbsp;&nbsp;&nbsp;&nbsp;of stuff) can be used; all output is redirected to the log. Exit with ^D + <br>&nbsp;&nbsp;&nbsp;&nbsp;Enter, i.e. enter the ^D character.<br><br>&nbsp;&nbsp;&nbsp;&nbsp;EvalSelectionSetup{LANG}&nbsp;&nbsp;:: Set up interaction with external interpreter <br>&nbsp;&nbsp;&nbsp;&nbsp;(but see below)<br><br>&nbsp;&nbsp;&nbsp;&nbsp;EvalSelectionQuit INTERPRETER :: Quit interaction with an <br>&nbsp;&nbsp;&nbsp;&nbsp;external interpreter<br></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">install details</td></tr>
+<tr><td>Requires multvals.vim (<a href="/scripts/script.php?script_id=171">vimscript #171</a>), +ruby (for interaction with an interpreter)<br><br>If you have +ruby support compiled in and if you want to talk to an external interpreter, make sure that g:evalSelectionRubyDir points to the directory where EvalSelection.rb resides. Default values are:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;Win32: $VIM.&quot;/vimfiles/ruby/&quot;<br>&nbsp;&nbsp;&nbsp;&nbsp;Else:&nbsp;&nbsp;&quot;~/.vim/ruby/&quot;<br><br><br>Also available via git<br><a target="_blank" href="http://github.com/tomtom/vimtlib/tree/master">http://github.com/tomtom/vimtlib/tree/master</A><br></td></tr>
+<tr><td>&nbsp;</td></tr>
+</table>
+
+<!-- rating table -->
+<form name="rating">
+<input type="hidden" name="script_id" value="889">
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>rate this script</b></td>
+  <td valign="middle">
+    <input type="radio" name="rating" value="life_changing">Life Changing
+    <input type="radio" name="rating" value="helpful">Helpful
+    <input type="radio" name="rating" value="unfulfilling">Unfulfilling&nbsp;
+    <input type="submit" value="rate">
+  </td>
+</tr>
+</table>
+</form>
+<span class="txth2">script versions</span> (<a href="add_script_version.php?script_id=889">upload new version</a>)
+<p>
+Click on the package to download.
+<p>
+
+<table cellspacing="2" cellpadding="4" border="0" width="100%">
+<tr class='tableheader'>
+        <th valign="top">package</th>
+    <th valign="top">script version</th>
+    <th valign="top">date</th>
+    <th valign="top">Vim version</th>
+    <th valign="top">user</th>
+    <th valign="top">release notes</th>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=7221">EvalSelection.vba.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.16</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2007-06-08</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- MzScheme support (thanks to Mark Smithfield)<br>- Catch errors on EvalSelectionQuit (you'll have to manually kill zombie <br>processes)<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=7111">EvalSelection.vba.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.15</b></td>
+    <td class="roweven" valign="top" nowrap><i>2007-05-14</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
+    <td class="roweven" valign="top" width="2000">- Escape backslashes in EvalSelectionTalk()<br>- SPSS: Insert a space before variable names (like SPSS itself)<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=4362">EvalSelection.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.14</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2005-06-14</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Fixed some menu-related problems; &lt;LocalLeader&gt;r shortkey for SPSS&nbsp;&nbsp;andR (work similarly to ctrl-r in the spss editor); display a more usefulerror message when communication via OLE goes wrong; possibility to savethe interaction log; post setup & tear down hooks for externalinterpreters</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=3873">EvalSelection.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.13</b></td>
+    <td class="roweven" valign="top" nowrap><i>2005-02-16</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
+    <td class="roweven" valign="top" width="2000">R: set working directory and load .Rdata if available, word completion, catch errors, build objects menu; SPSS: show data window, build menu; g:evalSelectionLogCommands defaults to 1; revamped log</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=3861">EvalSelection.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.10</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2005-02-13</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
+    <td class="rowodd" valign="top" width="2000">capture interaction with R via R(D)COM; &quot;RDCOM&quot; uses a 2nd instance of gvim as a pager (it doesn't start RCmdr any more); &quot;RDCOM Commander&quot; uses RCmdr; &quot;RDCOM Clean&quot; and &quot;RDCOM Commander Clean&quot; modes; take care of R functions with void results (like data, help.search ...)</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=3857">EvalSelection.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.9</b></td>
+    <td class="roweven" valign="top" nowrap><i>2005-02-12</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
+    <td class="roweven" valign="top" width="2000">support for interaction with R and SPSS via win32 COM/OLE; calculator shortcuts</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=2997">EvalSelection.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.8</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2004-05-06</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
+    <td class="rowodd" valign="top" width="2000">improved interaction with external interpreters (still not fully usable but it's getting better); reunified EvalSelection.vim and EvalSelectionRuby.vim</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=2990">EvalSelection.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.7</b></td>
+    <td class="roweven" valign="top" nowrap><i>2004-05-03</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
+    <td class="roweven" valign="top" width="2000">Small improvements with external interpreters (e.g., multi-line commands in R); moved code depending on +ruby to EvalSelectionRuby.vim (thanks to Grant&nbsp;&nbsp;Bowman for pointing out this problem); saved all files in unix&nbsp;&nbsp;format; added python, perl, and tcl (but I can't tell if they work)</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=2819">EvalSelection.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.6</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2004-03-09</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Use of redir; EvalSelectionCmdLine (CLI-like interaction); interaction with external interpreter (lisp, scheme, R, ocaml; experimental & requires +ruby support); separated logs; removed bc support</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=2700">EvalSelection.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.382</b></td>
+    <td class="roweven" valign="top" nowrap><i>2004-01-31</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
+    <td class="roweven" valign="top" width="2000">l-Mode for logging</td>
+</tr>
+</table>
+<!-- finish off the framework -->
+          </td>
+        </tr>
+      </table>
+    </td>
+
+  </tr>
+</table>
+
+<!-- END OF THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr><td colspan="4" bgcolor="#000000"><img src="/images/spacer.gif" height="2" width="1" alt=""></td></tr>
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr>
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+
+    <td align="left" valign="top"><small>
+      If you have questions or remarks about this site, visit the
+      <a href="http://vimonline.sf.net">vimonline development</a> pages.
+      Please use this site responsibly.
+      <br> 
+      
+      Questions about <a href="http://www.vim.org/about.php">Vim</a> should go
+      to the <a href="http://www.vim.org/maillist.php">maillist</a>.
+      Help Bram <a href="http://iccf-holland.org/">help Uganda</a>.
+      </small>
+	&nbsp;
+	&nbsp;
+
+	<!-- Start of StatCounter Code -->
+	<script type="text/javascript" language="javascript">
+	var sc_project=1417324; 
+	var sc_invisible=1; 
+	var sc_partition=11; 
+	var sc_security="d41633bc"; 
+	</script>
+
+	<script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script><noscript><a href="http://www.statcounter.com/" target="_blank"><img  src="http://c12.statcounter.com/counter.php?sc_project=1417324&java=0&security=d41633bc&invisible=0" alt="free tracking" border="0"></a> </noscript>
+	<!-- End of StatCounter Code -->
+          </td>
+
+    <td align="right" valign="top">
+      		<a href="http://sourceforge.net/projects/vim" rel="nofollow"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=8&type=1" width="88" height="31" border="0" alt="SourceForge.net Logo" /></a>
+    </td>
+
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+  </tr>
+
+    
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  
+  </tr>
+</table>
+
+</body>
+</html>
+

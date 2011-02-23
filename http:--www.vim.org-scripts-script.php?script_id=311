@@ -1,0 +1,340 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+  <link rel="Stylesheet" type="text/css" href="/css/style.css" >
+  <title>grep.vim - Grep search tools integration with Vim : vim online</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <meta name="KEYWORDS" content="Vim, Vi IMproved, text editor, home, documentation, tips, scripts, news">
+  <link rel="shortcut icon" type="image/x-icon" href="/images/vim_shortcut.ico">
+</head>
+
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff"> 
+
+<!-- HEADER, SPONSOR IMAGE, VIM IMAGE AND BOOK AD -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+  <td class="lightbg">&nbsp;&nbsp;&nbsp;</td>
+  <td class="lightbg" align="left"><a href="/sponsor/index.php"><img src="/images/sponsorvim.gif" alt="sponsor Vim development" border="0"></a></td>
+    <td class="lightbg" align="center"><a href="/index.php"><img src="/images/vim_header.gif" border="0" alt="Vim logo"></a></td>
+    <td class="lightbg" align="right"><a href="http://iccf-holland.org/click5.html"><img src="/images/buyhelplearn.gif" alt="Vim Book Ad" border="0"></a></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="darkbg"><img src="/images/spacer.gif" width="1" height="10" alt=""></td>
+  </tr>
+</table>
+<!-- THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+  <col width="180">
+  <col width="1">
+
+  <tr valign="top">
+    <td class="sidebar">
+      <table width="180" cellpadding="4" cellspacing="0" border="0">
+        <tr valign="top">
+          <td class="sidebar">
+
+<!-- INCLUDE THE PAGE NAVIGATION -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+    <tr>
+        <td><small>not logged in (<a href="/login.php">login</a>)</small></td>
+    </tr>
+    <tr><td>
+<small>&nbsp;</small>
+<form action="http://www.google.com/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-3005259998294962:bvyni59kjr1" />
+    <input type="hidden" name="ie" value="ISO-8859-1" />
+    <input type="text" name="q" size="20" />
+    <br>
+    <input type="submit" name="sa" value="Search" />
+  </div>
+</form>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+    </td></tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="1"></td>
+    </tr>
+    <tr>
+        <td class="darkbg"><img src="/images/spacer.gif" alt='' border="0" height="3"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="2"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/index.php">Home</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/search.php">Advanced search</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/about.php">About Vim</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/community.php">Community</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/news/news.php">News</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/sponsor/index.php">Sponsoring</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/trivia.php">Trivia</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/docs.php">Documentation</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/download.php">Download</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/scripts/index.php">Scripts</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/tips/index.php">Tips</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/account/index.php">My Account</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/huh.php">Site Help</a></td>
+        </tr>
+</table>
+
+            <table width="172" cellpadding="0" cellspacing="0" border="0">
+              <tr><td><img src="/images/spacer.gif" alt="" border="0" width="1" height="8"></td></tr>
+              <tr><td class="darkbg"><img src="/images/spacer.gif" width="1" height="3" alt=""></td></tr>
+            </table>
+            <br>
+
+<!-- INCLUDE THE PAGE SIDEBAR TEXT -->
+&nbsp;
+
+          </td>
+        </tr>
+      </table>
+    </td>
+
+    <td class="darkbg"><img src="/images/spacer.gif" width="1" height="1" border="0" alt=""><br></td>
+    <td>
+      <table width="100%" cellpadding="10" cellspacing="0" border="0" bordercolor="red">
+        <tr>
+          <td valign="top">
+
+<span class="txth1">grep.vim : Grep search tools integration with Vim</span> 
+
+<br>
+<br>
+
+<!-- karma table -->
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
+  <td>
+    Rating <b>788/270</b>,
+    Downloaded by 18985  </td>
+  <td class="lightbg">
+  <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
+  </td>
+  <td>
+    <a href="http://vim.wikia.com/wiki/Script:311">Vim wiki</a>
+  </td>  
+</tr>
+</table>
+<p>
+
+<table cellspacing="0" cellpadding="0" border="0">
+<tr><td class="prompt">created by</td></tr>
+<tr><td><a href="/account/profile.php?user_id=244">Yegappan Lakshmanan</a></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">script type</td></tr>
+<tr><td>utility</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">description</td></tr>
+<tr><td>Overview<br><br>The grep plugin integrates the grep, fgrep, egrep, and agrep tools with<br>Vim and allows you to search for a pattern in one or more files and jump<br>to them.<br><br>To use this plugin, you need the grep, fgrep, egrep, agrep, find and<br>xargs utilities. These tools are present in most of the Unix installations.<br>For MS-Windows systems, you can download the GNU grep and find utilities<br>from the following sites:<br><br>&nbsp;&nbsp; <a target="_blank" href="http://gnuwin32.sourceforge.net/packages/grep.htm">http://gnuwin32.sourceforge.net/packages/grep.htm</A><br>&nbsp;&nbsp; <a target="_blank" href="http://gnuwin32.sourceforge.net/packages/findutils.htm">http://gnuwin32.sourceforge.net/packages/findutils.htm</A><br><br>Usage<br><br>The grep.vim plugin introduces the following Vim commands:<br><br>:Grep&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Search for the specified pattern in the specified files<br>:GrepAdd&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Same as &quot;:Grep&quot; but adds the results to the current results<br>:Rgrep&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Run recursive grep<br>:RgrepAdd&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Same as &quot;:Rgrep&quot; but adds the results to the current results<br>:GrepBuffer&nbsp;&nbsp;&nbsp;&nbsp;- Search for a pattern on all open buffers<br>:GrepBufferAdd - Same as &quot;:GrepBuffer&quot; but adds the results to the current<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; results<br>:Bgrep&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Same as :GrepBuffer<br>:BgrepAdd&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Same as :GrepBufferAdd<br>:GrepArgs&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Search for a pattern on all the Vim argument <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; filenames (:args)<br>:GrepArgsAdd&nbsp;&nbsp; - Same as &quot;:GrepArgs&quot; but adds the results to the current<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; results<br>:Fgrep&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Run fgrep<br>:FgrepAdd&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Same as &quot;:Fgrep&quot; but adds the results to the current<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; results<br>:Rfgrep&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Run recursive fgrep<br>:RfgrepAdd&nbsp;&nbsp;&nbsp;&nbsp; - Same as &quot;:Rfgrep&quot; but adds the results to the current<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; results<br>:Egrep&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Run egrep<br>:EgrepAdd&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Same as &quot;:Egrep&quot; but adds the results to the current<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; results<br>:Regrep&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Run recursive egrep<br>:RegrepAdd&nbsp;&nbsp;&nbsp;&nbsp; - Same as &quot;:Regrep&quot; but adds the results to the current<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; results<br>:Agrep&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Run agrep<br>:AgrepAdd&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Same as &quot;:Agrep&quot; but adds the results to the current<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; results<br>:Ragrep&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Run recursive agrep<br>:RagrepAdd&nbsp;&nbsp;&nbsp;&nbsp; - Same as &quot;:Ragrep&quot; but adds the results to the current<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; results<br><br>The above commands can be invoked like this:<br><br>&nbsp;&nbsp; :Grep&nbsp;&nbsp; [&lt;grep_options&gt;] [&lt;search_pattern&gt; [&lt;file_name(s)&gt;]]<br>&nbsp;&nbsp; :Rgrep&nbsp;&nbsp;[&lt;grep_options&gt;] [&lt;search_pattern&gt; [&lt;file_name(s)&gt;]]<br>&nbsp;&nbsp; :Fgrep&nbsp;&nbsp;[&lt;grep_options&gt;] [&lt;search_pattern&gt; [&lt;file_name(s)&gt;]]<br>&nbsp;&nbsp; :Rfgrep [&lt;grep_options&gt;] [&lt;search_pattern&gt; [&lt;file_name(s)&gt;]]<br>&nbsp;&nbsp; :Egrep&nbsp;&nbsp;[&lt;grep_options&gt;] [&lt;search_pattern&gt; [&lt;file_name(s)&gt;]]<br>&nbsp;&nbsp; :Regrep [&lt;grep_options&gt;] [&lt;search_pattern&gt; [&lt;file_name(s)&gt;]]<br>&nbsp;&nbsp; :Agrep&nbsp;&nbsp;[&lt;grep_options&gt;] [&lt;search_pattern&gt; [&lt;file_name(s)&gt;]]<br>&nbsp;&nbsp; :Ragrep [&lt;grep_options&gt;] [&lt;search_pattern&gt; [&lt;file_name(s)&gt;]]<br><br>&nbsp;&nbsp; :GrepAdd&nbsp;&nbsp; [&lt;grep_options&gt;] [&lt;search_pattern&gt; [&lt;file_name(s)&gt;]]<br>&nbsp;&nbsp; :RgrepAdd&nbsp;&nbsp;[&lt;grep_options&gt;] [&lt;search_pattern&gt; [&lt;file_name(s)&gt;]]<br>&nbsp;&nbsp; :FgrepAdd&nbsp;&nbsp;[&lt;grep_options&gt;] [&lt;search_pattern&gt; [&lt;file_name(s)&gt;]]<br>&nbsp;&nbsp; :RfgrepAdd [&lt;grep_options&gt;] [&lt;search_pattern&gt; [&lt;file_name(s)&gt;]]<br>&nbsp;&nbsp; :EgrepAdd&nbsp;&nbsp;[&lt;grep_options&gt;] [&lt;search_pattern&gt; [&lt;file_name(s)&gt;]]<br>&nbsp;&nbsp; :RegrepAdd [&lt;grep_options&gt;] [&lt;search_pattern&gt; [&lt;file_name(s)&gt;]]<br>&nbsp;&nbsp; :AgrepAdd&nbsp;&nbsp;[&lt;grep_options&gt;] [&lt;search_pattern&gt; [&lt;file_name(s)&gt;]]<br>&nbsp;&nbsp; :RagrepAdd [&lt;grep_options&gt;] [&lt;search_pattern&gt; [&lt;file_name(s)&gt;]]<br><br>&nbsp;&nbsp; :GrepBuffer [&lt;grep_options&gt;] [&lt;search_pattern&gt;]<br>&nbsp;&nbsp; :Bgrep [&lt;grep_options&gt;] [&lt;search_pattern&gt;]<br>&nbsp;&nbsp; :GrepArgs [&lt;grep_options&gt;] [&lt;search_pattern&gt;]<br><br>&nbsp;&nbsp; :GrepBufferAdd [&lt;grep_options&gt;] [&lt;search_pattern&gt;]<br>&nbsp;&nbsp; :BgrepAdd [&lt;grep_options&gt;] [&lt;search_pattern&gt;]<br>&nbsp;&nbsp; :GrepArgsAdd [&lt;grep_options&gt;] [&lt;search_pattern&gt;]<br><br>In the above commands, all the arguments are optional.<br><br>You can specify grep options like -i (ignore case) or -w (search for a word)<br>to the above commands.&nbsp;&nbsp;If the &lt;grep_options&gt; are not specified, then the<br>default grep options specified by the variable Grep_Default_Options is <br>used.<br><br>You can specify the grep pattern to search as an argument to the above<br>commands.&nbsp;&nbsp;If the &lt;search_pattern&gt; is not specified, then you will be<br>prompted to enter a search pattern. By default, the keyword under the cursor<br>is displayed for the search pattern prompt. You can accept the default or<br>modify it.<br><br>The search pattern is automatically enclosed by the character specified in<br>the Grep_Shell_Quote_Char variable. You should not enclose the search<br>pattern with a shell escape character.<br><br>If you want to specify a search pattern with space characters or a<br>multi-word pattern, then you should use the Grep command pattern input<br>prompt to supply the pattern.<br><br>You can specify one or more file names (or file patterns) to the above<br>commands.&nbsp;&nbsp;If the &lt;file_names&gt; are not specified, then you will be prompted<br>to enter file names.&nbsp;&nbsp;By default, the pattern specified by the<br>Grep_Default_Filelist variable is used. To specify the file name(s) as an<br>argument to the above commands, you have to specify the search pattern also.<br><br>When you enter only the command name, you will be prompted to enter the<br>search pattern and the files in which to search for the pattern. By default,<br>the keyword under the cursor is displayed for the search pattern prompt.<br>Depending on the command, you may prompted for additional parameters like<br>the directories to search for the pattern.<br><br>You can retrieve previously entered values for the Grep prompts using the up<br>and down arrow keys. You can cancel the command by pressing the escape key.<br>You can use CTRL-U to erase the default shown for the prompt and CTRL-W to<br>erase the previous word in the prompt. For more information about editing<br>the prompt, read ':help cmdline-editing' Vim help topic.<br><br>After invoking any of the grep commands, you can cancel the command, when<br>you are prompted for a search pattern or file names or a directory by<br>pressing the &lt;Esc&gt; key. You cannot cancel (or kill) the<br>grep/fgrep/egrep/agrep commands after the external command is invoked.<br><br>The GrepAdd, RgrepAdd and other *Add commands append the search output to<br>the current search output. This is useful if you want to see the search<br>results for multiple patterns at the same time. These commands are available<br>only in Vim version 7.0 and above.<br><br>You can map a key to invoke any of the above commands. For example, the<br>following map invokes the :Grep command to search for the keyword under the<br>cursor:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nnoremap &lt;silent&gt; &lt;F3&gt; :Grep&lt;CR&gt;<br><br>The output of the grep command will be listed in the Vim quickfix window.<br>1. You can select a line in the quickfix window and press &lt;Enter&gt; or double<br>&nbsp;&nbsp; click on a match to jump to that line.<br>2. You can use the &quot;:cnext&quot; and &quot;:cprev&quot; commands to the jump to the next or<br>&nbsp;&nbsp; previous output line.<br>3. You can use the &quot;:colder&quot; and &quot;:cnewer&quot; commands to go between multiple<br>&nbsp;&nbsp; grep quickfix output windows.<br>4. The quickfix window need not be opened always to use the grep output.<br>&nbsp;&nbsp; You can close the quickfix window and use the quickfix commands to jump<br>&nbsp;&nbsp; to the grep matches.&nbsp;&nbsp;Use the &quot;:copen&quot; command to open the quickfix<br>&nbsp;&nbsp; window again.<br><br>For more information about other quickfix commands read &quot;:help quickfix&quot;<br><br>When using GUI Vim, the Tools-&gt;Search menu item with a few sub-menu items is<br>created for few variations of the search command.<br><br>Configuration<br><br>By changing the following variables you can configure the behavior of this<br>plugin. Set the following variables in your .vimrc file using the 'let'<br>command.<br><br>The 'Grep_Path' variable is used to locate the grep utility. By default,<br>this is set to grep. You can change this using the let command:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:let Grep_Path = 'd:\tools\grep.exe'<br><br>The 'Fgrep_Path' variable is used to locate the fgrep utility. By default,<br>this is set to fgrep. You can change this using the let command:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:let Fgrep_Path = 'd:\tools\fgrep.exe'<br><br>The 'Egrep_Path' variable is used to locate the egrep utility. By default,<br>this is set to egrep. You can change this using the let command:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:let Egrep_Path = 'd:\tools\egrep.exe'<br><br>The 'Agrep_Path' variable is used to locate the agrep utility. By default,<br>this is set to agrep. You can change this using the let command:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:let Agrep_Path = 'd:\tools\agrep.exe'<br><br>The 'Grep_Find_Path' variable is used to locate the find utility. By<br>default, this is set to d:\tools\find.exe. You can change this using the let<br>command:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:let Grep_Find_Path = 'd:\tools\find.exe'<br><br>The 'Grep_Xargs_Path' variable is used to locate the xargs utility. By<br>default, this is set to xargs. You can change this using the let<br>command:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:let Grep_Xargs_Path = 'd:\tools\xargs.exe'<br><br>When running any one of the Grep commands, you will be prompted for the<br>files in which to search for the pattern. The 'Grep_Default_Filelist'<br>variable is used to specify to default for this prompt. By default, this<br>variable is set to '*'. You can specify multiple matching patterns separated<br>by spaces. You can change this settings using the let command:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:let Grep_Default_Filelist = '*.[chS]'<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:let Grep_Default_Filelist = '*.c *.cpp *.asm'<br><br>The 'Grep_Default_Options' is used to pass default command line options to<br>the grep/fgrep/egrep/agrep utilities. By default, this is set to an empty<br>string. You can change this using the let command:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:let Grep_Default_Options = '-i'<br><br>The 'Grep_Skip_Dirs' variable specifies the list of directories to skip<br>while doing recursive searches. By default, this is set to 'RCS CVS SCCS'.<br>You can change this using the let command:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:let Grep_Skip_Dirs = 'dir1 dir2 dir3'<br><br>The 'Grep_Skip_Files' variable specifies the list of files to skip while<br>doing recursive searches. By default, this is set to '*~ *,v s.*'. You can<br>change this using the let command:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:let Grep_Skip_Files = '*.bak *~'<br><br>By default, when you invoke the Grep commands the quickfix window will be<br>opened with the grep output.&nbsp;&nbsp;You can disable opening the quickfix window,<br>by setting the 'Grep_OpenQuickfixWindow' variable&nbsp;&nbsp;to zero:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:let Grep_OpenQuickfixWindow = 0<br><br>You can manually open the quickfix window using the :cwindow command.<br><br>By default, for recursive searches, the 'find' and 'xargs' utilities are<br>used.&nbsp;&nbsp;If you don't have the 'xargs' utility or don't want to use the<br>'xargs' utility, &quot; then you can set the 'Grep_Find_Use_Xargs' variable to<br>zero. If this is set to zero, then only the 'find' utility is used for<br>recursive searches:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:let Grep_Find_Use_Xargs = 0<br><br>To handle file names with space characters in them, the xargs utility<br>is invoked with the '--null' argument. If the xargs utility in your system<br>doesn't accept the '--null' argument, then you can change the<br>Grep_Xargs_Options variable. For example, to use the '--print0' xargs<br>argument, you can use the following command:<br><br>	:let Grep_Xargs_Options = '--print0'<br><br>The Grep_Cygwin_Find variable should be set to 1, if you are using the find<br>utility from the cygwin package. This setting is used to handle the<br>difference between the backslash and forward slash path separators.<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:let Grep_Cygwin_Find = 1<br><br>The 'Grep_Null_Device' variable specifies the name of the null device to<br>pass to the grep commands. This is needed to force the grep commands to<br>print the name of the file in which a match is found, if only one filename<br>is specified. For Unix systems, this is set to /dev/null and for MS-Windows<br>systems, this is set to NUL. You can modify this by using the let command:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:let Grep_Null_Device = '/dev/null'<br><br>The 'Grep_Shell_Quote_Char' variable specifies the quote character to use<br>for protecting patterns from being interpreted by the shell. For Unix<br>systems, this is set to &quot;'&quot; and for MS-Window systems, this is set to an<br>empty string.&nbsp;&nbsp;You can change this using the let command:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:let Grep_Shell_Quote_Char = &quot;'&quot;<br><br>The 'Grep_Shell_Escape_Char' variable specifies the escape character to use<br>for protecting special characters from being interpreted by the shell.&nbsp;&nbsp;For<br>Unix systems, this is set to '&#039 and for MS-Window systems, this is set to<br>an empty string.&nbsp;&nbsp;You can change this using the let command:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:let Grep_Shell_Escape_Char = &quot;'&quot;<br></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">install details</td></tr>
+<tr><td>1. Copy the grep.vim file to the $HOME/.vim/plugin or $HOME/vimfiles/plugin<br>&nbsp;&nbsp; or $VIM/vimfiles/plugin directory. <br>&nbsp;&nbsp; Refer to the following Vim help topics for more information about Vim<br>&nbsp;&nbsp; plugins:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:help add-plugin<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:help add-global-plugin<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:help runtimepath<br>2. If the grep executables are not already present in one of the directories<br>&nbsp;&nbsp; in the PATH environment variable, then set the Grep_Path and other _Path<br>&nbsp;&nbsp; variables to point to the location of the grep utilites in the .vimrc<br>&nbsp;&nbsp; file.<br>3. Restart Vim.<br>4. You can now use the &quot;:Grep&quot; and other commands to search for patterns in<br>&nbsp;&nbsp; files.<br></td></tr>
+<tr><td>&nbsp;</td></tr>
+</table>
+
+<!-- rating table -->
+<form name="rating">
+<input type="hidden" name="script_id" value="311">
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>rate this script</b></td>
+  <td valign="middle">
+    <input type="radio" name="rating" value="life_changing">Life Changing
+    <input type="radio" name="rating" value="helpful">Helpful
+    <input type="radio" name="rating" value="unfulfilling">Unfulfilling&nbsp;
+    <input type="submit" value="rate">
+  </td>
+</tr>
+</table>
+</form>
+<span class="txth2">script versions</span> (<a href="add_script_version.php?script_id=311">upload new version</a>)
+<p>
+Click on the package to download.
+<p>
+
+<table cellspacing="2" cellpadding="4" border="0" width="100%">
+<tr class='tableheader'>
+        <th valign="top">package</th>
+    <th valign="top">script version</th>
+    <th valign="top">date</th>
+    <th valign="top">Vim version</th>
+    <th valign="top">user</th>
+    <th valign="top">release notes</th>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=7645">grep.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.9</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2007-09-10</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=244">Yegappan Lakshmanan</a></i></td>
+    <td class="rowodd" valign="top" width="2000">New commands to add search results to the existing results.&nbsp;&nbsp;New<br>Grep_Xargs_Options variable to control the options passed to xargs.<br>Don't echo newlines before running the commands.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=6868">grep.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.8</b></td>
+    <td class="roweven" valign="top" nowrap><i>2007-03-13</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=244">Yegappan Lakshmanan</a></i></td>
+    <td class="roweven" valign="top" width="2000">Support for expanding file and directory names in the search prompt. Fix for recursively searching for filenames with space characters in the name using find and xargs.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=5838">grep.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.7</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2006-06-16</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=244">Yegappan Lakshmanan</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Added filename completion support for grep commands. In GUI Vim, added Tools-&gt;Search menu item for using the Grep commands.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=4484">grep.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.6</b></td>
+    <td class="roweven" valign="top" nowrap><i>2005-08-10</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=244">Yegappan Lakshmanan</a></i></td>
+    <td class="roweven" valign="top" width="2000">1. Add the search pattern to the search results.<br>2. Support for the -h argument to the commands.<br>3. Make the plugin work in Vi-compatible mode.<br>4. Updated documentation.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=4219">grep.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.5</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2005-04-28</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=244">Yegappan Lakshmanan</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Don't automatically jump to the first match in the grep output.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=3579">grep.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.4</b></td>
+    <td class="roweven" valign="top" nowrap><i>2004-10-27</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=244">Yegappan Lakshmanan</a></i></td>
+    <td class="roweven" valign="top" width="2000">Support for specifying the grep flags, search pattern and filenames as argument to commands and other minor improvements.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=916">grep.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.3</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2002-06-11</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=244">Yegappan Lakshmanan</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Fixed file pattern quoting and special character escaping for MS-Windows.</td>
+</tr>
+</table>
+<!-- finish off the framework -->
+          </td>
+        </tr>
+      </table>
+    </td>
+
+  </tr>
+</table>
+
+<!-- END OF THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr><td colspan="4" bgcolor="#000000"><img src="/images/spacer.gif" height="2" width="1" alt=""></td></tr>
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr>
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+
+    <td align="left" valign="top"><small>
+      If you have questions or remarks about this site, visit the
+      <a href="http://vimonline.sf.net">vimonline development</a> pages.
+      Please use this site responsibly.
+      <br> 
+      
+      Questions about <a href="http://www.vim.org/about.php">Vim</a> should go
+      to the <a href="http://www.vim.org/maillist.php">maillist</a>.
+      Help Bram <a href="http://iccf-holland.org/">help Uganda</a>.
+      </small>
+	&nbsp;
+	&nbsp;
+
+	<!-- Start of StatCounter Code -->
+	<script type="text/javascript" language="javascript">
+	var sc_project=1417324; 
+	var sc_invisible=1; 
+	var sc_partition=11; 
+	var sc_security="d41633bc"; 
+	</script>
+
+	<script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script><noscript><a href="http://www.statcounter.com/" target="_blank"><img  src="http://c12.statcounter.com/counter.php?sc_project=1417324&java=0&security=d41633bc&invisible=0" alt="free tracking" border="0"></a> </noscript>
+	<!-- End of StatCounter Code -->
+          </td>
+
+    <td align="right" valign="top">
+      		<a href="http://sourceforge.net/projects/vim" rel="nofollow"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=8&type=1" width="88" height="31" border="0" alt="SourceForge.net Logo" /></a>
+    </td>
+
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+  </tr>
+
+    
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  
+  </tr>
+</table>
+
+</body>
+</html>
+

@@ -1,0 +1,332 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+  <link rel="Stylesheet" type="text/css" href="/css/style.css" >
+  <title>JavaImp.vim - Insert and sort Java import statements, view JavaDoc from class name, and more. : vim online</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <meta name="KEYWORDS" content="Vim, Vi IMproved, text editor, home, documentation, tips, scripts, news">
+  <link rel="shortcut icon" type="image/x-icon" href="/images/vim_shortcut.ico">
+</head>
+
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff"> 
+
+<!-- HEADER, SPONSOR IMAGE, VIM IMAGE AND BOOK AD -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+  <td class="lightbg">&nbsp;&nbsp;&nbsp;</td>
+  <td class="lightbg" align="left"><a href="/sponsor/index.php"><img src="/images/sponsorvim.gif" alt="sponsor Vim development" border="0"></a></td>
+    <td class="lightbg" align="center"><a href="/index.php"><img src="/images/vim_header.gif" border="0" alt="Vim logo"></a></td>
+    <td class="lightbg" align="right"><a href="http://iccf-holland.org/click5.html"><img src="/images/buyhelplearn.gif" alt="Vim Book Ad" border="0"></a></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="darkbg"><img src="/images/spacer.gif" width="1" height="10" alt=""></td>
+  </tr>
+</table>
+<!-- THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+  <col width="180">
+  <col width="1">
+
+  <tr valign="top">
+    <td class="sidebar">
+      <table width="180" cellpadding="4" cellspacing="0" border="0">
+        <tr valign="top">
+          <td class="sidebar">
+
+<!-- INCLUDE THE PAGE NAVIGATION -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+    <tr>
+        <td><small>not logged in (<a href="/login.php">login</a>)</small></td>
+    </tr>
+    <tr><td>
+<small>&nbsp;</small>
+<form action="http://www.google.com/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-3005259998294962:bvyni59kjr1" />
+    <input type="hidden" name="ie" value="ISO-8859-1" />
+    <input type="text" name="q" size="20" />
+    <br>
+    <input type="submit" name="sa" value="Search" />
+  </div>
+</form>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+    </td></tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="1"></td>
+    </tr>
+    <tr>
+        <td class="darkbg"><img src="/images/spacer.gif" alt='' border="0" height="3"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="2"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/index.php">Home</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/search.php">Advanced search</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/about.php">About Vim</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/community.php">Community</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/news/news.php">News</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/sponsor/index.php">Sponsoring</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/trivia.php">Trivia</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/docs.php">Documentation</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/download.php">Download</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/scripts/index.php">Scripts</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/tips/index.php">Tips</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/account/index.php">My Account</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/huh.php">Site Help</a></td>
+        </tr>
+</table>
+
+            <table width="172" cellpadding="0" cellspacing="0" border="0">
+              <tr><td><img src="/images/spacer.gif" alt="" border="0" width="1" height="8"></td></tr>
+              <tr><td class="darkbg"><img src="/images/spacer.gif" width="1" height="3" alt=""></td></tr>
+            </table>
+            <br>
+
+<!-- INCLUDE THE PAGE SIDEBAR TEXT -->
+&nbsp;
+
+          </td>
+        </tr>
+      </table>
+    </td>
+
+    <td class="darkbg"><img src="/images/spacer.gif" width="1" height="1" border="0" alt=""><br></td>
+    <td>
+      <table width="100%" cellpadding="10" cellspacing="0" border="0" bordercolor="red">
+        <tr>
+          <td valign="top">
+
+<span class="txth1">JavaImp.vim : Insert and sort Java import statements, view JavaDoc from class name, and more.</span> 
+
+<br>
+<br>
+
+<!-- karma table -->
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
+  <td>
+    Rating <b>134/47</b>,
+    Downloaded by 2730  </td>
+  <td class="lightbg">
+  <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
+  </td>
+  <td>
+    <a href="http://vim.wikia.com/wiki/Script:325">Vim wiki</a>
+  </td>  
+</tr>
+</table>
+<p>
+
+<table cellspacing="0" cellpadding="0" border="0">
+<tr><td class="prompt">created by</td></tr>
+<tr><td><a href="/account/profile.php?user_id=275">William Lee</a></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">script type</td></tr>
+<tr><td>utility</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">description</td></tr>
+<tr><td>This script can generate a Java class name to package mapping file from multiple source paths.&nbsp;&nbsp;Once you have create the mapping file,&nbsp;&nbsp;you can use this file to insert import statements in your .java file using a simple key mapping.&nbsp;&nbsp;It can also sort your imports too!&nbsp;&nbsp;<br><br>JavaImp can also be integrated with JavaDoc, where you can lookup APIs very quickly by just hitting a hot key on a class name.&nbsp;&nbsp;This script can save the time you spent looking up docs and typing in routine import package names.&nbsp;&nbsp;Give it a try!</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">install details</td></tr>
+<tr><td>REQUIREMENTS:<br>&nbsp;&nbsp;- It's recommended that you have the Unix &quot;sort&quot; binary (or the Windows's<br>&nbsp;&nbsp;&quot;sort&quot; or cygwin's &quot;sort&quot; will do) in your path.&nbsp;&nbsp; For the jar support you<br>&nbsp;&nbsp;also need to have the<br>&nbsp;&nbsp;&quot;jar&quot; binary in your path.<br>&nbsp;&nbsp;- To use JavaDoc viewing, you probably need to have a pager like &quot;w3m&quot; or<br>&nbsp;&nbsp;&quot;lynx&quot;.&nbsp;&nbsp;You can also use your usual web browser for this.&nbsp;&nbsp;You do not<br>&nbsp;&nbsp;really need this if you do not use the JavaDoc viewing feature.<br><br>USAGE:<br>&nbsp;&nbsp;Put this file in your ~/.vim/plugin directory.<br><br>&nbsp;&nbsp;You need to set two global variables in your .vimrc in order for this to<br>&nbsp;&nbsp;work:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let g:JavaImpPaths = &quot;...&quot;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let g:JavaImpDataDir = &quot;...&quot;<br><br>&nbsp;&nbsp;The g:JavaImpPaths is a comma separated list of paths that point to the<br>&nbsp;&nbsp;roots of the 'com' or 'org' etc.<br><br>&nbsp;&nbsp;For example: if you have your Java source files in<br>&nbsp;&nbsp;/project/src/java/com/blah and /project2/javasrc/org/blah...., you'll put<br>&nbsp;&nbsp;this in your .vimrc file:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let g:JavaImpPaths = &quot;/project/src/java,/project2/javasrc&quot;<br><br>&nbsp;&nbsp;If there are too many paths, you can split them into separate lines:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let g:JavaImpPaths = &quot;/project/src/java,&quot; .<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; \ &quot;/project2/javasrc,&quot; .<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; \ &quot;/project3/javasrc&quot;<br><br>&nbsp;&nbsp;Note: Don't forget the ',' to separate the paths.<br><br>&nbsp;&nbsp;If ',' is not convenient for you, set g:JavaImpPathSep to the<br>&nbsp;&nbsp;(single-character) separator you would like to use:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let g:JavaImpPathSep = ':'<br><br>&nbsp;&nbsp;The g:JavaImpDataDir is a directory that you use to store JavaImp<br>&nbsp;&nbsp;settings and cache files. Default is:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let g:JavaImpDataDir = $HOME . &quot;/vim/JavaImp&quot;<br><br>&nbsp;&nbsp;Note: Since version 2.1, the &quot;g:JavaImpDataDir&quot; variable replaces<br>&nbsp;&nbsp;&quot;g:JavaImpClassList&quot; and &quot;g:JavaImpJarCache&quot;.&nbsp;&nbsp;If &quot;g:JavaImpClassList&quot; and<br>&nbsp;&nbsp;&quot;g:JavaImpJarCache&quot; are not set, then they default to<br>&nbsp;&nbsp;&quot;g:JavaImpDataDir/JavaImp.txt&quot; and &quot;g:JavaImpDataDir/cache/&quot; accordingly.<br>&nbsp;&nbsp;The files and directory will be created automatically when you generate<br>&nbsp;&nbsp;the JavaImp.txt file.&nbsp;&nbsp;It's recommended that you to use the<br>&nbsp;&nbsp;g:JavaImpDataDir variable instead.<br><br>&nbsp;&nbsp;Now you are ready for some actions.&nbsp;&nbsp;You can now do a:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:JavaImpGenerate or :JIG<br><br>&nbsp;&nbsp;If you have not created the directory for g:JavaImpDataDir yet, this will<br>&nbsp;&nbsp;create the appropriate paths.&nbsp;&nbsp;JIG will go through your JavaImpPaths and<br>&nbsp;&nbsp;search for anything that ends with .java, .class, or .jar.&nbsp;&nbsp;It'll then<br>&nbsp;&nbsp;write the mappings to the JavaImp.txt and/or the cache files.<br>&nbsp;&nbsp;<br>&nbsp;&nbsp;After you've generated your JavaImp.txt file, move your cursor to a class name<br>&nbsp;&nbsp;in a Java file and do a:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:JavaImp or :JI<br><br>&nbsp;&nbsp;And the magic happens!&nbsp;&nbsp;You'll realize that you have an extra import<br>&nbsp;&nbsp;statement inserted after the last import statement in the file.&nbsp;&nbsp;It'll<br>&nbsp;&nbsp;also prompts you with duplicate class names and insert what you have<br>&nbsp;&nbsp;selected.&nbsp;&nbsp;If the class name is already imported, it'll do nothing.&nbsp;&nbsp;<br><br>&nbsp;&nbsp;Doing a:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:JavaImpSilent<br><br>&nbsp;&nbsp;will do a similar thing with less verbosity.&nbsp;&nbsp;This is useful to be used in<br>&nbsp;&nbsp;another script.<br><br>&nbsp;&nbsp;You can also sort the import statements in the file by doing:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:JavaImpSort or :JIS<br><br>&nbsp;&nbsp;Source Viewing<br>&nbsp;&nbsp;--------------<br><br>&nbsp;&nbsp;JavaImp will try to find the source file of the class under your cursor<br>&nbsp;&nbsp;by:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:JavaImpFile or :JIF<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;Doing a :JavaImpFileSplit or :JIFS will open a splitted window on the<br>&nbsp;&nbsp;file.<br><br>&nbsp;&nbsp;JavaDoc Viewing<br>&nbsp;&nbsp;---------------<br>&nbsp;&nbsp;If you want to use the JavaDoc viewing feature for JavaImp, you should set<br>&nbsp;&nbsp;g:JavaImpDocPaths.&nbsp;&nbsp;Similar to how you set the g:JavaImpPaths,<br>&nbsp;&nbsp;g:JavaImpDocPaths contains a list of root level directories that contains<br>&nbsp;&nbsp;your java docs.&nbsp;&nbsp;This, together with a HTML pager (like w3m or lynx on<br>&nbsp;&nbsp;Unix), let you view the JavaDocs very quickly by just hitting :JID on a<br>&nbsp;&nbsp;class name.&nbsp;&nbsp;For example, you can set:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let g:JavaImpDocPaths = &quot;/usr/java/docs/api,&quot; .<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; \ &quot;/project/docs/api&quot;<br><br>&nbsp;&nbsp;The default pager is set to:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let g:JavaImpDocViewer = &quot;w3m&quot;<br>&nbsp;&nbsp;<br>&nbsp;&nbsp;On windows, you can put iexplore.exe or mozilla.exe in your path and set<br>&nbsp;&nbsp;the g:JavaImpDocViewer to &quot;iexplore.exe&quot; or &quot;mozilla.exe&quot;.&nbsp;&nbsp;Note that<br>&nbsp;&nbsp;windows' shell and spaces in the path don't mix. Thus, given an absolute<br>&nbsp;&nbsp;path of the HTML viewer to g:JavaImpDocViewer may not work.<br><br>&nbsp;&nbsp;If you have your g:JavaImpDocPaths and g:JavaImpDocViewer set correctly<br>&nbsp;&nbsp;You can then do this with your cursor on a classname:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:JavaImpDoc or :JID <br><br>&nbsp;&nbsp;JavaImp will find your class accordingly and open the viewer to the<br>&nbsp;&nbsp;class based on the import list that you've generated by :JIG.&nbsp;&nbsp;You can<br>&nbsp;&nbsp;also set in your java.vim&nbsp;&nbsp;filetype plugin to get a similar man page<br>&nbsp;&nbsp;behavior by press &quot;K&quot;:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nmap &lt;buffer&gt; K :JID&lt;CR&gt;<br><br>&nbsp;&nbsp;Other Settings<br>&nbsp;&nbsp;--------------<br>&nbsp;&nbsp;You can make the following settings in your .vimrc file:<br><br>&nbsp;&nbsp;(Deprecated in 2.1) The g:JavaImpClassList is a file you specify to store<br>&nbsp;&nbsp;the class mappings.&nbsp;&nbsp;The default is set to:<br>&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let g:JavaImpClassList = g:JavaImpDataDir . &quot;/JavaImp.txt&quot;<br><br>&nbsp;&nbsp;(Deprecated in 2.1, enabled by default and set relative to the<br>&nbsp;&nbsp;g:JavaImpDataDir) It's recommended that you set a directory for the<br>&nbsp;&nbsp;caching result for your jar files.&nbsp;&nbsp;JavaImp saves the result from each<br>&nbsp;&nbsp;&quot;jar&quot; command in this directory. The default is set to:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let g:JavaImpJarCache = g:JavaImpDataDir . &quot;/cache&quot;<br><br>&nbsp;&nbsp;(In in 2.1, g:JavaImpSortBin is set to &quot;sort&quot;, so this is disabled by<br>&nbsp;&nbsp;default) The sorting algorithm gives preferences to the java.* classes.<br>&nbsp;&nbsp;You can turn this behavior off by putting this in your .vimrc file.<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let g:JavaImpSortJavaFirst = 0<br><br>&nbsp;&nbsp;NOTE: If you do not have a sort binary, set the following to &quot;&quot;, and<br>&nbsp;&nbsp;JavaImp will use the pure Vim implementation.&nbsp;&nbsp;However, if<br>&nbsp;&nbsp;JavaImpClassList gets too huge, the sorting might choke. If you<br>&nbsp;&nbsp;are on a unix machine or you have the sort binary in your path, it's<br>&nbsp;&nbsp;recommended that you set (or leave it as default):<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let g:JavaImpSortBin = &quot;sort&quot; <br><br>&nbsp;&nbsp;By default, the sort algorithm will insert a blank line among package<br>&nbsp;&nbsp;group with package root for 2 similar levels.&nbsp;&nbsp;For example, the import of<br>&nbsp;&nbsp;the following:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;import java.util.List;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;import org.apache.tools.zip.ZipEntry;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;import javax.mail.search.MessageNumberTerm;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;import java.util.Vector;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;import javax.mail.Message;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;import org.apache.tools.ant.types.ZipFileSet;<br><br>&nbsp;&nbsp;will become:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;import java.util.List;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;import java.util.Vector;<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;import javax.mail.Message;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;import javax.mail.search.MessageNumberTerm;<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;import org.apache.tools.ant.types.ZipFileSet;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;import org.apache.tools.zip.ZipEntry;<br><br>&nbsp;&nbsp;Note the classes that begins similar package root with two beginning<br>&nbsp;&nbsp;levels of package hierarchy are stuck together.&nbsp;&nbsp;You can set the<br>&nbsp;&nbsp;g:JavaImpSortPkgSep to change this behavior.&nbsp;&nbsp;The default<br>&nbsp;&nbsp;g:JavaImpSortPkgSep is set to 2.&nbsp;&nbsp;Do not set it too high though for you'll<br>&nbsp;&nbsp;insert a blank line after each import.&nbsp;&nbsp;If you do not want to insert blank<br>&nbsp;&nbsp;lines among the imports, set:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let g:JavaImpSortPkgSep = 0<br><br>&nbsp;&nbsp;Be warned that g:JavaImpSortRemoveEmpty has no effect if<br>&nbsp;&nbsp;g:JavaImpSortPkgSep is set.<br><br>&nbsp;&nbsp;Extras<br>&nbsp;&nbsp;------<br>&nbsp;&nbsp;After you have generated the JavaImp.txt file by using :JIG, you can use<br>&nbsp;&nbsp;it as your dictionary for autocompletion.&nbsp;&nbsp;For example, you can put the<br>&nbsp;&nbsp;following in your java.vim ftplugin (note here g:JavaImpDataDir is set<br>&nbsp;&nbsp;before running this):<br><br>&nbsp;&nbsp;exe &quot;setlocal dict=&quot; . g:JavaImpDataDir . &quot;/JavaImp.txt&quot;<br>&nbsp;&nbsp;setlocal complete-=k<br>&nbsp;&nbsp;setlocal complete+=k<br>&nbsp;&nbsp;<br>&nbsp;&nbsp;or put this in your .vimrc<br>&nbsp;&nbsp;<br>&nbsp;&nbsp;exe &quot;set dict=&quot; . g:JavaImpDataDir . &quot;/JavaImp.txt&quot;<br>&nbsp;&nbsp;set complete-=k<br>&nbsp;&nbsp;set complete+=k<br><br>&nbsp;&nbsp;After you have done so, you can open a .java file and use ^P and ^N to<br>&nbsp;&nbsp;autocomplete your Java class names.<br><br>&nbsp;&nbsp;Importing your JDK Classes<br>&nbsp;&nbsp;--------------------------<br>&nbsp;&nbsp;JavaImp also support a file type called &quot;jmplst&quot;.&nbsp;&nbsp;A jmplst file<br>&nbsp;&nbsp;essentially contains the output of a &quot;jar tf&quot; command.&nbsp;&nbsp;It is mainly use<br>&nbsp;&nbsp;in the case where you want to import some external classes in JavaImp but<br>&nbsp;&nbsp;you do not have the source directory nor the jar file.&nbsp;&nbsp;For example, you<br>&nbsp;&nbsp;can import the JDK classes, which can be located in $JAVA_HOME/src.jar<br>&nbsp;&nbsp;(different in different distributions) with your JDK distribution,<br>&nbsp;&nbsp;by using the jmplst file:<br><br>&nbsp;&nbsp;To expose the standard JDK classes to JavaImp:<br><br>&nbsp;&nbsp;1. If you have &quot;sed&quot;:<br>&nbsp;&nbsp;&nbsp;&nbsp; &gt; jar tf $JAVA_HOME/src.jar | sed -e 's#^src/##' &gt; jdk.jmplst<br><br>&nbsp;&nbsp;&nbsp;&nbsp; If you do not have &quot;sed&quot;:<br>&nbsp;&nbsp;&nbsp;&nbsp; &gt; jar tf $JAVA_HOME/src.jar &gt; jdk.jmplst<br>&nbsp;&nbsp;&nbsp;&nbsp; &gt; vim jdk.jmplst<br>&nbsp;&nbsp;&nbsp;&nbsp; [Execute the following vim commands:]<br><br>&nbsp;&nbsp;&nbsp;&nbsp; 1G0&lt;C-v&gt;Gllld:w<br><br>&nbsp;&nbsp;&nbsp;&nbsp; [ This will select vertically the all the &quot;src/&quot; prefixes and delete<br>&nbsp;&nbsp;&nbsp;&nbsp; them, then save the file. Essentially, we want to get rid of the src<br>&nbsp;&nbsp;&nbsp;&nbsp; directory otherwise it'll screw up the import statements. ]<br><br>&nbsp;&nbsp;2. Put the jdk.jmplst in a directory that you've added in your<br>&nbsp;&nbsp;&nbsp;&nbsp; g:JavaImpPaths.&nbsp;&nbsp;For example, I put my jdk.jmplst in<br>&nbsp;&nbsp;&nbsp;&nbsp; $HOME/vim/JavaImp/jmplst directory, and add $HOME/vim/JavaImp/jmplst to<br>&nbsp;&nbsp;&nbsp;&nbsp; g:JavaImpPaths.<br><br>&nbsp;&nbsp;3. Open vim with the JavaImp.vim loaded and Do a :JIG.&nbsp;&nbsp;You should see<br>&nbsp;&nbsp;&nbsp;&nbsp; that JavaImp will pick up many more classes.<br><br>&nbsp;&nbsp;4. Try to do a :JI on a &quot;Vector&quot; class, for example, to see whether you<br>&nbsp;&nbsp;&nbsp;&nbsp; can add the import statement from the JDK.<br><br><br><br>&nbsp;&nbsp;Enjoy!<br><br></td></tr>
+<tr><td>&nbsp;</td></tr>
+</table>
+
+<!-- rating table -->
+<form name="rating">
+<input type="hidden" name="script_id" value="325">
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>rate this script</b></td>
+  <td valign="middle">
+    <input type="radio" name="rating" value="life_changing">Life Changing
+    <input type="radio" name="rating" value="helpful">Helpful
+    <input type="radio" name="rating" value="unfulfilling">Unfulfilling&nbsp;
+    <input type="submit" value="rate">
+  </td>
+</tr>
+</table>
+</form>
+<span class="txth2">script versions</span> (<a href="add_script_version.php?script_id=325">upload new version</a>)
+<p>
+Click on the package to download.
+<p>
+
+<table cellspacing="2" cellpadding="4" border="0" width="100%">
+<tr class='tableheader'>
+        <th valign="top">package</th>
+    <th valign="top">script version</th>
+    <th valign="top">date</th>
+    <th valign="top">Vim version</th>
+    <th valign="top">user</th>
+    <th valign="top">release notes</th>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=3094">JavaImp.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.2.3</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2004-06-04</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=275">William Lee</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Fixes a bug where JavaImp ignores files that start with 0.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=3000">JavaImp.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.2.2</b></td>
+    <td class="roweven" valign="top" nowrap><i>2004-05-07</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=275">William Lee</a></i></td>
+    <td class="roweven" valign="top" width="2000">Do not insert the import if the class you want to insert is in the same package of the current source file.&nbsp;&nbsp;(Thanks to Adam Hawthorne)<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=2431">JavaImp.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.2.1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2003-10-29</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=275">William Lee</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Minor bug fixes.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=1857">JavaImp.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.2.0</b></td>
+    <td class="roweven" valign="top" nowrap><i>2003-03-26</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=275">William Lee</a></i></td>
+    <td class="roweven" valign="top" width="2000">Added the JavaDoc viewing and source viewing capabilities.&nbsp;&nbsp;You can now view API calls through an HTML viewer or load up a source file from your paths.<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=1847">JavaImp.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.1.3</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2003-03-24</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=275">William Lee</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Added an option to override the default JavaImpPaths separator.&nbsp;&nbsp;Fixes an error when trying to do :JI over an unamed buffer.<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=1812">JavaImp.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.1.2</b></td>
+    <td class="roweven" valign="top" nowrap><i>2003-03-14</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=275">William Lee</a></i></td>
+    <td class="roweven" valign="top" width="2000">Fixes a critical bug in where a single import match would put in a &quot;0&quot; as its name.&nbsp;&nbsp;Users of 2.1.1 should update to this immediately.&nbsp;&nbsp;Thanks Matt Paduano for pointing this out.<br></td>
+</tr>
+</table>
+<!-- finish off the framework -->
+          </td>
+        </tr>
+      </table>
+    </td>
+
+  </tr>
+</table>
+
+<!-- END OF THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr><td colspan="4" bgcolor="#000000"><img src="/images/spacer.gif" height="2" width="1" alt=""></td></tr>
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr>
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+
+    <td align="left" valign="top"><small>
+      If you have questions or remarks about this site, visit the
+      <a href="http://vimonline.sf.net">vimonline development</a> pages.
+      Please use this site responsibly.
+      <br> 
+      
+      Questions about <a href="http://www.vim.org/about.php">Vim</a> should go
+      to the <a href="http://www.vim.org/maillist.php">maillist</a>.
+      Help Bram <a href="http://iccf-holland.org/">help Uganda</a>.
+      </small>
+	&nbsp;
+	&nbsp;
+
+	<!-- Start of StatCounter Code -->
+	<script type="text/javascript" language="javascript">
+	var sc_project=1417324; 
+	var sc_invisible=1; 
+	var sc_partition=11; 
+	var sc_security="d41633bc"; 
+	</script>
+
+	<script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script><noscript><a href="http://www.statcounter.com/" target="_blank"><img  src="http://c12.statcounter.com/counter.php?sc_project=1417324&java=0&security=d41633bc&invisible=0" alt="free tracking" border="0"></a> </noscript>
+	<!-- End of StatCounter Code -->
+          </td>
+
+    <td align="right" valign="top">
+      		<a href="http://sourceforge.net/projects/vim" rel="nofollow"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=8&type=1" width="88" height="31" border="0" alt="SourceForge.net Logo" /></a>
+    </td>
+
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+  </tr>
+
+    
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  
+  </tr>
+</table>
+
+</body>
+</html>
+

@@ -1,0 +1,332 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+  <link rel="Stylesheet" type="text/css" href="/css/style.css" >
+  <title>timstamp.vim - Global plugin for automated time stamping : vim online</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <meta name="KEYWORDS" content="Vim, Vi IMproved, text editor, home, documentation, tips, scripts, news">
+  <link rel="shortcut icon" type="image/x-icon" href="/images/vim_shortcut.ico">
+</head>
+
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff"> 
+
+<!-- HEADER, SPONSOR IMAGE, VIM IMAGE AND BOOK AD -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+  <td class="lightbg">&nbsp;&nbsp;&nbsp;</td>
+  <td class="lightbg" align="left"><a href="/sponsor/index.php"><img src="/images/sponsorvim.gif" alt="sponsor Vim development" border="0"></a></td>
+    <td class="lightbg" align="center"><a href="/index.php"><img src="/images/vim_header.gif" border="0" alt="Vim logo"></a></td>
+    <td class="lightbg" align="right"><a href="http://iccf-holland.org/click5.html"><img src="/images/buyhelplearn.gif" alt="Vim Book Ad" border="0"></a></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="darkbg"><img src="/images/spacer.gif" width="1" height="10" alt=""></td>
+  </tr>
+</table>
+<!-- THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+  <col width="180">
+  <col width="1">
+
+  <tr valign="top">
+    <td class="sidebar">
+      <table width="180" cellpadding="4" cellspacing="0" border="0">
+        <tr valign="top">
+          <td class="sidebar">
+
+<!-- INCLUDE THE PAGE NAVIGATION -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+    <tr>
+        <td><small>not logged in (<a href="/login.php">login</a>)</small></td>
+    </tr>
+    <tr><td>
+<small>&nbsp;</small>
+<form action="http://www.google.com/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-3005259998294962:bvyni59kjr1" />
+    <input type="hidden" name="ie" value="ISO-8859-1" />
+    <input type="text" name="q" size="20" />
+    <br>
+    <input type="submit" name="sa" value="Search" />
+  </div>
+</form>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+    </td></tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="1"></td>
+    </tr>
+    <tr>
+        <td class="darkbg"><img src="/images/spacer.gif" alt='' border="0" height="3"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="2"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/index.php">Home</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/search.php">Advanced search</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/about.php">About Vim</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/community.php">Community</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/news/news.php">News</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/sponsor/index.php">Sponsoring</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/trivia.php">Trivia</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/docs.php">Documentation</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/download.php">Download</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/scripts/index.php">Scripts</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/tips/index.php">Tips</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/account/index.php">My Account</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/huh.php">Site Help</a></td>
+        </tr>
+</table>
+
+            <table width="172" cellpadding="0" cellspacing="0" border="0">
+              <tr><td><img src="/images/spacer.gif" alt="" border="0" width="1" height="8"></td></tr>
+              <tr><td class="darkbg"><img src="/images/spacer.gif" width="1" height="3" alt=""></td></tr>
+            </table>
+            <br>
+
+<!-- INCLUDE THE PAGE SIDEBAR TEXT -->
+&nbsp;
+
+          </td>
+        </tr>
+      </table>
+    </td>
+
+    <td class="darkbg"><img src="/images/spacer.gif" width="1" height="1" border="0" alt=""><br></td>
+    <td>
+      <table width="100%" cellpadding="10" cellspacing="0" border="0" bordercolor="red">
+        <tr>
+          <td valign="top">
+
+<span class="txth1">timstamp.vim : Global plugin for automated time stamping</span> 
+
+<br>
+<br>
+
+<!-- karma table -->
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
+  <td>
+    Rating <b>45/23</b>,
+    Downloaded by 1615  </td>
+  <td class="lightbg">
+  <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
+  </td>
+  <td>
+    <a href="http://vim.wikia.com/wiki/Script:371">Vim wiki</a>
+  </td>  
+</tr>
+</table>
+<p>
+
+<table cellspacing="0" cellpadding="0" border="0">
+<tr><td class="prompt">created by</td></tr>
+<tr><td><a href="/account/profile.php?user_id=928">Guido Van Hoecke</a></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">script type</td></tr>
+<tr><td>utility</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">description</td></tr>
+<tr><td>Content of the help document:<br><br>*timstamp.txt*&nbsp;&nbsp;Global plugin for automated time stamping - v0.95<br><br>The timstamp general plugin provides automated time-stamping functionality.<br><br>1. General		&nbsp;&nbsp;&nbsp;&nbsp;|timstamp_general|<br>2. Specification format	&nbsp;&nbsp;&nbsp;&nbsp;|timstamp_specformat|<br>3. Default specs	&nbsp;&nbsp;&nbsp;&nbsp;|timstamp_default_specs|<br>4. Control variables	&nbsp;&nbsp;&nbsp;&nbsp;|timstamp_control|<br><br>==============================================================================<br><br>1. General						*timstamp_general*<br><br>Whenever a file is written, this plugin will look for 'Time-stamp lines'<br>amongst the first and last lines of the file to be written. If any of these<br>lines contain e.g. ' Time stamp:' or 'Last change:', the plugin will update<br>these lines before writing the file.<br><br>The plugin is fully controlled by the user. It does provide two standard<br>'Time-stamp line' specifications as well as their replacement spec. The user<br>can add additional values as well as remove the default values.<br><br>The plugin and its documentation file can be installed as described under<br>|add-global-plugin| and |add-local-help|. Do not forget to run |:helptags|.<br><br>==============================================================================<br><br>2. Specification format					*timstamp_specformat*<br><br>The specification format for a time-stamp line consists of the {pat} and {sub}<br>parts required to build the desired substitute command. These {pat} and {sub} <br>parts must be separated by a &quot;!&quot; character.<br><br>An examplespec may clarify this: &quot;( Last changed:\).*$!\1 %Y %b %d&quot;.<br>The {pat} part instructs the plugin to look for any line that ends on<br>' Last changed: ...'.<br><br>The {sub} part is passed on to |strftime()|, which (at least at the time I am<br>writing this) translates &quot;%Y %b %d&quot; into &quot;2002 Aug 11&quot;. Of course, these would<br>be the values at the time of the plugin execution, which is the moment before<br>writing the file. Any % tokens known by your version of |strftime()| can be <br>used.<br>&nbsp;&nbsp;&nbsp;&nbsp;<br>Additionally, some # tokens have been defined by the plugin. These are<br>replaced by their corresponding value after |strftime()| processing and <br>before performing the actual substitutions:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;#f	filename&nbsp;&nbsp;&nbsp;&nbsp;|timstamp_filename|<br>&nbsp;&nbsp;&nbsp;&nbsp;#h&nbsp;&nbsp;hostname&nbsp;&nbsp;&nbsp;&nbsp;|timstamp_hostname|<br>&nbsp;&nbsp;&nbsp;&nbsp;#H&nbsp;&nbsp;Hostname&nbsp;&nbsp;&nbsp;&nbsp;|timstamp_Hostname|<br>&nbsp;&nbsp;&nbsp;&nbsp;#n&nbsp;&nbsp;username&nbsp;&nbsp;&nbsp;&nbsp;|timstamp_username|<br>&nbsp;&nbsp;&nbsp;&nbsp;#u&nbsp;&nbsp;userid	&nbsp;&nbsp;&nbsp;&nbsp;|timstamp_userid|<br><br>#f&nbsp;&nbsp;filename						*timstamp_filename*<br><br>&nbsp;&nbsp;&nbsp;&nbsp;The #f token is replaced by the filename of the current buffer. This is a<br>&nbsp;&nbsp;&nbsp;&nbsp;name without any path components.<br><br>#h&nbsp;&nbsp;hostname						*timstamp_hostname*<br><br>&nbsp;&nbsp;&nbsp;&nbsp;The #h token is replaced by the hostname of the current vim process. <br>&nbsp;&nbsp; <br>&nbsp;&nbsp;&nbsp;&nbsp;The user can specify the desired value with the glabal variable<br>&nbsp;&nbsp;&nbsp;&nbsp;g:timstamp_hostname. If that variable does not exist, the value of the<br>&nbsp;&nbsp;&nbsp;&nbsp;$HOSTNAME environment variable will be used. If there is no $HOSTNAME, the<br>&nbsp;&nbsp;&nbsp;&nbsp;output of the hostname() function is used. However, only the last word<br>&nbsp;&nbsp;&nbsp;&nbsp;returned by that function is preserved. The platform type of qualifier<br>&nbsp;&nbsp;&nbsp;&nbsp;(e.g. PC) is not kept.<br><br>#H&nbsp;&nbsp;Hostname						*timstamp_Hostname*<br><br>&nbsp;&nbsp;&nbsp;&nbsp;The #H token is also replaced by the hostname. However, the platform<br>&nbsp;&nbsp;&nbsp;&nbsp;qualifier is not removed.<br><br>#n&nbsp;&nbsp;username						*timstamp_username*<br><br>&nbsp;&nbsp;&nbsp;&nbsp;The #n token will be replaced by the user name. This will be obtained from<br>&nbsp;&nbsp;&nbsp;&nbsp;the g:timstamp_username variable if it exists. Otherwise, it is<br>&nbsp;&nbsp;&nbsp;&nbsp;initialised from the $USERNAME environment variable.&nbsp;&nbsp;&nbsp;&nbsp;<br><br>#u&nbsp;&nbsp;userid						*timstamp_userid*<br><br>&nbsp;&nbsp;&nbsp;&nbsp;The #u token will be replaced by the userid. This will be obtained from<br>&nbsp;&nbsp;&nbsp;&nbsp;the g:timstamp_userid variable if it exists. Otherwise, it is<br>&nbsp;&nbsp;&nbsp;&nbsp;initialised from the $LOGNAME environment variable. <br>&nbsp;&nbsp;&nbsp;&nbsp;<br>==============================================================================<br><br>3. Default specs				&nbsp;&nbsp;&nbsp;&nbsp;*timstamp_default_specs*<br><br>The plugin defines two default specs, which can be overwritten by the user:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;Last Change Spec&nbsp;&nbsp; |timstamp_last_change_spec|<br>&nbsp;&nbsp;&nbsp;&nbsp;Time Stamp spec&nbsp;&nbsp;&nbsp;&nbsp;|timstamp_time_stamp_spec|<br>&nbsp;&nbsp;&nbsp;&nbsp;<br>3.1. Last Change Spec				*timstamp_last_change_spec*<br>	<br>&nbsp;&nbsp;&nbsp;&nbsp;The last change spec has following default value:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;'\( Last \?\(changed\?\|modified\):\).*$!\1 %Y %b %d' <br>	<br>&nbsp;&nbsp;&nbsp;&nbsp;which can be overruled by providing a different value in the <br>&nbsp;&nbsp;&nbsp;&nbsp;g:timstamp_1 variable.<br><br>&nbsp;&nbsp;&nbsp;&nbsp;The {pat} part is '\( Last \?\(changed\?\|modified\):\).*$'. This will <br>&nbsp;&nbsp;&nbsp;&nbsp;process lines containing ' Last changed', ' Last modified' or its <br>&nbsp;&nbsp;&nbsp;&nbsp;variations.<br><br>&nbsp;&nbsp;&nbsp;&nbsp;The {sub} part is '\1 %Y %b %d'. This will preserve the ' Last ...:' <br>&nbsp;&nbsp;&nbsp;&nbsp;string and replace the remainder with the current 4 digit year, <br>&nbsp;&nbsp;&nbsp;&nbsp;the short month name and the day of month. <br><br>&nbsp;&nbsp;&nbsp;&nbsp;This file contains a 'Last Change' line at |timstamp_examples|.<br>	<br>3.2. Time Stamp spec				&nbsp;&nbsp;&nbsp;&nbsp;*timstamp_time_stamp_spec*<br><br>&nbsp;&nbsp;&nbsp;&nbsp;The time stamp spec is a bit more complex:<br><br>	'\( Time[- ]\?stamp:\).*$!\1 &lt;#f %a %Y/%m/%d %H:%M:%S #u #h&gt;'<br><br>&nbsp;&nbsp;&nbsp;&nbsp;and can be overruled by defining the global g:timstamp_2 variable.<br><br>&nbsp;&nbsp;&nbsp;&nbsp;The {pat} part is shorter: '\( Time[- ]\?stamp: \)&lt;.*&gt;$'. It will trigger <br>&nbsp;&nbsp;&nbsp;&nbsp;on lines containing ' Time-stamp', ' Time stamp' or ' Timestamp'<br>&nbsp;&nbsp;&nbsp;&nbsp;immediately followed by a ':'.<br><br>&nbsp;&nbsp;&nbsp;&nbsp;The {sub} part is '\1 &lt;#f %a %Y/%m/%d %H:%M:%S #u #h&gt;'. This will <br>&nbsp;&nbsp;&nbsp;&nbsp;preserve the ' Time...:' string, and replace the remainder of the line <br>&nbsp;&nbsp;&nbsp;&nbsp;with e.g. ' &lt;timstamp.txt Sun 2002/08/11 13:03:01 guivho BTM4BZ&gt;'. Please<br>&nbsp;&nbsp;&nbsp;&nbsp;refer to the |timstamp_specformat| above for the # tokens.<br><br>&nbsp;&nbsp;&nbsp;&nbsp;This file contains a 'Time stamp' line at |timstamp_examples|.<br><br>==============================================================================<br><br>4. Control variables					*timstamp_control*<br><br>The plugin can be fully controlled by the user. Each of the internal variables<br>that control the operation, can be overruled by providing a corresponding<br>global value.<br><br>&nbsp;&nbsp;&nbsp;&nbsp;g:timstamp_1, <br>&nbsp;&nbsp;&nbsp;&nbsp;g:timstamp_2, <br>&nbsp;&nbsp;&nbsp;&nbsp;g:timstamp_...	&nbsp;&nbsp;&nbsp;&nbsp;|timstamp_specs|<br>&nbsp;&nbsp;&nbsp;&nbsp;g:timstamp_automask	&nbsp;&nbsp;&nbsp;&nbsp;|timstamp_automask|<br>&nbsp;&nbsp;&nbsp;&nbsp;g:timstamp_hostname	&nbsp;&nbsp;&nbsp;&nbsp;|timstamp_hostname|<br>&nbsp;&nbsp;&nbsp;&nbsp;g:timstamp_Hostname	&nbsp;&nbsp;&nbsp;&nbsp;|timstamp_Hostname|<br>&nbsp;&nbsp;&nbsp;&nbsp;g:timstamp_ignorecase&nbsp;&nbsp; |timstamp_ignorecase|<br>&nbsp;&nbsp;&nbsp;&nbsp;g:timstamp_language	&nbsp;&nbsp;&nbsp;&nbsp;|timstamp_language|<br>&nbsp;&nbsp;&nbsp;&nbsp;g:timstamp_modelines&nbsp;&nbsp;&nbsp;&nbsp;|timstamp_modelines|<br>&nbsp;&nbsp;&nbsp;&nbsp;g:timstamp_userid	&nbsp;&nbsp;&nbsp;&nbsp;|timstamp_userid|<br>&nbsp;&nbsp;&nbsp;&nbsp;g:timstamp_username	&nbsp;&nbsp;&nbsp;&nbsp;|timstamp_username|<br><br>4.1. g:timstamp_1, g:timstamp_2, g:timstamp_...		&nbsp;&nbsp;&nbsp;&nbsp;*timstamp_specs*<br><br>The |timstamp_default_specs| section has described the two default specs<br>provided by the plugin. If the user is happy with those two specs, no entry is<br>required in the .vimrc file.<br><br>However the user may overrule these default values by defining a g:timstamp_1<br>and / or a g:timstamp_2 variable, e.g:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;:let g:timstamp_1='\( Last change:\).*$!\1 %A %Y %b %d'<br>&nbsp;&nbsp;&nbsp;&nbsp;<br>if the user would always want to include the day of the week as in<br><br>&nbsp;&nbsp;&nbsp;&nbsp;' Last Change: Wednesday 2002 Aug 14'&nbsp;&nbsp;<br><br>The user can add additional specs, e.g. a g:timstamp_3 etc... :<br><br>&nbsp;&nbsp;&nbsp;&nbsp;:let g:timstamp_3='\( Last messed up at:\).*$\1 %Y %b %d'<br><br>for those files that are still in early development? :-)<br>&nbsp;&nbsp;&nbsp;&nbsp;<br><br>Note that the first empty or not existing spec will terminate processing.<br><br>If e.g. a g:timstamp_3 has been defined, but g:timstamp_2 has been set to &quot;&quot; <br>processing will not continue beyond g:timstamp_2. On the other hand, if the<br>first two specs are non empty (either while they have not been overruled, or <br>as they have been replaced by a non empty value), processing will continue <br>with g:timstamp_3, g:timstamp_4, g:timstamp_5 ... as long as each consecutive <br>variable exists and has a non empty value.<br><br>4.2. g:timstamp_automask				*timstamp_automask*<br><br>By default, the plugin installs an &quot;autocommand BufWrite&quot; for all files. So it<br>uses '*' as {pat} (cfr |:autocmd|). The user can overrule this behaviour by<br>defining g:timstamp_automask with the desired value, e.g.:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;:let g:timstamp_automask = &quot;*.html&quot;<br>&gt;<br>to limit timestamping to html files.<br><br>4.3. g:timstamp_hostname			&nbsp;&nbsp;&nbsp;&nbsp;Cfr |timstamp_hostname|.<br><br>4.4. g:timstamp_Hostname			&nbsp;&nbsp;&nbsp;&nbsp;Cfr |timstamp_Hostname|.<br><br>4.5. g:timstamp_ignorecase				*timstamp_ignorecase*<br><br>The plugin ignores case when performing the eventual substitution. <br>So ' lAsT cHanGe:' is as valid as ' Last Change:'. The user can prevent this<br>by defining global variable g:timstamp_ignorecase to an empty value: &lt;<br><br>&nbsp;&nbsp;&nbsp;&nbsp;:let g:timstamp_ignorecase = &quot;&quot;<br>&gt;<br><br>4.6. g:timstamp_language				*timstamp_language*<br><br>The plugin assumes that one usually wants english timestamps. By default it<br>executes a ':language time en' to achieve this. The user can specify a<br>different language to be used by means of the g:timstamp_language variable.<br><br><br>4.7. g:timstamp_modelines				*timstamp_modelines*<br><br>The plugin uses the value of the |'modelines'| option to define the number of<br>head or tail lines to be taken into account. The user can specify a different<br>value by means of the g:timstamp_modelines variable. <br><br>This can even be set to '$' if all file lines have to be taken into account.<br>Be aware that this would change any line that matches any of your<br>|timspec_specs|. This may be more than you would expect.<br><br>4.8. g:timstamp_userid				&nbsp;&nbsp;&nbsp;&nbsp;Cfr |timstamp_userid|<br><br>4.9. g:timstamp_username			&nbsp;&nbsp;&nbsp;&nbsp;Cfr |timstamp_username|<br><br>==============================================================================<br><br>							*timstamp_examples*<br> Version: 0.95<br> Last change: 2003 Feb 13<br> Timestamp: &lt;timstamp.txt Thu 2003/02/13 22:58:16&nbsp;&nbsp;MSDOG&gt;<br> Maintainer: Guido Van Hoecke &lt;Guido@VanHoecke.org&gt;<br> vim:tw=78:sw=4:ts=8:ft=help:norl:<br></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">install details</td></tr>
+<tr><td>The plugin and its documentation file can be installed as described under |add-global-plugin| and |add-local-help|. Do not forget to run |:helptags|.<br><br>Note: the 'detailed description' above is a copy of the accompanying timstamp.txt help file. <br></td></tr>
+<tr><td>&nbsp;</td></tr>
+</table>
+
+<!-- rating table -->
+<form name="rating">
+<input type="hidden" name="script_id" value="371">
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>rate this script</b></td>
+  <td valign="middle">
+    <input type="radio" name="rating" value="life_changing">Life Changing
+    <input type="radio" name="rating" value="helpful">Helpful
+    <input type="radio" name="rating" value="unfulfilling">Unfulfilling&nbsp;
+    <input type="submit" value="rate">
+  </td>
+</tr>
+</table>
+</form>
+<span class="txth2">script versions</span> (<a href="add_script_version.php?script_id=371">upload new version</a>)
+<p>
+Click on the package to download.
+<p>
+
+<table cellspacing="2" cellpadding="4" border="0" width="100%">
+<tr class='tableheader'>
+        <th valign="top">package</th>
+    <th valign="top">script version</th>
+    <th valign="top">date</th>
+    <th valign="top">Vim version</th>
+    <th valign="top">user</th>
+    <th valign="top">release notes</th>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=1730">timstamp.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.95</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2003-02-13</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=928">Guido Van Hoecke</a></i></td>
+    <td class="rowodd" valign="top" width="2000">1) Replaced s:filename() by call to builtin fnamemodify()<br>2) Added license statement<br>3) Now processes g:timstamp_3 etc by copying them into <br>&nbsp;&nbsp;&nbsp;&nbsp;s:timestamp_3 at the beginning of the script<br>&nbsp;&nbsp;&nbsp;&nbsp;(Thanks to Norihiko Murase)<br>4) Fixed two documentation typos (Thanks to Norihiko Murase)<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=1129">timstamp.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.94</b></td>
+    <td class="roweven" valign="top" nowrap><i>2002-08-15</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=928">Guido Van Hoecke</a></i></td>
+    <td class="roweven" valign="top" width="2000">1) Added a missing 'let' in an assignment statement. (reported by Luis Jure)<br>2) Added additional warning in the help file about&nbsp;&nbsp;'$' value for g:timstamp_modelines.&nbsp;&nbsp;<br>Cfr :h timstamp_modelines<br>3) Corrected s:filename() to also work with dos slashes. (thanks to Richard Bair)<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=1125">timstamp.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.93</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2002-08-14</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=928">Guido Van Hoecke</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Now only presents the %token part of the spec to strftime(): this seems to provide correct results, even when using %Z to add the timezone followed by '&gt;'<br>The helpfile has been extended with some example specs.<br>(error and help reported/requested by Adrian Nagle)<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=1111">timstamp.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.92</b></td>
+    <td class="roweven" valign="top" nowrap><i>2002-08-12</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=928">Guido Van Hoecke</a></i></td>
+    <td class="roweven" valign="top" width="2000">Now uses the line(&quot;$&quot;) function to test for short files and limits the modifications to the specified nr of modelines rather than that number plus one extra line (Thanks to Piet Delport and Rimon Barr)<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=1110">timstamp.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.91</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2002-08-11</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=928">Guido Van Hoecke</a></i></td>
+    <td class="rowodd" valign="top" width="2000">version 0.91 now preserves the cursor location, is silent! about language setting, and does no longer choke on short files <br><br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=1109">timstamp.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.9</b></td>
+    <td class="roweven" valign="top" nowrap><i>2002-08-11</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=928">Guido Van Hoecke</a></i></td>
+    <td class="roweven" valign="top" width="2000">Initial upload</td>
+</tr>
+</table>
+<!-- finish off the framework -->
+          </td>
+        </tr>
+      </table>
+    </td>
+
+  </tr>
+</table>
+
+<!-- END OF THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr><td colspan="4" bgcolor="#000000"><img src="/images/spacer.gif" height="2" width="1" alt=""></td></tr>
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr>
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+
+    <td align="left" valign="top"><small>
+      If you have questions or remarks about this site, visit the
+      <a href="http://vimonline.sf.net">vimonline development</a> pages.
+      Please use this site responsibly.
+      <br> 
+      
+      Questions about <a href="http://www.vim.org/about.php">Vim</a> should go
+      to the <a href="http://www.vim.org/maillist.php">maillist</a>.
+      Help Bram <a href="http://iccf-holland.org/">help Uganda</a>.
+      </small>
+	&nbsp;
+	&nbsp;
+
+	<!-- Start of StatCounter Code -->
+	<script type="text/javascript" language="javascript">
+	var sc_project=1417324; 
+	var sc_invisible=1; 
+	var sc_partition=11; 
+	var sc_security="d41633bc"; 
+	</script>
+
+	<script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script><noscript><a href="http://www.statcounter.com/" target="_blank"><img  src="http://c12.statcounter.com/counter.php?sc_project=1417324&java=0&security=d41633bc&invisible=0" alt="free tracking" border="0"></a> </noscript>
+	<!-- End of StatCounter Code -->
+          </td>
+
+    <td align="right" valign="top">
+      		<a href="http://sourceforge.net/projects/vim" rel="nofollow"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=8&type=1" width="88" height="31" border="0" alt="SourceForge.net Logo" /></a>
+    </td>
+
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+  </tr>
+
+    
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  
+  </tr>
+</table>
+
+</body>
+</html>
+

@@ -1,0 +1,292 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+  <link rel="Stylesheet" type="text/css" href="/css/style.css" >
+  <title>SoftTabStops - Set typewriter like tabstops. : vim online</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <meta name="KEYWORDS" content="Vim, Vi IMproved, text editor, home, documentation, tips, scripts, news">
+  <link rel="shortcut icon" type="image/x-icon" href="/images/vim_shortcut.ico">
+</head>
+
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff"> 
+
+<!-- HEADER, SPONSOR IMAGE, VIM IMAGE AND BOOK AD -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+  <td class="lightbg">&nbsp;&nbsp;&nbsp;</td>
+  <td class="lightbg" align="left"><a href="/sponsor/index.php"><img src="/images/sponsorvim.gif" alt="sponsor Vim development" border="0"></a></td>
+    <td class="lightbg" align="center"><a href="/index.php"><img src="/images/vim_header.gif" border="0" alt="Vim logo"></a></td>
+    <td class="lightbg" align="right"><a href="http://iccf-holland.org/click5.html"><img src="/images/buyhelplearn.gif" alt="Vim Book Ad" border="0"></a></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="darkbg"><img src="/images/spacer.gif" width="1" height="10" alt=""></td>
+  </tr>
+</table>
+<!-- THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+  <col width="180">
+  <col width="1">
+
+  <tr valign="top">
+    <td class="sidebar">
+      <table width="180" cellpadding="4" cellspacing="0" border="0">
+        <tr valign="top">
+          <td class="sidebar">
+
+<!-- INCLUDE THE PAGE NAVIGATION -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+    <tr>
+        <td><small>not logged in (<a href="/login.php">login</a>)</small></td>
+    </tr>
+    <tr><td>
+<small>&nbsp;</small>
+<form action="http://www.google.com/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-3005259998294962:bvyni59kjr1" />
+    <input type="hidden" name="ie" value="ISO-8859-1" />
+    <input type="text" name="q" size="20" />
+    <br>
+    <input type="submit" name="sa" value="Search" />
+  </div>
+</form>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+    </td></tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="1"></td>
+    </tr>
+    <tr>
+        <td class="darkbg"><img src="/images/spacer.gif" alt='' border="0" height="3"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="2"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/index.php">Home</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/search.php">Advanced search</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/about.php">About Vim</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/community.php">Community</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/news/news.php">News</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/sponsor/index.php">Sponsoring</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/trivia.php">Trivia</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/docs.php">Documentation</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/download.php">Download</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/scripts/index.php">Scripts</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/tips/index.php">Tips</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/account/index.php">My Account</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/huh.php">Site Help</a></td>
+        </tr>
+</table>
+
+            <table width="172" cellpadding="0" cellspacing="0" border="0">
+              <tr><td><img src="/images/spacer.gif" alt="" border="0" width="1" height="8"></td></tr>
+              <tr><td class="darkbg"><img src="/images/spacer.gif" width="1" height="3" alt=""></td></tr>
+            </table>
+            <br>
+
+<!-- INCLUDE THE PAGE SIDEBAR TEXT -->
+&nbsp;
+
+          </td>
+        </tr>
+      </table>
+    </td>
+
+    <td class="darkbg"><img src="/images/spacer.gif" width="1" height="1" border="0" alt=""><br></td>
+    <td>
+      <table width="100%" cellpadding="10" cellspacing="0" border="0" bordercolor="red">
+        <tr>
+          <td valign="top">
+
+<span class="txth1">SoftTabStops : Set typewriter like tabstops.</span> 
+
+<br>
+<br>
+
+<!-- karma table -->
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
+  <td>
+    Rating <b>0/0</b>,
+    Downloaded by 152  </td>
+  <td class="lightbg">
+  <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
+  </td>
+  <td>
+    <a href="http://vim.wikia.com/wiki/Script:2797">Vim wiki</a>
+  </td>  
+</tr>
+</table>
+<p>
+
+<table cellspacing="0" cellpadding="0" border="0">
+<tr><td class="prompt">created by</td></tr>
+<tr><td><a href="/account/profile.php?user_id=292">Hari Krishna Dara</a></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">script type</td></tr>
+<tr><td>utility</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">description</td></tr>
+<tr><td>Description:<br>&nbsp;&nbsp;This plugin provides the ability to enter tabular data quickly in two<br>&nbsp;&nbsp;different ways:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Set explicit stops at the columns.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Enter a sample row and have the stops inferred from it.<br>&nbsp;&nbsp;The plugin provides a visual editor such that you can set explicit stops<br>&nbsp;&nbsp;with ease. The stops can be toggled using a mouse or keyboard. You can<br>&nbsp;&nbsp;toggle the plugin functionality on and off at the buffer or global<br>&nbsp;&nbsp;level.<br><br>Usage:<br>&nbsp;&nbsp;- Use :STTgl to toggle using tabstops. This maps/unmaps &lt;Tab&gt; and &lt;BS&gt;.<br>&nbsp;&nbsp;&nbsp;&nbsp;When buffer-local tabs are enabled (the default), the maps are made<br>&nbsp;&nbsp;&nbsp;&nbsp;local to the current buffer, otherwise, the maps are global.<br>&nbsp;&nbsp;- Use :STEdit[!] to bring up an editor for setting explicit tab stops (or<br>&nbsp;&nbsp;&nbsp;&nbsp;to just view them). You would see three lines, two with numbers to guide<br>&nbsp;&nbsp;&nbsp;&nbsp;the column number and another to show the current tab stops. To toggle<br>&nbsp;&nbsp;&nbsp;&nbsp;stop at a any column, move cursor to the column and push spacebar or<br>&nbsp;&nbsp;&nbsp;&nbsp;directly click left mouse button. To save changes at the end, use :wq<br>&nbsp;&nbsp;&nbsp;&nbsp;command (or just :w, to leave the window open). You can press &quot;q&quot; to<br>&nbsp;&nbsp;&nbsp;&nbsp;quit when no changes have been made. When buffer-local tabs have been<br>&nbsp;&nbsp;&nbsp;&nbsp;enabled (the default), use bang to edit the global tabstops.<br>&nbsp;&nbsp;- Use STReset to reset the tabstops to one every 8 columns (or whatever<br>&nbsp;&nbsp;&nbsp;&nbsp;'tabstop' is set to), or STClear to clear all of them.<br>&nbsp;&nbsp;- By default the stops are lcoal to a buffer<br>&nbsp;&nbsp;&nbsp;&nbsp;(g:softtabstops_local_to_buffer setting is set). This helps to localize<br>&nbsp;&nbsp;&nbsp;&nbsp;the stops and maps to the current buffer of interest, but as a result<br>&nbsp;&nbsp;&nbsp;&nbsp;are not shared across buffers. The tabstops will be stored as a list of<br>&nbsp;&nbsp;&nbsp;&nbsp;columns in the buffer local variable called &quot;b:softtabstops&quot;. To have<br>&nbsp;&nbsp;&nbsp;&nbsp;same set of stops for all buffers reset this setting and have the stops<br>&nbsp;&nbsp;&nbsp;&nbsp;stored in the global variable &quot;g:softtabstops&quot;.<br>&nbsp;&nbsp;- You can manipulate softtabstops in any of these ways:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- directly, by using the Vim's |List| functions. You can even clone<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(using |copy()| function) the global &quot;g:softtabstops&quot; to the buffer<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;local variable &quot;b:softtabstops&quot;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- using plugin commands :STAddTab, :STRemoveTab, :STReset and :STClear<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- using visual editor started by :STEdit command<br>&nbsp;&nbsp;- When softtabstops is toggled on and off, the plugin doesn't try to<br>&nbsp;&nbsp;&nbsp;&nbsp;restore any prior maps for &lt;Tab&gt; and &lt;BS&gt;, this is because Vim doesn't<br>&nbsp;&nbsp;&nbsp;&nbsp;provide any means to capture a map completely. If the experimental<br>&nbsp;&nbsp;&nbsp;&nbsp;g:softtabstops_restore_original_map option is turned on the plugin<br>&nbsp;&nbsp;&nbsp;&nbsp;attempts to capture the maps by parsing the :map command output and the<br>&nbsp;&nbsp;&nbsp;&nbsp;maparg() result, but this method is very limited, and will not work for<br>&nbsp;&nbsp;&nbsp;&nbsp;many scenarios. If you have have your own insert mode mappings for &lt;Tab&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;and &lt;BS&gt; or use a plugin that defines them, make sure this plugin<br>&nbsp;&nbsp;&nbsp;&nbsp;doesn't conflict with them.<br><br>Settings:<br>&nbsp;&nbsp;- g:softtabstops_local_to_buffer (default: 1). Set to 0 to make tabstops<br>&nbsp;&nbsp;&nbsp;&nbsp;shared globally by all buffers. This also makes :STTgl create global<br>&nbsp;&nbsp;&nbsp;&nbsp;maps.<br>&nbsp;&nbsp;- g:softtabstops_repeat_last_stop (default: 0). When set to 1, the plugin<br>&nbsp;&nbsp;&nbsp;&nbsp;repeats the entire sequence of tabstops when it needs to extend them.<br>&nbsp;&nbsp;- g:softtabstops_align_line_with_editor (default: 1): Set to 0 to avoid<br>&nbsp;&nbsp;&nbsp;&nbsp;repositioning the current line when the tab editor is opened.<br>&nbsp;&nbsp;- g:softtabstops_infer_tabstops (default: 1). Set to 0, if you don't want<br>&nbsp;&nbsp;&nbsp;&nbsp;the plugin to infer the tabstops based on the previous lines, when no<br>&nbsp;&nbsp;&nbsp;&nbsp;explicit tabstops are set (or existing ones are cleared using :STClear)<br>&nbsp;&nbsp;- g:softtabstops_infer_imm_nonblank_only (default: 1). Set to 0, if you<br>&nbsp;&nbsp;&nbsp;&nbsp;want the tabstops to be inferred from the previous line, only when there<br>&nbsp;&nbsp;&nbsp;&nbsp;are no blank lines between them.<br>&nbsp;&nbsp;- g:softtabstops_editor_guide_start_num (default: 0). Controls the column<br>&nbsp;&nbsp;&nbsp;&nbsp;number sequence in the tab editor. Should be between 0 to 9.<br>&nbsp;&nbsp;- g:softtabstops_editor_guide_end_num (default: 9). Controls the column<br>&nbsp;&nbsp;&nbsp;&nbsp;number sequence in the tab editor. Should be between 0 to 9 and greater<br>&nbsp;&nbsp;&nbsp;&nbsp;than g:softtabstops_editor_guide_start_num.<br>&nbsp;&nbsp;- g:softtabstops_restore_original_map (default: 0). Set to 1 to enable the<br>&nbsp;&nbsp;&nbsp;&nbsp;experimental feature to save and restore maps while toggling on and off.<br><br>Limitations:<br>&nbsp;&nbsp;- Can only insert all spaces, not a mix of tabs and spaces.<br></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">install details</td></tr>
+<tr><td>Unzip the file into your runtime. Also make sure the latest version of genutils (<a href="/scripts/script.php?script_id=197">vimscript #197</a>) is installed.</td></tr>
+<tr><td>&nbsp;</td></tr>
+</table>
+
+<!-- rating table -->
+<form name="rating">
+<input type="hidden" name="script_id" value="2797">
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>rate this script</b></td>
+  <td valign="middle">
+    <input type="radio" name="rating" value="life_changing">Life Changing
+    <input type="radio" name="rating" value="helpful">Helpful
+    <input type="radio" name="rating" value="unfulfilling">Unfulfilling&nbsp;
+    <input type="submit" value="rate">
+  </td>
+</tr>
+</table>
+</form>
+<span class="txth2">script versions</span> (<a href="add_script_version.php?script_id=2797">upload new version</a>)
+<p>
+Click on the package to download.
+<p>
+
+<table cellspacing="2" cellpadding="4" border="0" width="100%">
+<tr class='tableheader'>
+        <th valign="top">package</th>
+    <th valign="top">script version</th>
+    <th valign="top">date</th>
+    <th valign="top">Vim version</th>
+    <th valign="top">user</th>
+    <th valign="top">release notes</th>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=11467">softtabstops-1.0.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.0</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-10-02</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=292">Hari Krishna Dara</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Initial upload</td>
+</tr>
+</table>
+<!-- finish off the framework -->
+          </td>
+        </tr>
+      </table>
+    </td>
+
+  </tr>
+</table>
+
+<!-- END OF THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr><td colspan="4" bgcolor="#000000"><img src="/images/spacer.gif" height="2" width="1" alt=""></td></tr>
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr>
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+
+    <td align="left" valign="top"><small>
+      If you have questions or remarks about this site, visit the
+      <a href="http://vimonline.sf.net">vimonline development</a> pages.
+      Please use this site responsibly.
+      <br> 
+      
+      Questions about <a href="http://www.vim.org/about.php">Vim</a> should go
+      to the <a href="http://www.vim.org/maillist.php">maillist</a>.
+      Help Bram <a href="http://iccf-holland.org/">help Uganda</a>.
+      </small>
+	&nbsp;
+	&nbsp;
+
+	<!-- Start of StatCounter Code -->
+	<script type="text/javascript" language="javascript">
+	var sc_project=1417324; 
+	var sc_invisible=1; 
+	var sc_partition=11; 
+	var sc_security="d41633bc"; 
+	</script>
+
+	<script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script><noscript><a href="http://www.statcounter.com/" target="_blank"><img  src="http://c12.statcounter.com/counter.php?sc_project=1417324&java=0&security=d41633bc&invisible=0" alt="free tracking" border="0"></a> </noscript>
+	<!-- End of StatCounter Code -->
+          </td>
+
+    <td align="right" valign="top">
+      		<a href="http://sourceforge.net/projects/vim" rel="nofollow"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=8&type=1" width="88" height="31" border="0" alt="SourceForge.net Logo" /></a>
+    </td>
+
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+  </tr>
+
+    
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  
+  </tr>
+</table>
+
+</body>
+</html>
+

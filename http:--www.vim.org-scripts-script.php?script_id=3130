@@ -1,0 +1,340 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+  <link rel="Stylesheet" type="text/css" href="/css/style.css" >
+  <title>CountJump - Create custom motions and text objects via repeated jumps.  : vim online</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <meta name="KEYWORDS" content="Vim, Vi IMproved, text editor, home, documentation, tips, scripts, news">
+  <link rel="shortcut icon" type="image/x-icon" href="/images/vim_shortcut.ico">
+</head>
+
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff"> 
+
+<!-- HEADER, SPONSOR IMAGE, VIM IMAGE AND BOOK AD -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+  <td class="lightbg">&nbsp;&nbsp;&nbsp;</td>
+  <td class="lightbg" align="left"><a href="/sponsor/index.php"><img src="/images/sponsorvim.gif" alt="sponsor Vim development" border="0"></a></td>
+    <td class="lightbg" align="center"><a href="/index.php"><img src="/images/vim_header.gif" border="0" alt="Vim logo"></a></td>
+    <td class="lightbg" align="right"><a href="http://iccf-holland.org/click5.html"><img src="/images/buyhelplearn.gif" alt="Vim Book Ad" border="0"></a></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="darkbg"><img src="/images/spacer.gif" width="1" height="10" alt=""></td>
+  </tr>
+</table>
+<!-- THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+  <col width="180">
+  <col width="1">
+
+  <tr valign="top">
+    <td class="sidebar">
+      <table width="180" cellpadding="4" cellspacing="0" border="0">
+        <tr valign="top">
+          <td class="sidebar">
+
+<!-- INCLUDE THE PAGE NAVIGATION -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+    <tr>
+        <td><small>not logged in (<a href="/login.php">login</a>)</small></td>
+    </tr>
+    <tr><td>
+<small>&nbsp;</small>
+<form action="http://www.google.com/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-3005259998294962:bvyni59kjr1" />
+    <input type="hidden" name="ie" value="ISO-8859-1" />
+    <input type="text" name="q" size="20" />
+    <br>
+    <input type="submit" name="sa" value="Search" />
+  </div>
+</form>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+    </td></tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="1"></td>
+    </tr>
+    <tr>
+        <td class="darkbg"><img src="/images/spacer.gif" alt='' border="0" height="3"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="2"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/index.php">Home</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/search.php">Advanced search</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/about.php">About Vim</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/community.php">Community</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/news/news.php">News</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/sponsor/index.php">Sponsoring</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/trivia.php">Trivia</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/docs.php">Documentation</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/download.php">Download</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/scripts/index.php">Scripts</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/tips/index.php">Tips</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/account/index.php">My Account</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/huh.php">Site Help</a></td>
+        </tr>
+</table>
+
+            <table width="172" cellpadding="0" cellspacing="0" border="0">
+              <tr><td><img src="/images/spacer.gif" alt="" border="0" width="1" height="8"></td></tr>
+              <tr><td class="darkbg"><img src="/images/spacer.gif" width="1" height="3" alt=""></td></tr>
+            </table>
+            <br>
+
+<!-- INCLUDE THE PAGE SIDEBAR TEXT -->
+&nbsp;
+
+          </td>
+        </tr>
+      </table>
+    </td>
+
+    <td class="darkbg"><img src="/images/spacer.gif" width="1" height="1" border="0" alt=""><br></td>
+    <td>
+      <table width="100%" cellpadding="10" cellspacing="0" border="0" bordercolor="red">
+        <tr>
+          <td valign="top">
+
+<span class="txth1">CountJump : Create custom motions and text objects via repeated jumps. </span> 
+
+<br>
+<br>
+
+<!-- karma table -->
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
+  <td>
+    Rating <b>16/4</b>,
+    Downloaded by 134  </td>
+  <td class="lightbg">
+  <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
+  </td>
+  <td>
+    <a href="http://vim.wikia.com/wiki/Script:3130">Vim wiki</a>
+  </td>  
+</tr>
+</table>
+<p>
+
+<table cellspacing="0" cellpadding="0" border="0">
+<tr><td class="prompt">created by</td></tr>
+<tr><td><a href="/account/profile.php?user_id=9713">Ingo Karkat</a></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">script type</td></tr>
+<tr><td>utility</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">description</td></tr>
+<tr><td>DESCRIPTION<br>Though it is not difficult to write a custom movement (basically a :map<br>that executes some kind of search or jump) and a custom text-object (an<br>:omap that selects a range of text), this is too complex for a novice user<br>and often repetitive. <br>This plugin covers the common use case where the movement and boundaries of a<br>text object can be specified via start and end patterns, and offers a single<br>function to set up related mappings. With it, you can enhance some built-in<br>Vim mappings to take an optional [count], and quickly define new mappings for<br>help file sections, diff hunks, embedded macros, and so on... <br><br>As a generalization of the start and end patterns, the movement and boundaries<br>of a text object can also be specified via jump functions, i.e. Funcrefs of<br>functions that position the cursor on the appropriate location and return that<br>location. This can be used where the jump is difficult to express with a<br>single regular expression, the jump may need adapting depending on the<br>context, or other uses. <br>This plugin contains some support for movement and text objects consisting of<br>text regions that can be defined by continuous lines that match a particular<br>pattern, e.g. comment blocks that all start with /^\s*#/. <br><br>SEE ALSO<br>The following ftplugins use this plugin: <br><br>diff_movement	&nbsp;&nbsp;(<a href="/scripts/script.php?script_id=3180">vimscript #3180</a>): Movement over diff hunks with ]] etc.<br>fortunes_movement (<a href="/scripts/script.php?script_id=3181">vimscript #3181</a>): Movement over email fortunes with ]] etc.<br>help_movement&nbsp;&nbsp;&nbsp;&nbsp; (<a href="/scripts/script.php?script_id=3179">vimscript #3179</a>): Movement over Vim help sections with ]] etc.<br>mail_movement&nbsp;&nbsp;&nbsp;&nbsp; (<a href="/scripts/script.php?script_id=3182">vimscript #3182</a>): Movement over email quotes with ]] etc.<br><br>RELATED WORKS<br>- motpat.vim (<a href="/scripts/script.php?script_id=3030">vimscript #3030</a>) offers similar functions to setup motion<br>&nbsp;&nbsp;mappings, but no text objects (yet). <br>- textobj-user (<a href="/scripts/script.php?script_id=2100">vimscript #2100</a>) has support for user-defined text objects via<br>&nbsp;&nbsp;regular expressions. <br><br>USAGE<br>The plugin defines several functions, which set up the appropriate mappings<br>based on the arguments that you supply. The following is an overview; you'll<br>find the details directly in the implementation files in the<br>.vim/autoload/CountJump/ directory. <br><br>CountJump#Motion#MakeBracketMotion( mapArgs, keyAfterBracket, inverseKeyAfterBracket, patternToBegin, patternToEnd, isEndPatternToEnd, ... )<br><br>This function sets up mappings starting with [ and ] for movement (with<br>optional [count]) relative to the current cursor position, targeting either a<br>text pattern at the beginning ([{keyAfterBracket} mapping) or a text pattern<br>at the end (]{inverseKeyAfterBracket} mapping) of whatever you want to treat<br>as a text block. <br><br>CountJump#Motion#MakeBracketMotionWithJumpFunctions( mapArgs, keyAfterBracket, inverseKeyAfterBracket, JumpToBeginForward, JumpToBeginBackward, JumpToEndForward, JumpToEndBackward, isEndJumpToEnd, ... )<br><br>This function sets up mappings starting with [ and ] for movement (with<br>optional [count]) relative to the current cursor position, but rely on four<br>passed jump functions instead of text patterns to do the movement. <br><br><br>CountJump#TextObject#MakeWithCountSearch( mapArgs, textObjectKey, types, selectionMode, patternToBegin, patternToEnd )<br><br>Defines a complete set of mappings for inner and/or outer text objects that<br>support an optional [count] and are driven by search patterns for the<br>beginning and end of a block. Outer text objects include the matched pattern<br>text, inner ones not. Selection can be characterwise, linewise or blockwise. <br><br><br>CountJump#TextObject#MakeWithJumpFunctions( mapArgs, textObjectKey, types, selectionMode, JumpToBegin, JumpToEnd )<br><br>This is a generalization of CountJump#TextObject#MakeWithCountSearch() that<br>invokes custom functions instead of searching for a fixed pattern. This is<br>useful if the check for a match is too complex for a single regular<br>expression, or if you need to adjust the match position depending on the<br>circumstances. <br><br><br>Often, a region can be defined as a block of continuous lines that all match a<br>certain pattern. The following functions aid in implementing movements to the<br>boundaries of these regions and text objects consisting of the region: <br><br>CountJump#Region#JumpToRegionEnd( count, pattern, isMatch, step, isToEndOfLine )<br><br>Starting from the current line, search for the position where the count'th<br>region ends. Use this function to build Funcrefs for forward / backward jumps<br>that can then be passed to CountJump#TextObject#MakeWithJumpFunctions(). <br><br>CountJump#Region#JumpToNextRegion( count, pattern, isMatch, step, isAcrossRegion, isToEndOfLine )<br><br>Starting from the current line, search for the position where the count'th<br>region begins/ends. <br><br>CountJump#Region#Motion#MakeBracketMotion( mapArgs, keyAfterBracket, inverseKeyAfterBracket, pattern, isMatch, ... )<br><br>This function sets up mappings starting with [ and ] for movement (with<br>optional [count]) relative to the current cursor position, targeting a text<br>region defined by contiguous lines that (don't) match a:pattern. <br><br>CountJump#Region#TextObject#Make( mapArgs, textObjectKey, types, selectionMode, pattern, isMatch )<br><br>Defines a complete set of mappings for inner and/or outer text objects that<br>support an optional [count] and select regions of lines which are defined by<br>contiguous lines that (don't) match a:pattern. <br>The inner text object comprises all lines of the region itself, while the<br>outer text object also includes all adjacent lines above and below which do<br>not themselves belong to a region. <br><br>EXAMPLE<br>Let's illustrate the usage by developing custom motions and text objects for<br>Pascal begin..end blocks. <br><br>We want to move around blocks, and override the default section movements for<br>it: <br>]]			Go to [count] next start of a block. <br>][			Go to [count] next end of a block. <br>[[			Go to [count] previous start of a block. <br>[]			Go to [count] previous end of a block. <br><br>&nbsp;&nbsp;&nbsp;&nbsp;call CountJump#Motion#MakeBracketMotion('&lt;buffer&gt;', '', '', '\c^begin\n\zs', '\c^.*\nend', 0)<br>The begin pattern positions the cursor on the beginning of the line following<br>the &quot;begin&quot; keyword, the end pattern on the beginning of the line<br>preceding the &quot;end&quot; keyword. <br><br><br>We want to select a block, either including or excluding the lines with the<br>begin..end keywords: <br>ib			&quot;inner block&quot; text object, select [count] contents of<br>			a block. <br>ab			&quot;a block&quot; text object, select [count] blocks. <br><br>&nbsp;&nbsp;&nbsp;&nbsp;call CountJump#TextObject#MakeWithCountSearch('&lt;buffer&gt;', 'b', 'ai', 'V', '\c^begin\n', '\c^end.*$')<br><br>If there is a filetype detection for Pascal files, we can simply put the<br>above calls in a ~/.vim/ftplugin/pascal_movement.vim script and are done. </td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">install details</td></tr>
+<tr><td>INSTALLATION<br>This script is packaged as a vimball. If you have the &quot;gunzip&quot; decompressor<br>in your PATH, simply edit the *.vba.gz package in Vim; otherwise, decompress<br>the archive first, e.g. using WinZip. Inside Vim, install by sourcing the<br>vimball or via the :UseVimball command.<br>&nbsp;&nbsp;&nbsp;&nbsp;vim CountJump.vba.gz<br>&nbsp;&nbsp;&nbsp;&nbsp;:so %<br>To uninstall, use the :RmVimball command. <br><br>DEPENDENCIES<br>- Requires Vim 7.0 or higher. </td></tr>
+<tr><td>&nbsp;</td></tr>
+</table>
+
+<!-- rating table -->
+<form name="rating">
+<input type="hidden" name="script_id" value="3130">
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>rate this script</b></td>
+  <td valign="middle">
+    <input type="radio" name="rating" value="life_changing">Life Changing
+    <input type="radio" name="rating" value="helpful">Helpful
+    <input type="radio" name="rating" value="unfulfilling">Unfulfilling&nbsp;
+    <input type="submit" value="rate">
+  </td>
+</tr>
+</table>
+</form>
+<span class="txth2">script versions</span> (<a href="add_script_version.php?script_id=3130">upload new version</a>)
+<p>
+Click on the package to download.
+<p>
+
+<table cellspacing="2" cellpadding="4" border="0" width="100%">
+<tr class='tableheader'>
+        <th valign="top">package</th>
+    <th valign="top">script version</th>
+    <th valign="top">date</th>
+    <th valign="top">Vim version</th>
+    <th valign="top">user</th>
+    <th valign="top">release notes</th>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=14587">CountJump.vba.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.40</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-12-20</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=9713">Ingo Karkat</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- ENH: Added CountJump#Region#TextObject#Make() to easily define text objects for regions. <br>- Interface change: Jump functions again return position (and actual, corrected one for a:isToEndOfLine). Though the position is not used for motions, it is necessary for text objects to differentiate between &quot;already at the begin/end position&quot; and &quot;no such position&quot;.&nbsp;&nbsp;</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=14581">CountJump.vba.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.30</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-12-20</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=9713">Ingo Karkat</a></i></td>
+    <td class="roweven" valign="top" width="2000">- ENH: Added CountJump#Region#Motion#MakeBracketMotion() to easily define bracket motions for regions. <br>- Interface changes: <br>&nbsp;&nbsp;- Jump functions don't necessarily return jump position any more; this special case is only required for text objects. <br>&nbsp;&nbsp;- Moved CountJump#Region#Jump() to CountJump#JumpFunc(). <br>&nbsp;&nbsp;- Added a:isToEndOfLine argument to CountJump#Region#JumpToRegionEnd() and CountJump#Region#JumpToNextRegion(), which is useful for operator-pending and characterwise visual mode mappings; the entire last line will then be operated on / selected. <br>&nbsp;&nbsp;- Added a:isMatch argument to CountJump#Region#SearchForRegionEnd(), CountJump#Region#JumpToRegionEnd(), CountJump#Region#SearchForNextRegion(), CountJump#Region#JumpToNextRegion(). This allows definition of regions via non-matches, which can be substantially simpler (and faster to match) than coming up with a &quot;negative&quot; regular expression.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13502">CountJump.vba.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.22</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-08-06</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=9713">Ingo Karkat</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- No more motion mappings and text objects for select mode; as the mappings start with a printable character, no select-mode mapping should be defined. </td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13462">CountJump.vba.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.21</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-08-03</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=9713">Ingo Karkat</a></i></td>
+    <td class="roweven" valign="top" width="2000">- FIX: A 2]] jump inside a region (unless last line) jumped like a 1]] jump. The search for next region must not decrease the iteration counter when _not_ searching _across_ the region. <br>- FIX: Must not do (characterwise) end position adaptation for linewise text object that does not exclude boundaries. <br>- Switched example from email fortunes to Pascal begin..end blocks, as they are conceptually easier. </td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13461">CountJump.vba.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.20</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-08-03</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=9713">Ingo Karkat</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- ENH: In CountJump#Motion#MakeBracketMotion(), a:keyAfterBracket and a:inverseKeyAfterBracket can now be empty, the resulting mappings are then omitted. Likewise, any jump function can be empty in CountJump#Motion#MakeBracketMotionWithJumpFunctions().<br>- With the added CountJump#Motion#MakeBracketMotionWithJumpFunctions() motions can be defined via jump functions, similar to how text objects can be defined. <br>- Added CountJump/Region.vim to move to borders of a region defined by lines matching a pattern. <br>- FIX: CountJump#CountJump() with mode &quot;O&quot; didn't add original position to jump list. <br>- The previous visual selection is kept when the text object could not be selected. (Beforehand, a new selection of the text object's selection type was created.) <br>- The adjustment movements after the jumps to the text object boundaries now do not cause beeps if that movement cannot be done (e.g. a 'j' at the end of the buffer). </td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13359">CountJump.vba.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.10</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-07-20</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=9713">Ingo Karkat</a></i></td>
+    <td class="roweven" valign="top" width="2000">- Changed behavior if there aren't [count] matches: Instead of jumping to the last available match (and ringing the bell), the cursor stays at the original position, like with the old vi-compatible motions. <br>- ENH: Only adding to jump list if there actually is a match. This is like the built-in Vim motions work. <br>- FIX: For a linewise text object, the end cursor column is not important; do not compare with the original cursor column in this case. </td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13233">CountJump.vba.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.00</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-06-22</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=9713">Ingo Karkat</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Initial upload</td>
+</tr>
+</table>
+<!-- finish off the framework -->
+          </td>
+        </tr>
+      </table>
+    </td>
+
+  </tr>
+</table>
+
+<!-- END OF THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr><td colspan="4" bgcolor="#000000"><img src="/images/spacer.gif" height="2" width="1" alt=""></td></tr>
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr>
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+
+    <td align="left" valign="top"><small>
+      If you have questions or remarks about this site, visit the
+      <a href="http://vimonline.sf.net">vimonline development</a> pages.
+      Please use this site responsibly.
+      <br> 
+      
+      Questions about <a href="http://www.vim.org/about.php">Vim</a> should go
+      to the <a href="http://www.vim.org/maillist.php">maillist</a>.
+      Help Bram <a href="http://iccf-holland.org/">help Uganda</a>.
+      </small>
+	&nbsp;
+	&nbsp;
+
+	<!-- Start of StatCounter Code -->
+	<script type="text/javascript" language="javascript">
+	var sc_project=1417324; 
+	var sc_invisible=1; 
+	var sc_partition=11; 
+	var sc_security="d41633bc"; 
+	</script>
+
+	<script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script><noscript><a href="http://www.statcounter.com/" target="_blank"><img  src="http://c12.statcounter.com/counter.php?sc_project=1417324&java=0&security=d41633bc&invisible=0" alt="free tracking" border="0"></a> </noscript>
+	<!-- End of StatCounter Code -->
+          </td>
+
+    <td align="right" valign="top">
+      		<a href="http://sourceforge.net/projects/vim" rel="nofollow"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=8&type=1" width="88" height="31" border="0" alt="SourceForge.net Logo" /></a>
+    </td>
+
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+  </tr>
+
+    
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  
+  </tr>
+</table>
+
+</body>
+</html>
+

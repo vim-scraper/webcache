@@ -1,0 +1,740 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+  <link rel="Stylesheet" type="text/css" href="/css/style.css" >
+  <title>VimIRC.vim - An IRC client script : vim online</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <meta name="KEYWORDS" content="Vim, Vi IMproved, text editor, home, documentation, tips, scripts, news">
+  <link rel="shortcut icon" type="image/x-icon" href="/images/vim_shortcut.ico">
+</head>
+
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff"> 
+
+<!-- HEADER, SPONSOR IMAGE, VIM IMAGE AND BOOK AD -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+  <td class="lightbg">&nbsp;&nbsp;&nbsp;</td>
+  <td class="lightbg" align="left"><a href="/sponsor/index.php"><img src="/images/sponsorvim.gif" alt="sponsor Vim development" border="0"></a></td>
+    <td class="lightbg" align="center"><a href="/index.php"><img src="/images/vim_header.gif" border="0" alt="Vim logo"></a></td>
+    <td class="lightbg" align="right"><a href="http://iccf-holland.org/click5.html"><img src="/images/buyhelplearn.gif" alt="Vim Book Ad" border="0"></a></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="darkbg"><img src="/images/spacer.gif" width="1" height="10" alt=""></td>
+  </tr>
+</table>
+<!-- THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+  <col width="180">
+  <col width="1">
+
+  <tr valign="top">
+    <td class="sidebar">
+      <table width="180" cellpadding="4" cellspacing="0" border="0">
+        <tr valign="top">
+          <td class="sidebar">
+
+<!-- INCLUDE THE PAGE NAVIGATION -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+    <tr>
+        <td><small>not logged in (<a href="/login.php">login</a>)</small></td>
+    </tr>
+    <tr><td>
+<small>&nbsp;</small>
+<form action="http://www.google.com/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-3005259998294962:bvyni59kjr1" />
+    <input type="hidden" name="ie" value="ISO-8859-1" />
+    <input type="text" name="q" size="20" />
+    <br>
+    <input type="submit" name="sa" value="Search" />
+  </div>
+</form>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+    </td></tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="1"></td>
+    </tr>
+    <tr>
+        <td class="darkbg"><img src="/images/spacer.gif" alt='' border="0" height="3"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="2"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/index.php">Home</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/search.php">Advanced search</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/about.php">About Vim</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/community.php">Community</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/news/news.php">News</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/sponsor/index.php">Sponsoring</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/trivia.php">Trivia</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/docs.php">Documentation</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/download.php">Download</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/scripts/index.php">Scripts</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/tips/index.php">Tips</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/account/index.php">My Account</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/huh.php">Site Help</a></td>
+        </tr>
+</table>
+
+            <table width="172" cellpadding="0" cellspacing="0" border="0">
+              <tr><td><img src="/images/spacer.gif" alt="" border="0" width="1" height="8"></td></tr>
+              <tr><td class="darkbg"><img src="/images/spacer.gif" width="1" height="3" alt=""></td></tr>
+            </table>
+            <br>
+
+<!-- INCLUDE THE PAGE SIDEBAR TEXT -->
+&nbsp;
+
+          </td>
+        </tr>
+      </table>
+    </td>
+
+    <td class="darkbg"><img src="/images/spacer.gif" width="1" height="1" border="0" alt=""><br></td>
+    <td>
+      <table width="100%" cellpadding="10" cellspacing="0" border="0" bordercolor="red">
+        <tr>
+          <td valign="top">
+
+<span class="txth1">VimIRC.vim : An IRC client script</span> 
+
+<br>
+<br>
+
+<!-- karma table -->
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
+  <td>
+    Rating <b>264/115</b>,
+    Downloaded by 9576  </td>
+  <td class="lightbg">
+  <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
+  </td>
+  <td>
+    <a href="http://vim.wikia.com/wiki/Script:931">Vim wiki</a>
+  </td>  
+</tr>
+</table>
+<p>
+
+<table cellspacing="0" cellpadding="0" border="0">
+<tr><td class="prompt">created by</td></tr>
+<tr><td><a href="/account/profile.php?user_id=4697">Madoka Machitani</a></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">script type</td></tr>
+<tr><td>utility</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">description</td></tr>
+<tr><td>This is an IRC client which runs on Vim.&nbsp;&nbsp;It has some of the features<br>IRC users might expect, such as multiple servers connectivity, DCC<br>SEND/CHAT features etc..&nbsp;&nbsp;Read the plugin file for more feature info and<br>usage instructions.<br><br>For those who are unfamiliar with IRC in general, I recommend visiting<br>this site first: <a target="_blank" href="http://www.irchelp.org/">http://www.irchelp.org/</A><br><br>If you have any questions, problems, or suggestions etc., /query or<br>e-mail the maintainer.&nbsp;&nbsp;Do not direct them to the channel #vim please.<br><br>Screenshots:<br>&nbsp;&nbsp;<a target="_blank" href="http://www.dd.iij4u.or.jp/~madokam/img/vimirc04.png">http://www.dd.iij4u.or.jp/~madokam/img/vimirc04.png</A><br>&nbsp;&nbsp;<a target="_blank" href="http://www.dd.iij4u.or.jp/~madokam/img/vimirc05.png">http://www.dd.iij4u.or.jp/~madokam/img/vimirc05.png</A> (invoking web browser)<br><br>Here is a minimum set of knowledge required to start/exit the script:<br><br>To start it, type<br><br>:VimIRC&lt;CR&gt;<br><br>Then you'll be prompted for some user info (nick, full name etc.).<br><br>Upon successfull connection, try some normal commands you're familiar<br>with (&quot;j&quot;, &quot;k&quot;, &quot;&lt;C-W&gt;-&quot;things and so on).&nbsp;&nbsp;Typing &quot;i&quot; or &quot;I&quot; will let<br>you in to the IRC-command mode, where you can enter commands such as<br>&quot;/join #vim&quot; and messages.<br><br>To quit, just press &quot;Q&quot;.<br><br>Another method of quitting: get out of the loop with &quot;&lt;C-C&gt;&quot;, then type<br><br>:VimIRCQuit&lt;CR&gt;<br><br>If you change your mind and want to get online again, press &quot;&lt;Space&gt;&quot; on<br>any of the VimIRC windows.<br><br>Have fun!</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">install details</td></tr>
+<tr><td>Just drop the file into your plugin directory.<br><br>Requirements:<br>&nbsp;&nbsp;Vim 6.2 or later with perl interface enabled<br>&nbsp;&nbsp;Perl 5.6 or later (5.8 or later if you want multibyte support)</td></tr>
+<tr><td>&nbsp;</td></tr>
+</table>
+
+<!-- rating table -->
+<form name="rating">
+<input type="hidden" name="script_id" value="931">
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>rate this script</b></td>
+  <td valign="middle">
+    <input type="radio" name="rating" value="life_changing">Life Changing
+    <input type="radio" name="rating" value="helpful">Helpful
+    <input type="radio" name="rating" value="unfulfilling">Unfulfilling&nbsp;
+    <input type="submit" value="rate">
+  </td>
+</tr>
+</table>
+</form>
+<span class="txth2">script versions</span> (<a href="add_script_version.php?script_id=931">upload new version</a>)
+<p>
+Click on the package to download.
+<p>
+
+<table cellspacing="2" cellpadding="4" border="0" width="100%">
+<tr class='tableheader'>
+        <th valign="top">package</th>
+    <th valign="top">script version</th>
+    <th valign="top">date</th>
+    <th valign="top">Vim version</th>
+    <th valign="top">user</th>
+    <th valign="top">release notes</th>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=4171">vimirc.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.9.28</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2005-04-15</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=4697">Madoka Machitani</a></i></td>
+    <td class="rowodd" valign="top" width="2000">This is an &quot;I'm really sorry&quot; fixes release:<br>* Contrary to what I've said previously, erroneous nickname still caused endless loop when loggin-on.<br>* When receiving chat messages or something, Vim would cause this error: &quot;Usage: VIBUF::Append(vimbuf, lnum, @lines)&quot;.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=4165">vimirc.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.9.27</b></td>
+    <td class="roweven" valign="top" nowrap><i>2005-04-14</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=4697">Madoka Machitani</a></i></td>
+    <td class="roweven" valign="top" width="2000">New maps and some fixes.<br>* Maps: &quot;r&quot; / &quot;R&quot;.&nbsp;&nbsp;They do just the opposite of &quot;q&quot; / &quot;Q&quot;: reconnect to disconnected servers.<br>* When someone tried to contact (query) you but with different case, the message was totally discarded.<br>* When you tried to logon with erroneous nickname, it resulted in endless loop.<br>* Port number was not reused when reconnecting manually with command &quot;/server&quot; (i.e., without arg), failing to reconnect if it was other than the default 6667.<br>* Global commands (e.g. &quot;/gquit&quot;) could not be executed on disconnected servers.<br>* Window resizing (&quot;&lt;C-L&gt;&quot;) should perform a bit better now.<br>* Added tips for opening hidden buffers.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=4155">vimirc.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.9.26</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2005-04-12</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=4697">Madoka Machitani</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Small fixes:<br>* When updating hidden buffers, &quot;E19: Mark has invalid line number&quot; could occur (quite rarely, I believe).<br>* NOTICE messages sent from the one you were chatting with could not be displayed in the chat buffer.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=4143">vimirc.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.9.25</b></td>
+    <td class="roweven" valign="top" nowrap><i>2005-04-09</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=4697">Madoka Machitani</a></i></td>
+    <td class="roweven" valign="top" width="2000">* VimIRC now uses stacks for putting messages.&nbsp;&nbsp;You'll notice the efficiency of it especially when updating channels-lists.<br>* Some multi-key commands (&quot;&lt;C-W&gt;t&quot;, etc.) weren't handled properly.<br>* User mode couldn't be set after auto-reconnecting servers (after disconnect).<br>* You can now omit your nick or the current channel for the command &quot;/MODE&quot;.&nbsp;&nbsp;E.g.: Entering &quot;/MODE +w&quot; on a non-channel buffer will set the specified mode on you.<br>* Added abbrev: &quot;/MO[DE]&quot;<br>* The manner of beeping has become a bit modest.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=4137">vimirc.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.9.24</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2005-04-08</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=4697">Madoka Machitani</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Some trivial fixes (I'm only listing a few):<br>* For some unknown reason (to me), cursor position could not be restored sometimes when re-opening hidden channels.&nbsp;&nbsp;The issue itself might still remain for the time being.<br>* Nick and command windows could embarrassingly remain open after parting channels with &quot;q&quot; key, for some event-related reason.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=4126">vimirc.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.9.23</b></td>
+    <td class="roweven" valign="top" nowrap><i>2005-04-06</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=4697">Madoka Machitani</a></i></td>
+    <td class="roweven" valign="top" width="2000">This contains rather big improvements:<br>* Messages can now be received even while offline (i.e., out of the main-loop).&nbsp;&nbsp;Note that you have to move cursor around periodically for this functionality to be triggered.&nbsp;&nbsp;The same applies to the next item.<br>* Timer-related functions (displaying the current time, auto-pinging to keep alive, etc.) will be executed while offline, too.<br>* Fix on normal mode commands: &quot;@&quot; commands (&quot;@:&quot; etc.) weren't implemented; two-key commands (&quot;f&quot;, &quot;t&quot;, etc.) could not accept count.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=4118">vimirc.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.9.22</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2005-04-04</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=4697">Madoka Machitani</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Trivial fixes release:<br>* Window configuration could get corrupted if you received server messages when the server buffer was hidden and the channels-list was open.<br>* While typing count for a normal mode command, entering two consecutive zeros nullified the entire input.<br>* While offline, count for normal mode commands (i.e., maps) could not be handled.<br>* Really trivial, but &quot;&lt;C-W&gt;&lt;C-P&gt;&quot; now opens the previous channel ABOVE the current window, which you would find more intuitive.<br>* When opening hidden channels, cursor was moved to the bottom, which was bad for grasping the flow of conversation.<br>* &quot;/PART&quot;ing channels with some particular multibyte characters could fail.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=4114">vimirc.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.9.21</b></td>
+    <td class="roweven" valign="top" nowrap><i>2005-04-02</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=4697">Madoka Machitani</a></i></td>
+    <td class="roweven" valign="top" width="2000">* Commands &quot;&lt;C-N&gt;&quot; / &quot;&lt;C-P&gt;&quot; now accepts count: &quot;3&lt;C-N&gt;&quot; opens the third next channel or server as seen on the info-bar from the current one.<br>* Also, commands starting with &quot;&lt;C-W&gt;&quot; can now accept count before and/or after it.<br>* Nicks window could become empty for some unknown reason.&nbsp;&nbsp;I still don't know why, but tried to fix it.<br>* Hitting &quot;i&quot; after key-prompt could result in insert mode on a non-command buffer.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=4108">vimirc.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.9.20</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2005-03-31</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=4697">Madoka Machitani</a></i></td>
+    <td class="rowodd" valign="top" width="2000">* Nick window could be embarrassingly left open, if you sent/received query message while on a buffer other than the chat buffer.<br>* Command &quot;/ACTION&quot; didn't work as described in the help message.&nbsp;&nbsp;Let me replace the command with &quot;/DES[CRIBE]&quot;.<br>* Added a small new command &quot;/WHOA[MI]&quot;.&nbsp;&nbsp;Might be useful when you forgot who you were after changing nicks several times.<br>* Changed abbrev: &quot;/T[OPIC]&quot; =&gt; &quot;/TO[PIC]&quot;, &quot;/MS[G]&quot; =&gt; &quot;/M[SG]&quot;<br>* Added abbrev: &quot;/T[IME]&quot;, &quot;/WH[O]&quot;, &quot;/WHOI[S]&quot;</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=4106">vimirc.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.9.19</b></td>
+    <td class="roweven" valign="top" nowrap><i>2005-03-31</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=4697">Madoka Machitani</a></i></td>
+    <td class="roweven" valign="top" width="2000">* Many IRC commands are made abbreviatable, e.g.: &quot;/server&quot; can now be typed as &quot;/s&quot;.&nbsp;&nbsp;See Tip 8 for more.<br>* Could not obtain your host address (required when doing DCC sessions) upon logon, if you logged in with a nick containing some special characters.<br>* statusline message was inappropriate for chat buffers.<br>* Cursor scrolled to the bottom when you executed &quot;/list&quot;, which was not what I intended.<br>* Made &quot;/help&quot; message not to disappear automatically.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=4090">vimirc.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.9.18</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2005-03-28</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=4697">Madoka Machitani</a></i></td>
+    <td class="rowodd" valign="top" width="2000">* If you logged in servers with nick longer than what they accept, VimIRC failed to recognize you as the user.<br>* It is now possible to open, internally or externally, IRC server-like strings by hitting &quot;&lt;CR&gt;&quot; / &quot;&lt;C-CR&gt;&quot; / &quot;&lt;S-CR&gt;&quot; on them.<br>* Channel-like strings in buffers other than channels-list are also made accessible with &quot;&lt;CR&gt;&quot; etc..</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=4075">vimirc.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.9.17</b></td>
+    <td class="roweven" valign="top" nowrap><i>2005-03-25</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=4697">Madoka Machitani</a></i></td>
+    <td class="roweven" valign="top" width="2000">Some fixes on normal-mode commands:<br>* If you hit special keys after &quot;&lt;C-W&gt;&quot; or number, you could get stuck.<br>* When keys like &quot;jk&quot; were typed fast, the second key could not be processed.<br>* If you (casually) kept pressing &quot;&lt;CR&gt;&quot; for a few seconds, the same URL was opened many many times.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=4066">vimirc.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.9.16</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2005-03-24</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=4697">Madoka Machitani</a></i></td>
+    <td class="rowodd" valign="top" width="2000">* &quot;auto-join&quot;ing could fail if you logged in multiple servers simultaneously.<br>* DCC-chat buffers were not treated as such.<br>* Subtle fixes/improvements have been done on buffer/window manipulation (closing command window quietly, etc.).</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=4060">vimirc.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.9.15</b></td>
+    <td class="roweven" valign="top" nowrap><i>2005-03-22</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=4697">Madoka Machitani</a></i></td>
+    <td class="roweven" valign="top" width="2000">Design change, and new commands:<br>* Abolished multi-window mode, which was the default mode, but wasn't very useful.&nbsp;&nbsp;Therefore, &quot;g:vimirc_winmode&quot; has no meaning now.&nbsp;&nbsp;(The original design was done because I couldn't think of any way to update hidden buffers.&nbsp;&nbsp;The problem was solved long time ago.)<br>* Instead of the above, added a new command prefix &quot;SPLIT&quot;.&nbsp;&nbsp;Prepend it to commands such as &quot;/JOIN&quot;, &quot;/LIST&quot;, like this: &quot;/split join #chan&quot;.&nbsp;&nbsp;See Tip 6 & 7 for more.<br>* Added normal-mode commands: &quot;&lt;C-W&gt;&lt;C-N&gt;&quot;, &quot;&lt;C-W&gt;&lt;C-P&gt;&quot;.&nbsp;&nbsp;They do the same thing as &quot;&lt;C-N&gt;&quot; and &quot;&lt;C-P&gt;&quot; (walking through channels), with windows split open.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=4043">vimirc.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.9.14</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2005-03-19</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=4697">Madoka Machitani</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Small fixes release:<br>* Pressing &lt;F1&gt; caused an error.<br>* When closing channels etc., newly active one sometimes didn't get highlighted properly.<br>* Key prompts could not accept key after special keys such as &quot;&lt;S-CR&gt;&quot; were hit.<br>* (single-window mode) Hitting &quot;&lt;C-W&gt;&lt;CR&gt;&quot; / &quot;&lt;C-CR&gt;&quot; / &quot;&lt;S-CR&gt;&quot; on channels list now opens the channel in a new window.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=4030">vimirc.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.9.13</b></td>
+    <td class="roweven" valign="top" nowrap><i>2005-03-16</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=4697">Madoka Machitani</a></i></td>
+    <td class="roweven" valign="top" width="2000">This contains an important fix:<br>* Nicks including &quot;_&quot; or &quot;|&quot; were not considered to be nicks, which could lead to various troubles/misbehaviors.<br>* (single-window mode) Hitting &quot;&lt;C-W&gt;&lt;CR&gt;&quot; on the info-bar opened the specified channel etc. in a new window, but with bad window configuration.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=4022">vimirc.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.9.12</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2005-03-14</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=4697">Madoka Machitani</a></i></td>
+    <td class="rowodd" valign="top" width="2000">* &quot;/help&quot; wasn't working.<br>* Added a timeout feature to the &quot;hit any key&quot; prompt.&nbsp;&nbsp;Prompts with rotating cursor automatically disappear after a few seconds if you give no response to them.&nbsp;&nbsp;(This might save you from getting disconnected from servers.)<br>* (GUI) When hiding Vim cursor, attributes such as underline still remained, which was annoying.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=4000">vimirc.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.9.11</b></td>
+    <td class="roweven" valign="top" nowrap><i>2005-03-11</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=4697">Madoka Machitani</a></i></td>
+    <td class="roweven" valign="top" width="2000">* Added a small new feature to &quot;autojoin&quot;.&nbsp;&nbsp;If you wish to display list of channels upon logon, add the word &quot;list&quot; to g:vimirc_autojoin.&nbsp;&nbsp;See the doc for detail.<br>* Special-key commands preceded by count (&quot;10&lt;BS&gt;&quot; etc.) could not be executed.<br>* Forgot to map &quot;ZZ&quot; and &quot;ZQ&quot; to VimIRC's quit function.<br>* Quit keys could direct the quit command to a wrong server.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=3955">vimirc.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.9.10</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2005-03-03</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=4697">Madoka Machitani</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Important fixes for normal mode key-handling issues.<br>* Added a `shocmd' functionality for multi-key commands.&nbsp;&nbsp;This might prevent that you get stuck in a pending mode without noticing it, being unable to get new messages.<br>* Added several normal commands I've forgotten to do (&quot;,&quot;, &quot;''&quot;, etc.).<br>* Added new quit commands: &quot;ZZ&quot; and &quot;ZQ&quot;.&nbsp;&nbsp;(Equivalent to &quot;q&quot; and &quot;Q&quot; respectively.)<br>* Special keys (&quot;&lt;BS&gt;&quot; etc.) are now safely handled (I should have read &quot;:h getchar()&quot; much earlier).</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=3949">vimirc.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.9.9</b></td>
+    <td class="roweven" valign="top" nowrap><i>2005-03-02</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=4697">Madoka Machitani</a></i></td>
+    <td class="roweven" valign="top" width="2000">Sorry for updating so often.&nbsp;&nbsp;As always, I've introduced a new problem to the previous release.<br>* (Main-loop issue) Pressing the same key for a long time (well, less than a dozen seconds) could make Vim to crash.<br>* (Ditto) Pressing &quot;&lt;F1&gt;&quot; opened Vim's help file, which was not what I expected.<br>* Made Vim's cursor invisible while you are online.&nbsp;&nbsp;The Annoying blinks now totally disappear (GUI only).</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=3943">vimirc.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.9.8</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2005-03-01</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=4697">Madoka Machitani</a></i></td>
+    <td class="rowodd" valign="top" width="2000">* Hitting keys such as &quot;&lt;C-CR&gt;&quot; while in VimIRC's main-loop caused endless recursion (E132).<br>* Re-sorted key-handling order slightly, to achieve faster movement of motion commands.&nbsp;&nbsp;(I'm not sure I did well.)<br>* Added some error-handling, so as not to get thrown out of the loop for simple errors (e.g., pattern not found).</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=3933">vimirc.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.9.7</b></td>
+    <td class="roweven" valign="top" nowrap><i>2005-02-28</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=4697">Madoka Machitani</a></i></td>
+    <td class="roweven" valign="top" width="2000">Quick fix release.<br>* Hitting &quot;q&quot; on command buffers sometimes failed to quit VimIRC.<br>* &quot;/WHOIS&quot; command seems to have failed sometimes.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=3927">vimirc.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.9.6</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2005-02-27</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=4697">Madoka Machitani</a></i></td>
+    <td class="rowodd" valign="top" width="2000">* URLs starting with &quot;www&quot; couldn't be opened properly.<br>* Added maps &quot;q&quot; and &quot;Q&quot;.&nbsp;&nbsp;Pressing &quot;Q&quot; will quit VimIRC, whereas &quot;q&quot; will just close chat/channel, if the cursor is on one.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=3920">vimirc.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.9.5</b></td>
+    <td class="roweven" valign="top" nowrap><i>2005-02-26</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=4697">Madoka Machitani</a></i></td>
+    <td class="roweven" valign="top" width="2000">This is a bug fix release, with some minor improvements:<br>* Undefined subroutine (&find_channel) was called.&nbsp;&nbsp;This caused several misbehaviours including the one below.<br>* (single window) Highlights in the info-bar couldn't be cleared after bringing hidden channels (with new messages) to the foreground.<br>* (single window) Attempts to highlight the current channel/server in the info-bar, so that you can easily locate where you are in (see the 3rd screenshot).</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=3880">vimirc.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.9.4</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2005-02-19</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=4697">Madoka Machitani</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Fixes for the following items:<br>* Paste commands (p and P) have been disabled in command buffers by mistake.<br>* Single-window mode: channels-list didn't show up in the info-bar.<br>* DCC chat: Multibyte (Japanese) characters had not been decoded.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=3874">vimirc.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.9.3</b></td>
+    <td class="roweven" valign="top" nowrap><i>2005-02-17</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=4697">Madoka Machitani</a></i></td>
+    <td class="roweven" valign="top" width="2000">This is a buf fix release, with a tiny new command:<br>* Command: &quot;/UNSET option&quot;.&nbsp;&nbsp;Clears the current setting of an option.<br>* In the previous release, maps for the key &quot;&lt;CR&gt;&quot; were made invalid on some types of buffers.<br>* Hitting &quot;i&quot; after hit-any-key prompt to (re)enter the command mode resulted in a strange, non-insert mode.<br>* Slightly changed the behavior of &quot;i&quot;.&nbsp;&nbsp;It now opens a new input line when typed on an already open command buffer (formerly it left the cursor on the same line, which wasn't very useful).<br>* Removed the command &quot;/SEARCH&quot;, which was not meaningful and had been made available probably by accident.&nbsp;&nbsp;The functionality itself is available as a normal mode search command (/ or ?).</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=3869">vimirc.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.9.2</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2005-02-15</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=4697">Madoka Machitani</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Minor fix, and an experimental new feature.<br>* Hitting &lt;CR&gt; near a URL-like string may open it with external web browser.&nbsp;&nbsp;The relevant option is &quot;vimirc_browser&quot;.&nbsp;&nbsp;See the doc for detail.<br><br>This is not much tested.&nbsp;&nbsp;Feel free to notify me of any errors/misbehaviours you encounter with this feature.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=3865">vimirc.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.9.1</b></td>
+    <td class="roweven" valign="top" nowrap><i>2005-02-14</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=4697">Madoka Machitani</a></i></td>
+    <td class="roweven" valign="top" width="2000">Several minor fixes/improvements:<br>* (GUI) File selector dialog now pops up for DCC SEND.&nbsp;&nbsp;Omit filename argument to use this feature, when executing from the command buffer (see &quot;/dcc help&quot; for syntax).<br>* Tries to fix the annoying window scrolling you might have suffered when opening command buffers.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=3813">vimirc.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.9</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2005-01-29</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=4697">Madoka Machitani</a></i></td>
+    <td class="rowodd" valign="top" width="2000">I've added authenticated logon feature (apparently most users won't need this, only for completeness).&nbsp;&nbsp;You can specify password for servers in any of the following ways:<br>&nbsp;&nbsp;1. (on Vim's command line) :VimIRC -p password<br>&nbsp;&nbsp;2. (in VimIRC's command buffer) /server irc.server.com password<br>&nbsp;&nbsp;3. (in .vimrc) let vimirc_pass = 'password' or 'password1@server1,...'</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=3793">vimirc.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.8.12</b></td>
+    <td class="roweven" valign="top" nowrap><i>2005-01-24</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=4697">Madoka Machitani</a></i></td>
+    <td class="roweven" valign="top" width="2000">* Due to the previous (0.8.11) change to argument handling, &quot;/[G]AWAY&quot; and &quot;/[G]QUIT&quot; commands have been made to treat arguments (comment) improperly, resulting in awaying impossibility etc..<br>* I've made channels lists to be cached by default.&nbsp;&nbsp;The variable &quot;vimirc_listexpire&quot;, defaulting to a week, defines the longevity of them.&nbsp;&nbsp;See the doc in the source for detail.<br>* Added a window-size restoration functionality.&nbsp;&nbsp;Hit &lt;C-L&gt; in normal mode when any window has got a bad width/height.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=3788">vimirc.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.8.11</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2005-01-20</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=4697">Madoka Machitani</a></i></td>
+    <td class="rowodd" valign="top" width="2000">* The previous (0.8.10) fix with the main-loop issue seems to have introduced another one: you would have no way re-entering the loop if you had been gotten out of it by Vim errors, which shouldn't normally happen though.<br>* As in Vim, key pressed after the 'Hit any key to continue' prompt will now be utilized as a normal mode command.<br>* Added a mechanism of argument expansion, which currently expands only '%', into the current channel.&nbsp;&nbsp;See Tip 5 in the source for usage.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=3784">vimirc.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.8.10</b></td>
+    <td class="roweven" valign="top" nowrap><i>2005-01-19</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=4697">Madoka Machitani</a></i></td>
+    <td class="roweven" valign="top" width="2000">In a recent update, I introduced a bug which could cause some difficulty in getting out of the main-loop (for writing messages etc.).&nbsp;&nbsp;This has been fixed, I hope.<br>Also, sending multiple messages at a time is now made possible.&nbsp;&nbsp;See Tip 3 in the source.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=3774">vimirc.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.8.9</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2005-01-17</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=4697">Madoka Machitani</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Again, several tiny fixes/improvements:<br>* VimIRCQuit didn't actually quit when executed from inside VimIRC's main-loop.<br>* Operations (typing &lt;CR&gt;) on nicks window could have been directed to other servers erroneously.<br>* Repetitive normal mode commands (such as jjjjjjjjj) might now work slightly faster (unnoticeably perhaps).<br>* Chat windows now have nicks window.<br>* etc.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=3755">vimirc.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.8.8</b></td>
+    <td class="roweven" valign="top" nowrap><i>2005-01-10</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=4697">Madoka Machitani</a></i></td>
+    <td class="roweven" valign="top" width="2000">Bug Fix: Horribly enough, sending &quot;/ME&quot; messages has been unable for quite some time (sorry!).<br>No new features and no big improvements this time (sorry again!).</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=3064">vimirc.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.8.7</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2004-05-28</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=4697">Madoka Machitani</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Trivial fixes with single window mode:<br>1. Channel-list buffers were not visited upon in the &lt;C-P&gt; / &lt;C-N&gt; walkthru.<br>2. Cursor stayed on the command window after you finished sending messages/commands, which wasn't useful.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=3010">vimirc.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.8.6</b></td>
+    <td class="roweven" valign="top" nowrap><i>2004-05-11</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=4697">Madoka Machitani</a></i></td>
+    <td class="roweven" valign="top" width="2000">Only small fixes this time.<br>1. The command :VimIRCQuit was causing an error.<br>2. Warnings on the usage of shift() function were seen on some perl versions. (Thanks to alexander for notifying this, also for the above.)<br>3. Mode strings on channels were not handled properly (I didn't understand the syntax).<br>4. You could not enter channels with correct keys (/join #chan key) after you first failed in entering.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=2977">vimirc.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.8.5</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2004-04-25</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=4697">Madoka Machitani</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Fix: VimIRC was eating too much (around 90% all the time) of CPU-time (shudder!).&nbsp;&nbsp;Thanks to alexander for pointing this out.<br>New commands: [DE]OP and [DE]VOICE.&nbsp;&nbsp;See /help if you don't know of these commands.<br>Change: g:vimirc_server and '-s' startup option can now have multiple server name, separated by commas.&nbsp;&nbsp;Thanks again to alexander, by whom it was suggested.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=2964">vimirc.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.8.4</b></td>
+    <td class="roweven" valign="top" nowrap><i>2004-04-21</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=4697">Madoka Machitani</a></i></td>
+    <td class="roweven" valign="top" width="2000">New commands: GQUIT and GAWAY.&nbsp;&nbsp;Sends QUIT/AWAY commands to all the connected servers at once.<br><br>Bug fixes:<br>1. topics etc. for not joined channels were displayed in newly, undesirably created channel buffers.<br>2. Manual reconnection with &quot;/server&quot; (without arg) wasn't possible sometimes if multiple connections to servers had been opened.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=2960">vimirc.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.8.3</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2004-04-20</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=4697">Madoka Machitani</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Bug fixes/Improvements:<br>1. Server-specific auto-join settings were not processed properly.<br>2. Characters other than alpha-numerics and underscore could not be used in command aliases.<br>3. Command &quot;ALIAS&quot; will now accept definitions with and without leading slashes: &quot;/alias /j /join&quot;, &quot;/alias j join&quot;.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=2950">vimirc.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.8.2</b></td>
+    <td class="roweven" valign="top" nowrap><i>2004-04-19</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=4697">Madoka Machitani</a></i></td>
+    <td class="roweven" valign="top" width="2000">New commands: ALIAS/UNALIAS, with which you'll be able to define/undefine aliases of commands.&nbsp;&nbsp;Example: /alias /j /join.&nbsp;&nbsp;Definitions will be saved in a config file, and restored automatically on startup.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=2948">vimirc.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.8.1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2004-04-18</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=4697">Madoka Machitani</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Bug fixes:<br>1. Since its implementation, timer functionality hasn't been working as expected: the direction of comparison operator was wrong and timers have been executed instantly (silly!).<br>2. netsplit handling wasn't working as expected.<br>3. search() function caused an error with some special patterns such as &quot;\z&quot;.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=2944">vimirc.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.8</b></td>
+    <td class="roweven" valign="top" nowrap><i>2004-04-17</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=4697">Madoka Machitani</a></i></td>
+    <td class="roweven" valign="top" width="2000">A rather big change:<br>Single-window mode (g:vimirc_winmode == 'single') has become much useful.&nbsp;&nbsp;Each channel/server will now take its own window, and updates for hidden buffers will be done in the background.&nbsp;&nbsp;See the 2nd screenshot for an idea how it will work.<br><br>New commands:<br>1. SET: Use this command to set or show the values of internal options.&nbsp;&nbsp;Usage: &quot;/SET option value&quot;.&nbsp;&nbsp;Omit arguments to see the list of settable options.<br>2. &lt;C-N&gt; / &lt;C-P&gt; (Normal mode): Cycle through channels/servers.&nbsp;&nbsp;Useful in single-window mode.<br><br>A Fix: &quot;/JOIN 0&quot; was not working.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=2927">vimirc.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.7.2</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2004-04-09</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=4697">Madoka Machitani</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Small change/improvement in logging:<br>1. Timestamps are added to separate each session.<br>2. Logs for channels/chats will now be taken safely (well, in most cases) if those windows have been closed abnormally, i.e. with commands other than &quot;/(QUIT|PART|QUERY)&quot;.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=2922">vimirc.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.7.1</b></td>
+    <td class="roweven" valign="top" nowrap><i>2004-04-08</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=4697">Madoka Machitani</a></i></td>
+    <td class="roweven" valign="top" width="2000">Added a logging feature.&nbsp;&nbsp;Logs will be taken for each channel separately.&nbsp;&nbsp;See &quot;Options&quot; section for how to enable this feature.<br><br>Some minor fixes/improvements have also been done.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=2912">vimirc.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.7</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2004-04-05</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=4697">Madoka Machitani</a></i></td>
+    <td class="rowodd" valign="top" width="2000">WARNING: You might encounter &quot;Missing endfunction&quot; error while sourcing this version (I haven't confirmed it myself), which should mean, VimIRC is unusable.&nbsp;&nbsp;If you do see the error, you'll have to compile vim yourself with patches at least up to 6.2.412, or stick to the older version for some time untill 6.3 is out.<br><br>Added a significant internal working: timer.&nbsp;&nbsp;New/improved features related to this include: auto-away.&nbsp;&nbsp;See &quot;Options&quot; section for how to enable this feature.<br><br>Added a command: CTCP.&nbsp;&nbsp;Usage: /CTCP nick COMMAND.<br><br>Bug fixes:<br>1. &quot;/AWAY message&quot; was sending &quot;1&quot; instead of &quot;message&quot;.<br>2. When a CTCP message was encountered which VimIRC didn't know of, ERRMSG response was always sent back to the originator, even if it was directed to channels.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=2901">vimirc.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.6.7</b></td>
+    <td class="roweven" valign="top" nowrap><i>2004-04-01</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=4697">Madoka Machitani</a></i></td>
+    <td class="roweven" valign="top" width="2000">Change: I rather improved the auto-join (channels on logon) feature to enable server-specific channel settings.&nbsp;&nbsp;See &quot;Options&quot; section in the plugin for detail.<br><br>Bug fixes:<br>1. &quot;/QUIT&quot;ting caused an error when channels-list window was open.<br>2. Quit messages like &quot;Client Quit&quot; was regarded as netsplit (silly!)</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=2898">vimirc.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.6.6</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2004-03-31</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=4697">Madoka Machitani</a></i></td>
+    <td class="rowodd" valign="top" width="2000">0.6.5 (already removed) contained a serious bug: You cannot login to server!<br>Please replace it with this one if you downloaded it.&nbsp;&nbsp;Sorry.<br><br>Here's a copy of the release note for that version:<br><br>A new feature: Auto-reconnect and rejoin.&nbsp;&nbsp;This is not much tested.&nbsp;&nbsp;Please let me know if you find any cases where VimIRC doesn't start reconnecting when it should.<br><br>Fixes:<br>1. On terminal vim without &quot;Cursor&quot; highlight group defined, VimIRC was unusable due to the &quot;No such highlight&quot; error.&nbsp;&nbsp;Thanks to morbuz, who notified me of this and tested the fixed version.<br>2. :VimIRCQuit could cause an endless loop.<br>3. (Fixed in the previous ver.) Cooperation of vim and perl failed, if strings to be passed to vim contained double-quotes or backslashes.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=2887">vimirc.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.6.4</b></td>
+    <td class="roweven" valign="top" nowrap><i>2004-03-28</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=4697">Madoka Machitani</a></i></td>
+    <td class="roweven" valign="top" width="2000">New features: <br>1. Auto-joining channels upon logon<br>2. Auto-idetification of nicks.<br>The settings are &quot;vimirc_autojoin&quot;, &quot;vimirc_nickpass&quot; respectively.&nbsp;&nbsp;See the source for details.<br><br>A change: the way nicks are displayed has been changed: newly entered, and actively speaking figures will now be displayed on top.&nbsp;&nbsp;I did this partly for efficiency reason, among others.&nbsp;&nbsp;If you prefer the older behavior though, wait for some time till I make it configurable.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=2859">vimirc.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.6.3</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2004-03-24</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=4697">Madoka Machitani</a></i></td>
+    <td class="rowodd" valign="top" width="2000">A fix: &quot;/me message&quot; wasn't sending proper ACTION.&nbsp;&nbsp;Sorry.<br>A new feature: Direct conversation over IRC network (/query nick) will now be displayed in a separate window as with DCC Chat.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=2853">vimirc.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.6.2</b></td>
+    <td class="roweven" valign="top" nowrap><i>2004-03-23</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=4697">Madoka Machitani</a></i></td>
+    <td class="roweven" valign="top" width="2000">Some fixes/improvements:<br>1. Added normal-mode commands: some characterwise motions, search (* / #) and jumplist movement (&lt;C-O&gt; / &lt;C-I&gt;).<br>2. Fixed an issue of recursive call of the main-loop, which caused pressing i/I lead to a strange non-insert mode.<br>3. When connected to multiple servers, &quot;/quit&quot;ting from one server resulted in all other windows but one being closed.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=2850">vimirc.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.6.1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2004-03-22</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=4697">Madoka Machitani</a></i></td>
+    <td class="rowodd" valign="top" width="2000">A small bug-fix: Currently active window was not restored when someone joined/parted channels.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=2849">vimirc.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.6</b></td>
+    <td class="roweven" valign="top" nowrap><i>2004-03-22</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=4697">Madoka Machitani</a></i></td>
+    <td class="roweven" valign="top" width="2000">New features added:<br>1. DCC CHAT/SEND.&nbsp;&nbsp;Type &quot;/dcc help&quot; for the usage.&nbsp;&nbsp;Also look into the plugin file for the .vimrc settings.&nbsp;&nbsp;This is not much tested, so if you find any misbehaviors, or incompatibilities with other clients, let me know via e-mail.<br>2. Single window mode.&nbsp;&nbsp;.vimrc setting is: let vimirc_winmode = 'single'</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=2828">vimirc.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.5.3</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2004-03-13</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=4697">Madoka Machitani</a></i></td>
+    <td class="rowodd" valign="top" width="2000">A new feature:<br>Added a map (&lt;CR&gt;) to the nicks window, with which you can operate some action with selected nick(s), such as querying, changing privileges.<br><br>Fixes:<br>1. The issue of inaccessibility to Japanese channels.<br>2. Older nick was still used internally when you had to change nicks when logging on.<br>3. Could not parse mode commands like &quot;+vv nick1 nick2&quot;.&nbsp;&nbsp;Characters @/+ will now be added/removed properly.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=2823">vimirc.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.5.2</b></td>
+    <td class="roweven" valign="top" nowrap><i>2004-03-11</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=4697">Madoka Machitani</a></i></td>
+    <td class="roweven" valign="top" width="2000">1. Removed the &quot;plugin_&quot; part from the global variables, just to keep them short.&nbsp;&nbsp;Please change your settings accordingly.&nbsp;&nbsp;Sorry for the inconvenience.<br>2. Japanese text input/output.&nbsp;&nbsp;Thanks go to Yasuhiro Matsumoto & Taro Muraoka, who have been helpful on this.&nbsp;&nbsp;This is still incomplete: you cannot join channels with Japanese characters.<br>3. Made command windows appear just below the current window.&nbsp;&nbsp;This is a tentative feature.<br>4. And some other fixes/changes too trivial to mention.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=2818">vimirc.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.5.1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2004-03-09</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=4697">Madoka Machitani</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Fixed some bugs:<br>1. When you connected to a new server with /server command, the old command window remained open.<br>2. While connected to multiple servers, [iI] sometimes opened a command window for a wrong server.<br>3. /list command did not open a list window on some servers.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=2814">vimirc.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.5</b></td>
+    <td class="roweven" valign="top" nowrap><i>2004-03-08</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=4697">Madoka Machitani</a></i></td>
+    <td class="roweven" valign="top" width="2000">Added a new feature: /list command will now open up a separate buffer, where you can sort the list by keys 'o' or 'O'.&nbsp;&nbsp;Also, you can select a channel to join<br>by hitting &lt;CR&gt;. <br><br>Did some minor fixes inculding: handle operator and voice privileges properly.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=2809">vimirc.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.4</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2004-03-06</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=4697">Madoka Machitani</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Initial upload</td>
+</tr>
+</table>
+<!-- finish off the framework -->
+          </td>
+        </tr>
+      </table>
+    </td>
+
+  </tr>
+</table>
+
+<!-- END OF THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr><td colspan="4" bgcolor="#000000"><img src="/images/spacer.gif" height="2" width="1" alt=""></td></tr>
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr>
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+
+    <td align="left" valign="top"><small>
+      If you have questions or remarks about this site, visit the
+      <a href="http://vimonline.sf.net">vimonline development</a> pages.
+      Please use this site responsibly.
+      <br> 
+      
+      Questions about <a href="http://www.vim.org/about.php">Vim</a> should go
+      to the <a href="http://www.vim.org/maillist.php">maillist</a>.
+      Help Bram <a href="http://iccf-holland.org/">help Uganda</a>.
+      </small>
+	&nbsp;
+	&nbsp;
+
+	<!-- Start of StatCounter Code -->
+	<script type="text/javascript" language="javascript">
+	var sc_project=1417324; 
+	var sc_invisible=1; 
+	var sc_partition=11; 
+	var sc_security="d41633bc"; 
+	</script>
+
+	<script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script><noscript><a href="http://www.statcounter.com/" target="_blank"><img  src="http://c12.statcounter.com/counter.php?sc_project=1417324&java=0&security=d41633bc&invisible=0" alt="free tracking" border="0"></a> </noscript>
+	<!-- End of StatCounter Code -->
+          </td>
+
+    <td align="right" valign="top">
+      		<a href="http://sourceforge.net/projects/vim" rel="nofollow"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=8&type=1" width="88" height="31" border="0" alt="SourceForge.net Logo" /></a>
+    </td>
+
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+  </tr>
+
+    
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  
+  </tr>
+</table>
+
+</body>
+</html>
+

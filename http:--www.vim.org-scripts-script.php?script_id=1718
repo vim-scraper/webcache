@@ -1,0 +1,388 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+  <link rel="Stylesheet" type="text/css" href="/css/style.css" >
+  <title>tabula.vim - ergonomic green chalkboard colorscheme for GUI and 256 colors xterms : vim online</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <meta name="KEYWORDS" content="Vim, Vi IMproved, text editor, home, documentation, tips, scripts, news">
+  <link rel="shortcut icon" type="image/x-icon" href="/images/vim_shortcut.ico">
+</head>
+
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff"> 
+
+<!-- HEADER, SPONSOR IMAGE, VIM IMAGE AND BOOK AD -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+  <td class="lightbg">&nbsp;&nbsp;&nbsp;</td>
+  <td class="lightbg" align="left"><a href="/sponsor/index.php"><img src="/images/sponsorvim.gif" alt="sponsor Vim development" border="0"></a></td>
+    <td class="lightbg" align="center"><a href="/index.php"><img src="/images/vim_header.gif" border="0" alt="Vim logo"></a></td>
+    <td class="lightbg" align="right"><a href="http://iccf-holland.org/click5.html"><img src="/images/buyhelplearn.gif" alt="Vim Book Ad" border="0"></a></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="darkbg"><img src="/images/spacer.gif" width="1" height="10" alt=""></td>
+  </tr>
+</table>
+<!-- THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+  <col width="180">
+  <col width="1">
+
+  <tr valign="top">
+    <td class="sidebar">
+      <table width="180" cellpadding="4" cellspacing="0" border="0">
+        <tr valign="top">
+          <td class="sidebar">
+
+<!-- INCLUDE THE PAGE NAVIGATION -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+    <tr>
+        <td><small>not logged in (<a href="/login.php">login</a>)</small></td>
+    </tr>
+    <tr><td>
+<small>&nbsp;</small>
+<form action="http://www.google.com/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-3005259998294962:bvyni59kjr1" />
+    <input type="hidden" name="ie" value="ISO-8859-1" />
+    <input type="text" name="q" size="20" />
+    <br>
+    <input type="submit" name="sa" value="Search" />
+  </div>
+</form>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+    </td></tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="1"></td>
+    </tr>
+    <tr>
+        <td class="darkbg"><img src="/images/spacer.gif" alt='' border="0" height="3"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="2"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/index.php">Home</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/search.php">Advanced search</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/about.php">About Vim</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/community.php">Community</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/news/news.php">News</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/sponsor/index.php">Sponsoring</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/trivia.php">Trivia</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/docs.php">Documentation</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/download.php">Download</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/scripts/index.php">Scripts</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/tips/index.php">Tips</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/account/index.php">My Account</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/huh.php">Site Help</a></td>
+        </tr>
+</table>
+
+            <table width="172" cellpadding="0" cellspacing="0" border="0">
+              <tr><td><img src="/images/spacer.gif" alt="" border="0" width="1" height="8"></td></tr>
+              <tr><td class="darkbg"><img src="/images/spacer.gif" width="1" height="3" alt=""></td></tr>
+            </table>
+            <br>
+
+<!-- INCLUDE THE PAGE SIDEBAR TEXT -->
+&nbsp;
+
+          </td>
+        </tr>
+      </table>
+    </td>
+
+    <td class="darkbg"><img src="/images/spacer.gif" width="1" height="1" border="0" alt=""><br></td>
+    <td>
+      <table width="100%" cellpadding="10" cellspacing="0" border="0" bordercolor="red">
+        <tr>
+          <td valign="top">
+
+<span class="txth1">tabula.vim : ergonomic green chalkboard colorscheme for GUI and 256 colors xterms</span> 
+
+<br>
+<br>
+
+<!-- karma table -->
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
+  <td>
+    Rating <b>73/26</b>,
+    Downloaded by 2280  </td>
+  <td class="lightbg">
+  <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
+  </td>
+  <td>
+    <a href="http://vim.wikia.com/wiki/Script:1718">Vim wiki</a>
+  </td>  
+</tr>
+</table>
+<p>
+
+<table cellspacing="0" cellpadding="0" border="0">
+<tr><td class="prompt">created by</td></tr>
+<tr><td><a href="/account/profile.php?user_id=10920">Bernd Pol</a></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">script type</td></tr>
+<tr><td>color scheme</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">description</td></tr>
+<tr><td>This is a &quot;chalkboard&quot; green background Vim colorscheme featuring soft, yet highly readable contrasts. It is based on marklar.vim by SM Smithfield (<a href="/scripts/script.php?script_id=1483">vimscript #1483</a>), which I like very much.<br>The GUI colors have been optimized for easy, equal contrast on a TFT monitor.&nbsp;&nbsp;Main goal was to minimize eye strain when working in a mixed environment where during long edit sessions you have to switch to high contrast white background screens every now and then.<br>Additionally there have cterm colors been defined so they will look mostly identical on a 256 color (Linux) xterm. <br><br>View a color sample: <a target="_blank" href="http://img87.imageshack.us/img87/4386/tabulacolors.png">http://img87.imageshack.us/img87/4386/tabulacolors.png</A><br>(Tabula settings dialog is shown at bottom.)<br><br>Starting with v. 0.2 the colorscheme is adjustable either on setup or on the fly. To permanently redefine the defaults put these settings in your .vimrc file before the<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:colorscheme tabula<br>line, e.g.:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:let Tabula_ColorPre = &quot;red&quot;<br><br>To redefine them on the fly call the built-in options dialog:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:call Tabula()<br>from the Vim command line.<br>The new settings will be immediately effective as soon as control is back in the main dialog.<br>To get the defaults back issue<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:colorscheme tabula<br>again.<br>(This has changed from earlier tabula versions where this call was necessary to make the settings changes effective.)<br><br>Display Statements In Bold:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tabula_BoldStatement = 0&nbsp;&nbsp;&nbsp;&nbsp;-- statements display not bold<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tabula_BoldStatement = 1&nbsp;&nbsp;&nbsp;&nbsp;-- statements display bold<br>Defaults to non-bold display.<br><br>Set GUI Cursor Color:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tabula_CurColor = 'blue'<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tabula_CurColor = 'red'<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tabula_CurColor = 'yellow'<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tabula_CurColor = 'white'<br>Defaults to 'blue'.<br>NOTE: This works in gvim only. In a terminal (like xterm) the cursor cannot be changed.<br><br>Set Color For Preprocessor Statements:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tabula_ColorPre = 'blue'&nbsp;&nbsp;&nbsp;&nbsp; -- purple-blue<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tabula_ColorPre = 'red'	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-- orange-red<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tabula_ColorPre = 'yellow'&nbsp;&nbsp;-- lightgreen-yellow<br>Defaults to 'blue'.<br><br>Use Dark Error Background:<br>Sometimes desirable for less distracting error highlighting.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tabula_DarkError = 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-- light error background<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tabula_DarkError = 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-- dark error background<br>Defaults to light error background.<br><br>Use multiple colors for constant values:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tabula_FlatConstants = 1&nbsp;&nbsp;&nbsp;&nbsp;-- use one common color for all constants<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tabula_FlatConstants = 0&nbsp;&nbsp;&nbsp;&nbsp;-- use a different color for each constant type<br>Defaults to using one common color.<br><br>How To Display Ignore And NonText Characters:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tabula_InvisibleIgnore = 0&nbsp;&nbsp;&nbsp;&nbsp;-- slightly visible<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tabula_InvisibleIgnore = 1&nbsp;&nbsp;&nbsp;&nbsp;-- invisible on standard background<br>Defaults to invisible display.<br><br>Show Line Numbers Underlined:<br>Sometimes useful to spot a line more easily.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tabula_LNumUnderline = 0&nbsp;&nbsp;&nbsp;&nbsp;-- not underlined<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tabula_LNumUnderline = 1&nbsp;&nbsp;&nbsp;&nbsp;-- line numbers are underlined<br>Defaults to not underlined.<br><br>Let Search Occurrences Stand Out More Prominently:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tabula_SearchStandOut = 0&nbsp;&nbsp;&nbsp;&nbsp;--- normal dark background display<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tabula_SearchStandOut = 1&nbsp;&nbsp;&nbsp;&nbsp;--- prominent underlined display<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tabula_SearchStandOut = 2&nbsp;&nbsp;&nbsp;&nbsp;--- very prominent display<br>Defaults to normal display.<br><br>How To Display TODOs And Similar:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tabula_TodoUnderline = 0&nbsp;&nbsp;&nbsp;&nbsp;-- display on a blue background<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tabula_TodoUnderline = 1&nbsp;&nbsp;&nbsp;&nbsp;-- display them underlined white<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tabula_TodoUnderline = 2	&nbsp;&nbsp; -- display them bold<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tabula_TodoUnderline = 3	&nbsp;&nbsp; -- do not enhance them at all<br>Defaults to underlined display.<br><br>How to display typographic character values (bold, italic, underlined):<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tabula_CharValuesColored = 0	colored in addition to typographics<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tabula_CharValuesColored = 1	not colored, italics in terminal-based vim reversed<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tabula_CharValuesColored = 2	not colored, underlined in terminal-based vim reversed<br>Defaults to a colored typographics character values display.<br>NOTE: &quot;Colored&quot; is to be preferred in terminal-based vim because there is no easy way to distinguish italic from underline. In this mode italics and underlined characters are distinguished by different color shades, both displaying not reversed (usually black on a white background field) which is easier to read.<br>Otherwise there are two non-colored modes:<br>- italics are shown reversed, underlines are shown underlined<br>or<br>- italics are shown underlined, underlines are shown reversed.<br>These sub-modes do not affect the GUI display, however, where italics and underlined always display as usual, only color coded or in the common text color.<br><br></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">install details</td></tr>
+<tr><td>Unpack the &quot;tabula.zip&quot; file in your $HOME/.vim directory or equivalent.<br><br>This will put a &quot;tabula.vim&quot; color definitions file into the &quot;colors&quot; subdirectory<br>and a short &quot;tabula.txt&quot; help file into the &quot;doc&quot; subdirectory.<br><br>To make the documentation known to Vim, issue<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:helptags $HOME/.vim/doc<br>(or equivalent document directory).<br>Access the documentation with:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:help tabula<br><br>Don't forget to update the help tags after upgrading the tabula package.<br><br>Load the tabula colors with<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:colorscheme tabula<br><br>Optionally define an alternate setup in your .vimrc file and load the colorscheme from there.</td></tr>
+<tr><td>&nbsp;</td></tr>
+</table>
+
+<!-- rating table -->
+<form name="rating">
+<input type="hidden" name="script_id" value="1718">
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>rate this script</b></td>
+  <td valign="middle">
+    <input type="radio" name="rating" value="life_changing">Life Changing
+    <input type="radio" name="rating" value="helpful">Helpful
+    <input type="radio" name="rating" value="unfulfilling">Unfulfilling&nbsp;
+    <input type="submit" value="rate">
+  </td>
+</tr>
+</table>
+</form>
+<span class="txth2">script versions</span> (<a href="add_script_version.php?script_id=1718">upload new version</a>)
+<p>
+Click on the package to download.
+<p>
+
+<table cellspacing="2" cellpadding="4" border="0" width="100%">
+<tr class='tableheader'>
+        <th valign="top">package</th>
+    <th valign="top">script version</th>
+    <th valign="top">date</th>
+    <th valign="top">Vim version</th>
+    <th valign="top">user</th>
+    <th valign="top">release notes</th>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=12787">tabula.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.4.2</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-04-05</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=10920">Bernd Pol</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- Tabula() dialog fixed: Settings now change immediately.<br>- Two more display options (bold, not enhanced) for Todos.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=12771">tabula.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.4.1</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-04-02</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=10920">Bernd Pol</a></i></td>
+    <td class="roweven" valign="top" width="2000">- Multiple constant colors reworked<br>- Unified titles colors<br>- New option for typographic character values (bold, italic, underline) display.<br>- Automatic effecting of color changes after Tabula() call does not work, removed.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=12638">tabula.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.4</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-03-16</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=10920">Bernd Pol</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Tabula () options dialog changes options automatically when leaving.<br>Colors optimized. VimWiki colors added.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=8425">tabula.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.3.2</b></td>
+    <td class="roweven" valign="top" nowrap><i>2008-03-08</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=10920">Bernd Pol</a></i></td>
+    <td class="roweven" valign="top" width="2000">VimOutliner colors optimized</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=8409">tabula.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.3.1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2008-03-07</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=10920">Bernd Pol</a></i></td>
+    <td class="rowodd" valign="top" width="2000">some small color adjustments<br>foreground/background contrast optimized<br>VimOutliner definitions added</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=6698">tabula.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.3</b></td>
+    <td class="roweven" valign="top" nowrap><i>2007-02-01</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=10920">Bernd Pol</a></i></td>
+    <td class="roweven" valign="top" width="2000">Option for an even more prominent search display.<br>Hint on forcing 256 xterm colors in help text.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=6596">tabula.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.2</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2007-01-08</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=10920">Bernd Pol</a></i></td>
+    <td class="rowodd" valign="top" width="2000">more color adjustments;<br>option to switch search highlight added</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=6552">tabula.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.101</b></td>
+    <td class="roweven" valign="top" nowrap><i>2006-12-26</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=10920">Bernd Pol</a></i></td>
+    <td class="roweven" valign="top" width="2000">(Sorry, previous upload went wrong! This is the right package.)<br>Some small color adjustments;<br>dark error background option added.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=6494">tabula.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.0</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2006-12-03</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=10920">Bernd Pol</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Colors are quite stable now.<br>Constant colors option added.<br>Provided a dialog to change the option settings on the fly.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=6471">tabula.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.4</b></td>
+    <td class="roweven" valign="top" nowrap><i>2006-11-25</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=10920">Bernd Pol</a></i></td>
+    <td class="roweven" valign="top" width="2000">Faulty group link definitions removed;<br>Error group is now yellow on red background except if red cursor is used</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=6466">tabula.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.3</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2006-11-25</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=10920">Bernd Pol</a></i></td>
+    <td class="rowodd" valign="top" width="2000">HTML colors added;<br>Cursor color made configurable</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=6462">tabula.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.2</b></td>
+    <td class="roweven" valign="top" nowrap><i>2006-11-22</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=10920">Bernd Pol</a></i></td>
+    <td class="roweven" valign="top" width="2000">colors slightly adjusted for a harmonic, yet easily distinguishable display on both GUI and xterm;<br>introduced some display options</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=6459">tabula.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2006-11-21</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=10920">Bernd Pol</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Initial upload</td>
+</tr>
+</table>
+<!-- finish off the framework -->
+          </td>
+        </tr>
+      </table>
+    </td>
+
+  </tr>
+</table>
+
+<!-- END OF THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr><td colspan="4" bgcolor="#000000"><img src="/images/spacer.gif" height="2" width="1" alt=""></td></tr>
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr>
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+
+    <td align="left" valign="top"><small>
+      If you have questions or remarks about this site, visit the
+      <a href="http://vimonline.sf.net">vimonline development</a> pages.
+      Please use this site responsibly.
+      <br> 
+      
+      Questions about <a href="http://www.vim.org/about.php">Vim</a> should go
+      to the <a href="http://www.vim.org/maillist.php">maillist</a>.
+      Help Bram <a href="http://iccf-holland.org/">help Uganda</a>.
+      </small>
+	&nbsp;
+	&nbsp;
+
+	<!-- Start of StatCounter Code -->
+	<script type="text/javascript" language="javascript">
+	var sc_project=1417324; 
+	var sc_invisible=1; 
+	var sc_partition=11; 
+	var sc_security="d41633bc"; 
+	</script>
+
+	<script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script><noscript><a href="http://www.statcounter.com/" target="_blank"><img  src="http://c12.statcounter.com/counter.php?sc_project=1417324&java=0&security=d41633bc&invisible=0" alt="free tracking" border="0"></a> </noscript>
+	<!-- End of StatCounter Code -->
+          </td>
+
+    <td align="right" valign="top">
+      		<a href="http://sourceforge.net/projects/vim" rel="nofollow"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=8&type=1" width="88" height="31" border="0" alt="SourceForge.net Logo" /></a>
+    </td>
+
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+  </tr>
+
+    
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  
+  </tr>
+</table>
+
+</body>
+</html>
+

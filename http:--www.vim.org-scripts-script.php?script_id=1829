@@ -1,0 +1,404 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+  <link rel="Stylesheet" type="text/css" href="/css/style.css" >
+  <title>writebackupVersionControl - Version control functions (diff, restore, history) for writebackup backups. : vim online</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <meta name="KEYWORDS" content="Vim, Vi IMproved, text editor, home, documentation, tips, scripts, news">
+  <link rel="shortcut icon" type="image/x-icon" href="/images/vim_shortcut.ico">
+</head>
+
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff"> 
+
+<!-- HEADER, SPONSOR IMAGE, VIM IMAGE AND BOOK AD -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+  <td class="lightbg">&nbsp;&nbsp;&nbsp;</td>
+  <td class="lightbg" align="left"><a href="/sponsor/index.php"><img src="/images/sponsorvim.gif" alt="sponsor Vim development" border="0"></a></td>
+    <td class="lightbg" align="center"><a href="/index.php"><img src="/images/vim_header.gif" border="0" alt="Vim logo"></a></td>
+    <td class="lightbg" align="right"><a href="http://iccf-holland.org/click5.html"><img src="/images/buyhelplearn.gif" alt="Vim Book Ad" border="0"></a></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="darkbg"><img src="/images/spacer.gif" width="1" height="10" alt=""></td>
+  </tr>
+</table>
+<!-- THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+  <col width="180">
+  <col width="1">
+
+  <tr valign="top">
+    <td class="sidebar">
+      <table width="180" cellpadding="4" cellspacing="0" border="0">
+        <tr valign="top">
+          <td class="sidebar">
+
+<!-- INCLUDE THE PAGE NAVIGATION -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+    <tr>
+        <td><small>not logged in (<a href="/login.php">login</a>)</small></td>
+    </tr>
+    <tr><td>
+<small>&nbsp;</small>
+<form action="http://www.google.com/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-3005259998294962:bvyni59kjr1" />
+    <input type="hidden" name="ie" value="ISO-8859-1" />
+    <input type="text" name="q" size="20" />
+    <br>
+    <input type="submit" name="sa" value="Search" />
+  </div>
+</form>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+    </td></tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="1"></td>
+    </tr>
+    <tr>
+        <td class="darkbg"><img src="/images/spacer.gif" alt='' border="0" height="3"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="2"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/index.php">Home</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/search.php">Advanced search</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/about.php">About Vim</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/community.php">Community</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/news/news.php">News</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/sponsor/index.php">Sponsoring</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/trivia.php">Trivia</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/docs.php">Documentation</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/download.php">Download</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/scripts/index.php">Scripts</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/tips/index.php">Tips</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/account/index.php">My Account</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/huh.php">Site Help</a></td>
+        </tr>
+</table>
+
+            <table width="172" cellpadding="0" cellspacing="0" border="0">
+              <tr><td><img src="/images/spacer.gif" alt="" border="0" width="1" height="8"></td></tr>
+              <tr><td class="darkbg"><img src="/images/spacer.gif" width="1" height="3" alt=""></td></tr>
+            </table>
+            <br>
+
+<!-- INCLUDE THE PAGE SIDEBAR TEXT -->
+&nbsp;
+
+          </td>
+        </tr>
+      </table>
+    </td>
+
+    <td class="darkbg"><img src="/images/spacer.gif" width="1" height="1" border="0" alt=""><br></td>
+    <td>
+      <table width="100%" cellpadding="10" cellspacing="0" border="0" bordercolor="red">
+        <tr>
+          <td valign="top">
+
+<span class="txth1">writebackupVersionControl : Version control functions (diff, restore, history) for writebackup backups.</span> 
+
+<br>
+<br>
+
+<!-- karma table -->
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
+  <td>
+    Rating <b>25/7</b>,
+    Downloaded by 1442  </td>
+  <td class="lightbg">
+  <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
+  </td>
+  <td>
+    <a href="http://vim.wikia.com/wiki/Script:1829">Vim wiki</a>
+  </td>  
+</tr>
+</table>
+<p>
+
+<table cellspacing="0" cellpadding="0" border="0">
+<tr><td class="prompt">created by</td></tr>
+<tr><td><a href="/account/profile.php?user_id=9713">Ingo Karkat</a></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">script type</td></tr>
+<tr><td>utility</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">description</td></tr>
+<tr><td>Version control functions (diff, restore, history navigation) for backups made<br>with the writebackup plugin, which have a date file extension in the format<br>'.YYYYMMDD[a-z]'. <br><br>DESCRIPTION<br>This script enhances the primitive file backup mechanism provided by<br>writebackup.vim with some functions of real revision control systems like<br>CVS, RCS or Subversion - without additional software. <br>Via Vim commands, you can list and go to all backup versions that exist for<br>the current file, check whether you have a current backup, backup the saved<br>version of the buffer even after you've made unsaved changes in the buffer<br>(which is useful for after-the-fact backups). <br>Within Vim, you can create a diff with the previous version, restore the<br>current file from its predecessor or any other backed-up version. <br><br>USAGE<br>:WriteBackupListVersions<br>			List all backup versions that exist for the current<br>			file. If the file isn't the original, it is marked in<br>			the version list. If the file is the original, the<br>			time that has passed since the last backup is printed,<br>			too. <br><br>:[count]WriteBackupGoPrev[!]<br>:[count]WriteBackupGoNext[!]<br>			Open a backup file version relative to the current<br>			backup or original file (with 'readonly' set to<br>			prevent accidental edits) . You can skip multiple<br>			backups via the optional [count]; if the resulting<br>			index is out of bounds, the first / last available<br>			backup version is edited.<br>			Thus, :999WriteBackupGoPrev edits the very first<br>			existing backup, and :999WriteBackupGoNext edits the<br>			latest (i.e. most recent) backup.<br>			With [!], any changes to the current version are<br>			discarded. <br><br>:WriteBackupGoOriginal[!]<br>			Edit the original of the current backup file. If<br>			backups are stored in a different directory, it may<br>			not be possible to determine the original file. With<br>			[!], any changes to the current version are discarded. <br><br>:WriteBackupIsBackedUp<br>			Check whether the latest backup is identical to the<br>			(saved version of the) current file (which must be the<br>			original file). <br><br>:[count]WriteBackupDiffWithPred<br>			Perform a diff of the current file (which may be the<br>			original file or any backup) with the [count]'th<br>			previous version. If the resulting index is out of<br>			bounds, the first available backup version is used.<br>			The diff is done inside Vim, with a new diffsplit<br>			being opened. <br><br>:[count]WriteBackupViewDiffWithPred [{diff-arguments}]<br>			Show the differences of the current file (which may be<br>			the original file or any backup) with the [count]'th<br>			previous version. If the resulting index is out of<br>			bounds, the first available backup version is used.<br>			The diff output is opened in a split scratch buffer. <br>			Any {diff-arguments} are passed as-is to the diff<br>			executable. The &quot;icase&quot; and &quot;iwhite&quot; settings of<br>			'diffopt' are used, too. <br>	&nbsp;&nbsp;+ [count]du<br>			By repeating the command, an existing scratch buffer<br>			is updated; no new split is created. One can also<br>			update the differences by repeating<br>			:WriteBackupViewDiffWithPred in the diff scratch<br>			buffer itself, or through the buffer-local [count]du<br>			mapping. <br><br>:[count]WriteBackupRestoreFromPred[!]<br>			Overwrite the current file (which must be the<br>			original) with the [count]'th previous backup. With<br>			[!] skips confirmation dialog and allows to restore<br>			over readonly original file. <br><br>:WriteBackupRestoreThisBackup[!]<br>			Restore the current file as the original file, which<br>			will be overwritten. With [!] skips confirmation<br>			dialog and allows to restore over readonly original<br>			file. <br><br>:WriteBackupOfSavedOriginal[!]<br>			Instead of backing up the current buffer, back up the<br>			saved version of the buffer. This comes handy when you<br>			realize you need a backup only after you've made<br>			changes to the buffer. <br>			With [!], creation of a new backup file is forced: <br>			- even if the last backup is identical<br>			- even when no more backup versions (for this day) are<br>			&nbsp;&nbsp;available (the last '.YYYYMMDDz' backup gets<br>			&nbsp;&nbsp;overwritten, even if it is readonly)<br><br>:WriteBackupDeleteLastBackup[!]<br>			Delete the last backup. With [!] skips confirmation<br>			dialog and allows to delete readonly backup file. </td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">install details</td></tr>
+<tr><td>INSTALLATION<br>This script is packaged as a vimball. If you have the &quot;gunzip&quot; decompressor<br>in your PATH, simply edit the *.vba.gz package in Vim; otherwise, decompress<br>the archive first, e.g. using WinZip. Inside Vim, install by sourcing the<br>vimball or via the :UseVimball command. <br>&nbsp;&nbsp;&nbsp;&nbsp;vim writebackupVersionControl.vba.gz<br>&nbsp;&nbsp;&nbsp;&nbsp;:so %<br>To uninstall, use the :RmVimball command. <br><br>DEPENDENCIES<br>- Requires Vim 7.0 or higher. <br>- Requires the writebackup plugin (<a href="/scripts/script.php?script_id=1828">vimscript #1828</a>). <br>- External command &quot;cmp&quot; or &quot;diff&quot; (or equivalent) for comparison. <br>- External command &quot;diff&quot; or equivalent for listing of differences. <br>- External commands &quot;cp&quot; (Unix) / &quot;copy&quot; and &quot;xcopy&quot; (Windows) for restore<br>&nbsp;&nbsp;and backup original file functionality. <br><br>CONFIGURATION<br>For a permanent configuration, put the following commands into your vimrc file<br>(see :help vimrc). Note: With version 1.40, the variable was renamed from<br>g:writebackup_DiffVertSplit. Please update your configuration! <br><br>To change the default diffsplit from vertical to horizontal, use: <br>&nbsp;&nbsp;&nbsp;&nbsp;let g:WriteBackup_DiffVertSplit = 0<br><br>The :WriteBackupIsBackedUp command uses an external compare command (either<br>&quot;cmp -s&quot; or &quot;diff -q&quot;) to determine whether the backup is identical with the<br>original file. You can overwrite the auto-detected default via: <br>&nbsp;&nbsp;&nbsp;&nbsp;let g:WriteBackup_CompareShellCommand = '/path/to/mycomparecmd --myoption'<br>The command must take two filespec arguments, return 0 for identical files, 1<br>for different files and anything else for trouble. <br><br>The :WriteBackupViewDiffWithPred command invokes an external diff command to<br>list the differences between two files. Overwrite if &quot;diff&quot; cannot be found<br>through $PATH: <br>&nbsp;&nbsp;&nbsp;&nbsp;let g:WriteBackup_DiffShellCommand = '/path/to/mydiff'<br><br>Command-line arguments for the external diff command can be specified<br>separately. Configure any arguments that should always be passed here: <br>&nbsp;&nbsp;&nbsp;&nbsp;let g:WriteBackup_DiffCreateAlwaysArguments = '-t -F &quot;^[_a-zA-Z0-9]+ *(&quot;'<br><br>If no {diff-arguments} are passed to the :WriteBackupViewDiffWithPred<br>command, the default diff output format is set to the unified format. You can<br>for example change this to a context diff by setting: <br>&nbsp;&nbsp;&nbsp;&nbsp;let g:WriteBackup_DiffCreateDefaultArguments = '-c'<br><br>The :WriteBackupViewDiffWithPred command opens the diff scratch buffer via<br>the :new command. You can add window command modifiers like :vertical or<br>:topleft to change the positioning of the window: <br>&nbsp;&nbsp;&nbsp;&nbsp;let g:WriteBackup_ScratchBufferCommandModifiers = 'topleft'</td></tr>
+<tr><td>&nbsp;</td></tr>
+</table>
+
+<!-- rating table -->
+<form name="rating">
+<input type="hidden" name="script_id" value="1829">
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>rate this script</b></td>
+  <td valign="middle">
+    <input type="radio" name="rating" value="life_changing">Life Changing
+    <input type="radio" name="rating" value="helpful">Helpful
+    <input type="radio" name="rating" value="unfulfilling">Unfulfilling&nbsp;
+    <input type="submit" value="rate">
+  </td>
+</tr>
+</table>
+</form>
+<span class="txth2">script versions</span> (<a href="add_script_version.php?script_id=1829">upload new version</a>)
+<p>
+Click on the package to download.
+<p>
+
+<table cellspacing="2" cellpadding="4" border="0" width="100%">
+<tr class='tableheader'>
+        <th valign="top">package</th>
+    <th valign="top">script version</th>
+    <th valign="top">date</th>
+    <th valign="top">Vim version</th>
+    <th valign="top">user</th>
+    <th valign="top">release notes</th>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=12368">writebackupVersionControl.vba.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.24</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-02-12</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=9713">Ingo Karkat</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- ENH: Define a local 'du' mapping to quickly update the diff (of the same version and with the same options as this time), unless [count] is given, which sets a different version). <br>- :WriteBackupViewDiffWithPred not just checks for empty scratch buffer, but also considers the diff command exit code. <br>- BUG: :WriteBackupViewDiffWithPred can cause E121: Undefined variable: l:predecessor. Similar issue with a:filespec showing scratch buffer name in place of the original file name. Now using l:oldFile and l:newFile instead. <br>- BUG: WriteBackupViewDiffWithPred didn't always go back to the original window when no differences, but fell back to the next one.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=11598">writebackupVersionControl.vba.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.23</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-10-26</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=9713">Ingo Karkat</a></i></td>
+    <td class="roweven" valign="top" width="2000">ENH: :WriteBackupRestoreFromPred now takes an optional [count] to restore an earlier predecessor. </td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=11216">writebackupVersionControl.vba.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.22</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-08-19</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=9713">Ingo Karkat</a></i></td>
+    <td class="rowodd" valign="top" width="2000">BF: escapings#shellescape() caused E118 on Vim 7.1. Enhanced wrapper function. </td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=11039">writebackupVersionControl.vba.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.21</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-07-19</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=9713">Ingo Karkat</a></i></td>
+    <td class="roweven" valign="top" width="2000">- Replaced simple filespec quoting with built-in shellescape() function (or emulation for Vim 7.0 / 7.1) via escapings.vim wrapper. <br>- Keeping cursor position when only refreshing the diff scratch buffer. <br>- Window position of the diff scratch buffer can now be configured. <br>- ENH: Now issuing a warning that there are no differences and closing the useless diff scratch buffer if it is empty. <br>- BF: Forgot {special} in shellescape() call for writebackupVersionControl#ViewDiffWithPred(); the scratch buffer uses the ! command. </td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=10985">writebackupVersionControl.vba.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.20</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-07-10</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=9713">Ingo Karkat</a></i></td>
+    <td class="rowodd" valign="top" width="2000">ENH: Added :WriteBackupViewDiffWithPred command to show the diff output in a scratch buffer. With this, one can get a quick overview of what has changed since the last backup without performing a diffsplit within Vim. </td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=10914">writebackupVersionControl.vba.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.11</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-06-30</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=9713">Ingo Karkat</a></i></td>
+    <td class="roweven" valign="top" width="2000">ENH: :WriteBackupDiffWithPred now takes an optional [count] to diff with an<br>earlier predecessor. </td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=10695">writebackupVersionControl.vba.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.10</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-05-28</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=9713">Ingo Karkat</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Replaced simple filespec escaping with built-in fnameescape() function (or<br>emulation for Vim 7.0 / 7.1) via escapings.vim wrapper.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=10577">writebackupVersionControl.vba.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.01</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-05-11</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=9713">Ingo Karkat</a></i></td>
+    <td class="roweven" valign="top" width="2000">Backup versions are now opened read-only (through :WriteBackupGoPrev/Next and<br>:WriteBackupDiffWithPred commands) to prevent the user from accidentally<br>editing the backup instead of the original. </td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=10046">writebackupVersionControl.vba.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.00</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-02-26</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=9713">Ingo Karkat</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- Using separate autoload script to help speed up VIM startup. This is an<br>&nbsp;&nbsp;incompatible change that also requires the corresponding writebackup plugin<br>&nbsp;&nbsp;version. *** PLEASE UPDATE writebackup (<a href="/scripts/script.php?script_id=1828">vimscript #1828</a>), too ***<br>- BF: :WriteBackupListVersions now handles (and reports) backup files with a<br>&nbsp;&nbsp;future date.<br>- ENH: Allowing to configure compare shell command via<br>&nbsp;&nbsp;g:WriteBackup_CompareShellCommand. <br>- ENH: Added :WriteBackupDeleteLastBackup command. <br>- ENH: Added [!] to the following commands to disable confirmation dialog and<br>&nbsp;&nbsp;override readonly target files: :WriteBackupRestoreFromPred, <br>&nbsp;&nbsp;:WriteBackupRestoreThisBackup, :WriteBackupOfSavedOriginal, <br>&nbsp;&nbsp;:WriteBackupDeleteLastBackup</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=9982">writebackupVersionControl.vba.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.41.021</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-02-16</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=9713">Ingo Karkat</a></i></td>
+    <td class="roweven" valign="top" width="2000">Split off documentation into separate help file. Now packaging as VimBall. </td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=9971">writebackupVersionControl.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.40.020</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-02-14</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=9713">Ingo Karkat</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Renamed configuration variable from g:writebackup_DiffVertSplit to g:WriteBackup_DiffVertSplit. *** PLEASE UPDATE YOUR CONFIGURATION *** <br>ENH: Added :WriteBackupGoPrev, :WriteBackupGoNext and :WriteBackupGoOriginal commands. <br>ENH: :WriteBackupListVersions now includes backup dirspec if backups aren't done in the original file's directory. <br>BF: :WriteBackupDiffWithPred failed to open the predecessor with the ':set autochdir' setting if the CWD has been (temporarily) changed. Now using absolute path for the :split command. <br>:WriteBackupDiffWithPred doesn't jump to the predecessor window; it now moves the cursor back to the originating window; this feels more natural. <br>:WriteBackupDiffWithPred now avoids that a previous (open) fold status at the cursor position is remembered and obscures the actual differences. <br>Added Windows detection via has('win64'). </td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=8838">writebackupVersionControl.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.20.010</b></td>
+    <td class="roweven" valign="top" nowrap><i>2008-06-23</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=9713">Ingo Karkat</a></i></td>
+    <td class="roweven" valign="top" width="2000">Minor change: Added -bar to all commands that do not take any arguments, so that these can be chained together.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=8105">writebackupVersionControl.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.20.009</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2007-12-31</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=9713">Ingo Karkat</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Small Enhancement: :WriteBackupListVersions and :WriteBackupDiffWithPred claimed &quot;no backups exist&quot; if option 'wildignore' hides the backup files. Now temporarily resetting the option before glob().&nbsp;&nbsp;</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=7689">writebackupVersionControl.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.20.008</b></td>
+    <td class="roweven" valign="top" nowrap><i>2007-09-18</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=9713">Ingo Karkat</a></i></td>
+    <td class="roweven" valign="top" width="2000">ENH: Added support for writing backup files into a different directory (either one static backup dir or relative to the original file). Now requires writebackup.vim version 1.20 or later. <br>Command :WriteBackupOfSavedOriginal now checks that the file is an original one. <br>BF: :WriteBackupIsBackedUp doesn't deal correctly with filenames that contain special ex characters [%#!]. </td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=6884">writebackupVersionControl.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.00.006</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2007-03-16</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=9713">Ingo Karkat</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Initial upload</td>
+</tr>
+</table>
+<!-- finish off the framework -->
+          </td>
+        </tr>
+      </table>
+    </td>
+
+  </tr>
+</table>
+
+<!-- END OF THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr><td colspan="4" bgcolor="#000000"><img src="/images/spacer.gif" height="2" width="1" alt=""></td></tr>
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr>
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+
+    <td align="left" valign="top"><small>
+      If you have questions or remarks about this site, visit the
+      <a href="http://vimonline.sf.net">vimonline development</a> pages.
+      Please use this site responsibly.
+      <br> 
+      
+      Questions about <a href="http://www.vim.org/about.php">Vim</a> should go
+      to the <a href="http://www.vim.org/maillist.php">maillist</a>.
+      Help Bram <a href="http://iccf-holland.org/">help Uganda</a>.
+      </small>
+	&nbsp;
+	&nbsp;
+
+	<!-- Start of StatCounter Code -->
+	<script type="text/javascript" language="javascript">
+	var sc_project=1417324; 
+	var sc_invisible=1; 
+	var sc_partition=11; 
+	var sc_security="d41633bc"; 
+	</script>
+
+	<script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script><noscript><a href="http://www.statcounter.com/" target="_blank"><img  src="http://c12.statcounter.com/counter.php?sc_project=1417324&java=0&security=d41633bc&invisible=0" alt="free tracking" border="0"></a> </noscript>
+	<!-- End of StatCounter Code -->
+          </td>
+
+    <td align="right" valign="top">
+      		<a href="http://sourceforge.net/projects/vim" rel="nofollow"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=8&type=1" width="88" height="31" border="0" alt="SourceForge.net Logo" /></a>
+    </td>
+
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+  </tr>
+
+    
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  
+  </tr>
+</table>
+
+</body>
+</html>
+

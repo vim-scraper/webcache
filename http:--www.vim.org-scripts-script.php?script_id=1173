@@ -1,0 +1,404 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+  <link rel="Stylesheet" type="text/css" href="/css/style.css" >
+  <title>tComment - An extensible & universal comment plugin that also handles embedded filetypes : vim online</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <meta name="KEYWORDS" content="Vim, Vi IMproved, text editor, home, documentation, tips, scripts, news">
+  <link rel="shortcut icon" type="image/x-icon" href="/images/vim_shortcut.ico">
+</head>
+
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff"> 
+
+<!-- HEADER, SPONSOR IMAGE, VIM IMAGE AND BOOK AD -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+  <td class="lightbg">&nbsp;&nbsp;&nbsp;</td>
+  <td class="lightbg" align="left"><a href="/sponsor/index.php"><img src="/images/sponsorvim.gif" alt="sponsor Vim development" border="0"></a></td>
+    <td class="lightbg" align="center"><a href="/index.php"><img src="/images/vim_header.gif" border="0" alt="Vim logo"></a></td>
+    <td class="lightbg" align="right"><a href="http://iccf-holland.org/click5.html"><img src="/images/buyhelplearn.gif" alt="Vim Book Ad" border="0"></a></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="darkbg"><img src="/images/spacer.gif" width="1" height="10" alt=""></td>
+  </tr>
+</table>
+<!-- THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+  <col width="180">
+  <col width="1">
+
+  <tr valign="top">
+    <td class="sidebar">
+      <table width="180" cellpadding="4" cellspacing="0" border="0">
+        <tr valign="top">
+          <td class="sidebar">
+
+<!-- INCLUDE THE PAGE NAVIGATION -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+    <tr>
+        <td><small>not logged in (<a href="/login.php">login</a>)</small></td>
+    </tr>
+    <tr><td>
+<small>&nbsp;</small>
+<form action="http://www.google.com/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-3005259998294962:bvyni59kjr1" />
+    <input type="hidden" name="ie" value="ISO-8859-1" />
+    <input type="text" name="q" size="20" />
+    <br>
+    <input type="submit" name="sa" value="Search" />
+  </div>
+</form>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+    </td></tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="1"></td>
+    </tr>
+    <tr>
+        <td class="darkbg"><img src="/images/spacer.gif" alt='' border="0" height="3"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="2"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/index.php">Home</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/search.php">Advanced search</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/about.php">About Vim</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/community.php">Community</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/news/news.php">News</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/sponsor/index.php">Sponsoring</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/trivia.php">Trivia</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/docs.php">Documentation</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/download.php">Download</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/scripts/index.php">Scripts</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/tips/index.php">Tips</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/account/index.php">My Account</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/huh.php">Site Help</a></td>
+        </tr>
+</table>
+
+            <table width="172" cellpadding="0" cellspacing="0" border="0">
+              <tr><td><img src="/images/spacer.gif" alt="" border="0" width="1" height="8"></td></tr>
+              <tr><td class="darkbg"><img src="/images/spacer.gif" width="1" height="3" alt=""></td></tr>
+            </table>
+            <br>
+
+<!-- INCLUDE THE PAGE SIDEBAR TEXT -->
+&nbsp;
+
+          </td>
+        </tr>
+      </table>
+    </td>
+
+    <td class="darkbg"><img src="/images/spacer.gif" width="1" height="1" border="0" alt=""><br></td>
+    <td>
+      <table width="100%" cellpadding="10" cellspacing="0" border="0" bordercolor="red">
+        <tr>
+          <td valign="top">
+
+<span class="txth1">tComment : An extensible & universal comment plugin that also handles embedded filetypes</span> 
+
+<br>
+<br>
+
+<!-- karma table -->
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
+  <td>
+    Rating <b>117/38</b>,
+    Downloaded by 4085  </td>
+  <td class="lightbg">
+  <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
+  </td>
+  <td>
+    <a href="http://vim.wikia.com/wiki/Script:1173">Vim wiki</a>
+  </td>  
+</tr>
+</table>
+<p>
+
+<table cellspacing="0" cellpadding="0" border="0">
+<tr><td class="prompt">created by</td></tr>
+<tr><td><a href="/account/profile.php?user_id=4037">Tom Link</a></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">script type</td></tr>
+<tr><td>utility</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">description</td></tr>
+<tr><td>:TComment works like a toggle, i.e., it will comment out text that <br>contains uncommented lines, and it will uncomment already <br>commented text (i.e. text that contains no uncommented lines).<br><br>If the file-type is properly defined, :TComment will figure out which <br>comment string to use based on the values of &commentstring or &comments. <br>For some filetypes, the comment definition is explicitly defined. You can <br>|tcomment#DefineType()| to add your own definitions.<br><br>TComment knows how to deal with embedded code of a different filetype <br>than the main filetype, e.g., ruby/python/perl regions in vim scripts, HTML or <br>JavaScript in php code etc.<br><br>As operator (the prefix can be customized via g:tcommentMapLeaderOp1 <br>and g:tcommentMapLeaderOp2):<br><br>&nbsp;&nbsp;&nbsp;&nbsp;gc{motion}&nbsp;&nbsp; :: Toggle comments (for small comments within one line <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;the &filetype_inline style will be used, if <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;defined)<br>&nbsp;&nbsp;&nbsp;&nbsp;gcc&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:: Toggle comment for the current line<br>&nbsp;&nbsp;&nbsp;&nbsp;gC{motion}&nbsp;&nbsp; :: Comment region<br>&nbsp;&nbsp;&nbsp;&nbsp;gCc&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:: Comment the current line<br><br>Primary key maps:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;c-_&gt;&lt;c-_&gt;&nbsp;&nbsp; :: :TComment<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;c-_&gt;&lt;space&gt; :: :TComment &lt;QUERY COMMENT-BEGIN ?COMMENT-END&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;c-_&gt;b&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :: :TCommentBlock<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;c-_&gt;a&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :: :TCommentAs &lt;QUERY COMMENT TYPE&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;c-_&gt;n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :: :TCommentAs &filetype &lt;QUERY COUNT&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;c-_&gt;s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :: :TCommentAs &filetype_&lt;QUERY COMMENT SUBTYPE&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;c-_&gt;i&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :: :TCommentInline<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;c-_&gt;r&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :: :TCommentRight<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;c-_&gt;p&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :: Comment the current inner paragraph<br><br>There is also a secondary set of key maps with &lt;Leader&gt;_ as leader (more <br>preferable on terminals).<br><br>The full documentation is available here:<br><a target="_blank" href="http://github.com/tomtom/tcomment_vim/blob/master/doc/tcomment.txt">http://github.com/tomtom/tcomment_vim/blob/master/doc/tcomment.txt</A><br><br>Demo:<br><a target="_blank" href="http://vimsomnia.blogspot.com/2010/11/tcomment-vim-plugin.html">http://vimsomnia.blogspot.com/2010/11/tcomment-vim-plugin.html</A><br><br>Also available via git<br><a target="_blank" href="http://github.com/tomtom/tcomment_vim">http://github.com/tomtom/tcomment_vim</A></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">install details</td></tr>
+<tr><td>Edit the vba file and type:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;:so %<br><br>See :help vimball for details. If you use vim 7.0, you may need to <br>update your vimball installation first.</td></tr>
+<tr><td>&nbsp;</td></tr>
+</table>
+
+<!-- rating table -->
+<form name="rating">
+<input type="hidden" name="script_id" value="1173">
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>rate this script</b></td>
+  <td valign="middle">
+    <input type="radio" name="rating" value="life_changing">Life Changing
+    <input type="radio" name="rating" value="helpful">Helpful
+    <input type="radio" name="rating" value="unfulfilling">Unfulfilling&nbsp;
+    <input type="submit" value="rate">
+  </td>
+</tr>
+</table>
+</form>
+<span class="txth2">script versions</span> (<a href="add_script_version.php?script_id=1173">upload new version</a>)
+<p>
+Click on the package to download.
+<p>
+
+<table cellspacing="2" cellpadding="4" border="0" width="100%">
+<tr class='tableheader'>
+        <th valign="top">package</th>
+    <th valign="top">script version</th>
+    <th valign="top">date</th>
+    <th valign="top">Vim version</th>
+    <th valign="top">user</th>
+    <th valign="top">release notes</th>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=14811">tcomment.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.04</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2011-01-20</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- Support for fstab<br>- g:tcommentOptions: Other key-value options used by |tcomment#Comment()|.<br>- Support for django (thanks to Jim Tinsky)<br>- g:tcomment#syntax_substitute: Rewrite syntax names<br>- django support: minor correction<br>MD5 checksum: 994e5886d185857848b5472d5457b232</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=14452">tcomment.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.03</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-12-07</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
+    <td class="roweven" valign="top" width="2000">- s:PrintF(): Silently ignore malformed format strings<br>- Deal with major.minor pseudo-filetypes<br>- go-lang<br>- Remove s:SPrintF() since vim now has printf()<br>MD5 checksum: 4a13ffb1b1d46bbd2dc8dcee77507983</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13972">tcomment.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-10-02</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Minor bug fix.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13831">tcomment.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.0</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-09-14</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
+    <td class="roweven" valign="top" width="2000">- Support for erlang (thanks to Zhang Jinzhu)<br>- Support for x86conf<br>- Changed comment string for eruby (proposed by Vinicius Baggio)<br>- NEW: Enabled key=value pairs to configure commenting<br>- CHANGE: Moved the definition of some variables from plugin/tComment.vim to autoload/tcomment.vim<br>- CHANGE: Renamed the file plugin/tComment.vim to plugin/tcomment.vim<br>- CHANGE: Renamed certain global functions to tcomment#...<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=11513">tComment.vba.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.10</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-10-11</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- tcomment#Operator defines w:tcommentPos if invoked repeatedly<br>- s:GuessFileType: use len(getline()) instead of col()</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=8689">tComment.vba.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.9</b></td>
+    <td class="roweven" valign="top" nowrap><i>2008-05-15</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
+    <td class="roweven" valign="top" width="2000">- Fix left offset for inline comments (via operator binding)<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=8640">tComment.vba.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.8a</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2008-05-02</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
+    <td class="rowodd" valign="top" width="2000">The file autoload/tcomment.vim was packed as autoload/tComment.vim. If you installed 1.8, please rename that file or remove autoload/tComment.vim and use this vimball.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=8627">tComment.vba.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.8</b></td>
+    <td class="roweven" valign="top" nowrap><i>2008-05-01</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
+    <td class="roweven" valign="top" width="2000">- Definitly require vim7<br>- Split the plugin into autoload & plugin.<br>- g:TCommentFileTypes is a list (this could cause problems when updating in certain situations)<br>- Fixed some block comment strings<br>- Removed extraneous newline in some block comments.<br>- Maps for visal mode (thanks Krzysztof Goj)<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=7588">tComment.vba.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.7</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2007-08-30</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- gc{motion} (see g:tcommentMapLeaderOp1) functions as a comment toggle <br>operator (i.e., something like gcl... works, mostly); gC{motion} (see <br>g:tcommentMapLeaderOp2) will unconditionally comment the text.<br>- TCommentAs takes an optional second argument (the comment level)<br>- New &quot;n&quot; map: TCommentAs &filetype [COUNT]<br>- Defined mail comments/citations<br>- g:tcommentSyntaxMap: Map syntax names to filetypes for buffers with <br>mixed syntax groups that don't match the filetypeEmbeddedsyntax scheme (e.g.&nbsp;&nbsp;<br>'vimRubyRegion', which should be commented as ruby syntax, not as vim <br>syntax)<br>- FIX: Comments in vim*Region<br>- TComment: The use of the type argument has slightly changed (IG -&gt; i, <br>new: &gt;)<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=7046">tComment.vba.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.6</b></td>
+    <td class="roweven" valign="top" nowrap><i>2007-05-01</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
+    <td class="roweven" valign="top" width="2000">- Ignore sql when guessing the comment string in php files; tComment <br>sometimes chooses the wrong comment string because the use of sql syntax <br>is used too loosely in php files; if you want to comment embedded sql <br>code you have to use TCommentAs<br>- Use keepjumps in commands.<br>- Map &lt;c-_&gt;p & &lt;L&gt;_p to vip:TComment&lt;cr&gt;<br>- Made key maps configurable via g:tcommentMapLeader1 and <br>g:tcommentMapLeader2<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=5475">tComment.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.5</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2006-03-22</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- &quot;Inline&quot; visual comments (uses the &filetype_inline style if <br>available; doesn't check if the filetype actually supports this kind of <br>comments); tComment can't currently deduce inline comment styles from <br>&comments or &commentstring (I personally hardly ever use them); default <br>map: &lt;c-_&gt;i or &lt;c-_&gt;I<br>- In visual mode: if the selection spans several lines, normal mode is <br>selected; if the selection covers only a part of one line, inline mode <br>is selected<br>- Fixed problem with lines containing ^M or ^@ characters.<br>- It's no longer necessary to call TCommentCollectFileTypes() after <br>defining a new filetype via TCommentDefineType()<br>- Disabled single &lt;c-_&gt; mappings<br>- Renamed TCommentVisualBlock to TCommentRight<br>- FIX: Forgot 'x' in ExtractCommentsPart() (thanks to Fredrik Acosta)<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=4037">tComment.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.4</b></td>
+    <td class="roweven" valign="top" nowrap><i>2005-03-16</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
+    <td class="roweven" valign="top" width="2000">- Fixed problem when &commentstring was invalid (e.g. lua)<br>- perl_block<br>- &lt;c-_&gt;s mapped to :TCommentAs &lt;c-r&gt;=&ft&lt;cr&gt;</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=4019">tComment.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.3</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2005-03-14</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- slightly improved recognition of embedded syntax<br>- if no commentstring is defined in whatever way, reconstruct one from <br>&comments<br>- The TComment... commands now have bang variants that don't act as toggles <br>but always comment out the selected text<br>- fixed problem with commentstrings containing backslashes<br>- comment as visual block (allows commenting text to the right of the main <br>text, i.e., this command doesn't work on whole lines but on the text to the <br>right of the cursor)<br>- enable multimode for dsl, vim filetypes<br>- added explicit support for some other file types I ran into<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=3758">tComment.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.2</b></td>
+    <td class="roweven" valign="top" nowrap><i>2005-01-11</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
+    <td class="roweven" valign="top" width="2000">- Fixed uncommenting of non-aligned comments<br>- improved support for block comments (with middle lines and indentation)<br>- using TCommentBlock for file types that don't have block comments creates <br>single line comments<br>- the default key bindings have slightly changed<br>- removed the TCommentAsBlock command (TCommentAs provides its functionality)<br>- removed g:tcommentSetCMS</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=3749">tComment.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2005-01-07</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Initial upload</td>
+</tr>
+</table>
+<!-- finish off the framework -->
+          </td>
+        </tr>
+      </table>
+    </td>
+
+  </tr>
+</table>
+
+<!-- END OF THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr><td colspan="4" bgcolor="#000000"><img src="/images/spacer.gif" height="2" width="1" alt=""></td></tr>
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr>
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+
+    <td align="left" valign="top"><small>
+      If you have questions or remarks about this site, visit the
+      <a href="http://vimonline.sf.net">vimonline development</a> pages.
+      Please use this site responsibly.
+      <br> 
+      
+      Questions about <a href="http://www.vim.org/about.php">Vim</a> should go
+      to the <a href="http://www.vim.org/maillist.php">maillist</a>.
+      Help Bram <a href="http://iccf-holland.org/">help Uganda</a>.
+      </small>
+	&nbsp;
+	&nbsp;
+
+	<!-- Start of StatCounter Code -->
+	<script type="text/javascript" language="javascript">
+	var sc_project=1417324; 
+	var sc_invisible=1; 
+	var sc_partition=11; 
+	var sc_security="d41633bc"; 
+	</script>
+
+	<script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script><noscript><a href="http://www.statcounter.com/" target="_blank"><img  src="http://c12.statcounter.com/counter.php?sc_project=1417324&java=0&security=d41633bc&invisible=0" alt="free tracking" border="0"></a> </noscript>
+	<!-- End of StatCounter Code -->
+          </td>
+
+    <td align="right" valign="top">
+      		<a href="http://sourceforge.net/projects/vim" rel="nofollow"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=8&type=1" width="88" height="31" border="0" alt="SourceForge.net Logo" /></a>
+    </td>
+
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+  </tr>
+
+    
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  
+  </tr>
+</table>
+
+</body>
+</html>
+

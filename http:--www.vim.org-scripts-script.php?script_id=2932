@@ -1,0 +1,444 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+  <link rel="Stylesheet" type="text/css" href="/css/style.css" >
+  <title>histwin.vim - Browse the undo tree : vim online</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <meta name="KEYWORDS" content="Vim, Vi IMproved, text editor, home, documentation, tips, scripts, news">
+  <link rel="shortcut icon" type="image/x-icon" href="/images/vim_shortcut.ico">
+</head>
+
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff"> 
+
+<!-- HEADER, SPONSOR IMAGE, VIM IMAGE AND BOOK AD -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+  <td class="lightbg">&nbsp;&nbsp;&nbsp;</td>
+  <td class="lightbg" align="left"><a href="/sponsor/index.php"><img src="/images/sponsorvim.gif" alt="sponsor Vim development" border="0"></a></td>
+    <td class="lightbg" align="center"><a href="/index.php"><img src="/images/vim_header.gif" border="0" alt="Vim logo"></a></td>
+    <td class="lightbg" align="right"><a href="http://iccf-holland.org/click5.html"><img src="/images/buyhelplearn.gif" alt="Vim Book Ad" border="0"></a></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="darkbg"><img src="/images/spacer.gif" width="1" height="10" alt=""></td>
+  </tr>
+</table>
+<!-- THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+  <col width="180">
+  <col width="1">
+
+  <tr valign="top">
+    <td class="sidebar">
+      <table width="180" cellpadding="4" cellspacing="0" border="0">
+        <tr valign="top">
+          <td class="sidebar">
+
+<!-- INCLUDE THE PAGE NAVIGATION -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+    <tr>
+        <td><small>not logged in (<a href="/login.php">login</a>)</small></td>
+    </tr>
+    <tr><td>
+<small>&nbsp;</small>
+<form action="http://www.google.com/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-3005259998294962:bvyni59kjr1" />
+    <input type="hidden" name="ie" value="ISO-8859-1" />
+    <input type="text" name="q" size="20" />
+    <br>
+    <input type="submit" name="sa" value="Search" />
+  </div>
+</form>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+    </td></tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="1"></td>
+    </tr>
+    <tr>
+        <td class="darkbg"><img src="/images/spacer.gif" alt='' border="0" height="3"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="2"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/index.php">Home</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/search.php">Advanced search</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/about.php">About Vim</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/community.php">Community</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/news/news.php">News</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/sponsor/index.php">Sponsoring</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/trivia.php">Trivia</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/docs.php">Documentation</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/download.php">Download</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/scripts/index.php">Scripts</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/tips/index.php">Tips</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/account/index.php">My Account</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/huh.php">Site Help</a></td>
+        </tr>
+</table>
+
+            <table width="172" cellpadding="0" cellspacing="0" border="0">
+              <tr><td><img src="/images/spacer.gif" alt="" border="0" width="1" height="8"></td></tr>
+              <tr><td class="darkbg"><img src="/images/spacer.gif" width="1" height="3" alt=""></td></tr>
+            </table>
+            <br>
+
+<!-- INCLUDE THE PAGE SIDEBAR TEXT -->
+&nbsp;
+
+          </td>
+        </tr>
+      </table>
+    </td>
+
+    <td class="darkbg"><img src="/images/spacer.gif" width="1" height="1" border="0" alt=""><br></td>
+    <td>
+      <table width="100%" cellpadding="10" cellspacing="0" border="0" bordercolor="red">
+        <tr>
+          <td valign="top">
+
+<span class="txth1">histwin.vim : Browse the undo tree</span> 
+
+<br>
+<br>
+
+<!-- karma table -->
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
+  <td>
+    Rating <b>143/50</b>,
+    Downloaded by 989  </td>
+  <td class="lightbg">
+  <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
+  </td>
+  <td>
+    <a href="http://vim.wikia.com/wiki/Script:2932">Vim wiki</a>
+  </td>  
+</tr>
+</table>
+<p>
+
+<table cellspacing="0" cellpadding="0" border="0">
+<tr><td class="prompt">created by</td></tr>
+<tr><td><a href="/account/profile.php?user_id=17599">Christian Brabandt</a></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">script type</td></tr>
+<tr><td>utility</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">description</td></tr>
+<tr><td>PLEASE RATE THIS PLUGIN, IF YOU LIKE IT!<br><br>Feedback is always welcome. See :h histwin-feedback.<br><br>You can now follow development of this plugin via github: <a target="_blank" href="http://github.com/chrisbra/histwin.vim">http://github.com/chrisbra/histwin.vim</A><br><br>Vim 7 has an amazing feature that is called undo-branches. See :h undo-tree. Unfortunalley it is a little bit clumsy to use. <br><br>Therefore this plugin allows for easy navigation between the different undo-branches for a file.<br>See this screenshot: <a target="_blank" href="http://www.256bit.org/~chrisbra/vim_undotree.png">http://www.256bit.org/~chrisbra/vim_undotree.png</A><br>This plugin was inspired by the undo_branches plugin (<a target="_blank" href="http://www.vim.org/scripts/script.php?script_id=1997">http://www.vim.org/scripts/script.php?script_id=1997</A>).<br><br>This plugin allows you to<br>- see all available undo-branches (Timestamps and Keywords)<br>- tag certain states<br>- switching to different states (including the first state (before any changes were made)<br>- allow to diff the selected undo-branch with the current version<br>- replay the changes (ok, this is just for fun ;)<br><br>Open the UndoBrowse window by issuing :UB<br>A new window will appear, which contains the name of the file you are watching a small help<br>banner that contains the most important mappings for this window and a list of all available<br>undo-branches (which shows the time when this change was made and your tags for that state, if there are any). On each entry you can press Enter or T to jump to that state or tag that state.<br><br>This plugin maps the following keys:<br>- 'Enter' on an entry jump to that state in time of the file<br>- 'T' tags a state with a phrase. <br>- 'R' lets you replay a change <br>- 'I' opens/closes the help banner<br>- 'Q' closes the window<br>- CTRL-L reload view<br>- D diff selected version</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">install details</td></tr>
+<tr><td>edit the file histwin.vba with vim. From within vim simply load this file:<br>:so %<br><br>Vim will automatically install this plugin.</td></tr>
+<tr><td>&nbsp;</td></tr>
+</table>
+
+<!-- rating table -->
+<form name="rating">
+<input type="hidden" name="script_id" value="2932">
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>rate this script</b></td>
+  <td valign="middle">
+    <input type="radio" name="rating" value="life_changing">Life Changing
+    <input type="radio" name="rating" value="helpful">Helpful
+    <input type="radio" name="rating" value="unfulfilling">Unfulfilling&nbsp;
+    <input type="submit" value="rate">
+  </td>
+</tr>
+</table>
+</form>
+<span class="txth2">script versions</span> (<a href="add_script_version.php?script_id=2932">upload new version</a>)
+<p>
+Click on the package to download.
+<p>
+
+<table cellspacing="2" cellpadding="4" border="0" width="100%">
+<tr class='tableheader'>
+        <th valign="top">package</th>
+    <th valign="top">script version</th>
+    <th valign="top">date</th>
+    <th valign="top">Vim version</th>
+    <th valign="top">user</th>
+    <th valign="top">release notes</th>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=14555">histwin-0.21.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>21</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-12-18</i></td>
+    <td class="rowodd" valign="top" nowrap>7.3</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=17599">Christian Brabandt</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- more standard like help files<br>- make sure, the autoload script is only called when needed<br>&nbsp;&nbsp;(and not on startup)</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=14086">histwin-0.20.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>20</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-10-20</i></td>
+    <td class="roweven" valign="top" nowrap>7.3</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=17599">Christian Brabandt</a></i></td>
+    <td class="roweven" valign="top" width="2000">-Enable storing the tags as Dicionary in .viminfo<br>&nbsp;&nbsp;(this might not work as expected, cause we are storing a nested<br>&nbsp;&nbsp;Dictionary)<br>- Show a diff in the preview window when pressing P (or on autocommand<br>&nbsp;&nbsp;CursorHold if enabled)<br>- a little bit code cleanup (as always ;))<br>- correctly catch E830 and give an error message (reported by D.<br>&nbsp;&nbsp;Fishburn)<br>(automatically uploaded)</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=14071">histwin-0.19.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>19</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-10-18</i></td>
+    <td class="rowodd" valign="top" nowrap>7.3</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=17599">Christian Brabandt</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Make sure the first entry will be tagged 'Start Editing'</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=14063">histwin-0.18.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>18</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-10-16</i></td>
+    <td class="roweven" valign="top" nowrap>7.3</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=17599">Christian Brabandt</a></i></td>
+    <td class="roweven" valign="top" width="2000">don't leave the buffer in nomodifiable state (reported by D. Doran)</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=14037">histwin-0.17.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>17</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-10-10</i></td>
+    <td class="rowodd" valign="top" nowrap>7.3</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=17599">Christian Brabandt</a></i></td>
+    <td class="rowodd" valign="top" width="2000">the initial entry should be visible for Vim &lt; 7.3.005</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=14036">histwin-0.16.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>16</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-10-10</i></td>
+    <td class="roweven" valign="top" nowrap>7.3</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=17599">Christian Brabandt</a></i></td>
+    <td class="roweven" valign="top" width="2000">-more bugfixing. :UB throws errors in Vim before 7.3.005 fix that</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=14024">histwin-0.15.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>15</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-10-07</i></td>
+    <td class="rowodd" valign="top" nowrap>7.3</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=17599">Christian Brabandt</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Fixed bug when no undo-tree was available (partly by Ben Boeckel. Thanks!)<br>-More error handling (when the cursor is not on a list item)<br>-Commenting out the entry to store the histdict in a global variable, that should be written to the .viminfo file (but is not yet supported by plain vim)</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13957">histwin-0.14.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>14</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-09-29</i></td>
+    <td class="roweven" valign="top" nowrap>7.3</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=17599">Christian Brabandt</a></i></td>
+    <td class="roweven" valign="top" width="2000"> (experimental version):<br>- don't fix the width of the histwin window<br>- now use the undotree() function by default (if patch 7.3.005 is<br>&nbsp;&nbsp;included)<br>- display save states in the detailed view<br>- display the 'rehash' when a state is not accessible anymore<br>- fixed an annoying bug, that when jumping to a particular undo state,<br>&nbsp;&nbsp;the plugin would jump to the wrong state (I hate octal mode)<br>- Make displaying the time much more reliable and also don't display<br>&nbsp;&nbsp;the time, if the change happened more than 24h ago (instead, display<br>&nbsp;&nbsp;the date, when this change was done).<br>- slightly improved error handling.<br>- prepare plugin, to permantly store the undotags in the viminfo file<br>&nbsp;&nbsp;(this isn't supported by a plain vanilla vim and requires a patch)<br>- A major rewrite (code cleanup, better documentation)<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13734">histwin-0.13.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.13</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-08-31</i></td>
+    <td class="rowodd" valign="top" nowrap>7.2</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=17599">Christian Brabandt</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- New version that uses Vim 7.3 persistent undo features |new-persistent-undo|<br>- Display saved counter in detailed view<br>- Display indicator for saved branches.<br>- in diff mode, don't set the original buffer to be nomodifiable (so you can always merge chunks).<br>- Check for Vim Version 7.3 (the plugin won't work with older versions of Vim)</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=12944">histwin-0.12.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.12</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-05-04</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=17599">Christian Brabandt</a></i></td>
+    <td class="roweven" valign="top" width="2000">- Small extension to the help file<br>- generate help file with 'et' set, so the README at github looks better<br>- Highlight the key binding using |hl-SpecialKey|<br>- The help tag for the color configuration was wrong.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=12883">histwin.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.11</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-04-21</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=17599">Christian Brabandt</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- Set old buffers read only (disable the setting via the g:undo_tree_nomod variable<br>- Make sure, Warning Messages are really displayed using :unsilent</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=12878">histwin.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.10</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-04-20</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=17599">Christian Brabandt</a></i></td>
+    <td class="roweven" valign="top" width="2000">- Fixed annoying Resizing bug<br>- linebreak tags, if they are too long<br>- dynamically grow the histwin window, for longer tags (up<br>&nbsp;&nbsp; to a maximum)<br>- Bugfix: Always indicate the correct branch<br>- Added a few try/catch statements and some error handling</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=12202">histwin.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.9</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-01-27</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=17599">Christian Brabandt</a></i></td>
+    <td class="rowodd" valign="top" width="2000">BF: Error handling for Replaying (it may not work always)<br>NF: Finally added Documentation (see :h histwin.txt)<br>BF: Use syntax highlighting<br>BF: Tagging finally works (you can now tag additional states)<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=12155">histwin.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.8</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-01-21</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=17599">Christian Brabandt</a></i></td>
+    <td class="roweven" valign="top" width="2000">- NF: make speed of the replay adjustable. Use g:undo_tree_speed to set time in milliseconds<br>- BF: code cleanup<br>- BF: highlighting should work better now.<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=12146">histwin.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.7.2.</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-01-20</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=17599">Christian Brabandt</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- BF: Check undolevel Settings<br>- BF: make sure when switching to a different undo branch, that the undo-tree will be updated</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=12145">histwin.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.7.1</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-01-20</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=17599">Christian Brabandt</a></i></td>
+    <td class="roweven" valign="top" width="2000">BF: fixed a problem with mapping the keys which broke the Undo-Tree keys (I guess I don't fully understand, when to use s: and &lt;sid&gt;)</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=12144">histwin.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.7</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-01-20</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=17599">Christian Brabandt</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- NF: created autoloadPlugin (patch by Charles Campbell) Thanks!<br>- NF: enabled GLVS (patch by Charles Campbell) Thanks!<br>- NF: made Plugin available as histwin.vba<br>- NF: Check for availability of :UB before defining it<br>- BF: cleaned up old comments<br>- BF: deleted :noautocmd which could cause trouble with other plugins<br>- BF: small changes in coding style (&lt;sid&gt; to s:, fun instead of fu)</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=12142">histwin.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.6</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-01-20</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=17599">Christian Brabandt</a></i></td>
+    <td class="roweven" valign="top" width="2000">BF: fix missing bufname() when creating the undo_tree window<br>NF: make undo_tree window a little bit smaller (size is adjustable via g:undo_tree_wdth variable)</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=12140">histwin.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.5</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-01-20</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=17599">Christian Brabandt</a></i></td>
+    <td class="rowodd" valign="top" width="2000">NF: Allow diffing with selected branch<br>NF: highlight current version<br>NF: Use changenr() to determine undobranch<br>NF: &lt;C-L&gt; updates view<br>NF: allow switching to initial load state, before buffer was edited<br>BF: Fix annoying bug, that displays --No lines in buffer--<br>BF: fix several small annoying bugs</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=12130">histwin.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.2</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-01-19</i></td>
+    <td class="roweven" valign="top" nowrap>7.2</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=17599">Christian Brabandt</a></i></td>
+    <td class="roweven" valign="top" width="2000">Initial upload</td>
+</tr>
+</table>
+<!-- finish off the framework -->
+          </td>
+        </tr>
+      </table>
+    </td>
+
+  </tr>
+</table>
+
+<!-- END OF THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr><td colspan="4" bgcolor="#000000"><img src="/images/spacer.gif" height="2" width="1" alt=""></td></tr>
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr>
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+
+    <td align="left" valign="top"><small>
+      If you have questions or remarks about this site, visit the
+      <a href="http://vimonline.sf.net">vimonline development</a> pages.
+      Please use this site responsibly.
+      <br> 
+      
+      Questions about <a href="http://www.vim.org/about.php">Vim</a> should go
+      to the <a href="http://www.vim.org/maillist.php">maillist</a>.
+      Help Bram <a href="http://iccf-holland.org/">help Uganda</a>.
+      </small>
+	&nbsp;
+	&nbsp;
+
+	<!-- Start of StatCounter Code -->
+	<script type="text/javascript" language="javascript">
+	var sc_project=1417324; 
+	var sc_invisible=1; 
+	var sc_partition=11; 
+	var sc_security="d41633bc"; 
+	</script>
+
+	<script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script><noscript><a href="http://www.statcounter.com/" target="_blank"><img  src="http://c12.statcounter.com/counter.php?sc_project=1417324&java=0&security=d41633bc&invisible=0" alt="free tracking" border="0"></a> </noscript>
+	<!-- End of StatCounter Code -->
+          </td>
+
+    <td align="right" valign="top">
+      		<a href="http://sourceforge.net/projects/vim" rel="nofollow"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=8&type=1" width="88" height="31" border="0" alt="SourceForge.net Logo" /></a>
+    </td>
+
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+  </tr>
+
+    
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  
+  </tr>
+</table>
+
+</body>
+</html>
+

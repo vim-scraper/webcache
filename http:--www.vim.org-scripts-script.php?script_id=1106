@@ -1,0 +1,292 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+  <link rel="Stylesheet" type="text/css" href="/css/style.css" >
+  <title>java_src_link.vim - effective searching of src files for children, impls, tests, return values, args : vim online</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <meta name="KEYWORDS" content="Vim, Vi IMproved, text editor, home, documentation, tips, scripts, news">
+  <link rel="shortcut icon" type="image/x-icon" href="/images/vim_shortcut.ico">
+</head>
+
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff"> 
+
+<!-- HEADER, SPONSOR IMAGE, VIM IMAGE AND BOOK AD -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+  <td class="lightbg">&nbsp;&nbsp;&nbsp;</td>
+  <td class="lightbg" align="left"><a href="/sponsor/index.php"><img src="/images/sponsorvim.gif" alt="sponsor Vim development" border="0"></a></td>
+    <td class="lightbg" align="center"><a href="/index.php"><img src="/images/vim_header.gif" border="0" alt="Vim logo"></a></td>
+    <td class="lightbg" align="right"><a href="http://iccf-holland.org/click5.html"><img src="/images/buyhelplearn.gif" alt="Vim Book Ad" border="0"></a></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="darkbg"><img src="/images/spacer.gif" width="1" height="10" alt=""></td>
+  </tr>
+</table>
+<!-- THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+  <col width="180">
+  <col width="1">
+
+  <tr valign="top">
+    <td class="sidebar">
+      <table width="180" cellpadding="4" cellspacing="0" border="0">
+        <tr valign="top">
+          <td class="sidebar">
+
+<!-- INCLUDE THE PAGE NAVIGATION -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+    <tr>
+        <td><small>not logged in (<a href="/login.php">login</a>)</small></td>
+    </tr>
+    <tr><td>
+<small>&nbsp;</small>
+<form action="http://www.google.com/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-3005259998294962:bvyni59kjr1" />
+    <input type="hidden" name="ie" value="ISO-8859-1" />
+    <input type="text" name="q" size="20" />
+    <br>
+    <input type="submit" name="sa" value="Search" />
+  </div>
+</form>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+    </td></tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="1"></td>
+    </tr>
+    <tr>
+        <td class="darkbg"><img src="/images/spacer.gif" alt='' border="0" height="3"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="2"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/index.php">Home</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/search.php">Advanced search</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/about.php">About Vim</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/community.php">Community</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/news/news.php">News</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/sponsor/index.php">Sponsoring</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/trivia.php">Trivia</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/docs.php">Documentation</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/download.php">Download</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/scripts/index.php">Scripts</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/tips/index.php">Tips</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/account/index.php">My Account</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/huh.php">Site Help</a></td>
+        </tr>
+</table>
+
+            <table width="172" cellpadding="0" cellspacing="0" border="0">
+              <tr><td><img src="/images/spacer.gif" alt="" border="0" width="1" height="8"></td></tr>
+              <tr><td class="darkbg"><img src="/images/spacer.gif" width="1" height="3" alt=""></td></tr>
+            </table>
+            <br>
+
+<!-- INCLUDE THE PAGE SIDEBAR TEXT -->
+&nbsp;
+
+          </td>
+        </tr>
+      </table>
+    </td>
+
+    <td class="darkbg"><img src="/images/spacer.gif" width="1" height="1" border="0" alt=""><br></td>
+    <td>
+      <table width="100%" cellpadding="10" cellspacing="0" border="0" bordercolor="red">
+        <tr>
+          <td valign="top">
+
+<span class="txth1">java_src_link.vim : effective searching of src files for children, impls, tests, return values, args</span> 
+
+<br>
+<br>
+
+<!-- karma table -->
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
+  <td>
+    Rating <b>4/1</b>,
+    Downloaded by 692  </td>
+  <td class="lightbg">
+  <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
+  </td>
+  <td>
+    <a href="http://vim.wikia.com/wiki/Script:1106">Vim wiki</a>
+  </td>  
+</tr>
+</table>
+<p>
+
+<table cellspacing="0" cellpadding="0" border="0">
+<tr><td class="prompt">created by</td></tr>
+<tr><td><a href="/account/profile.php?user_id=6016">Eric Van Dewoestine</a></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">script type</td></tr>
+<tr><td>ftplugin</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">description</td></tr>
+<tr><td>&quot;&nbsp;&nbsp; Filetype plugin for java that allows you to jump to<br>&quot;&nbsp;&nbsp; another java src file by searching your configured<br>&quot;&nbsp;&nbsp; src path for the class name under the cursor.<br>&quot;<br>&quot;&nbsp;&nbsp; For a given class name, supports finding children of it, implementations<br>&quot;&nbsp;&nbsp; of it, methods that return it, methods that take it as an argument, test<br>&quot;&nbsp;&nbsp; cases for it, or all references of it.<br>&quot;<br>&quot; Platform:<br>&quot;&nbsp;&nbsp; This plugin uses the system find and grep commands extensively,<br>&quot;&nbsp;&nbsp; so if you are having issues, it's probably due to incompatibility<br>&quot;&nbsp;&nbsp; with one of those.&nbsp;&nbsp;You can take a look at s:find_cmd, s:content_grep,<br>&quot;&nbsp;&nbsp; and s:*_regex variables to see if they can be modified to suit your<br>&quot;&nbsp;&nbsp; system.<br>&quot;<br>&quot;&nbsp;&nbsp; If you find that you do have to modify any of these, feel free to<br>&quot;&nbsp;&nbsp; send me your changes, and I will see if they are compatable or make<br>&quot;&nbsp;&nbsp; alternate configurations available for users to choose from.<br>&quot;<br>&quot;&nbsp;&nbsp; All my testing was done with<br>&quot;&nbsp;&nbsp;&nbsp;&nbsp; GNU find version 4.1.20<br>&quot;&nbsp;&nbsp;&nbsp;&nbsp; GNU grep version 2.5.1<br>&quot;<br>&quot;&nbsp;&nbsp; Linux:<br>&quot;&nbsp;&nbsp;&nbsp;&nbsp; All testing has been done on linux so various flavors of linux<br>&quot;&nbsp;&nbsp;&nbsp;&nbsp; should be supported (as well as other *nix systems).<br>&quot;<br>&quot;&nbsp;&nbsp; Windows:<br>&quot;&nbsp;&nbsp;&nbsp;&nbsp; Works in conjunction with cygwin_utils.vim plugin.<br>&quot;&nbsp;&nbsp;&nbsp;&nbsp; Make sure to read the Description comments in cygwin_utils.vim for<br>&quot;&nbsp;&nbsp;&nbsp;&nbsp; configuration instructions and other notes.<br>&quot;<br>&quot;&nbsp;&nbsp;&nbsp;&nbsp; Note: I've found that the 'find' command runs considerably<br>&quot;&nbsp;&nbsp;&nbsp;&nbsp; slower on Windows enviroments.&nbsp;&nbsp;So if you have serveral<br>&quot;&nbsp;&nbsp;&nbsp;&nbsp; paths in you g:JavaSrcPaths variable, then searching may<br>&quot;&nbsp;&nbsp;&nbsp;&nbsp; be a bit slow.<br>&quot;<br>&quot; Usage:<br>&quot;&nbsp;&nbsp; When editing a java file the following commands are created<br>&quot;&nbsp;&nbsp;&nbsp;&nbsp;:FindSrc<br>&quot;&nbsp;&nbsp;&nbsp;&nbsp;:FindImpl<br>&quot;&nbsp;&nbsp;&nbsp;&nbsp;:FindChildren<br>&quot;&nbsp;&nbsp;&nbsp;&nbsp;:ContextualFindSrc<br>&quot;&nbsp;&nbsp;&nbsp;&nbsp;:FindTest<br>&quot;&nbsp;&nbsp;&nbsp;&nbsp;:FindArgument<br>&quot;&nbsp;&nbsp;&nbsp;&nbsp;:FindReturned<br>&quot;&nbsp;&nbsp;&nbsp;&nbsp;:FindReferenced<br>&quot;<br>&quot;&nbsp;&nbsp; FindSrc: will search for the src file for the class name under the<br>&quot;&nbsp;&nbsp; cursor and execute the configured g:JavaSrcCmd on it (unless<br>&quot;&nbsp;&nbsp; g:JavaSrcUseGrep is set to 1), which could do any number of<br>&quot;&nbsp;&nbsp; things such as edit, argadd, split, etc.<br>&quot;<br>&quot;&nbsp;&nbsp; FindImpl: behaves just like FindSrc, except instead of searching for<br>&quot;&nbsp;&nbsp; the class name under the cursor, it searches for classes that<br>&quot;&nbsp;&nbsp; implement that class.<br>&quot;<br>&quot;&nbsp;&nbsp; FindChildren: behaves just like FindSrc, except instead of searching<br>&quot;&nbsp;&nbsp; for the class name under the cursor, it searches for classes that<br>&quot;&nbsp;&nbsp; extend that class.<br>&quot;<br>&quot;&nbsp;&nbsp; ContextualFindSrc: is a convenience command that decides which of the<br>&quot;&nbsp;&nbsp; above commands to execute (FindSrc, FindImpl, or FindChildren) based<br>&quot;&nbsp;&nbsp; on your position in the file.<br>&quot;&nbsp;&nbsp; - If you are on the class declaration line (public class Foo), then<br>&quot;&nbsp;&nbsp;&nbsp;&nbsp; it will execute FindChildren.<br>&quot;&nbsp;&nbsp; - If you are on the interface declaration line (public interface Foo),<br>&quot;&nbsp;&nbsp;&nbsp;&nbsp; then it will execute FindImpl.<br>&quot;&nbsp;&nbsp; - Any where else in the file, FindSrc will be executed.<br>&quot;<br>&quot;&nbsp;&nbsp; FindTest: behaves like FindSrc, except instead of searching<br>&quot;&nbsp;&nbsp; for the class name under the cursor, it searches for the test<br>&quot;&nbsp;&nbsp; case src file for the class.<br>&quot;&nbsp;&nbsp;&nbsp;&nbsp; This command assumes that test case src files follow the junit<br>&quot;&nbsp;&nbsp;&nbsp;&nbsp; naming conventions of &quot;&lt;classname&gt;Test.java&quot; where the &lt;classname&gt;<br>&quot;&nbsp;&nbsp;&nbsp;&nbsp; is the name of the class under the cursor.<br>&quot;<br>&quot;&nbsp;&nbsp; FindArgument: behaves like FindSrc, except instead of searching<br>&quot;&nbsp;&nbsp; for the class name under the cursor, it searches for all src files<br>&quot;&nbsp;&nbsp; that have a method that takes as an argument, that class.<br>&quot;<br>&quot;&nbsp;&nbsp; FindReturned: behaves like FindSrc, except instead of searching<br>&quot;&nbsp;&nbsp; for the class name under the cursor, it searches for all src files<br>&quot;&nbsp;&nbsp; that have a method that returns that class.<br>&quot;<br>&quot;&nbsp;&nbsp; FindReferenced: behaves like FindSrc, except instead of searching<br>&quot;&nbsp;&nbsp; for the class name under the cursor, it searches for all src files<br>&quot;&nbsp;&nbsp; that reference that class.<br>&quot;<br>&quot;&nbsp;&nbsp; Note: All of the above commands (with the exception of ContextualFindSrc)<br>&quot;&nbsp;&nbsp; can also be invoked with an argument.<br>&quot;&nbsp;&nbsp;&nbsp;&nbsp; Ex.<br>&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FindSrc org.bar.Foo<br>&quot;&nbsp;&nbsp; This will invoke the command so it searches for the class name provided<br>&quot;&nbsp;&nbsp; rather than the one under the cursor.&nbsp;&nbsp;You may use fully qualified<br>&quot;&nbsp;&nbsp; (org.bar.Foo) or un-qualified (Foo) class names.<br>&quot;<br>&quot;&nbsp;&nbsp; Note: All of these find commands will attempt to filter out<br>&quot;&nbsp;&nbsp; results that reference a different class that has the same<br>&quot;&nbsp;&nbsp; class name as the one to search for.&nbsp;&nbsp;It does this by attempting<br>&quot;&nbsp;&nbsp; to locate the package name of the class to search for.<br>&quot;<br>&quot;&nbsp;&nbsp;&nbsp;&nbsp; For example: If you have two classes with the name Foo<br>&quot;&nbsp;&nbsp;&nbsp;&nbsp; one in com.bar.Foo and the other in com.bar.baz.Foo, and you<br>&quot;&nbsp;&nbsp;&nbsp;&nbsp; start a search for the class Foo, then this plugin will attempt<br>&quot;&nbsp;&nbsp;&nbsp;&nbsp; to determine which Foo you are searching for.<br>&quot;<br>&quot;&nbsp;&nbsp;&nbsp;&nbsp; If you are editing one of the Foo classes, and you initiated the<br>&quot;&nbsp;&nbsp;&nbsp;&nbsp; search with the cursor on the class declaration (public class Foo),<br>&quot;&nbsp;&nbsp;&nbsp;&nbsp; then the package (package com.bar;)&nbsp;&nbsp;declaration of the file will<br>&quot;&nbsp;&nbsp;&nbsp;&nbsp; be used to narrow the results to the correct Foo class.<br>&quot;<br>&quot;&nbsp;&nbsp;&nbsp;&nbsp; If you are in another file (say Bar.java) and you start a search<br>&quot;&nbsp;&nbsp;&nbsp;&nbsp; for Foo, then the plugin will look to see if you used the fully<br>&quot;&nbsp;&nbsp;&nbsp;&nbsp; qualified class name (com.bar.Foo) or if you imported the class<br>&quot;&nbsp;&nbsp;&nbsp;&nbsp; (import com.bar.Foo;).&nbsp;&nbsp;If you did either then the package name<br>&quot;&nbsp;&nbsp;&nbsp;&nbsp; will be grabbed from there.&nbsp;&nbsp;If you have done neither, then the<br>&quot;&nbsp;&nbsp;&nbsp;&nbsp; plugin will return results for all Foo occurances regardless<br>&quot;&nbsp;&nbsp;&nbsp;&nbsp; of package name.<br>&quot;<br>&quot;&nbsp;&nbsp;&nbsp;&nbsp; So the moral of the story is, that if you want accurate results<br>&quot;&nbsp;&nbsp;&nbsp;&nbsp; you should get in the habit of importing each class seperately<br>&quot;&nbsp;&nbsp;&nbsp;&nbsp; and avoiding the * imports (import com.bar.*;).&nbsp;&nbsp;This is a good<br>&quot;&nbsp;&nbsp;&nbsp;&nbsp; habit anyways, that makes your code easier to read, navigate, and<br>&quot;&nbsp;&nbsp;&nbsp;&nbsp; understand by others.<br>&quot;<br>&quot; Configuration:<br>&quot;&nbsp;&nbsp; The following describes the global variables you can set in<br>&quot;&nbsp;&nbsp; your vimrc to change the behavior of this plugin.<br>&quot;<br>&quot;&nbsp;&nbsp;&nbsp;&nbsp; g:JavaSrcPaths<br>&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; No default.&nbsp;&nbsp;Use this variable to set a comma seperated list<br>&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; of the paths you wish to have searched. Each path should be<br>&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; the parent directory of where your package structure begins.<br>&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; So for /a/path/src/java/org/acme/, assumming packages begin<br>&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; as org, you would use /a/path/src/java as the path to search.<br>&quot;<br>&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ex.&nbsp;&nbsp;let g:JavaSrcPaths=<br>&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\ &quot;/a/path/src/java,&quot; .<br>&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\ &quot;/another/path/src/java&quot;<br>&quot;<br>&quot;&nbsp;&nbsp;&nbsp;&nbsp; g:JavaSrcTestPaths<br>&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; No default. Same as g:JavaSrcPaths but used by FindTest to<br>&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; locate unit testing src files.<br>&quot;<br>&quot;&nbsp;&nbsp;&nbsp;&nbsp; g:JavaSrcShowResults<br>&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Defaults to 0.&nbsp;&nbsp;When set to 1, the Find commands will open<br>&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; a small preview window when multiple results have been found.<br>&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; In that window you can hit &lt;enter&gt; on the file you wish<br>&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; to open or use 'A' to load all results into the arg list.<br>&quot;<br>&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ex. let g:JavaSrcShowResults=1<br>&quot;<br>&quot;&nbsp;&nbsp;&nbsp;&nbsp; g:JavaSrcUseGrep<br>&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Defaults to 1.&nbsp;&nbsp;When set to 1, the Find commands will use vim's<br>&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :grep command to grep the results so that results can be<br>&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; navigated through using the quickfix command :cnext :cprev<br>&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :copen, etc.<br>&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Note: When g:JavaSrcShowResults is set, then grep is not used<br>&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; regardless of whether g:JavaSrcUseGrep is set or not.<br>&quot;<br>&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ex. let g:JavaSrcUseGrep=1<br>&quot;<br>&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Use<br>&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :help quickfix.txt<br>&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; to get more info on how grep and the quickfix paradigm works.<br>&quot;<br>&quot;&nbsp;&nbsp;&nbsp;&nbsp; Note: When both g:JavaSrcShowResults and g:JavaSrcUseGrep are set<br>&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; to 0, then the g:JavaSrcCmd is executed on all files found<br>&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; with no preview or quickfix window.<br>&quot;<br>&quot;&nbsp;&nbsp;&nbsp;&nbsp; g:JavaSrcCwindow<br>&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Defaults to 1.&nbsp;&nbsp;Used to determine whether or not to execute<br>&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :cwindow to open the grep results after searching.&nbsp;&nbsp;If set<br>&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; to 1, the window will be opened after every Find command.<br>&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; If set to 0, the window will remain closed and you can open<br>&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; it manually.<br>&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Note:&nbsp;&nbsp;Only used when g:JavaSrcUseGrep is set to 1 and<br>&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;g:JavaSrcShowResults is set to 0.<br>&quot;<br>&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ex. let g:JavaSrcCwindow=1<br>&quot;<br>&quot;&nbsp;&nbsp;&nbsp;&nbsp; g:JavaSrcCmd<br>&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Defaults to &quot;split &lt;file&gt;&quot;.&nbsp;&nbsp;Use this variable to set the<br>&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; command you wish to be invoked when using :Find* commands.<br>&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The &quot;&lt;file&gt;&quot; will be replace with the file to open.<br>&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Note: When g:JavaSrcShowResults is set to 0 and<br>&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; g:JavaSrcUseGrep is set to 1, this variable is not<br>&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; used.&nbsp;&nbsp;Instead the quickfix commands are used.<br>&quot;<br>&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ex. let g:JavaSrcCmd=&quot;topleft split &lt;file&gt;&quot;<br>&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ex. let g:JavaSrcCmd=&quot;argedit &lt;file&gt;&quot;<br>&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ex. let g:JavaSrcCmd=&quot;call g:MyOpenFile(&lt;file&gt;)&quot;<br>&quot;<br>&quot; Command Mapping:<br>&quot;&nbsp;&nbsp; You may find it easier to map a command to something more convenient.<br>&quot;&nbsp;&nbsp; For example, here is my mapping that allows me to simply hit<br>&quot;&nbsp;&nbsp; &lt;enter&gt; on a class name to have it search for results based on the<br>&quot;&nbsp;&nbsp; context (as described above).<br>&quot;<br>&quot;&nbsp;&nbsp;&nbsp;&nbsp; autocmd FileType java map &lt;silent&gt; &lt;buffer&gt; &lt;cr&gt; :ContextualFindSrc&lt;cr&gt;<br>&quot;<br>&quot; Limitations:<br>&quot;&nbsp;&nbsp; - FindChildren and FindImpl are limited to examining class names<br>&quot;&nbsp;&nbsp;&nbsp;&nbsp; that follow &quot;extends&quot; | &quot;implements&quot; on the same line.&nbsp;&nbsp;So src files<br>&quot;&nbsp;&nbsp;&nbsp;&nbsp; that put each class on it's own line or wrap long extends / implements<br>&quot;&nbsp;&nbsp;&nbsp;&nbsp; statements may not be found.<br>&quot;&nbsp;&nbsp;&nbsp;&nbsp; This is a limitation of grep, which is used to find the files.<br>&quot;&nbsp;&nbsp;&nbsp;&nbsp; This could be solved by further examining the contents of src files<br>&quot;&nbsp;&nbsp;&nbsp;&nbsp; but would have a big impact on performance.<br>&quot;&nbsp;&nbsp; - FindReturned only searches for methods with &quot;public&quot; | &quot;private&quot; |<br>&quot;&nbsp;&nbsp;&nbsp;&nbsp; &quot;protected&quot; so as not to grab too many files.&nbsp;&nbsp;Also the scope identifier<br>&quot;&nbsp;&nbsp;&nbsp;&nbsp; must appear on the same line as the class name.<br>&quot;&nbsp;&nbsp;&nbsp;&nbsp; As with the limitation on FindChildren and FileImpl, this is due to<br>&quot;&nbsp;&nbsp;&nbsp;&nbsp; grep examining the files one line at a time, which prevents examining<br>&quot;&nbsp;&nbsp;&nbsp;&nbsp; other lines to determine any sort of context.<br>&quot;<br>&quot; Todo:<br>&quot;&nbsp;&nbsp; - Extend beyond class based searching and add method and field based<br>&quot;&nbsp;&nbsp;&nbsp;&nbsp; searches (fields should be easy, methods could be hard to get reliable<br>&quot;&nbsp;&nbsp;&nbsp;&nbsp; results).<br></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">install details</td></tr>
+<tr><td>Put java_src_link.vim into your ftplugin directory.<br><br>Windows users will need cygwin_utils.vim (<a href="/scripts/script.php?script_id=1150">vimscript #1150</a>)</td></tr>
+<tr><td>&nbsp;</td></tr>
+</table>
+
+<!-- rating table -->
+<form name="rating">
+<input type="hidden" name="script_id" value="1106">
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>rate this script</b></td>
+  <td valign="middle">
+    <input type="radio" name="rating" value="life_changing">Life Changing
+    <input type="radio" name="rating" value="helpful">Helpful
+    <input type="radio" name="rating" value="unfulfilling">Unfulfilling&nbsp;
+    <input type="submit" value="rate">
+  </td>
+</tr>
+</table>
+</form>
+<span class="txth2">script versions</span> (<a href="add_script_version.php?script_id=1106">upload new version</a>)
+<p>
+Click on the package to download.
+<p>
+
+<table cellspacing="2" cellpadding="4" border="0" width="100%">
+<tr class='tableheader'>
+        <th valign="top">package</th>
+    <th valign="top">script version</th>
+    <th valign="top">date</th>
+    <th valign="top">Vim version</th>
+    <th valign="top">user</th>
+    <th valign="top">release notes</th>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=3685">java_src_link.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.4</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2004-12-05</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=6016">Eric Van Dewoestine</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- Now supported on Windows platform.</td>
+</tr>
+</table>
+<!-- finish off the framework -->
+          </td>
+        </tr>
+      </table>
+    </td>
+
+  </tr>
+</table>
+
+<!-- END OF THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr><td colspan="4" bgcolor="#000000"><img src="/images/spacer.gif" height="2" width="1" alt=""></td></tr>
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr>
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+
+    <td align="left" valign="top"><small>
+      If you have questions or remarks about this site, visit the
+      <a href="http://vimonline.sf.net">vimonline development</a> pages.
+      Please use this site responsibly.
+      <br> 
+      
+      Questions about <a href="http://www.vim.org/about.php">Vim</a> should go
+      to the <a href="http://www.vim.org/maillist.php">maillist</a>.
+      Help Bram <a href="http://iccf-holland.org/">help Uganda</a>.
+      </small>
+	&nbsp;
+	&nbsp;
+
+	<!-- Start of StatCounter Code -->
+	<script type="text/javascript" language="javascript">
+	var sc_project=1417324; 
+	var sc_invisible=1; 
+	var sc_partition=11; 
+	var sc_security="d41633bc"; 
+	</script>
+
+	<script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script><noscript><a href="http://www.statcounter.com/" target="_blank"><img  src="http://c12.statcounter.com/counter.php?sc_project=1417324&java=0&security=d41633bc&invisible=0" alt="free tracking" border="0"></a> </noscript>
+	<!-- End of StatCounter Code -->
+          </td>
+
+    <td align="right" valign="top">
+      		<a href="http://sourceforge.net/projects/vim" rel="nofollow"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=8&type=1" width="88" height="31" border="0" alt="SourceForge.net Logo" /></a>
+    </td>
+
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+  </tr>
+
+    
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  
+  </tr>
+</table>
+
+</body>
+</html>
+

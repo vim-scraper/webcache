@@ -1,0 +1,628 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+  <link rel="Stylesheet" type="text/css" href="/css/style.css" >
+  <title>The NERD tree - A tree explorer plugin for navigating the filesystem : vim online</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <meta name="KEYWORDS" content="Vim, Vi IMproved, text editor, home, documentation, tips, scripts, news">
+  <link rel="shortcut icon" type="image/x-icon" href="/images/vim_shortcut.ico">
+</head>
+
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff"> 
+
+<!-- HEADER, SPONSOR IMAGE, VIM IMAGE AND BOOK AD -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+  <td class="lightbg">&nbsp;&nbsp;&nbsp;</td>
+  <td class="lightbg" align="left"><a href="/sponsor/index.php"><img src="/images/sponsorvim.gif" alt="sponsor Vim development" border="0"></a></td>
+    <td class="lightbg" align="center"><a href="/index.php"><img src="/images/vim_header.gif" border="0" alt="Vim logo"></a></td>
+    <td class="lightbg" align="right"><a href="http://iccf-holland.org/click5.html"><img src="/images/buyhelplearn.gif" alt="Vim Book Ad" border="0"></a></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="darkbg"><img src="/images/spacer.gif" width="1" height="10" alt=""></td>
+  </tr>
+</table>
+<!-- THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+  <col width="180">
+  <col width="1">
+
+  <tr valign="top">
+    <td class="sidebar">
+      <table width="180" cellpadding="4" cellspacing="0" border="0">
+        <tr valign="top">
+          <td class="sidebar">
+
+<!-- INCLUDE THE PAGE NAVIGATION -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+    <tr>
+        <td><small>not logged in (<a href="/login.php">login</a>)</small></td>
+    </tr>
+    <tr><td>
+<small>&nbsp;</small>
+<form action="http://www.google.com/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-3005259998294962:bvyni59kjr1" />
+    <input type="hidden" name="ie" value="ISO-8859-1" />
+    <input type="text" name="q" size="20" />
+    <br>
+    <input type="submit" name="sa" value="Search" />
+  </div>
+</form>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+    </td></tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="1"></td>
+    </tr>
+    <tr>
+        <td class="darkbg"><img src="/images/spacer.gif" alt='' border="0" height="3"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="2"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/index.php">Home</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/search.php">Advanced search</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/about.php">About Vim</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/community.php">Community</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/news/news.php">News</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/sponsor/index.php">Sponsoring</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/trivia.php">Trivia</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/docs.php">Documentation</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/download.php">Download</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/scripts/index.php">Scripts</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/tips/index.php">Tips</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/account/index.php">My Account</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/huh.php">Site Help</a></td>
+        </tr>
+</table>
+
+            <table width="172" cellpadding="0" cellspacing="0" border="0">
+              <tr><td><img src="/images/spacer.gif" alt="" border="0" width="1" height="8"></td></tr>
+              <tr><td class="darkbg"><img src="/images/spacer.gif" width="1" height="3" alt=""></td></tr>
+            </table>
+            <br>
+
+<!-- INCLUDE THE PAGE SIDEBAR TEXT -->
+&nbsp;
+
+          </td>
+        </tr>
+      </table>
+    </td>
+
+    <td class="darkbg"><img src="/images/spacer.gif" width="1" height="1" border="0" alt=""><br></td>
+    <td>
+      <table width="100%" cellpadding="10" cellspacing="0" border="0" bordercolor="red">
+        <tr>
+          <td valign="top">
+
+<span class="txth1">The NERD tree : A tree explorer plugin for navigating the filesystem</span> 
+
+<br>
+<br>
+
+<!-- karma table -->
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
+  <td>
+    Rating <b>4322/1387</b>,
+    Downloaded by 66036  </td>
+  <td class="lightbg">
+  <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
+  </td>
+  <td>
+    <a href="http://vim.wikia.com/wiki/Script:1658">Vim wiki</a>
+  </td>  
+</tr>
+</table>
+<p>
+
+<table cellspacing="0" cellpadding="0" border="0">
+<tr><td class="prompt">created by</td></tr>
+<tr><td><a href="/account/profile.php?user_id=7006">Marty Grenfell</a></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">script type</td></tr>
+<tr><td>utility</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">description</td></tr>
+<tr><td>Grab the latest dev version from github: <a target="_blank" href="https://github.com/scrooloose/nerdtree">https://github.com/scrooloose/nerdtree</A>. <br><br>What is this &quot;NERD tree&quot;??<br><br>Check out this demo <a target="_blank" href="http://www.flickr.com/photos/30496122@N07/2862367534/sizes/o/">http://www.flickr.com/photos/30496122@N07/2862367534/sizes/o/</A><br><br>The NERD tree allows you to explore your filesystem and to open files and<br>directories. It presents the filesystem to you in the form of a tree which you<br>manipulate with the keyboard and/or mouse. It also allows you to perform<br>simple filesystem operations.<br><br>The following features and functionality are provided by the NERD tree:<br>&nbsp;&nbsp;&nbsp;&nbsp;* Files and directories are displayed in a hierarchical tree structure<br>&nbsp;&nbsp;&nbsp;&nbsp;* Different highlighting is provided for the following types of nodes:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* files<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* directories<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* sym-links<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* windows .lnk files<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* read-only files<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* executable files<br>&nbsp;&nbsp;&nbsp;&nbsp;* Many (customisable) mappings are provided to manipulate the tree:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* Mappings to open/close/explore directory nodes<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* Mappings to open files in new/existing windows/tabs<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* Mappings to change the current root of the tree<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* Mappings to navigate around the tree<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* ...<br>&nbsp;&nbsp;&nbsp;&nbsp;* Directories and files can be bookmarked.<br>&nbsp;&nbsp;&nbsp;&nbsp;* Most NERD tree navigation can also be done with the mouse<br>&nbsp;&nbsp;&nbsp;&nbsp;* Filtering of tree content (can be toggled at runtime)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* custom file filters to prevent e.g. vim backup files being displayed<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* optional displaying of hidden files (. files)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* files can be &quot;turned off&quot; so that only directories are displayed<br>&nbsp;&nbsp;&nbsp;&nbsp;* A textual filesystem menu is provided which allows you to<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;create/delete/move file and directory nodes as well as copy (for<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;supported OSs)<br>&nbsp;&nbsp;&nbsp;&nbsp;* The position and size of the NERD tree window can be customised<br>&nbsp;&nbsp;&nbsp;&nbsp;* The order in which the nodes in the tree are listed can be customised.<br>&nbsp;&nbsp;&nbsp;&nbsp;* A model of your filesystem is created/maintained as you explore it. This<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;has several advantages:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* All filesystem information is cached and is only re-read on demand<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* If you revisit a part of the tree that you left earlier in your<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;session, the directory nodes will be opened/closed as you left them<br>&nbsp;&nbsp;&nbsp;&nbsp;* The script remembers the cursor position and window position in the NERD<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tree so you can toggle it off (or just close the tree window) and then<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reopen it (with NERDTreeToggle) the NERD tree window will appear exactly<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;as you left it<br>&nbsp;&nbsp;&nbsp;&nbsp;* You can have a separate NERD tree for each tab, share trees across tabs,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;or a mix of both.<br>&nbsp;&nbsp;&nbsp;&nbsp;* By default the script overrides the default file browser (netw), so if<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;you :edit a directory a (slighly modified) NERD tree will appear in the<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;current window<br></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">install details</td></tr>
+<tr><td>Unzip the archive into your ~/.vim directory.<br>That should put NERD_tree.vim in ~/.vim/plugin and NERD_tree.txt in ~/.vim/doc.<br><br><br><br>Run :helptags.<br><br>Go :help NERD_tree.txt for the help page.<br><br></td></tr>
+<tr><td>&nbsp;</td></tr>
+</table>
+
+<!-- rating table -->
+<form name="rating">
+<input type="hidden" name="script_id" value="1658">
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>rate this script</b></td>
+  <td valign="middle">
+    <input type="radio" name="rating" value="life_changing">Life Changing
+    <input type="radio" name="rating" value="helpful">Helpful
+    <input type="radio" name="rating" value="unfulfilling">Unfulfilling&nbsp;
+    <input type="submit" value="rate">
+  </td>
+</tr>
+</table>
+</form>
+<span class="txth2">script versions</span> (<a href="add_script_version.php?script_id=1658">upload new version</a>)
+<p>
+Click on the package to download.
+<p>
+
+<table cellspacing="2" cellpadding="4" border="0" width="100%">
+<tr class='tableheader'>
+        <th valign="top">package</th>
+    <th valign="top">script version</th>
+    <th valign="top">date</th>
+    <th valign="top">Vim version</th>
+    <th valign="top">user</th>
+    <th valign="top">release notes</th>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=11834">NERD_tree.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>4.1.0</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-12-01</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=7006">Marty Grenfell</a></i></td>
+    <td class="rowodd" valign="top" width="2000">features:<br>- add NERDTreeFind to reveal the node for the current buffer in<br>&nbsp;&nbsp;the tree, see |NERDTreeFind|. This effectively merges the<br>&nbsp;&nbsp;FindInNERDTree plugin (by Doug McInnes) into the script.<br>- make NERDTreeQuitOnOpen apply to the t/T keymaps too.<br>&nbsp;&nbsp;Thanks to Stefan Ritter and Rémi Prévost.<br>- truncate the root node if wider than the tree window.<br>&nbsp;&nbsp;Thanks to Victor Gonzalez.<br><br>bugfixes:<br>- really fix window state restoring<br>- fix some win32 path escaping issues. Thanks to Stephan<br>&nbsp;&nbsp;Baumeister, Ricky, jfilip1024, and Chris Chambers<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=11500">NERD_tree.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>4.0.0</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-10-09</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=7006">Marty Grenfell</a></i></td>
+    <td class="roweven" valign="top" width="2000">- add a new programmable menu system (see :help<br>&nbsp;&nbsp;NERDTreeMenu).<br>- add new APIs to add menus/menu-items to the menu system as<br>&nbsp;&nbsp;well as custom key mappings to the NERD tree buffer (see<br>&nbsp;&nbsp;:help NERDTreeAPI).<br>- removed the old API functions<br>- added a mapping to maximize/restore the size of nerd tree<br>&nbsp;&nbsp;window, thanks to Guillaume Duranceau for the patch. See<br>&nbsp;&nbsp;:help NERDTree-A for details.<br><br>- fix a bug where secondary nerd trees (netrw hijacked<br>&nbsp;&nbsp;trees) and NERDTreeQuitOnOpen didnt play nicely, thanks to<br>&nbsp;&nbsp;Curtis Harvey.<br>- fix a bug where the script ignored directories whose name<br>&nbsp;&nbsp;ended in a dot, thanks to Aggelos Orfanakos for the patch.<br>- fix a bug when using the x mapping on the tree root,<br>&nbsp;&nbsp;thanks to Bryan Venteicher for the patch.<br>- fix a bug where the cursor position/window size of the<br>&nbsp;&nbsp;nerd tree buffer wasnt being stored on closing the window,<br>&nbsp;&nbsp;thanks to Richard Hart.<br>- fix a bug where NERDTreeMirror would mirror the wrong tree<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=10767">NERD_tree.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>3.1.1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-06-07</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=7006">Marty Grenfell</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- fix a bug where a non-listed no-name buffer was getting created every<br>&nbsp;&nbsp;time the tree window was created, thanks to Derek Wyatt and owen1<br>- make &lt;CR&gt; behave the same as the 'o' mapping<br>- some helptag fixes in the doc, thanks strull<br>- fix an error when using :set nohidden and opening a file where the previous<br>&nbsp;&nbsp;buf was modified. Thanks iElectric<br>- other minor fixes<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=9870">NERD_tree.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>3.1.0</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-01-27</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=7006">Marty Grenfell</a></i></td>
+    <td class="roweven" valign="top" width="2000">New features:<br>- add mappings to open files in a vsplit, see :help<br>&nbsp;&nbsp;NERDTree-s and :help NERDTree-gs<br>- make the statusline for the nerd tree window default to<br>&nbsp;&nbsp;something hopefully more useful. See :help<br>&nbsp;&nbsp;'NERDTreeStatusline'<br>Bugfixes:<br>- make the hijack netrw functionality work when vim is<br>&nbsp;&nbsp;started with &quot;vim &lt;some dir&gt;&quot; (thanks to Alf Mikula for<br>&nbsp;&nbsp;the patch).<br>- fix a bug where the CWD wasnt being changed for some<br>&nbsp;&nbsp;operations even when NERDTreeChDirMode==2 (thanks to <br>&nbsp;&nbsp;Lucas S. Buchala)<br>- add -bar to all the nerd tree :commands so they can chain<br>&nbsp;&nbsp;with other :commands (thanks to tpope)<br>- fix bugs when ignorecase was set (thanks to nach)<br>- fix a bug with the relative path code (thanks to nach)<br>- fix a bug where doing a :cd would cause :NERDTreeToggle to<br>&nbsp;&nbsp;fail (thanks nach)<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=9804">NERD_tree.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>3.0.1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-01-12</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=7006">Marty Grenfell</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Bugfixes:<br>- fix bugs with :NERDTreeToggle and :NERDTreeMirror when<br>&nbsp;&nbsp;'hidden was not set<br>- fix a bug where :NERDTree &lt;path&gt; would fail if &lt;path&gt; was<br>&nbsp;&nbsp;relative and didnt start with a ./ or ../&nbsp;&nbsp;Thanks to <br>&nbsp;&nbsp;James Kanze.<br>- make the q mapping work with secondary (:e &lt;dir&gt;&nbsp;&nbsp;style)<br>&nbsp;&nbsp;trees, thanks to jamessan<br>- fix a bunch of small bugs with secondary trees<br><br>More insane refactoring.<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=9744">NERD_tree.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>3.0.0</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-01-02</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=7006">Marty Grenfell</a></i></td>
+    <td class="roweven" valign="top" width="2000">- hijack netrw so that doing an :edit &lt;directory&gt;&nbsp;&nbsp;will put<br>&nbsp;&nbsp;a NERD tree in the window rather than a netrw browser. See<br>&nbsp;&nbsp;:help 'NERDTreeHijackNetrw'<br>- allow sharing of trees across tabs, see :help :NERDTreeMirror<br>- remove &quot;top&quot; and &quot;bottom&quot; as valid settings for NERDTreeWinPos<br>- change the '&lt;tab&gt;' mapping to 'i'<br>- change the 'H' mapping to 'I' (capital i)<br>- lots of refactoring<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=9657">NERD_tree.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.14.3</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2008-12-12</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=7006">Marty Grenfell</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Thanks to tpope for the following:<br>- use relative paths when doing edit commands if possible<br>&nbsp;&nbsp;(useful if you have %f on your statusline for example)<br>- allow relative paths for :NERDTree commands, eg <br>&nbsp;&nbsp;&quot;:NERDTree ../foo&quot;<br>- fix a bug where the script used the directory of the<br>&nbsp;&nbsp;current buffer instead of vims cwd for the :NERDTree<br>&nbsp;&nbsp;command<br>- bugfix for read only node highlighting</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=9413">NERD_tree.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.14.2</b></td>
+    <td class="roweven" valign="top" nowrap><i>2008-10-29</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=7006">Marty Grenfell</a></i></td>
+    <td class="roweven" valign="top" width="2000">- compatibility bugfix for older versions of vim, thanks to<br>&nbsp;&nbsp;knekk for helping me track it down and to Sean Chou.<br>- when opening a file (with 'o' or double click) dont split<br>&nbsp;&nbsp;the window unless we absolutely have to. This should make<br>&nbsp;&nbsp;the script work better with other explorer plugins. Thanks<br>&nbsp;&nbsp;to Ryan Penn, Simon Peter Nicholls and Michael<br>- fix a bug where directories starting with a '+' char could<br>&nbsp;&nbsp;not be opened.&nbsp;&nbsp;Thanks to Tomasz Chomiuk.<br>- fix a bug where closing vim with :qa with a tree open in<br>&nbsp;&nbsp;another tab would break, thanks to Denis Pokataev.<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=9331">NERD_tree.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.14.1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2008-10-11</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=7006">Marty Grenfell</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- dont clobber &cpo. Thanks to godlygeek for the bug report<br>- a bunch of other minor fixes and refactoring<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=9228">NERD_tree.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.14.0</b></td>
+    <td class="roweven" valign="top" nowrap><i>2008-09-06</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=7006">Marty Grenfell</a></i></td>
+    <td class="roweven" valign="top" width="2000">- fix a bug where the &lt;c-w&gt;o mapping&nbsp;&nbsp;would cause the tree window to be<br>&nbsp;&nbsp;incorrectly sized when reopened.<br>- add keymapping to delete bookmarks from the bookmarks table, see :help<br>&nbsp;&nbsp;NERDTree-D<br>- lots of refactoring<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=8976">NERD_tree.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.13.0</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2008-07-20</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=7006">Marty Grenfell</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- make NERDTreeChDir option default to 0 (i.e. never change<br>&nbsp;&nbsp;vims current working dir by default)<br>- when moving/deleting nodes with the filesystem menu,<br>&nbsp;&nbsp;move/delete any associated bookmarks<br>- make the t/T on directory nodes open a fresh NERD tree for<br>&nbsp;&nbsp;the selected dir in a new tab, rather than a netrw.<br>- place the cursor at the top of the bookmarks table when<br>&nbsp;&nbsp;opening it with B<br>- make NERDTreeQuitOnOpen option work with the g&lt;tab&gt; and go<br>&nbsp;&nbsp;mappings, thanks to Maxim Kim for the bug report<br>- change how invalid bookmarks are handled. Now they are not<br>&nbsp;&nbsp;deleted. If a bookmark is malformed (in the bookmarks<br>&nbsp;&nbsp;file) or points to an invalid/nonexisting location then<br>&nbsp;&nbsp;print an error and place the offending bookmarks at the<br>&nbsp;&nbsp;bottom of the bookmarks file. See :help<br>&nbsp;&nbsp;|NERDTreeInvalidBookmarks| for info. Thanks to Zhang<br>&nbsp;&nbsp;Shuhan for the suggestion and the testing.<br>- fix a bug with the 'o' mapping that occurred when opening<br>&nbsp;&nbsp;a new buffer for a file whose name was a substring of an<br>&nbsp;&nbsp;already open file. Thanks to Charlton Wang for the report.<br>- stop the script from going into an infinite loop when it<br>&nbsp;&nbsp;tries to cache a named pipe. Thanks to Charlton Wang for<br>&nbsp;&nbsp;the report.<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=8886">NERD_tree.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.12.0</b></td>
+    <td class="roweven" valign="top" nowrap><i>2008-07-04</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=7006">Marty Grenfell</a></i></td>
+    <td class="roweven" valign="top" width="2000">- added a UI for bookmarks. See :help NERDTreeBookmarkTable for details.<br>&nbsp;&nbsp;Thanks to Zhang Shuhan for testing and bug reports.<br>- relaxed the restrictions on bookmark names, now the only restriction is<br>&nbsp;&nbsp;that they cant contain spaces. This allows for e.g. Chinese bookmark<br>&nbsp;&nbsp;names. Thanks to Zhang Shuhan for the suggestion.<br>- combined the NERDTreeWinPos and NERDTreeSplitVertical options. See :help<br>&nbsp;&nbsp;NERDTreeWinPos.<br>- applied a patch from Matan Nassau to add the NERDTreeQuitOnOpen option<br>&nbsp;&nbsp;which closes the tree window after opening a file. See :help<br>&nbsp;&nbsp;NERDTreeQuitOnOpen.<br>- optimised the nerd tree rendering. Now it takes just over 1/3 of the time<br>&nbsp;&nbsp;it previously took to render.<br>- now the tree filter mappings toggle the filters &quot;per tree&quot; rather than<br>&nbsp;&nbsp;globally. The global filter variables are used to set the initial filter<br>&nbsp;&nbsp;settings for each new NERD tree.<br>- fix to window resizing when opening a file when NERD tree is the only<br>&nbsp;&nbsp;window open<br>- other fixes<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=8837">NERD_tree.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.11.0</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2008-06-23</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=7006">Marty Grenfell</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- changes to the 'o' mapping when opening files:<br>&nbsp;&nbsp;- dont clobber &quot;special&quot; windows (eg taglist/quickfix/etc). This should<br>&nbsp;&nbsp;&nbsp;&nbsp;make the NERD tree play nicer with other explorer plugins. Thanks to<br>&nbsp;&nbsp;&nbsp;&nbsp;Yuan Jiang for the suggestion.<br>&nbsp;&nbsp;- if the file is already open in the current tab, just move the cursor<br>&nbsp;&nbsp;&nbsp;&nbsp;to that window<br>- highlight executable files, made some slight changes to other<br>&nbsp;&nbsp;highlighting<br>- if the user resizes the tree window, keep that new size. Dont reset to<br>&nbsp;&nbsp;the default during the &lt;tab&gt; mapping, or :NERDTreeToggle command. Only<br>&nbsp;&nbsp;reset the size if a fresh tree is started with :NERDTree.<br>- remove the &quot;magic&quot; functionality from the &lt;c-j&gt;/&lt;c-k&gt; mappings (it was<br>&nbsp;&nbsp;more confusing than helpful)<br>- other minor fixes<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=8815">NERD_tree.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.10.0</b></td>
+    <td class="roweven" valign="top" nowrap><i>2008-06-17</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=7006">Marty Grenfell</a></i></td>
+    <td class="roweven" valign="top" width="2000">- added bookmarks, see :help NERDTreeBookmarkCommands for details. Thanks to<br>&nbsp;&nbsp;Piotr Czachur for all his testing and suggestions.<br>- fixed screen jumping bug with when &scrolloff != 0<br>- fixed some bugs with copying nodes<br>- other random fixes<br>- changed license to wtfpl<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=8701">NERD_tree.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.9.0</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2008-05-16</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=7006">Marty Grenfell</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- path handling improvements, thanks to Zhang Shuhan for heaps of<br>&nbsp;&nbsp;testing/bug reports<br>&nbsp;&nbsp;&nbsp;&nbsp;* improved how paths are stored, now the script will no longer get<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;confused about drives on MF Windows<br>&nbsp;&nbsp;&nbsp;&nbsp;* made the script way better at handling paths with strange characters<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;in them (eg '$@; etc)<br>- applied a patch from Cory Echols<br>&nbsp;&nbsp;&nbsp;&nbsp;* add the command :NERDTreeClose to close the tree for the current tab<br>&nbsp;&nbsp;&nbsp;&nbsp;* set the filetype for the NERD tree buffer to &quot;nerdtree&quot;</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=8511">NERD_tree.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.8.0</b></td>
+    <td class="roweven" valign="top" nowrap><i>2008-03-30</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=7006">Marty Grenfell</a></i></td>
+    <td class="roweven" valign="top" width="2000">added an option to enable/disable line numbers in the NERD tree window. See :help NERDTreeShowLineNumbers for details. Thanks to Olivier Yiptong for the email.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=8160">NERD_tree.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.7.1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2008-01-18</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=7006">Marty Grenfell</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- Changed the keys for the filesystem menu to be mnemonic rather than arbitrary integers<br>- Documented the copying functionality in the filesystem menu<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=7863">NERD_tree.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.7.0</b></td>
+    <td class="roweven" valign="top" nowrap><i>2007-11-02</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=7006">Marty Grenfell</a></i></td>
+    <td class="roweven" valign="top" width="2000">- Bug fix: Now when you have the tree on the right and you open it with multiple windows stacked, it will take up the full height of the vim window. <br>- Now line numbers always turned off in the tree by default<br>- Implemented copying of nodes (via the filesystem menu) for *nix/macosx<br>- took the help doc out of the script and repackaged the whole thing as a zip<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=7554">NERD_tree.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.6.2</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2007-08-25</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=7006">Marty Grenfell</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Now when you try to open a file node into a window that is modified, the window is not split if the &hidden option is set. Thanks to&nbsp;&nbsp;Niels Aan de Brugh for this suggestion.<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=7330">NERD_tree.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.6.1</b></td>
+    <td class="roweven" valign="top" nowrap><i>2007-07-07</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=7006">Marty Grenfell</a></i></td>
+    <td class="roweven" valign="top" width="2000">- Fixed a stupid (but major) bug with the &lt;tab&gt; mapping. Thanks to Zhang Weiwu for<br>&nbsp;&nbsp;emailing me.<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=7329">NERD_tree.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.6.0</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2007-07-06</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=7006">Marty Grenfell</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- Extended the behaviour of &lt;c-j/k&gt;. Now if the cursor is on a file node<br>&nbsp;&nbsp;and you use &lt;c-j/k&gt; the cursor will jump to its PARENTS next/previous<br>&nbsp;&nbsp;sibling. Go :help NERDTree-c-j and :help NERDTree-c-k for info.<br>- Extended the behaviour of the J/K mappings. Now if the cursor is on the<br>&nbsp;&nbsp;last child of a node and you push J/K it will jump down to the last child<br>&nbsp;&nbsp;of the next/prev of its parents siblings that is open and has children.<br>&nbsp;&nbsp;Go :help NERDTree-J and :help NERDTree-K for info.<br>- The goal of these changes is to make tree navigation faster.<br>- Reorganised the help page a bit.<br>- Removed the E mapping.<br>- bugfixes<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=7303">NERD_tree.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.5.0</b></td>
+    <td class="roweven" valign="top" nowrap><i>2007-06-25</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=7006">Marty Grenfell</a></i></td>
+    <td class="roweven" valign="top" width="2000">- Added an option to enforce case sensitivity when sorting tree nodes.&nbsp;&nbsp;Read :help NERDTreeCaseSensitiveSort for details.&nbsp;&nbsp;(thanks to Michael Madsen for emailing me about this). Case sensitivity defaults to off.<br>- Made the script echo a &quot;please wait&quot; style message when opening large directories. Thanks to AOYAMA Shotaro for this suggestion.<br>- Added 2 public functions that can be used to retrieve the treenode and path that the cursor is on. Read :help NERDTreePublicFunctions for details (thanks again to AOYAMA Shotaro for the idea :).<br>- added 2 new mappings for file nodes: &quot;g&lt;tab&gt;&quot; and &quot;go&quot;. These are the same as the &quot;&lt;tab&gt;&quot; and &quot;o&quot; maps except that the cursor stays in the NERDTree. Note: these maps are slaved to the o and &lt;tab&gt; mappings, so if eg you remap &quot;&lt;tab&gt;&quot; to &quot;i&quot; then the &quot;g&lt;tab&gt;&quot; map will also be changed to &quot;gi&quot;.<br>- Renamed many of the help tags to be simpler.<br>- Simplified the ascii &quot;graphics&quot; for the filesystem menu<br>- Fixed bugs.<br>- Probably created bugs.<br>- Refactoring.<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=7252">NERD_tree.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.4.0</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2007-06-16</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=7006">Marty Grenfell</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- Added the P mapping to jump to the tree root.<br>- Added window centering functionality that can be triggered when doing<br>&nbsp;&nbsp;using any of the tree nav mappings. Essentially, if the cursor comes<br>&nbsp;&nbsp;within a certain distance of the top/bottom of the window then a zz is<br>&nbsp;&nbsp;done in the window. Two related options were added: NERDTreeAutoCenter<br>&nbsp;&nbsp;to turn this functionality on/off, and NERDTreeAutoCenterThreshold to<br>&nbsp;&nbsp;control how close the cursor has to be to the window edge to trigger the<br>&nbsp;&nbsp;centering. See |NERDTreeAutoCenter| for info.<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=7155">NERD_tree.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.3.0</b></td>
+    <td class="roweven" valign="top" nowrap><i>2007-05-23</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=7006">Marty Grenfell</a></i></td>
+    <td class="roweven" valign="top" width="2000">- Tree navigation changes:<br>&nbsp;&nbsp;- Added J and K mappings to jump to last/first child of the current dir.<br>&nbsp;&nbsp;&nbsp;&nbsp;Options to customise these mappings have also been added.<br>&nbsp;&nbsp;- Remapped the jump to next/prev sibling commands to be &lt;C-j&gt; and &lt;C-k&gt; by<br>&nbsp;&nbsp;&nbsp;&nbsp;default.<br>&nbsp;&nbsp;These changes should hopefully make tree navigation mappings easier to<br>&nbsp;&nbsp;remember and use as the j and k keys are simply reused 3 times (twice<br>&nbsp;&nbsp;with modifier keys).<br><br>- Made it so that, when any of the tree filters are toggled, the cursor<br>&nbsp;&nbsp;stays with the selected node (or goes to its parent/grandparent/... if<br>&nbsp;&nbsp;that node is no longer visible)<br>- Fixed an error in the doc for the mouse mode option.<br>- Made the quickhelp correctly display the current single/double click<br>&nbsp;&nbsp;mappings for opening nodes as specified by the NERDTreeMouseMode option.<br>- Fixed a bug where the script was spazzing after prompting you to delete<br>&nbsp;&nbsp;a modified buffer when using the filesystem menu.&nbsp;&nbsp;- Refactoring<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=7100">NERD_tree.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.2.3</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2007-05-12</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=7006">Marty Grenfell</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- Fixed some minor typos in the doc.<br>- Made some minor changes to the output of the 'Tree filtering mappings'<br>&nbsp;&nbsp;part of the quickhelp <br>- Some internal refactoring<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=7041">NERD_tree.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.2.2</b></td>
+    <td class="roweven" valign="top" nowrap><i>2007-04-30</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=7006">Marty Grenfell</a></i></td>
+    <td class="roweven" valign="top" width="2000">Yet more bugfixes... doh</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=7040">NERD_tree.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.2.1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2007-04-29</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=7006">Marty Grenfell</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- fixed a bug that was causing an exception when closing the nerd tree. Thanks<br>&nbsp;&nbsp;to Tim carey-smith and Yu Jun for pointing this out.<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=7035">NERD_tree.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.2.0</b></td>
+    <td class="roweven" valign="top" nowrap><i>2007-04-28</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=7006">Marty Grenfell</a></i></td>
+    <td class="roweven" valign="top" width="2000">- Now 'cursorline' is set in the NERD tree buffer by default. See :help<br>&nbsp;&nbsp;NERDTreeHighlightCursorline for how to disable it.<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=7008">NERD_tree.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.1.2</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2007-04-20</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=7006">Marty Grenfell</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- Stopped the script from clobbering the 1,2,3 .. 9 registers.<br>- Made it &quot;silent!&quot;ly delete buffers when renaming/deleting file nodes.<br>- Minor correction to the doc<br>- Fixed a bug when refreshing that was occurring when the node you<br>&nbsp;&nbsp;refreshed had been deleted externally.<br>- Fixed a bug that was occurring when you open a file that is already open<br>&nbsp;&nbsp;and modified.<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=6958">NERD_tree.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.1.1</b></td>
+    <td class="roweven" valign="top" nowrap><i>2007-04-06</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=7006">Marty Grenfell</a></i></td>
+    <td class="roweven" valign="top" width="2000">- Added a bit more info about the buffers you are prompted to delete when<br>&nbsp;&nbsp;renaming/deleting nodes from the filesystem menu that are already loaded<br>&nbsp;&nbsp;into buffers.<br>- Refactoring and bugfixes<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=6913">NERD_tree.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.1.0</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2007-03-28</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=7006">Marty Grenfell</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- Added NERDTreeMouseMode option. If set to 1, then a double click is<br>&nbsp;&nbsp;required to activate all nodes, if set to 2 then a single click will<br>&nbsp;&nbsp;activate directory nodes, if set to 3 then a single click will activate<br>&nbsp;&nbsp;all nodes.<br>- Now if you delete a file node and have it open in a buffer you are given<br>&nbsp;&nbsp;the option to delete that buffer as well. Similarly if you rename a file<br>&nbsp;&nbsp;you are given the option to delete any buffers containing the old file<br>&nbsp;&nbsp;(if any exist)<br>- When you rename or create a node, the cursor is now put on the new node,<br>&nbsp;&nbsp;this makes it easy immediately edit&nbsp;&nbsp;the new file.<br>- Fixed a bug with the ! mapping that was occurring on windows with paths<br>&nbsp;&nbsp;containing spaces.<br>- Made all the mappings customisable. See |NERD_tree-mappings| for<br>&nbsp;&nbsp;details. A side effect is that a lot of the &quot;double mappings&quot; have<br>&nbsp;&nbsp;disappeared. E.g 'o' is now the key that is used to activate a node,<br>&nbsp;&nbsp;&lt;CR&gt; is no longer mapped to the same.<br>- Made the script echo warnings in some places rather than standard echos<br>- Insane amounts of refactoring all over the place.<br>- Finally removed the blank line that always appears at the top of the<br>&nbsp;&nbsp;NERDTree buffer</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=6894">NERD_tree.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.0.0</b></td>
+    <td class="roweven" valign="top" nowrap><i>2007-03-21</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=7006">Marty Grenfell</a></i></td>
+    <td class="roweven" valign="top" width="2000">- Added two new NERDChristmasTree decorations. First person to spot them<br>&nbsp;&nbsp;and email me gets a free copy of the NERDTree.<br>- Made it so that when you jump around the tree (with the p, s and S<br>&nbsp;&nbsp;mappings) it is counted as a jump by vim. This means if you, eg, push<br>&nbsp;&nbsp;'p' one too many times then you can go `` or ctrl-o.<br>- Added a new option called NERDTreeSortOrder which takes an array of<br>&nbsp;&nbsp;regexs and is used to determine the order that the treenodes are listed<br>&nbsp;&nbsp;in. Go :help NERDTreeSortOrder for details.<br>- Removed the NERDTreeSortDirs option because it is consumed by<br>&nbsp;&nbsp;NERDTreeSortOrder<br>- Added the 'i' mapping which the same as &lt;tab&gt; but requires less effort to<br>&nbsp;&nbsp;reach.<br>- Added the ! mapping which is&nbsp;&nbsp;used to execute file in the tree (after it<br>&nbsp;&nbsp;prompts you for arguments etc)<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=6855">NERD_tree.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.4.1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2007-03-11</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=7006">Marty Grenfell</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Fixed a bug that was preventing the script from opening files that contained a space in linux.<br>Fixed a syntax highlighting bug in the quickhelp.<br>Some refactoring. </td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=6804">NERD_tree.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.4.0</b></td>
+    <td class="roweven" valign="top" nowrap><i>2007-02-27</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=7006">Marty Grenfell</a></i></td>
+    <td class="roweven" valign="top" width="2000">*directories can now be renamed via the filesystem menu<br><br>*some refactoring and bugfixes<br><br>*rewrote the quickhelp that is toggled from the nerd tree window<br><br>*added syntax highlighting to the quickhelp - thanks to Michael Geddes (aka frogonwheels) for his syntax highlighting tips on #vim<br><br>*added some pretty syntax highlighting to the tree parts and added a new option called NERDChristmasTree to turn the highlighting off if&nbsp;&nbsp;it is driving you insane (go :help NERDChristmasTree for details)<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=6640">NERD_tree.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.3.1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2007-01-22</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=7006">Marty Grenfell</a></i></td>
+    <td class="rowodd" valign="top" width="2000">*numerous fixes relating to the filesystem menu<br>*incorporated a fix that allows the NERD tree to handle windows paths separated by either forward slashes OR backslashes... thanks to Jason Mills for emailing me this fix! :D</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=6623">NERD_tree.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.3</b></td>
+    <td class="roweven" valign="top" nowrap><i>2007-01-18</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=7006">Marty Grenfell</a></i></td>
+    <td class="roweven" valign="top" width="2000">*Now you can delete directories as well as files from the tree<br><br>*The NERDTreeChDirMode option now defaults to 1... setting it to 0 causes a small bug for windows users (see :help NERDTreeChDirMode for details)<br><br>*Opening a NERDTree on a different drive will now work for windows users<br><br>*now the X mapping recursively closes all the children of the selected node. Previously it didnt recurse into the child nodes.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=6410">NERD_tree.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.2</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2006-11-13</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=7006">Marty Grenfell</a></i></td>
+    <td class="rowodd" valign="top" width="2000">*added X mapping which closes all the child directory nodes of the current node<br><br>*when you create a new node you can backspace etc to type in the full path - before you had to create it in the directory of the current node<br>*the script now tells you when it has finished a refresh operation (via r and R mappings)<br>*the script also tells you when it has finished a recursive open operation (via O mapping)<br>*the filesystem menu now works with single keystrokes where possible (i.e. you dont have to push enter all the time)<br><br>*the script doesnt spaz out when you try to edit a ~ in windows anymore</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=6336">NERD_tree.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.1.1</b></td>
+    <td class="roweven" valign="top" nowrap><i>2006-10-26</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=7006">Marty Grenfell</a></i></td>
+    <td class="roweven" valign="top" width="2000">Bug fixes:<br>*now when you open a node by double clicking it, vim doesnt go into visual mode. Thanks to Yegappan&nbsp;&nbsp;Lakshmanan for telling me how to fix this bug :D<br>*added some &quot;be patient&quot; messages when you doing time consuming operations like recursively opening a directory or refreshing the tree<br>*fixed a minor bug when moving the tree root up</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=6263">NERD_tree.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.1.0</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2006-10-10</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=7006">Marty Grenfell</a></i></td>
+    <td class="rowodd" valign="top" width="2000">New mappings:<br>* 'cd' changes vim's current working dir to that of the selected node<br>* 'q' calls :NERDTreeToggle to close the NERD tree window<br><br>*opening a dir node recursively now doesnt open dir nodes if the script is instructed to ignore then via file-filters or the hidden-file filter. This increases performance insanely! Esp. if you have .svn dirs.<br><br>*added the NERDTreeChDirMode option which tells the script if/when to change vims current working dir. Go :help NERDTreeChDirMode for details.<br><br>*fixed a feature where vim's current working directory was getting changed all over the show. Now it is never changed unless instructed to do so. Via mappings or the NERDTreeChDirMode option. Thanks to Terrance Cohen for emailing me about this :)<br><br>*random bug fixes</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=6246">NERD_tree.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.0.0</b></td>
+    <td class="roweven" valign="top" nowrap><i>2006-10-04</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=7006">Marty Grenfell</a></i></td>
+    <td class="roweven" valign="top" width="2000">*refreshing a directory now&nbsp;&nbsp;works without closing all the children dir nodes for the refreshed node <br>*we now have a&nbsp;&nbsp;'.. (up a dir)' line at the top of the tree which moves the root up a dir when you open it.<br>*added a 'recursively open directory' mapping<br>*readonly files are now highlighted<br>*fixed bugs<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=6234">NERD_tree.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.0beta3</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2006-09-27</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=7006">Marty Grenfell</a></i></td>
+    <td class="rowodd" valign="top" width="2000">New mappings:<br>*'e' and 'middlemouse' open an explorer window of the current dir in the previous window.<br>*'E' is like 'e' except the explorer is opened in a new split window.<br>*'F' toggles whether files are displayed in the tree or not (this is handy when moving to a different part of the tree).<br>*'D' (toggle hidden files) has been changed to 'H'<br>*'m' brings up the 'filesystem menu' which allows you to do simple filesystem operations: create files/dirs and rename/delete files.<br><br>*The position on the NERD tree window is customisable with the new NERDTreeSplitVertical and NERDTreeWinPos options.<br>*The new NERDTreeShowFiles option allows you to specify whether files are shown on startup. This option, in conjunction with the e/E/middle-mouse mappings allows you to use the NERDTree like windows explorer.<br><br>*Now the H and f mappings work without causing the tree root to be refreshed (so all your nodes dont get closed).<br><br>*Fixed bugs.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=6212">NERD_tree.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.0beta2</b></td>
+    <td class="roweven" valign="top" nowrap><i>2006-09-21</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=7006">Marty Grenfell</a></i></td>
+    <td class="roweven" valign="top" width="2000">*Paramaterised the :NERDTree and :NERDTreeToggle commands so you can give them a directory to start in.<br>*Added t/T mappings which open file nodes in a new tab (T does this silently) -- thanks to vigil for this idea.<br>*Added a mapping to toggle whether the file filter is used.<br>*Added g:NERDTreeSortDirs option which tells the NERD_tree where to put directories relative to files (i.e. top/bottom/alphabetical order with the files)<br>*Symlinks are now highlighted<br>*When you toggle the nerd tree off (with :NERDTreeToggle) (or close the nerd tree window) the cursor position is saved as well as the window position in the nerd tree so when you turn it back on it appears exactly as&nbsp;&nbsp;you left it.<br>*did some hardcore refactoring</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=6185">NERD_tree.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.0beta1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2006-09-15</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=7006">Marty Grenfell</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Initial upload</td>
+</tr>
+</table>
+<!-- finish off the framework -->
+          </td>
+        </tr>
+      </table>
+    </td>
+
+  </tr>
+</table>
+
+<!-- END OF THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr><td colspan="4" bgcolor="#000000"><img src="/images/spacer.gif" height="2" width="1" alt=""></td></tr>
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr>
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+
+    <td align="left" valign="top"><small>
+      If you have questions or remarks about this site, visit the
+      <a href="http://vimonline.sf.net">vimonline development</a> pages.
+      Please use this site responsibly.
+      <br> 
+      
+      Questions about <a href="http://www.vim.org/about.php">Vim</a> should go
+      to the <a href="http://www.vim.org/maillist.php">maillist</a>.
+      Help Bram <a href="http://iccf-holland.org/">help Uganda</a>.
+      </small>
+	&nbsp;
+	&nbsp;
+
+	<!-- Start of StatCounter Code -->
+	<script type="text/javascript" language="javascript">
+	var sc_project=1417324; 
+	var sc_invisible=1; 
+	var sc_partition=11; 
+	var sc_security="d41633bc"; 
+	</script>
+
+	<script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script><noscript><a href="http://www.statcounter.com/" target="_blank"><img  src="http://c12.statcounter.com/counter.php?sc_project=1417324&java=0&security=d41633bc&invisible=0" alt="free tracking" border="0"></a> </noscript>
+	<!-- End of StatCounter Code -->
+          </td>
+
+    <td align="right" valign="top">
+      		<a href="http://sourceforge.net/projects/vim" rel="nofollow"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=8&type=1" width="88" height="31" border="0" alt="SourceForge.net Logo" /></a>
+    </td>
+
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+  </tr>
+
+    
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  
+  </tr>
+</table>
+
+</body>
+</html>
+

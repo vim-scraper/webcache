@@ -1,0 +1,404 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+  <link rel="Stylesheet" type="text/css" href="/css/style.css" >
+  <title>Git Branch Info - A plugin for use on your status line to show info about Git branches : vim online</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <meta name="KEYWORDS" content="Vim, Vi IMproved, text editor, home, documentation, tips, scripts, news">
+  <link rel="shortcut icon" type="image/x-icon" href="/images/vim_shortcut.ico">
+</head>
+
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff"> 
+
+<!-- HEADER, SPONSOR IMAGE, VIM IMAGE AND BOOK AD -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+  <td class="lightbg">&nbsp;&nbsp;&nbsp;</td>
+  <td class="lightbg" align="left"><a href="/sponsor/index.php"><img src="/images/sponsorvim.gif" alt="sponsor Vim development" border="0"></a></td>
+    <td class="lightbg" align="center"><a href="/index.php"><img src="/images/vim_header.gif" border="0" alt="Vim logo"></a></td>
+    <td class="lightbg" align="right"><a href="http://iccf-holland.org/click5.html"><img src="/images/buyhelplearn.gif" alt="Vim Book Ad" border="0"></a></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="darkbg"><img src="/images/spacer.gif" width="1" height="10" alt=""></td>
+  </tr>
+</table>
+<!-- THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+  <col width="180">
+  <col width="1">
+
+  <tr valign="top">
+    <td class="sidebar">
+      <table width="180" cellpadding="4" cellspacing="0" border="0">
+        <tr valign="top">
+          <td class="sidebar">
+
+<!-- INCLUDE THE PAGE NAVIGATION -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+    <tr>
+        <td><small>not logged in (<a href="/login.php">login</a>)</small></td>
+    </tr>
+    <tr><td>
+<small>&nbsp;</small>
+<form action="http://www.google.com/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-3005259998294962:bvyni59kjr1" />
+    <input type="hidden" name="ie" value="ISO-8859-1" />
+    <input type="text" name="q" size="20" />
+    <br>
+    <input type="submit" name="sa" value="Search" />
+  </div>
+</form>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+    </td></tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="1"></td>
+    </tr>
+    <tr>
+        <td class="darkbg"><img src="/images/spacer.gif" alt='' border="0" height="3"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="2"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/index.php">Home</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/search.php">Advanced search</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/about.php">About Vim</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/community.php">Community</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/news/news.php">News</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/sponsor/index.php">Sponsoring</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/trivia.php">Trivia</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/docs.php">Documentation</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/download.php">Download</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/scripts/index.php">Scripts</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/tips/index.php">Tips</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/account/index.php">My Account</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/huh.php">Site Help</a></td>
+        </tr>
+</table>
+
+            <table width="172" cellpadding="0" cellspacing="0" border="0">
+              <tr><td><img src="/images/spacer.gif" alt="" border="0" width="1" height="8"></td></tr>
+              <tr><td class="darkbg"><img src="/images/spacer.gif" width="1" height="3" alt=""></td></tr>
+            </table>
+            <br>
+
+<!-- INCLUDE THE PAGE SIDEBAR TEXT -->
+&nbsp;
+
+          </td>
+        </tr>
+      </table>
+    </td>
+
+    <td class="darkbg"><img src="/images/spacer.gif" width="1" height="1" border="0" alt=""><br></td>
+    <td>
+      <table width="100%" cellpadding="10" cellspacing="0" border="0" bordercolor="red">
+        <tr>
+          <td valign="top">
+
+<span class="txth1">Git Branch Info : A plugin for use on your status line to show info about Git branches</span> 
+
+<br>
+<br>
+
+<!-- karma table -->
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
+  <td>
+    Rating <b>6/6</b>,
+    Downloaded by 1196  </td>
+  <td class="lightbg">
+  <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
+  </td>
+  <td>
+    <a href="http://vim.wikia.com/wiki/Script:2258">Vim wiki</a>
+  </td>  
+</tr>
+</table>
+<p>
+
+<table cellspacing="0" cellpadding="0" border="0">
+<tr><td class="prompt">created by</td></tr>
+<tr><td><a href="/account/profile.php?user_id=301">Eustaquio Rangel de Oliveira Jr.</a></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">script type</td></tr>
+<tr><td>utility</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">description</td></tr>
+<tr><td>This plugin show branches information on the status line.<br>To install, just put this file on ~/.vim/plugins and set your status line:<br><br>:set statusline=%{GitBranchInfoString}<br><br>Of course you can append this configuration to an existing one and make all <br>the customization you want on the status line, like:<br><br>:set statusline=%#ErrorMsg#%{GitBranchInfoString}%#StatusLine#<br><br>The command above will show the Git branches info on the same color as the<br>error messages. You can choose any color scheme you want to. Use<br><br>:help highlight-groups<br><br>to check for some other options.<br><br>There are some customization on the result string based on existing variables <br>like:<br><br>let g:git_branch_status_head_current=1<br>This will show just the current head branch name <br><br>let g:git_branch_status_text=&quot;text&quot;<br>This will show 'text' before the branches. If not set ' Git ' (with a trailing<br>left space) will be displayed.<br><br>let g:git_branch_status_nogit=&quot;&quot;<br>The message when there is no Git repository on the current dir<br><br>let g:git_branch_status_around=&quot;&quot;<br>Characters to put around the branch strings. Need to be a pair or characters,<br>the first will be on the beginning of the branch string and the last on the<br>end.<br><br>let g:git_branch_status_ignore_remotes=1<br>Ignore the remote branches. If you don't want information about them, this can<br>make things works faster.<br><br>If you want to make your own customizations, you can use the GitBranchInfoTokens()<br>function. It returns an array with the current branch as the first element and<br>another array with the other branches as the second element, like:<br><br>:set statusline=%#ErrorMsg#%{GitBranchInfoTokens()[0]}%#StatusLine#<br><br>or<br><br>:set statusline=%#StatusLineNC#\ Git\ %#ErrorMsg#\ %{GitBranchInfoTokens()[0]}\ %#StatusLine#<br><br>will give you a nice custom formatted string.<br><br>This will show you the current branch only. No prefix text, no characters<br>around it. You can also make another functions to use the returned array.<br><br>Get the latest code on <a target="_blank" href="http://github.com/taq/vim-git-branch-info">http://github.com/taq/vim-git-branch-info</A></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">install details</td></tr>
+<tr><td>Download the zip file and unzip it on your .vim directory.</td></tr>
+<tr><td>&nbsp;</td></tr>
+</table>
+
+<!-- rating table -->
+<form name="rating">
+<input type="hidden" name="script_id" value="2258">
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>rate this script</b></td>
+  <td valign="middle">
+    <input type="radio" name="rating" value="life_changing">Life Changing
+    <input type="radio" name="rating" value="helpful">Helpful
+    <input type="radio" name="rating" value="unfulfilling">Unfulfilling&nbsp;
+    <input type="submit" value="rate">
+  </td>
+</tr>
+</table>
+</form>
+<span class="txth2">script versions</span> (<a href="add_script_version.php?script_id=2258">upload new version</a>)
+<p>
+Click on the package to download.
+<p>
+
+<table cellspacing="2" cellpadding="4" border="0" width="100%">
+<tr class='tableheader'>
+        <th valign="top">package</th>
+    <th valign="top">script version</th>
+    <th valign="top">date</th>
+    <th valign="top">Vim version</th>
+    <th valign="top">user</th>
+    <th valign="top">release notes</th>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=12680">vim-git-branch-info.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.1.5</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-03-22</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=301">Eustaquio Rangel de Oliveira Jr.</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- Changed the buffer vars name with the prefix 'gbi' to try to make sure they will not clash with other vars on other scripts. At least now they are declarative to *this* script.<br>- Functions are now local to the script.<br>- Changed some functions scope<br>- Reorganizing functions and moved another one to the public scope.<br>- Implemented autogroup</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=11525">vim-git-branch-info.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.1.4</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-10-13</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=301">Eustaquio Rangel de Oliveira Jr.</a></i></td>
+    <td class="roweven" valign="top" width="2000">Allow for branch names with slashs in them. Thanks to Thomas Adam.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=10711">vim-git-branch-info.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.1.3</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-06-01</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=301">Eustaquio Rangel de Oliveira Jr.</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Fixes bug that prevents git-buffer-info from finding the git-dir. </td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=10593">vim-git-branch-info.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.1.2</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-05-15</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=301">Eustaquio Rangel de Oliveira Jr.</a></i></td>
+    <td class="roweven" valign="top" width="2000">Seems that there were a little bug when loading the file from some other plugin</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=10592">vim-git-branch-info.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.1.1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-05-15</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=301">Eustaquio Rangel de Oliveira Jr.</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Changed the checking about the original branche while saving a file as a optional - and not default - option.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=9329">vim-git-branch-info.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.1.0</b></td>
+    <td class="roweven" valign="top" nowrap><i>2008-10-10</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=301">Eustaquio Rangel de Oliveira Jr.</a></i></td>
+    <td class="roweven" valign="top" width="2000">Fixed the .git relative path, thanks to rtwo for the patch.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=8945">vim-git-branch-info.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.0.9</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2008-07-13</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=301">Eustaquio Rangel de Oliveira Jr.</a></i></td>
+    <td class="rowodd" valign="top" width="2000">There were a bug when rebasing. On this situation HEAD just have a hash and not the information about the branches the plugin looks for. Thanks for Joachim Bargsten for warning me about this.<br>I made a double check on the HEAD file. If there is not the information the script wants, a message about the condition is returned. If something also &quot;explodes&quot; there, there is a try/catch block.<br>If detect this rebase/merge/bisect situation, the file will be always saved without the branch verification.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=8854">vim-git-branch-info.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.0.8</b></td>
+    <td class="roweven" valign="top" nowrap><i>2008-06-26</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=301">Eustaquio Rangel de Oliveira Jr.</a></i></td>
+    <td class="roweven" valign="top" width="2000">Argh, another bug fixed. When trying to write to a file different from the current one, it was not saved. That happened because I was trying to save the file without it's name, presuming if we tell to save to another file with :w the name was correct.It was fixed using expand(&quot;&lt;afile&gt;&quot;). Btw, there was another bug when trying to save to an existing file and need to use the bang (!) with write. It was fixed checking if a bang command was used and executing the bang version if needed.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=8826">vim-git-branch-info.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.0.7</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2008-06-19</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=301">Eustaquio Rangel de Oliveira Jr.</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Found a way of detecting if the file needs to be written. If it's a normal <br>buffer, it is written, if not, the GitBranchInfoWriteCheck() skip it. <br>Useful with other scripts that use temporary buffers like VCSCommand.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=8818">vim-git-branch-info.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.0.6</b></td>
+    <td class="roweven" valign="top" nowrap><i>2008-06-17</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=301">Eustaquio Rangel de Oliveira Jr.</a></i></td>
+    <td class="roweven" valign="top" width="2000">Extra check on permissions of the Git directory.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=8800">vim-git-branch-info.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.0.5</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2008-06-13</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=301">Eustaquio Rangel de Oliveira Jr.</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Removed remote branches on fetch menu, fetch just the remote repository <br>reference.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=8785">vim-git-branch-info.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.0.4</b></td>
+    <td class="roweven" valign="top" nowrap><i>2008-06-11</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=301">Eustaquio Rangel de Oliveira Jr.</a></i></td>
+    <td class="roweven" valign="top" width="2000">Some label changes and the fetch remote branches feature. <br>Added some variables to store the current buffer Git dir and the branch where the buffer was loaded.<br>Added autocmd's to fill the variables above.<br>Added an alert when the branch where the file is being saved is different from where it was loaded.<br>If the current buffer is not on the local dir, make a CD to the buffer dir when need to make a checkout or a fetch.<br>Changed to ask if we want to save a file loaded from one branch into another branch.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=8764">vim-git-branch-info.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.0.3</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2008-06-06</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=301">Eustaquio Rangel de Oliveira Jr.</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Added a menu system with some features for branch changing.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=8758">vim-git-branch-info.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.0.2</b></td>
+    <td class="roweven" valign="top" nowrap><i>2008-06-05</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=301">Eustaquio Rangel de Oliveira Jr.</a></i></td>
+    <td class="roweven" valign="top" width="2000">- Changed version number.<br>- The previous version performance SUCKED a lot. I removed the system() <br>call to Vim internal file functions and seems that now things are really faster.<br>&nbsp;&nbsp;- Removed the g:git_branch_status_all option and changed to g:git_branch_status_head_current, who just shows the current head branch. This can make things faster because if does not seeks for the other branches and&nbsp;&nbsp;just show the current branch with GitBranchInfoString.<br>- Added the feature to find the remote branches (which we're not using right now but I have some plans) and the option g:git_branch_status_ignore_remotes to avoid this feature if you don't need it.<br>- Fixed some errors on the statusline samples using GitBranchInfoTokens.<br>- Created the variable to handle the remote list on GitBranchInfoString.<br>- Changed the way GitBranchInfoString returns the info string, based on the configuration chosen.<br>- GitBranchInfoTokens() was fully rewritten because of the previous poor performance.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=8756">vim-git-branch-info.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.0.1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2008-06-05</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=301">Eustaquio Rangel de Oliveira Jr.</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Initial upload</td>
+</tr>
+</table>
+<!-- finish off the framework -->
+          </td>
+        </tr>
+      </table>
+    </td>
+
+  </tr>
+</table>
+
+<!-- END OF THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr><td colspan="4" bgcolor="#000000"><img src="/images/spacer.gif" height="2" width="1" alt=""></td></tr>
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr>
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+
+    <td align="left" valign="top"><small>
+      If you have questions or remarks about this site, visit the
+      <a href="http://vimonline.sf.net">vimonline development</a> pages.
+      Please use this site responsibly.
+      <br> 
+      
+      Questions about <a href="http://www.vim.org/about.php">Vim</a> should go
+      to the <a href="http://www.vim.org/maillist.php">maillist</a>.
+      Help Bram <a href="http://iccf-holland.org/">help Uganda</a>.
+      </small>
+	&nbsp;
+	&nbsp;
+
+	<!-- Start of StatCounter Code -->
+	<script type="text/javascript" language="javascript">
+	var sc_project=1417324; 
+	var sc_invisible=1; 
+	var sc_partition=11; 
+	var sc_security="d41633bc"; 
+	</script>
+
+	<script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script><noscript><a href="http://www.statcounter.com/" target="_blank"><img  src="http://c12.statcounter.com/counter.php?sc_project=1417324&java=0&security=d41633bc&invisible=0" alt="free tracking" border="0"></a> </noscript>
+	<!-- End of StatCounter Code -->
+          </td>
+
+    <td align="right" valign="top">
+      		<a href="http://sourceforge.net/projects/vim" rel="nofollow"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=8&type=1" width="88" height="31" border="0" alt="SourceForge.net Logo" /></a>
+    </td>
+
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+  </tr>
+
+    
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  
+  </tr>
+</table>
+
+</body>
+</html>
+

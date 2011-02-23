@@ -1,0 +1,468 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+  <link rel="Stylesheet" type="text/css" href="/css/style.css" >
+  <title>python.vim - Enhanced version of the python syntax highlighting script : vim online</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <meta name="KEYWORDS" content="Vim, Vi IMproved, text editor, home, documentation, tips, scripts, news">
+  <link rel="shortcut icon" type="image/x-icon" href="/images/vim_shortcut.ico">
+</head>
+
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff"> 
+
+<!-- HEADER, SPONSOR IMAGE, VIM IMAGE AND BOOK AD -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+  <td class="lightbg">&nbsp;&nbsp;&nbsp;</td>
+  <td class="lightbg" align="left"><a href="/sponsor/index.php"><img src="/images/sponsorvim.gif" alt="sponsor Vim development" border="0"></a></td>
+    <td class="lightbg" align="center"><a href="/index.php"><img src="/images/vim_header.gif" border="0" alt="Vim logo"></a></td>
+    <td class="lightbg" align="right"><a href="http://iccf-holland.org/click5.html"><img src="/images/buyhelplearn.gif" alt="Vim Book Ad" border="0"></a></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="darkbg"><img src="/images/spacer.gif" width="1" height="10" alt=""></td>
+  </tr>
+</table>
+<!-- THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+  <col width="180">
+  <col width="1">
+
+  <tr valign="top">
+    <td class="sidebar">
+      <table width="180" cellpadding="4" cellspacing="0" border="0">
+        <tr valign="top">
+          <td class="sidebar">
+
+<!-- INCLUDE THE PAGE NAVIGATION -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+    <tr>
+        <td><small>not logged in (<a href="/login.php">login</a>)</small></td>
+    </tr>
+    <tr><td>
+<small>&nbsp;</small>
+<form action="http://www.google.com/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-3005259998294962:bvyni59kjr1" />
+    <input type="hidden" name="ie" value="ISO-8859-1" />
+    <input type="text" name="q" size="20" />
+    <br>
+    <input type="submit" name="sa" value="Search" />
+  </div>
+</form>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+    </td></tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="1"></td>
+    </tr>
+    <tr>
+        <td class="darkbg"><img src="/images/spacer.gif" alt='' border="0" height="3"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="2"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/index.php">Home</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/search.php">Advanced search</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/about.php">About Vim</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/community.php">Community</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/news/news.php">News</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/sponsor/index.php">Sponsoring</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/trivia.php">Trivia</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/docs.php">Documentation</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/download.php">Download</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/scripts/index.php">Scripts</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/tips/index.php">Tips</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/account/index.php">My Account</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/huh.php">Site Help</a></td>
+        </tr>
+</table>
+
+            <table width="172" cellpadding="0" cellspacing="0" border="0">
+              <tr><td><img src="/images/spacer.gif" alt="" border="0" width="1" height="8"></td></tr>
+              <tr><td class="darkbg"><img src="/images/spacer.gif" width="1" height="3" alt=""></td></tr>
+            </table>
+            <br>
+
+<!-- INCLUDE THE PAGE SIDEBAR TEXT -->
+&nbsp;
+
+          </td>
+        </tr>
+      </table>
+    </td>
+
+    <td class="darkbg"><img src="/images/spacer.gif" width="1" height="1" border="0" alt=""><br></td>
+    <td>
+      <table width="100%" cellpadding="10" cellspacing="0" border="0" bordercolor="red">
+        <tr>
+          <td valign="top">
+
+<span class="txth1">python.vim : Enhanced version of the python syntax highlighting script</span> 
+
+<br>
+<br>
+
+<!-- karma table -->
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
+  <td>
+    Rating <b>912/376</b>,
+    Downloaded by 42409  </td>
+  <td class="lightbg">
+  <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
+  </td>
+  <td>
+    <a href="http://vim.wikia.com/wiki/Script:790">Vim wiki</a>
+  </td>  
+</tr>
+</table>
+<p>
+
+<table cellspacing="0" cellpadding="0" border="0">
+<tr><td class="prompt">created by</td></tr>
+<tr><td><a href="/account/profile.php?user_id=1203">Dmitry Vasiliev</a></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">script type</td></tr>
+<tr><td>syntax</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">description</td></tr>
+<tr><td>Enhanced version of the original (from vim6.1) python.vim for Python programming language.<br><br>The changes since the original python.vim are:<br><br>- changed strings highlighting;<br>- enhanced special symbols highlighting inside strings;<br>- enhanced numbers highlighting;<br>- added optional highlighting for %-formatting inside strings;<br>- added highlighting for some error conditions (wrong symbols in source file,<br>&nbsp;&nbsp;mixing spaces and tabs, wrong number values,<br>&nbsp;&nbsp;wrong %-formatting inside strings);<br>- added highlighting for magic comments: source code encoding<br>&nbsp;&nbsp;and #! (executable) strings;<br>- added highlighting for new exceptions and builtins introduced in python 2.3, 2.4 and 2.5;<br>- added highlighting for doctests;<br>- added highlighting for new @decorator syntax introduced in Python 2.4a2;<br>- added highlighting for trailing-space errors (triggered by new<br>&nbsp;&nbsp;option: python_highlight_space_errors);<br>- added highlighting for variable name errors;<br>- added highlighting for hex number errors;</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">install details</td></tr>
+<tr><td>Place python.vim file in ~/.vim/syntax/ folder.</td></tr>
+<tr><td>&nbsp;</td></tr>
+</table>
+
+<!-- rating table -->
+<form name="rating">
+<input type="hidden" name="script_id" value="790">
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>rate this script</b></td>
+  <td valign="middle">
+    <input type="radio" name="rating" value="life_changing">Life Changing
+    <input type="radio" name="rating" value="helpful">Helpful
+    <input type="radio" name="rating" value="unfulfilling">Unfulfilling&nbsp;
+    <input type="submit" value="rate">
+  </td>
+</tr>
+</table>
+</form>
+<span class="txth2">script versions</span> (<a href="add_script_version.php?script_id=790">upload new version</a>)
+<p>
+Click on the package to download.
+<p>
+
+<table cellspacing="2" cellpadding="4" border="0" width="100%">
+<tr class='tableheader'>
+        <th valign="top">package</th>
+    <th valign="top">script version</th>
+    <th valign="top">date</th>
+    <th valign="top">Vim version</th>
+    <th valign="top">user</th>
+    <th valign="top">release notes</th>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=14268">python3.0.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>3.0.6</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-11-15</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=1203">Dmitry Vasiliev</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- Fixed highlighting for str.format syntax. Patch by Anton Butanaev.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=14240">python3.0.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>3.0.5</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-11-12</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=1203">Dmitry Vasiliev</a></i></td>
+    <td class="roweven" valign="top" width="2000">- Fixed bytes escapes highlighting. Patch by Anton Butanaev.<br>- Fixed highlighting for erroneous numbers.<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=14216">python3.0.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>3.0.4</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-11-09</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=1203">Dmitry Vasiliev</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- Applied patch by Anton Butanaev which fixes highlighting for raw bytes literals</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=12805">python3.0.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>3.0.3</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-04-09</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=1203">Dmitry Vasiliev</a></i></td>
+    <td class="roweven" valign="top" width="2000">- Applied patch by Andrea Riciputi with new configuration options &quot;python_highlight_builtin_objs&quot; and &quot;python_highlight_builtin_funcs&quot;</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=12804">python.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.6.6</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-04-09</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=1203">Dmitry Vasiliev</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- Applied patch by Andrea Riciputi with new configuration options &quot;python_highlight_builtin_objs&quot; and &quot;python_highlight_builtin_funcs&quot;</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=11057">python3.0.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>3.0.2</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-07-24</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=1203">Dmitry Vasiliev</a></i></td>
+    <td class="roweven" valign="top" width="2000">- Applied patch by Caleb Adamantine which fixes highlighting for decorators</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=11056">python.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.6.5</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-07-24</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=1203">Dmitry Vasiliev</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- Applied patch by Caleb Adamantine which fixes highlighting for decorators</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=10509">python3.0.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>3.0.1</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-05-03</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=1203">Dmitry Vasiliev</a></i></td>
+    <td class="roweven" valign="top" width="2000">- Fixed compatibility with pyrex.vim</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=10508">python.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.6.4</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-05-03</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=1203">Dmitry Vasiliev</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- Fixed compatibility with pyrex.vim</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=9627">python3.0.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>3.0.0</b></td>
+    <td class="roweven" valign="top" nowrap><i>2008-12-07</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=1203">Dmitry Vasiliev</a></i></td>
+    <td class="roweven" valign="top" width="2000">*Warning: For Python 3.0 only!*<br><br>- Added support for non-ASCII identifiers;<br>- Added support for new text strings and binary data (bytes);<br>- Updated support for numeric literals;<br>- Updated support for str.format;<br>- Added new builtins introduced in Python 2.6: &quot;ascii&quot;, &quot;exec&quot;, &quot;memoryview&quot;, &quot;print&quot;;<br>- Added new keyword &quot;nonlocal&quot;;<br>- Removed exception &quot;StandardError&quot;;<br>- Removed builtins: &quot;apply&quot;, &quot;basestring&quot;, &quot;buffer&quot;, &quot;callable&quot;, &quot;coerce&quot;, &quot;execfile&quot;, &quot;file&quot;, &quot;help&quot;, &quot;intern&quot;, &quot;long&quot;, &quot;raw_input&quot;, &quot;reduce&quot;, &quot;reload&quot;, &quot;unichr&quot;, &quot;unicode&quot;, &quot;xrange&quot;;</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=9293">python.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.6.3</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2008-09-29</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=1203">Dmitry Vasiliev</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- Return back trailing 'L' support for numbers. Actually it was changed for future Python 3.0 syntax but in wrong file;</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=9271">python.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.6.2</b></td>
+    <td class="roweven" valign="top" nowrap><i>2008-09-22</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=1203">Dmitry Vasiliev</a></i></td>
+    <td class="roweven" valign="top" width="2000">- Added &quot;VMSError&quot; exception;<br>- Added support for b&quot;...&quot; syntax;<br>- Added support for str.format brace escaping;</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=9262">python.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.6.1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2008-09-21</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=1203">Dmitry Vasiliev</a></i></td>
+    <td class="rowodd" valign="top" width="2000">First Python 2.6 compatible release. Changes:<br><br>- Added new builtins and exceptions introduced in Python 2.6: &quot;bin&quot;, &quot;bytearray&quot;, &quot;bytes&quot;, &quot;format&quot;, &quot;next&quot;, &quot;BufferError&quot;, &quot;BytesWarning&quot;;<br>- Added builtin &quot;__debug__&quot;;<br>- Added global variables: &quot;__doc__&quot;, &quot;__file__&quot;, &quot;__name__&quot;, &quot;__package__&quot;;<br>- Removed &quot;OverflowWarning&quot; (removed in Python 2.5);<br>- Added option &quot;python_print_as_function&quot; for highlight &quot;print&quot; as a function;<br>- Added support for new integer literal syntax &quot;0o&quot; and &quot;0b&quot;;<br>- Added support for string.Template syntax controlled by &quot;python_highlight_string_templates&quot; option;<br>- Added support for str.format syntax controlled by &quot;python_highlight_string_format&quot; option;<br>- Removed highlighting for &quot;--&quot; and &quot;++&quot; because it is a valid Python expressions which can be interpreted as &quot;a + +b&quot;;</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=6716">python.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.5.6</b></td>
+    <td class="roweven" valign="top" nowrap><i>2007-02-04</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=1203">Dmitry Vasiliev</a></i></td>
+    <td class="roweven" valign="top" width="2000">- Applied patch by Pedro Algarvio to enable spell checking only for<br>&nbsp;&nbsp;the right spots (strings and comments);<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=6230">python.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.5.5</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2006-09-26</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=1203">Dmitry Vasiliev</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- added new warnings (ImportWarning, UnicodeWarning) introduced in Python 2.5;</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=5677">python.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.5.4</b></td>
+    <td class="roweven" valign="top" nowrap><i>2006-05-11</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=1203">Dmitry Vasiliev</a></i></td>
+    <td class="roweven" valign="top" width="2000">- added highlighting for erroneous operators: &&, ||, ++, --, ===<br>&nbsp;&nbsp;(inspired by <a target="_blank" href="http://www.vim.org/tips/tip.php?tip_id=969">http://www.vim.org/tips/tip.php?tip_id=969</A>, thanks<br>&nbsp;&nbsp;Jeroen Ruigrok van der Werven for the link);<br>- added highlighting for new 'with' statement and 'BaseException',<br>&nbsp;&nbsp;'GeneratorExit' exceptions introduced in Python 2.5;<br>- added highlighting for 'OverflowWarning' exception which had been<br>&nbsp;&nbsp;forgotten;<br>- returned more robust recognition for function names;</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=5373">python.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.5.3</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2006-03-06</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=1203">Dmitry Vasiliev</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- fixed %-formatting highlighting for raw unicode strings;</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=4998">python.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.5.2</b></td>
+    <td class="roweven" valign="top" nowrap><i>2006-01-23</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=1203">Dmitry Vasiliev</a></i></td>
+    <td class="roweven" valign="top" width="2000">- slightly simplified option handling;<br>- fixed regexp for indentation errors;<br>- fixed highlighting for backslashed symbols inside strings;<br>- added highlighting for trailing-space errors (triggered by new<br>&nbsp;&nbsp;option: python_highlight_space_errors);<br>- added highlighting for variable name errors;<br>- added highlighting for hex number errors;</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=4009">python.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.5.1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2005-03-13</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=1203">Dmitry Vasiliev</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- added new builtins 'all' and 'any' (Python 2.5a0)</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=3303">python.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.4.2</b></td>
+    <td class="roweven" valign="top" nowrap><i>2004-08-05</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=1203">Dmitry Vasiliev</a></i></td>
+    <td class="roweven" valign="top" width="2000">- added highlighting for new @decorator syntax introduced in Python 2.4a2</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=2840">python.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.4.1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2004-03-17</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=1203">Dmitry Vasiliev</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- new versioning scheme (based on python version numbers);<br>- added highlighting for new types/builtins introduced in python 2.4<br>&nbsp;&nbsp; (set, frozenset, reversed, sorted);<br>- new option added: python_slow_sync (set this for slow but more<br>&nbsp;&nbsp;robust syntax synchronization);<br>- added highlighting for doctests;</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=2410">python.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.19</b></td>
+    <td class="roweven" valign="top" nowrap><i>2003-10-17</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=1203">Dmitry Vasiliev</a></i></td>
+    <td class="roweven" valign="top" width="2000">- new option added: python_highlight_indent_errors;<br>- python_highlight_all now not override previously<br>&nbsp;&nbsp;set options, for example code<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let python_highlight_indent_errors = 0<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let python_highlight_all = 1<br>&nbsp;&nbsp;set all highlight options except indentation<br>&nbsp;&nbsp;errors highlighting option;</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=2392">python.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.17</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2003-10-13</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=1203">Dmitry Vasiliev</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Initial upload</td>
+</tr>
+</table>
+<!-- finish off the framework -->
+          </td>
+        </tr>
+      </table>
+    </td>
+
+  </tr>
+</table>
+
+<!-- END OF THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr><td colspan="4" bgcolor="#000000"><img src="/images/spacer.gif" height="2" width="1" alt=""></td></tr>
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr>
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+
+    <td align="left" valign="top"><small>
+      If you have questions or remarks about this site, visit the
+      <a href="http://vimonline.sf.net">vimonline development</a> pages.
+      Please use this site responsibly.
+      <br> 
+      
+      Questions about <a href="http://www.vim.org/about.php">Vim</a> should go
+      to the <a href="http://www.vim.org/maillist.php">maillist</a>.
+      Help Bram <a href="http://iccf-holland.org/">help Uganda</a>.
+      </small>
+	&nbsp;
+	&nbsp;
+
+	<!-- Start of StatCounter Code -->
+	<script type="text/javascript" language="javascript">
+	var sc_project=1417324; 
+	var sc_invisible=1; 
+	var sc_partition=11; 
+	var sc_security="d41633bc"; 
+	</script>
+
+	<script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script><noscript><a href="http://www.statcounter.com/" target="_blank"><img  src="http://c12.statcounter.com/counter.php?sc_project=1417324&java=0&security=d41633bc&invisible=0" alt="free tracking" border="0"></a> </noscript>
+	<!-- End of StatCounter Code -->
+          </td>
+
+    <td align="right" valign="top">
+      		<a href="http://sourceforge.net/projects/vim" rel="nofollow"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=8&type=1" width="88" height="31" border="0" alt="SourceForge.net Logo" /></a>
+    </td>
+
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+  </tr>
+
+    
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  
+  </tr>
+</table>
+
+</body>
+</html>
+

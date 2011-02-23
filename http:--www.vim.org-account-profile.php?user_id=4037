@@ -1,0 +1,437 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+  <link rel="Stylesheet" type="text/css" href="/css/style.css" >
+  <title>user profile : vim online</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <meta name="KEYWORDS" content="Vim, Vi IMproved, text editor, home, documentation, tips, scripts, news">
+  <link rel="shortcut icon" type="image/x-icon" href="/images/vim_shortcut.ico">
+</head>
+
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff"> 
+
+<!-- HEADER, SPONSOR IMAGE, VIM IMAGE AND BOOK AD -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+  <td class="lightbg">&nbsp;&nbsp;&nbsp;</td>
+  <td class="lightbg" align="left"><a href="/sponsor/index.php"><img src="/images/sponsorvim.gif" alt="sponsor Vim development" border="0"></a></td>
+    <td class="lightbg" align="center"><a href="/index.php"><img src="/images/vim_header.gif" border="0" alt="Vim logo"></a></td>
+    <td class="lightbg" align="right"><a href="http://iccf-holland.org/click5.html"><img src="/images/buyhelplearn.gif" alt="Vim Book Ad" border="0"></a></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="darkbg"><img src="/images/spacer.gif" width="1" height="10" alt=""></td>
+  </tr>
+</table>
+<!-- THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+  <col width="180">
+  <col width="1">
+
+  <tr valign="top">
+    <td class="sidebar">
+      <table width="180" cellpadding="4" cellspacing="0" border="0">
+        <tr valign="top">
+          <td class="sidebar">
+
+<!-- INCLUDE THE PAGE NAVIGATION -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+    <tr>
+        <td><small>not logged in (<a href="/login.php">login</a>)</small></td>
+    </tr>
+    <tr><td>
+<small>&nbsp;</small>
+<form action="http://www.google.com/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-3005259998294962:bvyni59kjr1" />
+    <input type="hidden" name="ie" value="ISO-8859-1" />
+    <input type="text" name="q" size="20" />
+    <br>
+    <input type="submit" name="sa" value="Search" />
+  </div>
+</form>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+    </td></tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="1"></td>
+    </tr>
+    <tr>
+        <td class="darkbg"><img src="/images/spacer.gif" alt='' border="0" height="3"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="2"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/index.php">Home</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/search.php">Advanced search</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/about.php">About Vim</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/community.php">Community</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/news/news.php">News</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/sponsor/index.php">Sponsoring</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/trivia.php">Trivia</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/docs.php">Documentation</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/download.php">Download</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/scripts/index.php">Scripts</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/tips/index.php">Tips</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/account/index.php">My Account</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/huh.php">Site Help</a></td>
+        </tr>
+</table>
+
+            <table width="172" cellpadding="0" cellspacing="0" border="0">
+              <tr><td><img src="/images/spacer.gif" alt="" border="0" width="1" height="8"></td></tr>
+              <tr><td class="darkbg"><img src="/images/spacer.gif" width="1" height="3" alt=""></td></tr>
+            </table>
+            <br>
+
+<!-- INCLUDE THE PAGE SIDEBAR TEXT -->
+&nbsp;
+
+          </td>
+        </tr>
+      </table>
+    </td>
+
+    <td class="darkbg"><img src="/images/spacer.gif" width="1" height="1" border="0" alt=""><br></td>
+    <td>
+      <table width="100%" cellpadding="10" cellspacing="0" border="0" bordercolor="red">
+        <tr>
+          <td valign="top">
+
+<h1>Profile</h1>
+<table cellpadding="4" cellspacing="2" border="0">
+<tr>
+    <td class="prompt">user name</td>
+    <td>t.link</td>
+</tr>
+<tr>
+    <td class="prompt">first name</td>
+    <td>Tom</td>
+</tr>
+<tr>
+    <td class="prompt">last name</td>
+    <td>Link</td>
+</tr>
+<tr>
+    <td class="prompt">email</td>
+    <td>micathom<img src="/images/emailat.png" width="7" height="11">gmail<img src="/images/emaildot.png" width="4" height="11">com</td>
+</tr>
+<tr>
+    <td class="prompt">homepage</td>
+            <td></td>
+    </tr>
+<tr>
+    <td class="prompt">registered Vim<br>user or sponsor</td>
+    <td valign="top">no, or user has chosen to conceal his donation</td>
+</tr>
+</table>
+
+<h1>Script Contributions</h1>
+<table cellspacing="4" cellpadding="2" border="0">
+<tr>
+    <td class="roweven"><a href="/scripts/script.php?script_id=2594">tmarks</a></td>
+    <td class="roweven">Browse, place, & delete marks</td>
+</tr>
+<tr>
+    <td class="rowodd"><a href="/scripts/script.php?script_id=853">File-local variables</a></td>
+    <td class="rowodd">Set/let per-file-variables à la Emacs</td>
+</tr>
+<tr>
+    <td class="roweven"><a href="/scripts/script.php?script_id=861">Viki/Deplate</a></td>
+    <td class="roweven">A personal wiki for Vim</td>
+</tr>
+<tr>
+    <td class="rowodd"><a href="/scripts/script.php?script_id=2033">trag</a></td>
+    <td class="rowodd">A language & project-aware regexp builder & runner for vimgrep</td>
+</tr>
+<tr>
+    <td class="roweven"><a href="/scripts/script.php?script_id=2037">hookcursormoved</a></td>
+    <td class="roweven">Facilitate definition of triggers on CursorMoved[I] events</td>
+</tr>
+<tr>
+    <td class="rowodd"><a href="/scripts/script.php?script_id=889">EvalSelection.vim</a></td>
+    <td class="rowodd">evaluate selected code (vim, bash, ruby, python, perl, (mz)scheme, tcl, R, SPSS)</td>
+</tr>
+<tr>
+    <td class="roweven"><a href="/scripts/script.php?script_id=1030">scalefont</a></td>
+    <td class="roweven">Switch between your favourite font/gui settings</td>
+</tr>
+<tr>
+    <td class="rowodd"><a href="/scripts/script.php?script_id=1915">tbibtools</a></td>
+    <td class="rowodd">bibtex-related utilities (sort, reformat, list contents ...)</td>
+</tr>
+<tr>
+    <td class="roweven"><a href="/scripts/script.php?script_id=1160">tSkeleton</a></td>
+    <td class="roweven">File Templates and Code Skeletons/Snippets</td>
+</tr>
+<tr>
+    <td class="rowodd"><a href="/scripts/script.php?script_id=1173">tComment</a></td>
+    <td class="rowodd">An extensible & universal comment plugin that also handles embedded filetypes</td>
+</tr>
+<tr>
+    <td class="roweven"><a href="/scripts/script.php?script_id=1284">TortoiseSVN.vim</a></td>
+    <td class="roweven">Support for TortoiseSVN (a subversion client for Windows)</td>
+</tr>
+<tr>
+    <td class="rowodd"><a href="/scripts/script.php?script_id=1272">php_check_syntax.vim</a></td>
+    <td class="rowodd">Check the syntax when saving or reading a php file</td>
+</tr>
+<tr>
+    <td class="roweven"><a href="/scripts/script.php?script_id=1751">tGpg</a></td>
+    <td class="roweven">Yet another plugin for encrypting files with gpg</td>
+</tr>
+<tr>
+    <td class="rowodd"><a href="/scripts/script.php?script_id=1414">bibFindIndex</a></td>
+    <td class="rowodd">Jump to an index in an alphabetically ordered file</td>
+</tr>
+<tr>
+    <td class="roweven"><a href="/scripts/script.php?script_id=1430">please_remove_me</a></td>
+    <td class="roweven">[removed]</td>
+</tr>
+<tr>
+    <td class="rowodd"><a href="/scripts/script.php?script_id=1431">checksyntax</a></td>
+    <td class="rowodd">Check for syntax erros when saving a file (php, ruby, tex ...)</td>
+</tr>
+<tr>
+    <td class="roweven"><a href="/scripts/script.php?script_id=1460">glark.vim</a></td>
+    <td class="roweven">a wrapper for the glark command (a grep-like utility)</td>
+</tr>
+<tr>
+    <td class="rowodd"><a href="/scripts/script.php?script_id=1730">tAssert</a></td>
+    <td class="rowodd">Simple assertions, poor man's contracts for vim script</td>
+</tr>
+<tr>
+    <td class="roweven"><a href="/scripts/script.php?script_id=2580">spec.vim</a></td>
+    <td class="roweven">Behaviour-driven design/testing for VIM script</td>
+</tr>
+<tr>
+    <td class="rowodd"><a href="/scripts/script.php?script_id=3013">tcommand</a></td>
+    <td class="rowodd">Select and execute a command or menu item from a list</td>
+</tr>
+<tr>
+    <td class="roweven"><a href="/scripts/script.php?script_id=1838">tEchoPair</a></td>
+    <td class="roweven">Display the matching parenthesis/pair in the echo area</td>
+</tr>
+<tr>
+    <td class="rowodd"><a href="/scripts/script.php?script_id=1863">tlib</a></td>
+    <td class="rowodd">Some utility functions</td>
+</tr>
+<tr>
+    <td class="roweven"><a href="/scripts/script.php?script_id=1864">tmru</a></td>
+    <td class="roweven">Most Recently Used Files</td>
+</tr>
+<tr>
+    <td class="rowodd"><a href="/scripts/script.php?script_id=1865">tselectfiles</a></td>
+    <td class="rowodd">A quick file selector/browser/explorer (sort of)</td>
+</tr>
+<tr>
+    <td class="roweven"><a href="/scripts/script.php?script_id=1866">tselectbuffer</a></td>
+    <td class="roweven">A quick buffer selector/switcher</td>
+</tr>
+<tr>
+    <td class="rowodd"><a href="/scripts/script.php?script_id=1906">tmboxbrowser</a></td>
+    <td class="rowodd">A mbox browser -- Read your e-mails with vim</td>
+</tr>
+<tr>
+    <td class="roweven"><a href="/scripts/script.php?script_id=2014">ttoc</a></td>
+    <td class="roweven">A regexp-based table of contents of the current buffer</td>
+</tr>
+<tr>
+    <td class="rowodd"><a href="/scripts/script.php?script_id=2017">tregisters</a></td>
+    <td class="rowodd">List, edit, and run/execute registers/clipboards</td>
+</tr>
+<tr>
+    <td class="roweven"><a href="/scripts/script.php?script_id=2018">ttags</a></td>
+    <td class="roweven">Tag list browser (List, filter, preview, jump to tags)</td>
+</tr>
+<tr>
+    <td class="rowodd"><a href="/scripts/script.php?script_id=2040">tcalc</a></td>
+    <td class="rowodd">A small ruby-based RPN-calculator</td>
+</tr>
+<tr>
+    <td class="roweven"><a href="/scripts/script.php?script_id=2055">ttagecho</a></td>
+    <td class="roweven">Show current tag information</td>
+</tr>
+<tr>
+    <td class="rowodd"><a href="/scripts/script.php?script_id=2056">please remove me</a></td>
+    <td class="rowodd">please remove me</td>
+</tr>
+<tr>
+    <td class="roweven"><a href="/scripts/script.php?script_id=2069">ttagcomplete</a></td>
+    <td class="roweven">Context-sensitive tags-based completion and code skeletons</td>
+</tr>
+<tr>
+    <td class="rowodd"><a href="/scripts/script.php?script_id=2070">bbcode</a></td>
+    <td class="rowodd">bbcode syntax and code templates</td>
+</tr>
+<tr>
+    <td class="roweven"><a href="/scripts/script.php?script_id=2076">setsyntax</a></td>
+    <td class="roweven">Set options specific for the syntax group under cursor</td>
+</tr>
+<tr>
+    <td class="rowodd"><a href="/scripts/script.php?script_id=2279">cmdlinehelp</a></td>
+    <td class="rowodd">Display help on the command currently being edited in the command line</td>
+</tr>
+<tr>
+    <td class="roweven"><a href="/scripts/script.php?script_id=2289">loremipsum</a></td>
+    <td class="roweven">A dummy text generator</td>
+</tr>
+<tr>
+    <td class="rowodd"><a href="/scripts/script.php?script_id=2292">linglang</a></td>
+    <td class="rowodd">Dynamically switch languages/settings in multi-lingual documents</td>
+</tr>
+<tr>
+    <td class="roweven"><a href="/scripts/script.php?script_id=2437">shymenu</a></td>
+    <td class="roweven">Show the menu bar only when pressing an accelerator key</td>
+</tr>
+<tr>
+    <td class="rowodd"><a href="/scripts/script.php?script_id=2584">quickfixsigns</a></td>
+    <td class="rowodd">Mark quickfix & location list items with signs</td>
+</tr>
+<tr>
+    <td class="roweven"><a href="/scripts/script.php?script_id=2894">vikitasks</a></td>
+    <td class="roweven">Search viki files for tasks and display them in a list</td>
+</tr>
+<tr>
+    <td class="rowodd"><a href="/scripts/script.php?script_id=2915">startup_profile</a></td>
+    <td class="rowodd">Profile vim startup</td>
+</tr>
+<tr>
+    <td class="roweven"><a href="/scripts/script.php?script_id=2917">tplugin</a></td>
+    <td class="roweven">A plugin loader/runtimepath manager with autoload capabilities</td>
+</tr>
+<tr>
+    <td class="rowodd"><a href="/scripts/script.php?script_id=2991">rcom</a></td>
+    <td class="rowodd">Evaluate R (www.r-project.org) code via rcom (windows only)</td>
+</tr>
+<tr>
+    <td class="roweven"><a href="/scripts/script.php?script_id=3051">vimform</a></td>
+    <td class="roweven">Simple text-based forms for vim</td>
+</tr>
+<tr>
+    <td class="rowodd"><a href="/scripts/script.php?script_id=3214">presets</a></td>
+    <td class="rowodd">Quickly switch between vim configurations</td>
+</tr>
+<tr>
+    <td class="roweven"><a href="/scripts/script.php?script_id=3326">stakeholders</a></td>
+    <td class="roweven">Pimp up your old templates with dynamic place-holders</td>
+</tr>
+</table>
+<!-- finish off the framework -->
+          </td>
+        </tr>
+      </table>
+    </td>
+
+  </tr>
+</table>
+
+<!-- END OF THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr><td colspan="4" bgcolor="#000000"><img src="/images/spacer.gif" height="2" width="1" alt=""></td></tr>
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr>
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+
+    <td align="left" valign="top"><small>
+      If you have questions or remarks about this site, visit the
+      <a href="http://vimonline.sf.net">vimonline development</a> pages.
+      Please use this site responsibly.
+      <br> 
+      
+      Questions about <a href="http://www.vim.org/about.php">Vim</a> should go
+      to the <a href="http://www.vim.org/maillist.php">maillist</a>.
+      Help Bram <a href="http://iccf-holland.org/">help Uganda</a>.
+      </small>
+	&nbsp;
+	&nbsp;
+
+	<!-- Start of StatCounter Code -->
+	<script type="text/javascript" language="javascript">
+	var sc_project=1417324; 
+	var sc_invisible=1; 
+	var sc_partition=11; 
+	var sc_security="d41633bc"; 
+	</script>
+
+	<script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script><noscript><a href="http://www.statcounter.com/" target="_blank"><img  src="http://c12.statcounter.com/counter.php?sc_project=1417324&java=0&security=d41633bc&invisible=0" alt="free tracking" border="0"></a> </noscript>
+	<!-- End of StatCounter Code -->
+          </td>
+
+    <td align="right" valign="top">
+      		<a href="http://sourceforge.net/projects/vim" rel="nofollow"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=8&type=1" width="88" height="31" border="0" alt="SourceForge.net Logo" /></a>
+    </td>
+
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+  </tr>
+
+    
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  
+  </tr>
+</table>
+
+</body>
+</html>
+
+

@@ -1,0 +1,324 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+  <link rel="Stylesheet" type="text/css" href="/css/style.css" >
+  <title>AutoClose - Auto close pair of characters : vim online</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <meta name="KEYWORDS" content="Vim, Vi IMproved, text editor, home, documentation, tips, scripts, news">
+  <link rel="shortcut icon" type="image/x-icon" href="/images/vim_shortcut.ico">
+</head>
+
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff"> 
+
+<!-- HEADER, SPONSOR IMAGE, VIM IMAGE AND BOOK AD -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+  <td class="lightbg">&nbsp;&nbsp;&nbsp;</td>
+  <td class="lightbg" align="left"><a href="/sponsor/index.php"><img src="/images/sponsorvim.gif" alt="sponsor Vim development" border="0"></a></td>
+    <td class="lightbg" align="center"><a href="/index.php"><img src="/images/vim_header.gif" border="0" alt="Vim logo"></a></td>
+    <td class="lightbg" align="right"><a href="http://iccf-holland.org/click5.html"><img src="/images/buyhelplearn.gif" alt="Vim Book Ad" border="0"></a></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="darkbg"><img src="/images/spacer.gif" width="1" height="10" alt=""></td>
+  </tr>
+</table>
+<!-- THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+  <col width="180">
+  <col width="1">
+
+  <tr valign="top">
+    <td class="sidebar">
+      <table width="180" cellpadding="4" cellspacing="0" border="0">
+        <tr valign="top">
+          <td class="sidebar">
+
+<!-- INCLUDE THE PAGE NAVIGATION -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+    <tr>
+        <td><small>not logged in (<a href="/login.php">login</a>)</small></td>
+    </tr>
+    <tr><td>
+<small>&nbsp;</small>
+<form action="http://www.google.com/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-3005259998294962:bvyni59kjr1" />
+    <input type="hidden" name="ie" value="ISO-8859-1" />
+    <input type="text" name="q" size="20" />
+    <br>
+    <input type="submit" name="sa" value="Search" />
+  </div>
+</form>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+    </td></tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="1"></td>
+    </tr>
+    <tr>
+        <td class="darkbg"><img src="/images/spacer.gif" alt='' border="0" height="3"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="2"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/index.php">Home</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/search.php">Advanced search</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/about.php">About Vim</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/community.php">Community</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/news/news.php">News</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/sponsor/index.php">Sponsoring</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/trivia.php">Trivia</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/docs.php">Documentation</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/download.php">Download</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/scripts/index.php">Scripts</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/tips/index.php">Tips</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/account/index.php">My Account</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/huh.php">Site Help</a></td>
+        </tr>
+</table>
+
+            <table width="172" cellpadding="0" cellspacing="0" border="0">
+              <tr><td><img src="/images/spacer.gif" alt="" border="0" width="1" height="8"></td></tr>
+              <tr><td class="darkbg"><img src="/images/spacer.gif" width="1" height="3" alt=""></td></tr>
+            </table>
+            <br>
+
+<!-- INCLUDE THE PAGE SIDEBAR TEXT -->
+&nbsp;
+
+          </td>
+        </tr>
+      </table>
+    </td>
+
+    <td class="darkbg"><img src="/images/spacer.gif" width="1" height="1" border="0" alt=""><br></td>
+    <td>
+      <table width="100%" cellpadding="10" cellspacing="0" border="0" bordercolor="red">
+        <tr>
+          <td valign="top">
+
+<span class="txth1">AutoClose : Auto close pair of characters</span> 
+
+<br>
+<br>
+
+<!-- karma table -->
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
+  <td>
+    Rating <b>262/84</b>,
+    Downloaded by 3245  </td>
+  <td class="lightbg">
+  <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
+  </td>
+  <td>
+    <a href="http://vim.wikia.com/wiki/Script:2009">Vim wiki</a>
+  </td>  
+</tr>
+</table>
+<p>
+
+<table cellspacing="0" cellpadding="0" border="0">
+<tr><td class="prompt">created by</td></tr>
+<tr><td><a href="/account/profile.php?user_id=13032">Thiago Alves</a></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">script type</td></tr>
+<tr><td>utility</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">description</td></tr>
+<tr><td>*NOTE*<br>======<br>The header of the plugin says it is on version 1.1, but this is wrong. The 1.4 version is indeed the 1.4 version only with a wrong header. Next version I'll fix it.<br><br>Overview<br>=======<br>This plugin was&nbsp;&nbsp;born&nbsp;&nbsp;as&nbsp;&nbsp;a&nbsp;&nbsp;personal&nbsp;&nbsp;need&nbsp;&nbsp;to&nbsp;&nbsp;have some little special features from other editors into my preferred one. The Eclipse IDE editor has an auto-complete for&nbsp;&nbsp;open-close&nbsp;&nbsp;pair&nbsp;&nbsp;of&nbsp;&nbsp;characters&nbsp;&nbsp;feature&nbsp;&nbsp;that I always wanted into Vim.<br><br>As soon&nbsp;&nbsp;as you type&nbsp;&nbsp;a character that&nbsp;&nbsp;could have a&nbsp;&nbsp;close pair,&nbsp;&nbsp;Eclipse automatically puts its&nbsp;&nbsp;pair in front of your cursor,&nbsp;&nbsp;and&nbsp;&nbsp;if you continue to type and type&nbsp;&nbsp;the close character,&nbsp;&nbsp;Eclipse is smart enough&nbsp;&nbsp;to not insert it again (it just move your cursor one character forward).<br><br>But the Eclipse editor don't stop&nbsp;&nbsp;there.&nbsp;&nbsp;If you type an &quot;open&quot; character on any part of your code that&nbsp;&nbsp;should not have a pair completion,&nbsp;&nbsp;it will not insert the close character for you.<br><br>The AutoClose plugin is an attempt to reproduce this behavior on Vim. <br><br>Configuration<br>==========<br>1. Definning characters to auto close<br>--------------------------------------------------<br>If you&nbsp;&nbsp;are not sattisfied&nbsp;&nbsp;with the default&nbsp;&nbsp;characters to close&nbsp;&nbsp;you can define your own by setting the global variable g:AutoClosePairs.<br><br>The only thing to be careful is that this variable must be a dictionary on the following format:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;{&quot;&lt;open_char&gt;&quot;: &quot;&lt;close_char&gt;&quot;}<br><br>Otherwise the&nbsp;&nbsp;plugin will&nbsp;&nbsp;not recognize&nbsp;&nbsp;the settings&nbsp;&nbsp;and will&nbsp;&nbsp;use the default values.<br><br>Following is the default declaration for auto close chars. If this configuration is enought, you don't need to configure nothing:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;let g:AutoClosePairs = {'(': ')', '{': '}', '[': ']', '&quot;': '&quot;', &quot;'&quot;: &quot;'&quot;}<br><br><br>2. Definning protected regions<br>-----------------------------------------<br>Inside some special&nbsp;&nbsp;regions&nbsp;&nbsp;the&nbsp;&nbsp;auto&nbsp;&nbsp;close&nbsp;&nbsp;feature&nbsp;&nbsp;is far from util, actually we&nbsp;&nbsp;can say&nbsp;&nbsp;that on those&nbsp;&nbsp;regions,&nbsp;&nbsp;this feature&nbsp;&nbsp;is worst&nbsp;&nbsp;than no feature at all. This is the case for &quot;Comments&quot; and &quot;Strings&quot;.<br><br>If you edit files with this characteristic and there is more than comments and strings where you would like&nbsp;&nbsp;to protect from auto close,&nbsp;&nbsp;just define the global variable g:AutoCloseProtectedRegions.<br><br>This variable must be&nbsp;&nbsp;a list of strings or the&nbsp;&nbsp;plugin will not recognize it and will&nbsp;&nbsp;use the defaults parameters.&nbsp;&nbsp;The format&nbsp;&nbsp;of this variable should be:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;[&quot;&lt;protected_region1&gt;&quot;, &quot;&lt;protected_region2&gt;&quot;, ...]<br><br>Following is the default declaration to the protected regions.&nbsp;&nbsp;If you are satisfied with this, you don't have to set this setting:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;let g:AutoCloseProtectedRegions. = [&quot;Comment&quot;, &quot;String&quot;, &quot;Character&quot;]<br><br><br>3. Turning AutoComplete on and off<br>------------------------------------------------<br>As AutoComplete change the buffer you are editing, sometimes you just want to turn this feature off for a while and than turn it on again.<br><br>AutoComplete provide three&nbsp;&nbsp;commands that can be mapped to&nbsp;&nbsp;any key as you want to do that task:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;1. AutoCloseOn<br>&nbsp;&nbsp;&nbsp;&nbsp;2. AutoCloseOff<br>&nbsp;&nbsp;&nbsp;&nbsp;3. AutoCloseToggle<br><br>And if you don't want to map anything, just use them on the command mode.<br></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">install details</td></tr>
+<tr><td>Put the script into your $VIM/plugin directory and the documentation into $VIM/doc and type on your vim:<br><br>&nbsp;&nbsp; :helptags $VIM/doc<br><br>You can change $VIM to whatever place your vim can automatically read plugins and documentations like in your home vim directory.</td></tr>
+<tr><td>&nbsp;</td></tr>
+</table>
+
+<!-- rating table -->
+<form name="rating">
+<input type="hidden" name="script_id" value="2009">
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>rate this script</b></td>
+  <td valign="middle">
+    <input type="radio" name="rating" value="life_changing">Life Changing
+    <input type="radio" name="rating" value="helpful">Helpful
+    <input type="radio" name="rating" value="unfulfilling">Unfulfilling&nbsp;
+    <input type="submit" value="rate">
+  </td>
+</tr>
+</table>
+</form>
+<span class="txth2">script versions</span> (<a href="add_script_version.php?script_id=2009">upload new version</a>)
+<p>
+Click on the package to download.
+<p>
+
+<table cellspacing="2" cellpadding="4" border="0" width="100%">
+<tr class='tableheader'>
+        <th valign="top">package</th>
+    <th valign="top">script version</th>
+    <th valign="top">date</th>
+    <th valign="top">Vim version</th>
+    <th valign="top">user</th>
+    <th valign="top">release notes</th>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=9223">autoclose.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.4</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2008-09-04</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=13032">Thiago Alves</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Fix a problem when use AutoClose on Visual Mode Blockwise. Unfortunatelly Backspace will not work as expected on this mode due Vim behavior. E.g.:<br>Select a column of text and press &lt;Backspace&gt; than &lt;Delete&gt; keys. You'll see that only the first line will be changed.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=9169">autoclose.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.3</b></td>
+    <td class="roweven" valign="top" nowrap><i>2008-08-25</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=13032">Thiago Alves</a></i></td>
+    <td class="roweven" valign="top" width="2000">Fix a bug that prevent to automatically close pair of equal chars that the first one is entered on the very first column.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=9163">autoclose.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.2</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2008-08-24</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=13032">Thiago Alves</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Fixed the not closing bug to string on some languages. Perhaps other strange behaviors also happens because of that!</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=9110">autoclose.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.1</b></td>
+    <td class="roweven" valign="top" nowrap><i>2008-08-11</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=13032">Thiago Alves</a></i></td>
+    <td class="roweven" valign="top" width="2000">Complete refactor of the plugin.<br>Remove all autocommands and drastically simplify the whole plugin.<br>This version was refactor thanks for the simple_pairs plugin that was launched on 08/10/2008 that point me to a much simpler way!</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=7620">townkAutoCompleteChar.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.9</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2007-09-04</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=13032">Thiago Alves</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Initial upload</td>
+</tr>
+</table>
+<!-- finish off the framework -->
+          </td>
+        </tr>
+      </table>
+    </td>
+
+  </tr>
+</table>
+
+<!-- END OF THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr><td colspan="4" bgcolor="#000000"><img src="/images/spacer.gif" height="2" width="1" alt=""></td></tr>
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr>
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+
+    <td align="left" valign="top"><small>
+      If you have questions or remarks about this site, visit the
+      <a href="http://vimonline.sf.net">vimonline development</a> pages.
+      Please use this site responsibly.
+      <br> 
+      
+      Questions about <a href="http://www.vim.org/about.php">Vim</a> should go
+      to the <a href="http://www.vim.org/maillist.php">maillist</a>.
+      Help Bram <a href="http://iccf-holland.org/">help Uganda</a>.
+      </small>
+	&nbsp;
+	&nbsp;
+
+	<!-- Start of StatCounter Code -->
+	<script type="text/javascript" language="javascript">
+	var sc_project=1417324; 
+	var sc_invisible=1; 
+	var sc_partition=11; 
+	var sc_security="d41633bc"; 
+	</script>
+
+	<script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script><noscript><a href="http://www.statcounter.com/" target="_blank"><img  src="http://c12.statcounter.com/counter.php?sc_project=1417324&java=0&security=d41633bc&invisible=0" alt="free tracking" border="0"></a> </noscript>
+	<!-- End of StatCounter Code -->
+          </td>
+
+    <td align="right" valign="top">
+      		<a href="http://sourceforge.net/projects/vim" rel="nofollow"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=8&type=1" width="88" height="31" border="0" alt="SourceForge.net Logo" /></a>
+    </td>
+
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+  </tr>
+
+    
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  
+  </tr>
+</table>
+
+</body>
+</html>
+

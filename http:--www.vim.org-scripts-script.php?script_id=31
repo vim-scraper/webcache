@@ -1,0 +1,540 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+  <link rel="Stylesheet" type="text/css" href="/css/style.css" >
+  <title>a.vim - Alternate Files quickly (.c --> .h etc) : vim online</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <meta name="KEYWORDS" content="Vim, Vi IMproved, text editor, home, documentation, tips, scripts, news">
+  <link rel="shortcut icon" type="image/x-icon" href="/images/vim_shortcut.ico">
+</head>
+
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff"> 
+
+<!-- HEADER, SPONSOR IMAGE, VIM IMAGE AND BOOK AD -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+  <td class="lightbg">&nbsp;&nbsp;&nbsp;</td>
+  <td class="lightbg" align="left"><a href="/sponsor/index.php"><img src="/images/sponsorvim.gif" alt="sponsor Vim development" border="0"></a></td>
+    <td class="lightbg" align="center"><a href="/index.php"><img src="/images/vim_header.gif" border="0" alt="Vim logo"></a></td>
+    <td class="lightbg" align="right"><a href="http://iccf-holland.org/click5.html"><img src="/images/buyhelplearn.gif" alt="Vim Book Ad" border="0"></a></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="darkbg"><img src="/images/spacer.gif" width="1" height="10" alt=""></td>
+  </tr>
+</table>
+<!-- THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+  <col width="180">
+  <col width="1">
+
+  <tr valign="top">
+    <td class="sidebar">
+      <table width="180" cellpadding="4" cellspacing="0" border="0">
+        <tr valign="top">
+          <td class="sidebar">
+
+<!-- INCLUDE THE PAGE NAVIGATION -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+    <tr>
+        <td><small>not logged in (<a href="/login.php">login</a>)</small></td>
+    </tr>
+    <tr><td>
+<small>&nbsp;</small>
+<form action="http://www.google.com/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-3005259998294962:bvyni59kjr1" />
+    <input type="hidden" name="ie" value="ISO-8859-1" />
+    <input type="text" name="q" size="20" />
+    <br>
+    <input type="submit" name="sa" value="Search" />
+  </div>
+</form>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+    </td></tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="1"></td>
+    </tr>
+    <tr>
+        <td class="darkbg"><img src="/images/spacer.gif" alt='' border="0" height="3"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="2"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/index.php">Home</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/search.php">Advanced search</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/about.php">About Vim</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/community.php">Community</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/news/news.php">News</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/sponsor/index.php">Sponsoring</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/trivia.php">Trivia</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/docs.php">Documentation</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/download.php">Download</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/scripts/index.php">Scripts</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/tips/index.php">Tips</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/account/index.php">My Account</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/huh.php">Site Help</a></td>
+        </tr>
+</table>
+
+            <table width="172" cellpadding="0" cellspacing="0" border="0">
+              <tr><td><img src="/images/spacer.gif" alt="" border="0" width="1" height="8"></td></tr>
+              <tr><td class="darkbg"><img src="/images/spacer.gif" width="1" height="3" alt=""></td></tr>
+            </table>
+            <br>
+
+<!-- INCLUDE THE PAGE SIDEBAR TEXT -->
+&nbsp;
+
+          </td>
+        </tr>
+      </table>
+    </td>
+
+    <td class="darkbg"><img src="/images/spacer.gif" width="1" height="1" border="0" alt=""><br></td>
+    <td>
+      <table width="100%" cellpadding="10" cellspacing="0" border="0" bordercolor="red">
+        <tr>
+          <td valign="top">
+
+<span class="txth1">a.vim : Alternate Files quickly (.c --&gt; .h etc)</span> 
+
+<br>
+<br>
+
+<!-- karma table -->
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
+  <td>
+    Rating <b>2597/846</b>,
+    Downloaded by 35977  </td>
+  <td class="lightbg">
+  <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
+  </td>
+  <td>
+    <a href="http://vim.wikia.com/wiki/Script:31">Vim wiki</a>
+  </td>  
+</tr>
+</table>
+<p>
+
+<table cellspacing="0" cellpadding="0" border="0">
+<tr><td class="prompt">created by</td></tr>
+<tr><td><a href="/account/profile.php?user_id=49">Mike Sharpe</a></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">script type</td></tr>
+<tr><td>utility</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">description</td></tr>
+<tr><td>A few of quick commands to swtich between source files and header files quickly.<br><br>:A switches to the header file corresponding to the current file being edited (or vise versa)<br>:AS splits and switches<br>:AV vertical splits and switches<br>:AT new tab and switches<br>:AN cycles through matches<br>:IH switches to file under cursor<br>:IHS splits and switches<br>:IHV vertical splits and switches<br>:IHT new tab and switches<br>:IHN cycles through matches<br>&lt;Leader&gt;ih switches to file under cursor<br>&lt;Leader&gt;is switches to the alternate file of file under cursor (e.g. on&nbsp;&nbsp;&lt;foo.h&gt; switches to foo.cpp)<br>&lt;Leader&gt;ihn cycles through matches<br><br>E.g. if you are editing foo.c and need to edit foo.h simply execute :A and you will be editting foo.h, to switch back to foo.c execute :A again. <br><br>Can be configured to support a variety of languages. Builtin support for C, C++ and ADA95</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">install details</td></tr>
+<tr><td>Drop a.vim into your favorite plugin directory or source the script from your .vimrc file<br>Drop alternate.txt into you doc directory and run helptags</td></tr>
+<tr><td>&nbsp;</td></tr>
+</table>
+
+<!-- rating table -->
+<form name="rating">
+<input type="hidden" name="script_id" value="31">
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>rate this script</b></td>
+  <td valign="middle">
+    <input type="radio" name="rating" value="life_changing">Life Changing
+    <input type="radio" name="rating" value="helpful">Helpful
+    <input type="radio" name="rating" value="unfulfilling">Unfulfilling&nbsp;
+    <input type="submit" value="rate">
+  </td>
+</tr>
+</table>
+</form>
+<span class="txth2">script versions</span> (<a href="add_script_version.php?script_id=31">upload new version</a>)
+<p>
+Click on the package to download.
+<p>
+
+<table cellspacing="2" cellpadding="4" border="0" width="100%">
+<tr class='tableheader'>
+        <th valign="top">package</th>
+    <th valign="top">script version</th>
+    <th valign="top">date</th>
+    <th valign="top">Vim version</th>
+    <th valign="top">user</th>
+    <th valign="top">release notes</th>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=7218">a.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.18</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2007-06-07</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=49">Mike Sharpe</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Recent versions since 2.16 broke user defined alternate specifications. This patch fixes that.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=7162">a.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.17</b></td>
+    <td class="roweven" valign="top" nowrap><i>2007-05-23</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=49">Mike Sharpe</a></i></td>
+    <td class="roweven" valign="top" width="2000">Fix a bug were spaces in filenames and/or directory names would prevent the alternate file being openned. Thanks to Nathan Stien (for the bug report and patch) and Soeren Sonnenburg (for the bug report).</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=6886">a.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.16</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2007-03-16</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=49">Mike Sharpe</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Recent patches broke the script in some area, mainly in the area of file extensions which contain a dot...e.g. aspx.cs. Switched to using a dictionary instead of the curly brace variable things.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=6347">alternate.txt</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.15 doc</b></td>
+    <td class="roweven" valign="top" nowrap><i>2006-10-27</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=49">Mike Sharpe</a></i></td>
+    <td class="roweven" valign="top" width="2000">Docs for 2.15</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=6346">a.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.15</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2006-10-27</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=49">Mike Sharpe</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Initial support for jumping to files under the cursor. New commands IH, IHS, IHV, IHT and IHN. Added sample macros for jumping to the source file corresponding to the header file under the cursor (e.g. jumping on #include &lt;myfile.h&gt; will find myfile.cpp).<br><br>See documentation for more details.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=5698">a.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.14</b></td>
+    <td class="roweven" valign="top" nowrap><i>2006-05-14</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=49">Mike Sharpe</a></i></td>
+    <td class="roweven" valign="top" width="2000">Added new :AN command which cycles through all matches after switching to a new file. E.g. vi a.c, :A switches to a.h, :AN might switch to a.hpp if a.h and a.hpp exist. Will only likely be an issue in a big project with with same named source/header files around the place. Will likely only be an issue if you are using the search path and regex features of a.vim.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=5697">alternate.txt</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.14 doc</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2006-05-14</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=49">Mike Sharpe</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Documentation for a.vim v2.14. Drop it in your doc directory and run helptags.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=5653">a.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.13</b></td>
+    <td class="roweven" valign="top" nowrap><i>2006-05-07</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=49">Mike Sharpe</a></i></td>
+    <td class="roweven" valign="top" width="2000">Added new &quot;AT&quot; command which finds the alternate file and opens in a new tab. Similarly to the &quot;A&quot; and &quot;AS&quot; commands, if the buffer is already open it simply switches to that buffer in the corresponding tab/window. This script will only work with VIM7 from this version forward.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=4154">a.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.12</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2005-04-12</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=49">Mike Sharpe</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Added alternate mappings for OCaml. Nothing more. No reason to upgrade...unless you use OCaml.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=3563">a.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.11a</b></td>
+    <td class="roweven" valign="top" nowrap><i>2004-10-19</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=49">Mike Sharpe</a></i></td>
+    <td class="roweven" valign="top" width="2000">Fix a minor bug when adding alternate extensions. Thanks ilya.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=3479">a.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.11</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2004-09-24</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=49">Mike Sharpe</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Fix some bugs which have recently crept in. I gave this some regression testing...so I hope all are fixed now. Mot notably, vim foo/a.c would not alternate to foo/a.h. Not sure how that broke...but it is fixed now. Other features still appear to work. Let me know if there are issues.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=3455">a.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.10</b></td>
+    <td class="roweven" valign="top" nowrap><i>2004-09-15</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=49">Mike Sharpe</a></i></td>
+    <td class="roweven" valign="top" width="2000">Added a new variable (g:alternateNoDefaultAlternate) which can be set in the .vimrc/_vimrc file to prevent a.vim from creating new files. This is useful when it is not desired to have a.vim to alternate to the default alternation for a particular extension. E.g. if a.c is being editted and a.h does not exist anywhere and :A is done then if g:alternateNoDefaultAlternate is non-zero a.h will not be created. By default the value of g:alternateNoDefaultAlternate is 0 to maintain existing behaviour.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=3439">a.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.9</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2004-09-10</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=49">Mike Sharpe</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Allow the extension of a file to be more than the text after the last dot. E.g. adding settings like<br><br>let g:alternateExtensions_{'aspx'} = &quot;aspx.cs,aspx.CS&quot;<br>let g:alternateExtensions_{'aspx.cs'} = &quot;aspx,ASPX&quot;<br><br>will allow a.vim to alternate between foo.aspx and foo.aspx.cs and vice versa. Previous versions would not accept .aspx.cs as an exstension. This version is ok with that.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=3200">a.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.8</b></td>
+    <td class="roweven" valign="top" nowrap><i>2004-07-01</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=49">Mike Sharpe</a></i></td>
+    <td class="roweven" valign="top" width="2000">[CORRECTION]More enhancements from Bindu Wavell. A new search path type <br>of &quot;reg:&quot; wasadded. This version allows alternation of files based on regxes. E.g.<br>&quot;reg:/inc/src/g/&quot; will replace every instance of 'inc' with 'src' in the source<br>file path. This is useful for alternating between /some/path/inc/project/foo.h<br>to /some/path/src/project/foo.c. Similarly &quot;reg:/src/inc/g/&quot; is the opposite<br>alternation. See the comments for ExpandAlternatePath() for more information.<br>Soon I will produce some formal documentation for this...until then the script<br>is reasonably well commented.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=3028">a.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.7</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2004-05-16</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=49">Mike Sharpe</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Reworked all the logic for finding alternate files. The files in memory are prefered to files on disk now too. When there are multiple matches for a file found the file in memory is favour, files in the current directory are favoured over files on the path. Hopefully this fixes the inconsistencies in previous versions. Hopefully everything still works too.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=2833">a.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.6a</b></td>
+    <td class="roweven" valign="top" nowrap><i>2004-03-14</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=49">Mike Sharpe</a></i></td>
+    <td class="roweven" valign="top" width="2000">Remove reference to Decho which was accidentally left in after previous debuging. Sorry all.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=2830">a.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.6</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2004-03-13</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=49">Mike Sharpe</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Implemented a fix from Matt Perry, vi test.cc junktest.h and the :A would alternate to junktest.h and not test.h. Also some minor clean up of the directory search code. <br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=2669">a.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.5</b></td>
+    <td class="roweven" valign="top" nowrap><i>2004-01-20</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=49">Mike Sharpe</a></i></td>
+    <td class="roweven" valign="top" width="2000">Fixed an inconsistency. In 2.4 :A would always switch to the alternate file, regardless of whether unsaved changes were in the current file. In some cases it was possible to lose changes. This update changes :A back to 2.3 behaviour, but with a nicer error message, and provides support for a :A! command which will force the switch. This seems more consistent with the builtin vim/vi commands. Please let me know if there are any problems. </td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=2010">a.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.4</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2003-05-21</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=49">Mike Sharpe</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Fix error which occured when alternating from a file which had not been saved.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=1240">a.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.3</b></td>
+    <td class="roweven" valign="top" nowrap><i>2002-09-24</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=49">Mike Sharpe</a></i></td>
+    <td class="roweven" valign="top" width="2000">Added support provided by Bindu Wavell to search for the alternate file across directories.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=657">a.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.2</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2002-03-06</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=49">Mike Sharpe</a></i></td>
+    <td class="rowodd" valign="top" width="2000">minor clean up. Remove repeated code used to <br>setup the default alternate file mappings. No changes in functionality. No reason to upgrade.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=531">a.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.1</b></td>
+    <td class="roweven" valign="top" nowrap><i>2002-02-02</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=49">Mike Sharpe</a></i></td>
+    <td class="roweven" valign="top" width="2000">simplified the config using vim's curly brace variables. Should behave the same way version 2.0X behaves....no huge reason to upgrade.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=518">a.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.0.1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2002-01-29</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=104">Leif Wickland</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Adds support for vertically splitting via the command :AV</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=384">a.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.0b</b></td>
+    <td class="roweven" valign="top" nowrap><i>2001-11-29</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=49">Mike Sharpe</a></i></td>
+    <td class="roweven" valign="top" width="2000">Added support for Ada95 extensions<br>minor bug fixed too.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=381">a.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.0a</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2001-11-27</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=49">Mike Sharpe</a></i></td>
+    <td class="rowodd" valign="top" width="2000">bug fix. handle the cases were the is no alternate file.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=380">a.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.0</b></td>
+    <td class="roweven" valign="top" nowrap><i>2001-11-27</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=49">Mike Sharpe</a></i></td>
+    <td class="roweven" valign="top" width="2000">Complete rewrite. Now the supported extensions are configurable instead of being part of the code.<br>Notes on how to configure are in the comments in the file. Expect bugs, please be brave. Will fix reported issue quickly.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=379">a.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.4</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2001-11-27</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=49">Mike Sharpe</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Added support for .hpp/.HPP files. </td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=334">a.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.3</b></td>
+    <td class="roweven" valign="top" nowrap><i>2001-11-10</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=49">Mike Sharpe</a></i></td>
+    <td class="roweven" valign="top" width="2000">Take care of some issues with case-sensitivity of the extension on windows platforms.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=333">a.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.2</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2001-11-10</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=49">Mike Sharpe</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Minor changes to cater for &quot;files&quot; which are in vim buffers but not on disk (yet).</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=163">a.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.1</b></td>
+    <td class="roweven" valign="top" nowrap><i>2001-09-12</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=104">Leif Wickland</a></i></td>
+    <td class="roweven" valign="top" width="2000">This is a plugin-ized version of 1.1 for vim 5.7</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=129">a.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2001-08-22</i></td>
+    <td class="rowodd" valign="top" nowrap>5.7</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=49">Mike Sharpe</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Added copyright information.<br>Support .cc, .cxx, .C extensions for C++ too.<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=44">a.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.0</b></td>
+    <td class="roweven" valign="top" nowrap><i>2001-07-09</i></td>
+    <td class="roweven" valign="top" nowrap>5.7</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=49">Mike Sharpe</a></i></td>
+    <td class="roweven" valign="top" width="2000">Corrected vim version. The script works with 5.7, but should work with 6.0 too. </td>
+</tr>
+</table>
+<!-- finish off the framework -->
+          </td>
+        </tr>
+      </table>
+    </td>
+
+  </tr>
+</table>
+
+<!-- END OF THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr><td colspan="4" bgcolor="#000000"><img src="/images/spacer.gif" height="2" width="1" alt=""></td></tr>
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr>
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+
+    <td align="left" valign="top"><small>
+      If you have questions or remarks about this site, visit the
+      <a href="http://vimonline.sf.net">vimonline development</a> pages.
+      Please use this site responsibly.
+      <br> 
+      
+      Questions about <a href="http://www.vim.org/about.php">Vim</a> should go
+      to the <a href="http://www.vim.org/maillist.php">maillist</a>.
+      Help Bram <a href="http://iccf-holland.org/">help Uganda</a>.
+      </small>
+	&nbsp;
+	&nbsp;
+
+	<!-- Start of StatCounter Code -->
+	<script type="text/javascript" language="javascript">
+	var sc_project=1417324; 
+	var sc_invisible=1; 
+	var sc_partition=11; 
+	var sc_security="d41633bc"; 
+	</script>
+
+	<script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script><noscript><a href="http://www.statcounter.com/" target="_blank"><img  src="http://c12.statcounter.com/counter.php?sc_project=1417324&java=0&security=d41633bc&invisible=0" alt="free tracking" border="0"></a> </noscript>
+	<!-- End of StatCounter Code -->
+          </td>
+
+    <td align="right" valign="top">
+      		<a href="http://sourceforge.net/projects/vim" rel="nofollow"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=8&type=1" width="88" height="31" border="0" alt="SourceForge.net Logo" /></a>
+    </td>
+
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+  </tr>
+
+    
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  
+  </tr>
+</table>
+
+</body>
+</html>
+

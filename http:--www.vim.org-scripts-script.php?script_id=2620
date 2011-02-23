@@ -1,0 +1,452 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+  <link rel="Stylesheet" type="text/css" href="/css/style.css" >
+  <title>neocomplcache - Ultimate auto completion system for Vim : vim online</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <meta name="KEYWORDS" content="Vim, Vi IMproved, text editor, home, documentation, tips, scripts, news">
+  <link rel="shortcut icon" type="image/x-icon" href="/images/vim_shortcut.ico">
+</head>
+
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff"> 
+
+<!-- HEADER, SPONSOR IMAGE, VIM IMAGE AND BOOK AD -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+  <td class="lightbg">&nbsp;&nbsp;&nbsp;</td>
+  <td class="lightbg" align="left"><a href="/sponsor/index.php"><img src="/images/sponsorvim.gif" alt="sponsor Vim development" border="0"></a></td>
+    <td class="lightbg" align="center"><a href="/index.php"><img src="/images/vim_header.gif" border="0" alt="Vim logo"></a></td>
+    <td class="lightbg" align="right"><a href="http://iccf-holland.org/click5.html"><img src="/images/buyhelplearn.gif" alt="Vim Book Ad" border="0"></a></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="darkbg"><img src="/images/spacer.gif" width="1" height="10" alt=""></td>
+  </tr>
+</table>
+<!-- THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+  <col width="180">
+  <col width="1">
+
+  <tr valign="top">
+    <td class="sidebar">
+      <table width="180" cellpadding="4" cellspacing="0" border="0">
+        <tr valign="top">
+          <td class="sidebar">
+
+<!-- INCLUDE THE PAGE NAVIGATION -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+    <tr>
+        <td><small>not logged in (<a href="/login.php">login</a>)</small></td>
+    </tr>
+    <tr><td>
+<small>&nbsp;</small>
+<form action="http://www.google.com/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-3005259998294962:bvyni59kjr1" />
+    <input type="hidden" name="ie" value="ISO-8859-1" />
+    <input type="text" name="q" size="20" />
+    <br>
+    <input type="submit" name="sa" value="Search" />
+  </div>
+</form>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+    </td></tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="1"></td>
+    </tr>
+    <tr>
+        <td class="darkbg"><img src="/images/spacer.gif" alt='' border="0" height="3"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="2"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/index.php">Home</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/search.php">Advanced search</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/about.php">About Vim</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/community.php">Community</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/news/news.php">News</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/sponsor/index.php">Sponsoring</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/trivia.php">Trivia</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/docs.php">Documentation</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/download.php">Download</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/scripts/index.php">Scripts</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/tips/index.php">Tips</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/account/index.php">My Account</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/huh.php">Site Help</a></td>
+        </tr>
+</table>
+
+            <table width="172" cellpadding="0" cellspacing="0" border="0">
+              <tr><td><img src="/images/spacer.gif" alt="" border="0" width="1" height="8"></td></tr>
+              <tr><td class="darkbg"><img src="/images/spacer.gif" width="1" height="3" alt=""></td></tr>
+            </table>
+            <br>
+
+<!-- INCLUDE THE PAGE SIDEBAR TEXT -->
+&nbsp;
+
+          </td>
+        </tr>
+      </table>
+    </td>
+
+    <td class="darkbg"><img src="/images/spacer.gif" width="1" height="1" border="0" alt=""><br></td>
+    <td>
+      <table width="100%" cellpadding="10" cellspacing="0" border="0" bordercolor="red">
+        <tr>
+          <td valign="top">
+
+<span class="txth1">neocomplcache : Ultimate auto completion system for Vim</span> 
+
+<br>
+<br>
+
+<!-- karma table -->
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
+  <td>
+    Rating <b>323/98</b>,
+    Downloaded by 5045  </td>
+  <td class="lightbg">
+  <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
+  </td>
+  <td>
+    <a href="http://vim.wikia.com/wiki/Script:2620">Vim wiki</a>
+  </td>  
+</tr>
+</table>
+<p>
+
+<table cellspacing="0" cellpadding="0" border="0">
+<tr><td class="prompt">created by</td></tr>
+<tr><td><a href="/account/profile.php?user_id=17200">Shougo Matsushita</a></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">script type</td></tr>
+<tr><td>utility</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">description</td></tr>
+<tr><td>The latest version is in github.<br><a target="_blank" href="http://github.com/Shougo/neocomplcache/tree/master">http://github.com/Shougo/neocomplcache/tree/master</A><br><br>Caution:<br>Because all variable names are changed in neocomplcache Ver.5, there is not<br>backward compatibility. In the case of the upgrade, you should use the next<br>script which Mr.thinca made.<br><a target="_blank" href="http://gist.github.com/422503">http://gist.github.com/422503</A><br><br>Screen shots:<br>Quick match.<br><a target="_blank" href="http://3.bp.blogspot.com/_ci2yBnqzJgM/TD1PeahCmOI/AAAAAAAAADc/Rz_Pbpr92z4/s1600/quick_match.png">http://3.bp.blogspot.com/_ci2yBnqzJgM/TD1PeahCmOI/AAAAAAAAADc/Rz_Pbpr92z4/s1600/quick_match.png</A><br>Snippet completion like snipMate.<br><a target="_blank" href="http://3.bp.blogspot.com/_ci2yBnqzJgM/SfkgaHXLS0I/AAAAAAAAAA4/TmaylpFl_Uw/s1600-h/Screenshot2.PNG">http://3.bp.blogspot.com/_ci2yBnqzJgM/SfkgaHXLS0I/AAAAAAAAAA4/TmaylpFl_Uw/s1600-h/Screenshot2.PNG</A><br>Original filename completion.<br><a target="_blank" href="http://1.bp.blogspot.com/_ci2yBnqzJgM/TD1O5_bOQ2I/AAAAAAAAADE/vHf9Xg_mrTI/s1600/filename_complete.png">http://1.bp.blogspot.com/_ci2yBnqzJgM/TD1O5_bOQ2I/AAAAAAAAADE/vHf9Xg_mrTI/s1600/filename_complete.png</A><br>Register completion.<br><a target="_blank" href="http://1.bp.blogspot.com/_ci2yBnqzJgM/TD1Pel4fomI/AAAAAAAAADk/YsAxF8i6r3w/s1600/register_complete.png">http://1.bp.blogspot.com/_ci2yBnqzJgM/TD1Pel4fomI/AAAAAAAAADk/YsAxF8i6r3w/s1600/register_complete.png</A><br>Omni completion.<br><a target="_blank" href="http://2.bp.blogspot.com/_ci2yBnqzJgM/TD1PTolkTBI/AAAAAAAAADU/knJ3eniuHWI/s1600/omni_complete.png">http://2.bp.blogspot.com/_ci2yBnqzJgM/TD1PTolkTBI/AAAAAAAAADU/knJ3eniuHWI/s1600/omni_complete.png</A><br>Completion with vimshell(<a target="_blank" href="http://github.com/Shougo/vimshell">http://github.com/Shougo/vimshell</A>).<br><a target="_blank" href="http://1.bp.blogspot.com/_ci2yBnqzJgM/TD1PLfdQrwI/AAAAAAAAADM/2pSFRTHwYOY/s1600/neocomplcache_with_vimshell.png">http://1.bp.blogspot.com/_ci2yBnqzJgM/TD1PLfdQrwI/AAAAAAAAADM/2pSFRTHwYOY/s1600/neocomplcache_with_vimshell.png</A><br>Vim completion.<br><a target="_blank" href="http://1.bp.blogspot.com/_ci2yBnqzJgM/TD1PfKTlwnI/AAAAAAAAADs/nOGWTRLuae8/s1600/vim_complete.png">http://1.bp.blogspot.com/_ci2yBnqzJgM/TD1PfKTlwnI/AAAAAAAAADs/nOGWTRLuae8/s1600/vim_complete.png</A><br><br>Setting examples:<br>&quot; Disable AutoComplPop.<br>let g:acp_enableAtStartup = 0<br>&quot; Use neocomplcache.<br>let g:neocomplcache_enable_at_startup = 1<br>&quot; Use smartcase.<br>let g:neocomplcache_enable_smart_case = 1<br>&quot; Use camel case completion.<br>let g:neocomplcache_enable_camel_case_completion = 1<br>&quot; Use underbar completion.<br>let g:neocomplcache_enable_underbar_completion = 1<br>&quot; Set minimum syntax keyword length.<br>let g:neocomplcache_min_syntax_length = 3<br>let g:neocomplcache_lock_buffer_name_pattern = '\*ku\*'<br><br>&quot; Define dictionary.<br>let g:neocomplcache_dictionary_filetype_lists = {<br>&nbsp;&nbsp;&nbsp;&nbsp;\ 'default' : '',<br>&nbsp;&nbsp;&nbsp;&nbsp;\ 'vimshell' : $HOME.'/.vimshell_hist',<br>&nbsp;&nbsp;&nbsp;&nbsp;\ 'scheme' : $HOME.'/.gosh_completions'<br>&nbsp;&nbsp;&nbsp;&nbsp;\ }<br>		<br>&quot; Define keyword.<br>if !exists('g:neocomplcache_keyword_patterns')<br>&nbsp;&nbsp;&nbsp;&nbsp;let g:neocomplcache_keyword_patterns = {}<br>endif<br>let g:neocomplcache_keyword_patterns['default'] = '\h\w*'<br><br>&quot; Plugin key-mappings.<br>imap &lt;C-k&gt;&nbsp;&nbsp;&nbsp;&nbsp; &lt;Plug&gt;(neocomplcache_snippets_expand)<br>smap &lt;C-k&gt;&nbsp;&nbsp;&nbsp;&nbsp; &lt;Plug&gt;(neocomplcache_snippets_expand)<br>inoremap &lt;expr&gt;&lt;C-g&gt;&nbsp;&nbsp;&nbsp;&nbsp; neocomplcache#undo_completion()<br>inoremap &lt;expr&gt;&lt;C-l&gt;&nbsp;&nbsp;&nbsp;&nbsp; neocomplcache#complete_common_string()<br><br>&quot; SuperTab like snippets behavior.<br>&quot;imap &lt;expr&gt;&lt;TAB&gt; neocomplcache#sources#snippets_complete#expandable() ? &quot;\&lt;Plug&gt;(neocomplcache_snippets_expand)&quot; : pumvisible() ? &quot;\&lt;C-n&gt;&quot; : &quot;\&lt;TAB&gt;&quot;<br><br>&quot; Recommended key-mappings.<br>&quot; &lt;CR&gt;: close popup and save indent.<br>inoremap &lt;expr&gt;&lt;CR&gt;&nbsp;&nbsp;neocomplcache#smart_close_popup() . &quot;\&lt;CR&gt;&quot;<br>&quot; &lt;TAB&gt;: completion.<br>inoremap &lt;expr&gt;&lt;TAB&gt;&nbsp;&nbsp;pumvisible() ? &quot;\&lt;C-n&gt;&quot; : &quot;\&lt;TAB&gt;&quot;<br>&quot; &lt;C-h&gt;, &lt;BS&gt;: close popup and delete backword char.<br>inoremap &lt;expr&gt;&lt;C-h&gt; neocomplcache#smart_close_popup().&quot;\&lt;C-h&gt;&quot;<br>inoremap &lt;expr&gt;&lt;BS&gt; neocomplcache#smart_close_popup().&quot;\&lt;C-h&gt;&quot;<br>inoremap &lt;expr&gt;&lt;C-y&gt;&nbsp;&nbsp;neocomplcache#close_popup()<br>inoremap &lt;expr&gt;&lt;C-e&gt;&nbsp;&nbsp;neocomplcache#cancel_popup()<br><br>&quot; AutoComplPop like behavior.<br>&quot;let g:neocomplcache_enable_auto_select = 1<br>	<br>&quot; Shell like behavior(not recommended).<br>&quot;set completeopt+=longest<br>&quot;let g:neocomplcache_enable_auto_select = 1<br>&quot;let g:neocomplcache_disable_auto_complete = 1<br>&quot;inoremap &lt;expr&gt;&lt;TAB&gt;&nbsp;&nbsp;pumvisible() ? &quot;\&lt;Down&gt;&quot; : &quot;\&lt;TAB&gt;&quot;<br>&quot;inoremap &lt;expr&gt;&lt;CR&gt;&nbsp;&nbsp;neocomplcache#smart_close_popup() . &quot;\&lt;CR&gt;&quot;<br><br>&quot; Enable omni completion.<br>autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS<br>autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags<br>autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS<br>autocmd FileType python setlocal omnifunc=pythoncomplete#Complete<br>autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags<br>	<br>&quot; Enable heavy omni completion.<br>if !exists('g:neocomplcache_omni_patterns')<br>	let g:neocomplcache_omni_patterns = {}<br>endif<br>let g:neocomplcache_omni_patterns.ruby = '[^. *\t]\.\w*\|\h\w*::'<br>&quot;autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete<br>let g:neocomplcache_omni_patterns.php = '[^. \t]-&gt;\h\w*\|\h\w*::'</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">install details</td></tr>
+<tr><td>1: Edit downloaded neocomplcache-*.vba file by Vim and execute &quot;:so %&quot; command.<br>2: Execute :NeoComplCacheEnable command or <br>let g:neocomplcache_enable_at_startup = 1<br>in your .vimrc.<br></td></tr>
+<tr><td>&nbsp;</td></tr>
+</table>
+
+<!-- rating table -->
+<form name="rating">
+<input type="hidden" name="script_id" value="2620">
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>rate this script</b></td>
+  <td valign="middle">
+    <input type="radio" name="rating" value="life_changing">Life Changing
+    <input type="radio" name="rating" value="helpful">Helpful
+    <input type="radio" name="rating" value="unfulfilling">Unfulfilling&nbsp;
+    <input type="submit" value="rate">
+  </td>
+</tr>
+</table>
+</form>
+<span class="txth2">script versions</span> (<a href="add_script_version.php?script_id=2620">upload new version</a>)
+<p>
+Click on the package to download.
+<p>
+
+<table cellspacing="2" cellpadding="4" border="0" width="100%">
+<tr class='tableheader'>
+        <th valign="top">package</th>
+    <th valign="top">script version</th>
+    <th valign="top">date</th>
+    <th valign="top">Vim version</th>
+    <th valign="top">user</th>
+    <th valign="top">release notes</th>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=14464">neocomplcache-5.3.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>5.3</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-12-10</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=17200">Shougo Matsushita</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- Added zimbu support.<br>- Fixed :Neco.<br>- Fixed :NeoComplCacheEnableCaching error.<br>- Fixed buffer caching bug.<br>- Fixed examples.<br>- Fixed g:neocomplcache_plugin_rank error.<br>- Fixed vim_complete error.<br>- Implemented colorscheme completion.<br>- Implemented ignore source.<br>- Improved Perl6 support.<br>- Improved clojure and lisp support.<br>- Improved error check.<br>- Improved g:neocomplcache_omni_patterns description.<br>- Improved haskell keyword pattern.<br>- Improved modeline.<br>- Improved python snippets.<br>- Improved sid functions support.<br>- Improved snippet_complete manual.<br>- Improved snippets expand.<br>- Improved snippets include syntax.<br>- Improved snippets search.<br>- Improved vim keyword pattern.<br>- Independent +reltime.<br>- Supported Konoha language.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13978">neocomplcache-ver.5.2.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>5.2</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-10-02</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=17200">Shougo Matsushita</a></i></td>
+    <td class="roweven" valign="top" width="2000">- Added :Neco animation.<br>- Added NeoComplCacheCachingInclude description.<br>- Added g:neocomplcache_disable_auto_select_buffer_name_pattern option.<br>- Added g:neocomplcache_enable_auto_delimiter option.<br>- Added g:neocomplcache_enable_caching_message option.<br>- Added g:neocomplcache_force_caching_buffer_name_pattern option.<br>- Added ghc_complete description.<br>- Added install description.<br>- Added objj support.<br>- Added shell like behavior settings.<br>- Deleted g:neocomplcache_enable_display_parameter option.<br>- Deleted member filter.<br>- Detect duplicated snippet name.<br>- Fixed :Neco.<br>- Fixed abbrev_complete redir bug.<br>- Fixed abbrev_complete.<br>- Fixed caching bug.<br>- Fixed caching timing.<br>- Fixed context filetype bug in filetype plugin.<br>- Fixed delimiter.<br>- Fixed echodoc in include_complete.<br>- Fixed examples.<br>- Fixed filename_complete.<br>- Fixed filter bug.<br>- Fixed filtering.<br>- Fixed for Vim 7.0.<br>- Fixed get_cur_text() bug.<br>- Fixed get_cur_text() in snippets_complete.<br>- Fixed include_complete bugs.<br>- Fixed include_complete error in echodoc.<br>- Fixed is_enabled error.<br>- Fixed java snippet warning.<br>- Fixed keyword pattern.<br>- Fixed mac check.<br>- Fixed multibyte check.<br>- Fixed nasm error.<br>- Fixed plugin manual.<br>- Fixed snippets analyze.<br>- Fixed var_dictionary complete in vim_complete.<br>- Fixed vim_complete cur_keyword_str bug.<br>- Fixed vim_complete kind bug.<br>- Fixed xhtml snippet error.<br>- Implemented escaped ` in snippets_complete.<br>- Implemented member completion in buffer_complete.<br>- Implemented neocomplcache enabled check.<br>- Implemented neocomplcache#do_auto_complete().<br>- Improved :Neco.<br>- Improved c++ completion.<br>- Improved cache timing.<br>- Improved caching algorithm.<br>- Improved caching message.<br>- Improved ctags arguments for mac.<br>- Improved ctags arguments.<br>- Improved d snippet.<br>- Improved delimiter.<br>- Improved echo.<br>- Improved error catch.<br>- Improved eskk support.<br>- Improved filename complete.<br>- Improved filename pattern.<br>- Improved for echodoc.<br>- Improved g:neocomplcache_ctags_arguments_list.<br>- Improved gas syntax.<br>- Improved get_cur_text().<br>- Improved include cache.<br>- Improved keyword patterns.<br>- Improved lock.<br>- Improved omni_complete default pattern.<br>- Improved php delimiter.<br>- Improved plugin error catch.<br>- Improved print caching.<br>- Improved snippet syntax.<br>- Improved vim_complete check.<br>- Refactoringed :Neco command.<br>- Revised documentation.<br>- Supported Vim7.3 in vim_complete.<br>- Supported echodoc in snippets_complete.<br>- Supported echodoc in vim_complete.<br>- Supported lua.<br>- Supported php namespace.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13456">neocomplcache-5.1.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>5.1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-08-02</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=17200">Shougo Matsushita</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- Added &quot;nothing&quot; in text mode filetype.<br>- Added :NeoComplCacheCachingDictionary discription.<br>- Added g:neocomplcache_quick_match_table.<br>- Added g:neocomplcache_text_mode_filetypes option.<br>- Added neocomplcache#set_completion_length().<br>- Added neocomplcache#smart_close_popup().<br>- Added omni completion examples.<br>- Added tex in text mode filetypes.<br>- Allow blank line in snippet.<br>- Changed neocomplcache#set_dictionary_helper().<br>- Changed vim_complete marker.<br>- Deleted obsolute functions.<br>- Deleted spell_complete.<br>- Disabled Ruby omni completion.<br>- Disabled keyword_complete when eskk is enabled.<br>- Fixed :NeoComplCacheToggle.<br>- Fixed analyzing function.<br>- Fixed autocompletion freeze.<br>- Fixed context filetype bug.<br>- Fixed css snippet.<br>- Fixed documentation.<br>- Fixed environments parse bug.<br>- Fixed error when complete directory.<br>- Fixed error when local variable completion.<br>- Fixed eskk check.<br>- Fixed eskk omni completion bug.<br>- Fixed example.<br>- Fixed ftplugin bug.<br>- Fixed get filetype timing in snippets_complete.<br>- Fixed neocomplcache#complete_common_string() bug.<br>- Fixed neocomplcache#match_word() bug.<br>- Fixed neocomplcache#system().<br>- Fixed omni completion bug.<br>- Fixed quick match bug.<br>- Fixed quickmatch error.<br>- Fixed quickmatch selection.<br>- Fixed snippet parse.<br>- Fixed snippets expand error.<br>- Fixed vim_complete commands.dict.<br>- Fixed vim_complete error.<br>- Implemented dictionary plugins.<br>- Implemented expand completion.<br>- Implemented filetype plugin.<br>- Implemented set rank helper.<br>- Implemented syntax attr helper.<br>- Implemented text mode.<br>- Improved :NeoComplCacheAutoCompletionLength behavior.<br>- Improved autoload plugins.<br>- Improved buffer caching.<br>- Improved caching.<br>- Improved check wildcard.<br>- Improved context filetype.<br>- Improved css keyword pattern.<br>- Improved detect completefunc.<br>- Improved eskk and vimproc check.<br>- Improved examples.<br>- Improved filetype completion.<br>- Improved g:neocomplcache_omni_patterns description.<br>- Improved g:neocomplcache_plugin_disable behavior.<br>- Improved haskell keyword pattern.<br>- Improved include check.<br>- Improved include_complete.<br>- Improved integrated completion.<br>- Improved interactive termtter pattern.<br>- Improved javascript support.<br>- Improved local variable analysis.<br>- Improved member filter.<br>- Improved multibyte trunk.<br>- Improved neocomplcache#close_popup().<br>- Improved neocomplcache#filetype_complete().<br>- Improved neocomplcache#get_auto_completion_length().<br>- Improved neocomplcache#snippets_complete#expandable().<br>- Improved print error.<br>- Improved quickmatch selection.<br>- Improved snippet alias pattern.<br>- Improved startup.<br>- Improved termtter keywords.<br>- Improved text mode.<br>- Improved tilde substitution.<br>- Improved truncate filename.<br>- Improved vim keyword pattern.<br>- Improved vim_complete.<br>- Improved vimshell pattern.<br>- Optimized match.<br>- Refactoringed vim_complete.<br>- Skip filename completion when too many candidates.<br>- Supported GetLatestVimScripts.<br>- Supported coffee script.<br>- Supported gdb keyword.<br>- Supported inline assembly language.<br>- Supported union.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13243">neocomplcache-ver.5.0.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>5.0</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-06-26</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=17200">Shougo Matsushita</a></i></td>
+    <td class="roweven" valign="top" width="2000">- Added abbrev_complete plugin.<br>- Added eskk omni completion support.<br>- Added g:neocomplcache_delimiter_patterns option.<br>- Added g:neocomplcache_filetype_include_lists option.<br>- Added g:neocomplcache_omni_function_list option.<br>- Added g:neocomplcache_plugin_rank option.<br>- Added g:neocomplcache_vim_completefuncs option.<br>- Added neocomplcache#cancel_popup().<br>- Added objc omni completion support.<br>- Added pasm and pir support.<br>- Allow snipMate like snippet.<br>- Changed NeoComplCacheCachingDisable into NeoComplCacheDisableCaching.<br>- Changed NeoComplCacheCachingEnable into NeoComplCacheEnableCaching.<br>- Changed g:neocomplcache_alphabetical_order into g:neocomplcache_enable_alphabetical_order.<br>- Changed g:neocomplcache_caching_disable_pattern into g:neocomplcache_disable_caching_buffer_name_pattern.<br>- Changed g:neocomplcache_caching_limit_file_size default value.<br>- Changed g:neocomplcache_enable_cursor_hold_i_time into g:neocomplcache_cursor_hold_i_time.<br>- Changed g:neocomplcache_enable_quick_match default value.<br>- Changed g:neocomplcache_lock_buffer_name_pattern into g:neocomplcache_lock_buffer_name_pattern.<br>- Changed g:neocomplcache_omni_function_list as g:neocomplcache_omni_functions.<br>- Changed g:neocomplcache_plugin_completion_length into g:neocomplcache_plugin_completion_length.<br>- Changed variables name dramatically.<br>- Check obsolute options.<br>- Deleted g:neocomplcache_cache_line_count variable.<br>- Deleted g:neocomplcache_caching_percent_in_statusline option.<br>- Deleted g:neocomplcache_enable_alphabetical_order option.<br>- Deleted g:neocomplcache_enable_randomize option.<br>- Deleted neocomplcache#caching_percent().<br>- Deleted neocomplcache#cancel_popup().<br>- Fixed abbrev_complete bug.<br>- Fixed abbrev_complete check.<br>- Fixed command line window error.<br>- Fixed context filetype bug.<br>- Fixed delete cache bug.<br>- Fixed disable AutoComplPop.<br>- Fixed dup problem in snippets_complete.<br>- Fixed eruby and ruby pattern.<br>- Fixed examples.<br>- Fixed expand a snippet contained blank line bug.<br>- Fixed filename_complete rank.<br>- Fixed g:neocomplcache_enable_cursor_hold_i bug.<br>- Fixed help file caching bug.<br>- Fixed icase bug.<br>- Fixed include_complete error.<br>- Fixed manual completion freeze bug.<br>- Fixed multibyte problems.<br>- Fixed nested snippet bug.<br>- Fixed obsolute settings.<br>- Fixed presentation file.<br>- Fixed rank bug.<br>- Fixed save cache error.<br>- Fixed sort bug.<br>- Fixed vim_complete freeze.<br>- Implemented customlist completion in vim_complete.<br>- Implemented delemiter completion.<br>- Improved abbr check.<br>- Improved abbr.<br>- Improved cache timing.<br>- Improved caching message.<br>- Improved caching timing.<br>- Improved clojure support.<br>- Improved context filetype.<br>- Improved cur_text.<br>- Improved d and java keyword patterns.<br>- Improved dummy move.<br>- Improved erlang keyword pattern.<br>- Improved eruby support.<br>- Improved eskk support.<br>- Improved expand snippet.<br>- Improved filename_complete.<br>- Improved filter.<br>- Improved garbage collect and calc rank.<br>- Improved help.<br>- Improved icase.<br>- Improved keyword pattern.<br>- Improved keyword patterns.<br>- Improved masm and nasm keyword pattern.<br>- Improved ruby keyword.<br>- Improved snippets expand.<br>- Improved syntax_complete.<br>- Improved vim_complete.<br>- Introduced thinca's script.<br>- Optimized cache.<br>- Optimized caching.<br>- Optimized completion.<br>- Optimized frequencies.<br>- Optimized memory when loaded cache.<br>- Optimized sort.<br>- Refactoringed keyword_complete.<br>- Refactoringed neocomplcache#start_manual_complete().<br>- Refixed help caching bug.<br>- Refixed help file caching bug.<br>- Reimplemented neocomplcache#close_popup().<br>- Renamed g:neocomplcache_disable_plugin_list as g:neocomplcache_plugin_disable.<br>- Renamed g:neocomplcache_plugin_completion_length_list as g:neocomplcache_plugin_completion_length.<br>- Supported H8-300 keyword pattern.<br>- dictionary_complete use dictionary option.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13084">neocomplcache-4.30a.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>4.30a</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-06-02</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=17200">Shougo Matsushita</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- Fixed critical popup bug.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13074">neocomplcache-ver.4.30.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>4.30</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-05-31</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=17200">Shougo Matsushita</a></i></td>
+    <td class="roweven" valign="top" width="2000">* Added g:NeoComplCache_EnableAutoSelect option.<br>* Added g:NeoComplCache_EnableCursorHoldI and g:NeoComplCache_CursorHoldITime options.<br>* Deleted g:NeoComplCache_EnableSkipCompletion and g:NeoComplCache_SkipCompletionTime options.<br>* Deleted mapping check.<br>* Detect conflicted plugin.<br>* Detect text was changed.<br>* Disabled C/C++ Omni patterns.<br>* Enable cache in &quot;[Command line]&quot; buffer.<br>* Enable spell_complete in manual_complete.<br>* Fixed g:NeoComplCache_IgnoreCase bug.<br>* Fixed html next keyword pattern.<br>* Fixed neocomplcache#complete_common_string() bug.<br>* Fixed quickmatch behaivior.<br>* Fixed quickmatch keyword position bug.<br>* Fixed vim completion bug.<br>* Fixed vim_complete bugs.<br>* If &lt;CR&gt; is mapped, g:NeoComplCache_EnableAutoSelect option does not work to avoid a side effect.<br>* Ignore command line window caching.<br>* Implemented CursorHoldI completion.<br>* Implemented dictionary completion in vim_complete.<br>* Implemented lazy caching in vim_complete.<br>* Improved disable bell.<br>* Improved filename pattern.<br>* Improved filename_complete.<br>* Improved for skk.vim.<br>* Improved g:NeoComplCache_MaxKeywordWidth.<br>* Improved neocomplcache#close_popup().<br>* Improved print prototype behaivior when g:NeoComplCache_CursorHoldITime.<br>* Improved print prototype in vim_complete.<br>* Improved quickmatch.<br>* Improved redraw.<br>* Improved user commands analsze in vim_complete.<br>* Improved vim_complete analyse.<br>* Improved vim_complete. Recognize context.<br>* Improved vimproc#system().<br>* Revised completion.<br>* Use b:changedtick.<br>* neocomplcache disables bell.<br>- '#' as wildcard in vim_complete.<br>- Added AutoComplPop like behavior settings.<br>- Added ml keyword pattern.<br>- Caching readonly buffer.<br>- Changed check buflisted() into bufloaded().<br>- Deleted keyword cache in omni_complete.<br>- Deleted obsolute functions.<br>- Deleted obsolute internal variable.<br>- Detect AutoComplPop.<br>- Disabled php omni completion.<br>- Fixed completion length bugs.<br>- Fixed custom and customlist error in vim_complete.<br>- Fixed error when NeoComplCacheDisable.<br>- Fixed menu bug in buffer_complete.<br>- Fixed prototype in vim_complete.<br>- Fixed quickmatch bugs.<br>- Implemented ambiguous command completion.<br>- Implemented ~Username/ completion in filename_complete.<br>- Improved buffer cache timing.<br>- Improved caching timing in buffer_complete.<br>- Improved caching.<br>- Improved directory completion in vim_complete.<br>- Improved dummy move.<br>- Improved filtering.<br>- Improved function display in vim_complete.<br>- Improved help file.<br>- Improved ocaml keyword pattern.<br>- Improved recaching behaivior.<br>- Improved vim_complete.<br>- Improved wildcard check.<br>- Refactoringed.<br>- Revised example settings.<br>- Supported '&lt;,'&gt;command...<br>- Use 'path' in filename_complete.<br>- cd source path when searching include files.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=12832">neocomplcache-ver.4.20.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>4.20</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-04-15</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=17200">Shougo Matsushita</a></i></td>
+    <td class="rowodd" valign="top" width="2000">* Added snippets_complete help in Japanese.<br>* Added variables dictionary.<br>* Caching disable when bufname is '[Command line]'<br>* Changed default value of g:NeoComplCache_IgnoreCase.<br>* Completed prototype dictionary.<br>* Deleted obsolute variables.<br>* Fixed filename pattern.<br>* Fixed interactive filetype.<br>* Fixed manual completion bug.<br>* Fixed quickmatch bug.<br>* Fixed quickmatch bug.<br>* Fixed quickmatch bug.<br>* Fixed snippets expand bug.<br>* Highlight color when print prototype.<br>* Improved _ snippets.<br>* Improved buffer caching.<br>* Improved caching print.<br>* Improved command completion in vim_complete.<br>* Improved command completion text.<br>* Improved command name search.<br>* Improved command prototype dictionary in vim_complete.<br>* Improved for skk.vim.<br>* Improved frequency garbage collect.<br>* Improved keyword_filter.<br>* Improved manual complete.<br>* Improved mappings dictionary.<br>* Improved vim_complete performance.<br>* Improved vim_complete.<br>* Incleased omni completion rank.<br>* Lazy caching environment variables.<br>* Skip head digits in vim_complete.<br>* Use neocomplcache#escape_match().</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=12350">neocomplcache-4.09.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>4.09</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-02-10</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=17200">Shougo Matsushita</a></i></td>
+    <td class="roweven" valign="top" width="2000">- Added completefunc_complete.<br>- Added g:NeoComplCache_CtagsProgram option.<br>- Added interactive termtter keyword.<br>- Added keyword pattern of batch file.<br>- Added same filetype lists for vimshell iexe.<br>- Added snippet files(Thanks mfumi!).<br>- Added syntax pattern for vimshell iexe.<br>- Added vimshell omni completion support.<br>- Deleted '...' pattern.<br>- Deleted g:NeoComplCache_NonBufferFileTypeDetect option.<br>- Disabled filename_complete in vimshell.<br>- Don't fnamemodify in omni_complete.<br>- Fixed analyzing bug in vim_complete.<br>- Fixed complete common string bug.<br>- Fixed complete length bug in omni_complete.<br>- Fixed complete length bug in omni_complete.<br>- Fixed ctags execution bug.<br>- Fixed filename completion bug.<br>- Fixed functions_prototype bug in vim_complete.<br>- Fixed indent.<br>- Fixed multibyte input bug.<br>- Fixed neocomplcache#get_cur_text() bug.<br>- Fixed neocomplcache#system.<br>- Fixed pattern match error.<br>- Fixed snippet newline expand in snippets_complete.<br>- Fixed unpack dictionary bug in tags_complete.<br>- Fixed wildcard bug.<br>- Fixed wildcard freeze in filename_complete.<br>- Implemented dictionary_complete.vim.<br>- Improved NeoComplCachePrintSnippets command.<br>- Improved analyzing extra args in vim_complete.<br>- Improved check match filter.<br>- Improved command completion in snippets_complete.<br>- Improved composition filetype keyword support.<br>- Improved filaname pattern.<br>- Improved filetype completion.<br>- Improved filtering word.<br>- Improved head match.<br>- Improved keywords in vim_complete.<br>- Improved quickmatch behaivior.<br>- Improved same filetype.<br>- Improved skip directory in filename_complete.<br>- Improved snippet alias.<br>- Improved syntax detect in snippets_complete.<br>- Improved syntax highlight in snippets_complete.<br>- Improved tex pattern.<br>- Improved trunk filename in filename_complete.<br>- Optimized buffer_complete.<br>- Optimized filename_complete.<br>- Supported Visual Basic.<br>- Supported interactive ocaml.<br>- Supported lingr-vim.<br>- Supported omnifunc name pattern in omni_complete.<br>- Update lines number in buffer_complete.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=11902">neocomplcache-4.02.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>4.02</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-12-15</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=17200">Shougo Matsushita</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- Added C/C++ support in omni_complete.<br>- Added NeoComplCacheCachingDictionary command.<br>- Added Python snippet.<br>- Added filename pattern.<br>- Added g:NeoComplCache_EnableDispalyParameter option.<br>- Added g:NeoComplCache_QuickMatchPatterns option.<br>- Added g:NeoComplCache_TagsFilterPatterns option.<br>- Added markdown snippet.<br>- Added same filetype.<br>- Allow keyword trigger in snippets_complete.<br>- Caching current buffer in include_complete.<br>- Catch error in omni_complete.<br>- Catch eval error in snippets_complete.<br>- Changed g:NeoComplCache_CalcRankRandomize option as g:NeoComplCache_EnableRandomize.<br>- Delete dup check in buffer_complete.<br>- Deleted Filename() and g:snips_author in snippets_complete.<br>- Deleted \v pattern.<br>- Deleted caching current buffer in include_complete.<br>- Deleted caching when BufWritePost in include_complete.<br>- Deleted calc_rank().<br>- Deleted dup in include_complete.<br>- Deleted g:NeoComplCache_EnableInfo option.<br>- Deleted g:NeoComplCache_PreviousKeywordCompletion. It's default.<br>- Deleted g:NeoComplCache_SkipInputTime option.<br>- Deleted prev_rank.<br>- Deleted regacy option.<br>- Don't cache huge file in include_complete.<br>- Don't complete within comment in vim_complete.<br>- Don't expand environment variable in filename_complete.<br>- Don't save empty tags file.<br>- Don't set dup when match with next keyword.<br>- Fixed NeoComplCacheEditRuntimeSnippets bug.<br>- Fixed PHP pattern bug in omni_complete.<br>- Fixed caching error in tags_complete(Thanks tosik).<br>- Fixed disable expand when buftype is 'nofile' bug in snippets_complete.<br>- Fixed error when execute NeoComplCacheDisable.<br>- Fixed error when load file in include_complete.<br>- Fixed error; when open the file of the filetype that g:NeoComplCache_KeywordPatterns does not have in include_complete.<br>- Fixed executable bug in filename_complete.<br>- Fixed expand snippets bug.<br>- Fixed fatal buffer_complete bug.<br>- Fixed fatal include_complete error.<br>- Fixed fatal manual completion bug.<br>- Fixed filetype bug in include_complete.<br>- Fixed finalize error.<br>- Fixed freeze bug in filename_complete.<br>- Fixed haskell and ocaml patterns.<br>- Fixed in TeX behaviour in filename_complete.<br>- Fixed keyword bug in vim_complete.<br>- Fixed manual completion error in omni_complete.<br>- Fixed manual completion error.<br>- Fixed manual completion error.<br>- Fixed member fileter error.<br>- Fixed output keyword error.<br>- Fixed prefix bug.<br>- Fixed quickmatch bug in omni_complete.<br>- Fixed quickmatch list bug.<br>- Fixed ruby omni_complete bug.<br>- Fixed save cache error.<br>- Fixed set completeopt bug.<br>- Fixed set path pattern in Python.<br>- Fixed snippet expand bug in snippets_complete.<br>- Fixed tags_complete caching error.<br>- Formatted help files.<br>- Ignore space in snippets_complete.<br>- Implemented &lt;Plug&gt;(neocomplcache_snippets_jump) in snippets_complete.<br>- Implemented Filename() and g:snips_author for snipMate.<br>- Implemented auto cache in tags_complete.<br>- Implemented buffer local autocomplete lock.<br>- Implemented environment variable completion in vim_complete.<br>- Implemented hard tab expand in vim_complete.<br>- Implemented intellisense like prototype echo in vim_complete.<br>- Implemented keyword cache in omni_complete.<br>- Implemented pseudo animation.<br>- Implemented skip directory in filename_complete.<br>- Implemented the static model recognition in vim_complete.<br>- Implemented vim_complete(testing).<br>- Improved analyze in syntax_complete.<br>- Improved backslash escape in filename_complete.<br>- Improved buffer caching.<br>- Improved buffer caching.<br>- Improved caching print.<br>- Improved caching speed when FileType in include_complete.<br>- Improved calc frequency.<br>- Improved complete option in vim_complete.<br>- Improved garbage collect in buffer_complete.<br>- Improved garbage collect.<br>- Improved get keyword pattern.<br>- Improved global caching in vim_complete.<br>- Improved html and vim keyword pattern.<br>- Improved load complfuncs.<br>- Improved manual completion.<br>- Improved next keyword completion.<br>- Improved omni patterns in omni_complete.<br>- Improved option in vim_complete.<br>- Improved print prototype in vim_complete.<br>- Improved randomize.<br>- Improved shortcut filename completion in filename_complete.<br>- Improved skip completion.<br>- Improved tex keyword pattern.<br>- Improved wildcard.<br>- Optimized speed.<br>- Refactoringed set pattern.<br>- Reinforced vim_complete.vim.<br>- Restore cursor position in omni_complete.<br>- Revised English help.<br>- Supported backslash in vim_complete.<br>- Supported manual plugin complete.<br>- Supported mark down filetype.<br>- Supported nested include file in C/C++ filetype in include_complete.<br>- Supported next keyword completion in filename_complete.<br>- Supported string and dictionary candidates in omni_complete.<br>- Supported wildcard in vim_complete and omni_complete.<br>- Syntax_complete disabled in vim.<br>- Use /dev/stdout in Linux and Mac in include_complete.<br>- Use caching helper in plugins.<br>- Use g:NeoComplCache_TagsFilterPatterns in omni_complete.<br>- Use include_complete's cache in omni_complete.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=11738">neocomplcache-3.14.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>3.14</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-11-16</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=17200">Shougo Matsushita</a></i></td>
+    <td class="roweven" valign="top" width="2000">*Fatal: Fixed fatal buffer and dictionary cache bug. *<br>&nbsp;&nbsp;&nbsp;&nbsp;- Fixed disable auto completion bug if bugtype contains 'nofile'.<br>&nbsp;&nbsp;&nbsp;&nbsp;- Ignore no suffixes file in include_complete.<br>&nbsp;&nbsp;&nbsp;&nbsp;- Fixed snippet merge bug in snippets_complete.<br>&nbsp;&nbsp;&nbsp;&nbsp;- Fixed break buffer and dictionary cache bug.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=11715">neocomplcache-3.13.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>3.13</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-11-13</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=17200">Shougo Matsushita</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- Add '*' to a delimiter in filename_complete.<br>- Added g:NeoComplCache_DisablePluginList option.<br>- Added g:NeoComplCache_EnableAutoSelect option.<br>- Added g:NeoComplCache_IncludeSuffixes option. <br>- Added snippet indent file.<br>- Allow dup and improved menu in omni_complete.<br>- Allow dup in include_complete and tags_complete.<br>- Caching buffer when CursorHold.<br>- Changed cache file syntax.<br>- Complfunc supported g:NeoComplCache_PluginCompletionLength option.<br>- Deleted C omni completion support.<br>- Deleted cpp omni support.<br>- Deleted g:NeoComplCache_TagsAutoUpdate option.<br>- Disable auto caching in tags_complete.<br>- Disabled '-' wildcard.<br>- Disabled partial match.<br>- Don't caching readonly buffer in include_complete.<br>- Echo error when you use old Vim.<br>- Echo filename when caching.<br>- Enable auto-complete in tags_complete.<br>- Expand tilde.<br>- Filtering same word.<br>- Fixed auto completion bug in filename_complete.<br>- Fixed disable completion bug.<br>- Fixed dup check bug in syntax_complete.<br>- Fixed error when includeexpr is empty in include_complete.<br>- Fixed error when omnifunc is empty.<br>- Fixed eval snippet bug.<br>- Fixed executable bug in filename_complete.<br>- Fixed filter bug in include_complete.<br>- Fixed filtering bug.<br>- Fixed keyword pattern error in include_complete.<br>- Fixed manual completion bug.<br>- Fixed manual completion error.<br>- Fixed manual omni_complete error.<br>- Fixed matchstr timing in include_complete.<br>- Fixed menu in buffer_complete.<br>- Fixed quick match dup bug.<br>- Fixed regex escape bug in snippets_complete.<br>- Fixed skip error.<br>- Fixed tags caching bug.<br>- Fixed wildcard bug when auto completion.<br>- Fixed wildcard bug.<br>- Implemented NeoComplCacheCachingTags command.<br>- Implemented cache in tags_complete.<br>- Implemented completion skip if previous completion is empty.<br>- Implemented complfunc rank.<br>- Implemented fast search.<br>- Implemented include_complete.<br>- Implemented member filter.<br>- Improved buffer caching timing.<br>- Improved caching in tags_complete and include_complete.<br>- Improved caching timing.<br>- Improved ctags arguments patterns.<br>- Improved filename completion.<br>- Improved html's keyword pattern.<br>- Improved keyword patterns.<br>- Improved manual completion.<br>- Improved omni completion pattern.<br>- Improved ps1 keyword.<br>- Improved remove next keyword.<br>- Improved wildcard behaivior.<br>- Integrated complfuncs.<br>- Open popup menu when modified.<br>- Optimized keyword_complete.<br>- Optimized tags_complete.<br>- Print error when cache file is wrong.<br>- Print filename when caching.<br>- Recognized snippets directory of snipMate automatically.<br>- Reimplemented g:NeoComplCache_SkipInputTime option.<br>- Reimplemented quickmatch.<br>- Save error log when analyzing tags.<br>- Set completeopt-=longest.<br>- Skip completion if too many candidates.<br>- Split nicely when edit snippets_file.<br>- Use complete_check().<br>- Implemented filename wildcard.<br>- Set completeopt-=menuone.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=11522">neocomplcache-3.03a.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>3.03a</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-10-13</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=17200">Shougo Matsushita</a></i></td>
+    <td class="roweven" valign="top" width="2000">- Added ActionScript support in omni_complete.<br>- Added NeoComplCachePrintSnippets command.<br>- Added g:NeoComplCache_CachingPercentInStatusline option.<br>- Added registers snippet.<br>- Added scala support.<br>- Added select mode mappings in snippets_complete.<br>- Added snippet indent file.<br>- Added xhtml snippet(Thanks just!).<br>- Call multiple complefunc if cur_keyword_pos is equal.<br>- Changed buffer_complete cache directory.<br>- Clear numbered list when close popup.<br>- Clear quickmatch cache when auto complete is skipped.<br>- Deleted cdpath completion.<br>- Don't select in manual completion.<br>- Expand tilde.<br>- Expandable a snippet including sign.<br>- Fixed completion column bug.<br>- Fixed css error.<br>- Fixed cursor pos bug.<br>- Fixed error in snippets_complete.<br>- Fixed error when sh/zsh file opened.<br>- Fixed escape bug in filename_complete.<br>- Fixed escape bug.<br>- Fixed expand cursor bug in snippets_complete.<br>- Fixed fatal bug when snippet expand.<br>- Fixed fatal caching bug.<br>- Fixed marker substitute bug.<br>- Fixed neocomplcache#plugin#snippets_complete#expandable()'s error.<br>- Fixed next keyword completion bug.<br>- Fixed non-initialize error.<br>- Fixed wildcard bug.<br>- Implemented completion undo.<br>- Implemented condition in snippets_complete.<br>- Implemented fast filter.<br>- Implemented filetype completion.<br>- Implemented multiple keyword.<br>- Implemented optional placeholder.<br>- Implemented sync placeholder.<br>- Improved caching message.<br>- Improved caching.<br>- Improved command's completion.<br>- Improved filename completion.<br>- Improved get cur_text in snippets_complete.<br>- Improved html keyword completion.<br>- Improved html/xhtml keyword pattern.<br>- Improved keymapping in snippets_complete.<br>- Improved no new line snippet expand.<br>- Improved quickmatch behaivior.<br>- Improved remove next keyword.<br>- Improved skip completion.<br>- Improved snippet menu.<br>- Renamed keyword_complete.vim as buffer_complete.vim.<br>- Sort alphabetical order in snippets_complete.<br>- Splitted filename completion and omni completion and keyword completion.<br>- Supported abbr in omni completion.<br>- Supported placeholder 0.<br>- Supported same filetype lists in snippets_complete.<br>- Supported snipMate's multi snippet.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=11351">neocomplcache-2.75a.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.75a</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-09-10</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=17200">Shougo Matsushita</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- Don't select in manual completion.<br>- Add rank if match next keyword.<br>- Added ChangeLog.<br>- Added NeoComplCacheCachingSyntax command.<br>- Added Objective-C/C++ support.<br>- Added css support.<br>- Added g:NeoComplCache_PluginCompletionLength option.<br>- Added snippet file snippet.<br>- Caching from cache in syntax_complete.<br>- Check cdpath in filename completion.<br>- Convert string omni completion.<br>- Create g:NeoComplCache_SnippetsDir directory if not exists.<br>- Create g:NeoComplCache_TemporaryDir directory if not exists.<br>- Delete quick match cache when BufWinEnter.<br>- Deleted g:NeoComplCache_FilenameCompletionSkipItems option.<br>- Dispay 'cdpath' files in filename completion.<br>- Dispay 'w:vimshell_directory_stack' files in filename completion.<br>- Display readonly files.<br>- Fixed dup bug in snippets_complete.<br>- Fixed error in manual omni completion when omnifunc is empty.<br>- Fixed expand jump bug in snippets completion.<br>- Fixed expand() bug in snippets_complete.<br>- Fixed filename completion bug when environment variable used.<br>- Fixed filename completion bug.<br>- Fixed html omni completion error.<br>- Fixed manual_complete wildcard bug.<br>- Fixed no new line snippet expand bug in snippet completion.<br>- Fixed prefix bug in filename completion.<br>- Fixed snippet without default value expand bug.<br>- Ignore japanese syntax message in syntax completion.<br>- Implemented direct expantion in snippet complete.<br>- Implemented short filename completion.<br>- Implemented snippet alias in snippet complete.<br>- Improved check candidate.<br>- Improved filename completion.<br>- Improved filename completion.<br>- Improved g:NeoComplCache_CtagsArgumentsList in vim filetype.<br>- Improved get cursour word.<br>- Improved html omni completion pattern.<br>- Improved keyword pattern.<br>- Improved manual completion.<br>- Improved next keyword completion.<br>- Improved omni completion.<br>- Improved omni completion.<br>- Improved quick match in filename completion.<br>- Improved quick match.<br>- Improved quickmatch behaivior.<br>- Improved skipped behaivior.<br>- Improved tex keyword.<br>- Improved vim keyword.<br>- Insert quickmatched candidate immediately.<br>- No ignorecase in next keyword completion.<br>- Optimized filename completion.<br>- Recognize next keyword in omni completion.<br>- Search quick match if no keyword match.<br>- Substitute $HOME into '~' in filename completion.<br>- The quick match input does not make a cash.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=11164">neocomplcache-2.66a.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.66a</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-08-10</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=17200">Shougo Matsushita</a></i></td>
+    <td class="roweven" valign="top" width="2000">- Added English manual.<br>- Added g:NeoComplCache_CachingDisablePattern option.<br>- Added g:NeoComplCache_CachingLimitFileSize option.<br>- Added snippet delete.<br>- Caching snippets when file open.<br>- Callable get_complete_words() and word_caching_current_line() function.<br>- Changed short filename into ~.<br>- Deleted wildcard from filename completion.<br>- Don't caching readonly file.<br>- Erb is same filetype with ruby.<br>- Fixed ATOK X3 on when snippets expanded.<br>- Fixed snippet expand bugs.<br>- Fixed snippet without default value expand bug.<br>- Fixed syntax match timing(Thanks thinca!).<br>- Improved NeoComplCacheCachingBuffer command.<br>- Improved css omni completion.<br>- Improved erb snippets.<br>- Improved filename completion.<br>- Improved html and erb filetype.<br>- Improved neocomplcache#keyword_complete#caching_percent.<br>- Improved set complete function timing.<br>- Improved vimshell keyword pattern.<br>- Improved vimshell keyword pattern.<br>- Substitute ... -&gt; ../.. .<br>- Substitute \ -&gt; / in Windows.<br>- Supported escape sequence in filename completion.<br>- g:NeoComplCache_SnippetsDir is comma-separated list.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=11002">neocomplcache-2.62.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>Ver.2.62</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-07-13</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=17200">Shougo Matsushita</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- Added g:NeoComplCache_FilenameCompletionSkipItems option.<br>- Added make syntax.<br>- Draw executable files in filename completion.<br>- Fixed ATOK X3 on when snippets expanded.<br>- Fixed filename completion bug on enable quick match.<br>- Fixed keyword sort bug.<br>- Improved filtering.<br>- Improved long filename view.<br>- Improved skip completion.<br>- Improved vimshell syntax.<br>- Put up the priority of directory in filename completion.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=10773">neocomplcache-2.59.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.59</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-06-08</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=17200">Shougo Matsushita</a></i></td>
+    <td class="roweven" valign="top" width="2000">- Added g:NeoComplCache_TemporaryDir option.<br>- Changed g:NeoComplCache_PartialCompletionStartLength default value.<br>- Changed g:NeoComplCache_PreviousKeywordCompletion default value.<br>- Don't caching when not buflisted in syntax complete.<br>- Fixed E220 in tex filetype.<br>- Fixed NeoComplCacheDisable bug.<br>- Fixed add rank bug in snippet completion.<br>- Fixed analyze caching bug.<br>- Fixed caching bug.<br>- Fixed feedkeys.<br>- Fixed neocomplcache#keyword_complete#caching_percent() bug.<br>- Fixed quick match.<br>- Implemented _ snippets in snippet completion.<br>- Implemented filename completion.<br>- Implemented neocomplcache#manual_filename_complete().<br>- Improved caching timing.<br>- Improved camel case completion and underbar completion.<br>- Improved edit snippet.<br>- Improved filename toriming.<br>- Improved garbage collect.<br>- Improved skip completion.<br>- Improved snippets_complete.<br>- Improved wildcard.<br>- Loadable snipMate snippets file in snippet completion.<br>- Optimized caching.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=10625">neocomplcache-2.52.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.52</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-05-18</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=17200">Shougo Matsushita</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- Changed g:NeoComplCache_PreviousKeywordCompletion default value.<br>- Improved wildcard.<br>- Don't caching on BufEnter.<br>- Optimized manual_complete behaivior.<br>- Optimized NeoComplCacheCachingBuffer.<br>- Caching on editing file.<br>- Implemented neocomplcache#close_popup() and neocomplcache#cansel_popup().<br>- Don't save info in keyword completion.<br>- Improved popup menu in tags completion.<br>- Changed 'abbr_save' into 'abbr'.<br>- Call completefunc when original completefunc.<br>- Implemented underbar completion.<br><br>- Added g:NeoComplCache_ManualCompletionStartLength option.<br>- Added g:NeoComplCache_EnableUnderbarCompletion option.<br>- Added g:NeoComplCache_TryFilenameCompletion option.<br><br>- Deleted g:NeoComplCache_MaxTryKeywordLength options.<br>- Deleted NeoComplCacheCachingDictionary command.<br>- Deleted g:NeoComplCache_TryKeywordCompletion and g:NeoComplCache_TryDefaultCompletion options.<br>- Deleted g:NeoComplCache_MaxInfoList and g:NeoComplCache_DeleteRank0 option.<br><br>- Fixed NeoComplCacheDisable bug.<br>- Fixed neocomplcache#keyword_complete#caching_percent() bug.<br>- Fixed analyze caching bug.<br>- Fixed quick match.<br>- Fixed abbr_save error.<br>- Fixed next keyword completion bug.<br>- Fixed caching initialize bug.<br>- Fixed on InsertLeave error.<br>- Fixed ignore case behaivior.<br>- Fixed escape error.<br>- Fixed help.<br>- Fixed :NeoComplCacheCachingBuffer bug.<br>- Fixed menu padding.<br>- Fixed caching error.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=10556">neocomplcache-2.41.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.41</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-05-07</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=17200">Shougo Matsushita</a></i></td>
+    <td class="roweven" valign="top" width="2000">- Improved empty check.<br>- Fixed eval bug in snippet complete.<br>- Fixed include bug in snippet complete.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=10554">neocomplcache-2.40.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.40</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-05-07</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=17200">Shougo Matsushita</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Upload zip version.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=10541">neocomplcache-2.40.tar.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.40</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-05-06</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=17200">Shougo Matsushita</a></i></td>
+    <td class="roweven" valign="top" width="2000">- Optimized caching in small files.<br>- Deleted buffer dictionary.<br>- Display cached from buffer.<br>- Changed g:NeoComplCache_MaxInfoList default value.<br>- Improved calc rank.<br>- Improved caching timing.<br>- Added NeoComplCacheCachingDisable and g:NeoComplCacheCachingEnable commands.<br>- Fixed commentout bug in snippet complete.<br>- Fixed syntax highlight.<br>- Overwrite snippet if name is same.<br>- Caching on InsertLeave.<br>- Manual completion add wildcard when input non alphabetical character.<br>- Fixed menu error in syntax complete.<br>- Fixed typo.<br>- Optimized caching.<br>- Added g:NeoComplCache_SkipCompletionTime option.<br>- Added g:NeoComplCache_SkipInputTime option.<br>- Changed g:NeoComplCache_SlowCompleteSkip option into g:NeoComplCache_EnableSkipCompletion.<br>- Improved ruby omni pattern.<br>- Optimized syntax complete.<br>- Delete command abbreviations in vim filetype.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=10461">neocomplcache-2.36.tar.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.36</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-04-27</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=17200">Shougo Matsushita</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Initial version.</td>
+</tr>
+</table>
+<!-- finish off the framework -->
+          </td>
+        </tr>
+      </table>
+    </td>
+
+  </tr>
+</table>
+
+<!-- END OF THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr><td colspan="4" bgcolor="#000000"><img src="/images/spacer.gif" height="2" width="1" alt=""></td></tr>
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr>
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+
+    <td align="left" valign="top"><small>
+      If you have questions or remarks about this site, visit the
+      <a href="http://vimonline.sf.net">vimonline development</a> pages.
+      Please use this site responsibly.
+      <br> 
+      
+      Questions about <a href="http://www.vim.org/about.php">Vim</a> should go
+      to the <a href="http://www.vim.org/maillist.php">maillist</a>.
+      Help Bram <a href="http://iccf-holland.org/">help Uganda</a>.
+      </small>
+	&nbsp;
+	&nbsp;
+
+	<!-- Start of StatCounter Code -->
+	<script type="text/javascript" language="javascript">
+	var sc_project=1417324; 
+	var sc_invisible=1; 
+	var sc_partition=11; 
+	var sc_security="d41633bc"; 
+	</script>
+
+	<script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script><noscript><a href="http://www.statcounter.com/" target="_blank"><img  src="http://c12.statcounter.com/counter.php?sc_project=1417324&java=0&security=d41633bc&invisible=0" alt="free tracking" border="0"></a> </noscript>
+	<!-- End of StatCounter Code -->
+          </td>
+
+    <td align="right" valign="top">
+      		<a href="http://sourceforge.net/projects/vim" rel="nofollow"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=8&type=1" width="88" height="31" border="0" alt="SourceForge.net Logo" /></a>
+    </td>
+
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+  </tr>
+
+    
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  
+  </tr>
+</table>
+
+</body>
+</html>
+

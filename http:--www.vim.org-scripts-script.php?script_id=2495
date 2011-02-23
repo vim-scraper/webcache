@@ -1,0 +1,300 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+  <link rel="Stylesheet" type="text/css" href="/css/style.css" >
+  <title>Pimp - Pimp provides a python shell in order to support REPL style development : vim online</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <meta name="KEYWORDS" content="Vim, Vi IMproved, text editor, home, documentation, tips, scripts, news">
+  <link rel="shortcut icon" type="image/x-icon" href="/images/vim_shortcut.ico">
+</head>
+
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff"> 
+
+<!-- HEADER, SPONSOR IMAGE, VIM IMAGE AND BOOK AD -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+  <td class="lightbg">&nbsp;&nbsp;&nbsp;</td>
+  <td class="lightbg" align="left"><a href="/sponsor/index.php"><img src="/images/sponsorvim.gif" alt="sponsor Vim development" border="0"></a></td>
+    <td class="lightbg" align="center"><a href="/index.php"><img src="/images/vim_header.gif" border="0" alt="Vim logo"></a></td>
+    <td class="lightbg" align="right"><a href="http://iccf-holland.org/click5.html"><img src="/images/buyhelplearn.gif" alt="Vim Book Ad" border="0"></a></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="darkbg"><img src="/images/spacer.gif" width="1" height="10" alt=""></td>
+  </tr>
+</table>
+<!-- THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+  <col width="180">
+  <col width="1">
+
+  <tr valign="top">
+    <td class="sidebar">
+      <table width="180" cellpadding="4" cellspacing="0" border="0">
+        <tr valign="top">
+          <td class="sidebar">
+
+<!-- INCLUDE THE PAGE NAVIGATION -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+    <tr>
+        <td><small>not logged in (<a href="/login.php">login</a>)</small></td>
+    </tr>
+    <tr><td>
+<small>&nbsp;</small>
+<form action="http://www.google.com/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-3005259998294962:bvyni59kjr1" />
+    <input type="hidden" name="ie" value="ISO-8859-1" />
+    <input type="text" name="q" size="20" />
+    <br>
+    <input type="submit" name="sa" value="Search" />
+  </div>
+</form>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+    </td></tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="1"></td>
+    </tr>
+    <tr>
+        <td class="darkbg"><img src="/images/spacer.gif" alt='' border="0" height="3"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="2"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/index.php">Home</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/search.php">Advanced search</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/about.php">About Vim</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/community.php">Community</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/news/news.php">News</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/sponsor/index.php">Sponsoring</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/trivia.php">Trivia</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/docs.php">Documentation</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/download.php">Download</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/scripts/index.php">Scripts</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/tips/index.php">Tips</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/account/index.php">My Account</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/huh.php">Site Help</a></td>
+        </tr>
+</table>
+
+            <table width="172" cellpadding="0" cellspacing="0" border="0">
+              <tr><td><img src="/images/spacer.gif" alt="" border="0" width="1" height="8"></td></tr>
+              <tr><td class="darkbg"><img src="/images/spacer.gif" width="1" height="3" alt=""></td></tr>
+            </table>
+            <br>
+
+<!-- INCLUDE THE PAGE SIDEBAR TEXT -->
+&nbsp;
+
+          </td>
+        </tr>
+      </table>
+    </td>
+
+    <td class="darkbg"><img src="/images/spacer.gif" width="1" height="1" border="0" alt=""><br></td>
+    <td>
+      <table width="100%" cellpadding="10" cellspacing="0" border="0" bordercolor="red">
+        <tr>
+          <td valign="top">
+
+<span class="txth1">Pimp : Pimp provides a python shell in order to support REPL style development</span> 
+
+<br>
+<br>
+
+<!-- karma table -->
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
+  <td>
+    Rating <b>9/3</b>,
+    Downloaded by 342  </td>
+  <td class="lightbg">
+  <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
+  </td>
+  <td>
+    <a href="http://vim.wikia.com/wiki/Script:2495">Vim wiki</a>
+  </td>  
+</tr>
+</table>
+<p>
+
+<table cellspacing="0" cellpadding="0" border="0">
+<tr><td class="prompt">created by</td></tr>
+<tr><td><a href="/account/profile.php?user_id=15781">Yariv Barkan</a></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">script type</td></tr>
+<tr><td>ftplugin</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">description</td></tr>
+<tr><td>Pimp (Python Chimp) is based on (blatantly copied from) the Chimp plugin<br>(<a href="/scripts/script.php?script_id=2348">vimscript #2348</a>).&nbsp;&nbsp;It provides a very simple REPL mechanism by allowing you to<br>evaluate the contents of the active vim buffer in a running python console and<br>interact with the results.<br><br>=Screenshots=<br><a target="_blank" href="http://www.flickr.com/photos/nushoin/3121961021/sizes/o/">http://www.flickr.com/photos/nushoin/3121961021/sizes/o/</A><br><a target="_blank" href="http://www.flickr.com/photos/nushoin/3121961023/sizes/o/">http://www.flickr.com/photos/nushoin/3121961023/sizes/o/</A><br><br>To use the plugin you have to open a terminal (e.g. xterm) and run one of the<br>two scripts provided in the 'bin' directory.&nbsp;&nbsp;For a split screen configuration<br>run ~/.vim/bin/vimPython.bash. For a gvim session interacting with a python<br>interpreter running in another window run ~/.vim/bin/gvimPython.bash. Note that<br>you have to *execute* the scripts, not source them.<br><br>Now open a python source file or set the filetype to python (:set ft=python).<br>Enter some python code, then hit &lt;Esc&gt; for normal mode, followed by &lt;Leader&gt;pf.<br>The contents of the buffer should now be evaluated in the python console.<br><br>*Note*<br>The launching scripts try to run gvim, either in the terminal version (gvim -v,<br>in the vimPython.bash script) or the gui version (gvimPython.bash). It is<br>possible to run pimp with the non-gui version of vim by changing vimPython.bash.<br>However in this case evaluating marked text in visual mode will not work.<br><br>=Default bindings=<br>Assuming that your &lt;Leader&gt; key is '&#039:<br>\pf Evaluate the current buffer (normal mode)<br>\pb Evaluate the marked code (visual mode).<br><br>=Tips=<br> - To move between the windows in the split screen configuration hit &lt;Ctrl&gt;-a<br>&nbsp;&nbsp; &lt;Tab&gt; (&lt;Ctrl&gt;-a is the escape key of gnu screen). <br> - To resize the window hit &lt;Ctrl&gt;-a followed by :resize N&lt;Enter&gt; where N is the<br>&nbsp;&nbsp; number of lines, E.g.&nbsp;&nbsp;&lt;Ctrl&gt;-a:resize 10&lt;Enter&gt;. <br> - To scroll back hit &lt;Ctrl&gt;-a&lt;Esc&gt;. That enters screen's copy mode (similar to<br>&nbsp;&nbsp; vim's visual mode). To exit that mode hit &lt;Esc&gt;.<br> - *New* As of Pimp version 0.5, evaluation of code selected in visual mode<br>&nbsp;&nbsp; actually works! Try using the right-extended visual block mode (Ctrl-v $) to<br>&nbsp;&nbsp; mark indented code (e.g. inside a function) in order to evaluate it. Take<br>&nbsp;&nbsp; advantage of the visual block mode to mark the code without the indentation<br>&nbsp;&nbsp; of course.<br> - The code is evaluated in IPython's namespace. That makes it possible to<br>&nbsp;&nbsp; access previously defined variables, functions etc. The reverse is true as<br>&nbsp;&nbsp; well - it's possible to switch to the IPython window and interact with the<br>&nbsp;&nbsp; results of the evaluated code, invoke functions etc.<br> - IPython has an abundance of 'magic' commands. For example it's possible to<br>&nbsp;&nbsp; 'cd', 'pwd' etc. from within IPython. Check the IPython documentation for<br>&nbsp;&nbsp; details.<br><br>It is advised to read the gnu screen manual (man screen) for additional<br>information about gnu screen's options and capabilities.<br></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">install details</td></tr>
+<tr><td>Pimp depends on IPython (<a target="_blank" href="http://ipython.scipy.org">http://ipython.scipy.org</A>) as the python shell and on<br>gnu screen (<a target="_blank" href="http://www.gnu.org/software/screen">http://www.gnu.org/software/screen</A>) for it's operation. It is also<br>recommended to install the full version of vim (the package is named vim-gnome <br>under Ubuntu and vim-enhanced in Fedora).<br><br>Under Debian/Ubuntu:<br>sudo apt-get install ipython screen vim-gnome<br>Under Fedora:<br>yum install ipython screen vim-enhanced<br><br>=Installing the plugin=<br>mkdir ~/.vim<br>cd ~/.vim<br>tar -xvzf /path/to/Pimp.tar.gz<br>chmod +x ~/.vim/bin/*.bash<br><br>Add the following to your ~/.vimrc file:<br>filetype plugin on<br><br>=Keyboard bindings=<br>You may override the default keyboard bindings in your .vimrc file. For example<br>to bind Ctrl-e add the following lines to your .vimrc file:<br>map &lt;c-e&gt; &lt;Plug&gt;PimpEvalFile<br>imap &lt;c-e&gt; &lt;Esc&gt;&lt;Plug&gt;PimpEvalFilea<br>vmap &lt;c-e&gt; &lt;Plug&gt;PimpEvalBlock<br><br>=Problems and solutions=<br>When working in the split screen configuration, vim is run under a gnu screen<br>session.&nbsp;&nbsp;gnu screen itself runs inside a terminal emulator, e.g. konsole. Both<br>gnu screen and the terminal it is run in can cause various problems. Those<br>problems include trapping of keyboard shortcuts, wrong handling of colors<br>(relevant to users of CSApprox - <a href="/scripts/script.php?script_id=2390">vimscript #2390</a>) etc. Please refer to the file<br>~/.vim/reference/pimp/PimpCaveats.README for details.<br><br>=Testing=<br>This plugin has been tested on Ubuntu 8.10 and Fedora 9. If you can test it on<br>other platforms I'll be happy to hear about any platform related bugs and<br>solutions, and will integrate the fix into the next version.<br><br>Please send me an email if you have any problem installing or using the plugin.<br>My email is listed on my profile page.<br></td></tr>
+<tr><td>&nbsp;</td></tr>
+</table>
+
+<!-- rating table -->
+<form name="rating">
+<input type="hidden" name="script_id" value="2495">
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>rate this script</b></td>
+  <td valign="middle">
+    <input type="radio" name="rating" value="life_changing">Life Changing
+    <input type="radio" name="rating" value="helpful">Helpful
+    <input type="radio" name="rating" value="unfulfilling">Unfulfilling&nbsp;
+    <input type="submit" value="rate">
+  </td>
+</tr>
+</table>
+</form>
+<span class="txth2">script versions</span> (<a href="add_script_version.php?script_id=2495">upload new version</a>)
+<p>
+Click on the package to download.
+<p>
+
+<table cellspacing="2" cellpadding="4" border="0" width="100%">
+<tr class='tableheader'>
+        <th valign="top">package</th>
+    <th valign="top">script version</th>
+    <th valign="top">date</th>
+    <th valign="top">Vim version</th>
+    <th valign="top">user</th>
+    <th valign="top">release notes</th>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=9720">Pimp-0.5.tar.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.5</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2008-12-23</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=15781">Yariv Barkan</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Evaluation of code now works in all visual modes, some bugfixes and enhancements.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=9714">Pimp.tar.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.4</b></td>
+    <td class="roweven" valign="top" nowrap><i>2008-12-21</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=15781">Yariv Barkan</a></i></td>
+    <td class="roweven" valign="top" width="2000">Initial upload</td>
+</tr>
+</table>
+<!-- finish off the framework -->
+          </td>
+        </tr>
+      </table>
+    </td>
+
+  </tr>
+</table>
+
+<!-- END OF THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr><td colspan="4" bgcolor="#000000"><img src="/images/spacer.gif" height="2" width="1" alt=""></td></tr>
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr>
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+
+    <td align="left" valign="top"><small>
+      If you have questions or remarks about this site, visit the
+      <a href="http://vimonline.sf.net">vimonline development</a> pages.
+      Please use this site responsibly.
+      <br> 
+      
+      Questions about <a href="http://www.vim.org/about.php">Vim</a> should go
+      to the <a href="http://www.vim.org/maillist.php">maillist</a>.
+      Help Bram <a href="http://iccf-holland.org/">help Uganda</a>.
+      </small>
+	&nbsp;
+	&nbsp;
+
+	<!-- Start of StatCounter Code -->
+	<script type="text/javascript" language="javascript">
+	var sc_project=1417324; 
+	var sc_invisible=1; 
+	var sc_partition=11; 
+	var sc_security="d41633bc"; 
+	</script>
+
+	<script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script><noscript><a href="http://www.statcounter.com/" target="_blank"><img  src="http://c12.statcounter.com/counter.php?sc_project=1417324&java=0&security=d41633bc&invisible=0" alt="free tracking" border="0"></a> </noscript>
+	<!-- End of StatCounter Code -->
+          </td>
+
+    <td align="right" valign="top">
+      		<a href="http://sourceforge.net/projects/vim" rel="nofollow"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=8&type=1" width="88" height="31" border="0" alt="SourceForge.net Logo" /></a>
+    </td>
+
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+  </tr>
+
+    
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  
+  </tr>
+</table>
+
+</body>
+</html>
+

@@ -1,0 +1,388 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+  <link rel="Stylesheet" type="text/css" href="/css/style.css" >
+  <title>perforce - Feature Rich Perforce SCM Integration. : vim online</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <meta name="KEYWORDS" content="Vim, Vi IMproved, text editor, home, documentation, tips, scripts, news">
+  <link rel="shortcut icon" type="image/x-icon" href="/images/vim_shortcut.ico">
+</head>
+
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff"> 
+
+<!-- HEADER, SPONSOR IMAGE, VIM IMAGE AND BOOK AD -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+  <td class="lightbg">&nbsp;&nbsp;&nbsp;</td>
+  <td class="lightbg" align="left"><a href="/sponsor/index.php"><img src="/images/sponsorvim.gif" alt="sponsor Vim development" border="0"></a></td>
+    <td class="lightbg" align="center"><a href="/index.php"><img src="/images/vim_header.gif" border="0" alt="Vim logo"></a></td>
+    <td class="lightbg" align="right"><a href="http://iccf-holland.org/click5.html"><img src="/images/buyhelplearn.gif" alt="Vim Book Ad" border="0"></a></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="darkbg"><img src="/images/spacer.gif" width="1" height="10" alt=""></td>
+  </tr>
+</table>
+<!-- THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+  <col width="180">
+  <col width="1">
+
+  <tr valign="top">
+    <td class="sidebar">
+      <table width="180" cellpadding="4" cellspacing="0" border="0">
+        <tr valign="top">
+          <td class="sidebar">
+
+<!-- INCLUDE THE PAGE NAVIGATION -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+    <tr>
+        <td><small>not logged in (<a href="/login.php">login</a>)</small></td>
+    </tr>
+    <tr><td>
+<small>&nbsp;</small>
+<form action="http://www.google.com/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-3005259998294962:bvyni59kjr1" />
+    <input type="hidden" name="ie" value="ISO-8859-1" />
+    <input type="text" name="q" size="20" />
+    <br>
+    <input type="submit" name="sa" value="Search" />
+  </div>
+</form>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+    </td></tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="1"></td>
+    </tr>
+    <tr>
+        <td class="darkbg"><img src="/images/spacer.gif" alt='' border="0" height="3"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="2"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/index.php">Home</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/search.php">Advanced search</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/about.php">About Vim</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/community.php">Community</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/news/news.php">News</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/sponsor/index.php">Sponsoring</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/trivia.php">Trivia</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/docs.php">Documentation</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/download.php">Download</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/scripts/index.php">Scripts</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/tips/index.php">Tips</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/account/index.php">My Account</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/huh.php">Site Help</a></td>
+        </tr>
+</table>
+
+            <table width="172" cellpadding="0" cellspacing="0" border="0">
+              <tr><td><img src="/images/spacer.gif" alt="" border="0" width="1" height="8"></td></tr>
+              <tr><td class="darkbg"><img src="/images/spacer.gif" width="1" height="3" alt=""></td></tr>
+            </table>
+            <br>
+
+<!-- INCLUDE THE PAGE SIDEBAR TEXT -->
+&nbsp;
+
+          </td>
+        </tr>
+      </table>
+    </td>
+
+    <td class="darkbg"><img src="/images/spacer.gif" width="1" height="1" border="0" alt=""><br></td>
+    <td>
+      <table width="100%" cellpadding="10" cellspacing="0" border="0" bordercolor="red">
+        <tr>
+          <td valign="top">
+
+<span class="txth1">perforce : Feature Rich Perforce SCM Integration.</span> 
+
+<br>
+<br>
+
+<!-- karma table -->
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
+  <td>
+    Rating <b>237/76</b>,
+    Downloaded by 4310  </td>
+  <td class="lightbg">
+  <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
+  </td>
+  <td>
+    <a href="http://vim.wikia.com/wiki/Script:240">Vim wiki</a>
+  </td>  
+</tr>
+</table>
+<p>
+
+<table cellspacing="0" cellpadding="0" border="0">
+<tr><td class="prompt">created by</td></tr>
+<tr><td><a href="/account/profile.php?user_id=292">Hari Krishna Dara</a></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">script type</td></tr>
+<tr><td>utility</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">description</td></tr>
+<tr><td>PLEASE READ THE INSTALL SECTION COMPLETELY.<br><br>This is a fairly complete integration with the perforce version control system for the most commanly used operations, including many administrative commands. It includes a great menu that is modelled very close to the p4win (the perforce GUI client) and is quite extensive.<br><br>---------------------------------------------------------------------------------------------------------------------------------------------------<br>Lately, I am not finding enough time to add features to this, so if anybody is interested to help me add new features or even take over the responsibility, you are very much welcome.<br>---------------------------------------------------------------------------------------------------------------------------------------------------<br><br>Install the files as described in the installation section below and read and type &quot;:h perforce.txt&quot; for help on using the plugin.<br><br>If you find any problems please report them to me. If you happen to add new features or fix any problems, I would appreciate if you send me in the diff. This will speed up the future enhancements (there is a lot more that can be done) and also benefit all the script users.<br><br>Search_key_words: perforce scm source control interface p4 p4d p4win multvals genutils Hari Krishna Dara</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">install details</td></tr>
+<tr><td>- Extract the zip file into your runtime directory (~/.vim or %HOME%/vimfiles).<br>- Download the latest versions of the below scripts and place them in your runtime plugin directory (see end for instructions specific to older version):<br>&nbsp;&nbsp;&nbsp;&nbsp;genutils.vim: <a href="/scripts/script.php?script_id=197">vimscript#197</a><br>- Start Vim and regenerate help tags on your runtime doc directory. Ex:<br>&nbsp;&nbsp;&nbsp;&nbsp;:helpt ~/.vim/doc<br>&nbsp;&nbsp;&nbsp;&nbsp;:helpt ~\vimfiles\doc<br>- Type the following command and read the installation section to complete the installation:<br>&nbsp;&nbsp;&nbsp;&nbsp;:help perforce-installation<br><br>For versions prior to 4.0, you need to download multvals.vim (<a href="/scripts/script.php?script_id=171">vimscript#171</a>) in addition to genutils, but make sure you download only the non-autoload versions of both genutils and multvals plugins (see their download page for details, and a trick to have both coexists).<br></td></tr>
+<tr><td>&nbsp;</td></tr>
+</table>
+
+<!-- rating table -->
+<form name="rating">
+<input type="hidden" name="script_id" value="240">
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>rate this script</b></td>
+  <td valign="middle">
+    <input type="radio" name="rating" value="life_changing">Life Changing
+    <input type="radio" name="rating" value="helpful">Helpful
+    <input type="radio" name="rating" value="unfulfilling">Unfulfilling&nbsp;
+    <input type="submit" value="rate">
+  </td>
+</tr>
+</table>
+</form>
+<span class="txth2">script versions</span> (<a href="add_script_version.php?script_id=240">upload new version</a>)
+<p>
+Click on the package to download.
+<p>
+
+<table cellspacing="2" cellpadding="4" border="0" width="100%">
+<tr class='tableheader'>
+        <th valign="top">package</th>
+    <th valign="top">script version</th>
+    <th valign="top">date</th>
+    <th valign="top">Vim version</th>
+    <th valign="top">user</th>
+    <th valign="top">release notes</th>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=6139">perforce-4.1.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>4.1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2006-09-03</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=292">Hari Krishna Dara</a></i></td>
+    <td class="rowodd" valign="top" width="2000">There were a few issues with the 4.0 version, and this version tries to resolve them, and adds a few features.<br><br>- Fixed broken handling of &lt;SHOW DIFF&gt; in describe windows. But it is<br>&nbsp;&nbsp;better than before, as you can now describe multiple changelists and<br>&nbsp;&nbsp;show diffs selectively.<br>- For newer perforce servers, &lt;Enter&gt; on a pending change (in<br>&nbsp;&nbsp;changelist) showed the file list twice. Removed special handling for<br>&nbsp;&nbsp;this, which means for older perforce servers, you will see no file<br>&nbsp;&nbsp;list.<br>- Force a file status update on auto checkout.<br>- File status handling has in general been improved.<br>- Now executing command on multiple files that result in changing the<br>&nbsp;&nbsp;file statuses (such as add, edit, revert etc.) will correctly result<br>&nbsp;&nbsp;in their file statuses getting reset.<br>- While create a new changelist or submitting a change, the Files:<br>&nbsp;&nbsp;section is examined and the file statuses for all of them will be<br>&nbsp;&nbsp;reset. This also works for most of the cases of modifying a changelist<br>&nbsp;&nbsp;to remove/add files.<br>- This will also solve a long standing issue that reload during submit<br>&nbsp;&nbsp;doesn't update its file status.<br>- All windows are getting navigatation commands mapped (like in help<br>&nbsp;&nbsp;window)<br>- Workaround for one of the E788 errors (originating from the plugin)<br>&nbsp;&nbsp;during the auto-checkout. This part of the code has been cleaned up<br>&nbsp;&nbsp;and simplified. During the auto-checkout, if there are other users<br>&nbsp;&nbsp;editing the same file, it now results in the plugin echoing the output<br>&nbsp;&nbsp;as a |WarningMsg|. If you missed to read the output (because you<br>&nbsp;&nbsp;pressed &lt;Enter&gt; in advance), you can see it again using the<br>&nbsp;&nbsp;|PFLastMessage| command. The other E788 originating from Vim code<br>&nbsp;&nbsp;can't be fixed/workedaround, it has to be fixed by Bram.<br>- Fixed broken submit from changelist.<br>- When you create changelists, you can now safely undo to make any<br>&nbsp;&nbsp;further changes, and save them. This also works for submissions (to<br>&nbsp;&nbsp;edit description only), though you may have to remove the Files<br>&nbsp;&nbsp;section before saving the change description.<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=6129">perforce-4.0.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>4.0</b></td>
+    <td class="roweven" valign="top" nowrap><i>2006-09-01</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=292">Hari Krishna Dara</a></i></td>
+    <td class="roweven" valign="top" width="2000">Uploading again, the previous attempt had a a file missing in the zip.<br><br>- Using Vim7 features, so it is no longer backwards compatible with<br>&nbsp;&nbsp;older Vim releases. All the logic using multvals has been changed to<br>&nbsp;&nbsp;take advantage of the Vim7 Lists, so it should be a lot more cleaner<br>&nbsp;&nbsp;and flexible.<br>- No longer depends on multvals plugin.<br>- It is now autoloaded on demand, which means it will help your vim<br>&nbsp;&nbsp;session load faster. Read the impact on the installation due to this<br>&nbsp;&nbsp;change, |perforce-installation|.<br>- A new Cancel option for checkout prompt, see<br>&nbsp;&nbsp;|perforce-automatic-checkout|. The default for checkout prompt is now<br>&nbsp;&nbsp;&quot;Cancel&quot;.<br>- The perforce/perforcemenu.vim needs to be loaded from your vimrc if<br>&nbsp;&nbsp;you want menu to be enabled. See |perforce-installation|.<br>- The plugin no longer removes the global user setting variables but you<br>&nbsp;&nbsp;still need to call |:PFInitialize| for effect of some settings to<br>&nbsp;&nbsp;propogate further. This should have no user visible impact (except in<br>&nbsp;&nbsp;rare cases).&nbsp;&nbsp;This will only make it easier to deal with settings. You<br>&nbsp;&nbsp;can still use |:PFSettings| command conveniently for its prompting or<br>&nbsp;&nbsp;completion features.<br>- Setting a preset to the g:p4DefaultPreset directly now works fine.<br>- Most settings can now be overridden at the buffer/window/tab level.<br>- Bug: PFRefreshActivePane doesn't work well on the diff windows (especially<br>&nbsp;&nbsp;when the ++c option is used). </td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=5660">perforce-3.2.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>3.2</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2006-05-08</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=292">Hari Krishna Dara</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Release 3.2 for vim7 compatibility. There are a few enhancements too. This is probably the last version that will work in Vim 6.3/6.4.<br>- Fixed PVDiff to work with two filenames. The problem was only with<br>&nbsp;&nbsp;PVDiff command, as &quot;PF vdiff&quot; worked fine.<br>- PFDiffOff command is a lot more flexible now, see |PFDiffOff|.<br>- New command PPasswd for changing passwords.<br>- Don't confirm revert if -a or -n option is passed.<br>- Avoid accidentally loosing existing buffers while opening new ones<br>&nbsp;&nbsp;from diff and other windows.<br>- Recognize additional p4 commands as valid.<br>- You can now pass multiple codeline modifiers, see<br>&nbsp;&nbsp;|perforce-alternative-codeline-modifier|.<br>- Misc. tuneups for peforce diff hyperlinking feature.<br>- Misc. bugfixes in the menu.<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=3587">perforce-3.1.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>3.1</b></td>
+    <td class="roweven" valign="top" nowrap><i>2004-10-28</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=292">Hari Krishna Dara</a></i></td>
+    <td class="roweven" valign="top" width="2000">- This version introduces the concept of overriding settints at the<br>&nbsp;&nbsp;buffer/window level (an extension of the existing support for<br>&nbsp;&nbsp;b:p4Options). Makes it easier to work with multiple clients from a single<br>&nbsp;&nbsp;vim instance. Currently only the p4Client/p4Port/p4User/clientRoot can be<br>&nbsp;&nbsp;set at buffer/window level.<br>- Now view mappings are maintained separately for each client. This allows<br>&nbsp;&nbsp;us to easily work with multiple clients at once. Also see<br>&nbsp;&nbsp;|perforce-buffer-local-options|.<br>- For diff hyperlinking, avoid refreshing the depot file if it already<br>&nbsp;&nbsp;visible.<br>- Now supports &lt;pfitem&gt; tag to mean the current list item. See |:&lt;pfite&gt;|<br>- New :PExec command to make it easier to execute exeternal perforce<br>&nbsp;&nbsp;commands directly, when plugin can't do what you want. See |PExec|.<br>- PFDiffLink and PFDiffVLink commands couldn't handle &quot;diff -r&quot; output.<br>- If the current directory is not same as the directory of file being<br>&nbsp;&nbsp;resolved PFShowConflicts didn't work.<br>- PItemOpen in describe window now opens the local file, as PItemDescribe<br>&nbsp;&nbsp;can be used to open the depot file.<br>- Misc. bug fixes:<br>&nbsp;&nbsp;&nbsp;&nbsp;- Negative revisions are not working any more. E.g., PP #-1<br>&nbsp;&nbsp;&nbsp;&nbsp;- PW is not using the custom completion, so revision specifier (#1)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;still needs to be escaped.<br>&nbsp;&nbsp;&nbsp;&nbsp;- While rerunning a command that opens up a new buffer (such as PD),<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;unexpected warning messages about matching an existing buffer.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Instead, it should silently refresh the output.<br>&nbsp;&nbsp;&nbsp;&nbsp;- Diff hyperlinking, prints the depot file everytime, this causes<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;unnecessary delays.<br>&nbsp;&nbsp;&nbsp;&nbsp;- PFRefreshActivePane would fail if there are filename special<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;characters in the command.<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=3318">perforce-3.0.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>3.0</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2004-08-11</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=292">Hari Krishna Dara</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Now requires Vim 6.3 and the latest versions of genutils and multvals plugins.<br><br>Too many changes to be listed here, read the |perforce-version-changes| section for details.<br><br>Takes advantage of some of the new Vim 6.3 features.<br><br>I recommend reading |perforce-troubleshooting|, |perforce-known-issues|, |perforce-tips| sections. Many of the other sections also have been updated, which are cross referenced from the version changes section.<br><br>Please report issues using the new PFBugReport command.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=2437">perforce-2.0.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.0</b></td>
+    <td class="roweven" valign="top" nowrap><i>2003-10-30</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=292">Hari Krishna Dara</a></i></td>
+    <td class="roweven" valign="top" width="2000">There are too many changes to mention here. Most notable ones being, the new online help for the plugin and the perforce ruler feature from Tom's perforce plugin which is now integrated into this with some improvements. Regenerate help tags after extracting the zip. I highly recommend reading through at least the installation, changes, troubleshooting and tips sections of the help. I also recommend at least glancing through the rest of the help to have an idea of what the plugin is capable of doing. I appreciate feedback.<br><br>Download the new versions of multvals.vim and genutils.vim.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=793">perforce-1.3.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.3</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2002-04-12</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=292">Hari Krishna Dara</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- You need genutils.vim version (1.0.24)<br>- Now the PSubmit and PDiff2 commands are enhanced. PSubmit can now take arguments that are directly passed to POpened to generate the list of files to submit. So it is possible to say &quot;PSubmit % #&quot; to open the template with only the current and alternate files or &quot;PSubmit //depot/branch/...&quot; to open the template with all the opened files under the given branch. <br>- You can now pass in filters at the end of the commands. Just make sure you have a white space before the pipe. Ex: <br><br>&nbsp;&nbsp;PChanges -s pending | grep hari <br><br>- I added ^X^P command line mapping which works like the &quot;E&quot; command but provides more flexibility. I also added ^X^I command line mapping for list windows (such as PF changes), which inserts the current item name on to the command line. Try them, they are very useful. <br>- New commands for clients, labels windows to create a new item from the current item as a template (type P). <br>- In the filelist windows, you can now press p to print the current file and S to sync to the current file. <br>- Another major change is improved command line parsing. <br>- Also the syntax highlighting has been improved to cover more cases.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=746">perforce-1.2.2.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.2.2</b></td>
+    <td class="roweven" valign="top" nowrap><i>2002-04-02</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=292">Hari Krishna Dara</a></i></td>
+    <td class="roweven" valign="top" width="2000">Earlier, I have uploaded a wrong file as a zip file, I apologize for the mistake. I have deleted the old upload and am trying again.<br><br>This is just a minor patch release. Added useful WQ command which is same as the W command but will also quit the window if there is no error. Speeds up making changes to labels, jobs etc. You might still want to use W for submits, as you can copy the output into your integration plans or something like that. Also I made a typo in my previous release notes about the variable name for passing default diff options. The correct name is g:p4DefaultDiffOptions. Please use the latest version of genutils.vim which fixes a typo resulting in an error message while quitting help windows.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=719">perforce-1.2.0.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.2.0</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2002-03-26</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=292">Hari Krishna Dara</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- Perforce help window is now much better. It reuses the same window for all the help commands and maximizes too like the vim built-in window. It even restores the windows when you quit the help. Also navigating in the help window is much better as the cursor positions are remembered.<br>- New command: PJobspec<br>- g:p4DefaultChangesSize to pass in default diff options to all the diff operations. Set it to '-dc' to get diff with context.<br>- Renamed g:p4DefaultChangesSize to g:p4DefaultListSize. This is now used even for jobs command.<br>- g:p4MaxLinesInDialog to limit the number of lines that should be shown in the dialogs. Commands that normally show dialogs (such as PE) open a new window if this limit is exceeded. This avoids showing too many lines in the dialogs (such as PF edit ...)<br>- Fixed labelsync command.<br>- Fixed the delete in the list view. Now pressing D in the labels, changes etc. works.<br>- &lt;SHOW DIFFS&gt; option on the describe window. Pressing &lt;Enter&gt; on this line expands it to show diff.<br>- Some basic formatting options in the edit windows.<br>- You need the 1.0.19 version of genutils.vim</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=702">perforce-1.1.17.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.1.17</b></td>
+    <td class="roweven" valign="top" nowrap><i>2002-03-20</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=292">Hari Krishna Dara</a></i></td>
+    <td class="roweven" valign="top" width="2000">Fixed it to work on Unix, thanks to Kevin McCarthy for reporting the problem and a solution. I also added a basic syntax highlighting for the perforce windows (not complete yet). Extract the perforce.zip in your runtime directory.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=696">perforce.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.1.15</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2002-03-19</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=292">Hari Krishna Dara</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Minor patch release. Fixed PLabels command. Now O in PChanges correctly edits the current change instead of showing the opened list. The opened list can be viewed by using the o (small case) command. Updated the usage header in the file.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=690">perforce.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.1.14</b></td>
+    <td class="roweven" valign="top" nowrap><i>2002-03-17</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=292">Hari Krishna Dara</a></i></td>
+    <td class="roweven" valign="top" width="2000">More featured, more robust, with more predictable results. Lots of bugs have been fixed. Now, a command executed through PF or its shortcut are identical, so no more surprises (PF change and PChange are same). Thanks for the suggestion, Man. The code is also much more cleaner now. I have also improved the help header in the file, so read the first few lines for a good overview of the script's capabilities.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=667">perforce.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.1.8</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2002-03-08</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=292">Hari Krishna Dara</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Initial upload</td>
+</tr>
+</table>
+<!-- finish off the framework -->
+          </td>
+        </tr>
+      </table>
+    </td>
+
+  </tr>
+</table>
+
+<!-- END OF THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr><td colspan="4" bgcolor="#000000"><img src="/images/spacer.gif" height="2" width="1" alt=""></td></tr>
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr>
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+
+    <td align="left" valign="top"><small>
+      If you have questions or remarks about this site, visit the
+      <a href="http://vimonline.sf.net">vimonline development</a> pages.
+      Please use this site responsibly.
+      <br> 
+      
+      Questions about <a href="http://www.vim.org/about.php">Vim</a> should go
+      to the <a href="http://www.vim.org/maillist.php">maillist</a>.
+      Help Bram <a href="http://iccf-holland.org/">help Uganda</a>.
+      </small>
+	&nbsp;
+	&nbsp;
+
+	<!-- Start of StatCounter Code -->
+	<script type="text/javascript" language="javascript">
+	var sc_project=1417324; 
+	var sc_invisible=1; 
+	var sc_partition=11; 
+	var sc_security="d41633bc"; 
+	</script>
+
+	<script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script><noscript><a href="http://www.statcounter.com/" target="_blank"><img  src="http://c12.statcounter.com/counter.php?sc_project=1417324&java=0&security=d41633bc&invisible=0" alt="free tracking" border="0"></a> </noscript>
+	<!-- End of StatCounter Code -->
+          </td>
+
+    <td align="right" valign="top">
+      		<a href="http://sourceforge.net/projects/vim" rel="nofollow"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=8&type=1" width="88" height="31" border="0" alt="SourceForge.net Logo" /></a>
+    </td>
+
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+  </tr>
+
+    
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  
+  </tr>
+</table>
+
+</body>
+</html>
+

@@ -1,0 +1,348 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+  <link rel="Stylesheet" type="text/css" href="/css/style.css" >
+  <title>changesPlugin - indicate changes of a buffer : vim online</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <meta name="KEYWORDS" content="Vim, Vi IMproved, text editor, home, documentation, tips, scripts, news">
+  <link rel="shortcut icon" type="image/x-icon" href="/images/vim_shortcut.ico">
+</head>
+
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff"> 
+
+<!-- HEADER, SPONSOR IMAGE, VIM IMAGE AND BOOK AD -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+  <td class="lightbg">&nbsp;&nbsp;&nbsp;</td>
+  <td class="lightbg" align="left"><a href="/sponsor/index.php"><img src="/images/sponsorvim.gif" alt="sponsor Vim development" border="0"></a></td>
+    <td class="lightbg" align="center"><a href="/index.php"><img src="/images/vim_header.gif" border="0" alt="Vim logo"></a></td>
+    <td class="lightbg" align="right"><a href="http://iccf-holland.org/click5.html"><img src="/images/buyhelplearn.gif" alt="Vim Book Ad" border="0"></a></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="darkbg"><img src="/images/spacer.gif" width="1" height="10" alt=""></td>
+  </tr>
+</table>
+<!-- THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+  <col width="180">
+  <col width="1">
+
+  <tr valign="top">
+    <td class="sidebar">
+      <table width="180" cellpadding="4" cellspacing="0" border="0">
+        <tr valign="top">
+          <td class="sidebar">
+
+<!-- INCLUDE THE PAGE NAVIGATION -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+    <tr>
+        <td><small>not logged in (<a href="/login.php">login</a>)</small></td>
+    </tr>
+    <tr><td>
+<small>&nbsp;</small>
+<form action="http://www.google.com/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-3005259998294962:bvyni59kjr1" />
+    <input type="hidden" name="ie" value="ISO-8859-1" />
+    <input type="text" name="q" size="20" />
+    <br>
+    <input type="submit" name="sa" value="Search" />
+  </div>
+</form>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+    </td></tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="1"></td>
+    </tr>
+    <tr>
+        <td class="darkbg"><img src="/images/spacer.gif" alt='' border="0" height="3"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="2"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/index.php">Home</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/search.php">Advanced search</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/about.php">About Vim</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/community.php">Community</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/news/news.php">News</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/sponsor/index.php">Sponsoring</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/trivia.php">Trivia</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/docs.php">Documentation</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/download.php">Download</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/scripts/index.php">Scripts</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/tips/index.php">Tips</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/account/index.php">My Account</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/huh.php">Site Help</a></td>
+        </tr>
+</table>
+
+            <table width="172" cellpadding="0" cellspacing="0" border="0">
+              <tr><td><img src="/images/spacer.gif" alt="" border="0" width="1" height="8"></td></tr>
+              <tr><td class="darkbg"><img src="/images/spacer.gif" width="1" height="3" alt=""></td></tr>
+            </table>
+            <br>
+
+<!-- INCLUDE THE PAGE SIDEBAR TEXT -->
+&nbsp;
+
+          </td>
+        </tr>
+      </table>
+    </td>
+
+    <td class="darkbg"><img src="/images/spacer.gif" width="1" height="1" border="0" alt=""><br></td>
+    <td>
+      <table width="100%" cellpadding="10" cellspacing="0" border="0" bordercolor="red">
+        <tr>
+          <td valign="top">
+
+<span class="txth1">changesPlugin : indicate changes of a buffer</span> 
+
+<br>
+<br>
+
+<!-- karma table -->
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
+  <td>
+    Rating <b>38/11</b>,
+    Downloaded by 373  </td>
+  <td class="lightbg">
+  <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
+  </td>
+  <td>
+    <a href="http://vim.wikia.com/wiki/Script:3052">Vim wiki</a>
+  </td>  
+</tr>
+</table>
+<p>
+
+<table cellspacing="0" cellpadding="0" border="0">
+<tr><td class="prompt">created by</td></tr>
+<tr><td><a href="/account/profile.php?user_id=17599">Christian Brabandt</a></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">script type</td></tr>
+<tr><td>utility</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">description</td></tr>
+<tr><td>PLEASE RATE THIS PLUGIN, IF YOU LIKE IT!<br><br>For a screenshot of the plugin see <a target="_blank" href="http://www.256bit.org/~chrisbra/changes.png">http://www.256bit.org/~chrisbra/changes.png</A><br><br>Follow this plugin at github:<br><a target="_blank" href="http://github.com/chrisbra/changesPlugin">http://github.com/chrisbra/changesPlugin</A><br><br>1. Functionality<br><br>This plugin was written to help visualize which lines have been changes since<br>editing started for a file. The plugin was inspired by so called changed-bars,<br>available at other editors, such as Embarcadero C++ Builder (there it is<br>called Change Bars, see:<br><a target="_blank" href="http://edn.embarcadero.com/article/33453#6PersonalDeveloperProductivity">http://edn.embarcadero.com/article/33453#6PersonalDeveloperProductivity</A>)<br>or Visual Studio where it is called indicator margin (see<br><a target="_blank" href="http://blog.eveningcreek.com/?p=151">http://blog.eveningcreek.com/?p=151</A>).<br><br>ChangesPlugin.vim uses the |diff|-feature of vim and compares the actual<br>buffer with it's saved state. In order to highlight the indicator signs at the<br>first column, its using |signs|. For newly added lines, the first column will<br>be displayed with a leading '+' and highlighted using the DiffAdd highlighting<br>(see |hl-DiffAdd|), deleted lines will be indicated by a '-' with a<br>DiffDelete highlighting (see |hl-DiffDelete|) and modified lines will be<br>displayed using '*' and a DiffChange highlighting (see |hl-DiffChange|).<br><br>This means, that in order to use this plugin you need a vim, that was built<br>with |+signs|-support and |+diff|-support and you also need an executable diff<br>command. If neither of these conditions are met, changePlugin.vim will issue a<br>warning and abort.<br><br>							 *:EnableChanges*<br>By default the plugin is not enabled. To enable it enter &gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;:EnableChanges<br>When you run this command, changesPlugin.vim diffs the current file agains<br>its saved file on disk and displays the changes in the first column.<br><br>							*:DisableChanges*<br>If you want to disable the plugin, enter &gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;:DisableChanges<br><br>==============================================================================<br>							*changesPlugin-Config*<br>2. Configuring changesPlugin.vim<br><br>There are basically four different configuration options available.<br><br>2.1 Highlighte the whole line<br>By default, changesPlugin.vim will only indicate a change in the first column.<br>Setting g:changes_hl_lines to 1 will highlight the whole line. By default this<br>variable is unset (which is the same as setting it to 0).<br>If you'd like to have this, set this variable in your |.vimrc| &gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;:let g:changes_hl_lines=1<br><br>2.2 Auto-refresh the changes<br>By default changesPlugin.vim will not automatically update the view. You can<br>however configure it to do so. This will use an |CursorHold| autocommand to<br>update the indicator signs after |'updatetime'| seconds in Normal mode when<br>no key is pressed. To enable this feature, put this in your |.vimrc| &gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;let g:changes_autocmd=1<br><br>2.3 Show what the indicator signs mean.<br>By default, whenever you run |:EnableChanges|, changesVim will print a short<br>status message, what each sign means. If you don't want this, put this in your<br>|.vimrc| &gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;:let g:changes_verbose=0<br><br>2.4 Specify different colors.<br>changesVim uses the highlighting used for |diff| mode to indicate the change<br>in a buffer. This is consistent, since when you're already used to |vimdiff|<br>you'll probably also know the highlighting. If for any reason you do not like<br>the colors, you have to define your own highlighting items.<br>If for example you want the DiffAdd highlighting to be displayed like White on<br>a Blue background, you can define it as follows in your |.vimrc| &gt;<br><br>&nbsp;&nbsp;&nbsp;&nbsp;:hi DiffAdd term=bold ctermbg=4 guibg=DarkBlue<br><br>In the same way, you can change DiffDelete for indicating deleted lines and<br>DiffChange for indicating modified lines. You can also specify your favorite<br>highlighting colors using your own build |colorscheme|.<br><br>==============================================================================<br>3. changesPlugin History				*changesPlugin-history*<br>&nbsp;&nbsp;&nbsp;&nbsp;0.2: Apr 11, 2010:	Added Documentation<br>			created an autoload version<br>&nbsp;&nbsp;&nbsp;&nbsp;0.1: Apr 10, 2010:	First working version</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">install details</td></tr>
+<tr><td>This plugin comes as vimball, which makes it really easy to install it into the right place.<br>1) Edit changes.vba with your vim (:e changes.vim)<br>2) From within vim, simply source the file using<br>:so %<br>3) Restart vim to autoload the plugin and the documentation<br>:q<br>4) Read the help at :h changesPlugin.txt<br><br>See also the help available for vimballs at :h vimball-intro</td></tr>
+<tr><td>&nbsp;</td></tr>
+</table>
+
+<!-- rating table -->
+<form name="rating">
+<input type="hidden" name="script_id" value="3052">
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>rate this script</b></td>
+  <td valign="middle">
+    <input type="radio" name="rating" value="life_changing">Life Changing
+    <input type="radio" name="rating" value="helpful">Helpful
+    <input type="radio" name="rating" value="unfulfilling">Unfulfilling&nbsp;
+    <input type="submit" value="rate">
+  </td>
+</tr>
+</table>
+</form>
+<span class="txth2">script versions</span> (<a href="add_script_version.php?script_id=3052">upload new version</a>)
+<p>
+Click on the package to download.
+<p>
+
+<table cellspacing="2" cellpadding="4" border="0" width="100%">
+<tr class='tableheader'>
+        <th valign="top">package</th>
+    <th valign="top">script version</th>
+    <th valign="top">date</th>
+    <th valign="top">Vim version</th>
+    <th valign="top">user</th>
+    <th valign="top">release notes</th>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=12942">changes-0.11.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.11</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-05-04</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=17599">Christian Brabandt</a></i></td>
+    <td class="rowodd" valign="top" width="2000">BF: Document, that |InsertLeave| autocommand is used as autocommand<br>BF: generate the help file with 'et' set, so that the README at github looks prettier<br>BF: When staying in diff mode, don't reset 'fdm' and apply syntax coloring to scratch buffer<br>BF: the check for the diff executable does not work as expected (Reported by Sergey Khorev), additionally outputting the Warnings did not work in that case</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=12913">changes.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.10</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-04-28</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=17599">Christian Brabandt</a></i></td>
+    <td class="roweven" valign="top" width="2000">Fixed Issue 1 from github (<a target="_blank" href="http://github.com/chrisbra/changesPlugin/issues/1/find">http://github.com/chrisbra/changesPlugin/issues/1/find</A>)<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=12895">changes.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.9</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-04-24</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=17599">Christian Brabandt</a></i></td>
+    <td class="rowodd" valign="top" width="2000">0.9: Apr 24, 2010:&nbsp;&nbsp;<br>NF: You can now use different VCS Systems for each buffer you are using.<br>NF: Stay in diff mode<br>BF: Fix the display of deleted signs<br>BF: Undefining old signs, so that changing g:changes_hl_lines works<br>BF: Some more error handling.<br>NF: Show an overview for changed lines in location-list (|:CL|)<br>NF: Show what each sign means using |:CC|<br><br>0.8: Apr 22, 2010:&nbsp;&nbsp;NF: Renamed the helpfile, to make it more obvious, that it refers to a plugin<br>NF: Outputting name of checked file, if checking against VCS<br>BF: Don't check for empty files.<br>BF: Reworked the Message function<br>BF: Don't try to place signs, if there are no differences (unreleased, VCS successfully tested with git, hg, svn, cvs, bzr)<br>0.7: Apr 19, 2010:&nbsp;&nbsp;<br>NF: Check against a file in a VCS (unreleased, first working version, needs to be checked for each VCS)</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=12826">changes.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.6</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-04-13</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=17599">Christian Brabandt</a></i></td>
+    <td class="roweven" valign="top" width="2000">BF: also take care of DiffText from diff-mode (see :h hl-DiffText)</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=12820">changes.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.5</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-04-12</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=17599">Christian Brabandt</a></i></td>
+    <td class="rowodd" valign="top" width="2000">BF: error when trying to access b:diffhl in the scratch buffer. This should be fixed now (thanks Jeet Sukumaran!)<br>BF: Use the correct highlighting groups (thanks Jeet Sukumaran!)<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=12815">changes.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.4</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-04-12</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=17599">Christian Brabandt</a></i></td>
+    <td class="roweven" valign="top" width="2000">NF: |ToggleChangesView| <br>NF: The autocommand checks, if the buffer has been modified, since the last time.<br>BF: Do not mess with signs, that have not been placed by changesPlugin.vim<br>BF: CleanUp was seriously messed up (sorry, I must have been asleep, when writing that)<br>BF: Take care of 'foldcolumn' setting, which would be overwritten by the signs-column</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=12814">changes.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.3</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-04-11</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=17599">Christian Brabandt</a></i></td>
+    <td class="rowodd" valign="top" width="2000">BF: redraw, so that the diff window will not be displayed<br>NF: enabled GLVS (see |GLVS|)</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=12810">changes.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.2</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-04-11</i></td>
+    <td class="roweven" valign="top" nowrap>7.2</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=17599">Christian Brabandt</a></i></td>
+    <td class="roweven" valign="top" width="2000">Initial upload</td>
+</tr>
+</table>
+<!-- finish off the framework -->
+          </td>
+        </tr>
+      </table>
+    </td>
+
+  </tr>
+</table>
+
+<!-- END OF THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr><td colspan="4" bgcolor="#000000"><img src="/images/spacer.gif" height="2" width="1" alt=""></td></tr>
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr>
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+
+    <td align="left" valign="top"><small>
+      If you have questions or remarks about this site, visit the
+      <a href="http://vimonline.sf.net">vimonline development</a> pages.
+      Please use this site responsibly.
+      <br> 
+      
+      Questions about <a href="http://www.vim.org/about.php">Vim</a> should go
+      to the <a href="http://www.vim.org/maillist.php">maillist</a>.
+      Help Bram <a href="http://iccf-holland.org/">help Uganda</a>.
+      </small>
+	&nbsp;
+	&nbsp;
+
+	<!-- Start of StatCounter Code -->
+	<script type="text/javascript" language="javascript">
+	var sc_project=1417324; 
+	var sc_invisible=1; 
+	var sc_partition=11; 
+	var sc_security="d41633bc"; 
+	</script>
+
+	<script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script><noscript><a href="http://www.statcounter.com/" target="_blank"><img  src="http://c12.statcounter.com/counter.php?sc_project=1417324&java=0&security=d41633bc&invisible=0" alt="free tracking" border="0"></a> </noscript>
+	<!-- End of StatCounter Code -->
+          </td>
+
+    <td align="right" valign="top">
+      		<a href="http://sourceforge.net/projects/vim" rel="nofollow"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=8&type=1" width="88" height="31" border="0" alt="SourceForge.net Logo" /></a>
+    </td>
+
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+  </tr>
+
+    
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  
+  </tr>
+</table>
+
+</body>
+</html>
+

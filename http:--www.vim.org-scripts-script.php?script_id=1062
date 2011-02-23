@@ -1,0 +1,356 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+  <link rel="Stylesheet" type="text/css" href="/css/style.css" >
+  <title>greputils - Interface with grep, find and id-utils (not just another grep wrapper) : vim online</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <meta name="KEYWORDS" content="Vim, Vi IMproved, text editor, home, documentation, tips, scripts, news">
+  <link rel="shortcut icon" type="image/x-icon" href="/images/vim_shortcut.ico">
+</head>
+
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff"> 
+
+<!-- HEADER, SPONSOR IMAGE, VIM IMAGE AND BOOK AD -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+  <td class="lightbg">&nbsp;&nbsp;&nbsp;</td>
+  <td class="lightbg" align="left"><a href="/sponsor/index.php"><img src="/images/sponsorvim.gif" alt="sponsor Vim development" border="0"></a></td>
+    <td class="lightbg" align="center"><a href="/index.php"><img src="/images/vim_header.gif" border="0" alt="Vim logo"></a></td>
+    <td class="lightbg" align="right"><a href="http://iccf-holland.org/click5.html"><img src="/images/buyhelplearn.gif" alt="Vim Book Ad" border="0"></a></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="darkbg"><img src="/images/spacer.gif" width="1" height="10" alt=""></td>
+  </tr>
+</table>
+<!-- THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+  <col width="180">
+  <col width="1">
+
+  <tr valign="top">
+    <td class="sidebar">
+      <table width="180" cellpadding="4" cellspacing="0" border="0">
+        <tr valign="top">
+          <td class="sidebar">
+
+<!-- INCLUDE THE PAGE NAVIGATION -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+    <tr>
+        <td><small>not logged in (<a href="/login.php">login</a>)</small></td>
+    </tr>
+    <tr><td>
+<small>&nbsp;</small>
+<form action="http://www.google.com/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-3005259998294962:bvyni59kjr1" />
+    <input type="hidden" name="ie" value="ISO-8859-1" />
+    <input type="text" name="q" size="20" />
+    <br>
+    <input type="submit" name="sa" value="Search" />
+  </div>
+</form>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+    </td></tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="1"></td>
+    </tr>
+    <tr>
+        <td class="darkbg"><img src="/images/spacer.gif" alt='' border="0" height="3"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="2"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/index.php">Home</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/search.php">Advanced search</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/about.php">About Vim</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/community.php">Community</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/news/news.php">News</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/sponsor/index.php">Sponsoring</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/trivia.php">Trivia</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/docs.php">Documentation</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/download.php">Download</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/scripts/index.php">Scripts</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/tips/index.php">Tips</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/account/index.php">My Account</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/huh.php">Site Help</a></td>
+        </tr>
+</table>
+
+            <table width="172" cellpadding="0" cellspacing="0" border="0">
+              <tr><td><img src="/images/spacer.gif" alt="" border="0" width="1" height="8"></td></tr>
+              <tr><td class="darkbg"><img src="/images/spacer.gif" width="1" height="3" alt=""></td></tr>
+            </table>
+            <br>
+
+<!-- INCLUDE THE PAGE SIDEBAR TEXT -->
+&nbsp;
+
+          </td>
+        </tr>
+      </table>
+    </td>
+
+    <td class="darkbg"><img src="/images/spacer.gif" width="1" height="1" border="0" alt=""><br></td>
+    <td>
+      <table width="100%" cellpadding="10" cellspacing="0" border="0" bordercolor="red">
+        <tr>
+          <td valign="top">
+
+<span class="txth1">greputils : Interface with grep, find and id-utils (not just another grep wrapper)</span> 
+
+<br>
+<br>
+
+<!-- karma table -->
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
+  <td>
+    Rating <b>48/21</b>,
+    Downloaded by 2339  </td>
+  <td class="lightbg">
+  <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
+  </td>
+  <td>
+    <a href="http://vim.wikia.com/wiki/Script:1062">Vim wiki</a>
+  </td>  
+</tr>
+</table>
+<p>
+
+<table cellspacing="0" cellpadding="0" border="0">
+<tr><td class="prompt">created by</td></tr>
+<tr><td><a href="/account/profile.php?user_id=292">Hari Krishna Dara</a></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">script type</td></tr>
+<tr><td>utility</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">description</td></tr>
+<tr><td>Derived from my original idutils.vim, this script is a lot more powerful and useful than ever. The commands that make use of Vim built-in grep are especially useful and unique (thanks to Tim Chase for the idea).<br><br>&nbsp;&nbsp;- There are many plugins that wrap the Vim built-in :grep command and try<br>&nbsp;&nbsp;&nbsp;&nbsp;to simplify the usage. However this plugin aims at providing two<br>&nbsp;&nbsp;&nbsp;&nbsp;specific features:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Escape the arguments such that the arguments can be passed to the<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;external grep/lid/find literally. This avoids unwanted<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;interpretations by the shell, thus allowing you to concentrate on<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;the regular expression patterns rather than how to escape them.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This has been tested well on both windows and UNIX with<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sh/bash/cmd as command shells.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Allow you to preview the results before letting Vim handle them as<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;part of quickfix. This, besides allowing you to further filter the<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;results, also prevents Vim from adding buffers for files that are<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;uninteresting and thus help reduce the number of buffers. It also<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;supports basic quickfix commands that can be used to open a buffer <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;without needing to convert it to a quickfix window. You can<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;consider it as a lightweight quickfix window. The preview window<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;is also great if you just want to take a peak at the results, not<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;really navigate them (such as to get an estimate of where all a<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reference is found).<br>&nbsp;&nbsp;&nbsp;&nbsp;- Also provides commands to run the Vim built-in :g/re/p on multiple<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;buffers using :argdo, :bufdo and :windo commands and redirect the<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;output to the grep-results preview window. You can then convert the<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;results to a quickfix window, or use the preview window to navigate.<br>&nbsp;&nbsp;&nbsp;&nbsp;- As a bonus, the plugin also works around Vim problem with creating a<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;number of unnamed buffers as you close and open quickfix window<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;several times. This helps keep buffer list uncluttered.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;- The command merely wraps the built-in :grep, :grepadd, :cfile and<br>&nbsp;&nbsp;&nbsp;&nbsp;:cgetfile commands to create the quickfix list. The rest of the quickfix<br>&nbsp;&nbsp;&nbsp;&nbsp;commands work just like they do on the quickfix results created by using<br>&nbsp;&nbsp;&nbsp;&nbsp;only the built-in functionality. This also means that the plugin assume<br>&nbsp;&nbsp;&nbsp;&nbsp;that you have the options such as 'grepprg', 'shellpipe' are properly<br>&nbsp;&nbsp;&nbsp;&nbsp;set. Read the help on quickfix for the full list of commands and options<br>&nbsp;&nbsp;&nbsp;&nbsp;that you have.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:h quickfix <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;- Other than the preview functionality which enables filtering, the plugin<br>&nbsp;&nbsp;&nbsp;&nbsp;also provides an easy way to specify a number of filter commands that<br>&nbsp;&nbsp;&nbsp;&nbsp;you can chain on the output of the grep/lid/find, each prefixed with<br>&nbsp;&nbsp;&nbsp;&nbsp;&quot;+f&quot;. The arguments to the filter command are themselves escaped, the<br>&nbsp;&nbsp;&nbsp;&nbsp;same way as the grep command arguments as described above.<br>&nbsp;&nbsp;- Supports GNU &quot;grep&quot; and MS Windows &quot;findstr&quot; for running &quot;find-in-file&quot;<br>&nbsp;&nbsp;&nbsp;&nbsp;kind of searches, id-utils &quot;lid&quot; for running index searches, and GNU<br>&nbsp;&nbsp;&nbsp;&nbsp;&quot;find&quot; to search for file names. If you need to add support for a new<br>&nbsp;&nbsp;&nbsp;&nbsp;grep command or a grep-like tool, it is just a matter of modifying a few<br>&nbsp;&nbsp;&nbsp;&nbsp;internal variables and possibly adding a new set of commands.<br>&nbsp;&nbsp;- On windows, setting multiple ID files for IDPATH doesn't work, so the<br>&nbsp;&nbsp;&nbsp;&nbsp;plugin provides a workaround by running &quot;lid&quot; separately on each ID file<br>&nbsp;&nbsp;&nbsp;&nbsp;if there are multiple ID files separated by &quot;;&quot; in the IDPATH.<br>&nbsp;&nbsp;- Make sure that the 'grepprg' and 'shellpipe' options are properly set<br>&nbsp;&nbsp;&nbsp;&nbsp;and that the built-in :grep itself works. For GNU id-utils, make sure<br>&nbsp;&nbsp;&nbsp;&nbsp;IDPATH environmental variable is set or path to the ID file is specified<br>&nbsp;&nbsp;&nbsp;&nbsp;with the &quot;-f&quot; argument in the g:greputilsLidcmd setting. You can also<br>&nbsp;&nbsp;&nbsp;&nbsp;specify the &quot;-f ID&quot; arguments to the :IDGrep command.<br>&nbsp;&nbsp;- Uses EscapeCommand() function from genutils.vim plugin that supports<br>&nbsp;&nbsp;&nbsp;&nbsp;Cygwin &quot;bash&quot;, MS Windows &quot;cmd&quot; and Unix &quot;sh&quot; for shell escaping. Other<br>&nbsp;&nbsp;&nbsp;&nbsp;environments are untested.<br>&nbsp;&nbsp;- Defines the following commands:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Grep, GrepAdd, IDGrep, IDGrepAdd, Find, FindAdd<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Grepp, GreppAdd, IDGrepp, IDGreppAdd, Findp, FindpAdd<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;The second set of commands are used to open the results in a preview<br>&nbsp;&nbsp;&nbsp;&nbsp;window instead of directly in the quickfix window. And those that have a<br>&nbsp;&nbsp;&nbsp;&nbsp;suffix of &quot;Add&quot; add the new list of results to the existing list,<br>&nbsp;&nbsp;&nbsp;&nbsp;instead of replacing them (just like in :grepadd). This can be very<br>&nbsp;&nbsp;&nbsp;&nbsp;useful in combination with the preview commands.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;You can open the preview window at anytime using GrepPreview command.<br>&nbsp;&nbsp;&nbsp;&nbsp;Once you are in the preview window, you can filter the results using the<br>&nbsp;&nbsp;&nbsp;&nbsp;regular Vim commands, and when you would like to browse the results<br>&nbsp;&nbsp;&nbsp;&nbsp;using Vim quickfix commands, just use Cfile and Cgetfile commands, which<br>&nbsp;&nbsp;&nbsp;&nbsp;are functionally equivalent to the built-in cfile and cgetfile commands<br>&nbsp;&nbsp;&nbsp;&nbsp;respectively, except that they don't take a filename as argument use the<br>&nbsp;&nbsp;&nbsp;&nbsp;current preview window contents to create the error-list. There are<br>&nbsp;&nbsp;&nbsp;&nbsp;also, GOpen, GClose and GWindow commands defined on the lines of copen,<br>&nbsp;&nbsp;&nbsp;&nbsp;cclose and cwindow respectively.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;Use the GrepPreviewSetup command to convert an arbitrary buffer<br>&nbsp;&nbsp;&nbsp;&nbsp;containing :grep output as a preview window. This is useful to take<br>&nbsp;&nbsp;&nbsp;&nbsp;advantage of the quickfix like functionality that the plugin provides on<br>&nbsp;&nbsp;&nbsp;&nbsp;grep results generated by your own commands.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;If cmdalias.vim is installed, it also creates aliases for the Grep,<br>&nbsp;&nbsp;&nbsp;&nbsp;GrepAdd, Cfile and Cgetfile commands to the corresponding built-in<br>&nbsp;&nbsp;&nbsp;&nbsp;commands, i.e., grep, grepadd, cfile and cgetfile respectively.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;The preview window supports the following commands:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;preview command&nbsp;&nbsp;&nbsp;&nbsp; quickfix command ~<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GG [count]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cc [count]<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[count]GNext&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[count]cnext<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[count]GPrev&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[count]cNext, cprevious<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;CR&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;CR&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;2-LeftMouse&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;2-LeftMouse&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;The commands supports [count] argument just like the corresponding<br>&nbsp;&nbsp;&nbsp;&nbsp;quickfix command.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;General Syntax:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;grep command&gt; [&lt;grep/lid/find options&gt; ...] &lt;regex/keyword&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [&lt;filename patterns&gt;/&lt;more options&gt;]<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [+f &lt;filter arguments&gt; ...]<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;Note that typically you have to pass in at least one filename pattern to<br>&nbsp;&nbsp;&nbsp;&nbsp;grep/findstr where as you don't pass in any for lid.<br>&nbsp;&nbsp;- Also defines the following commands:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ArgGrep, ArgGrepAdd, BufGrep, BufGrepAdd, WinGrep, WinGrepAdd<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;You can use the above commands to run Vim's built-in g/re/p command to<br>&nbsp;&nbsp;&nbsp;&nbsp;find matches across buffers loaded in the current session, without<br>&nbsp;&nbsp;&nbsp;&nbsp;needing any external tools. Each of the above commands (and their &quot;Add&quot;<br>&nbsp;&nbsp;&nbsp;&nbsp;variants), run g/re/p command on a bunch of buffers loaded using one of<br>&nbsp;&nbsp;&nbsp;&nbsp;:argdo, :bufdo and :windo commands respectively. These commands are<br>&nbsp;&nbsp;&nbsp;&nbsp;designed to always open the results in the preview window. If you like,<br>&nbsp;&nbsp;&nbsp;&nbsp;you can convert it to a quickfix result, by using :Cfile or :Cgetfile<br>&nbsp;&nbsp;&nbsp;&nbsp;command.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;General Syntax:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[range]&lt;Arg|Buf|Win&gt;Grep[Add] [&lt;pattern&gt;]<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;If you don't specify a pattern, the current value in search register<br>&nbsp;&nbsp;&nbsp;&nbsp;(@/) will be used, which essentially means that the last search pattern<br>&nbsp;&nbsp;&nbsp;&nbsp;will be used. See also g:greputilsVimGrepSepChar setting under<br>&nbsp;&nbsp;&nbsp;&nbsp;installation section.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;The range, if not specified, defaults to all the lines in all the<br>&nbsp;&nbsp;&nbsp;&nbsp;applicable buffers. If you explicitly specify a range, please note that<br>&nbsp;&nbsp;&nbsp;&nbsp;a range such as &quot;%&quot; or &quot;1,$&quot; is translated to the absolute line numbers<br>&nbsp;&nbsp;&nbsp;&nbsp;with reference to the current buffer by Vim itself, so it is not the<br>&nbsp;&nbsp;&nbsp;&nbsp;same as not specifying at all. This means, if there are 100 lines in the<br>&nbsp;&nbsp;&nbsp;&nbsp;current buffer, specifying &quot;%&quot; or &quot;1,$&quot; is equivalent to specifying<br>&nbsp;&nbsp;&nbsp;&nbsp;&quot;1,100&quot; as the range. The range is more useful with the &quot;GrepBufs&quot;<br>&nbsp;&nbsp;&nbsp;&nbsp;command mentioned below.<br>&nbsp;&nbsp;- Also defines &quot;GrepBufs&quot; command that can be used to grep for a Vim<br>&nbsp;&nbsp;&nbsp;&nbsp;regular expression pattern in the specified set of buffers (or the<br>&nbsp;&nbsp;&nbsp;&nbsp;current buffer). If no pattern is specified it will default to the<br>&nbsp;&nbsp;&nbsp;&nbsp;current search pattern. Buffers can be specified by name (see :h<br>&nbsp;&nbsp;&nbsp;&nbsp;bufname()) or by their number using the #&lt;bufno&gt; notation. You can also<br>&nbsp;&nbsp;&nbsp;&nbsp;complete the buffer names by using the completion character (&lt;Tab&gt;).<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;General Syntax:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[range]GrepBufs[Add] [pattern] [buffer ...]<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;This by syntax is very close to the Unix grep command. The main<br>&nbsp;&nbsp;&nbsp;&nbsp;difference being that it uses Vim regex and it searches the buffers<br>&nbsp;&nbsp;&nbsp;&nbsp;already loaded instead of those on the file system.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;The range has same semantics as for any of the &quot;arg&quot;, &quot;buf&quot; or &quot;win&quot; grep<br>&nbsp;&nbsp;&nbsp;&nbsp;commands, but it is more useful here while limiting the grep for one<br>&nbsp;&nbsp;&nbsp;&nbsp;buffer alone.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>Examples:<br>&nbsp;&nbsp;The following examples assume that you are using GNU grep for both the<br>&nbsp;&nbsp;'grepprg' and as the g:greputilsFiltercmd.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;- Run GNU grep from the directory of the current file recursively while<br>&nbsp;&nbsp;&nbsp;&nbsp;limiting the search only for Java files.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Grep -r --include=*.java \&lt;main\&gt; %:h<br>&nbsp;&nbsp;- Run lid while filtering the lines that are not from Java source.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IDGrep main +f \.java<br>&nbsp;&nbsp;- Run lid while filtering the lines that contain src.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IDGrep main +f -v src<br>&nbsp;&nbsp;- Find Java files starting with A and ending with z under src.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Find src -iname A*z.java<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;- To search for the current word in all the files and filter the results<br>&nbsp;&nbsp;&nbsp;&nbsp;not containing \.java in the grepped output. This will potentially<br>&nbsp;&nbsp;&nbsp;&nbsp;return all the occurences in the java files only. <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IDGrep &lt;cword&gt; +f \.java <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;- If any argument contains spaces, then you need to protect them by<br>&nbsp;&nbsp;&nbsp;&nbsp;prefixing them with a backslash.&nbsp;&nbsp;The following will filter those lines<br>&nbsp;&nbsp;&nbsp;&nbsp;that don't contain &quot;public static&quot;.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IDGrep &lt;cword&gt; +f public\ static<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;- Run &quot;:bufdo g/public static/p&quot; and show output in preview window:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BufGrep public\ static<br><br><br><br><br><br>Search_key_words: idutils greputils greputil id-utils gnu id grep gid mkid lid windo argdo bufdo Hari Krishna Dara</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">install details</td></tr>
+<tr><td>- Drop the file in your plugin directory or source it from your vimrc.<br>- Requires genutils (<a href="/scripts/script.php?script_id=197">vimscript#197</a>) and multvals (<a href="/scripts/script.php?script_id=171">vimscript #171</a>) plugins<br>&nbsp;&nbsp;also to be installed.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>Optional Settings:<br>&nbsp;&nbsp;&nbsp;&nbsp;g:greputilsLidcmd, g:greputilsFindcmd, g:greputilsFiltercmd,<br>&nbsp;&nbsp;&nbsp;&nbsp;g:greputilsFindMsgFmt, g:greputilsAutoCopen, g:greputilsVimGrepCmd,<br>&nbsp;&nbsp;&nbsp;&nbsp;g:greputilsVimGrepAddCmd, g:greputilsGrepCompMode,<br>&nbsp;&nbsp;&nbsp;&nbsp;g:greputilsLidCompMode, g:greputilsFindCompMode,<br>&nbsp;&nbsp;&nbsp;&nbsp;g:greputilsExpandCurWord, g:greputilsVimGrepSepChar,<br>&nbsp;&nbsp;&nbsp;&nbsp;g:greputilsPreserveLastResults, g:greputilsPreserveAllResults,<br>&nbsp;&nbsp;&nbsp;&nbsp;g:greputilsPreviewCreateFolds<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>&nbsp;&nbsp;- Use g:greputilsLidcmd and g:greputilsFiltercmd to set the path/name to<br>&nbsp;&nbsp;&nbsp;&nbsp;the lid and GNU or compatible find executable (defaults to &quot;lid&quot;).<br>&nbsp;&nbsp;- Use g:greputilsFiltercmd to set the path/name of the command that you<br>&nbsp;&nbsp;&nbsp;&nbsp;would like to use as the filter when &quot;+f&quot; option is used (defaults to<br>&nbsp;&nbsp;&nbsp;&nbsp;&quot;grep&quot;).<br>&nbsp;&nbsp;- Set g:greputilsFindMsgFmt to change the message (%m) part of the find<br>&nbsp;&nbsp;&nbsp;&nbsp;results. You can specify anything that is accepted in the argument for<br>&nbsp;&nbsp;&nbsp;&nbsp;&quot;-printf&quot; find option.<br>&nbsp;&nbsp;- Use g:greputilsAutoCopen to specify if the error list window should<br>&nbsp;&nbsp;&nbsp;&nbsp;automatically be opened or closed based on whether there are any<br>&nbsp;&nbsp;&nbsp;&nbsp;results or not (runs :cwindow command at the end).<br>&nbsp;&nbsp;- Use g:greputilsVimGrepCmd and g:greputilsVimGrepAddCmd to have the<br>&nbsp;&nbsp;&nbsp;&nbsp;plugin run a different command than the built-in :grep command to<br>&nbsp;&nbsp;&nbsp;&nbsp;generate the results. This is mainly useful to use the plugin as a<br>&nbsp;&nbsp;&nbsp;&nbsp;wrapper to finally invoke another plugin after the arguments are<br>&nbsp;&nbsp;&nbsp;&nbsp;escaped and 'shellpipe' is properly set. The callee typically can just<br>&nbsp;&nbsp;&nbsp;&nbsp;run the :grep command on the arguments and do additional setup.<br>&nbsp;&nbsp;- Use g:greputilsGrepCompMode, g:greputilsLidCompMode and<br>&nbsp;&nbsp;&nbsp;&nbsp;g:greputilsFindCompMode to change the completion mode for Grep, IDGrep<br>&nbsp;&nbsp;&nbsp;&nbsp;and Find commands respectively. The default completion mode for Grep<br>&nbsp;&nbsp;&nbsp;&nbsp;and Find are &quot;file&quot; to match that of the built-in commands, where as<br>&nbsp;&nbsp;&nbsp;&nbsp;it is set to &quot;tag&quot; for IDGrep (except the -f argument to specify an ID<br>&nbsp;&nbsp;&nbsp;&nbsp;file, you never need to pass filenam to lid). When completion mode is<br>&nbsp;&nbsp;&nbsp;&nbsp;&quot;file&quot;, Vim automatically expands filename meta-characters such as &quot;%&quot;<br>&nbsp;&nbsp;&nbsp;&nbsp;and &quot;#&quot; on the command-line, so you still need to escape then. If this<br>&nbsp;&nbsp;&nbsp;&nbsp;is an issue for you, then you should switch to &quot;tag&quot; or a different<br>&nbsp;&nbsp;&nbsp;&nbsp;completion mode. When completion mode is not &quot;file&quot;, the plugin<br>&nbsp;&nbsp;&nbsp;&nbsp;expands the filename meta characters in the file arguments anyway, and<br>&nbsp;&nbsp;&nbsp;&nbsp;this can be considered as an advantage (think about passing patterns<br>&nbsp;&nbsp;&nbsp;&nbsp;to the command literally). However it is still useful to have<br>&nbsp;&nbsp;&nbsp;&nbsp;&quot;&lt;cword&gt;&quot; and &quot;&lt;cWORD&gt;&quot; expand inside the patterns, in which case you<br>&nbsp;&nbsp;&nbsp;&nbsp;can set g:greputilsExpandCurWord setting.&nbsp;&nbsp;Changing this option at<br>&nbsp;&nbsp;&nbsp;&nbsp;runtime requires you to reload the plugin.<br>&nbsp;&nbsp;- When completion mode is not set to &quot;file&quot;, you can set<br>&nbsp;&nbsp;&nbsp;&nbsp;g:greputilsExpandCurWord to have the plugin expand &quot;&lt;cword&gt;&quot; and<br>&nbsp;&nbsp;&nbsp;&nbsp;&quot;&lt;cWORD&gt;&quot; tokens. This essentially gives you all the goodness of file<br>&nbsp;&nbsp;&nbsp;&nbsp;completion while still being able to do tag completions.<br>&nbsp;&nbsp;- For Vim built-in grep operations such as :BufGrep, if you want to<br>&nbsp;&nbsp;&nbsp;&nbsp;change the character sorrounding the pattern from the default '/' to<br>&nbsp;&nbsp;&nbsp;&nbsp;something else (see |E146|), you can use the<br>&nbsp;&nbsp;&nbsp;&nbsp;g:greputilsVimGrepSepChar. This is useful if you have a lot of &quot;/&quot;<br>&nbsp;&nbsp;&nbsp;&nbsp;characters in your pattern.<br>&nbsp;&nbsp;- The plugin normally preserves the previous results in the preview<br>&nbsp;&nbsp;&nbsp;&nbsp;window, which you can retrieve by doing an undo immediately after<br>&nbsp;&nbsp;&nbsp;&nbsp;generating the new results, inside the preview window. If you don't<br>&nbsp;&nbsp;&nbsp;&nbsp;like this, you can disable this feature by resetting<br>&nbsp;&nbsp;&nbsp;&nbsp;g:greputilsPreserveLastResults setting. You can instead set the<br>&nbsp;&nbsp;&nbsp;&nbsp;g:greputilsPreserveAllResults to preserve all the changes done in the<br>&nbsp;&nbsp;&nbsp;&nbsp;preview window, by user and the plugin itself.<br>&nbsp;&nbsp;- While using the *pAdd commands (that add results to preview window),<br>&nbsp;&nbsp;&nbsp;&nbsp;the individual set of results are folded together to be able to<br>&nbsp;&nbsp;&nbsp;&nbsp;identify them better. You can disable this feature by resetting the<br>&nbsp;&nbsp;&nbsp;&nbsp;g:greputilsPreviewCreateFolds setting.<br></td></tr>
+<tr><td>&nbsp;</td></tr>
+</table>
+
+<!-- rating table -->
+<form name="rating">
+<input type="hidden" name="script_id" value="1062">
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>rate this script</b></td>
+  <td valign="middle">
+    <input type="radio" name="rating" value="life_changing">Life Changing
+    <input type="radio" name="rating" value="helpful">Helpful
+    <input type="radio" name="rating" value="unfulfilling">Unfulfilling&nbsp;
+    <input type="submit" value="rate">
+  </td>
+</tr>
+</table>
+</form>
+<span class="txth2">script versions</span> (<a href="add_script_version.php?script_id=1062">upload new version</a>)
+<p>
+Click on the package to download.
+<p>
+
+<table cellspacing="2" cellpadding="4" border="0" width="100%">
+<tr class='tableheader'>
+        <th valign="top">package</th>
+    <th valign="top">script version</th>
+    <th valign="top">date</th>
+    <th valign="top">Vim version</th>
+    <th valign="top">user</th>
+    <th valign="top">release notes</th>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=4434">greputils.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.8</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2005-07-14</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=292">Hari Krishna Dara</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- Support for inversing the search pattern. You can pass &quot;!&quot; to built-in grep commands.<br>- Fixed broken GrepBufs command.<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=4433">greputils.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.7</b></td>
+    <td class="roweven" valign="top" nowrap><i>2005-07-14</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=292">Hari Krishna Dara</a></i></td>
+    <td class="roweven" valign="top" width="2000">Fixed broken Cfile command.<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=4432">greputils.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.6</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2005-07-14</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=292">Hari Krishna Dara</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Just added support for specifying range for all the built-in grep commands. Useful mainly for GrepBufs command.<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=4035">greputils.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.5</b></td>
+    <td class="roweven" valign="top" nowrap><i>2005-03-16</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=292">Hari Krishna Dara</a></i></td>
+    <td class="roweven" valign="top" width="2000">- Better handling of unsaved and unnamed buffers while doing built-in grep.<br>- New setting g:greputilsPreserveAllResults to be able to undo over<br>&nbsp;&nbsp;several search results, as far as Vim allows you to do.<br>- Better integration with selectbuf so that the built-in grep performs<br>&nbsp;&nbsp;better, if both plugins are installed (need to get the latest<br>&nbsp;&nbsp;selectbuf).<br>- Much better handling of opening and closing preview window. Requires<br>&nbsp;&nbsp;the latest version genutils.vim.<br>- Misc. bug fixes. Update documentation.<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=3560">greputils.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.4</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2004-10-18</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=292">Hari Krishna Dara</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- Augmented the built-in grep (:WinGrep, :ArgGrep, :BufGrep)<br>&nbsp;&nbsp;functionality with the new command :GrepBufs to grep specified<br>&nbsp;&nbsp;buffers only. This is very similar to unix :grep command with given<br>&nbsp;&nbsp;filenames.<br>- New commands :GOpen, :GClose and :GWindow on the lines of :copen,<br>&nbsp;&nbsp;:cclose and :cwindow to work with the preview window. The existing<br>&nbsp;&nbsp;commands :GNext, :GPrev and :GG commands now work globally, just like<br>&nbsp;&nbsp;the :cnext, :cprev and :cc commands.<br>- Fixed misc. bugs.<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=3364">greputils.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.3</b></td>
+    <td class="roweven" valign="top" nowrap><i>2004-08-20</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=292">Hari Krishna Dara</a></i></td>
+    <td class="roweven" valign="top" width="2000">	- Misc. improvements for Grep Preview window.<br>	&nbsp;&nbsp;- The Grep Preview window now implements undo functionality to be able<br>	&nbsp;&nbsp;&nbsp;&nbsp;to undo and recover the previous result set.<br>	&nbsp;&nbsp;- When you add results to the existing results, the results sets are<br>	&nbsp;&nbsp;&nbsp;&nbsp;folded such that you can easily distinguish them.<br>	&nbsp;&nbsp;- Preview window shouldn't be resized if it is already visible.<br>	- The grep commands that utilize the Vim's built-in grep functionality<br>	&nbsp;&nbsp;are refined and are more useful than ever.<br>	&nbsp;&nbsp;- They now have command-line completion enabled to complete tags.<br>	&nbsp;&nbsp;- &lt;cword&gt; and &lt;cWORD&gt; were not being expanded for Vim-grep<br>	&nbsp;&nbsp;&nbsp;&nbsp;commands.<br>	&nbsp;&nbsp;- Cleanup the grep window for &quot;pattern not found&quot; error messages and<br>	&nbsp;&nbsp;&nbsp;&nbsp;such.<br>	&nbsp;&nbsp;- The current buffer is restored at the end of the operation.<br>	&nbsp;&nbsp;- Vim event generation is disabled. This provides a significant<br>	&nbsp;&nbsp;&nbsp;&nbsp;improvement in the speed as well as avoid side effects. This along<br>	&nbsp;&nbsp;&nbsp;&nbsp;with the above improvement also makes the grep operation look<br>	&nbsp;&nbsp;&nbsp;&nbsp;completely tranparent.<br>	- New useful GrepPreviewSetup command.<br>	- On windows, setting multiple ID files in IDPATH doesn't work, as it<br>	&nbsp;&nbsp;does on *NIX. The plugin works around this problem by invoking lid on<br>	&nbsp;&nbsp;individual ID files and gathering all the results.<br>	- If you use findstr on windows, grepping on a single file doesn't<br>	&nbsp;&nbsp;generate the results in the right format (no filename prefix etc.).<br>	&nbsp;&nbsp;The plugin now works around this issue.<br>	- See help on new settings g:greputilsVimGrepSepChar,<br>	&nbsp;&nbsp;g:greputilsPreviewCreateFolds and g:greputilsPreserveLastResults.<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=3363">greputils.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>6.2</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2004-08-20</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=292">Hari Krishna Dara</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- Added BufGrep, WinGrep and ArgGrep commands that use the Vim's built-in g/re/p command with :bufdo, :windo and :argdo respectively to do search. This is an experimental feature, please try it and give feedback.<br>- Also fixed a couple or more of minor bugs.<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=3362">greputils.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.1</b></td>
+    <td class="roweven" valign="top" nowrap><i>2004-08-20</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=292">Hari Krishna Dara</a></i></td>
+    <td class="roweven" valign="top" width="2000">Requires Vim 6.3<br>- Added support for running GNU find command and open the files from preview or through quickfix result.<br>- Basic quickfix like commands have been added to the [Grep Preview] window. This is very useful if you want to quickly reach one or two files by running &quot;find&quot; or &quot;lid&quot; and don't care about the full results.<br>- The default completion mode for grep has been changed to &quot;file&quot; from &quot;tag&quot;, which is what is more useful.<br>- Fixed :Cfile and :Cgetfile to work correctly if the current directory has changed since the results are generated.<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=3361">greputils.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.0</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2004-08-20</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=292">Hari Krishna Dara</a></i></td>
+    <td class="rowodd" valign="top" width="2000">This is an enhanced version of idutils.vim, made more generic and supports regular :grep command too. See description for information on the new version. Needs Vim 6.3<br></td>
+</tr>
+</table>
+<!-- finish off the framework -->
+          </td>
+        </tr>
+      </table>
+    </td>
+
+  </tr>
+</table>
+
+<!-- END OF THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr><td colspan="4" bgcolor="#000000"><img src="/images/spacer.gif" height="2" width="1" alt=""></td></tr>
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr>
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+
+    <td align="left" valign="top"><small>
+      If you have questions or remarks about this site, visit the
+      <a href="http://vimonline.sf.net">vimonline development</a> pages.
+      Please use this site responsibly.
+      <br> 
+      
+      Questions about <a href="http://www.vim.org/about.php">Vim</a> should go
+      to the <a href="http://www.vim.org/maillist.php">maillist</a>.
+      Help Bram <a href="http://iccf-holland.org/">help Uganda</a>.
+      </small>
+	&nbsp;
+	&nbsp;
+
+	<!-- Start of StatCounter Code -->
+	<script type="text/javascript" language="javascript">
+	var sc_project=1417324; 
+	var sc_invisible=1; 
+	var sc_partition=11; 
+	var sc_security="d41633bc"; 
+	</script>
+
+	<script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script><noscript><a href="http://www.statcounter.com/" target="_blank"><img  src="http://c12.statcounter.com/counter.php?sc_project=1417324&java=0&security=d41633bc&invisible=0" alt="free tracking" border="0"></a> </noscript>
+	<!-- End of StatCounter Code -->
+          </td>
+
+    <td align="right" valign="top">
+      		<a href="http://sourceforge.net/projects/vim" rel="nofollow"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=8&type=1" width="88" height="31" border="0" alt="SourceForge.net Logo" /></a>
+    </td>
+
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+  </tr>
+
+    
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  
+  </tr>
+</table>
+
+</body>
+</html>
+

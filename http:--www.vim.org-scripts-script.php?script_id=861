@@ -1,0 +1,612 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+  <link rel="Stylesheet" type="text/css" href="/css/style.css" >
+  <title>Viki/Deplate - A personal wiki for Vim : vim online</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <meta name="KEYWORDS" content="Vim, Vi IMproved, text editor, home, documentation, tips, scripts, news">
+  <link rel="shortcut icon" type="image/x-icon" href="/images/vim_shortcut.ico">
+</head>
+
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff"> 
+
+<!-- HEADER, SPONSOR IMAGE, VIM IMAGE AND BOOK AD -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+  <td class="lightbg">&nbsp;&nbsp;&nbsp;</td>
+  <td class="lightbg" align="left"><a href="/sponsor/index.php"><img src="/images/sponsorvim.gif" alt="sponsor Vim development" border="0"></a></td>
+    <td class="lightbg" align="center"><a href="/index.php"><img src="/images/vim_header.gif" border="0" alt="Vim logo"></a></td>
+    <td class="lightbg" align="right"><a href="http://iccf-holland.org/click5.html"><img src="/images/buyhelplearn.gif" alt="Vim Book Ad" border="0"></a></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="darkbg"><img src="/images/spacer.gif" width="1" height="10" alt=""></td>
+  </tr>
+</table>
+<!-- THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+  <col width="180">
+  <col width="1">
+
+  <tr valign="top">
+    <td class="sidebar">
+      <table width="180" cellpadding="4" cellspacing="0" border="0">
+        <tr valign="top">
+          <td class="sidebar">
+
+<!-- INCLUDE THE PAGE NAVIGATION -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+    <tr>
+        <td><small>not logged in (<a href="/login.php">login</a>)</small></td>
+    </tr>
+    <tr><td>
+<small>&nbsp;</small>
+<form action="http://www.google.com/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-3005259998294962:bvyni59kjr1" />
+    <input type="hidden" name="ie" value="ISO-8859-1" />
+    <input type="text" name="q" size="20" />
+    <br>
+    <input type="submit" name="sa" value="Search" />
+  </div>
+</form>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+    </td></tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="1"></td>
+    </tr>
+    <tr>
+        <td class="darkbg"><img src="/images/spacer.gif" alt='' border="0" height="3"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="2"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/index.php">Home</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/search.php">Advanced search</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/about.php">About Vim</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/community.php">Community</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/news/news.php">News</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/sponsor/index.php">Sponsoring</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/trivia.php">Trivia</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/docs.php">Documentation</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/download.php">Download</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/scripts/index.php">Scripts</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/tips/index.php">Tips</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/account/index.php">My Account</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/huh.php">Site Help</a></td>
+        </tr>
+</table>
+
+            <table width="172" cellpadding="0" cellspacing="0" border="0">
+              <tr><td><img src="/images/spacer.gif" alt="" border="0" width="1" height="8"></td></tr>
+              <tr><td class="darkbg"><img src="/images/spacer.gif" width="1" height="3" alt=""></td></tr>
+            </table>
+            <br>
+
+<!-- INCLUDE THE PAGE SIDEBAR TEXT -->
+&nbsp;
+
+          </td>
+        </tr>
+      </table>
+    </td>
+
+    <td class="darkbg"><img src="/images/spacer.gif" width="1" height="1" border="0" alt=""><br></td>
+    <td>
+      <table width="100%" cellpadding="10" cellspacing="0" border="0" bordercolor="red">
+        <tr>
+          <td valign="top">
+
+<span class="txth1">Viki/Deplate : A personal wiki for Vim</span> 
+
+<br>
+<br>
+
+<!-- karma table -->
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
+  <td>
+    Rating <b>428/133</b>,
+    Downloaded by 11511  </td>
+  <td class="lightbg">
+  <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
+  </td>
+  <td>
+    <a href="http://vim.wikia.com/wiki/Script:861">Vim wiki</a>
+  </td>  
+</tr>
+</table>
+<p>
+
+<table cellspacing="0" cellpadding="0" border="0">
+<tr><td class="prompt">created by</td></tr>
+<tr><td><a href="/account/profile.php?user_id=4037">Tom Link</a></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">script type</td></tr>
+<tr><td>utility</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">description</td></tr>
+<tr><td>VIKI Forum (questions, feature requests): <a target="_blank" href="http://sourceforge.net/projects/deplate/forums/forum/700962">http://sourceforge.net/projects/deplate/forums/forum/700962</A><br>Bug tracker: <a target="_blank" href="http://sourceforge.net/tracker/?group_id=108085&atid=649488">http://sourceforge.net/tracker/?group_id=108085&atid=649488</A><br>Demo: <a target="_blank" href="http://vimsomnia.blogspot.com/2010/11/vikitasks-viki-demonstration-personal.html">http://vimsomnia.blogspot.com/2010/11/vikitasks-viki-demonstration-personal.html</A><br><br>QUICKSTART<br>This plugin adds wiki-like hypertext capabilities to Vim. You can use viki as a &quot;minor&quot; mode (i.e., as an add-on to any other mode) or as a full-fledged wiki mode. There is also an add-on plugin for &quot;wikifying&quot; latex documents by turning some latex commands into wiki names. If viki is properly configured, activating a reference to an image, a webpage etc. will view that resource in an external viewer.<br><br>From <a target="_blank" href="http://sourceforge.net/projects/deplate/">http://sourceforge.net/projects/deplate/</A> you can download a ruby based tool to convert viki markup to html, latex, or docbook. On its homepage (<a target="_blank" href="http://deplate.sf.net">http://deplate.sf.net</A>) you can read a more detailled specification of the markup.<br><br><br>MINOR WIKI MODE:<br>Use the hypertext facility with any filetype. Just type :VikiMinorMode and all wiki names and URLs will be highlighted.<br><br><br>FULL WIKI MODE:<br>In full mode, viki becomes a personal wiki (<a target="_blank" href="http://c2.com/cgi/wiki?PersonalWiki">http://c2.com/cgi/wiki?PersonalWiki</A>) -- some sort of lo-fi database of notes and all sorts of information. Set 'filetype' to viki. The full wiki mode is like the minor mode but with folding support, syntax highlighting (for headings, lists, tables, textstyles etc.), and additional key bindings (i.e., you can press &lt;c-tab&gt; or &lt;s-c-tab&gt; to move the cursor to the next/previous viki name). You can bind viki mode to some file extension by adding a line like the following to some configuration file (see :help ftdetect or so):<br><br>&nbsp;&nbsp;&nbsp;&nbsp;au BufRead,BufNewFile *.viki set ft=viki<br><br><br>WIKIS:<br>In case you missed out on wikis, a wiki is a simple way of creating hypertexts. In its very basic form creating a hyperlink is as easy as writing a word in CamelCase or by enclosing a word in brackets--as in [[destination]] or [-destination-]. URLs are automatically recognized as hyperlinks. You usually begin with creating a directory where your wiki files should go to and by creating a wiki index--a master file that contains references to sub-pages. After a while you end up with many small, tightly interlinked files/notes. There is also some basic support for basic markup like emphasized text, headings and the like. In the case of Viki/deplate, this markup would compare to, e.g., LaTeX markup as follows:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;LaTeX: \section{Title}<br>&nbsp;&nbsp;&nbsp;&nbsp;Viki:&nbsp;&nbsp;* Title<br><br>&nbsp;&nbsp;&nbsp;&nbsp;LaTeX: \emph{text}<br>&nbsp;&nbsp;&nbsp;&nbsp;Viki:&nbsp;&nbsp;__text__<br><br><br>RELATED PLUGIN:<br>- vikitasks (<a href="/scripts/script.php?script_id=2894">vimscript #2894</a>) :: Search viki files for tasks and display them in a list <br>- vxfold (<a href="/scripts/script.php?script_id=3004">vimscript #3004</a>) by Marko Mahni&#269;: Provides org-mode like fold cycling<br><br><br>Also available via git<br><a target="_blank" href="http://github.com/tomtom/viki_vim">http://github.com/tomtom/viki_vim</A></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">install details</td></tr>
+<tr><td>Open the vba file and type:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;:so %<br><br>See :help vimball for details. Also, make sure to read |viki-customization|. If you have difficulties to install this plugin or if you use vim 7.0, please make sure to use the current version of vimball (<a href="/scripts/script.php?script_id=1502">vimscript #1502</a>).<br><br>Requirements:<br>- tlib (<a href="/scripts/script.php?script_id=1863">vimscript #1863</a>)<br><br>Optional enhancements:<br>- hookcursormoved (<a href="/scripts/script.php?script_id=2037">vimscript #2037</a>): Enhanced detection of hyperlinks to inexistent destinations.<br><br>This plugin relies on the use of filetype plugins. Your .vimrc file should thus contain these lines:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;set nocompatible<br>&nbsp;&nbsp;&nbsp;&nbsp;filetype plugin indent on<br>&nbsp;&nbsp;&nbsp;&nbsp;syntax on<br><br>By default, vim doesn't allow to |abandon| a modified buffer unless |hidden| is set. If get a &quot;cannot abandon buffer&quot;-message, please read the help on |g:vikiHide| and |abandon| to find out how to avoid this problem.<br><br><br>There is also a ruby-based tool for converting viki markup to html, latex, or docbook. Download deplate from the sourceforge project site: <a target="_blank" href="http://sourceforge.net/projects/deplate/">http://sourceforge.net/projects/deplate/</A><br></td></tr>
+<tr><td>&nbsp;</td></tr>
+</table>
+
+<!-- rating table -->
+<form name="rating">
+<input type="hidden" name="script_id" value="861">
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>rate this script</b></td>
+  <td valign="middle">
+    <input type="radio" name="rating" value="life_changing">Life Changing
+    <input type="radio" name="rating" value="helpful">Helpful
+    <input type="radio" name="rating" value="unfulfilling">Unfulfilling&nbsp;
+    <input type="submit" value="rate">
+  </td>
+</tr>
+</table>
+</form>
+<span class="txth2">script versions</span> (<a href="add_script_version.php?script_id=861">upload new version</a>)
+<p>
+Click on the package to download.
+<p>
+
+<table cellspacing="2" cellpadding="4" border="0" width="100%">
+<tr class='tableheader'>
+        <th valign="top">package</th>
+    <th valign="top">script version</th>
+    <th valign="top">date</th>
+    <th valign="top">Vim version</th>
+    <th valign="top">user</th>
+    <th valign="top">release notes</th>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=14236">viki.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>3.19</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-11-11</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- Use tlib#balloon#Register() if available<br>- viki#Edit(): Switch to homepage only if we are in a viki-enabled buffer<br>- Run VimEnter command immediately if !has('vim_starting')<br>- Transcode balloon text (guess the file encoding based on the value of &fenc)<br>- Don't rely on g:vikiEnabled to be set when loading syntax/viki.vim<br>- Removed g:vikiEnabled variable (use g:viki#quit for checking when to quit)<br>- Act more graciously if g:vikiHomePage is empty<br>MD5 checksum: 64ebd14609764e98b91f1e233e121e32</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=12755">Viki.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>3.18</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-03-31</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
+    <td class="roweven" valign="top" width="2000">- g:vikiFoldMethodVersion defaults to 7 (a simpler method that relies on &quot;=&quot; though)<br>- Syntax for tasks lists<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=12582">Viki.vba.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>3.17</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-03-09</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- FIX: g:vikiOpenUrlWith_ANY for Windows<br>- Moved definition of fold related variables to ftplugin/viki.vim<br>- viki_viki: Anchors in URLs can start with an upper case character<br>- viki#RestoreCursorPosition(): use winrestview() (reported by Marko Mahnic)<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=12447">Viki.vba.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>3.16</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-02-20</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
+    <td class="roweven" valign="top" width="2000">- CHANGE: Moved the definition of some variables from plugin/viki.vim to autoload/viki.vim (this could require some changes in after/* user configuration)<br>- viki#Balloon(), g:vikiBalloonLines: Display text from the target file in a balloon tooltip if &balloonexpr is set to viki#Balloon().<br>- Renamed VikiMode() to viki#Mode()<br>- Renamed viki#MakeName() to VikiMakeName()<br>- Renamed viki#Define() to VikiDefine()<br>- Removed g:vikiIndex (the index name has to be made explicit in VikiDefine()) in order to reduce startup time<br>- Set g:vikiMenuPrefix = &quot;&quot; in order to reduce startup time<br>- Registered eml as special file<br>- Define g:vikiSaveHistory in plugin/viki.vim (reported by Marko Mahnic)<br>- FIX: Handling of cursor positions (reported by Marko Mahnic)</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=11933">Viki.vba.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>3.13</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-12-21</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- Extended viki links: decode %HH in local filenames (this may cause problems with file names containing an unencoded %)<br>- Require tlib 0.32<br>- viki#ExecExternal(): Escape !<br>- special file: xmind<br>- Make regexp for inexistent links case sensitive<br>- viki#HomePage()<br>- viki#GetInterVikis()<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=10254">Viki.vba.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>3.11</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-03-20</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
+    <td class="roweven" valign="top" width="2000">- Default values for g:vikiOpenUrlWith_ANY and g:vikiOpenFileWith_ANY on Macs (thanks mboniou)<br>- Correct default value for g:vikiOpenFileWith_ANY @ Windows<br>- Disabled regions' #END-syntax<br>- Don't define interviki commands if a command of the same name already exists.<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=9201">Viki.vba.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>3.10</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2008-08-31</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
+    <td class="rowodd" valign="top" width="2000">From this version on, viki requires vim 7.2's shellescape() and fnameescape() functions.<br><br>- VikiOpenSpecialFile() uses fnameescape()<br>- FIX: automatically set marks (#m? type of anchors)<br>- Anchor regexp can be configured via g:vikiAnchorNameRx<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=8835">Viki.vba.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>3.8</b></td>
+    <td class="roweven" valign="top" nowrap><i>2008-06-21</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
+    <td class="roweven" valign="top" width="2000">- FIX: viki#MarkInexistentInElement() for pre 7.0.009 vim (thanks to M Brandmeyer)<br>- FIX: Make sure tlib is loaded even if it is installed in a different rtp-directory (thanks to M Brandmeyer)<br>- Added dia to g:vikiSpecialFiles<br>- FIX: Scrambled window when opening an url from vim (thanks A Moell)</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=8153">Viki.vba.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>3.7</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2008-01-15</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- In a file that doesn't contain headings, return 0 instead of '=' as <br>default value if g:vikiFoldMethodVersion == 4.<br>- FIX: &quot;=&quot; in if expressions in certain versions of VikiFoldLevel()<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=8152">Viki.vba.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>3.6</b></td>
+    <td class="roweven" valign="top" nowrap><i>2008-01-14</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
+    <td class="roweven" valign="top" width="2000">- Forgot to define a default value for g:viki_intervikis.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=8149">Viki.vba.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>3.5</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2008-01-13</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- Don't try to append an empty anchor to an url (Thanks RM Schmid).<br>- New variable g:viki_interviki to define intervikis in ~/.vimrc without loading autoload/viki.vim<br>- Minor updates to the help file.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=8127">Viki.vba.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>3.4</b></td>
+    <td class="roweven" valign="top" nowrap><i>2008-01-05</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
+    <td class="roweven" valign="top" width="2000">- Promote anchors to VikiOpenSpecialProtocol().<br>- viki_viki: Enabled #INCLUDE<br>- Put the poor-man's math highlighting into syntax/texmath.vim so that <br>it can be included from other syntax files.<br>- Cascade menu of intervikis<br>- FIX: don't register viki names as known/unknown more than once<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=7790">Viki.vba.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>3.3</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2007-10-12</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- Use hookcursormoved &gt;= 0.3<br>- Backslash-save command-line completion<br>- Mark unknown intervikis as inexistent<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=7754">Viki.vba.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>3.2</b></td>
+    <td class="roweven" valign="top" nowrap><i>2007-10-05</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
+    <td class="roweven" valign="top" width="2000">- viki_viki.vim: Wrong value for b:vikiCmdDestIdx and <br>b:vikiCmdAnchorIdx.<br>- Moved :VikiMinorModeViki, :VikiMinorModeLaTeX, and <br>:VikiMinorModeAnyWord to plugin/viki.vim<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=7752">Viki.vba.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>3.1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2007-10-04</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- Slightly improved performance of s:MarkInexistent() and <br>viki#HookCheckPreviousPosition().<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=7749">Viki.vba.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>3.0</b></td>
+    <td class="roweven" valign="top" nowrap><i>2007-10-04</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
+    <td class="roweven" valign="top" width="2000">- VikiFolds() rev4: The text body is set to max heading level + 1 in <br>order to avoid lookups and thus speed-up the code.<br>- g:vikiPromote: Don't set viki minor modes for any files opened via <br>viki, unless this variable is set<br>- Added support for 'l' vikiFolds to the default fold expression.<br>- Added support for the {ref} macro (the referenced label has to be in <br>the same file though)<br>- INCOMPATIBLE CHANGE: Moved most function to autoload/viki.vim; moved <br>support for deplate/viki markup to vikiDeplate.vim.<br>- The argument of the VikiMode() has changed. (But this function <br>shouldn't be used anyway.)<br>- With g:vikiFoldMethodVersion=4 (the default), the text body is at the <br>level of the heading. This uses &quot;=&quot; for the body, which can be a problem <br>on slow machines. With g:vikiFoldMethodVersion=5, the body is below the <br>lowest heading, which can cause other problem.<br>- :VikiEditInVim ... edit special files in vim<br>- Set the default value for g:vikiCacheInexistent in order not to <br>surprise users with the abundance of cached data.<br>- Require tlib 0.15<br>- Use tlib#progressbar<br>- Improved (poor-man's) tex/math syntax highlighting<br>- Removed norm! commands form s:MarkInexistent().<br>- FIX: Wrong value for b:vikiSimpleNameAnchorIdx when simple viki names <br>weren't disabled.<br>- Optionally use hookcursormoved (<a href="/scripts/script.php?script_id=2037">vimscript #2037</a>) for improved detection of hyperlinks to <br>inexistent sources. If this plugin causes difficulties, please tell me <br>and temporarily remove it.<br>- Use matchlist() instead of substitute(), which could speed things up a <br>little.<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=7560">Viki.vba.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.4</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2007-08-26</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- The shortcuts automatically defined by VikiDefine may now take an <br>optional argument (the file on an interviki) (:WIKI thus is the same as <br>:VikiEdit WIKI:: and supports the same command-line completion)<br>- Read &quot;.vikiWords&quot; in parent directories (top-down); <br>g:vikiHyperWordsFiles: Changed order (read global words first)<br>- In .vikiWords: destination can be an interviki name (if not, it is <br>assumed to be a relative filename); if destination is -, the word will <br>be removed from the jump table; blanks in &quot;hyperwords&quot; will be replaced <br>with \s\+ in the regular expression.<br>- New :VikiBrowse command.<br>- FIX: wrong value for &comments<br>- FIX: need to reset filetype on color-scheme change (because of viki's <br>own styles)<br>- FIX: Caching of inexistent viki names.<br>- In minor mode, don't map keys that trigger a check for inexistent <br>links.<br>- Don't highlight textstyles (emphasized, typewriter) in comments.<br>- Removed configuration by: VikiInexistentColor(), <br>g:vikiInexistentColor, VikiHyperLinkColor(), g:vikiHyperLinkColor; use <br>g:viki_highlight_hyperlink_light, g:viki_highlight_hyperlink_dark, <br>g:viki_highlight_inexistent_light, g:viki_highlight_inexistent_dark <br>instead. By default, links are no longer made bold.<br>- The new default fold expression (g:vikiFoldMethodVersion=4) support <br>only hH folds (normal and inverse headings based; see g:vikiFolds). <br>Previous fold methods can be used by setting g:vikiFoldMethodVersion.<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=7365">Viki.vba.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.3</b></td>
+    <td class="roweven" valign="top" nowrap><i>2007-07-17</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
+    <td class="roweven" valign="top" width="2000">- Require tlib &gt;= 0.9<br>- FIX: Use absolute file names when editing a local file (avoid problem <br>when opening a file in a different window with a different CWD).<br>- New folding routine. Use the old folding method by setting <br>g:vikiFoldMethodVersion to 1.<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=7300">Viki.vba.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.2</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2007-06-24</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- Re-Enabled the previously (2.1) made and then disabled change concerning re-entering a viki buffer<br>- Don't try to use cached values for buffers that have no file attached yet (thanks to Erik Olsson)<br>- Require tlib &gt;= 0.8<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=7298">Viki.vba.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.1</b></td>
+    <td class="roweven" valign="top" nowrap><i>2007-06-24</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
+    <td class="roweven" valign="top" width="2000">- Cache inexistent patterns (experimental)<br>- s:EditWrapper: Don't escape ' '.<br>- FIX: VikiMode(): Error message about b:did_ftplugin not being defined<br>- FIX: Check if g:netrw_browsex_viewer is defined (thanks to Erik Olsson for pointing this and some other problems out)<br>- ftplugin/viki.vim: FIX: Problem with heading in the last line. Disabled vikiFolds type 's'<br>- Always check the current line for inexistent links when re-entering a viki buffer<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=7132">Viki.vba.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.0</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2007-05-17</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- Got rid of multvals & genutils dependencies (use vim7 lists instead)<br>- New dependency: tlib.vim (<a href="/scripts/script.php?script_id=1863">vimscript #1863</a>)<br>- INCOMPATIBLE CHANGE: The format of g:vikiMapFunctionality has changed.<br>- INCOMPATIBLE CHANGE: g:vikiSpecialFiles is now a list!<br>- Viki now has a special #Files region that can be automatically <br>updated. This way we can start thinking about using viki for as <br>project/file management tool. This is for vim only and not supported yet <br>in deplate. New related maps & commands: :VikiFilesUpdate (&lt;LL&gt;vu), <br>:VikiFilesUpdateAll (&lt;LL&gt;vU), :VikiFilesCmd, :VikiFilesCall, <br>:VikiFilesExec (&lt;LL&gt;vx), and VikiFileExec.<br>- VikiGoParent() (mapped to &lt;LL&gt;v&lt;bs&gt; or &lt;LL&gt;v&lt;up&gt;): If b:vikiParent is <br>defined, open this viki name, otherwise follow the backlink.<br>- New :VikiEditTab command.<br>- Map &lt;LL&gt;vt to open in tab.<br>- Map &lt;LL&gt;v&lt;left&gt; to open go back.<br>- Keys listed in g:vikiMapQParaKeys are now mapped to <br>s:VikiMarkInexistentInParagraphVisible() which checks only the visible <br>area and thus avoids scrolling.<br>- Highlight lines containing blanks (which vim doesn't treat as <br>paragraph separators)<br>- When following a link, check if it is an special viki name before <br>assuming it's a simple one.<br>- Map [[, ]], [], ][<br>- If an interviki has an index file, a viki name like [[INTERVIKI::]] <br>will now open the index file. In order to browse the directory, use <br>[[INTERVIKI::.]]. If no index file is defined, the directory will be <br>opened either way.<br>- Set the default value of g:vikiFeedbackMin to &lines.<br>- Added ws as special files to be opened with :WsOpen if existent.<br>- Replaced most occurences of &lt;SID&gt; with s:<br>- Use tlib#InputList() for selecting back references.<br>- g:vikiOpenFileWith_ANY now uses g:netrw_browsex_viewer by default.<br>- CHANGE: g:vikiSaveHistory: We now rely on viminfo's &quot;!&quot; option to save <br>back-references.<br>- FIX: VikiEdit now works properly with protocols that are to be opened <br>with an external viewer<br>- FIX: VikiEdit completion, which is more usable now<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=6853">viki.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.13</b></td>
+    <td class="roweven" valign="top" nowrap><i>2007-03-11</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
+    <td class="roweven" valign="top" width="2000">- Intervikis can now be defined as function ('*Function(&quot;%s&quot;)', this <br>breaks conversion via deplate) or format string ('%/foo/%s/bar', not yet <br>supported by deplate)<br>- Task lists take optional tags, eg #A [tag] foo; they may also be <br>tagged with the letters G-Z, which are highlighted as general task (not <br>supported by deplate)<br>- Automatically set marks for labels prefixed with &quot;m&quot; (eg #ma -&gt; 'a, <br>#mB -&gt; 'B)<br>- Two new g:vikiNameTypes: w = (Hyper)Words, f = File names in cwd as <br>hyperwords (experimental, not implemented in deplate)<br>- In extended viki names: add the suffix only if the destination hasn't <br>got one<br>- A buffer local b:vikiOpenInWindow allows links to be redirected to a <br>certain window (ie, if b:vikiOpenInWindow = 2, pressing &lt;c-cr&gt; behaves <br>like &lt;LocalLeader&gt;v2); this is useful if you use some kind of <br>directory/catalog metafile; possible values: absolute number, +/- <br>relative number, &quot;last&quot;<br>- Switched back to old regexp for simple names in order to avoid <br>highlighting of names like LaTeX<br>- VikiEdit opens the homepage only if b:vikiFamily is set<br>- Map &lt;LocalLeader&gt;vF to &lt;LocalLeader&gt;vn&lt;LocalLeader&gt;vf<br>- Improved syntax for (nested) macros<br>- Set &suffixesadd so that you can use vim's own gf in some situations<br>- SYNTAX: Allow empty lines as region delimiters (deplate 0.8.1)<br>- FIX: simple viki names with anchors where not recognised<br>- FIX: don't mark simple (inter)viki names as inexistent that expand to <br>links matching g:vikiSpecialProtocols<br>- FIX: file names containing %<br>- FIX: added a patch (VikiMarkInexistentInElement) by Kevin Kleinfelter <br>for compatibility with an unpatched vim70 (untested)<br>- FIX: disabling simple names (s) also properly disables the name types: <br>Scwf<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=6219">Viki.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.12</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2006-09-23</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- Define some keywords in syntax file (useful for omnicompletion)<br>- Define :VIKI command as an alias for :VikiHome<br>- FIX: Problem with names containing spaces<br>- FIX: Extended names with suffix & interviki<br>- FIX: Indentation of priority lists.<br>- FIX: VikiDefine created wrong (old-fashioned) VikiEdit commands under <br>certain conditions.<br>- FIX: Directories in extended viki names + interviki names were marked <br>as inexistent<br>- FIX: Syntax highlighting of regions or commands the headline of which <br>spanned several lines<br>- Added ppt to g:vikiSpecialFiles.<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=5585">Viki.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.11</b></td>
+    <td class="roweven" valign="top" nowrap><i>2006-04-20</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
+    <td class="roweven" valign="top" width="2000">- Enable [[INTERVIKI::]]<br>- VikiEdit also creates commands for intervikis that have no index<br>- Respect &quot;!&quot; and &quot;*&quot; modifiers in extended viki links<br>- New g:vikiMapFunctionalityMinor variable<br>- New g:vikiMapLeader variable<br>- CHANGE: Don't map VikiMarkInexistent in minor mode (see <br>g:vikiMapFunctionalityMinor)<br>- CHANGE: new attributes for g:vikiMapFunctionality: c, m[fb], i, I<br>- SYNTAX: cterm support for todo lists, emphasize<br>- FIX: Erroneous cursor movement<br>- FIX: VikiEdit didn't check if a file was already opened, which caused <br>a file to be opened in two buffers under certain conditions<br>- FIX: Error in &lt;SID&gt;MapMarkInexistent()<br>- FIX: VikiEdit: Non-viki names were not quoted<br>- FIX: Use fnamemodify() to expand tildes in filenames<br>- FIX: Inexistent quoted viki names with an interviki prefix weren't <br>properly highlighted<br>- FIX: Minor problem with suffixes & extended viki names<br>- FIX: Use keepjumps<br>- FIX: Catch E325<br>- FIX: Don't catch errors in &lt;SID&gt;EditWrapper() if the command matches <br>g:vikiNoWrapper (due to possible compatibility problems eg with :Explore <br>in vim 6.4)<br>- OBSOLETE: Negative arguments to VikiMode or VikiMinorMode are obsolete <br>(or they became the default to be precise)<br>- OBSOLETE: g:vikiMapMouse<br>- REMOVED: mapping to &lt;LocalLeader&gt;&lt;c-cr&gt;<br>- DEPRECATED: VikiModeMaybe<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=5438">Viki.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.10</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2006-03-15</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- Pseudo anchors (not supported by deplate): jump to a line number, e.g. [[file#l=10]] or [[file#line=10]]; find an regexp, e.g. [[file#rx=\\d]]; execute some vim code, e.g. [[file#vim=call Whatever()]]; you can also define your own handlers: VikiAnchor_{type}(arg)<br>- g:vikiFolds: new 'b' flag: the body has a higher level than all <br>headings (gives you some kind of outliner experience; the default value <br>for g:vikiFolds was changed to 'h')<br>- FIX: VikiFindAnchor didn't work properly in some situations<br>- FIX: Escape blanks when following a link (this could cause problems in <br>some situations, not always)<br>- FIX: Don't try to mark inexistent links when pressing enter if the current <br>line is empty.<br>- FIX: Restore vertical cursor position in window after looking for <br>inexistent links.<br>- FIX: Backslashes got lost in some situations.<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=5299">Viki.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.9</b></td>
+    <td class="roweven" valign="top" nowrap><i>2006-02-22</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
+    <td class="roweven" valign="top" width="2000">- Register mp3, ogg and some other multimedia related suffixes as <br>special files<br>- Add a menu of Intervikis if g:vikiMenuPrefix is != ''<br>- g:vikiMapKeys can contain &quot;\n&quot; and &quot; &quot; (supplement g:vikiMapKeys with <br>the variables g:vikiMapQParaKeys and g:vikiMapBeforeKeys)<br>- FIX: &lt;SID&gt;IsSupportedType<br>- FIX: Only the first inexistent link in a line was highlighted<br>- FIX: Set &buflisted when editing an existing buffer<br>- FIX: VikiDefine: Non-viki index names weren't quoted<br>- FIX: In &quot;minor mode&quot;, vikiFamily wasn't correctly set in some <br>situations; other problems related to b:vikiFamily<br>- FIX: AnyWord works again<br>- Removed: VikiMinorModeMaybe<br>- VikiDefine now takes an optional fourth argument (an index file; <br>default=Index) and automatically creates a vim command with the name of <br>the interviki that opens this index file<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=4803">Viki.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.8</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2005-11-23</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- Fold lists too (see also g:vikiFolds)<br>- Allow interviki names in extended viki names (e.g., <br>[[WIKI::WikiName][Display Name]])<br>- Renamed &lt;SID&gt;GetSimpleRx4SimpleWikiName() to <br>VikiGetSimpleRx4SimpleWikiName() (required in some occasions; increased the <br>version number so that we can check against it)<br>- Fix: Problem with urls/fnames containing '!' and other special characters <br>(which now have to be escaped by the handler; so if you defined a custom <br>handler, e.g. g:vikiOpenFileWith_ANY, please adapt its definition)<br>- Fix: VikiEdit! opens the homepage only when b:vikiEnabled is defined in the <br>current buffer (we assume that for the homepage the global configuration is in <br>effect)<br>- Fix: Problem when g:vikiMarkInexistent was false/0<br>- Fix: Removed \c from the regular expression for extended names, which caused <br>FindNext to malfunction and caused a serious slowdown when matching of <br>bad/unknown links<br>- Fix: Re-set viki minor mode after entering a buffer<br>- The state argument in Viki(Minor)Mode is now mostly ignored<br>- Fix: A simple name's anchor was ignored<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=4710">Viki.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.7</b></td>
+    <td class="roweven" valign="top" nowrap><i>2005-10-31</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
+    <td class="roweven" valign="top" width="2000">- g:vikiHomePage: If you call VikiEdit! (with &quot;bang&quot;), the homepage is opened <br>first so that its customizations are in effect. Also, if you call :VikiHome or <br>:VikiEdit *, the homepage is opened.<br>- basic highlighting & indentation of emacs-planner style task lists (sort of)<br>- command line completion for :VikiEdit<br>- new command/function VikiDefine for defining intervikis<br>- added &lt;LocalLeader&gt;ve map for :VikiEdit<br>- fixed problem in VikiEdit (when the cursor was on a valid viki link, the <br>text argument was ignored)<br>- fixed opening special files/urls in a designated window<br>- fixed highlighting of comments<br>- vikiLowerCharacters and vikiUpperCharacters can be buffer local<br>- fixed problem when an url contained an ampersand<br>- fixed error message when the &hidden option wasn't set (see g:vikiHide)<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=4640">Viki.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.6.3</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2005-10-01</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- file type URLs (file://) are now treated like special files<br>- indent: if g:vikiIndentDesc is '::', align a definition's description to the <br>first non-blank position after the '::' separator<br>- b:vikiDisableType<br>- Put AnyWord-related stuff into a file of its own.<br>- indentation for notices (!!!, ??? etc.)<br>- When creating a new file by following a link, the desired window number was ignored<br>- (VikiOpenSpecialFile) Escape blanks in the filename<br>- Set &include and &define (ftplugin)<br>- Set g:vikiFolds to '' to avoid using Headings for folds (which may cause a <br>major slowdown on slower machines)<br>- renamed &lt;SID&gt;DecodeFileUrl(dest) to VikiDecomposeUrl()<br>- fixed problem with table highlighting<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=3831">Viki.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.6.1</b></td>
+    <td class="roweven" valign="top" nowrap><i>2005-02-05</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
+    <td class="roweven" valign="top" width="2000">- fixed indentation bug<br>- removed forgotten debug message<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=3798">Viki.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.6</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2005-01-25</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- new command: VikiEdit NAME ... allows editing of arbitrary viki names (also understands extended and interviki formats)<br>- support for some regions/commands/macros: #INC/#INCLUDE, #IMG, #Img (requires an id to be defined), {img}<br>- b:vikiInverseFold: Inverse folding of subsections<br>- g:vikiFreeMarker: Search for the plain anchor text if no explicitly marked anchor was found.<br>- setting the b:vikiNoSimpleNames to true prevents viki from recognizing simple viki names<br>- made some script local functions global so that it should be easier to integrate viki with other plugins<br>- fixed moving cursor on &lt;SID&gt;VikiMarkInexistent()<br>- fixed typo: b:VikiEnabled, which should be b:vikiEnabled (thanks to Ned Konz)<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=3576">Viki.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.5.2</b></td>
+    <td class="roweven" valign="top" nowrap><i>2004-10-26</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
+    <td class="roweven" valign="top" width="2000">- changed default markup of textstyles: __emphasize__, ''code''; the <br>previous markup can be re-enabled by setting g:vikiTextstylesVer to 1)<br>- fixed problem with VikiQuote<br>- on follow-link, check for yet unsaved buffers too<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=3492">Viki.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.5.1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2004-09-27</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- depends on multvals &gt;= 3.8.0<br>- new viki family &quot;AnyWord&quot; (see |viki-any-word|), which turns any word into a <br>potential viki link<br>- &lt;LocalLeader&gt;vq, VikiQuote: mark selected text as a quoted viki name <br>(requires imaps.vim, <a href="/scripts/script.php?script_id=244">vimscript #244</a> or <a href="/scripts/script.php?script_id=475">vimscript #475</a>)<br>- check for null links when pressing &lt;space&gt;, &lt;cr&gt;, ], and some other keys <br>(defined in g:vikiMapKeys)<br>- a global suffix for viki files can be defined by g:vikiNameSuffix<br>- fix syntax problem when checking for links to inexistent files<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=3435">Viki.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.5</b></td>
+    <td class="roweven" valign="top" nowrap><i>2004-09-09</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
+    <td class="roweven" valign="top" width="2000">- different highlighting for links to existing and non-existing files<br>- added key bindings &lt;LL&gt;vs (split) and &lt;LL&gt;vv (split vertically)<br>- added key bindings &lt;LL&gt;v1 through to &lt;LL&gt;v4: open the viki link <br>under cursor in the windows 1 to 4<br>- handle variables g:vikiSplit, b:vikiSplit<br>- don't indent regions<br>- regions can be indented<br>- When a file doesn't exist, ESC or &quot;n&quot; aborts creation<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=3358">Viki.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.4</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2004-08-20</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- fixed problem with table highlighting that could cause vim to hang<br>- it is now possible to selectivly disable simple or quoted viki names<br>- indent plugin<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=3315">Viki.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.3.1</b></td>
+    <td class="roweven" valign="top" nowrap><i>2004-08-11</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
+    <td class="roweven" valign="top" width="2000">- fixed bug when VikiGoBack was called without a definitiv back-reference (e.g. via &lt;LocalLeader&gt;vb)<br>- fixed encoding problems with latin-1 characters<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=3304">Viki.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.3</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2004-08-06</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- basic ctags support (see |viki-tags|)<br>- mini-ftplugin for bibtex files (use record labels as anchors)<br>- added mapping &lt;LocalLeader&gt;&lt;c-cr&gt;: follow link in other window (if any)<br>- disabled the highlighting of italic char styles (i.e., /text/)<br>- the ftplugin doesn't set deplate as the compiler; renamed the compiler plugin to deplate<br>- fix: VikiFoldLevel()<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=2993">Viki.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.2.103</b></td>
+    <td class="roweven" valign="top" nowrap><i>2004-05-04</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
+    <td class="roweven" valign="top" width="2000">- syntax file: fix nested regexp problem<br>- deplate: conversion to html/latex; download from <br><a target="_blank" href="http://sourceforge.net/projects/deplate/">http://sourceforge.net/projects/deplate/</A><br>- made syntax a little bit more restrictive (*WORD* now matches /\*\w+\*/ instead of /\*\S+\*/)<br>- interviki definitions can now be buffer local variables, too<br>- fixed &lt;SID&gt;DecodeFileUrl(dest)<br>- some kind of compiler plugin (uses deplate)<br>- removed g/b:vikiMarkupEndsWithNewline variable<br>- saved all files in unix format (thanks to Grant Bowman for the hint)<br>- removed international characters from g:vikiLowerCharacters and <br>g:vikiUpperCharacters because of difficulties with different encodings (thanks to Grant Bowman for pointing out this problem); non-english-speaking users have to set these variables in their vimrc file<br>- g:vikiExplorer (for viewing directories)<br>- preliminary support for &quot;soft&quot; anchors (b:vikiAnchorRx)<br>- improved VikiOpenSpecialProtocol(url); g:vikiOpenUrlWith_{PROTOCOL}, <br>g:vikiOpenUrlWith_ANY<br>- improved VikiOpenSpecialFile(file); g:vikiOpenFileWith_{SUFFIX}, <br>g:vikiOpenFileWith_ANY<br>- anchors may contain upper characters (but must begin with a lower char)<br>- some support for Mozilla ThunderBird mailbox-URLs (this requires spaces to be encoded as %20)<br>- changed g:vikiDefSep to '‡‡‡'<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=2723">Viki.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.0.5</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2004-02-05</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Bug fixes. This version should work now with g:vikiUseParentSuffix set to 0, which, well, is the default value.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=2705">Viki.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.0</b></td>
+    <td class="roweven" valign="top" nowrap><i>2004-02-01</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
+    <td class="roweven" valign="top" width="2000">- &quot;Syntax&quot; changes<br>- Extended names: For compatibility reasons with other wikis, the anchor is now in the reference part.<br>- For compatibility reasons with other wikis, prepending an anchor with b:commentStart is optional.<br>- g:vikiUseParentSuffix<br>- Renamed variables & functions (basically s/Wiki/Viki/g)<br>- added a ftplugin stub, moved the description to a help file<br>- &quot;[--]&quot; is reference to current file<br>- Folding support (at section level)<br>- &quot;Intervikis&quot;<br>- More highlighting<br>- g:vikiFamily, b:vikiFamily<br>- VikiGoBack() (experimental option: persistent history data)<br>- rudimentary LaTeX support (&quot;soft&quot; viki names)<br>- removed call to &quot;simplify()&quot;</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=2615">Viki.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>380</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2003-12-19</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Initial upload</td>
+</tr>
+</table>
+<!-- finish off the framework -->
+          </td>
+        </tr>
+      </table>
+    </td>
+
+  </tr>
+</table>
+
+<!-- END OF THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr><td colspan="4" bgcolor="#000000"><img src="/images/spacer.gif" height="2" width="1" alt=""></td></tr>
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr>
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+
+    <td align="left" valign="top"><small>
+      If you have questions or remarks about this site, visit the
+      <a href="http://vimonline.sf.net">vimonline development</a> pages.
+      Please use this site responsibly.
+      <br> 
+      
+      Questions about <a href="http://www.vim.org/about.php">Vim</a> should go
+      to the <a href="http://www.vim.org/maillist.php">maillist</a>.
+      Help Bram <a href="http://iccf-holland.org/">help Uganda</a>.
+      </small>
+	&nbsp;
+	&nbsp;
+
+	<!-- Start of StatCounter Code -->
+	<script type="text/javascript" language="javascript">
+	var sc_project=1417324; 
+	var sc_invisible=1; 
+	var sc_partition=11; 
+	var sc_security="d41633bc"; 
+	</script>
+
+	<script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script><noscript><a href="http://www.statcounter.com/" target="_blank"><img  src="http://c12.statcounter.com/counter.php?sc_project=1417324&java=0&security=d41633bc&invisible=0" alt="free tracking" border="0"></a> </noscript>
+	<!-- End of StatCounter Code -->
+          </td>
+
+    <td align="right" valign="top">
+      		<a href="http://sourceforge.net/projects/vim" rel="nofollow"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=8&type=1" width="88" height="31" border="0" alt="SourceForge.net Logo" /></a>
+    </td>
+
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+  </tr>
+
+    
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  
+  </tr>
+</table>
+
+</body>
+</html>
+

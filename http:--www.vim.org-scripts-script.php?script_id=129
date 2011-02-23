@@ -1,0 +1,348 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+  <link rel="Stylesheet" type="text/css" href="/css/style.css" >
+  <title>PushPop.vim - Pushd/Popd implementation for vim command-line : vim online</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <meta name="KEYWORDS" content="Vim, Vi IMproved, text editor, home, documentation, tips, scripts, news">
+  <link rel="shortcut icon" type="image/x-icon" href="/images/vim_shortcut.ico">
+</head>
+
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff"> 
+
+<!-- HEADER, SPONSOR IMAGE, VIM IMAGE AND BOOK AD -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+  <td class="lightbg">&nbsp;&nbsp;&nbsp;</td>
+  <td class="lightbg" align="left"><a href="/sponsor/index.php"><img src="/images/sponsorvim.gif" alt="sponsor Vim development" border="0"></a></td>
+    <td class="lightbg" align="center"><a href="/index.php"><img src="/images/vim_header.gif" border="0" alt="Vim logo"></a></td>
+    <td class="lightbg" align="right"><a href="http://iccf-holland.org/click5.html"><img src="/images/buyhelplearn.gif" alt="Vim Book Ad" border="0"></a></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="darkbg"><img src="/images/spacer.gif" width="1" height="10" alt=""></td>
+  </tr>
+</table>
+<!-- THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+  <col width="180">
+  <col width="1">
+
+  <tr valign="top">
+    <td class="sidebar">
+      <table width="180" cellpadding="4" cellspacing="0" border="0">
+        <tr valign="top">
+          <td class="sidebar">
+
+<!-- INCLUDE THE PAGE NAVIGATION -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+    <tr>
+        <td><small>not logged in (<a href="/login.php">login</a>)</small></td>
+    </tr>
+    <tr><td>
+<small>&nbsp;</small>
+<form action="http://www.google.com/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-3005259998294962:bvyni59kjr1" />
+    <input type="hidden" name="ie" value="ISO-8859-1" />
+    <input type="text" name="q" size="20" />
+    <br>
+    <input type="submit" name="sa" value="Search" />
+  </div>
+</form>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+    </td></tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="1"></td>
+    </tr>
+    <tr>
+        <td class="darkbg"><img src="/images/spacer.gif" alt='' border="0" height="3"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="2"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/index.php">Home</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/search.php">Advanced search</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/about.php">About Vim</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/community.php">Community</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/news/news.php">News</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/sponsor/index.php">Sponsoring</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/trivia.php">Trivia</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/docs.php">Documentation</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/download.php">Download</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/scripts/index.php">Scripts</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/tips/index.php">Tips</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/account/index.php">My Account</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/huh.php">Site Help</a></td>
+        </tr>
+</table>
+
+            <table width="172" cellpadding="0" cellspacing="0" border="0">
+              <tr><td><img src="/images/spacer.gif" alt="" border="0" width="1" height="8"></td></tr>
+              <tr><td class="darkbg"><img src="/images/spacer.gif" width="1" height="3" alt=""></td></tr>
+            </table>
+            <br>
+
+<!-- INCLUDE THE PAGE SIDEBAR TEXT -->
+&nbsp;
+
+          </td>
+        </tr>
+      </table>
+    </td>
+
+    <td class="darkbg"><img src="/images/spacer.gif" width="1" height="1" border="0" alt=""><br></td>
+    <td>
+      <table width="100%" cellpadding="10" cellspacing="0" border="0" bordercolor="red">
+        <tr>
+          <td valign="top">
+
+<span class="txth1">PushPop.vim : Pushd/Popd implementation for vim command-line</span> 
+
+<br>
+<br>
+
+<!-- karma table -->
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
+  <td>
+    Rating <b>28/12</b>,
+    Downloaded by 2436  </td>
+  <td class="lightbg">
+  <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
+  </td>
+  <td>
+    <a href="http://vim.wikia.com/wiki/Script:129">Vim wiki</a>
+  </td>  
+</tr>
+</table>
+<p>
+
+<table cellspacing="0" cellpadding="0" border="0">
+<tr><td class="prompt">created by</td></tr>
+<tr><td><a href="/account/profile.php?user_id=292">Hari Krishna Dara</a></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">script type</td></tr>
+<tr><td>utility</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">description</td></tr>
+<tr><td>PLEASE READ THE INSTALL SECTION.<br><br>- The script provides a pushd/popd functionality for Vim taking Bash as a<br>&nbsp;&nbsp;reference. It defines new commands called Pushd, Popd and Cd and Dirs.<br>&nbsp;&nbsp;It also defines abbreviations pushd and popd (the lower case versions)<br>&nbsp;&nbsp;to make it easier to type and get used to, but if it causes any<br>&nbsp;&nbsp;trouble for your regular command line typing (as the abbreviations are<br>&nbsp;&nbsp;expanded anywhere you type), just set the g:pushpopNoAbbrev variable in<br>&nbsp;&nbsp;your .vimrc, or install cmdalias.vim also along with PushPop.vim (in<br>&nbsp;&nbsp;which case additional abbreviations are defined for dirs and cdp as<br>&nbsp;&nbsp;well). The cmdalias.vim plugin provides support for defining<br>&nbsp;&nbsp;abbreviations that expand only at the start of the command-line, which<br>&nbsp;&nbsp;make the abbreviations behave just like bash aliases, or like the Vim<br>&nbsp;&nbsp;built-in commands (read the plugin's description for more information).<br>- Most of the Bash pushd/popd syntax is supported.<br>- The plugin integrates seamlessly with the vim features such as 'cdpath'.<br>&nbsp;&nbsp;It handles the protected command and space chars correctly as expected,<br>&nbsp;&nbsp;however, unprotected spaces are not treated as separators (which is the<br>&nbsp;&nbsp;case with 'cdpath' for the sake of backward compatibility with age old<br>&nbsp;&nbsp;vim 3.0).<br>- Vim provides a &quot;cd -&quot; command to quickly jump back to the previous<br>&nbsp;&nbsp;directory on the lines of bash, to make it complete, the script<br>&nbsp;&nbsp;sets the g:OLDPWD variable to mimic the $OLDPWD variable of bash.<br>- The Cdp command will push the directory of the current file on to the<br>&nbsp;&nbsp;stack and cd into it.<br>- It provides commands to make it easy to manipulate the &quot;cdpath&quot; and save<br>&nbsp;&nbsp;and restore it (unless the persistence feature of genutils.vim is<br>&nbsp;&nbsp;disabled), without needing to manually edit the vimrc. The &quot;PPAddDir&quot;<br>&nbsp;&nbsp;command will allow you to add the specified directory or the current<br>&nbsp;&nbsp;directory (with no arguments) to 'cdpath'. The &quot;PPRemoveDir&quot; command can<br>&nbsp;&nbsp;be used to remove a directory by its name or index, or just the current<br>&nbsp;&nbsp;directory (whith no arguments). Both commands accept &quot;-l&quot; as an option<br>&nbsp;&nbsp;to specify the directory argument literally (the directory name is then<br>&nbsp;&nbsp;not modified). The &quot;-l&quot; option with no arguments can also be used to<br>&nbsp;&nbsp;add/remove &quot;empty&quot; directory entry (represented as ^, or ,, or ,$ in the<br>&nbsp;&nbsp;'cdpath'). If you need to add entried that have wild-cards in them (such<br>&nbsp;&nbsp;as &quot;src/**&quot;, the above commands can't be used as Vim will try to expand<br>&nbsp;&nbsp;the wildcards before the plugin can see them, so in this case use<br>&nbsp;&nbsp;&quot;PPAddPat&quot; and &quot;PPRemovePat&quot; commands. Pass &quot;-l&quot; option to avoid<br>&nbsp;&nbsp;modification.<br>- To view the list of directories in your 'cdpath', use the regular &quot;set<br>&nbsp;&nbsp;cdpath?&quot; command or just &quot;Cdpath&quot;. In addition, the &quot;Cd&quot; command accepts<br>&nbsp;&nbsp;&quot;-i&quot; option to cd directly into one of the directories in 'cdpath'. With<br>&nbsp;&nbsp;no arguments, you will be prompted with the list of directories to<br>&nbsp;&nbsp;select from, and with an index as the argument (starting from 0), you<br>&nbsp;&nbsp;can directly cd into the directory at that index.<br>- If g:pushpopCdable_vars is set, the plugin emulates the bash<br>&nbsp;&nbsp;'cdable_vars' feature. When the built-in &quot;:cd&quot; fails, the argument is<br>&nbsp;&nbsp;assumed to be the name of a global variable whose value is the directory<br>&nbsp;&nbsp;to change to. Normally, you don't necessarily need to use the :Cd<br>&nbsp;&nbsp;command instead of :cd command, but in this particular case, the feature<br>&nbsp;&nbsp;will not work unless you use the :Cd command. Consider aliasing :cd to<br>&nbsp;&nbsp;:Cd as described in Deprecations section below.<br>- The main functions are also exposed as global functions, which can be used<br>&nbsp;&nbsp;by the script writers to recursively traverse directories and finally<br>&nbsp;&nbsp;return back to the original directory.<br><br>Please see the script header for more information such as deprecations etc.<br><br>Please send in your comments/feedback/suggestions/contributions for improving the script.<br><br>=================================================<br>You can refer to the bash manual page for more information on how to use Pushd, Popd and Dirs commands. In case you don't have access to it, here is an extract from bash man page (on cygwin):<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; pushd [-n] [dir]<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; pushd [-n] [+n] [-n]<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Adds a directory to the top of the directory stack,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;or&nbsp;&nbsp;rotates&nbsp;&nbsp;the&nbsp;&nbsp;stack,&nbsp;&nbsp;making the new top of the<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;stack the current working directory.&nbsp;&nbsp;With no argu-<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ments,&nbsp;&nbsp; exchanges&nbsp;&nbsp;the&nbsp;&nbsp;top&nbsp;&nbsp;two&nbsp;&nbsp;directories&nbsp;&nbsp;and<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;returns 0, unless the&nbsp;&nbsp;directory&nbsp;&nbsp;stack&nbsp;&nbsp;is&nbsp;&nbsp;empty.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Arguments,&nbsp;&nbsp;if&nbsp;&nbsp;supplied,&nbsp;&nbsp;have the following mean-<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ings:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+n&nbsp;&nbsp;&nbsp;&nbsp; Rotates the stack so that the nth&nbsp;&nbsp;directory<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (counting from the left of the list shown by<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; dirs, starting with zero) is at the top.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-n&nbsp;&nbsp;&nbsp;&nbsp; Rotates the stack so that the nth&nbsp;&nbsp;directory<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (counting&nbsp;&nbsp;from&nbsp;&nbsp;the right of the list shown<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; by dirs, starting with zero) is at the&nbsp;&nbsp;top.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-n&nbsp;&nbsp;&nbsp;&nbsp; Suppresses&nbsp;&nbsp;the&nbsp;&nbsp;normal&nbsp;&nbsp;change of directory<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; when adding directories&nbsp;&nbsp;to&nbsp;&nbsp;the&nbsp;&nbsp;stack,&nbsp;&nbsp;so<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; that only the stack is manipulated.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dir&nbsp;&nbsp;&nbsp;&nbsp;Adds&nbsp;&nbsp;dir to the directory stack at the top,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; making it the new current working directory.<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If&nbsp;&nbsp;the pushd command is successful, a dirs is per-<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;formed as well.&nbsp;&nbsp;If the first form is&nbsp;&nbsp;used,&nbsp;&nbsp;pushd<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;returns&nbsp;&nbsp;0&nbsp;&nbsp;unless&nbsp;&nbsp;the&nbsp;&nbsp;cd to dir fails.&nbsp;&nbsp;With the<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;second form, pushd returns 0 unless&nbsp;&nbsp;the&nbsp;&nbsp;directory<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; popd [-n] [+n] [-n]<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Removes&nbsp;&nbsp;entries from the directory stack.&nbsp;&nbsp;With no<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;arguments,&nbsp;&nbsp;removes&nbsp;&nbsp;the&nbsp;&nbsp;top&nbsp;&nbsp;directory&nbsp;&nbsp;from&nbsp;&nbsp;the<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;stack,&nbsp;&nbsp;and performs a cd to the new top directory.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Arguments, if supplied, have&nbsp;&nbsp;the&nbsp;&nbsp;following&nbsp;&nbsp;mean-<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ings:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+n&nbsp;&nbsp;&nbsp;&nbsp; Removes the nth entry counting from the left<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; of the list shown&nbsp;&nbsp;by&nbsp;&nbsp;dirs,&nbsp;&nbsp;starting&nbsp;&nbsp;with<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; zero.&nbsp;&nbsp; For example: ``popd +0'' removes the<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; first directory, ``popd +1'' the second.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-n&nbsp;&nbsp;&nbsp;&nbsp; Removes the&nbsp;&nbsp;nth&nbsp;&nbsp;entry&nbsp;&nbsp;counting&nbsp;&nbsp;from&nbsp;&nbsp;the<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; right&nbsp;&nbsp;of&nbsp;&nbsp;the&nbsp;&nbsp;list shown by dirs, starting<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; with zero.&nbsp;&nbsp;For example: ``popd -0'' removes<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; the&nbsp;&nbsp;last directory, ``popd -1'' the next to<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; last.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-n&nbsp;&nbsp;&nbsp;&nbsp; Suppresses the normal&nbsp;&nbsp;change&nbsp;&nbsp;of&nbsp;&nbsp;directory<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; when removing directories from the stack, so<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; that only the stack is manipulated.<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If the popd command is successful, a dirs&nbsp;&nbsp;is&nbsp;&nbsp;per-<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;formed&nbsp;&nbsp;as&nbsp;&nbsp;well, and the return status is 0.&nbsp;&nbsp;popd<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;returns false if an invalid option is&nbsp;&nbsp;encountered,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;the directory stack is empty, a non-existent direc-<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;stack is empty, a non-existent directory stack ele-<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ment is specified, or the directory change&nbsp;&nbsp;to&nbsp;&nbsp;the<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;specified new current directory fails.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tory stack entry is&nbsp;&nbsp;specified,&nbsp;&nbsp;or&nbsp;&nbsp;the&nbsp;&nbsp;directory<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;change fails.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; dirs [-clpv] [+n] [-n]<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Without&nbsp;&nbsp;options,&nbsp;&nbsp;displays&nbsp;&nbsp;the&nbsp;&nbsp;list of currently<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;remembered directories.&nbsp;&nbsp;The default display is&nbsp;&nbsp;on<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a&nbsp;&nbsp;single&nbsp;&nbsp;line&nbsp;&nbsp;with&nbsp;&nbsp;directory names separated by<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;spaces.&nbsp;&nbsp;Directories are added to the list with the<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pushd&nbsp;&nbsp;command;&nbsp;&nbsp;the&nbsp;&nbsp;popd&nbsp;&nbsp;command removes entries<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;from the list.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+n&nbsp;&nbsp;&nbsp;&nbsp; Displays the nth&nbsp;&nbsp;entry&nbsp;&nbsp;counting&nbsp;&nbsp;from&nbsp;&nbsp;the<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; left&nbsp;&nbsp;of the list shown by dirs when invoked<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; without options, starting with zero.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-n&nbsp;&nbsp;&nbsp;&nbsp; Displays the nth&nbsp;&nbsp;entry&nbsp;&nbsp;counting&nbsp;&nbsp;from&nbsp;&nbsp;the<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; right of the list shown by dirs when invoked<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; without options, starting with zero.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-c&nbsp;&nbsp;&nbsp;&nbsp; Clears the directory stack by&nbsp;&nbsp;deleting&nbsp;&nbsp;all<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; of the entries.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-l&nbsp;&nbsp;&nbsp;&nbsp; Produces a longer listing; the default list-<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ing format uses a tilde to denote&nbsp;&nbsp;the&nbsp;&nbsp;home<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; directory.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-p&nbsp;&nbsp;&nbsp;&nbsp; Print the directory stack with one entry per<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; line.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-v&nbsp;&nbsp;&nbsp;&nbsp; Print the directory stack with one entry per<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; line, prefixing each entry with its index in<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; the stack.<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The return value is 0 unless an invalid&nbsp;&nbsp;option&nbsp;&nbsp;is<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;supplied&nbsp;&nbsp;or n indexes beyond the end of the direc-<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tory stack.<br>=================================================<br><br>Search_key_words: push pop directory cd change bash csh dirs pushpop genutils Hari Krishna Dara</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">install details</td></tr>
+<tr><td>Just drop it in your plugin directory. <br><br>Requires:<br>genutils.vim (2.0): <a href="/scripts/script.php?script_id=197">vimscript #197</a> <br>Depends on (Not required):<br>cmdalias.vim (1.0): <a href="/scripts/script.php?script_id=745">vimscript #745</a><br><br>Please note that prior to 4.0 version, the plugin depended on the older versions of genutils and multvals<br>genutils.vim (1.1): <a href="/scripts/script.php?script_id=197">vimscript #197</a> <br>multvals.vim (3.0): <a href="/scripts/script.php?script_id=171">vimscript #171</a><br></td></tr>
+<tr><td>&nbsp;</td></tr>
+</table>
+
+<!-- rating table -->
+<form name="rating">
+<input type="hidden" name="script_id" value="129">
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>rate this script</b></td>
+  <td valign="middle">
+    <input type="radio" name="rating" value="life_changing">Life Changing
+    <input type="radio" name="rating" value="helpful">Helpful
+    <input type="radio" name="rating" value="unfulfilling">Unfulfilling&nbsp;
+    <input type="submit" value="rate">
+  </td>
+</tr>
+</table>
+</form>
+<span class="txth2">script versions</span> (<a href="add_script_version.php?script_id=129">upload new version</a>)
+<p>
+Click on the package to download.
+<p>
+
+<table cellspacing="2" cellpadding="4" border="0" width="100%">
+<tr class='tableheader'>
+        <th valign="top">package</th>
+    <th valign="top">script version</th>
+    <th valign="top">date</th>
+    <th valign="top">Vim version</th>
+    <th valign="top">user</th>
+    <th valign="top">release notes</th>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=6710">PushPop.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>4.0</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2007-02-02</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=292">Hari Krishna Dara</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Made to work with Vim7. Also, it uses the Vim7 Lists instead of<br>multvals, so it no longer depends on multvals and it is a lot cleaner.<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=2277">PushPop.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.4</b></td>
+    <td class="roweven" valign="top" nowrap><i>2003-08-28</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=292">Hari Krishna Dara</a></i></td>
+    <td class="roweven" valign="top" width="2000">- Refined the handling of 'cdpath'. It works better now.<br>- Subtle improvements in the Pushd/Popd command usage.<br>- Delayed syncing is used to sync the top level directory in the stack with the current directory. You don't have to use the custom Cd command anymore, which means one less abbreviation to deal with. This also means that it will work seamlessly with other plugins that change directory as well (like fileexplorer).<br>- The script now takes advantage of cmdalias.vim when available for creating aliases to the capitalized commands. This is better than the plain cabbr's.<br>- There is a new 'cdable_vars' feature on the lines of bash.<br>- Fixed some misc. minor issues.<br><br>Please read the complete header in the script for changes and new usage.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=1583">PushPop.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.3</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2002-12-26</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=292">Hari Krishna Dara</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- Fixed bugs. <br>- Respect protected commas in cdpath and directory names. <br>- Minor improvements: Pushd also now takes -i argument. AddDir and RemoveDir take -l argument. Use g:pushpopPersistCdpath to control the persistnce of cdpath.<br>- Requires the new version of multvals.vim<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=1126">PushPop.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.2</b></td>
+    <td class="roweven" valign="top" nowrap><i>2002-08-14</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=292">Hari Krishna Dara</a></i></td>
+    <td class="roweven" valign="top" width="2000">I missed to do an integration, so ended up with a wrong file here. I apologize, please update your version with this.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=1122">PushPop.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2002-08-14</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=292">Hari Krishna Dara</a></i></td>
+    <td class="rowodd" valign="top" width="2000">I have totally redesigned it to work seamlessly with vim's cd and cdpath features. You can now pushd into a diretory that is in the cdpath. Also added new commands to manage the cdpath itself, without needing to change the .vimrc. Removed unnecessary command-line abbreviations. Removed Cdp command as it is a duplicate of &quot;cd -&quot; command and renamed Cdc command as Cdp. The script now requires genutils.vim for storing and retrieving cdpath.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=699">PushPop.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.0.5</b></td>
+    <td class="roweven" valign="top" nowrap><i>2002-03-19</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=292">Hari Krishna Dara</a></i></td>
+    <td class="roweven" valign="top" width="2000">Fixed pushd with no-arg to switch between the top two dirs, instead of rotating (like with an index). Fixed cd to not to do a dirs. Added new commands cdp to quickly go back to the previous directory and cdc to pushd in to the directory of the currently open file.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=576">PushPop.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.0.2</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2002-02-10</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=292">Hari Krishna Dara</a></i></td>
+    <td class="rowodd" valign="top" width="2000">I finally made the script complete and plugin compatible. It now supports most of the bash pushd/popd syntax and is very compliant with it in the functionality and messages. Give it a shot, I am sure you will like it.<br><br>It also provided an commandline abbreviation for cd command to adjust the top most directory. You can set the global variable pushpopNoAbbrev to disable the commandline abbreviations such as cd, dirs, pushd etc., if they interfere with your regular usage.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=298">PushPop.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.0beta5</b></td>
+    <td class="roweven" valign="top" nowrap><i>2001-10-22</i></td>
+    <td class="roweven" valign="top" nowrap>5.7</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=292">Hari Krishna Dara</a></i></td>
+    <td class="roweven" valign="top" width="2000">Initial upload</td>
+</tr>
+</table>
+<!-- finish off the framework -->
+          </td>
+        </tr>
+      </table>
+    </td>
+
+  </tr>
+</table>
+
+<!-- END OF THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr><td colspan="4" bgcolor="#000000"><img src="/images/spacer.gif" height="2" width="1" alt=""></td></tr>
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr>
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+
+    <td align="left" valign="top"><small>
+      If you have questions or remarks about this site, visit the
+      <a href="http://vimonline.sf.net">vimonline development</a> pages.
+      Please use this site responsibly.
+      <br> 
+      
+      Questions about <a href="http://www.vim.org/about.php">Vim</a> should go
+      to the <a href="http://www.vim.org/maillist.php">maillist</a>.
+      Help Bram <a href="http://iccf-holland.org/">help Uganda</a>.
+      </small>
+	&nbsp;
+	&nbsp;
+
+	<!-- Start of StatCounter Code -->
+	<script type="text/javascript" language="javascript">
+	var sc_project=1417324; 
+	var sc_invisible=1; 
+	var sc_partition=11; 
+	var sc_security="d41633bc"; 
+	</script>
+
+	<script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script><noscript><a href="http://www.statcounter.com/" target="_blank"><img  src="http://c12.statcounter.com/counter.php?sc_project=1417324&java=0&security=d41633bc&invisible=0" alt="free tracking" border="0"></a> </noscript>
+	<!-- End of StatCounter Code -->
+          </td>
+
+    <td align="right" valign="top">
+      		<a href="http://sourceforge.net/projects/vim" rel="nofollow"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=8&type=1" width="88" height="31" border="0" alt="SourceForge.net Logo" /></a>
+    </td>
+
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+  </tr>
+
+    
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  
+  </tr>
+</table>
+
+</body>
+</html>
+

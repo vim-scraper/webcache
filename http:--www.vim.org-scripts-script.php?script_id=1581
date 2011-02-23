@@ -1,0 +1,348 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+  <link rel="Stylesheet" type="text/css" href="/css/style.css" >
+  <title>lookupfile - Lookup files using Vim7 ins-completion : vim online</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <meta name="KEYWORDS" content="Vim, Vi IMproved, text editor, home, documentation, tips, scripts, news">
+  <link rel="shortcut icon" type="image/x-icon" href="/images/vim_shortcut.ico">
+</head>
+
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff"> 
+
+<!-- HEADER, SPONSOR IMAGE, VIM IMAGE AND BOOK AD -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+  <td class="lightbg">&nbsp;&nbsp;&nbsp;</td>
+  <td class="lightbg" align="left"><a href="/sponsor/index.php"><img src="/images/sponsorvim.gif" alt="sponsor Vim development" border="0"></a></td>
+    <td class="lightbg" align="center"><a href="/index.php"><img src="/images/vim_header.gif" border="0" alt="Vim logo"></a></td>
+    <td class="lightbg" align="right"><a href="http://iccf-holland.org/click5.html"><img src="/images/buyhelplearn.gif" alt="Vim Book Ad" border="0"></a></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="darkbg"><img src="/images/spacer.gif" width="1" height="10" alt=""></td>
+  </tr>
+</table>
+<!-- THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+  <col width="180">
+  <col width="1">
+
+  <tr valign="top">
+    <td class="sidebar">
+      <table width="180" cellpadding="4" cellspacing="0" border="0">
+        <tr valign="top">
+          <td class="sidebar">
+
+<!-- INCLUDE THE PAGE NAVIGATION -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+    <tr>
+        <td><small>not logged in (<a href="/login.php">login</a>)</small></td>
+    </tr>
+    <tr><td>
+<small>&nbsp;</small>
+<form action="http://www.google.com/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-3005259998294962:bvyni59kjr1" />
+    <input type="hidden" name="ie" value="ISO-8859-1" />
+    <input type="text" name="q" size="20" />
+    <br>
+    <input type="submit" name="sa" value="Search" />
+  </div>
+</form>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+    </td></tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="1"></td>
+    </tr>
+    <tr>
+        <td class="darkbg"><img src="/images/spacer.gif" alt='' border="0" height="3"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="2"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/index.php">Home</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/search.php">Advanced search</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/about.php">About Vim</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/community.php">Community</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/news/news.php">News</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/sponsor/index.php">Sponsoring</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/trivia.php">Trivia</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/docs.php">Documentation</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/download.php">Download</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/scripts/index.php">Scripts</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/tips/index.php">Tips</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/account/index.php">My Account</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/huh.php">Site Help</a></td>
+        </tr>
+</table>
+
+            <table width="172" cellpadding="0" cellspacing="0" border="0">
+              <tr><td><img src="/images/spacer.gif" alt="" border="0" width="1" height="8"></td></tr>
+              <tr><td class="darkbg"><img src="/images/spacer.gif" width="1" height="3" alt=""></td></tr>
+            </table>
+            <br>
+
+<!-- INCLUDE THE PAGE SIDEBAR TEXT -->
+&nbsp;
+
+          </td>
+        </tr>
+      </table>
+    </td>
+
+    <td class="darkbg"><img src="/images/spacer.gif" width="1" height="1" border="0" alt=""><br></td>
+    <td>
+      <table width="100%" cellpadding="10" cellspacing="0" border="0" bordercolor="red">
+        <tr>
+          <td valign="top">
+
+<span class="txth1">lookupfile : Lookup files using Vim7 ins-completion</span> 
+
+<br>
+<br>
+
+<!-- karma table -->
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
+  <td>
+    Rating <b>485/136</b>,
+    Downloaded by 7016  </td>
+  <td class="lightbg">
+  <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
+  </td>
+  <td>
+    <a href="http://vim.wikia.com/wiki/Script:1581">Vim wiki</a>
+  </td>  
+</tr>
+</table>
+<p>
+
+<table cellspacing="0" cellpadding="0" border="0">
+<tr><td class="prompt">created by</td></tr>
+<tr><td><a href="/account/profile.php?user_id=292">Hari Krishna Dara</a></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">script type</td></tr>
+<tr><td>utility</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">description</td></tr>
+<tr><td>Now requires Vim 7.1 version.<br><br>Lookupfile is a very simple approach to opening files by typing a pattern to<br>represent the file you are looking for, and selecting a file from the completion<br>dropdown to open in the current Vim session. It provides a consistent interface<br>to lookup files by various means (tags, path, buffers, external tools etc.). It<br>uses the new Vim7 insert-mode completion mechanism to show matching files.<br><br>The most part of the plugin is autoloaded so it doesn't increase the startup time and doesn't take up Vim resources until it is used for the first time.<br><br>Here are the list of commands that the plugin defines:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LookupFile&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lookup files from tag files. This is a like a fast GNU<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;find on name. It can lookup files from any Vim<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;compatible tag file (which includes those from ctags),<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;but at the moment it is advisable to generate<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;specialized tag files using :find command (see<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|lookupfile-tags|).<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LUPath&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lookup files from 'path' using |globpath()|. The :find<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;command while being able to lookup files from 'path', it<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;doesn't provide any completion mechanism, and it is<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;clumsy when there are multiple files with the same name.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The :find command doesn't even accept a pattern.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LUBufs&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lookup loaded files (buffers) using |bufname()|. This is<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a great addition to whatever buffer-explorer you are<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;using. When there are too many buffers open, this<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sometimes makes it easy to find the right buffer, by<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;typing part of its name.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LUWalk&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lookup files using |glob()|. This works like the Emacs<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ido.el, allowing you to walk up and down a path looking<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for files. If you use the filename completion with :edit<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;command, then you will find this a lot more convenient<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;and faster to use.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LUArgs&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lookup files from |:args| list.<br><br>It is also very easy to add new commands to or customize the plugin at various<br>levels. At the simplest, you can create custom command on top of the above that<br>either pass dynamic arguments or tmporarily change the settings (e.g., you could<br>have a command that will start LUPath with the 'path' temporarily changed to<br>find only the include header files). You can also take advantage of the the<br>|lookupfile-extend| features to add new commands that lookup files from a<br>completely new source. You can even add commands that lookup something<br>completely different than a file (like e.g., a spelling using spellsuggest()).<br><br>For more information install the plugin and type :h lookupfile after running :heptags command.<br><br>Here is what users have to say about the plugin:<br>&nbsp;&nbsp;&nbsp;&nbsp;- I am thoroughly enjoying your lookupfile script -- it's just awesome! -- Reva Revadigar (regarding :LookupFile and :LUWalk commands)<br>&nbsp;&nbsp;&nbsp;&nbsp;- I use Lookupfile a couple of hundred times a day -- Max Dyckhoff (regarding :LookupFile command)<br>&nbsp;&nbsp;&nbsp;&nbsp;- I tried the new plugin. Excellent! Exactly what I want. -- Eddy Zhao (regarding :LUWalk command)<br><br><br><br>Search_Key_Words: lookupfile util utils lookup complete completion filename open edit file tags path ctags glob globpath Hari Krishna Dara</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">install details</td></tr>
+<tr><td>Expand the zip in your runtime directory.<br>Generate help tags using :helptags command.<br>Install the latest version of genutils (<a href="/scripts/script.php?script_id=197">vimscript #197</a>).<br>Read help on |lookupfile-installation|.<br></td></tr>
+<tr><td>&nbsp;</td></tr>
+</table>
+
+<!-- rating table -->
+<form name="rating">
+<input type="hidden" name="script_id" value="1581">
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>rate this script</b></td>
+  <td valign="middle">
+    <input type="radio" name="rating" value="life_changing">Life Changing
+    <input type="radio" name="rating" value="helpful">Helpful
+    <input type="radio" name="rating" value="unfulfilling">Unfulfilling&nbsp;
+    <input type="submit" value="rate">
+  </td>
+</tr>
+</table>
+</form>
+<span class="txth2">script versions</span> (<a href="add_script_version.php?script_id=1581">upload new version</a>)
+<p>
+Click on the package to download.
+<p>
+
+<table cellspacing="2" cellpadding="4" border="0" width="100%">
+<tr class='tableheader'>
+        <th valign="top">package</th>
+    <th valign="top">script version</th>
+    <th valign="top">date</th>
+    <th valign="top">Vim version</th>
+    <th valign="top">user</th>
+    <th valign="top">release notes</th>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=7671">lookupfile-1.8.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.8</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2007-09-13</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=292">Hari Krishna Dara</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- Even more control on the mappings with the new setting<br>&nbsp;&nbsp;|LookupFile_EnableRemapCmd|.<br>- New feature to specify names that follow CamelCasing pattern by abbreviating<br>&nbsp;&nbsp;them. This works more or less like for the &quot;Open Type&quot; dialog in Eclipse.<br>&nbsp;&nbsp;For more information see, |LookupFile_TagsExpandCamelCase|.<br>- New feature to remember the recent files, see<br>&nbsp;&nbsp;|Lookupfile_RecentFileListSize|.<br>- Changed the message line such that the message is shown on the left side and<br>&nbsp;&nbsp;the pattern is shown on the right side. This prevents the more important<br>&nbsp;&nbsp;message from getting lost when the filenames are too long.<br>- New settings |LookupFile_EnableRemapCmd|, |LookupFile_SearchForBufsInTabs|,<br>&nbsp;&nbsp;|LookupFile_TagsExpandCamelCase|, |Lookupfile_RecentFileListSize|.<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=7175">lookupfile-1.7.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.7</b></td>
+    <td class="roweven" valign="top" nowrap><i>2007-05-29</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=292">Hari Krishna Dara</a></i></td>
+    <td class="roweven" valign="top" width="2000">- Bug fix: LUPath and LUArgs were broken (stoning at gmail dot com).<br>- Removed debugging code. </td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=7172">lookupfile-1.6.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.6</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2007-05-28</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=292">Hari Krishna Dara</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Requires Vim 7.1.<br><br>This is a combined 1.5(previously unreleased)/1.6 release of lookupfile and includes the following improvements and bugfixes.<br>- LookupFile now uses CursorHoldI instead of CursorMovedI to show matches. This<br>&nbsp;&nbsp;means, the matches are not computed until you stop typing, which should give a<br>&nbsp;&nbsp;better experience. See |LookupFile_UpdateTime| for more information.<br>- The plugin now sets 'completefunc' such that you can now hit &lt;C-X&gt;&lt;C-U&gt; to<br>&nbsp;&nbsp;trigger completions explicitly (instead of waiting for<br>&nbsp;&nbsp;g:LookupFile_UpdateTime). This is useful if you are a slow typer and so prefer<br>&nbsp;&nbsp;a large value for g:LookupFile_UpdateTime.<br>- The plugin now recognizes 'ignorecase' and 'smartcase' settings to match files<br>&nbsp;&nbsp;even on systems that are case-sensitive. This is mainly significant for the<br>&nbsp;&nbsp;commands that use |globpath()| or |glob()| which are, |:LUPath| and |:LUWalk|,<br>&nbsp;&nbsp;as the others already respect these settings.<br>- There is now a separate command called :LUTags that always does what<br>&nbsp;&nbsp;:LookupFile used to do, while the :LookupFile command itself now gets<br>&nbsp;&nbsp;dynamically assigned to the last command used. This also means, the map that<br>&nbsp;&nbsp;is choosen in |lookupfile-map| now invokes the last command that is used, use<br>&nbsp;&nbsp;|LookupFile_DefaultCmd| and |LookupFile_DisableDefaultMap| settings to control<br>&nbsp;&nbsp;this behavior.<br>- LUWalk now supports showing only directory names in the results. Just type<br>&nbsp;&nbsp;an extra / to filter those that are not directories (the suffix will then be<br>&nbsp;&nbsp;two slashes).<br>- The default behavior of |:LUBufs| is now to match the entire |bufname()|,<br>&nbsp;&nbsp;just like the |:buffer| command would do. To see the old behavior, reset<br>&nbsp;&nbsp;|LookupFile_Bufs_LikeBufCmd| setting.<br>- If you have the new version of SelectBuf also installed, you can have<br>&nbsp;&nbsp;|:LUBufs| sort buffers in MRU order. See, |LookupFile_Bufs_BufListExpr|.<br>- When tags file is not generated as per the requirements of |lookupfile-tags|,<br>&nbsp;&nbsp;the format of the matches doesn't look good, so by default the matches just<br>&nbsp;&nbsp;show full filenames. See |LookupFile_UsingSpecializedTags| to get better<br>&nbsp;&nbsp;formatted results.<br>- New settings |LookupFile_UsingSpecializedTags|, |LookupFile_SortMethod|,<br>&nbsp;&nbsp;|LookupFile_DefaultCmd|, |LookupFile_DisableDefaultMap|,<br>&nbsp;&nbsp;|LookupFile_Bufs_LikeBufCmd|, |LookupFile_Bufs_BufListExpr|,<br>&nbsp;&nbsp;|LookupFile_EscCancelsPopup|.<br>- Bug fix: exact matches were getting dropped from results&nbsp;&nbsp;(Max Dyckhoff).<br>- Bug fix: &lt;BS&gt; in |:LUWalk| right after selecting a directory match caused it<br>&nbsp;&nbsp;to misbehave.<br>- Bug fix: if tags file is not in the current directory, the opening fails. Now<br>&nbsp;&nbsp;:LookupFile expands the filenames explicitly so that the paths are always<br>&nbsp;&nbsp;valid.<br>- Bug fix: Unsetting |LookupFile_AllowNewFiles| didn't disable the feature.<br>- Bug fix: &lt;C-E&gt; was not hiding the popup.<br>- Bug fix: &lt;S-BS&gt; triggers the default insert-mode completion (Max Dyckhoff).<br>- Fixed misc. bugs in opening files.<br>- Workaround for &lt;Esc&gt; not working on some systems, allow disabling the<br>&nbsp;&nbsp;mapping.<br>- Bug fix: When there is an exising swapfile, opening the files result in an<br>&nbsp;&nbsp;error message (David Fishburn).<br>- When LookupFile_UsingSpecializedTags is set, sorting should be done on the<br>&nbsp;&nbsp;filename (patch by Timothy, Guo). </td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=6124">lookupfile-1.4.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.4</b></td>
+    <td class="roweven" valign="top" nowrap><i>2006-08-31</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=292">Hari Krishna Dara</a></i></td>
+    <td class="roweven" valign="top" width="2000">- Fixed a bug in the initial pattern getting ignored.<br>- LUBufs now completes the full pathname of the buffers, so that it is<br>&nbsp;&nbsp;less dependent on the current directory of Vim.<br>- LUBufs and LUPath commands now present the matches in a better format.<br>- Pressing &lt;F5&gt; while popup is visible didn't close the lookupfile<br>&nbsp;&nbsp;window.<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=6083">lookupfile-1.3.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.3</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2006-08-20</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=292">Hari Krishna Dara</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- New feature to create a file, if the file doesn't already exist (Ido).<br>&nbsp;&nbsp;Can be disabled using g:LookupFile_AllowNewFiles setting.<br>- Bug fix: while using LUWalk, if the first match is a directory, then<br>&nbsp;&nbsp;selecting files was offset by one.<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=6073">lookupfile-1.2.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.2</b></td>
+    <td class="roweven" valign="top" nowrap><i>2006-08-16</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=292">Hari Krishna Dara</a></i></td>
+    <td class="roweven" valign="top" width="2000">- New LUWalk command that works very similar to Emacs ido.el to quickly navigate<br>&nbsp;&nbsp;paths.<br>- g:LookupFile_AlwaysAcceptFirst setting to always accept the first<br>&nbsp;&nbsp;entry (the default is 0).<br>- g:LookupFile_FileFilter to specify a filter.<br>- All commands now accepts the initial pattern as argument. This provides<br>&nbsp;&nbsp;unlimited number of possibilities to create your own custom commands (see<br>&nbsp;&nbsp;|lookupfile-tips| for some examples).<br>- The g:LookupFile_MinPatLength is automatically set to 0 except for tag and<br>&nbsp;&nbsp;'path' lookup.<br>- When Lookup window is opened, the filetype is set to &quot;lookupfile&quot;. This allows<br>&nbsp;&nbsp;you to create ftplugins to fine tune the behavior.<br>- Renamed :LUBuf command to :LUBufs.<br>The plugin has been in extensive use by myself and a couple of other users, and there are no major issues.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=5921">lookupfile-1.1.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2006-07-05</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=292">Hari Krishna Dara</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- Added LUBuf, LUPath and LUArgs commands.<br>- Renamed the prefix for all the settings from g:lookupfile_ to<br>&nbsp;&nbsp;g:LookupFile_. This is required to support Funcref settings.<br>- Now the cursor position is preserved, while opening a file that is<br>&nbsp;&nbsp;already loaded.<br>- Using genutils 2.1.<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=5854">lookupfile-1.0.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.0</b></td>
+    <td class="roweven" valign="top" nowrap><i>2006-06-23</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=292">Hari Krishna Dara</a></i></td>
+    <td class="roweven" valign="top" width="2000">Initial upload</td>
+</tr>
+</table>
+<!-- finish off the framework -->
+          </td>
+        </tr>
+      </table>
+    </td>
+
+  </tr>
+</table>
+
+<!-- END OF THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr><td colspan="4" bgcolor="#000000"><img src="/images/spacer.gif" height="2" width="1" alt=""></td></tr>
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr>
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+
+    <td align="left" valign="top"><small>
+      If you have questions or remarks about this site, visit the
+      <a href="http://vimonline.sf.net">vimonline development</a> pages.
+      Please use this site responsibly.
+      <br> 
+      
+      Questions about <a href="http://www.vim.org/about.php">Vim</a> should go
+      to the <a href="http://www.vim.org/maillist.php">maillist</a>.
+      Help Bram <a href="http://iccf-holland.org/">help Uganda</a>.
+      </small>
+	&nbsp;
+	&nbsp;
+
+	<!-- Start of StatCounter Code -->
+	<script type="text/javascript" language="javascript">
+	var sc_project=1417324; 
+	var sc_invisible=1; 
+	var sc_partition=11; 
+	var sc_security="d41633bc"; 
+	</script>
+
+	<script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script><noscript><a href="http://www.statcounter.com/" target="_blank"><img  src="http://c12.statcounter.com/counter.php?sc_project=1417324&java=0&security=d41633bc&invisible=0" alt="free tracking" border="0"></a> </noscript>
+	<!-- End of StatCounter Code -->
+          </td>
+
+    <td align="right" valign="top">
+      		<a href="http://sourceforge.net/projects/vim" rel="nofollow"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=8&type=1" width="88" height="31" border="0" alt="SourceForge.net Logo" /></a>
+    </td>
+
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+  </tr>
+
+    
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  
+  </tr>
+</table>
+
+</body>
+</html>
+

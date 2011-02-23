@@ -1,0 +1,356 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+  <link rel="Stylesheet" type="text/css" href="/css/style.css" >
+  <title>searchInRuntime - Search files through the paths lists, and execute any command on them : vim online</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <meta name="KEYWORDS" content="Vim, Vi IMproved, text editor, home, documentation, tips, scripts, news">
+  <link rel="shortcut icon" type="image/x-icon" href="/images/vim_shortcut.ico">
+</head>
+
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff"> 
+
+<!-- HEADER, SPONSOR IMAGE, VIM IMAGE AND BOOK AD -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+  <td class="lightbg">&nbsp;&nbsp;&nbsp;</td>
+  <td class="lightbg" align="left"><a href="/sponsor/index.php"><img src="/images/sponsorvim.gif" alt="sponsor Vim development" border="0"></a></td>
+    <td class="lightbg" align="center"><a href="/index.php"><img src="/images/vim_header.gif" border="0" alt="Vim logo"></a></td>
+    <td class="lightbg" align="right"><a href="http://iccf-holland.org/click5.html"><img src="/images/buyhelplearn.gif" alt="Vim Book Ad" border="0"></a></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="darkbg"><img src="/images/spacer.gif" width="1" height="10" alt=""></td>
+  </tr>
+</table>
+<!-- THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+  <col width="180">
+  <col width="1">
+
+  <tr valign="top">
+    <td class="sidebar">
+      <table width="180" cellpadding="4" cellspacing="0" border="0">
+        <tr valign="top">
+          <td class="sidebar">
+
+<!-- INCLUDE THE PAGE NAVIGATION -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+    <tr>
+        <td><small>not logged in (<a href="/login.php">login</a>)</small></td>
+    </tr>
+    <tr><td>
+<small>&nbsp;</small>
+<form action="http://www.google.com/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-3005259998294962:bvyni59kjr1" />
+    <input type="hidden" name="ie" value="ISO-8859-1" />
+    <input type="text" name="q" size="20" />
+    <br>
+    <input type="submit" name="sa" value="Search" />
+  </div>
+</form>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+    </td></tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="1"></td>
+    </tr>
+    <tr>
+        <td class="darkbg"><img src="/images/spacer.gif" alt='' border="0" height="3"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="2"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/index.php">Home</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/search.php">Advanced search</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/about.php">About Vim</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/community.php">Community</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/news/news.php">News</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/sponsor/index.php">Sponsoring</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/trivia.php">Trivia</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/docs.php">Documentation</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/download.php">Download</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/scripts/index.php">Scripts</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/tips/index.php">Tips</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/account/index.php">My Account</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/huh.php">Site Help</a></td>
+        </tr>
+</table>
+
+            <table width="172" cellpadding="0" cellspacing="0" border="0">
+              <tr><td><img src="/images/spacer.gif" alt="" border="0" width="1" height="8"></td></tr>
+              <tr><td class="darkbg"><img src="/images/spacer.gif" width="1" height="3" alt=""></td></tr>
+            </table>
+            <br>
+
+<!-- INCLUDE THE PAGE SIDEBAR TEXT -->
+&nbsp;
+
+          </td>
+        </tr>
+      </table>
+    </td>
+
+    <td class="darkbg"><img src="/images/spacer.gif" width="1" height="1" border="0" alt=""><br></td>
+    <td>
+      <table width="100%" cellpadding="10" cellspacing="0" border="0" bordercolor="red">
+        <tr>
+          <td valign="top">
+
+<span class="txth1">searchInRuntime : Search files through the paths lists, and execute any command on them</span> 
+
+<br>
+<br>
+
+<!-- karma table -->
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
+  <td>
+    Rating <b>23/17</b>,
+    Downloaded by 1707  </td>
+  <td class="lightbg">
+  <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
+  </td>
+  <td>
+    <a href="http://vim.wikia.com/wiki/Script:229">Vim wiki</a>
+  </td>  
+</tr>
+</table>
+<p>
+
+<table cellspacing="0" cellpadding="0" border="0">
+<tr><td class="prompt">created by</td></tr>
+<tr><td><a href="/account/profile.php?user_id=102">Luc Hermitte</a></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">script type</td></tr>
+<tr><td>utility</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">description</td></tr>
+<tr><td>This plugin extends the command 'runtime' (:h runtime) to execute any command (not only 'source') on files found in the '&runtimepath' option.<br><br>It defines the command &quot;:SearchInRuntime&quot; which takes as a first parameter the command to execute and then the search patterns used to search files in the 'runtimepath' directories list.<br><br>E.g. 1:<br>&nbsp;&nbsp;&nbsp;&nbsp; :SearchInRuntime! source here/foo*.vim <br>is equivalent to :<br>&nbsp;&nbsp;&nbsp;&nbsp; :runtime! here/foo*.vim<br><br>E.g. 2:<br>&nbsp;&nbsp;&nbsp;&nbsp; :silent exe 'SearchInRuntime 0r there/that.'.&ft<br>will search 'runtimepath' list for the first file named &quot;that.&lt;filetype&gt;&quot; present in the directory &quot;there&quot;, and inserts it in the current buffer. If no file is found, nothing is done.<br><br>N.B.: The [!] (bang) character can be used to apply the command to all found files. Otherwise, 'SearchInRuntime' stops after the first file.<br><br>Since the version 1.1 : <br>(*) the 'verbose' option is supported :<br>&nbsp;&nbsp;&nbsp;&nbsp;&gt;= 0 -&gt; display when no file is found<br>&nbsp;&nbsp;&nbsp;&nbsp;&gt;= 1 -&gt; display the list of file found<br>&nbsp;&nbsp;&nbsp;&nbsp;&gt;= 3 -&gt; display the list of directories searched<br>(*) ':SearchInPATH' : like ':SearchInRuntime', but with $PATH<br>(*) ':SearchInVar' : works on any list of directories defined in a variable.<br>(*) Contrary to ':runtime', the search can accept absolute paths, for instance :<br>&nbsp;&nbsp;&nbsp;&nbsp; :runtime! /usr/local/share/vim/*.vim&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; is not valid while<br>&nbsp;&nbsp;&nbsp;&nbsp; :SearchInRuntime source /usr/local/share/vim/*.vim&nbsp;&nbsp; is accepted.<br><br>Since the version 1.5.:<br>(*) The commands passed to the different :SearchIn* commands can accept any number of arguments before the names of the files found.To use them, add at the end of the :SearchIn* command: a pipe (' |0 ') and then the list of the other parameters. For instance:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:SearchInRuntime! grep plugin/*foo*.vim |0 text<br>&nbsp;&nbsp;&nbsp;&nbsp;For every file name plugin/*foo*.vim in the 'runtimepath', this will execute:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:grep text {path-to-the-file}<br><br>(*) The commands passed to the different :SearchIn* commands can accept any number of arguments after the names of the files found. To use them, add at the end of the :SearchIn* command: a pipe (' | ') and then the list of the other parameters<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:SearchInRuntime! Echo plugin/*foo*.vim | final arguments<br>&nbsp;&nbsp;&nbsp;&nbsp;For every file name plugin/*foo*.vim in the 'runtimepath', this will execute:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:Echo {path-to-the-file} final arguments<br><br>Since Version 2.0.x:<br>- Custom auto-completion added -- if vim supports it<br>- New commands: :Split and :Vsplit to split open files found into &path<br><br>Since Version 2.1.0:<br>- new commands for vim7+ only: :GSplit and :GVSplit<br>- overloaded mapping for vim7+ only: gf and CTRL-W_f<br>- new mapping: glf that echoes the files in 'path' that match the pattern under the cursor<br><br>GSplit, GVSplit, gf and CTRL-W_f permit to help the end-user to select a file among those matching a file-pattern (either given as parameter to the commands, or written under the cursor). If the selected file is already opened in a window, then that window is made the new active window -- this avoid to split-open the same file again and again.<br><br>Full documentation available on:<br>&nbsp;&nbsp;&nbsp;&nbsp;<a target="_blank" href="http://hermitte.free.fr/vim/ressources/vimfiles/doc/searchInRuntime.html">http://hermitte.free.fr/vim/ressources/vimfiles/doc/searchInRuntime.html</A><br>or within the tarball archive.</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">install details</td></tr>
+<tr><td>Drop searchInRuntime.vim into {rtp}/plugin/, <br>and searchInRuntime.txt into {rtp}/doc/<br><br>Then, install the documentation from vim with:<br>&nbsp;&nbsp;&nbsp;&nbsp;:helptags {rtp}/doc</td></tr>
+<tr><td>&nbsp;</td></tr>
+</table>
+
+<!-- rating table -->
+<form name="rating">
+<input type="hidden" name="script_id" value="229">
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>rate this script</b></td>
+  <td valign="middle">
+    <input type="radio" name="rating" value="life_changing">Life Changing
+    <input type="radio" name="rating" value="helpful">Helpful
+    <input type="radio" name="rating" value="unfulfilling">Unfulfilling&nbsp;
+    <input type="submit" value="rate">
+  </td>
+</tr>
+</table>
+</form>
+<span class="txth2">script versions</span> (<a href="add_script_version.php?script_id=229">upload new version</a>)
+<p>
+Click on the package to download.
+<p>
+
+<table cellspacing="2" cellpadding="4" border="0" width="100%">
+<tr class='tableheader'>
+        <th valign="top">package</th>
+    <th valign="top">script version</th>
+    <th valign="top">date</th>
+    <th valign="top">Vim version</th>
+    <th valign="top">user</th>
+    <th valign="top">release notes</th>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=4988">searchInRuntime.tar.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.1.3</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2006-01-17</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=102">Luc Hermitte</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Bug fix: regression introduced on gf and &lt;c-w&gt;f</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=4963">searchInRuntime.tar.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.1.2</b></td>
+    <td class="roweven" valign="top" nowrap><i>2006-01-12</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=102">Luc Hermitte</a></i></td>
+    <td class="roweven" valign="top" width="2000">* Various bug fixes for :G*split (paths withs spaces, UNC paths, URLs, absolute paths, ... ; factorisation of paths). <br>* Possibility to choose the names of the &quot;Goto-Or-Split&quot; commands (:G*split).<br>* New behavior for :G*split: we jump to the first matching window unless the command in banged ; in that latter case, the user is asked to choose the matching file to open/jump-to.<br>* All these modifications concern only Vim7+ as the corresponding feature is not supported on 6.x versions of Vim.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=4891">searchInRuntime.tar.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.1.0</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2005-12-12</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=102">Luc Hermitte</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Two minor bugfixes. New commands and overridden mappings for vim7+: :GSplit, :GVSplit, gf, CTRL-W_f and glf. When several matching files can be found in 'path', the user is asked which one to open. If it is already opened in a window, that window becomes active.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=4218">searchInRuntime.tar.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.0.3</b></td>
+    <td class="roweven" valign="top" nowrap><i>2005-04-28</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=102">Luc Hermitte</a></i></td>
+    <td class="roweven" valign="top" width="2000">Support for &quot;smart&quot; auto-completion added for each command from the plugin -- &quot;smart&quot; means: &quot;respect the parameter position&quot;. New commands: :Sp and :Vsp that split open files found into &path ; and :Runtime, another wrapper for :runtime with auto-completion.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=1875">searchInRuntime.tar.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.6c</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2003-03-29</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=102">Luc Hermitte</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Bug fix for non-Windows users.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=1403">searchInRuntime.tar.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.6</b></td>
+    <td class="roweven" valign="top" nowrap><i>2002-11-12</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=102">Luc Hermitte</a></i></td>
+    <td class="roweven" valign="top" width="2000">Tarball containing the plugin and its documentation.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=1383">searchInRuntime.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.6</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2002-11-07</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=102">Luc Hermitte</a></i></td>
+    <td class="rowodd" valign="top" width="2000">The :SearchIn* commands can pass any number of additional arguments to the &quot;inner&quot; command. SearchInENV changed in SearchInVar.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=757">searchInRuntime.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.1</b></td>
+    <td class="roweven" valign="top" nowrap><i>2002-04-04</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=102">Luc Hermitte</a></i></td>
+    <td class="roweven" valign="top" width="2000">Two more commands : ':SearchInENV' and ':SearchInPATH' ; '&verbose' is supported like with ':runtime'.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=637">searchInRuntime.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.0</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2002-02-25</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=102">Luc Hermitte</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Initial upload</td>
+</tr>
+</table>
+<!-- finish off the framework -->
+          </td>
+        </tr>
+      </table>
+    </td>
+
+  </tr>
+</table>
+
+<!-- END OF THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr><td colspan="4" bgcolor="#000000"><img src="/images/spacer.gif" height="2" width="1" alt=""></td></tr>
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr>
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+
+    <td align="left" valign="top"><small>
+      If you have questions or remarks about this site, visit the
+      <a href="http://vimonline.sf.net">vimonline development</a> pages.
+      Please use this site responsibly.
+      <br> 
+      
+      Questions about <a href="http://www.vim.org/about.php">Vim</a> should go
+      to the <a href="http://www.vim.org/maillist.php">maillist</a>.
+      Help Bram <a href="http://iccf-holland.org/">help Uganda</a>.
+      </small>
+	&nbsp;
+	&nbsp;
+
+	<!-- Start of StatCounter Code -->
+	<script type="text/javascript" language="javascript">
+	var sc_project=1417324; 
+	var sc_invisible=1; 
+	var sc_partition=11; 
+	var sc_security="d41633bc"; 
+	</script>
+
+	<script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script><noscript><a href="http://www.statcounter.com/" target="_blank"><img  src="http://c12.statcounter.com/counter.php?sc_project=1417324&java=0&security=d41633bc&invisible=0" alt="free tracking" border="0"></a> </noscript>
+	<!-- End of StatCounter Code -->
+          </td>
+
+    <td align="right" valign="top">
+      		<a href="http://sourceforge.net/projects/vim" rel="nofollow"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=8&type=1" width="88" height="31" border="0" alt="SourceForge.net Logo" /></a>
+    </td>
+
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+  </tr>
+
+    
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  
+  </tr>
+</table>
+
+</body>
+</html>
+

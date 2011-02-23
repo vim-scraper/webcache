@@ -1,0 +1,292 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+  <link rel="Stylesheet" type="text/css" href="/css/style.css" >
+  <title>autoscroll - autoscroll the screen, see the context of current line clearly : vim online</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <meta name="KEYWORDS" content="Vim, Vi IMproved, text editor, home, documentation, tips, scripts, news">
+  <link rel="shortcut icon" type="image/x-icon" href="/images/vim_shortcut.ico">
+</head>
+
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff"> 
+
+<!-- HEADER, SPONSOR IMAGE, VIM IMAGE AND BOOK AD -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+  <td class="lightbg">&nbsp;&nbsp;&nbsp;</td>
+  <td class="lightbg" align="left"><a href="/sponsor/index.php"><img src="/images/sponsorvim.gif" alt="sponsor Vim development" border="0"></a></td>
+    <td class="lightbg" align="center"><a href="/index.php"><img src="/images/vim_header.gif" border="0" alt="Vim logo"></a></td>
+    <td class="lightbg" align="right"><a href="http://iccf-holland.org/click5.html"><img src="/images/buyhelplearn.gif" alt="Vim Book Ad" border="0"></a></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="darkbg"><img src="/images/spacer.gif" width="1" height="10" alt=""></td>
+  </tr>
+</table>
+<!-- THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+  <col width="180">
+  <col width="1">
+
+  <tr valign="top">
+    <td class="sidebar">
+      <table width="180" cellpadding="4" cellspacing="0" border="0">
+        <tr valign="top">
+          <td class="sidebar">
+
+<!-- INCLUDE THE PAGE NAVIGATION -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+    <tr>
+        <td><small>not logged in (<a href="/login.php">login</a>)</small></td>
+    </tr>
+    <tr><td>
+<small>&nbsp;</small>
+<form action="http://www.google.com/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-3005259998294962:bvyni59kjr1" />
+    <input type="hidden" name="ie" value="ISO-8859-1" />
+    <input type="text" name="q" size="20" />
+    <br>
+    <input type="submit" name="sa" value="Search" />
+  </div>
+</form>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+    </td></tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="1"></td>
+    </tr>
+    <tr>
+        <td class="darkbg"><img src="/images/spacer.gif" alt='' border="0" height="3"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="2"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/index.php">Home</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/search.php">Advanced search</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/about.php">About Vim</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/community.php">Community</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/news/news.php">News</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/sponsor/index.php">Sponsoring</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/trivia.php">Trivia</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/docs.php">Documentation</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/download.php">Download</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/scripts/index.php">Scripts</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/tips/index.php">Tips</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/account/index.php">My Account</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/huh.php">Site Help</a></td>
+        </tr>
+</table>
+
+            <table width="172" cellpadding="0" cellspacing="0" border="0">
+              <tr><td><img src="/images/spacer.gif" alt="" border="0" width="1" height="8"></td></tr>
+              <tr><td class="darkbg"><img src="/images/spacer.gif" width="1" height="3" alt=""></td></tr>
+            </table>
+            <br>
+
+<!-- INCLUDE THE PAGE SIDEBAR TEXT -->
+&nbsp;
+
+          </td>
+        </tr>
+      </table>
+    </td>
+
+    <td class="darkbg"><img src="/images/spacer.gif" width="1" height="1" border="0" alt=""><br></td>
+    <td>
+      <table width="100%" cellpadding="10" cellspacing="0" border="0" bordercolor="red">
+        <tr>
+          <td valign="top">
+
+<span class="txth1">autoscroll : autoscroll the screen, see the context of current line clearly</span> 
+
+<br>
+<br>
+
+<!-- karma table -->
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
+  <td>
+    Rating <b>3/2</b>,
+    Downloaded by 407  </td>
+  <td class="lightbg">
+  <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
+  </td>
+  <td>
+    <a href="http://vim.wikia.com/wiki/Script:1276">Vim wiki</a>
+  </td>  
+</tr>
+</table>
+<p>
+
+<table cellspacing="0" cellpadding="0" border="0">
+<tr><td class="prompt">created by</td></tr>
+<tr><td><a href="/account/profile.php?user_id=7433">xiangqian liu</a></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">script type</td></tr>
+<tr><td>utility</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">description</td></tr>
+<tr><td>auto scroll the screen:<br>when there are still&nbsp;&nbsp;certain lines between current line and the top or bottom boundry of the current window, the screen would scroll automatic, so that you can see the context of current line always.<br>when in insert mode, if current line is quite near the bottom boundry of current window, and if you press enter, some extra blank spaces would appear so that the current line not&nbsp;&nbsp;be too close to the boundry.</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">install details</td></tr>
+<tr><td> <br><br>&quot; File: autoscroll.vim<br>&quot; Author:LiuXiangqian (www.lvying.org)<br>&quot; Version: 0.04<br>&quot; Last Modify: May 6, 2005<br>&quot; ChangeLog:<br>&quot; Version 0.02:<br>&quot;&nbsp;&nbsp; 1.add autoscroll in insert mode <br>&quot;&nbsp;&nbsp; 2.correct(or mistake) some grammar mistakes(or correct ones) in the documentation<br>&quot;&nbsp;&nbsp; 3.separate the Installation part of documentation to Installation and<br>&quot;&nbsp;&nbsp;&nbsp;&nbsp; Configuration<br>&quot; Version 0.03<br>&quot;&nbsp;&nbsp; 1. some more bug of cursor position mistakes fixed<br>&quot;&nbsp;&nbsp; 2. fix the bug when the cursor is at the end of a line, an &lt;Enter&gt; would make<br>&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a character down to the current line<br>&quot; Version 0.04<br>&quot;&nbsp;&nbsp; 1. fix the bug when the character at the end of the line is a multibyte character<br>&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;in insert mode, an &lt;Enter&gt; would pull the last character to the next line.<br>&quot; Installation:<br>&quot; -------------<br>&quot; 1.copy the autoscroll.vim script to&nbsp;&nbsp;$HOME/.vim/plugin directory or where<br>&quot;&nbsp;&nbsp; the vim program can find the script at startup. Or you can put autoscroll.vim<br>&quot;&nbsp;&nbsp; some other place, and then use :so PATH_TO_AUTOSCROLL_SCRIPT/autoscroll.vim <br>&quot;&nbsp;&nbsp; in $HOME/.vimrc to execute the script. Refer to ':help add-plugin', <br>&quot;&nbsp;&nbsp; ':help add-global-plugin' and ':help runtimepath' for more details about<br>&quot;&nbsp;&nbsp; vim plugins. Refer to ':help so' for more details about read Ex commands from<br>&quot;&nbsp;&nbsp; a file.<br>&quot; 2.Restart vim<br>&quot; Configuration:<br>&quot; -------------<br>&quot; 1.Set topScrollNumber and bottomScrollNumber variable, if you do not<br>&quot;&nbsp;&nbsp; set these two variables explicitly, they would both get default value of 5.<br>&quot;&nbsp;&nbsp; TopScrollNumber is the amount of lines above your cursor lines when the<br>&quot;&nbsp;&nbsp; auto down scroll occurs in normal and insert mode. As you may dope out, <br>&quot;&nbsp;&nbsp; bottomScrollNumber is the amount of lines down to your cursor line when the<br>&quot;&nbsp;&nbsp; auto up scroll occurs in normal and insert mode. You may set these <br>&quot;&nbsp;&nbsp; two variables using let in you .vimrc<br>&quot;&nbsp;&nbsp; For example,<br>&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; let topScrollNumber = 8<br>&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; let bottomScrollNumber = 8<br>&quot; 2.Set the updatetime variable. Refer to :help updatetime to see<br>&quot;&nbsp;&nbsp; what's the meaning of variable updatetime. You may set this variable using<br>&quot;&nbsp;&nbsp; let in your .vimrc. For example,<br>&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; let updatetime = 100<br>&quot;&nbsp;&nbsp; this variable only affect the auto scroll behavior in normal mode.<br>&quot;&nbsp;&nbsp; Note: You should set this variable explicitly in your .vimrc.<br>&quot; 3.Set the variable bottomRowNumberInsertMode. This variable would get <br>&quot;&nbsp;&nbsp; default value of 5 if you don't set it explicitly. This variable is the <br>&quot;&nbsp;&nbsp; amount of line below your current line when you press Enter to produce a<br>&quot;&nbsp;&nbsp; new line near the bottom of the screen, if there are not enough lines <br>&quot;&nbsp;&nbsp; below current line to be displayed, coequal height of blank space would <br>&quot;&nbsp;&nbsp; be displayed. You may set this variable using let in your .vimrc.<br>&quot;&nbsp;&nbsp; For example,<br>&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; let bottomRowNumberInsertMode = 9<br>&quot; 4.If you use &lt;UP&gt; and &lt;DOWN&gt; to scroll in insert mode, you need no changes<br>&quot;&nbsp;&nbsp; for the key binding, but if you bind some other keys to scroll in insert<br>&quot;&nbsp;&nbsp; mode, you have to change your key binding to let it auto scroll at the same <br>&quot;&nbsp;&nbsp; time. For example, if you bind the key combine Ctrl+k and Ctrl+j to scroll <br>&quot;&nbsp;&nbsp; up and down in insert mode, you should configure the key binding as below:<br>&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; inoremap &lt;C-K&gt; &lt;ESC&gt;:call Check_Scroll()&lt;CR&gt;a&lt;UP&gt;<br>&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; inoremap &lt;C-J&gt; &lt;ESC&gt;:call Check_Scroll()&lt;CR&gt;a&lt;DOWN&gt;<br>&quot;&nbsp;&nbsp; If you want to bind the key &lt;UP&gt; and &lt;DOWN&gt; to other operation in insert<br>&quot;&nbsp;&nbsp; mode, you have to comment the keymap definition of &lt;UP&gt; and &lt;DOWN&gt; below . <br>&quot; Usage:<br>&quot; -----<br>&quot;&nbsp;&nbsp; Just enjoy the convenience of see the context of current line all the time.<br>&quot; Known BUGS:<br>&quot; ---------<br>&quot; 1.If you set wrap display and the length of a line is larger than your set of <br>&quot;&nbsp;&nbsp; textwidth, the cursor would jump back by force and you should quick enough to<br>&quot;&nbsp;&nbsp; move your cursor rushing across this line, So I suggest set updatetime to <br>&quot;&nbsp;&nbsp; match your speed of moving the cusor, 100ms is a good choice in my opinion.<br>&quot; 2.The auto scroll act based on lines separate by line break, not lines wraped<br>&quot;&nbsp;&nbsp; by vim(This may not be suppose to a bug)<br>&quot; 3.If you place the cursor at the second column of one line, and then press &lt;ENTER&gt;, <br>&quot;&nbsp;&nbsp; the cursor would jump to the beginning of the line and pull the first character to<br>&quot;&nbsp;&nbsp; next line also, this happens when you are in the insert mode. So you may want to <br>&quot;&nbsp;&nbsp; bind the auto scroll version of &lt;ENTER&gt; to some other keys such as &lt;C-CR&gt;, Then you<br>&quot;&nbsp;&nbsp; should change the key binding of &lt;CR&gt; below to<br>&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;inoremap &lt;C-CR&gt; &lt;Esc&gt;:call Check_Scroll_Insert()&lt;CR&gt;i&lt;CR&gt;<br>&quot; IMPORTANT ATTENTION:<br>&quot; --------------------<br>&quot; 4.Sometimes, the cursor may be locked, (seems random so far to me, the reason <br>&quot;&nbsp;&nbsp; remains unknown, but the probability is very very very small), and you can not<br>&quot;&nbsp;&nbsp; change the position of the cursor and the mode of VIM, if you are using GVIM,<br>&quot;&nbsp;&nbsp; you can still select&nbsp;&nbsp;file -&gt; save in the menu bar to save your unsaved files<br>&quot;&nbsp;&nbsp; since VIM isn't crack except for the lock.<br>&quot;&nbsp;&nbsp; Unfortunately, if you are using vim in console and there is no gui menu,<br>&quot;&nbsp;&nbsp; I haven't find a way to save my unsaved file,if you find one,please contact me<br>&quot;&nbsp;&nbsp; at smartLitchi@gmail.com. Appreciate all your help~~.Before you find one, carefully<br>&quot;&nbsp;&nbsp; enough to using this plugin in console vim.<br>&quot; Acknowledgement:<br>&quot; ---------------<br>&quot;&nbsp;&nbsp; This script is base on redhair's autoscroll.vim<br>&quot;&nbsp;&nbsp; (See x-4-6 in vim board of newsmth.net)<br>&quot;&nbsp;&nbsp; I should express my appreciate to redhair@smth<br>&quot; TODO: <br>&quot;&nbsp;&nbsp; I wouldn't add new function to this script except for bug fixes.<br>&quot; Bug Report:<br>&quot; ----------<br>&quot;&nbsp;&nbsp; Please send an E-mail to smartLitchi@gmail.com if you find an bug, or you<br>&quot;&nbsp;&nbsp; can send a personal message to truelvying@newsmth. Best wishes.<br>&quot; License:<br>&quot; -------<br>&quot;&nbsp;&nbsp; This plugin has the same license as vim.<br><br>&quot; If you want to change the key bind &lt;CR&gt; in insert mode, please<br>&quot; change the follow line. Refer to the Known BUGS part 3 for more details<br>inoremap &lt;CR&gt; &lt;Esc&gt;:call Check_Scroll_Insert()&lt;CR&gt;i&lt;CR&gt;<br><br>&quot; If you want to change the key bind &lt;UP&gt; and &lt;LEFT&gt; in insert mode<br>&quot; Please change the follow two lines<br>&quot; Refer to the Configuration part 4 for more details.<br>inoremap &lt;UP&gt; &lt;ESC&gt;:call Check_Scroll()&lt;CR&gt;a&lt;UP&gt;<br>inoremap &lt;DOWN&gt; &lt;ESC&gt;:call Check_Scroll()&lt;CR&gt;a&lt;DOWN&gt;<br></td></tr>
+<tr><td>&nbsp;</td></tr>
+</table>
+
+<!-- rating table -->
+<form name="rating">
+<input type="hidden" name="script_id" value="1276">
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>rate this script</b></td>
+  <td valign="middle">
+    <input type="radio" name="rating" value="life_changing">Life Changing
+    <input type="radio" name="rating" value="helpful">Helpful
+    <input type="radio" name="rating" value="unfulfilling">Unfulfilling&nbsp;
+    <input type="submit" value="rate">
+  </td>
+</tr>
+</table>
+</form>
+<span class="txth2">script versions</span> (<a href="add_script_version.php?script_id=1276">upload new version</a>)
+<p>
+Click on the package to download.
+<p>
+
+<table cellspacing="2" cellpadding="4" border="0" width="100%">
+<tr class='tableheader'>
+        <th valign="top">package</th>
+    <th valign="top">script version</th>
+    <th valign="top">date</th>
+    <th valign="top">Vim version</th>
+    <th valign="top">user</th>
+    <th valign="top">release notes</th>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=4248">autoscroll_004.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.04</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2005-05-06</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=7433">xiangqian liu</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Initial upload</td>
+</tr>
+</table>
+<!-- finish off the framework -->
+          </td>
+        </tr>
+      </table>
+    </td>
+
+  </tr>
+</table>
+
+<!-- END OF THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr><td colspan="4" bgcolor="#000000"><img src="/images/spacer.gif" height="2" width="1" alt=""></td></tr>
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr>
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+
+    <td align="left" valign="top"><small>
+      If you have questions or remarks about this site, visit the
+      <a href="http://vimonline.sf.net">vimonline development</a> pages.
+      Please use this site responsibly.
+      <br> 
+      
+      Questions about <a href="http://www.vim.org/about.php">Vim</a> should go
+      to the <a href="http://www.vim.org/maillist.php">maillist</a>.
+      Help Bram <a href="http://iccf-holland.org/">help Uganda</a>.
+      </small>
+	&nbsp;
+	&nbsp;
+
+	<!-- Start of StatCounter Code -->
+	<script type="text/javascript" language="javascript">
+	var sc_project=1417324; 
+	var sc_invisible=1; 
+	var sc_partition=11; 
+	var sc_security="d41633bc"; 
+	</script>
+
+	<script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script><noscript><a href="http://www.statcounter.com/" target="_blank"><img  src="http://c12.statcounter.com/counter.php?sc_project=1417324&java=0&security=d41633bc&invisible=0" alt="free tracking" border="0"></a> </noscript>
+	<!-- End of StatCounter Code -->
+          </td>
+
+    <td align="right" valign="top">
+      		<a href="http://sourceforge.net/projects/vim" rel="nofollow"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=8&type=1" width="88" height="31" border="0" alt="SourceForge.net Logo" /></a>
+    </td>
+
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+  </tr>
+
+    
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  
+  </tr>
+</table>
+
+</body>
+</html>
+

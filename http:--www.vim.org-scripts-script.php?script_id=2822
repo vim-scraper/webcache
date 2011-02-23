@@ -1,0 +1,348 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+  <link rel="Stylesheet" type="text/css" href="/css/style.css" >
+  <title>unicode.vim - A Completion function for Unicode glyphs : vim online</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <meta name="KEYWORDS" content="Vim, Vi IMproved, text editor, home, documentation, tips, scripts, news">
+  <link rel="shortcut icon" type="image/x-icon" href="/images/vim_shortcut.ico">
+</head>
+
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff"> 
+
+<!-- HEADER, SPONSOR IMAGE, VIM IMAGE AND BOOK AD -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+  <td class="lightbg">&nbsp;&nbsp;&nbsp;</td>
+  <td class="lightbg" align="left"><a href="/sponsor/index.php"><img src="/images/sponsorvim.gif" alt="sponsor Vim development" border="0"></a></td>
+    <td class="lightbg" align="center"><a href="/index.php"><img src="/images/vim_header.gif" border="0" alt="Vim logo"></a></td>
+    <td class="lightbg" align="right"><a href="http://iccf-holland.org/click5.html"><img src="/images/buyhelplearn.gif" alt="Vim Book Ad" border="0"></a></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="darkbg"><img src="/images/spacer.gif" width="1" height="10" alt=""></td>
+  </tr>
+</table>
+<!-- THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+  <col width="180">
+  <col width="1">
+
+  <tr valign="top">
+    <td class="sidebar">
+      <table width="180" cellpadding="4" cellspacing="0" border="0">
+        <tr valign="top">
+          <td class="sidebar">
+
+<!-- INCLUDE THE PAGE NAVIGATION -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+    <tr>
+        <td><small>not logged in (<a href="/login.php">login</a>)</small></td>
+    </tr>
+    <tr><td>
+<small>&nbsp;</small>
+<form action="http://www.google.com/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-3005259998294962:bvyni59kjr1" />
+    <input type="hidden" name="ie" value="ISO-8859-1" />
+    <input type="text" name="q" size="20" />
+    <br>
+    <input type="submit" name="sa" value="Search" />
+  </div>
+</form>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+    </td></tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="1"></td>
+    </tr>
+    <tr>
+        <td class="darkbg"><img src="/images/spacer.gif" alt='' border="0" height="3"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="2"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/index.php">Home</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/search.php">Advanced search</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/about.php">About Vim</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/community.php">Community</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/news/news.php">News</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/sponsor/index.php">Sponsoring</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/trivia.php">Trivia</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/docs.php">Documentation</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/download.php">Download</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/scripts/index.php">Scripts</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/tips/index.php">Tips</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/account/index.php">My Account</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/huh.php">Site Help</a></td>
+        </tr>
+</table>
+
+            <table width="172" cellpadding="0" cellspacing="0" border="0">
+              <tr><td><img src="/images/spacer.gif" alt="" border="0" width="1" height="8"></td></tr>
+              <tr><td class="darkbg"><img src="/images/spacer.gif" width="1" height="3" alt=""></td></tr>
+            </table>
+            <br>
+
+<!-- INCLUDE THE PAGE SIDEBAR TEXT -->
+&nbsp;
+
+          </td>
+        </tr>
+      </table>
+    </td>
+
+    <td class="darkbg"><img src="/images/spacer.gif" width="1" height="1" border="0" alt=""><br></td>
+    <td>
+      <table width="100%" cellpadding="10" cellspacing="0" border="0" bordercolor="red">
+        <tr>
+          <td valign="top">
+
+<span class="txth1">unicode.vim : A Completion function for Unicode glyphs</span> 
+
+<br>
+<br>
+
+<!-- karma table -->
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
+  <td>
+    Rating <b>6/3</b>,
+    Downloaded by 334  </td>
+  <td class="lightbg">
+  <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
+  </td>
+  <td>
+    <a href="http://vim.wikia.com/wiki/Script:2822">Vim wiki</a>
+  </td>  
+</tr>
+</table>
+<p>
+
+<table cellspacing="0" cellpadding="0" border="0">
+<tr><td class="prompt">created by</td></tr>
+<tr><td><a href="/account/profile.php?user_id=17599">Christian Brabandt</a></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">script type</td></tr>
+<tr><td>utility</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">description</td></tr>
+<tr><td>For a screenshot, see: <a target="_blank" href="http://www.256bit.org/~chrisbra/vim_unicode.png">http://www.256bit.org/~chrisbra/vim_unicode.png</A><br><br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*unicode-plugin*<br>1. Functionality<br><br>This plugin was written to enable an easier use of any Unicode glyph<br>available. The unicode.vim Plugin uses the data available from the Unicode<br>Consortium's website (<a target="_blank" href="http://www.unicode.org">http://www.unicode.org</A>) to let you enter Unicode<br>characters using a completion function.<br><br>By default, the plugin creates a directory unicode below the path autoload<br>where this plugin is located. Within this directory it will store&nbsp;&nbsp;the file<br>Index.txt from <a target="_blank" href="http://www.unicode.org/Public/UNIDATA/Index.txt">http://www.unicode.org/Public/UNIDATA/Index.txt</A> which it will<br>try to download using *netrw* . If this is unsuccessfull, or you do not have<br>|netrw| enabled, dowload the file manually and save it in the unicode<br>directory below the autoload directory in which unicode.vim is located.<br><br><br>						 *:EnableUnicodeCompletion*<br>By default the plugin is not enabled. To enable it enter<br>:EnableUnicodeCompletion<br>When you run this command, *unicode.vim* checks for the availability of<br>Index.txt from the Unicode Consortium, and if it is not available, it will try<br>to download it. <br><br>This will also set up the completion function |completefunc| to use for your<br>buffer. You can use |i_CTRL-X_CTRL-U| then to start the completion. <br><br>						 *:DisableUnicodeCompletion*<br>If you want to disable the plugin, enter<br>:DisableUnicodeCompletion<br><br>						&nbsp;&nbsp;&nbsp;&nbsp;*unicode-plugin-usage*<br>If you have enabled the plugin using |:EnableUnicodeCompletion| then there are<br>2 possibilities to use the plugin. You can either enter the Unicode Character<br>name, or enter the Unicode-Codeposition.<br><br>For example, you would like to enter Æ, so you enter AE and press &lt;C-X&gt;&lt;C-U&gt;<br>while in insert mode. Alternatively you can enter the Unicode-Codepoint: U+C6<br>and press &lt;C-X&gt;&lt;C-U&gt; and the popup menu will show you all characters, that<br>have a codepoint like C6 with leading zeros, eg. U+00C6 and U+0C66<br><br>A popup menu will appear, showing you the Unicode-Codeposition value, the<br>Unicode Character Name and the Unicode Character (and if you have enabled it,<br>it can also show you the digraph characters needed to create this character in<br>paranthesis, see |unicode-plugin-config| ). You can scroll down in the menu by<br>pressing &lt;C-N&gt; and up by pressing &lt;C-P&gt;.<br><br><br>						&nbsp;&nbsp;&nbsp;&nbsp;*unicode-plugin-config*<br>The plugin can be customized to include the 2 digraph characters you have to<br>type, to get that character. This works only, if there is a digraph defined<br>for that Unicode char. If you would like this you need to set<br>g:showDigraphCode, e.g.<br>:let g:showDigraphCode=1<br>This functionality is by default disabled, cause it seems to cause some delay<br>and screen-rendering errors in the menu. Enter<br>:let g:showDigraphCode=0<br>to disable the Digraph feature afterwards.<br><br>If you would like to specify a different URL from which to download Index.txt,<br>enter the URL as:<br>:let g:unicode_URL='http:....'<br>To force downloading the file from that new url, enter<br>:call unicode#CheckUniFile(1)<br><br>						&nbsp;&nbsp;&nbsp;&nbsp; *unicode-plugin-error*<br>If the plugin gives an error, first check, that Index.txt from the Unicode<br>Consortium has been successfully downloaded. It should look something like<br>this:<br>A WITH ACUTE, LATIN CAPITAL LETTER	00C1<br>A WITH ACUTE, LATIN SMALL LETTER	00E1<br>A WITH BREVE, LATIN SMALL LETTER	0103<br>A WITH CARON, LATIN SMALL LETTER	01CE<br>A WITH CIRCUMFLEX, LATIN CAPITAL LETTER	00C2<br>A WITH CIRCUMFLEX, LATIN SMALL LETTER	00E2<br>A WITH DIAERESIS, LATIN CAPITAL LETTER	00C4<br>A WITH DIAERESIS, LATIN SMALL LETTER	00E4<br>A WITH DOT ABOVE, LATIN SMALL LETTER	0227<br>A WITH DOT BELOW, LATIN SMALL LETTER	1EA1<br>A WITH DOUBLE GRAVE, LATIN SMALL LETTER	0201<br>A WITH GRAVE, LATIN CAPITAL LETTER	00C0<br>[...]<br>(several thounsand lines following)<br><br>elinks is known to mangle that file and make it unusable, so please check<br>first if the format is right.<br><br>If the file looks correct, and the plugin is still not working correctly<br>contact the maintainer. You'll find his email-adress in the first line of this<br>document. Please be patient, it might take a while, until I can take care of<br>your report.</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">install details</td></tr>
+<tr><td>simply source the file and the plugin will be installed automatically<br>:e unicode.vba<br>:so %<br><br>And afterwards, have a look at the documentation: :h unicode.txt</td></tr>
+<tr><td>&nbsp;</td></tr>
+</table>
+
+<!-- rating table -->
+<form name="rating">
+<input type="hidden" name="script_id" value="2822">
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>rate this script</b></td>
+  <td valign="middle">
+    <input type="radio" name="rating" value="life_changing">Life Changing
+    <input type="radio" name="rating" value="helpful">Helpful
+    <input type="radio" name="rating" value="unfulfilling">Unfulfilling&nbsp;
+    <input type="submit" value="rate">
+  </td>
+</tr>
+</table>
+</form>
+<span class="txth2">script versions</span> (<a href="add_script_version.php?script_id=2822">upload new version</a>)
+<p>
+Click on the package to download.
+<p>
+
+<table cellspacing="2" cellpadding="4" border="0" width="100%">
+<tr class='tableheader'>
+        <th valign="top">package</th>
+    <th valign="top">script version</th>
+    <th valign="top">date</th>
+    <th valign="top">Vim version</th>
+    <th valign="top">user</th>
+    <th valign="top">release notes</th>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13962">unicode.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.8</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-09-30</i></td>
+    <td class="rowodd" valign="top" nowrap>7.3</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=17599">Christian Brabandt</a></i></td>
+    <td class="rowodd" valign="top" width="2000"> New Release<br>- Fix an issue with configuring the plugin (Thanks jgm)<br>- Code cleanup<br>- Make use of the preview window, when completing<br>&nbsp;&nbsp;Digraph or Unicode Glyphs<br>- By default, the Digraph Glyphs will now be enabled<br>&nbsp;&nbsp;using |i_Ctrl-X_CTRL-G| instead of using<br>&nbsp;&nbsp;Ctrl-X_Ctrl-C which wouldn't work in a terminal<br>- |:UnicodeName| now displays the hexadecimal Unicode<br>&nbsp;&nbsp;Codepoint instead of the decimal one (as this seems<br>&nbsp;&nbsp;to be the official way to display unicode<br>&nbsp;&nbsp;codepoints).<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13899">unicode.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.7</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-09-23</i></td>
+    <td class="roweven" valign="top" nowrap>7.3</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=17599">Christian Brabandt</a></i></td>
+    <td class="roweven" valign="top" width="2000"><br>- Determine the Name of a Character using :UnicodeName<br>- the global variable g:enableUnicodeCompletion determines, whether the completion will be loaded automatically</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13680">unicode-0.6.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.6</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-08-26</i></td>
+    <td class="rowodd" valign="top" nowrap>7.2</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=17599">Christian Brabandt</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- many small bugfixes with regard to error-handling and error displaying<br>- use default netrw_http_cmd (instead of hardwiring wget)<br>- small documentation update (Inlude a snippet of UnicodeData.txt and get rid of Index.txt data)</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=12871">unicode.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.5</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-04-19</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=17599">Christian Brabandt</a></i></td>
+    <td class="roweven" valign="top" width="2000">New public repository at <a target="_blank" href="http://github.com/chrisbra/unicode.vim">http://github.com/chrisbra/unicode.vim</A></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=12268">unicode.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.4</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-02-01</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=17599">Christian Brabandt</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Use UnicodeData.txt to generate Data<br>(Index.txt does not contain all glyphs).<br>Check for empty file UnicodeData.txt<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=11600">unicode.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.3</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-10-26</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=17599">Christian Brabandt</a></i></td>
+    <td class="roweven" valign="top" width="2000">Added digraph completion<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=11564">unicode.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.2</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-10-22</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=17599">Christian Brabandt</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Enabled GetLatestVimScripts</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=11563">unicode.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.1</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-10-22</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=17599">Christian Brabandt</a></i></td>
+    <td class="roweven" valign="top" width="2000">Initial upload</td>
+</tr>
+</table>
+<!-- finish off the framework -->
+          </td>
+        </tr>
+      </table>
+    </td>
+
+  </tr>
+</table>
+
+<!-- END OF THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr><td colspan="4" bgcolor="#000000"><img src="/images/spacer.gif" height="2" width="1" alt=""></td></tr>
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr>
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+
+    <td align="left" valign="top"><small>
+      If you have questions or remarks about this site, visit the
+      <a href="http://vimonline.sf.net">vimonline development</a> pages.
+      Please use this site responsibly.
+      <br> 
+      
+      Questions about <a href="http://www.vim.org/about.php">Vim</a> should go
+      to the <a href="http://www.vim.org/maillist.php">maillist</a>.
+      Help Bram <a href="http://iccf-holland.org/">help Uganda</a>.
+      </small>
+	&nbsp;
+	&nbsp;
+
+	<!-- Start of StatCounter Code -->
+	<script type="text/javascript" language="javascript">
+	var sc_project=1417324; 
+	var sc_invisible=1; 
+	var sc_partition=11; 
+	var sc_security="d41633bc"; 
+	</script>
+
+	<script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script><noscript><a href="http://www.statcounter.com/" target="_blank"><img  src="http://c12.statcounter.com/counter.php?sc_project=1417324&java=0&security=d41633bc&invisible=0" alt="free tracking" border="0"></a> </noscript>
+	<!-- End of StatCounter Code -->
+          </td>
+
+    <td align="right" valign="top">
+      		<a href="http://sourceforge.net/projects/vim" rel="nofollow"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=8&type=1" width="88" height="31" border="0" alt="SourceForge.net Logo" /></a>
+    </td>
+
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+  </tr>
+
+    
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  
+  </tr>
+</table>
+
+</body>
+</html>
+

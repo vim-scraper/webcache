@@ -1,0 +1,428 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+  <link rel="Stylesheet" type="text/css" href="/css/style.css" >
+  <title>python_ifold - Improved version of python_fold. Uses folding expression for python code. : vim online</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <meta name="KEYWORDS" content="Vim, Vi IMproved, text editor, home, documentation, tips, scripts, news">
+  <link rel="shortcut icon" type="image/x-icon" href="/images/vim_shortcut.ico">
+</head>
+
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff"> 
+
+<!-- HEADER, SPONSOR IMAGE, VIM IMAGE AND BOOK AD -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+  <td class="lightbg">&nbsp;&nbsp;&nbsp;</td>
+  <td class="lightbg" align="left"><a href="/sponsor/index.php"><img src="/images/sponsorvim.gif" alt="sponsor Vim development" border="0"></a></td>
+    <td class="lightbg" align="center"><a href="/index.php"><img src="/images/vim_header.gif" border="0" alt="Vim logo"></a></td>
+    <td class="lightbg" align="right"><a href="http://iccf-holland.org/click5.html"><img src="/images/buyhelplearn.gif" alt="Vim Book Ad" border="0"></a></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="darkbg"><img src="/images/spacer.gif" width="1" height="10" alt=""></td>
+  </tr>
+</table>
+<!-- THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+  <col width="180">
+  <col width="1">
+
+  <tr valign="top">
+    <td class="sidebar">
+      <table width="180" cellpadding="4" cellspacing="0" border="0">
+        <tr valign="top">
+          <td class="sidebar">
+
+<!-- INCLUDE THE PAGE NAVIGATION -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+    <tr>
+        <td><small>not logged in (<a href="/login.php">login</a>)</small></td>
+    </tr>
+    <tr><td>
+<small>&nbsp;</small>
+<form action="http://www.google.com/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-3005259998294962:bvyni59kjr1" />
+    <input type="hidden" name="ie" value="ISO-8859-1" />
+    <input type="text" name="q" size="20" />
+    <br>
+    <input type="submit" name="sa" value="Search" />
+  </div>
+</form>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+    </td></tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="1"></td>
+    </tr>
+    <tr>
+        <td class="darkbg"><img src="/images/spacer.gif" alt='' border="0" height="3"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="2"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/index.php">Home</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/search.php">Advanced search</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/about.php">About Vim</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/community.php">Community</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/news/news.php">News</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/sponsor/index.php">Sponsoring</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/trivia.php">Trivia</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/docs.php">Documentation</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/download.php">Download</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/scripts/index.php">Scripts</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/tips/index.php">Tips</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/account/index.php">My Account</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/huh.php">Site Help</a></td>
+        </tr>
+</table>
+
+            <table width="172" cellpadding="0" cellspacing="0" border="0">
+              <tr><td><img src="/images/spacer.gif" alt="" border="0" width="1" height="8"></td></tr>
+              <tr><td class="darkbg"><img src="/images/spacer.gif" width="1" height="3" alt=""></td></tr>
+            </table>
+            <br>
+
+<!-- INCLUDE THE PAGE SIDEBAR TEXT -->
+&nbsp;
+
+          </td>
+        </tr>
+      </table>
+    </td>
+
+    <td class="darkbg"><img src="/images/spacer.gif" width="1" height="1" border="0" alt=""><br></td>
+    <td>
+      <table width="100%" cellpadding="10" cellspacing="0" border="0" bordercolor="red">
+        <tr>
+          <td valign="top">
+
+<span class="txth1">python_ifold : Improved version of python_fold. Uses folding expression for python code.</span> 
+
+<br>
+<br>
+
+<!-- karma table -->
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
+  <td>
+    Rating <b>363/299</b>,
+    Downloaded by 3482  </td>
+  <td class="lightbg">
+  <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
+  </td>
+  <td>
+    <a href="http://vim.wikia.com/wiki/Script:2002">Vim wiki</a>
+  </td>  
+</tr>
+</table>
+<p>
+
+<table cellspacing="0" cellpadding="0" border="0">
+<tr><td class="prompt">created by</td></tr>
+<tr><td><a href="/account/profile.php?user_id=12634">Jean-Pierre Chauvel</a></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">script type</td></tr>
+<tr><td>utility</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">description</td></tr>
+<tr><td>Folds are created for:<br><br>- 'class' and 'def' definitions.<br>- Blocks between {{{, }}} markers (but not yet {{{n, etc.)<br><br><br>Flavors:<br><br>- A (python_ifold.a.vim) - ideal for legacy systems.<br>- B (python_ifold.b.vim) -&nbsp;&nbsp;with all options set by default.<br>- C (python_ifold.c.vim) -&nbsp;&nbsp;same as flavor B, but uses extra Vim settings for user comfort.<br><br><br>Improvements over python_fold:<br><br>- Fixes the wild (i.e. bogus) folding bug <br>- Shows class and function signatures<br>- Now, as in the original, flavor B will omit any misplaced comment mark<br>- Flavor A boosts performance on outdated systems, something of great importance when there are lots of nested folds over large code pages<br><br><br>Caveats:<br><br>- The fold level for each fold is equal to the indentation divided by the value of the 'shiftwidth' option, so make sure that 'shiftwidth' is set to the right value for your code. For best results set 'shiftwidth' , 'softtabstop'&nbsp;&nbsp;and 'tabstop' to the same value, and use 'expandtab' and 'autoindent' (all included in flavor C).<br><br>Example:<br>set tabstop=4<br>set softtabstop=4<br>set shiftwidth=4<br>set expandtab<br>set autoindent<br>set foldcolumn=1&nbsp;&nbsp;&quot; Optional<br><br>- Class and function folds show a counter of number of lines (and the first line below the signature) that are within the fold when it's closed. Read the change history to learn more about this.<br><br>- Press F key whenever you want to disable temporarily the folding, press F again to re-enable it (won't fold the block of code where the cursor is, though).<br><br>- If g:ifold_mode is set to a value greater than 0, will make extra parsing to your code to avoid including blank lines at the end of each fold and wont unfold your code if any comment marks are misplaced. This behavior is set by default in flavor B. But be warned , though. This option requires more power from your system (hence the two versions: 'A' for lower-end systems and 'B' for powerful-enough systems), so if you lack of requirements you shouldn't use it. <br><br>- The docstring is not shown at all.<br><br>- If you choose flavor A or if you set the global g:ifold_mode to 0, bare in mind that any comment mark between the beginning of a line and the first expression's character (of a sentence) WILL interfere with the whole folding process, that is, only if these marks do not respect the indentation sequence.</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">install details</td></tr>
+<tr><td>Download the archive and extract the flavor that suits your needs. Then, either source that file whenever you want to use the folding, or save it in your ftplugin directory (for example, ~/.vim/ftplugin) and it should load every time you edit python code.<br></td></tr>
+<tr><td>&nbsp;</td></tr>
+</table>
+
+<!-- rating table -->
+<form name="rating">
+<input type="hidden" name="script_id" value="2002">
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>rate this script</b></td>
+  <td valign="middle">
+    <input type="radio" name="rating" value="life_changing">Life Changing
+    <input type="radio" name="rating" value="helpful">Helpful
+    <input type="radio" name="rating" value="unfulfilling">Unfulfilling&nbsp;
+    <input type="submit" value="rate">
+  </td>
+</tr>
+</table>
+</form>
+<span class="txth2">script versions</span> (<a href="add_script_version.php?script_id=2002">upload new version</a>)
+<p>
+Click on the package to download.
+<p>
+
+<table cellspacing="2" cellpadding="4" border="0" width="100%">
+<tr class='tableheader'>
+        <th valign="top">package</th>
+    <th valign="top">script version</th>
+    <th valign="top">date</th>
+    <th valign="top">Vim version</th>
+    <th valign="top">user</th>
+    <th valign="top">release notes</th>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=8583">python_ifold-2.9.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.9</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2008-04-20</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=12634">Jean-Pierre Chauvel</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- Code refactoring and small fixes. <br>- There's a new experimental engine for testing purposes. I did a regression from version 2.8.4 to 2.8.3.6 to the code, moving the enhancement you usually found in 2.8.4 to the experimental engine. It'll stay in this state until I fix some minor bugs. If you wish to continue using the &quot;signature&quot; enhancement, you need to put this in your vimrc:<br>let g:ifold_mode=2<br>- The globals g:ifold_support_markers, g:ifold_show_text, and g:ifold_accuracy were deleted and their respective functionality was replaced with the global g:ifold_mode when its value is 1 ore greater.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=8578">python_ifold-2.8.4.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.8.4</b></td>
+    <td class="roweven" valign="top" nowrap><i>2008-04-18</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=12634">Jean-Pierre Chauvel</a></i></td>
+    <td class="roweven" valign="top" width="2000">Now it will show the entire signatures of class and function definitions, even if spanned for several lines.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=8576">python_ifold-2.8.3.6.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.8.3.6</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2008-04-18</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=12634">Jean-Pierre Chauvel</a></i></td>
+    <td class="rowodd" valign="top" width="2000">minor bugfix: Fixed a small bug introduced in the previous release.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=8514">python_ifold-2.8.3.5.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.8.3.5</b></td>
+    <td class="roweven" valign="top" nowrap><i>2008-04-01</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=12634">Jean-Pierre Chauvel</a></i></td>
+    <td class="roweven" valign="top" width="2000">New python_ifold flavor: After receiving many requests via email, I decided to put all the vimrc recommended settings inside the plugin. In a nutshell, it loads these settings whenever the user opens a python file:<br><br>set tabstop=4<br>set softtabstop=4<br>set shiftwidth=4<br>set expandtab<br>set autoindent<br>set foldcolumn=1<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=8427">python_ifold-2.8.3.4.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.8.3.4</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2008-03-08</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=12634">Jean-Pierre Chauvel</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Fix (applicable only for the 'b' flavor): small fix for bug introduced in version 2.8.3.3.b</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=8370">python_ifold-2.8.3.3.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.8.3.3</b></td>
+    <td class="roweven" valign="top" nowrap><i>2008-02-29</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=12634">Jean-Pierre Chauvel</a></i></td>
+    <td class="roweven" valign="top" width="2000">Only in the b version or if the g:ifold_accuracy global variable is set<br>Fix: Now the script omits any comment mark that lays between the beginning of the line and the first sentence's character, that is, it wont unfold your code even if you put comment marks without proper indentation.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=7988">python_ifold.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.8.3.2.b</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2007-11-25</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=12634">Jean-Pierre Chauvel</a></i></td>
+    <td class="rowodd" valign="top" width="2000">python_ifold with all options selected by default</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=7986">python_ifold.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.8.3.2.a</b></td>
+    <td class="roweven" valign="top" nowrap><i>2007-11-25</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=12634">Jean-Pierre Chauvel</a></i></td>
+    <td class="roweven" valign="top" width="2000">python_ifold for legacy systems</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=7809">python_ifold.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.8.3.2</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2007-10-18</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=12634">Jean-Pierre Chauvel</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Enhancement: Now the script prevents &quot;folding preemption&quot;, that is, when you try to expand the distance between two fold groups--be them class or function definitions--the engine will prevent from blank lines being eaten up at the bottom of the first fold group; nevertheless, I created a new global (g:ifold_accuracy) so that you can compare the former behavior with the new one.&nbsp;&nbsp;Also, I decided to make the older engine the default method because it's quicker.<br><br>New global:<br>g:ifold_accuracy (0 by default, set it to 1 for experimentation with the new, someway better, behavior)<br><br>Put this in your vimrc to try it:<br>let g:fold_accuracy = 1</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=7607">python_ifold.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.8.3.1</b></td>
+    <td class="roweven" valign="top" nowrap><i>2007-08-31</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=12634">Jean-Pierre Chauvel</a></i></td>
+    <td class="roweven" valign="top" width="2000">bugfix: the ugly bug introduced in 2.8.3 is no more :D</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=7605">python_ifold.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.8.3</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2007-08-31</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=12634">Jean-Pierre Chauvel</a></i></td>
+    <td class="rowodd" valign="top" width="2000">code refactoring and bugfixing:<br>before this upgrade the script tend to include commented lines within folded block of lines when they where uncommented, pretty annoying.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=7601">python_ifold.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.8.2</b></td>
+    <td class="roweven" valign="top" nowrap><i>2007-08-31</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=12634">Jean-Pierre Chauvel</a></i></td>
+    <td class="roweven" valign="top" width="2000">bugfix: a stupid bug didn't allow the script to segregate line comments from the class or function definition even if this token was found two lines ahead. I really don't know if this was the expected behavior.<br><br>Example:<br><br>class A:<br>&nbsp;&nbsp;&nbsp;&nbsp;pass<br><br>&nbsp;&nbsp;&nbsp;&nbsp;#this line was included inside the fold</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=7596">python_ifold.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.8.1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2007-08-31</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=12634">Jean-Pierre Chauvel</a></i></td>
+    <td class="rowodd" valign="top" width="2000"> Bugfixes:<br>- the script now avoids folding a block of code when there is a class or function definition 2 lines ahead.<br>- It is now possible to have one line of separation between classes of the same level of indentation without worrying the script eating that line--although happening in extremely rare cases:<br><br>class A():<br>&nbsp;&nbsp;&nbsp;&nbsp;# will start folding here<br>&nbsp;&nbsp;&nbsp;&nbsp;...<br>&nbsp;&nbsp;&nbsp;&nbsp;class SubSomething():<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;somethinghere = ''<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# the script ate the next <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# blank line before the bugfix<br><br>class B():<br>&nbsp;&nbsp;&nbsp;&nbsp;...</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=7568">python_ifold.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.8</b></td>
+    <td class="roweven" valign="top" nowrap><i>2007-08-27</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=12634">Jean-Pierre Chauvel</a></i></td>
+    <td class="roweven" valign="top" width="2000">Bugfix: this time, the script won't fold when the immediate line is a class or function definition, like the example below<br><br>class MyClass():<br>&nbsp;&nbsp;&nbsp;&nbsp;def __init__():<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return something&nbsp;&nbsp;&nbsp;&nbsp; #no fold will be here<br>&nbsp;&nbsp;&nbsp;&nbsp;class MyInnerClass():<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#...</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=7565">python_ifold.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.7</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2007-08-26</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=12634">Jean-Pierre Chauvel</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Feature: Now you can toggle on/off the script with 'f' key (it won't fold the block where the cursor is tough, but can be folded with zC later).</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=7564">python_ifold.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.6</b></td>
+    <td class="roweven" valign="top" nowrap><i>2007-08-26</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=12634">Jean-Pierre Chauvel</a></i></td>
+    <td class="roweven" valign="top" width="2000">Feature: The support markers and the text displayed in the folds are now optional (unset by default), in a desperate attempt to achieve better performance on legacy systems.<br>If you want the opposite behavior then you have to set the globals g:ifold_support_markers and g:ifold_show_text to 1.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=7557">python_ifold.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.5</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2007-08-25</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=12634">Jean-Pierre Chauvel</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Feature: Added ReFold() function, pretty useful when some or all folds disappear.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=7555">python_ifold.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.4</b></td>
+    <td class="roweven" valign="top" nowrap><i>2007-08-25</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=12634">Jean-Pierre Chauvel</a></i></td>
+    <td class="roweven" valign="top" width="2000">Initial upload</td>
+</tr>
+</table>
+<!-- finish off the framework -->
+          </td>
+        </tr>
+      </table>
+    </td>
+
+  </tr>
+</table>
+
+<!-- END OF THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr><td colspan="4" bgcolor="#000000"><img src="/images/spacer.gif" height="2" width="1" alt=""></td></tr>
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr>
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+
+    <td align="left" valign="top"><small>
+      If you have questions or remarks about this site, visit the
+      <a href="http://vimonline.sf.net">vimonline development</a> pages.
+      Please use this site responsibly.
+      <br> 
+      
+      Questions about <a href="http://www.vim.org/about.php">Vim</a> should go
+      to the <a href="http://www.vim.org/maillist.php">maillist</a>.
+      Help Bram <a href="http://iccf-holland.org/">help Uganda</a>.
+      </small>
+	&nbsp;
+	&nbsp;
+
+	<!-- Start of StatCounter Code -->
+	<script type="text/javascript" language="javascript">
+	var sc_project=1417324; 
+	var sc_invisible=1; 
+	var sc_partition=11; 
+	var sc_security="d41633bc"; 
+	</script>
+
+	<script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script><noscript><a href="http://www.statcounter.com/" target="_blank"><img  src="http://c12.statcounter.com/counter.php?sc_project=1417324&java=0&security=d41633bc&invisible=0" alt="free tracking" border="0"></a> </noscript>
+	<!-- End of StatCounter Code -->
+          </td>
+
+    <td align="right" valign="top">
+      		<a href="http://sourceforge.net/projects/vim" rel="nofollow"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=8&type=1" width="88" height="31" border="0" alt="SourceForge.net Logo" /></a>
+    </td>
+
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+  </tr>
+
+    
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  
+  </tr>
+</table>
+
+</body>
+</html>
+

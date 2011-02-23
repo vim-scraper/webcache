@@ -1,0 +1,516 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+  <link rel="Stylesheet" type="text/css" href="/css/style.css" >
+  <title>rcsvers.vim - Use RCS to keep a backup version whenever you save a file : vim online</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <meta name="KEYWORDS" content="Vim, Vi IMproved, text editor, home, documentation, tips, scripts, news">
+  <link rel="shortcut icon" type="image/x-icon" href="/images/vim_shortcut.ico">
+</head>
+
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff"> 
+
+<!-- HEADER, SPONSOR IMAGE, VIM IMAGE AND BOOK AD -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+  <td class="lightbg">&nbsp;&nbsp;&nbsp;</td>
+  <td class="lightbg" align="left"><a href="/sponsor/index.php"><img src="/images/sponsorvim.gif" alt="sponsor Vim development" border="0"></a></td>
+    <td class="lightbg" align="center"><a href="/index.php"><img src="/images/vim_header.gif" border="0" alt="Vim logo"></a></td>
+    <td class="lightbg" align="right"><a href="http://iccf-holland.org/click5.html"><img src="/images/buyhelplearn.gif" alt="Vim Book Ad" border="0"></a></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="darkbg"><img src="/images/spacer.gif" width="1" height="10" alt=""></td>
+  </tr>
+</table>
+<!-- THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+  <col width="180">
+  <col width="1">
+
+  <tr valign="top">
+    <td class="sidebar">
+      <table width="180" cellpadding="4" cellspacing="0" border="0">
+        <tr valign="top">
+          <td class="sidebar">
+
+<!-- INCLUDE THE PAGE NAVIGATION -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+    <tr>
+        <td><small>not logged in (<a href="/login.php">login</a>)</small></td>
+    </tr>
+    <tr><td>
+<small>&nbsp;</small>
+<form action="http://www.google.com/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-3005259998294962:bvyni59kjr1" />
+    <input type="hidden" name="ie" value="ISO-8859-1" />
+    <input type="text" name="q" size="20" />
+    <br>
+    <input type="submit" name="sa" value="Search" />
+  </div>
+</form>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+    </td></tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="1"></td>
+    </tr>
+    <tr>
+        <td class="darkbg"><img src="/images/spacer.gif" alt='' border="0" height="3"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="2"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/index.php">Home</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/search.php">Advanced search</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/about.php">About Vim</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/community.php">Community</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/news/news.php">News</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/sponsor/index.php">Sponsoring</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/trivia.php">Trivia</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/docs.php">Documentation</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/download.php">Download</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/scripts/index.php">Scripts</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/tips/index.php">Tips</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/account/index.php">My Account</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/huh.php">Site Help</a></td>
+        </tr>
+</table>
+
+            <table width="172" cellpadding="0" cellspacing="0" border="0">
+              <tr><td><img src="/images/spacer.gif" alt="" border="0" width="1" height="8"></td></tr>
+              <tr><td class="darkbg"><img src="/images/spacer.gif" width="1" height="3" alt=""></td></tr>
+            </table>
+            <br>
+
+<!-- INCLUDE THE PAGE SIDEBAR TEXT -->
+&nbsp;
+
+          </td>
+        </tr>
+      </table>
+    </td>
+
+    <td class="darkbg"><img src="/images/spacer.gif" width="1" height="1" border="0" alt=""><br></td>
+    <td>
+      <table width="100%" cellpadding="10" cellspacing="0" border="0" bordercolor="red">
+        <tr>
+          <td valign="top">
+
+<span class="txth1">rcsvers.vim : Use RCS to keep a backup version whenever you save a file</span> 
+
+<br>
+<br>
+
+<!-- karma table -->
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
+  <td>
+    Rating <b>176/58</b>,
+    Downloaded by 4265  </td>
+  <td class="lightbg">
+  <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
+  </td>
+  <td>
+    <a href="http://vim.wikia.com/wiki/Script:563">Vim wiki</a>
+  </td>  
+</tr>
+</table>
+<p>
+
+<table cellspacing="0" cellpadding="0" border="0">
+<tr><td class="prompt">created by</td></tr>
+<tr><td><a href="/account/profile.php?user_id=479">Roger Pilkey</a></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">script type</td></tr>
+<tr><td>utility</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">description</td></tr>
+<tr><td>A Vim plugin for automatically saving backup versions in RCS whenever a file is saved.&nbsp;&nbsp;You can compare to any revision as well.<br>keywords: VCS, version control system, incremental saving, automatic versioning, automatic journalling or journaling, or autosave backups with versions.<br><br>The maintainer is Juan Frias (juandfrias at gmail.com)<br><br>What's RCS? It's the Revision Control System, a set of programs used for keeping many versions of a file. See <a target="_blank" href="http://www.gnu.org/software/rcs/rcs.html">http://www.gnu.org/software/rcs/rcs.html</A><br><br>The RCS programs are freely available at <a target="_blank" href="http://www.cs.purdue.edu/homes/trinkle/RCS/">http://www.cs.purdue.edu/homes/trinkle/RCS/</A><br><br>Be careful if you really use RCS as your production file control, it will add versions like crazy.&nbsp;&nbsp;See the g:rvMode option to have more control over when a save is added to the revision file.<br><br>rcs-menu.vim by Jeff Lanzarotta is handy to have along with this (<a href="/scripts/script.php?script_id=41">vimscript #41</a>).<br><br>Inspired by savevers.vim by Ed Ralston (<a href="/scripts/script.php?script_id=89">vimscript #89</a>).<br><br> Mapped Keys: <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;Leader&gt;rlog&nbsp;&nbsp;&nbsp;&nbsp;To access the saved revisions log.&nbsp;&nbsp;This works as<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a toggle to quit the revision windows too.<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;enter&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; This will compare the current file to the<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;revision under the cursor (works only in<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;the revision log window)<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;Leader&gt;older&nbsp;&nbsp; does a diff with the previous version<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;Leader&gt;newer&nbsp;&nbsp; does a diff with the next version<br><br> You probably want to map these in your _vimrc to something easier to type, <br> like a function key.&nbsp;&nbsp;Do it like this:<br>&quot;re-map rcsvers.vim keys<br>map &lt;F8&gt; \rlog<br>map &lt;F5&gt; \older<br>map &lt;F6&gt; \newer<br><br> You may need to set the following shell(environment) variables, you'll get a warning if so:<br> user name:<br>		LOGNAME=myusername<br> timezone:&nbsp;&nbsp;<br>		TZ=EST5EDT <br><br>Look here if you have problems with Daylight Saving Time (DST) with RCS after 2007 on Microsoft Windows:&nbsp;&nbsp;<a target="_blank" href="http://support.microsoft.com/kb/932590">http://support.microsoft.com/kb/932590</A></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">install details</td></tr>
+<tr><td>Drop it in your plugin directory.&nbsp;&nbsp;Your RCS executables must be in your path.&nbsp;&nbsp;There are lots of options, but by default it acts exactly like RCS from the command line.<br></td></tr>
+<tr><td>&nbsp;</td></tr>
+</table>
+
+<!-- rating table -->
+<form name="rating">
+<input type="hidden" name="script_id" value="563">
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>rate this script</b></td>
+  <td valign="middle">
+    <input type="radio" name="rating" value="life_changing">Life Changing
+    <input type="radio" name="rating" value="helpful">Helpful
+    <input type="radio" name="rating" value="unfulfilling">Unfulfilling&nbsp;
+    <input type="submit" value="rate">
+  </td>
+</tr>
+</table>
+</form>
+<span class="txth2">script versions</span> (<a href="add_script_version.php?script_id=563">upload new version</a>)
+<p>
+Click on the package to download.
+<p>
+
+<table cellspacing="2" cellpadding="4" border="0" width="100%">
+<tr class='tableheader'>
+        <th valign="top">package</th>
+    <th valign="top">script version</th>
+    <th valign="top">date</th>
+    <th valign="top">Vim version</th>
+    <th valign="top">user</th>
+    <th valign="top">release notes</th>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=12020">rcsvers.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.28</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-01-06</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=479">Roger Pilkey</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Adds syntax highlighting to temporary files retrieved from RCS and fix of \rci to work with vim 7. (thanks to Sergey Khorev)<br>Also added Fredrik Eriksson's patch to allow editing of messages. (<a target="_blank" href="http://thebc.se/patch-for-rcsversvim">http://thebc.se/patch-for-rcsversvim</A>)<br>And added the -d option to preserve original modification times. (Roger)<br>Removed the rvtempdir in favor of more secure tempname() call. (Roger)<br>We used to skip the pre-checkin, but I think we should do it, if someone or something else has modified the file since the last RCS version then we will put their version in the RCS file. (Roger)</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=6993">rcsvers.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.27</b></td>
+    <td class="roweven" valign="top" nowrap><i>2007-04-17</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=479">Roger Pilkey</a></i></td>
+    <td class="roweven" valign="top" width="2000">Add a new mode for revising (never/ask/always) and fix rlog window width, both thanks to Callum Gibson.&nbsp;&nbsp;See g:rvMode .<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=6607">rcsvers.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.26</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2007-01-11</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=479">Roger Pilkey</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Fix for Windows for usernames with spaces (from Roger), and macosx directory separator (thanks to Jeff Fox)<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=4996">rcsvers.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.25</b></td>
+    <td class="roweven" valign="top" nowrap><i>2006-01-21</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=479">Roger Pilkey</a></i></td>
+    <td class="roweven" valign="top" width="2000">Fix for Windows if you don't have the TZ variable set, and fix how it works when saving a file to another name.<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=4681">rcsvers.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.24</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2005-10-18</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=479">Roger Pilkey</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Just updating author/maintainer email addresses.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=4609">rcsvers.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.24</b></td>
+    <td class="roweven" valign="top" nowrap><i>2005-09-22</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=479">Roger Pilkey</a></i></td>
+    <td class="roweven" valign="top" width="2000">RCS sets the executable bit on the checked-out file to be the same as the rcs archive file.&nbsp;&nbsp;So if that property changes after you did your first checkin, your checked-out file will maintain the original setting. So now we change the executable mode of the rcs archive file to align with the current setting of the checked-out copy. Thanks to Ben Bernard.<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=4129">rcsvers.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.23</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2005-04-06</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=479">Roger Pilkey</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Added an option to fix the path on Cygwin systems.&nbsp;&nbsp;<br> See g:rvUseCygPathFiltering&nbsp;&nbsp;<br> Thanks to Simon Johann-Günter</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=4031">rcsvers.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.22</b></td>
+    <td class="roweven" valign="top" nowrap><i>2005-03-16</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=479">Roger Pilkey</a></i></td>
+    <td class="roweven" valign="top" width="2000">some re-factoring, and add the option to leave RCS files unlocked when saving, which is handy for multiple users of the same RCS file.&nbsp;&nbsp; <br>See g:rvLeaveRcsUnlocked. (from Roger Pilkey)<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=3268">rcsvers.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.21</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2004-07-24</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=479">Roger Pilkey</a></i></td>
+    <td class="rowodd" valign="top" width="2000">small update: Remember the last position in the rlog window. Rename RevisionLog window to avoid collisions<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=3187">rcsvers.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.20</b></td>
+    <td class="roweven" valign="top" nowrap><i>2004-06-28</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=479">Roger Pilkey</a></i></td>
+    <td class="roweven" valign="top" width="2000">Added a mapping to create an initial RCS file. Useful when the script <br>is set to save only when a previous RCS file exists. see<br>rvSaveIfPreviousRCSFileExists (thanks to Steven Michalske for the<br> suggestion) Added &lt;silent&gt; to the default mappings to keep the status<br>bar clean.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=3110">rcsvers.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.19</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2004-06-10</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=479">Roger Pilkey</a></i></td>
+    <td class="rowodd" valign="top" width="2000">1.19&nbsp;&nbsp;Added the option to prompt the user for file and check-in message on<br> every save. See rvDescMsgPrompt option for details. Thanks to Kevin<br> Stegemoller for the suggestion. Also \rlog will now display the<br> check-in message in the pick list for easier identification.<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=2785">rcsvers.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.18</b></td>
+    <td class="roweven" valign="top" nowrap><i>2004-02-26</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=479">Roger Pilkey</a></i></td>
+    <td class="roweven" valign="top" width="2000">Added the option to save an RCS version only if the RCS file already<br>&nbsp;&nbsp;exists (No new RCS files will be created). (from Marc Schoechlin)<br>&nbsp;&nbsp;See rvSaveIfPreviousRCSFileExists option.<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=2687">rcsvers.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.17</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2004-01-28</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=479">Roger Pilkey</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Added the option to save an RCS version only when there is an RCS<br>directory in the files directory. See rvSaveIfRCSExists option.<br>(from Camillo Särs)<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=2579">rcsvers.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.16</b></td>
+    <td class="roweven" valign="top" nowrap><i>2003-12-09</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=479">Roger Pilkey</a></i></td>
+    <td class="roweven" valign="top" width="2000">Save some settings that &quot;set diff&quot; mangles, and different check for &cp<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=2337">rcsvers.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.15</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2003-09-16</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=479">Roger Pilkey</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Add functions to go back and forth between versions (mapped to \older and \newer). It's kind of jerky, but comes in handy sometimes. Also fixed a few bugs with quotes.<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=2051">rcsvers.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.14</b></td>
+    <td class="roweven" valign="top" nowrap><i>2003-06-09</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=479">Roger Pilkey</a></i></td>
+    <td class="roweven" valign="top" width="2000">Add option to set &quot;rlog&quot; command-line options.&nbsp;&nbsp;fix rlog display,<br>which would crash once in a while saying stuff like &quot;10,10d invalid<br>range&quot;. When creating a new RCS file on an existing text file, save a<br>version before adding the new revision.<br><br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=1973">rcsvers.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.13</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2003-05-08</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=479">Roger Pilkey</a></i></td>
+    <td class="rowodd" valign="top" width="2000">A g:rvFileQuote fix, suggested by Wiktor Niesiobedzki.&nbsp;&nbsp;Add the ability to use the current instance of vim for the diff, which is now the default.&nbsp;&nbsp;Change the name of the diff temp file to include the version.&nbsp;&nbsp;Make \rlog a toggle (on/off)<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=1872">rcsvers.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.12</b></td>
+    <td class="roweven" valign="top" nowrap><i>2003-03-28</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=479">Roger Pilkey</a></i></td>
+    <td class="roweven" valign="top" width="2000"> 1.12&nbsp;&nbsp;(From Juan Frias) Script will not load if the 'cp' flag is set. Added the option to use an exclude expression, and include expression.&nbsp;&nbsp;Fixed yet more bugs thanks to Roger for all the beta testing.<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=1793">rcsvers.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.11</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2003-03-10</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=479">Roger Pilkey</a></i></td>
+    <td class="rowodd" valign="top" width="2000">(for Juan Frias) Minor bug fix, when using spaces in the description. <br>Also added some error detection code to check and see that RCS <br>and CI were successful. And removed requirements for SED and GREP, <br>script will no longer need these to display the log.<br><br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=1776">rcsvers.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.10</b></td>
+    <td class="roweven" valign="top" nowrap><i>2003-03-03</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=1599">Juan Frias</a></i></td>
+    <td class="roweven" valign="top" width="2000">Fixed some major bugs with files with long filenames and spaces Win/Dos systems. Added a variable to pass additional options to the initial RCS check in. Fixed some documentations typos.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=1775">rcsvers.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.9</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2003-02-28</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=1599">Juan Frias</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Added even more options, the ability to set your own description and pass additional options to CI command. Dos/Win Temp directory is taken from the $TEMP environment variable, and quote filenames when using diff program to prevent errors with long filenames with spaces. Also removed confirm box from script. (Thanx Roger for all the beta testing)</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=1773">rcsvers.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.8</b></td>
+    <td class="roweven" valign="top" nowrap><i>2003-02-28</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=1599">Juan Frias</a></i></td>
+    <td class="roweven" valign="top" width="2000">Minor suffix bug fix. Required if you are using suffixes. </td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=1771">rcsvers.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.7</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2003-02-27</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=1599">Juan Frias</a></i></td>
+    <td class="rowodd" valign="top" width="2000">1.7&nbsp;&nbsp; Will not alter the $xx$ tags when automaticaly checking in files.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Thanks to Engelbert Gruber). Added option to save under the current<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;directory with no RCS sub directory. Also added the option to choose<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;your own suffixes.<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=1765">rcsvers.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.6</b></td>
+    <td class="roweven" valign="top" nowrap><i>2003-02-24</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=1599">Juan Frias</a></i></td>
+    <td class="roweven" valign="top" width="2000">Complete script re-write. It now allows user define options and the ability to compare to older revisions if you have SED and GREP installed. Working on a way to get rid of these external program in a later version.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=1758">rcsvers.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.5</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2003-02-20</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=1179">engelbert gruber</a></i></td>
+    <td class="rowodd" valign="top" width="2000">FIX files in current directory - RCS in filedirectory.<br>+ Check for file .novimrcs in files directory to skip versioning.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=1757">rcsvers.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.4</b></td>
+    <td class="roweven" valign="top" nowrap><i>2003-02-20</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=1179">engelbert gruber</a></i></td>
+    <td class="roweven" valign="top" width="2000">FIX editing files not in current directory.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=1755">rcsvers.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.3</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2003-02-19</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=479">Roger Pilkey</a></i></td>
+    <td class="rowodd" valign="top" width="2000">error in uploading</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=1754">rcsvers.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.2</b></td>
+    <td class="roweven" valign="top" nowrap><i>2003-02-19</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=479">Roger Pilkey</a></i></td>
+    <td class="roweven" valign="top" width="2000">option to select the rcs directory, and better comments thanks to Juan Frias<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=1721">rcsvers.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.0</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2003-02-12</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=479">Roger Pilkey</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Initial upload</td>
+</tr>
+</table>
+<!-- finish off the framework -->
+          </td>
+        </tr>
+      </table>
+    </td>
+
+  </tr>
+</table>
+
+<!-- END OF THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr><td colspan="4" bgcolor="#000000"><img src="/images/spacer.gif" height="2" width="1" alt=""></td></tr>
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr>
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+
+    <td align="left" valign="top"><small>
+      If you have questions or remarks about this site, visit the
+      <a href="http://vimonline.sf.net">vimonline development</a> pages.
+      Please use this site responsibly.
+      <br> 
+      
+      Questions about <a href="http://www.vim.org/about.php">Vim</a> should go
+      to the <a href="http://www.vim.org/maillist.php">maillist</a>.
+      Help Bram <a href="http://iccf-holland.org/">help Uganda</a>.
+      </small>
+	&nbsp;
+	&nbsp;
+
+	<!-- Start of StatCounter Code -->
+	<script type="text/javascript" language="javascript">
+	var sc_project=1417324; 
+	var sc_invisible=1; 
+	var sc_partition=11; 
+	var sc_security="d41633bc"; 
+	</script>
+
+	<script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script><noscript><a href="http://www.statcounter.com/" target="_blank"><img  src="http://c12.statcounter.com/counter.php?sc_project=1417324&java=0&security=d41633bc&invisible=0" alt="free tracking" border="0"></a> </noscript>
+	<!-- End of StatCounter Code -->
+          </td>
+
+    <td align="right" valign="top">
+      		<a href="http://sourceforge.net/projects/vim" rel="nofollow"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=8&type=1" width="88" height="31" border="0" alt="SourceForge.net Logo" /></a>
+    </td>
+
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+  </tr>
+
+    
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  
+  </tr>
+</table>
+
+</body>
+</html>
+

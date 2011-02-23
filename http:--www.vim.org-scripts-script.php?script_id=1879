@@ -1,0 +1,548 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+  <link rel="Stylesheet" type="text/css" href="/css/style.css" >
+  <title>AutoComplPop - Automatically opens popup menu for completions : vim online</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <meta name="KEYWORDS" content="Vim, Vi IMproved, text editor, home, documentation, tips, scripts, news">
+  <link rel="shortcut icon" type="image/x-icon" href="/images/vim_shortcut.ico">
+</head>
+
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff"> 
+
+<!-- HEADER, SPONSOR IMAGE, VIM IMAGE AND BOOK AD -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+  <td class="lightbg">&nbsp;&nbsp;&nbsp;</td>
+  <td class="lightbg" align="left"><a href="/sponsor/index.php"><img src="/images/sponsorvim.gif" alt="sponsor Vim development" border="0"></a></td>
+    <td class="lightbg" align="center"><a href="/index.php"><img src="/images/vim_header.gif" border="0" alt="Vim logo"></a></td>
+    <td class="lightbg" align="right"><a href="http://iccf-holland.org/click5.html"><img src="/images/buyhelplearn.gif" alt="Vim Book Ad" border="0"></a></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="darkbg"><img src="/images/spacer.gif" width="1" height="10" alt=""></td>
+  </tr>
+</table>
+<!-- THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+  <col width="180">
+  <col width="1">
+
+  <tr valign="top">
+    <td class="sidebar">
+      <table width="180" cellpadding="4" cellspacing="0" border="0">
+        <tr valign="top">
+          <td class="sidebar">
+
+<!-- INCLUDE THE PAGE NAVIGATION -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+    <tr>
+        <td><small>not logged in (<a href="/login.php">login</a>)</small></td>
+    </tr>
+    <tr><td>
+<small>&nbsp;</small>
+<form action="http://www.google.com/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-3005259998294962:bvyni59kjr1" />
+    <input type="hidden" name="ie" value="ISO-8859-1" />
+    <input type="text" name="q" size="20" />
+    <br>
+    <input type="submit" name="sa" value="Search" />
+  </div>
+</form>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+    </td></tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="1"></td>
+    </tr>
+    <tr>
+        <td class="darkbg"><img src="/images/spacer.gif" alt='' border="0" height="3"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="2"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/index.php">Home</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/search.php">Advanced search</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/about.php">About Vim</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/community.php">Community</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/news/news.php">News</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/sponsor/index.php">Sponsoring</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/trivia.php">Trivia</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/docs.php">Documentation</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/download.php">Download</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/scripts/index.php">Scripts</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/tips/index.php">Tips</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/account/index.php">My Account</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/huh.php">Site Help</a></td>
+        </tr>
+</table>
+
+            <table width="172" cellpadding="0" cellspacing="0" border="0">
+              <tr><td><img src="/images/spacer.gif" alt="" border="0" width="1" height="8"></td></tr>
+              <tr><td class="darkbg"><img src="/images/spacer.gif" width="1" height="3" alt=""></td></tr>
+            </table>
+            <br>
+
+<!-- INCLUDE THE PAGE SIDEBAR TEXT -->
+&nbsp;
+
+          </td>
+        </tr>
+      </table>
+    </td>
+
+    <td class="darkbg"><img src="/images/spacer.gif" width="1" height="1" border="0" alt=""><br></td>
+    <td>
+      <table width="100%" cellpadding="10" cellspacing="0" border="0" bordercolor="red">
+        <tr>
+          <td valign="top">
+
+<span class="txth1">AutoComplPop : Automatically opens popup menu for completions</span> 
+
+<br>
+<br>
+
+<!-- karma table -->
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
+  <td>
+    Rating <b>2575/714</b>,
+    Downloaded by 21724  </td>
+  <td class="lightbg">
+  <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
+  </td>
+  <td>
+    <a href="http://vim.wikia.com/wiki/Script:1879">Vim wiki</a>
+  </td>  
+</tr>
+</table>
+<p>
+
+<table cellspacing="0" cellpadding="0" border="0">
+<tr><td class="prompt">created by</td></tr>
+<tr><td><a href="/account/profile.php?user_id=12324">Takeshi NISHIDA</a></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">script type</td></tr>
+<tr><td>utility</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">description</td></tr>
+<tr><td>Repository:<br>&nbsp;&nbsp;<a target="_blank" href="https://bitbucket.org/ns9tks/vim-autocomplpop/">https://bitbucket.org/ns9tks/vim-autocomplpop/</A><br><br>Issues:<br>&nbsp;&nbsp;<a target="_blank" href="http://bitbucket.org/ns9tks/vim-autocomplpop/issues/">http://bitbucket.org/ns9tks/vim-autocomplpop/issues/</A><br><br>Download latest(development) version<br>&nbsp;&nbsp;<a target="_blank" href="https://bitbucket.org/ns9tks/vim-autocomplpop/get/tip.zip">https://bitbucket.org/ns9tks/vim-autocomplpop/get/tip.zip</A><br><br>==============================================================================<br>INTRODUCTION&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*acp-introduction*<br><br>With this plugin, your vim comes to automatically opens popup menu for<br>completions when you enter characters or move the cursor in Insert mode. It<br>won't prevent you continuing entering characters.<br><br><br>==============================================================================<br>INSTALLATION&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*acp-installation*<br><br>Put all files into your runtime directory. If you have the zip file, extract<br>it to your runtime directory.<br><br>You should place the files as follows:<br>&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;your runtime directory&gt;/plugin/acp.vim<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;your runtime directory&gt;/doc/acp.txt<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...<br>&lt;<br>If you disgust to jumble up this plugin and other plugins in your runtime<br>directory, put the files into new directory and just add the directory path to<br>'runtimepath'. It's easy to uninstall the plugin.<br><br>And then update your help tags files to enable fuzzyfinder help. See<br>|add-local-help| for details.<br><br><br>==============================================================================<br>USAGE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*acp-usage*<br><br>Once this plugin is installed, auto-popup is enabled at startup by default.<br><br>Which completion method is used depends on the text before the cursor. The<br>default behavior is as follows:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;kind&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;filetype&nbsp;&nbsp;&nbsp;&nbsp;text before the cursor ~<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Keyword&nbsp;&nbsp; *&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; two keyword characters<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Filename&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; a filename character + a path separator <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ 0 or more filename character<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Omni&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ruby&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;.&quot;, &quot;::&quot; or non-word character + &quot;:&quot;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(|+ruby| required.)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Omni&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;python&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;.&quot; (|+python| required.)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Omni&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;xml&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;&lt;&quot;, &quot;&lt;/&quot; or (&quot;&lt;&quot; + non-&quot;&gt;&quot; characters + &quot; &quot;)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Omni&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;html/xhtml&nbsp;&nbsp;&quot;&lt;&quot;, &quot;&lt;/&quot; or (&quot;&lt;&quot; + non-&quot;&gt;&quot; characters + &quot; &quot;)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Omni&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;css&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (&quot;:&quot;, &quot;;&quot;, &quot;{&quot;, &quot;^&quot;, &quot;@&quot;, or &quot;!&quot;)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ 0 or 1 space<br><br>Also, you can make user-defined completion and snipMate's trigger completion<br>(|acp-snipMate|) auto-popup if the options are set.<br><br>These behavior are customizable.<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*acp-snipMate*<br>snipMate's Trigger Completion ~<br><br>snipMate's trigger completion enables you to complete a snippet trigger<br>provided by snipMate plugin<br>(<a target="_blank" href="http://www.vim.org/scripts/script.php?script_id=2540">http://www.vim.org/scripts/script.php?script_id=2540</A>) and expand it.<br><br><br>To enable auto-popup for this completion, add following function to<br>plugin/snipMate.vim:<br>&gt;<br>&nbsp;&nbsp;fun! GetSnipsInCurrentScope()<br>&nbsp;&nbsp;&nbsp;&nbsp;let snips = {}<br>&nbsp;&nbsp;&nbsp;&nbsp;for scope in [bufnr('%')] + split(&ft, '\.') + ['_']<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;call extend(snips, get(s:snippets, scope, {}), 'keep')<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;call extend(snips, get(s:multi_snips, scope, {}), 'keep')<br>&nbsp;&nbsp;&nbsp;&nbsp;endfor<br>&nbsp;&nbsp;&nbsp;&nbsp;return snips<br>&nbsp;&nbsp;endf<br>&lt;<br>And set |g:acp_behaviorSnipmateLength| option to 1.<br><br>There is the restriction on this auto-popup, that the word before cursor must<br>consist only of uppercase characters.<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *acp-perl-omni*<br>Perl Omni-Completion ~<br><br>AutoComplPop supports perl-completion.vim<br>(<a target="_blank" href="http://www.vim.org/scripts/script.php?script_id=2852">http://www.vim.org/scripts/script.php?script_id=2852</A>).<br><br>To enable auto-popup for this completion, set |g:acp_behaviorPerlOmniLength|<br>option to 0 or more.<br><br><br>==============================================================================<br></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">install details</td></tr>
+<tr><td></td></tr>
+<tr><td>&nbsp;</td></tr>
+</table>
+
+<!-- rating table -->
+<form name="rating">
+<input type="hidden" name="script_id" value="1879">
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>rate this script</b></td>
+  <td valign="middle">
+    <input type="radio" name="rating" value="life_changing">Life Changing
+    <input type="radio" name="rating" value="helpful">Helpful
+    <input type="radio" name="rating" value="unfulfilling">Unfulfilling&nbsp;
+    <input type="submit" value="rate">
+  </td>
+</tr>
+</table>
+</form>
+<span class="txth2">script versions</span> (<a href="add_script_version.php?script_id=1879">upload new version</a>)
+<p>
+Click on the package to download.
+<p>
+
+<table cellspacing="2" cellpadding="4" border="0" width="100%">
+<tr class='tableheader'>
+        <th valign="top">package</th>
+    <th valign="top">script version</th>
+    <th valign="top">date</th>
+    <th valign="top">Vim version</th>
+    <th valign="top">user</th>
+    <th valign="top">release notes</th>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=11894">vim-autocomplpop.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.14.1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-12-12</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=12324">Takeshi NISHIDA</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- Changed the way of auto-popup for avoiding an issue about filename completion.<br>- Fixed a bug that popup menu was opened twice when auto-popup was done.<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=11731">vim-autocomplpop.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.14</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-11-15</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=12324">Takeshi NISHIDA</a></i></td>
+    <td class="roweven" valign="top" width="2000">- Added the support for perl-completion.vim.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=11725">vim-autocomplpop.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.13</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-11-14</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=12324">Takeshi NISHIDA</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- Changed to sort snipMate's triggers.<br>- Fixed a bug that a wasted character was inserted after snipMate's trigger<br>&nbsp;&nbsp;completion.<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=11714">vim-autocomplpop.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.12.1</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-11-12</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=12324">Takeshi NISHIDA</a></i></td>
+    <td class="roweven" valign="top" width="2000">- Changed to avoid a strange behavior with Microsoft IME.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=11706">vim-autocomplpop.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.12</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-11-11</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=12324">Takeshi NISHIDA</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- Added g:acp_behaviorKeywordIgnores option.<br>- Added g:acp_behaviorUserDefinedMeets option and removed<br>&nbsp;&nbsp;g:acp_behaviorUserDefinedPattern.<br>- Changed to do auto-popup only when a buffer is modified.<br>- Changed the structure of g:acp_behavior option.<br>- Changed to reflect a change of behavior options (named g:acp_behavior*)<br>&nbsp;&nbsp;any time it is done.<br>- Fixed a bug that completions after omni completions or snipMate's trigger<br>&nbsp;&nbsp;completion were never attempted when no candidate for the former<br>&nbsp;&nbsp;completions was found.<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=11604">vim-autocomplpop.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.11.1</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-10-27</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=12324">Takeshi NISHIDA</a></i></td>
+    <td class="roweven" valign="top" width="2000">- Fixed a bug that a snipMate's trigger could not be expanded when it was<br>&nbsp;&nbsp;completed.<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=11570">vim-autocomplpop.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.11</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-10-23</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=12324">Takeshi NISHIDA</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- Implemented experimental feature which is snipMate's trigger completion.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=11558">vim-autocomplpop.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.10</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-10-22</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=12324">Takeshi NISHIDA</a></i></td>
+    <td class="roweven" valign="top" width="2000">- Improved the response by changing not to attempt any completion when<br>&nbsp;&nbsp;keyword characters are entered after a word which has been found that it<br>&nbsp;&nbsp;has no completion candidate at the last attempt of completions.<br>- Improved the response by changing to close popup menu when &lt;BS&gt; was<br>&nbsp;&nbsp;pressed and the text before the cursor would not match with the pattern of<br>&nbsp;&nbsp;current behavior.<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=11538">vim-autocomplpop.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.9</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-10-17</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=12324">Takeshi NISHIDA</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- Changed default behavior to support XML omni completion.<br>- Changed default value of g:acp_behaviorKeywordCommand option.<br>&nbsp;&nbsp;The option with &quot;\&lt;C-p&gt;&quot; cause a problem which inserts a match without<br>&nbsp;&nbsp;&lt;CR&gt; when 'dictionary' has been set and keyword completion is done.<br>- Changed to show error message when incompatible with a installed vim.<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=11379">vim-autocomplpop.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.8.1</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-09-15</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=12324">Takeshi NISHIDA</a></i></td>
+    <td class="roweven" valign="top" width="2000">- Fixed a bug which inserted a selected match to the next line when<br>&nbsp;&nbsp;auto-wrapping (enabled with 'formatoptions') was performed.<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=11373">vim-autocomplpop.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.8</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-09-14</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=12324">Takeshi NISHIDA</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- Added g:acp_behaviorUserDefinedFunction option and<br>&nbsp;&nbsp;g:acp_behaviorUserDefinedPattern option for users who want to make custom<br>&nbsp;&nbsp;completion auto-popup.<br>- Fixed a bug that setting 'spell' on a new buffer made typing go crazy.<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=11366">vim-autocomplpop.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.7</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-09-13</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=12324">Takeshi NISHIDA</a></i></td>
+    <td class="roweven" valign="top" width="2000">- Changed naming conventions for filenames, functions, commands, and options <br>&nbsp;&nbsp;and thus renamed them.<br>- Added g:acp_behaviorKeywordCommand option. If you prefer the previous<br>&nbsp;&nbsp;behavior for keyword completion, set this option &quot;\&lt;C-n&gt;&quot;.<br>- Changed default value of g:acp_ignorecaseOption option.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>The following were done by Ingo Karkat:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>- ENH: Added support for setting a user-provided 'completefunc' during the<br>&nbsp;&nbsp;completion, configurable via g:acp_behavior. <br>- BUG: When the configured completion is &lt;C-p&gt; or &lt;C-x&gt;&lt;C-p&gt;, the command to<br>&nbsp;&nbsp;restore the original text (in on_popup_post()) must be reverted, too. <br>- BUG: When using a custom completion function (&lt;C-x&gt;&lt;C-u&gt;) that also uses<br>&nbsp;&nbsp;an s:...() function name, the s:GetSidPrefix() function dynamically<br>&nbsp;&nbsp;determines the wrong SID. Now calling s:DetermineSidPrefix() once during<br>&nbsp;&nbsp;sourcing and caching the value in s:SID. <br>- BUG: Should not use custom defined &lt;C-X&gt;&lt;C-...&gt; completion mappings. Now<br>&nbsp;&nbsp;consistently using unmapped completion commands everywhere. (Beforehand,<br>&nbsp;&nbsp;s:PopupFeeder.feed() used mappings via feedkeys(..., 'm'), but<br>&nbsp;&nbsp;s:PopupFeeder.on_popup_post() did not due to its invocation via<br>&nbsp;&nbsp;:map-expr.) <br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=9335">autocomplpop.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.6</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2008-10-12</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=12324">Takeshi NISHIDA</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- Improved the behavior of omni completion for HTML/XHTML.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=8821">autocomplpop.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.5</b></td>
+    <td class="roweven" valign="top" nowrap><i>2008-06-17</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=12324">Takeshi NISHIDA</a></i></td>
+    <td class="roweven" valign="top" width="2000">- Added some options to customize behavior easily:<br>&nbsp;&nbsp;&nbsp;&nbsp;g:AutoComplPop_BehaviorKeywordLength<br>&nbsp;&nbsp;&nbsp;&nbsp;g:AutoComplPop_BehaviorFileLength<br>&nbsp;&nbsp;&nbsp;&nbsp;g:AutoComplPop_BehaviorRubyOmniMethodLength<br>&nbsp;&nbsp;&nbsp;&nbsp;g:AutoComplPop_BehaviorRubyOmniSymbolLength<br>&nbsp;&nbsp;&nbsp;&nbsp;g:AutoComplPop_BehaviorPythonOmniLength<br>&nbsp;&nbsp;&nbsp;&nbsp;g:AutoComplPop_BehaviorHtmlOmniLength<br>&nbsp;&nbsp;&nbsp;&nbsp;g:AutoComplPop_BehaviorCssOmniPropertyLength<br>&nbsp;&nbsp;&nbsp;&nbsp;g:AutoComplPop_BehaviorCssOmniValueLength<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=8656">autocomplpop.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.4</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2008-05-07</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=12324">Takeshi NISHIDA</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- Added g:AutoComplPop_MappingDriven option.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=8513">autocomplpop.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.3.1</b></td>
+    <td class="roweven" valign="top" nowrap><i>2008-03-31</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=12324">Takeshi NISHIDA</a></i></td>
+    <td class="roweven" valign="top" width="2000">- Changed to set 'lazyredraw' while a popup menu is visible to avoid<br>&nbsp;&nbsp;flickering.<br>- Changed a behavior for CSS.<br>- Added support for GetLatestVimScripts.<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=8506">autocomplpop.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.3</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2008-03-29</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=12324">Takeshi NISHIDA</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- Added a behavior for Python to support omni completion.<br>- Added a behavior for CSS to support omni completion.<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=8477">autocomplpop.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.2</b></td>
+    <td class="roweven" valign="top" nowrap><i>2008-03-21</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=12324">Takeshi NISHIDA</a></i></td>
+    <td class="roweven" valign="top" width="2000">- Changed not to work when 'paste' option is set.<br>- Fixed AutoComplPopEnable command and AutoComplPopDisable command to<br>&nbsp;&nbsp;map/unmap &quot;i&quot; and &quot;R&quot;.<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=8472">autocomplpop.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2008-03-20</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=12324">Takeshi NISHIDA</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- Fixed the problem caused by &quot;.&quot; command in Normal mode.<br>- Changed to map &quot;i&quot; and &quot;R&quot; to feed completion command after starting<br>&nbsp;&nbsp;Insert mode.<br>- Avoided the problem caused by Windows IME.<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=8460">autocomplpop.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.0</b></td>
+    <td class="roweven" valign="top" nowrap><i>2008-03-18</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=12324">Takeshi NISHIDA</a></i></td>
+    <td class="roweven" valign="top" width="2000">- Changed to use CursorMovedI event to feed a completion command instead<br>&nbsp;&nbsp;of key mapping. Now the auto-popup is triggered by moving the cursor.<br>- Changed to feed completion command after starting Insert mode.<br>- Removed g:AutoComplPop_MapList option.<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=8385">autocomplpop.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.7</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2008-03-03</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=12324">Takeshi NISHIDA</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- Added behaviors for HTML/XHTML. Now supports the omni completion for<br>&nbsp;&nbsp;HTML/XHTML.<br>- Changed not to show expressions for CTRL-R =.<br>- Changed not to set 'nolazyredraw' while a popup menu is visible.<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=8261">autocomplpop.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.6.1</b></td>
+    <td class="roweven" valign="top" nowrap><i>2008-02-12</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=12324">Takeshi NISHIDA</a></i></td>
+    <td class="roweven" valign="top" width="2000">- Changed not to trigger the filename competion by a text which has<br>&nbsp;&nbsp;multi-byte characters.<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=8207">autocomplpop.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.6</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2008-02-01</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=12324">Takeshi NISHIDA</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- Redesigned g:AutoComplPop_Behavior option.<br>- Changed default value of g:AutoComplPop_CompleteOption option.<br>- Changed default value of g:AutoComplPop_MapList option.<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=8086">autocomplpop.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.5</b></td>
+    <td class="roweven" valign="top" nowrap><i>2007-12-26</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=12324">Takeshi NISHIDA</a></i></td>
+    <td class="roweven" valign="top" width="2000">- Implemented continuous-completion for the filename completion. And<br>&nbsp;&nbsp;added new option to g:AutoComplPop_Behavior.<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=8034">autocomplpop.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.4</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2007-12-09</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=12324">Takeshi NISHIDA</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- Fixed the bug that the auto-popup was not suspended in fuzzyfinder.<br>- Fixed the bug that an error has occurred with Ruby-omni-completion<br>&nbsp;&nbsp;unless Ruby interface.<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=7960">autocomplpop.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.3</b></td>
+    <td class="roweven" valign="top" nowrap><i>2007-11-17</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=12324">Takeshi NISHIDA</a></i></td>
+    <td class="roweven" valign="top" width="2000">- Supported Ruby-omni-completion by default.<br>- Supported filename completion by default.<br>- Added g:AutoComplPop_Behavior option.<br>- Added g:AutoComplPop_CompleteoptPreview option.<br>- Removed g:AutoComplPop_MinLength option.<br>- Removed g:AutoComplPop_MaxLength option.<br>- Removed g:AutoComplPop_PopupCmd option.<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=7931">autocomplpop.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.2</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2007-11-11</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=12324">Takeshi NISHIDA</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- Fixed bugs related to 'completeopt'.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=7907">autocomplpop.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.1</b></td>
+    <td class="roweven" valign="top" nowrap><i>2007-11-09</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=12324">Takeshi NISHIDA</a></i></td>
+    <td class="roweven" valign="top" width="2000">- Added g:AutoComplPop_IgnoreCaseOption option.<br>- Added g:AutoComplPop_NotEnableAtStartup option.<br>- Removed g:AutoComplPop_LoadAndEnable option.<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=7464">autocomplpop.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.0</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2007-08-08</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=12324">Takeshi NISHIDA</a></i></td>
+    <td class="rowodd" valign="top" width="2000">g:AutoComplPop_LoadAndEnable option for a startup activation is added.<br>AutoComplPopLock command and AutoComplPopUnlock command are added to suspend and resume.<br>'completeopt' and 'complete' options are changed temporarily while completing by this script.<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=7107">autocomplpop.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.4</b></td>
+    <td class="roweven" valign="top" nowrap><i>2007-05-13</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=12324">Takeshi NISHIDA</a></i></td>
+    <td class="roweven" valign="top" width="2000">The first match are selected when the popup menu is Opened. You can insert the first match with CTRL-Y.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=7085">autocomplpop.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.3</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2007-05-09</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=12324">Takeshi NISHIDA</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Fixed the problem that the original text is not restored if 'longest' is not set in 'completeopt'. Now the plugin works whether or not 'longest' is set in 'completeopt', and also 'menuone'.<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=7084">autocomplpop.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.2</b></td>
+    <td class="roweven" valign="top" nowrap><i>2007-05-09</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=12324">Takeshi NISHIDA</a></i></td>
+    <td class="roweven" valign="top" width="2000">When completion matches are not found, insert CTRL-E to stop completion.<br>Clear the echo area.<br>Fixed the problem in case of dividing words by symbols, popup menu is not opened.<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=7048">autocomplpop.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2007-05-02</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=12324">Takeshi NISHIDA</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Initial upload</td>
+</tr>
+</table>
+<!-- finish off the framework -->
+          </td>
+        </tr>
+      </table>
+    </td>
+
+  </tr>
+</table>
+
+<!-- END OF THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr><td colspan="4" bgcolor="#000000"><img src="/images/spacer.gif" height="2" width="1" alt=""></td></tr>
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr>
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+
+    <td align="left" valign="top"><small>
+      If you have questions or remarks about this site, visit the
+      <a href="http://vimonline.sf.net">vimonline development</a> pages.
+      Please use this site responsibly.
+      <br> 
+      
+      Questions about <a href="http://www.vim.org/about.php">Vim</a> should go
+      to the <a href="http://www.vim.org/maillist.php">maillist</a>.
+      Help Bram <a href="http://iccf-holland.org/">help Uganda</a>.
+      </small>
+	&nbsp;
+	&nbsp;
+
+	<!-- Start of StatCounter Code -->
+	<script type="text/javascript" language="javascript">
+	var sc_project=1417324; 
+	var sc_invisible=1; 
+	var sc_partition=11; 
+	var sc_security="d41633bc"; 
+	</script>
+
+	<script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script><noscript><a href="http://www.statcounter.com/" target="_blank"><img  src="http://c12.statcounter.com/counter.php?sc_project=1417324&java=0&security=d41633bc&invisible=0" alt="free tracking" border="0"></a> </noscript>
+	<!-- End of StatCounter Code -->
+          </td>
+
+    <td align="right" valign="top">
+      		<a href="http://sourceforge.net/projects/vim" rel="nofollow"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=8&type=1" width="88" height="31" border="0" alt="SourceForge.net Logo" /></a>
+    </td>
+
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+  </tr>
+
+    
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  
+  </tr>
+</table>
+
+</body>
+</html>
+

@@ -1,0 +1,436 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+  <link rel="Stylesheet" type="text/css" href="/css/style.css" >
+  <title>ccase.vim - Script to setup maps/menus to add in using Clearcase. : vim online</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <meta name="KEYWORDS" content="Vim, Vi IMproved, text editor, home, documentation, tips, scripts, news">
+  <link rel="shortcut icon" type="image/x-icon" href="/images/vim_shortcut.ico">
+</head>
+
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff"> 
+
+<!-- HEADER, SPONSOR IMAGE, VIM IMAGE AND BOOK AD -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+  <td class="lightbg">&nbsp;&nbsp;&nbsp;</td>
+  <td class="lightbg" align="left"><a href="/sponsor/index.php"><img src="/images/sponsorvim.gif" alt="sponsor Vim development" border="0"></a></td>
+    <td class="lightbg" align="center"><a href="/index.php"><img src="/images/vim_header.gif" border="0" alt="Vim logo"></a></td>
+    <td class="lightbg" align="right"><a href="http://iccf-holland.org/click5.html"><img src="/images/buyhelplearn.gif" alt="Vim Book Ad" border="0"></a></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="darkbg"><img src="/images/spacer.gif" width="1" height="10" alt=""></td>
+  </tr>
+</table>
+<!-- THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+  <col width="180">
+  <col width="1">
+
+  <tr valign="top">
+    <td class="sidebar">
+      <table width="180" cellpadding="4" cellspacing="0" border="0">
+        <tr valign="top">
+          <td class="sidebar">
+
+<!-- INCLUDE THE PAGE NAVIGATION -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+    <tr>
+        <td><small>not logged in (<a href="/login.php">login</a>)</small></td>
+    </tr>
+    <tr><td>
+<small>&nbsp;</small>
+<form action="http://www.google.com/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-3005259998294962:bvyni59kjr1" />
+    <input type="hidden" name="ie" value="ISO-8859-1" />
+    <input type="text" name="q" size="20" />
+    <br>
+    <input type="submit" name="sa" value="Search" />
+  </div>
+</form>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+    </td></tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="1"></td>
+    </tr>
+    <tr>
+        <td class="darkbg"><img src="/images/spacer.gif" alt='' border="0" height="3"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="2"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/index.php">Home</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/search.php">Advanced search</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/about.php">About Vim</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/community.php">Community</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/news/news.php">News</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/sponsor/index.php">Sponsoring</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/trivia.php">Trivia</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/docs.php">Documentation</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/download.php">Download</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/scripts/index.php">Scripts</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/tips/index.php">Tips</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/account/index.php">My Account</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/huh.php">Site Help</a></td>
+        </tr>
+</table>
+
+            <table width="172" cellpadding="0" cellspacing="0" border="0">
+              <tr><td><img src="/images/spacer.gif" alt="" border="0" width="1" height="8"></td></tr>
+              <tr><td class="darkbg"><img src="/images/spacer.gif" width="1" height="3" alt=""></td></tr>
+            </table>
+            <br>
+
+<!-- INCLUDE THE PAGE SIDEBAR TEXT -->
+&nbsp;
+
+          </td>
+        </tr>
+      </table>
+    </td>
+
+    <td class="darkbg"><img src="/images/spacer.gif" width="1" height="1" border="0" alt=""><br></td>
+    <td>
+      <table width="100%" cellpadding="10" cellspacing="0" border="0" bordercolor="red">
+        <tr>
+          <td valign="top">
+
+<span class="txth1">ccase.vim : Script to setup maps/menus to add in using Clearcase.</span> 
+
+<br>
+<br>
+
+<!-- karma table -->
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
+  <td>
+    Rating <b>501/176</b>,
+    Downloaded by 5508  </td>
+  <td class="lightbg">
+  <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
+  </td>
+  <td>
+    <a href="http://vim.wikia.com/wiki/Script:15">Vim wiki</a>
+  </td>  
+</tr>
+</table>
+<p>
+
+<table cellspacing="0" cellpadding="0" border="0">
+<tr><td class="prompt">created by</td></tr>
+<tr><td><a href="/account/profile.php?user_id=42">Douglas Potts</a></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">script type</td></tr>
+<tr><td>utility</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">description</td></tr>
+<tr><td>Based on what Vim detects you are running, allows for Unix or WinNT based Clearcase.&nbsp;&nbsp;Script will setup command-line abbreviations to shortcut checking-in/out, uncheckout, list checkouts (current directory, recurse directories, or all vobs), list version history.&nbsp;&nbsp;Also sets up a Clearcase Menu if you are running a gui version of Vim, which provides the same operations.</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">install details</td></tr>
+<tr><td>Vim 6.x:&nbsp;&nbsp;Make sure to download the correct (new) version.<br><br>Version 1.36 and later:<br>Only one file, ccase.vim, and documentation is self installing the first time that VIM is started after putting ccase.vim in your plugin directory.<br><br>Versions 1.35 and prior:<br>Unpack the tar'ed and&nbsp;&nbsp;gzip'ed file in your ~/.vim directory, the files will go into plugin/ccase.vim and doc/ccase.txt.<br><br>Then (from within vim) do<br>:helptags ~/.vim/doc<br><br>to rebuild the tags file.&nbsp;&nbsp;For details, read<br>:help add-local-help</td></tr>
+<tr><td>&nbsp;</td></tr>
+</table>
+
+<!-- rating table -->
+<form name="rating">
+<input type="hidden" name="script_id" value="15">
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>rate this script</b></td>
+  <td valign="middle">
+    <input type="radio" name="rating" value="life_changing">Life Changing
+    <input type="radio" name="rating" value="helpful">Helpful
+    <input type="radio" name="rating" value="unfulfilling">Unfulfilling&nbsp;
+    <input type="submit" value="rate">
+  </td>
+</tr>
+</table>
+</form>
+<span class="txth2">script versions</span> (<a href="add_script_version.php?script_id=15">upload new version</a>)
+<p>
+Click on the package to download.
+<p>
+
+<table cellspacing="2" cellpadding="4" border="0" width="100%">
+<tr class='tableheader'>
+        <th valign="top">package</th>
+    <th valign="top">script version</th>
+    <th valign="top">date</th>
+    <th valign="top">Vim version</th>
+    <th valign="top">user</th>
+    <th valign="top">release notes</th>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=3420">ccase.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.38</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2004-09-03</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=42">Douglas Potts</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Added a Change Checkout comments command, and associated menu item.<br>Added version line to allow for use by GetLatestVimScripts script by Dr. Charles (Chip) Campbell.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=2580">ccase.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.36</b></td>
+    <td class="roweven" valign="top" nowrap><i>2003-12-09</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=42">Douglas Potts</a></i></td>
+    <td class="roweven" valign="top" width="2000">My changes:<br>Add User commands for all the regular cabbrevs used, so that diff commands and others may be issued on the command line with '-c'.<br><br>Changes from Gary Johnson and WEN Guopeng:<br>Addition of a diff with first version on this branch.<br><br>Stefan Berglund and WEN Guopeng:<br>Alter 'ctpwv' to not use the $view variable, and instead get it from the system.<br><br>Changes from WEN Guopeng:<br>Changes to embed the ccase.vim documentation in the .vim file, and automatically install on startup, diff with merged version, and other wonderful addititions that I'm probably forgetting.<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=2228">ccase-1.35.tgz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.35</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2003-08-12</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=42">Douglas Potts</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- Added variable for listing checkouts by anyone, or just 'me'.<br>- Added save of comment text into global var so it is accessable across<br>&nbsp;&nbsp;starts and stops of vim.<br>- Replaces some echo's with echomsg's so they are saved in vim err list.<br>- Moved autocmds around, so buffer-local kemaps aren't lost by the<br>&nbsp;&nbsp;autocmds which automatically refresh the listing upon BufEnter.<br>- Added uncheckout functionality into Vim function instead of relying on<br>&nbsp;&nbsp;shell to do it.<br>- MakeActiv now prompts for an activity comment.<br>- Activity functions no show the activity comment, including the<br>&nbsp;&nbsp;activity list window.<br>- For the activity and checkout list windows, open new files below and<br>&nbsp;&nbsp;to the right of the originating list window.<br>- Added check for maps of &lt;unique&gt;&lt;script&gt; already being there so<br>&nbsp;&nbsp;resourcing the plugin doesn't give errors.<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=1893">ccase-1.31.tgz</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.31</b></td>
+    <td class="roweven" valign="top" nowrap><i>2003-04-03</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=42">Douglas Potts</a></i></td>
+    <td class="roweven" valign="top" width="2000">Incorporated Guillaume Lafage's changes for link resolution and<br>improvements for the 'list checkouts' and 'list activities' windows.<br>Now double-click or Enter on a name in the list checkouts window will split-open that file, and double-click or Enter on an activity will set the current activity to be that of the activity under the cursor. <br>Some updates to the help file, added a thanks section to recognize those who have contributed to ccase.vim (thanks<br>everyone, I'm still open to more suggestions).</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=1783">ccase.vim.tgz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.30</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2003-03-06</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=1709">Guillaume Lafage</a></i></td>
+    <td class="rowodd" valign="top" width="2000">added support for access to link files.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=1324">ccase-1.30-bugfixes.tgz</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.30_bugfi</b></td>
+    <td class="roweven" valign="top" nowrap><i>2002-10-21</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=42">Douglas Potts</a></i></td>
+    <td class="roweven" valign="top" width="2000">fix from Gary Johnson on cleartool describe, used to determine predecessor<br>version for ctpdif, escaping missing on space in filename, seen on Windows.<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=1248">ccase-1.30.tgz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.30</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2002-09-25</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=42">Douglas Potts</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Added buffer local settings to set the current activity, and update the<br>checkout list window on BufEnter.&nbsp;&nbsp;Also added ability to create an UCM<br>activity (mkactiv).&nbsp;&nbsp;See updates to the documentation (:h ccase-plugin).</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=1203">ccase-1.29.tgz</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.29</b></td>
+    <td class="roweven" valign="top" nowrap><i>2002-09-11</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=42">Douglas Potts</a></i></td>
+    <td class="roweven" valign="top" width="2000">Implemented suggestion (ok, call it enhanced from his patch), such that the<br>ctpdif and ctqdif functions work properly when the filename you were editting<br>was a fully version qualified ClearCase name (ie. filename@@/main/my/version/1).<br>This is likely to happen if you open a specific file version via the ClearCase<br>file browser or version tree browser.<br><br>Small correction to use of variables local to the function (l:), not local<br>to the script (s:).<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=1124">ccase.tgz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.24.1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2002-08-14</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=42">Douglas Potts</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Fixed goof in 'bd' command for results window, that would 'bd!' the first buffer<br>matching [acelrst] (ccase_results).<br><br>Please upgrade if you downloaded 1.24.<br><br>Sorry for the inconvience.<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=1114">ccase.tgz</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.25</b></td>
+    <td class="roweven" valign="top" nowrap><i>2002-08-13</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=42">Douglas Potts</a></i></td>
+    <td class="roweven" valign="top" width="2000">After several comments on the possible naming collision of the ccase results<br>file, I've changed the implementation so that it uses a generated filename for<br>the temp file that captures command output (via tempname()), and now use a<br>special buffer to display the results.<br><br>Enjoy.<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=765">ccase.tgz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.22</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2002-04-05</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=42">Douglas Potts</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Added checkout of elements as &quot;unreserved&quot; as suggested by Barry Nisly.&nbsp;&nbsp;Plus some fixes to the documentation.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=462">ccase.tgz</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.17</b></td>
+    <td class="roweven" valign="top" nowrap><i>2002-01-11</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=42">Douglas Potts</a></i></td>
+    <td class="roweven" valign="top" width="2000">Small bugfix: corrected default setting of g:ccaseUseDialog.&nbsp;&nbsp;Now checks<br>to see if VIM was compiled with the GUI options.<br><br>MAIN ADDITION:<br>I finally forced myself to write up some documentation for this beast.<br>Hence it has now become ccase.tgz.<br><br>Contains:<br>doc/ccase.txt<br>plugin/ccase.vim<br><br>Don't forget to use :helptags to generate tags for<br>newly downloaded plugin documentation.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=311">ccase.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.14</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2001-11-01</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=42">Douglas Potts</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Lots of enhancements to prompting, added<br>diff capability utilizing vim diff<br>functionality.&nbsp;&nbsp;Added more options for<br>checkin/out comments, making an element,<br>etc.&nbsp;&nbsp;Check it out.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=309">ccase.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.11</b></td>
+    <td class="roweven" valign="top" nowrap><i>2001-10-30</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=42">Douglas Potts</a></i></td>
+    <td class="roweven" valign="top" width="2000">Per suggestion by Gerard van Wageningen, added prompt box capability as well as<br>vim console prompt capability for checkin and checkout comments.&nbsp;&nbsp;If using the<br>GUI version and g:ccaseUseDialog is set to 1 (default) then the gui prompt box<br>will pop up for the comment to be added to the checkin/out.&nbsp;&nbsp;If g:ccaseUseDialog<br>is set to 0, then prompt will be of the console variety.<br><br>Continued suggestions are welcome!<br><br><br>Note:<br>Script version now matches cvs revision number.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=216">ccase.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.4</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2001-10-01</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=42">Douglas Potts</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Fixed bug in checking directory back in<br>after making element, in the new make<br>element functionality.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=213">ccase.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.3</b></td>
+    <td class="roweven" valign="top" nowrap><i>2001-10-01</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=42">Douglas Potts</a></i></td>
+    <td class="roweven" valign="top" width="2000">Added 'mkelem' functionality.&nbsp;&nbsp;Function to make current file an element prompts to checkout directory if it is not already checkedout, adds file (not left checkedout), and prompts for whether directory is to be checked in again.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=202">ccase.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.2</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2001-09-28</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=42">Douglas Potts</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Put in missing OpenIfNew function, that is used<br>to open up a new 'results' buffer if one hasn't already been loaded.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=194">ccase.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.1</b></td>
+    <td class="roweven" valign="top" nowrap><i>2001-09-26</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=42">Douglas Potts</a></i></td>
+    <td class="roweven" valign="top" width="2000">Cleaned up some things, and tried to make<br>the script more in the style of a Vim 6.0 plugin.<br>Still has a ways to go for setting up mapleader yet.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=19">ccase.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.0</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2001-06-08</i></td>
+    <td class="rowodd" valign="top" nowrap>5.7</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=42">Douglas Potts</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Initial upload</td>
+</tr>
+</table>
+<!-- finish off the framework -->
+          </td>
+        </tr>
+      </table>
+    </td>
+
+  </tr>
+</table>
+
+<!-- END OF THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr><td colspan="4" bgcolor="#000000"><img src="/images/spacer.gif" height="2" width="1" alt=""></td></tr>
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr>
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+
+    <td align="left" valign="top"><small>
+      If you have questions or remarks about this site, visit the
+      <a href="http://vimonline.sf.net">vimonline development</a> pages.
+      Please use this site responsibly.
+      <br> 
+      
+      Questions about <a href="http://www.vim.org/about.php">Vim</a> should go
+      to the <a href="http://www.vim.org/maillist.php">maillist</a>.
+      Help Bram <a href="http://iccf-holland.org/">help Uganda</a>.
+      </small>
+	&nbsp;
+	&nbsp;
+
+	<!-- Start of StatCounter Code -->
+	<script type="text/javascript" language="javascript">
+	var sc_project=1417324; 
+	var sc_invisible=1; 
+	var sc_partition=11; 
+	var sc_security="d41633bc"; 
+	</script>
+
+	<script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script><noscript><a href="http://www.statcounter.com/" target="_blank"><img  src="http://c12.statcounter.com/counter.php?sc_project=1417324&java=0&security=d41633bc&invisible=0" alt="free tracking" border="0"></a> </noscript>
+	<!-- End of StatCounter Code -->
+          </td>
+
+    <td align="right" valign="top">
+      		<a href="http://sourceforge.net/projects/vim" rel="nofollow"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=8&type=1" width="88" height="31" border="0" alt="SourceForge.net Logo" /></a>
+    </td>
+
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+  </tr>
+
+    
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  
+  </tr>
+</table>
+
+</body>
+</html>
+

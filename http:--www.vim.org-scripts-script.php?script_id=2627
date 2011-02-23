@@ -1,0 +1,412 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+  <link rel="Stylesheet" type="text/css" href="/css/style.css" >
+  <title>exVim - IDE all in vim.  : vim online</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <meta name="KEYWORDS" content="Vim, Vi IMproved, text editor, home, documentation, tips, scripts, news">
+  <link rel="shortcut icon" type="image/x-icon" href="/images/vim_shortcut.ico">
+</head>
+
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff"> 
+
+<!-- HEADER, SPONSOR IMAGE, VIM IMAGE AND BOOK AD -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+  <td class="lightbg">&nbsp;&nbsp;&nbsp;</td>
+  <td class="lightbg" align="left"><a href="/sponsor/index.php"><img src="/images/sponsorvim.gif" alt="sponsor Vim development" border="0"></a></td>
+    <td class="lightbg" align="center"><a href="/index.php"><img src="/images/vim_header.gif" border="0" alt="Vim logo"></a></td>
+    <td class="lightbg" align="right"><a href="http://iccf-holland.org/click5.html"><img src="/images/buyhelplearn.gif" alt="Vim Book Ad" border="0"></a></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="darkbg"><img src="/images/spacer.gif" width="1" height="10" alt=""></td>
+  </tr>
+</table>
+<!-- THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+  <col width="180">
+  <col width="1">
+
+  <tr valign="top">
+    <td class="sidebar">
+      <table width="180" cellpadding="4" cellspacing="0" border="0">
+        <tr valign="top">
+          <td class="sidebar">
+
+<!-- INCLUDE THE PAGE NAVIGATION -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+    <tr>
+        <td><small>not logged in (<a href="/login.php">login</a>)</small></td>
+    </tr>
+    <tr><td>
+<small>&nbsp;</small>
+<form action="http://www.google.com/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-3005259998294962:bvyni59kjr1" />
+    <input type="hidden" name="ie" value="ISO-8859-1" />
+    <input type="text" name="q" size="20" />
+    <br>
+    <input type="submit" name="sa" value="Search" />
+  </div>
+</form>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+    </td></tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="1"></td>
+    </tr>
+    <tr>
+        <td class="darkbg"><img src="/images/spacer.gif" alt='' border="0" height="3"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="2"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/index.php">Home</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/search.php">Advanced search</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/about.php">About Vim</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/community.php">Community</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/news/news.php">News</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/sponsor/index.php">Sponsoring</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/trivia.php">Trivia</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/docs.php">Documentation</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/download.php">Download</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/scripts/index.php">Scripts</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/tips/index.php">Tips</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/account/index.php">My Account</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/huh.php">Site Help</a></td>
+        </tr>
+</table>
+
+            <table width="172" cellpadding="0" cellspacing="0" border="0">
+              <tr><td><img src="/images/spacer.gif" alt="" border="0" width="1" height="8"></td></tr>
+              <tr><td class="darkbg"><img src="/images/spacer.gif" width="1" height="3" alt=""></td></tr>
+            </table>
+            <br>
+
+<!-- INCLUDE THE PAGE SIDEBAR TEXT -->
+&nbsp;
+
+          </td>
+        </tr>
+      </table>
+    </td>
+
+    <td class="darkbg"><img src="/images/spacer.gif" width="1" height="1" border="0" alt=""><br></td>
+    <td>
+      <table width="100%" cellpadding="10" cellspacing="0" border="0" bordercolor="red">
+        <tr>
+          <td valign="top">
+
+<span class="txth1">exVim : IDE all in vim. </span> 
+
+<br>
+<br>
+
+<!-- karma table -->
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
+  <td>
+    Rating <b>474/129</b>,
+    Downloaded by 1558  </td>
+  <td class="lightbg">
+  <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
+  </td>
+  <td>
+    <a href="http://vim.wikia.com/wiki/Script:2627">Vim wiki</a>
+  </td>  
+</tr>
+</table>
+<p>
+
+<table cellspacing="0" cellpadding="0" border="0">
+<tr><td class="prompt">created by</td></tr>
+<tr><td><a href="/account/profile.php?user_id=17258">Jie Wu</a></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">script type</td></tr>
+<tr><td>utility</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">description</td></tr>
+<tr><td>= Sites =<br><br>exVim official site:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a target="_blank" href="http://www.ex-dev.com/projects/exvim/wiki">http://www.ex-dev.com/projects/exvim/wiki</A><br>exVim github:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a target="_blank" href="http://github.com/jwu/exvim/">http://github.com/jwu/exvim/</A><br>exVim google code:&nbsp;&nbsp;&nbsp;&nbsp;<a target="_blank" href="http://code.google.com/p/exvim/">http://code.google.com/p/exvim/</A><br><br>= Downloads =<br><br>Google Download Page: <a target="_blank" href="http://code.google.com/p/exvim/downloads/list">http://code.google.com/p/exvim/downloads/list</A><br><br>exVim 8.05_b2 Installer (windows): <a target="_blank" href="http://exvim.googlecode.com/files/exvim_installer-8.05_b2.exe">http://exvim.googlecode.com/files/exvim_installer-8.05_b2.exe</A><br>exVim 8.05_b2 zip Package (windows): <a target="_blank" href="http://exvim.googlecode.com/files/full_package-win-8.05_b2.zip">http://exvim.googlecode.com/files/full_package-win-8.05_b2.zip</A><br>exVim 8.05_b2 zip Package (unix): <a target="_blank" href="http://exvim.googlecode.com/files/full_package-unix-8.05_b2.zip">http://exvim.googlecode.com/files/full_package-unix-8.05_b2.zip</A><br><br>= Overview =<br><br><a target="_blank" href="http://www.ex-dev.com/projects/exvim/wiki/Overview">http://www.ex-dev.com/projects/exvim/wiki/Overview</A><br><br>= Introduction =<br><br>-- What is exVim ? --<br><br>exVim is a package intgerate ex-vim-plugins, 3rd-vim-plugins and external-tools for developing.<br>By solving the complex communication problem among plugins, external tools, the exVim make<br>the vim as an IDE like environment all in vimscript.<br><br>-- What can exVim do ? --<br><br>With exVim you can:<br><br>* use one single file ``your_project.vimentry`` to access your project.<br>* update tags, IDs and other things you used in your project in one command.<br>* browse project files in project window.<br>* search files, tags, and words in source code by the builtin method.<br>* a powful way to filter search result.<br>* trace your code by jump stack.<br>* reading code easily by word highlight and macro highlight.<br>* view classes hierarchy pictures.<br>* compile project in vc/gcc and get error results from them directly through vim.<br>* enhanced quick-fix window.<br>* communicate with visual studio --- get build errors, open files, add break point and send command make vs.net <br>compiling current file.<br><br>-- Usage --<br><br>The exVim use ``your_project.vimentry`` file as the entry of a project. When you put this<br>file in the root directory of the project, and open it by vim, ex-vim-plugins will awared<br>and do the rest of the work to help you generate tags, symbols, IDs and other things<br>could be used in your project.<br><br>When edit a project, exVim provides several method to help you locate the code, get global<br>seach results, also an easy and powerful way to filter the search result!<br><br>-- Compatible --<br><br>exVim is compatible with your original vim. The exVim is nothing but several vim-plugins,<br>there are not too much reasons make it unable to work in your vim.<br><br>-- Small, Fast and Stable --<br><br>The principle for solving problem in exVim are:<br><br># try to interact with user dynamically.<br># if the dynamic interactive sufferred performance issue, go for static method.<br># try the best to fulfill a demand in vimscript.<br># if it can't, try the best to fulfill the demand by external tools.<br># if it still can't, try the best to preprocess the result and return to rule No.1<br><br>exVim is designed to follow this principle which make it small, fast and stable.<br><br></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">install details</td></tr>
+<tr><td>quick start:<br>&nbsp;&nbsp;&nbsp;&nbsp; <br>&nbsp;&nbsp;&nbsp;&nbsp;<a target="_blank" href="http://www.ex-dev.com/projects/exvim/wiki/Quick_start">http://www.ex-dev.com/projects/exvim/wiki/Quick_start</A><br><br>check the install document on:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;<a target="_blank" href="http://www.ex-dev.com/projects/exvim/wiki/Install">http://www.ex-dev.com/projects/exvim/wiki/Install</A><br></td></tr>
+<tr><td>&nbsp;</td></tr>
+</table>
+
+<!-- rating table -->
+<form name="rating">
+<input type="hidden" name="script_id" value="2627">
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>rate this script</b></td>
+  <td valign="middle">
+    <input type="radio" name="rating" value="life_changing">Life Changing
+    <input type="radio" name="rating" value="helpful">Helpful
+    <input type="radio" name="rating" value="unfulfilling">Unfulfilling&nbsp;
+    <input type="submit" value="rate">
+  </td>
+</tr>
+</table>
+</form>
+<span class="txth2">script versions</span> (<a href="add_script_version.php?script_id=2627">upload new version</a>)
+<p>
+Click on the package to download.
+<p>
+
+<table cellspacing="2" cellpadding="4" border="0" width="100%">
+<tr class='tableheader'>
+        <th valign="top">package</th>
+    <th valign="top">script version</th>
+    <th valign="top">date</th>
+    <th valign="top">Vim version</th>
+    <th valign="top">user</th>
+    <th valign="top">release notes</th>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=14684">ex_plugins_package-unix-8.05_b2.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>8.05_b2</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2011-01-05</i></td>
+    <td class="rowodd" valign="top" nowrap>7.3</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=17258">Jie Wu</a></i></td>
+    <td class="rowodd" valign="top" width="2000">The package is used in unix, linux, mac-osx</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=14683">ex_plugins_package-win-8.05_b2.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>8.05_b2</b></td>
+    <td class="roweven" valign="top" nowrap><i>2011-01-05</i></td>
+    <td class="roweven" valign="top" nowrap>7.3</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=17258">Jie Wu</a></i></td>
+    <td class="roweven" valign="top" width="2000">* New features<br>** upgrade vim from 7.2 to 7.3<br>** add javascript indent plugin. <a target="_blank" href="http://www.vim.org/scripts/script.php?script_id=1936">http://www.vim.org/scripts/script.php?script_id=1936</A><br>** add AutoComplPop-2.14.1 plugin. <a target="_blank" href="http://www.vim.org/scripts/script.php?script_id=1879&nbsp;&nbsp">http://www.vim.org/scripts/script.php?script_id=1879&nbsp;&nbsp</A>;<br>** add EXTC command for easy writting extern &quot;C&quot; { } code block in c/cpp files. <br>* Changes<br>** update .vimentry version from '24' to '25'.<br>** disable auto-comment in javascript.<br>** make vimwiki as an option plugin for user.<br>** update zencoding to 0.43.<br>** remove django syntax (not too much use).<br>** update surround to 1.90.<br>** set default encoding to utf-8.<br>* Bug fix<br>** fix visual studio unicode encoding error.<br>** fix GSF,GSFW result can't jump.<br>** fix acp conflict with lookupfile.<br>** fix tag select can't parse lua function with white space<br>** fix vimentryRefs not working in linux and mac OS.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13057">ex-plugins-package-8.04.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>8.04</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-05-26</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=17258">Jie Wu</a></i></td>
+    <td class="rowodd" valign="top" width="2000"><br> * New features<br><br>&nbsp;&nbsp; * support swig error format.<br>&nbsp;&nbsp; * add swig syntax highlight.<br>&nbsp;&nbsp; * add csharp syntax highlight for special mark labels.<br>&nbsp;&nbsp; * add zencoding plugin.<br>&nbsp;&nbsp; * add matchit plugin.<br>&nbsp;&nbsp; * add django syntax highlight.<br>&nbsp;&nbsp; * add sphinx document compile support.<br><br> * Changes<br><br>&nbsp;&nbsp; * update vimwiki to 1.0.0.<br>&nbsp;&nbsp; * update cscope to 15.7a.<br>&nbsp;&nbsp; * refine gcc makefiles.<br>&nbsp;&nbsp; * let EnhancedCommentify support swig.<br>&nbsp;&nbsp; * disable auto-comment for c# language.<br>&nbsp;&nbsp; * always show status-line.<br>&nbsp;&nbsp; * change comment mathod for c in EnhancedCommentify, instead of using ``/**/`` we use ``//`` like cpp. <br>&nbsp;&nbsp; * change guifont in win32 to Bitstream_Vera_Sans_Mono:h10.<br>&nbsp;&nbsp; * Not allow exGlobalSearch running in stand-alone mode, this prevent exGlobalSearch show error message.<br>&nbsp;&nbsp; * let exQuickFix support cs error format. <br>&nbsp;&nbsp; * change ``_vimfiles`` folder to .vimfiles<br>&nbsp;&nbsp; * change ``_vimfiles/_hierarchies`` folder to .vimfiles/.hierarchies<br>&nbsp;&nbsp; * change ``_vimfiles/_temp`` folder to .vimfiles/.temp<br>&nbsp;&nbsp; * change vimwiki _doc folder to wiki_src<br>&nbsp;&nbsp; * let exProject ignore checking .vimfiles folders when browsing.<br>&nbsp;&nbsp; * generate header.tpl use dest file's encoding.<br>&nbsp;&nbsp; * update gvim.exe link with python26.dll in windows.<br>&nbsp;&nbsp; * add ex_try, ex_catch, ex_catch_exp, ex_throw, ex_safe_delete, ex_safe_free... syntax highlight.<br>&nbsp;&nbsp; * add my method to judge if it is objc or mathlab files.<br>&nbsp;&nbsp; * add key-world TEST, PATCH, FIXME, BUG, TIPS, HINT<br>&nbsp;&nbsp; * add ``&lt;leader&gt;sub`` for quick substitue word_highlight_1 to word_highlight_2<br>&nbsp;&nbsp; * add signal, slots, emit qt keywords for highlighting<br>&nbsp;&nbsp; * disable maximize window when openning vim.<br><br> * Bug fix<br><br>&nbsp;&nbsp; * fix exQuickFix open a file another programme already editing issue.<br>&nbsp;&nbsp; * fix exTagSelect show tags error when read preview from a file that already not exists.<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=11842">ex-plugins-package-8.03.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>8.03</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-12-02</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=17258">Jie Wu</a></i></td>
+    <td class="roweven" valign="top" width="2000"> * New features<br>&nbsp;&nbsp;&nbsp;&nbsp;* let make syntax support external comments.<br>&nbsp;&nbsp;&nbsp;&nbsp;* refine install method for unix/linux.<br>&nbsp;&nbsp;&nbsp;&nbsp;* support Mac OS X.<br> * Changes<br>&nbsp;&nbsp;&nbsp;&nbsp;* support matlab/octave language<br>&nbsp;&nbsp;&nbsp;&nbsp;* support maxscript language<br>&nbsp;&nbsp;&nbsp;&nbsp;* move data/backup and data/swap directory to $HOME/.data/backup $HOME/.data/swap<br>&nbsp;&nbsp;&nbsp;&nbsp;* change default toolkit_path to $HOME/.toolkit/ for unix<br>&nbsp;&nbsp;&nbsp;&nbsp;* enlarge the font size, re-adjust default windows width increment<br>&nbsp;&nbsp;&nbsp;&nbsp;* update cTags to 5.8<br>&nbsp;&nbsp;&nbsp;&nbsp;* update SyntaxHighliter to 2.1.364<br>&nbsp;&nbsp;&nbsp;&nbsp;* update vimwiki to 0.9.6<br>&nbsp;&nbsp;&nbsp;&nbsp;* update NERD_tree to 4.1.0<br>&nbsp;&nbsp;&nbsp;&nbsp;* update genutils to 2.5<br> * Bug fix<br>&nbsp;&nbsp;&nbsp;&nbsp;* fix the filter format shows wrong syntax in dialog<br>&nbsp;&nbsp;&nbsp;&nbsp;* fix bracket &quot;()&quot; in directory name does not work.<br>&nbsp;&nbsp;&nbsp;&nbsp;* fix gcc_rule can't compile source file have same name but in different directory.<br>&nbsp;&nbsp;&nbsp;&nbsp;* fix PutHeader will show time in local encoding. Force to set it in English.<br>&nbsp;&nbsp;&nbsp;&nbsp;* fix exQuickFix can't jump msvc error message when use single core cpu. ( those message don't have &quot;1&gt;&quot; at the beginning )<br>&nbsp;&nbsp;&nbsp;&nbsp;* fix exQuickfix can't select multi-core and single-core jump in msvc2005<br>&nbsp;&nbsp;&nbsp;&nbsp;* fix quick_gen_project.sh file_filter syntax error in unix/linux.<br>&nbsp;&nbsp;&nbsp;&nbsp;* add protection for ImageViewer and WebBrowser<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=11081">ex-plugins-package-8.02.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>8.02</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-07-29</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=17258">Jie Wu</a></i></td>
+    <td class="rowodd" valign="top" width="2000">&nbsp;&nbsp;&nbsp;&nbsp;* New features<br>&nbsp;&nbsp;&nbsp;&nbsp;* Changes<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o let title show vimentry name first, so that you can select project with a clear name in task bar.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o add qt language map ( qt: qrc, pro, pri ) <br>&nbsp;&nbsp;&nbsp;&nbsp;* Bug fix<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o fix exJumpStack jump error when we do tg word1, gg word2 then tg word1 again.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o fix inherit image can't show when path have white-space.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o fix exQuickFix loose fix when we load another quickfix list, and try to use the exQuickFix again.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o fix multiple gcc project makefile clean-deps error.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o fix lookupfile re-open deleted buffer will not show in the minibufexpl. (thanks vxzhong)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o fix minibufexpl mouse click open will not open in edit-buffer. (thanks ozgezer) </td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=10945">ex-plugins-package-8.02c.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>8.02c</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-07-05</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=17258">Jie Wu</a></i></td>
+    <td class="roweven" valign="top" width="2000">&nbsp;&nbsp;&nbsp;&nbsp;* New features<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o Temp highlight words under current cursor when cursor holds. <br>&nbsp;&nbsp;&nbsp;&nbsp;* Changes<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o let exQuickFix can jump template sub-errors in msvc. <br>&nbsp;&nbsp;&nbsp;&nbsp;* Bug fix<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o fix quick gen project can't generate cscope database. (thanks ozgezer)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o fix exBufExplorer save list buffers in bookmarks if we don't have a bookmarks file.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o fix quick_gen_project.sh filenamelist generation errors in unix like system. (thanks oz</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=10903">ex-plugins-package-8.02b.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>8.02b</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-06-27</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=17258">Jie Wu</a></i></td>
+    <td class="rowodd" valign="top" width="2000">&nbsp;&nbsp;&nbsp;&nbsp;* New features<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o add exBufExplorer.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o add bookmarks in exBufExplorer.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o When cursor hold in exProject window, it will echo the full path in the cursor line.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o add ex_toolkit_path so user can install toolkit folder in a specific path.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o user delete bookmark directly in exBufExplorer. <br>&nbsp;&nbsp;&nbsp;&nbsp;* Changes<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o change gf function to use lookupfile plugin.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o add SS command for filtering symbol table search result <br>&nbsp;&nbsp;&nbsp;&nbsp;* Bug fix<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o fix quickgen bash script if statement syntax error.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o fix fail to run quick_gen_project script in csh shell.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o fix !FreeBSD ctags can't be detected correctly.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o fix buffer delete mess the window layout when there have several window opened.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o fix \ff,\fd search error, new method can even use smart case for search.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o fix ctrl-left/right will go to the next buffer in plugin window, mess-up the window layout.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o fix exCscope syntax file name syntax highlight beyond the range.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o fix restore buffer never execute auto-command in last edit-buffer.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o only do search jump when current line not matched with the pattern in exJumpStack </td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=10879">ex-plugins-package-8.02a.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>8.02a</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-06-20</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=17258">Jie Wu</a></i></td>
+    <td class="roweven" valign="top" width="2000">&nbsp;&nbsp;&nbsp;&nbsp;* New features<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o let exProject support file with no-suffix (NULL filetype).<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o let cscope can parse by specific language type.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o add DirDiff and snipMate plugin.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o add pythoncomplete plugin.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o add exBufExplorer (exProject quick-view window) for exploring and editing opened buffers. <br>&nbsp;&nbsp;&nbsp;&nbsp;* Changes<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o add backspace navigate and alt+left/right navigate for exJumpStack.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o let EnhComment support snippet file.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o change ex_plugin_list to ex_plugin_registered_bufnames,ex_plugin_registered_filetypes to enhance the register-plugin.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o let exProject and NERDtree can switch.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o remove _vimfiles* folders when list project tree in exProject window. <br>&nbsp;&nbsp;&nbsp;&nbsp;* Bug fix<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o fix Mark Text can't be lower case.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o fix lots of exCscope problem.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o fix cscope syntax highlight.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o fix showmarks conflict with snipMate plugin,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o fix color scheme will be dark when there is no colorscheme set in _vimrc.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o fix taglist,NERD_tree,minibufexpl opens window not take the position when there already have ex-plugin window.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o let exJumpStack can recognize all registered plugin window.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o fix findfile in g:exES_CWD reports wrong result when directory name have space<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o remove hard code in detecting ctags and cscope support.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o fix cursor can't move to the edit-buffer when use restore buffer. </td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=10824">ex-plugins-package-8.01b.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>8.01b</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-06-14</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=17258">Jie Wu</a></i></td>
+    <td class="rowodd" valign="top" width="2000">&nbsp;&nbsp;&nbsp;&nbsp;* New features<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o let quick_gen_project can update filenametags<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o let exCscope support find g method <br>&nbsp;&nbsp;&nbsp;&nbsp;* Changes<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o make exSearchComplete disable in unix/linux terminal.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o let lookupfile, taglist use the same key map settings as ex-plugins have.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o use pattern instead of preview for exJumpStack, the preview will be generate dynamically.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o use pattern locate the jump result, so that even you changes some of the line between the jump result, it still have chance to locate to the exact position.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o add quick_gen_project_pre_custom and quick_gen_project_post_custom when update project.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o when doing stack jump, use keepjumps.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o Add protect codes for moving project files.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o add cscope file name highlight <br>&nbsp;&nbsp;&nbsp;&nbsp;* Bug fix<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o fix the EX_DEV been overwritten in linux.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o fix highlight error of key word &quot;class::define&quot; in exJumpStack.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o fix exJumpStack when poping up stack, reset wrong tag index.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o fix EX_DEV setting error in windows, when there is no EX_DEV environment variable.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o fix cscope filter search error.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o fix EX_DEV setting error in windows, when there is no EX_DEV environment variable.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o fix exJumpStack can't locate empty line or line with only space, tab problem </td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=10764">ex-plugins-package-8.01a.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>8.01a</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-06-07</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=17258">Jie Wu</a></i></td>
+    <td class="roweven" valign="top" width="2000">&nbsp;&nbsp;&nbsp;&nbsp;* New features<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o add ex_lightgray color scheme.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o Support search result sorting for exGlobalSearch.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ add g:exGS_auto_sort, g:exGS_lines_for_autosort settings<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ add \sr operations for force sort search result. <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o Support general key map settings for ex-plugin.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o add exJumpStack <br>&nbsp;&nbsp;&nbsp;&nbsp;* Changes<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o add errorformat support for exGlobalSearch result. (People may copy the exGlobaSearch result from global search window to quickfix window)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o in old version, exQF_PasteQuickFixResult? can only use \p. now you can use p or \p to accomplish the task.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o add warnning when use visual p,\p to paste a result to quickfix window, it will switch to normal p,\p operation.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o add EX_DEV environment support in unix/linux.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o let taglist support hlsl language.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o let root directory dialog only show up in exProject standalone version.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o add compile error support for hlsl in exQuickFix.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o remove tag stack in exTagSelect, use exJumpStack instead. <br>&nbsp;&nbsp;&nbsp;&nbsp;* Bug fix<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o fix cscope can't parse file name with space.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o fix switch window can't keep the same window size problem.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o fix macro highlight ignore case for macro<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o fix arrow key can't be used in terminal version of unix/linux<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o fix macro highlight highlight error when the macro #if is not at the beginning of the line. </td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=10703">ex-plugins-package-7.05.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>7.05</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-05-30</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=17258">Jie Wu</a></i></td>
+    <td class="rowodd" valign="top" width="2000"><br>&nbsp;&nbsp;&nbsp;&nbsp;* New features<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o add \ve to quick edit current vimentry file.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o add vimentry name check when open vimentry file. if vimentry name is not the same with the value VimEntryName in vimentry file, it will lead to a vimentry re-write.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o add paste quickfix result from register '*'.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o add exUtility#CloseAllExpluginWindow() function<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o add s:ex_lang_map for exVim. you can use exUtility#RestLangMap and exUtility#AddLangMap function to create your own language maps.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ remove g:exPJ_default_filter variable. use g:ex_default_langs instead.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ add ExpjUpdateFilters command<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ add g:exES_LangType? set project filter process in exEnvironment<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ let exUtility#GetLangType and exUtility#GetCtagsOption support s:ex_lang_map <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o add darkscheme support <br>&nbsp;&nbsp;&nbsp;&nbsp;* Changes<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o change the id language custom map from id-lang.map to id-lang-custom.map.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o disable move/del command shows information in quick_gen_project.bat by add &gt; nul<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o change g:exES_vimfile_dir to g:exES_vimfiles_dirname.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o change exProject filetype from ft_exproject to ex_filetype<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o change g:exUT_plugin_list to g:ex_plugin_list <br>&nbsp;&nbsp;&nbsp;&nbsp;* Bug fix<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o fix \fc can't work outside edit window.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o fix &quot;&lt;args&gt;&quot; can't accept win32 path problem. by replace all &quot;&lt;args&gt;&quot; to '&lt;args&gt;'<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o use :e xxx.vimentry when you already in another vimentry, the project settings will not be switch.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ fix :EXProject &lt;filename&gt; will not close old project file when the &lt;filename&gt; is not the same.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ fix exSymbolTable and exMacroHighlight can't load new file when they already load one. <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o fix \cf error.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o fix toggle window can't let the cursor focus on it. </td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=10673">ex-plugins-package-7.05b.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>7.05b</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-05-24</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=17258">Jie Wu</a></i></td>
+    <td class="roweven" valign="top" width="2000"> * New features<br>&nbsp;&nbsp;&nbsp;&nbsp;* Support more than one &quot;.vimentry&quot; in same directory. <br>&nbsp;&nbsp;&nbsp;&nbsp;* add &quot;!VimEntryName&quot; and &quot;!VimfilesDirName&quot; in `.vimentry` file.<br> * Changes<br>&nbsp;&nbsp;&nbsp;&nbsp;* add &quot;autogen settings (DO NOT MODIFY)&quot; comments in the vimentry file.<br>&nbsp;&nbsp;&nbsp;&nbsp;* `.vimentry` version number update to 21. ( you will loose your old .vimentry file settings when open an old project ) <br>&nbsp;&nbsp;&nbsp;&nbsp;* disable move/del command shows information in quick_gen_project.bat by add `&gt; nul`<br>&nbsp;&nbsp;&nbsp;&nbsp;* change g:exPJ_defualt_filter to g:exPJ_default_filter.<br>&nbsp;&nbsp;&nbsp;&nbsp;* remove g:exES_default_vimfiles, now the vimfiles dirname will be generate automatically by the vimentry name.<br> * Bug fix<br>&nbsp;&nbsp;&nbsp;&nbsp;* fix exEnvironment use getcwd as g:exES_CWD bug. Instead, we use the folder path of `.vimentry` file <br>&nbsp;&nbsp;&nbsp;&nbsp;* fix exGlobalSearch &lt;c-left&gt;, &lt;c-right&gt; will go to edit buffer <br>&nbsp;&nbsp;&nbsp;&nbsp;* fix visual studio.py can't load unicode solution name<br>&nbsp;&nbsp;&nbsp;&nbsp;* fix open `.vimentry` failed from vim in different path than the path of `.vimentry`<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=10627">ex-plugins-package-7.05a.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>7.05a</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-05-18</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=17258">Jie Wu</a></i></td>
+    <td class="rowodd" valign="top" width="2000">&nbsp;&nbsp;&nbsp;&nbsp;* New features<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o Restore last edit buffer.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o Update project depends on project files ( file_filter and dir_filter ).<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ add filenamelist generate script in quick_gen_project.bat/sh.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ update ctags use option -L filenamelist instead of -R.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ update cscope use filenamelist instead of dir /s /b whole directory.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ add trace log for quick_gen_project script. <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o Support multi-language type for project.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o Support choose language type automatically. (depends on your file_filter input) <br>&nbsp;&nbsp;&nbsp;&nbsp;* Changes<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o change exProject file filter and dir filter syntax<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ file filter = type1,type2,type3,...,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ dir filter = dir1,dir2,dir3,...,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ NOTE: you need to remove the original *.exproject files for this change, or you will meet unwanted errors during refresh project and update project. <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o Automatically generate quick_gen_project-auto.bat/sh instead of copying one from toolkit/quickgen.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o Remove quick_gen_project_xxx_only.bat/sh scripts. (since we use quick_gen_project-auto and -custom)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o .vimentry version number update to 17. ( you will loose your old .vimentry file settings when open an old project ) <br>&nbsp;&nbsp;&nbsp;&nbsp;* Bug fix<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o Fix exMacroHighlight syntax highlight disappear when no any c-like file loaded. </td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=10571">patched-plugins-package.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.0</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-05-10</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=17258">Jie Wu</a></i></td>
+    <td class="roweven" valign="top" width="2000">the patched third part plugins</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=10570">ex-plugins-package-7.04a.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>7.04a</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-05-10</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=17258">Jie Wu</a></i></td>
+    <td class="rowodd" valign="top" width="2000">fix some bugs</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=10546">ex_plugin_only-7.0.7z</a></td>
+    <td class="roweven" valign="top" nowrap><b>7.0</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-05-06</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=17258">Jie Wu</a></i></td>
+    <td class="roweven" valign="top" width="2000">Initial upload</td>
+</tr>
+</table>
+<!-- finish off the framework -->
+          </td>
+        </tr>
+      </table>
+    </td>
+
+  </tr>
+</table>
+
+<!-- END OF THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr><td colspan="4" bgcolor="#000000"><img src="/images/spacer.gif" height="2" width="1" alt=""></td></tr>
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr>
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+
+    <td align="left" valign="top"><small>
+      If you have questions or remarks about this site, visit the
+      <a href="http://vimonline.sf.net">vimonline development</a> pages.
+      Please use this site responsibly.
+      <br> 
+      
+      Questions about <a href="http://www.vim.org/about.php">Vim</a> should go
+      to the <a href="http://www.vim.org/maillist.php">maillist</a>.
+      Help Bram <a href="http://iccf-holland.org/">help Uganda</a>.
+      </small>
+	&nbsp;
+	&nbsp;
+
+	<!-- Start of StatCounter Code -->
+	<script type="text/javascript" language="javascript">
+	var sc_project=1417324; 
+	var sc_invisible=1; 
+	var sc_partition=11; 
+	var sc_security="d41633bc"; 
+	</script>
+
+	<script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script><noscript><a href="http://www.statcounter.com/" target="_blank"><img  src="http://c12.statcounter.com/counter.php?sc_project=1417324&java=0&security=d41633bc&invisible=0" alt="free tracking" border="0"></a> </noscript>
+	<!-- End of StatCounter Code -->
+          </td>
+
+    <td align="right" valign="top">
+      		<a href="http://sourceforge.net/projects/vim" rel="nofollow"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=8&type=1" width="88" height="31" border="0" alt="SourceForge.net Logo" /></a>
+    </td>
+
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+  </tr>
+
+    
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  
+  </tr>
+</table>
+
+</body>
+</html>
+

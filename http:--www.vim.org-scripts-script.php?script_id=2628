@@ -1,0 +1,564 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+  <link rel="Stylesheet" type="text/css" href="/css/style.css" >
+  <title>Vim-R-plugin - Plugin to work with R : vim online</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <meta name="KEYWORDS" content="Vim, Vi IMproved, text editor, home, documentation, tips, scripts, news">
+  <link rel="shortcut icon" type="image/x-icon" href="/images/vim_shortcut.ico">
+</head>
+
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff"> 
+
+<!-- HEADER, SPONSOR IMAGE, VIM IMAGE AND BOOK AD -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+  <td class="lightbg">&nbsp;&nbsp;&nbsp;</td>
+  <td class="lightbg" align="left"><a href="/sponsor/index.php"><img src="/images/sponsorvim.gif" alt="sponsor Vim development" border="0"></a></td>
+    <td class="lightbg" align="center"><a href="/index.php"><img src="/images/vim_header.gif" border="0" alt="Vim logo"></a></td>
+    <td class="lightbg" align="right"><a href="http://iccf-holland.org/click5.html"><img src="/images/buyhelplearn.gif" alt="Vim Book Ad" border="0"></a></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="darkbg"><img src="/images/spacer.gif" width="1" height="10" alt=""></td>
+  </tr>
+</table>
+<!-- THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+  <col width="180">
+  <col width="1">
+
+  <tr valign="top">
+    <td class="sidebar">
+      <table width="180" cellpadding="4" cellspacing="0" border="0">
+        <tr valign="top">
+          <td class="sidebar">
+
+<!-- INCLUDE THE PAGE NAVIGATION -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+    <tr>
+        <td><small>not logged in (<a href="/login.php">login</a>)</small></td>
+    </tr>
+    <tr><td>
+<small>&nbsp;</small>
+<form action="http://www.google.com/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-3005259998294962:bvyni59kjr1" />
+    <input type="hidden" name="ie" value="ISO-8859-1" />
+    <input type="text" name="q" size="20" />
+    <br>
+    <input type="submit" name="sa" value="Search" />
+  </div>
+</form>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+    </td></tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="1"></td>
+    </tr>
+    <tr>
+        <td class="darkbg"><img src="/images/spacer.gif" alt='' border="0" height="3"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="2"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/index.php">Home</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/search.php">Advanced search</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/about.php">About Vim</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/community.php">Community</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/news/news.php">News</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/sponsor/index.php">Sponsoring</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/trivia.php">Trivia</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/docs.php">Documentation</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/download.php">Download</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/scripts/index.php">Scripts</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/tips/index.php">Tips</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/account/index.php">My Account</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/huh.php">Site Help</a></td>
+        </tr>
+</table>
+
+            <table width="172" cellpadding="0" cellspacing="0" border="0">
+              <tr><td><img src="/images/spacer.gif" alt="" border="0" width="1" height="8"></td></tr>
+              <tr><td class="darkbg"><img src="/images/spacer.gif" width="1" height="3" alt=""></td></tr>
+            </table>
+            <br>
+
+<!-- INCLUDE THE PAGE SIDEBAR TEXT -->
+&nbsp;
+
+          </td>
+        </tr>
+      </table>
+    </td>
+
+    <td class="darkbg"><img src="/images/spacer.gif" width="1" height="1" border="0" alt=""><br></td>
+    <td>
+      <table width="100%" cellpadding="10" cellspacing="0" border="0" bordercolor="red">
+        <tr>
+          <td valign="top">
+
+<span class="txth1">Vim-R-plugin : Plugin to work with R</span> 
+
+<br>
+<br>
+
+<!-- karma table -->
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
+  <td>
+    Rating <b>244/75</b>,
+    Downloaded by 2710  </td>
+  <td class="lightbg">
+  <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
+  </td>
+  <td>
+    <a href="http://vim.wikia.com/wiki/Script:2628">Vim wiki</a>
+  </td>  
+</tr>
+</table>
+<p>
+
+<table cellspacing="0" cellpadding="0" border="0">
+<tr><td class="prompt">created by</td></tr>
+<tr><td><a href="/account/profile.php?user_id=17232">Jakson Aquino</a></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">script type</td></tr>
+<tr><td>ftplugin</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">description</td></tr>
+<tr><td>This plugin improves Vim's support for editing R code and makes it possible to integrate Vim with R. The functionality is similar to what you can find in Tinn-R and ess mode of emacs. This filetype plugin uses either screen (Linux, OS X, or other Unix, optionally with the Screen plugin, <a href="/scripts/script.php?script_id=2711">vimscript #2711</a>) or Python (Microsoft Windows) or Conque Shell plugin (all platforms, <a href="/scripts/script.php?script_id=2771">vimscript #2771</a>) or Apple Script (Mac OS X) to communicate with R. <br><br>Screenshots and Debian package: <a target="_blank" href="http://sites.google.com/site/jalvesaq/vimrplugin">http://sites.google.com/site/jalvesaq/vimrplugin</A><br><br>MAIN FEATURES:<br><br>&nbsp;&nbsp;* Syntax highlighting for R syntax, including:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Special characters in strings.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Functions of all installed packages (must be updated manually).<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Special highlighting for R output (.Rout files).<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Spell check only strings and comments.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Fold code when foldmethod=syntax.<br>&nbsp;&nbsp;* Syntax highlighting for RHelp syntax.<br>&nbsp;&nbsp;* Smart indentation for R syntax.<br>&nbsp;&nbsp;* Smart indentation for RHelp syntax.<br>&nbsp;&nbsp;* Integrated communication with R:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Start/Close R.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Send lines, selection, paragraphs, functions, blocks, entire file.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Send commands with the object under cursor as argument: help, args,<br>	plot, print, str, summary, example, names.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Send to R the Sweave and pdflatex commands.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Run R inside a Vim's buffer.<br>&nbsp;&nbsp;* Omni completion (auto-completion) for R objects (.GlobalEnv and installed<br>&nbsp;&nbsp;&nbsp;&nbsp;packages. The list of installed packages must be updated manually.<br>&nbsp;&nbsp;* Ability to see R's documentation in a Vim's buffer:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Automatic calculation of the best layout of the R documentation buffer<br>	(split the window either horizontally or vertically according to the<br>	available room).<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Automatic formating of the text to fit the panel width.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Send code and commands to R (useful to run examples).<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Jump to another R documentation.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Syntax highlighting of R documentation.<br>&nbsp;&nbsp;* Object Browser (.GlobalEnv and loaded packages; must be updated manually):<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Send commands with the object under cursor as argument.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Call R's help() with the object under cursor as argument.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Syntax highlighting of the Object Browser.<br>&nbsp;&nbsp;* Most of the plugin's behavior is customizable.<br><br><br>USE: Please, read the plugin's documentation.<br><br>FILES:<br><br>&nbsp;&nbsp; autoload/rcomplete.vim<br>&nbsp;&nbsp; bitmaps/RClearAll.bmp<br>&nbsp;&nbsp; bitmaps/RClearAll.png<br>&nbsp;&nbsp; bitmaps/RClear.bmp<br>&nbsp;&nbsp; bitmaps/RClear.png<br>&nbsp;&nbsp; bitmaps/RClose.bmp<br>&nbsp;&nbsp; bitmaps/RClose.png<br>&nbsp;&nbsp; bitmaps/ricon.png<br>&nbsp;&nbsp; bitmaps/ricon.xbm<br>&nbsp;&nbsp; bitmaps/RListSpace.bmp<br>&nbsp;&nbsp; bitmaps/RListSpace.png<br>&nbsp;&nbsp; bitmaps/RSendBlock.bmp<br>&nbsp;&nbsp; bitmaps/RSendBlock.png<br>&nbsp;&nbsp; bitmaps/RSendFile.bmp<br>&nbsp;&nbsp; bitmaps/RSendFile.png<br>&nbsp;&nbsp; bitmaps/RSendFunction.bmp<br>&nbsp;&nbsp; bitmaps/RSendFunction.png<br>&nbsp;&nbsp; bitmaps/RSendLine.bmp<br>&nbsp;&nbsp; bitmaps/RSendLine.png<br>&nbsp;&nbsp; bitmaps/RSendParagraph.bmp<br>&nbsp;&nbsp; bitmaps/RSendParagraph.png<br>&nbsp;&nbsp; bitmaps/RSendSelection.bmp<br>&nbsp;&nbsp; bitmaps/RSendSelection.png<br>&nbsp;&nbsp; bitmaps/RStart.bmp<br>&nbsp;&nbsp; bitmaps/RStart.png<br>&nbsp;&nbsp; doc/r-plugin.txt<br>&nbsp;&nbsp; ftdetect/r.vim<br>&nbsp;&nbsp; ftplugin/rhelp.vim<br>&nbsp;&nbsp; ftplugin/rnoweb.vim<br>&nbsp;&nbsp; ftplugin/r.vim<br>&nbsp;&nbsp; ftplugin/rbrowser.vim<br>&nbsp;&nbsp; indent/r.vim<br>&nbsp;&nbsp; indent/rhelp.vim<br>&nbsp;&nbsp; indent/rnoweb.vim<br>&nbsp;&nbsp; r-plugin/build_omniList.R<br>&nbsp;&nbsp; r-plugin/common_buffer.vim<br>&nbsp;&nbsp; r-plugin/common_global.vim<br>&nbsp;&nbsp; r-plugin/etags2ctags.R<br>&nbsp;&nbsp; r-plugin/functions.vim<br>&nbsp;&nbsp; r-plugin/omniList<br>&nbsp;&nbsp; r-plugin/vimbrowser.R<br>&nbsp;&nbsp; r-plugin/vimhelp.R<br>&nbsp;&nbsp; r-plugin/r.snippets<br>&nbsp;&nbsp; r-plugin/rpager.sh<br>&nbsp;&nbsp; r-plugin/specialfuns.R<br>&nbsp;&nbsp; r-plugin/tex_indent.vim<br>&nbsp;&nbsp; r-plugin/vimActivate.js<br>&nbsp;&nbsp; r-plugin/windows.py<br>&nbsp;&nbsp; syntax/rbrowser.vim<br>&nbsp;&nbsp; syntax/rhelp.vim<br>&nbsp;&nbsp; syntax/rout.vim<br>&nbsp;&nbsp; syntax/r.vim<br></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">install details</td></tr>
+<tr><td>GENERAL INSTRUCTIONS<br><br>You need to activate plugins and indentation according to 'filetype'. You should have at least the following options in your vimrc:<br><br>&nbsp;&nbsp;set nocompatible<br>&nbsp;&nbsp;syntax enable<br>&nbsp;&nbsp;filetype plugin on<br>&nbsp;&nbsp;filetype indent on<br><br>Make a backup of your ~/.vim directory because existing files will be replaced.<br><br>OPERATING SYSTEM SPECIFIC INSTRUCTIONS<br><br>LINUX/UNIX<br><br>Create your ~/.vim directory if you do not have it yet:<br><br>&nbsp;&nbsp;mkdir -p ~/.vim<br><br>Uncompress the archive:<br><br>&nbsp;&nbsp;unzip vim-r-plugin-*.zip -d ~/.vim<br><br>Start Vim and build the tags file for this document (and others that eventually are in at the same directory):<br><br>&nbsp;&nbsp;:helptags ~/.vim/doc<br><br>Read the plugin's documentation to finish the installation:<br><br>&nbsp;&nbsp;:h r-plugin-installation<br><br><br>WINDOWS<br><br>Create your vimfiles directory if you do not have it yet. Its path will be similar to one of the following:<br><br>&nbsp;&nbsp;C:\Documents and Settings\yourlogin\vimfiles<br>&nbsp;&nbsp;C:\Users\yourlogin\vimfiles<br><br>Uncompress the archive. Right click on the plugin's zip file and choose &quot;Extract all&quot;. Then choose ~/vimfiles as the destination directory.<br><br>Start Vim and build the tags file for this document (and others that eventually are in the same directory):<br><br>&nbsp;&nbsp;:helptags ~\vimfiles\doc<br><br>Read the plugin's documentation to finish the installation:<br><br>&nbsp;&nbsp;:h r-plugin-installation<br><br></td></tr>
+<tr><td>&nbsp;</td></tr>
+</table>
+
+<!-- rating table -->
+<form name="rating">
+<input type="hidden" name="script_id" value="2628">
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>rate this script</b></td>
+  <td valign="middle">
+    <input type="radio" name="rating" value="life_changing">Life Changing
+    <input type="radio" name="rating" value="helpful">Helpful
+    <input type="radio" name="rating" value="unfulfilling">Unfulfilling&nbsp;
+    <input type="submit" value="rate">
+  </td>
+</tr>
+</table>
+</form>
+<span class="txth2">script versions</span> (<a href="add_script_version.php?script_id=2628">upload new version</a>)
+<p>
+Click on the package to download.
+<p>
+
+<table cellspacing="2" cellpadding="4" border="0" width="100%">
+<tr class='tableheader'>
+        <th valign="top">package</th>
+    <th valign="top">script version</th>
+    <th valign="top">date</th>
+    <th valign="top">Vim version</th>
+    <th valign="top">user</th>
+    <th valign="top">release notes</th>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15089">vim-r-plugin-110222.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>110222</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2011-02-22</i></td>
+    <td class="rowodd" valign="top" nowrap>7.3</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=17232">Jakson Aquino</a></i></td>
+    <td class="rowodd" valign="top" width="2000">* Added syntax/rhelp.vim.<br>* New command for rnoweb files: BibTeX current file (\sb).<br>* New commands for the object browser: open visible lists (\r=) and close visible lists (\r-).<br>* Reorganization of the GUI menu.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=14985">vim-r-plugin-110208.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>110208</b></td>
+    <td class="roweven" valign="top" nowrap><i>2011-02-08</i></td>
+    <td class="roweven" valign="top" nowrap>7.3</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=17232">Jakson Aquino</a></i></td>
+    <td class="roweven" valign="top" width="2000">* Fixed bug in &quot;else if&quot; constructions (thanks to Dan Kelley for reporting the bug).<br>* Support for commenting/uncommenting lines.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=14950">vim-r-plugin-110203.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>110203</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2011-02-03</i></td>
+    <td class="rowodd" valign="top" nowrap>7.3</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=17232">Jakson Aquino</a></i></td>
+    <td class="rowodd" valign="top" width="2000">* Fixed bug in&nbsp;&nbsp;:RUpdateObjList&nbsp;&nbsp;when the function arguments included S4 objects (thanks to Gerhard Schöfl for reporting the bug).<br>* Improvements in indentation of R code (thanks to Dan Kelley for finding and reporting indentation bugs and testing many versions of indent/r.vim).<br>* New indentation options: r_indent_align_args, r_indent_ess_comments, r_indent_comment_column, and r_indent_ess_compatible.<br>* New file: indent/rhelp.vim.<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=14770">vim-r-plugin-110117.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>110117</b></td>
+    <td class="roweven" valign="top" nowrap><i>2011-01-17</i></td>
+    <td class="roweven" valign="top" nowrap>7.3</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=17232">Jakson Aquino</a></i></td>
+    <td class="roweven" valign="top" width="2000">* Fixed indentation bug in Rnoweb files (thanks to Dan Kelley for reporting the bug).</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=14550">vim-r-plugin-101217.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>101217</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-12-17</i></td>
+    <td class="rowodd" valign="top" nowrap>7.3</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=17232">Jakson Aquino</a></i></td>
+    <td class="rowodd" valign="top" width="2000">* Renamed the function SendCmdToScreen to SendCmdToR.<br>* Clear the current line in the R console before sending a new line.<br>* Always starts R on the script's directory.<br>* Don't send &quot;^@$&quot; as part of a paragraph in rnoweb files (thanks to Fabio Correa for reporting the bug).<br>* More useful warning message when PyWin32 isn't installed.<br>* Initial support to Apple Script on Mac OS X (thanks to Vincent Nijs for writing and testing the code).</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=14337">vim-r-plugin-101121.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>101121</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-11-21</i></td>
+    <td class="roweven" valign="top" nowrap>7.3</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=17232">Jakson Aquino</a></i></td>
+    <td class="roweven" valign="top" width="2000">* Fix for when whoami returns domain name on Windows (thanks to &quot;Si&quot; for fixing the bug).<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=14296">vim-r-plugin-101118.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>101118</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-11-18</i></td>
+    <td class="rowodd" valign="top" nowrap>7.3</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=17232">Jakson Aquino</a></i></td>
+    <td class="rowodd" valign="top" width="2000">* New command:&nbsp;&nbsp;:RUpdateObjListAll.<br>* New option: vimrplugin_allnames.<br>* Allow the use of Python 3.1 on Windows.<br>* Minor improvements in indentation of R code.<br>* The file r-plugin/omni_list was renamed to r-plugin/omniList because its field separator changed to &quot;;&quot;.<br>* Fixed bug that was causing ^H to be exhibited in the R documentation in some systems. (Thanks to Helge Liebert for reporting the problem).<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=14203">vim-r-plugin-101107.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>101107</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-11-07</i></td>
+    <td class="roweven" valign="top" nowrap>7.3</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=17232">Jakson Aquino</a></i></td>
+    <td class="roweven" valign="top" width="2000">* New feature: complete chunk block when '&lt;' is pressed in rnoweb files.<br>* New option: vimrplugin_rnowebchunk.<br>* New key bindings in Normal mode for Rnoweb files: gn (go to next R code chunk) and gN (go to previous R code chunk).<br>* New command:&nbsp;&nbsp;:RBuildTags.<br>* Added fold capability to syntax/r.vim.<br>* Improved indentation of rnoweb files: thanks to Johannes Tanzler for writing the tex.vim indent script and for permitting its inclusion in the Vim-R-plugin.<br>* R CMD BATCH now is called with --no-restore --no-save (key binding \ro).<br>* The file r-plugin/omnilist now has an additional field and was renamed as omni_list.<br>* Use 64 bit version of R by default on Windows if the directory bin/x64 exists.<br>* New Windows only option: vimrplugin_i386.<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=14115">vim-r-plugin-101025.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>101025</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-10-25</i></td>
+    <td class="rowodd" valign="top" nowrap>7.3</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=17232">Jakson Aquino</a></i></td>
+    <td class="rowodd" valign="top" width="2000">* New option: vimrplugin_routmorecolors.<br>* Fixed bug in the object browser when a data.frame or list had just one element (thanks to Jan Larres for reporting the bug).<br>* Do not copy omnilist and functions.vim to ~/.vim/r-plugin if the directory where the plugin is installed is writable (thanks to Jan Larres for the suggestion).</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=14103">vim-r-plugin2-101023.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>101023</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-10-23</i></td>
+    <td class="roweven" valign="top" nowrap>7.3</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=17232">Jakson Aquino</a></i></td>
+    <td class="roweven" valign="top" width="2000">* New options: vimrplugin_objbr_place and vimrplugin_objbr_w.<br>* New default value: vimrplugin_vimpager = &quot;vertical&quot;<br>* The R help can now be seen in a Vim buffer on MS Windows.<br>* Fix width of help text when R version &gt;= 2.12.0.<br>* Implemented actions in the object browser: summary, print, etc...<br>* Browse libraries objects in object browser.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=14066">vim-r-plugin2-101016.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>101016</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-10-16</i></td>
+    <td class="rowodd" valign="top" nowrap>7.3</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=17232">Jakson Aquino</a></i></td>
+    <td class="rowodd" valign="top" width="2000">* Minor bug fixes in the object browser.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=14061">vim-r-plugin2-101015.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>101015</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-10-15</i></td>
+    <td class="roweven" valign="top" nowrap>7.3</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=17232">Jakson Aquino</a></i></td>
+    <td class="roweven" valign="top" width="2000">* New feature: Object browser.<br>* Conque Shell will be used if installed unless explicitly told otherwise in the vimrc.<br>* New valid value for vimrplugin_vimpager: &quot;tabnew&quot;<br><br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13892">vim-r-plugin2-100923.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>100923</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-09-23</i></td>
+    <td class="rowodd" valign="top" nowrap>7.3</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=17232">Jakson Aquino</a></i></td>
+    <td class="rowodd" valign="top" width="2000">* New option: vimrplugin_vimpager.<br>* Do not let Vim translate &quot;File&quot; in R menu.<br>* Fixed bug when the option vimrplugin_r_path was used (thanks to Asis Hallab for reporting the bug),<br>* Fixed bug (E687) when user created custom key binding (thanks to Philippe Glaziou for reporting the bug).<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13850">vim-r-plugin2-100917.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>100917</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-09-17</i></td>
+    <td class="roweven" valign="top" nowrap>7.3</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=17232">Jakson Aquino</a></i></td>
+    <td class="roweven" valign="top" width="2000">* Changed the use of vimrplugin_r_path: now the option includes only the directory part of the path.<br>* Initial support to Conque Shell plugin. Thanks to &quot;il_principe orange&quot; for suggesting the use of Conque Shell, &quot;ZyX-I&quot; for writing the initial code to use Conque Shell, and Nico Raffo for writing the plugin and additional code to integrate both plugins.<br>* New options: vimrplugin_conqueplugin and vimrplugin_conquevsplit, vimrplugin_r_args.<br>* Initial support for Vim-R communication on Windows using Python.<br>* Fixed bug when the plugin was installed in a directory other than ~/.vim (thanks to Tom Link).<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13672">vim-r-plugin2-100825.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>100825</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-08-25</i></td>
+    <td class="rowodd" valign="top" nowrap>7.3</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=17232">Jakson Aquino</a></i></td>
+    <td class="rowodd" valign="top" width="2000">* Minor improvements in syntax highlighting.<br>* New option: vimrplugin_buildwait.<br>* New option: vimrplugin_r_path (thanks to Asis Hallab).</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13467">vim-r-plugin2-100803.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>100803</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-08-03</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=17232">Jakson Aquino</a></i></td>
+    <td class="roweven" valign="top" width="2000">* Fixed bug in .Rsource name making in some systems.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13452">vim-r-plugin2-100801.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>100801</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-08-01</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=17232">Jakson Aquino</a></i></td>
+    <td class="rowodd" valign="top" width="2000">* Dropped options vimrplugin_hstart and vimrplugin_browser_time.<br>* If ~/.vim/r-plugin/functions.vim is not found, try to copy it from&nbsp;&nbsp;/usr/share/vim/addons/r-plugin/functions.vim.<br>* Minor bug fixes.<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13444">vim-r-plugin2-100730.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>100730</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-07-31</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=17232">Jakson Aquino</a></i></td>
+    <td class="roweven" valign="top" width="2000">* Added menu item and key binding for run &quot;R CMD BATCH&quot; and open the resulting &quot;.Rout&quot; file.<br> * Fixed bug when more than one Vim instance used the same file to send multiple lines of code to R (thanks to Bart for reporting the bug).</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13423">vim-r-plugin2-100728.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>100728</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-07-28</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=17232">Jakson Aquino</a></i></td>
+    <td class="rowodd" valign="top" width="2000">* Adapted the code to build a Debian package.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13353">vim-r-plugin2-100719.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>100719</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-07-19</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=17232">Jakson Aquino</a></i></td>
+    <td class="roweven" valign="top" width="2000">* Renamed the directory &quot;tools&quot; and some files.<br>* Added options vimrplugin_listmethods and vimrplugin_specialplot.<br>* Improved syntax highlight of R batch output (.Rout files).<br>* No longer uses the external programs grep, awk and sed to build the additional syntax file containing the list of functions.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13317">vim-r-plugin2-100710.tar.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>100710</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-07-10</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=17232">Jakson Aquino</a></i></td>
+    <td class="rowodd" valign="top" width="2000">* Fixed :RUpdateObjList bug when list had length 0.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13306">vim-r-plugin2-100707.tar.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>100707</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-07-07</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=17232">Jakson Aquino</a></i></td>
+    <td class="roweven" valign="top" width="2000"> * Fixed 'E329: No menu &quot;R&quot;' when more than one file were loaded simultaneously by calling vim with either -p or -o parameters. Thanks to Peng Yu for reporting the bug.<br> * Correctly recognize a newly created file with extension &quot;.R&quot; as an R script file.<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13040">vim-r-plugin2-100521.tar.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>100521</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-05-21</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=17232">Jakson Aquino</a></i></td>
+    <td class="rowodd" valign="top" width="2000">* Replaced &quot;-t&quot; with &quot;--title&quot; to make xfce4-terminal work again.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=12991">vim-r-plugin2-100512.tar.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>100512</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-05-12</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=17232">Jakson Aquino</a></i></td>
+    <td class="roweven" valign="top" width="2000">* Thanks to Tortonesi Mauro who wrote a patch to make the plugin work with pathogen.vim.<br>* Added simple syntax hightlight for .Rout files.<br>* Increased the time limit of RUpdateObjList to two minutes.<br>* Improvement in the syntax highlight based on code written by Zhuojun Chen.<br>* Thanks to Scott Kostyshak who helped to improve the documentation.<br>* Iago Mosqueira suggested that the plugin should be able to run one R process for each Vim instance, and his suggestion was implemented with the option g:vimrplugin_by_vim_instance.<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=11943">vim-r-plugin2-091223.tar.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>091223</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-12-23</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=17232">Jakson Aquino</a></i></td>
+    <td class="rowodd" valign="top" width="2000">* Changes in omni completion: now using two tags files, one for .GlobalEnv and other for all other environments. The command :RUpdateObjList must be used to update the list of objects that are not in .Globalenv. Arguments of functions are displayed in a scratch window.<br>* Syntax highlight for R functions. The command :RUpdateObjList must be used to update the list of functions to be highlighted.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=11535">vim-r-plugin2-091016.tar.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>091016</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-10-16</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=17232">Jakson Aquino</a></i></td>
+    <td class="roweven" valign="top" width="2000">* The plugin now can run together with screen.vim, thanks to Eric Van Dewoestine, the author of screen.vim, who added script integration to screen.vim.<br>* Andy Choens has made many improvements on the documentation.<br>* Added the possibility of custom key binding creation to call any R function with the word under cursor as argument.<br>* The key bindings related with Sweave are activated even if the file type is not rnoweb.<br>* Replaced &lt;Leader&gt; with &lt;LocalLeader&gt; in the key bindings.<br>* Added &quot;Send Paragraph&quot; commands.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=11484">vim-r-plugin2-091004.tar.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>091004</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-10-05</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=17232">Jakson Aquino</a></i></td>
+    <td class="rowodd" valign="top" width="2000">* José Cláudio Faria has began to work in the project as co-author.<br>* Some ideas from Tinn-R project were ported to the plugin.<br>* The main menu has new items and the toolbar new icons.<br>* Documentation improvements.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=11283">vim-r-plugin2-090828.tar.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>090828</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-08-28</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=17232">Jakson Aquino</a></i></td>
+    <td class="roweven" valign="top" width="2000"> * Faster startup.<br> * Better support for Rnoweb files: the cursor goes to '^&lt;&lt;' if the sent line is '^@$'.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=11178">vim-r-plugin2-090811.tar.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>090811</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-08-12</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=17232">Jakson Aquino</a></i></td>
+    <td class="rowodd" valign="top" width="2000"> * Now use screen instead of funnel.pl. The bugs and limitations related with funnel.pl are solved.<br> * Deleted key binding for R-devel.<br> * Automatically detect available terminal emulators and choose one of them.<br> * By default, no longer calls help.start() the first time that &lt;C-H&gt; is pressed.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=11169">vim-r-plugin2-090810.tar.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>090810</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-08-10</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=17232">Jakson Aquino</a></i></td>
+    <td class="roweven" valign="top" width="2000"> * Added R icons for some terminal emulators.<br> * Removed the script open-gvim-here. You may use Vim's option autochdir.<br> * Added option g:vimrplugin_term.<br> * Improved indentation script.<br> * Changed key binding from &lt;S-Enter&gt;, which doesn't work in any terminal, to &lt;M-Enter&gt;, which at least works in xterm.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=10799">vim-r-plugin2-090610.tar.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>090610</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-06-11</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=17232">Jakson Aquino</a></i></td>
+    <td class="rowodd" valign="top" width="2000">The options expandtab, shiftwidth and tabstop are no longer set by the plugin. Better word detection before calling R's help(). Fixed bug in underscore replacement. Fixed small bug in code indentation. Added scipt rpager.sh. Added two new plugin options: no underscore replacement and fixed name for the pipe file instead of random one.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=10672">vim-r-plugin2-090523.tar.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>090523</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-05-23</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=17232">Jakson Aquino</a></i></td>
+    <td class="roweven" valign="top" width="2000">* Key bindings now are customizable.<br>* Default key binding for calling R's args() changed to &lt;S-F1&gt;.<br>* New R script rargs.R gives better results for generic functions than R's args() called directly.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=10637">vim-r-plugin2-090519.tar.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>090519</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-05-20</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=17232">Jakson Aquino</a></i></td>
+    <td class="rowodd" valign="top" width="2000">* Don't send large blocks of code to R to avoid xterm freezing.<br>* Automatically call help.start() after &lt;C-H&gt; is pressed for the first time, and wait 4 seconds for the browser start before calling R's help(). These features are customizable.<br>* Fixed tags file script.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=10612">vim-r-plugin2-090516.tar.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>090516</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-05-16</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=17232">Jakson Aquino</a></i></td>
+    <td class="roweven" valign="top" width="2000">* Added documentation.<br>* Added ability to send function to R, revert the automatic convertion of &quot;_&quot; into &quot;&lt;-&quot; and call R's help().<br>* Added archive with some files to ease desktop integration, if desired.<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=10562">vim-r-plugin2-090507.tar.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>090507</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-05-08</i></td>
+    <td class="rowodd" valign="top" nowrap>7.2</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=17232">Jakson Aquino</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Initial upload</td>
+</tr>
+</table>
+<!-- finish off the framework -->
+          </td>
+        </tr>
+      </table>
+    </td>
+
+  </tr>
+</table>
+
+<!-- END OF THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr><td colspan="4" bgcolor="#000000"><img src="/images/spacer.gif" height="2" width="1" alt=""></td></tr>
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr>
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+
+    <td align="left" valign="top"><small>
+      If you have questions or remarks about this site, visit the
+      <a href="http://vimonline.sf.net">vimonline development</a> pages.
+      Please use this site responsibly.
+      <br> 
+      
+      Questions about <a href="http://www.vim.org/about.php">Vim</a> should go
+      to the <a href="http://www.vim.org/maillist.php">maillist</a>.
+      Help Bram <a href="http://iccf-holland.org/">help Uganda</a>.
+      </small>
+	&nbsp;
+	&nbsp;
+
+	<!-- Start of StatCounter Code -->
+	<script type="text/javascript" language="javascript">
+	var sc_project=1417324; 
+	var sc_invisible=1; 
+	var sc_partition=11; 
+	var sc_security="d41633bc"; 
+	</script>
+
+	<script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script><noscript><a href="http://www.statcounter.com/" target="_blank"><img  src="http://c12.statcounter.com/counter.php?sc_project=1417324&java=0&security=d41633bc&invisible=0" alt="free tracking" border="0"></a> </noscript>
+	<!-- End of StatCounter Code -->
+          </td>
+
+    <td align="right" valign="top">
+      		<a href="http://sourceforge.net/projects/vim" rel="nofollow"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=8&type=1" width="88" height="31" border="0" alt="SourceForge.net Logo" /></a>
+    </td>
+
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+  </tr>
+
+    
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  
+  </tr>
+</table>
+
+</body>
+</html>
+

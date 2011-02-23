@@ -1,0 +1,353 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+  <link rel="Stylesheet" type="text/css" href="/css/style.css" >
+  <title>user profile : vim online</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <meta name="KEYWORDS" content="Vim, Vi IMproved, text editor, home, documentation, tips, scripts, news">
+  <link rel="shortcut icon" type="image/x-icon" href="/images/vim_shortcut.ico">
+</head>
+
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff"> 
+
+<!-- HEADER, SPONSOR IMAGE, VIM IMAGE AND BOOK AD -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+  <td class="lightbg">&nbsp;&nbsp;&nbsp;</td>
+  <td class="lightbg" align="left"><a href="/sponsor/index.php"><img src="/images/sponsorvim.gif" alt="sponsor Vim development" border="0"></a></td>
+    <td class="lightbg" align="center"><a href="/index.php"><img src="/images/vim_header.gif" border="0" alt="Vim logo"></a></td>
+    <td class="lightbg" align="right"><a href="http://iccf-holland.org/click5.html"><img src="/images/buyhelplearn.gif" alt="Vim Book Ad" border="0"></a></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="darkbg"><img src="/images/spacer.gif" width="1" height="10" alt=""></td>
+  </tr>
+</table>
+<!-- THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+  <col width="180">
+  <col width="1">
+
+  <tr valign="top">
+    <td class="sidebar">
+      <table width="180" cellpadding="4" cellspacing="0" border="0">
+        <tr valign="top">
+          <td class="sidebar">
+
+<!-- INCLUDE THE PAGE NAVIGATION -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+    <tr>
+        <td><small>not logged in (<a href="/login.php">login</a>)</small></td>
+    </tr>
+    <tr><td>
+<small>&nbsp;</small>
+<form action="http://www.google.com/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-3005259998294962:bvyni59kjr1" />
+    <input type="hidden" name="ie" value="ISO-8859-1" />
+    <input type="text" name="q" size="20" />
+    <br>
+    <input type="submit" name="sa" value="Search" />
+  </div>
+</form>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+    </td></tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="1"></td>
+    </tr>
+    <tr>
+        <td class="darkbg"><img src="/images/spacer.gif" alt='' border="0" height="3"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="2"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/index.php">Home</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/search.php">Advanced search</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/about.php">About Vim</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/community.php">Community</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/news/news.php">News</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/sponsor/index.php">Sponsoring</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/trivia.php">Trivia</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/docs.php">Documentation</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/download.php">Download</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/scripts/index.php">Scripts</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/tips/index.php">Tips</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/account/index.php">My Account</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/huh.php">Site Help</a></td>
+        </tr>
+</table>
+
+            <table width="172" cellpadding="0" cellspacing="0" border="0">
+              <tr><td><img src="/images/spacer.gif" alt="" border="0" width="1" height="8"></td></tr>
+              <tr><td class="darkbg"><img src="/images/spacer.gif" width="1" height="3" alt=""></td></tr>
+            </table>
+            <br>
+
+<!-- INCLUDE THE PAGE SIDEBAR TEXT -->
+&nbsp;
+
+          </td>
+        </tr>
+      </table>
+    </td>
+
+    <td class="darkbg"><img src="/images/spacer.gif" width="1" height="1" border="0" alt=""><br></td>
+    <td>
+      <table width="100%" cellpadding="10" cellspacing="0" border="0" bordercolor="red">
+        <tr>
+          <td valign="top">
+
+<h1>Profile</h1>
+<table cellpadding="4" cellspacing="2" border="0">
+<tr>
+    <td class="prompt">user name</td>
+    <td>mgeddes</td>
+</tr>
+<tr>
+    <td class="prompt">first name</td>
+    <td>Michael</td>
+</tr>
+<tr>
+    <td class="prompt">last name</td>
+    <td>Geddes</td>
+</tr>
+<tr>
+    <td class="prompt">email</td>
+    <td>vimmer<img src="/images/emailat.png" width="7" height="11">frog<img src="/images/emaildot.png" width="4" height="11">wheelycreek<img src="/images/emaildot.png" width="4" height="11">net</td>
+</tr>
+<tr>
+    <td class="prompt">homepage</td>
+            <td></td>
+    </tr>
+<tr>
+    <td class="prompt">registered Vim<br>user or sponsor</td>
+    <td valign="top">yes</td>
+</tr>
+</table>
+
+<h1>Script Contributions</h1>
+<table cellspacing="4" cellpadding="2" border="0">
+<tr>
+    <td class="roweven"><a href="/scripts/script.php?script_id=5">DoxyGen Syntax</a></td>
+    <td class="roweven">DoxyGen Highlighting on top of c/c++/java</td>
+</tr>
+<tr>
+    <td class="rowodd"><a href="/scripts/script.php?script_id=6">keepcase.vim</a></td>
+    <td class="rowodd">Functions for doing case-persistant substitutions</td>
+</tr>
+<tr>
+    <td class="roweven"><a href="/scripts/script.php?script_id=7">ifdef.vim</a></td>
+    <td class="roweven">#ifdef highlighting in c/c++/idl</td>
+</tr>
+<tr>
+    <td class="rowodd"><a href="/scripts/script.php?script_id=9">buffoptions.vim</a></td>
+    <td class="rowodd">Per-buffer options/menus/maps</td>
+</tr>
+<tr>
+    <td class="roweven"><a href="/scripts/script.php?script_id=14">htmlcmd.vim</a></td>
+    <td class="roweven">Rich HTML/XML commands</td>
+</tr>
+<tr>
+    <td class="rowodd"><a href="/scripts/script.php?script_id=172">TeTrIs.vim</a></td>
+    <td class="rowodd">A tetris game in pure vim</td>
+</tr>
+<tr>
+    <td class="roweven"><a href="/scripts/script.php?script_id=203">DSP Make</a></td>
+    <td class="roweven">Set Makeprg for MSDEV DSP</td>
+</tr>
+<tr>
+    <td class="rowodd"><a href="/scripts/script.php?script_id=230">Brace Complete for C/C++</a></td>
+    <td class="rowodd">Adds braces after if, else, while</td>
+</tr>
+<tr>
+    <td class="roweven"><a href="/scripts/script.php?script_id=231">Smart Tabs</a></td>
+    <td class="roweven">Use tabs for indent, spaces for alignment</td>
+</tr>
+<tr>
+    <td class="rowodd"><a href="/scripts/script.php?script_id=236">SourceSafe Integration</a></td>
+    <td class="rowodd">Fairly complete file-based SourceSafe Integration</td>
+</tr>
+<tr>
+    <td class="roweven"><a href="/scripts/script.php?script_id=237">Michael's Standard Settings</a></td>
+    <td class="roweven">Some standard 'vimrc' settings & mappings that I use</td>
+</tr>
+<tr>
+    <td class="rowodd"><a href="/scripts/script.php?script_id=238">Hex Output</a></td>
+    <td class="rowodd">Output a number as HEX</td>
+</tr>
+<tr>
+    <td class="roweven"><a href="/scripts/script.php?script_id=246">Buffer Menus</a></td>
+    <td class="roweven">Add menus for the current buffer only.</td>
+</tr>
+<tr>
+    <td class="rowodd"><a href="/scripts/script.php?script_id=433">Get Win32 Short Name</a></td>
+    <td class="rowodd">Works out the 8.3 short-name of an existing file</td>
+</tr>
+<tr>
+    <td class="roweven"><a href="/scripts/script.php?script_id=434">Get UNC Path (Win32)</a></td>
+    <td class="roweven">Get/Yank a UNC pathname using 'net share'</td>
+</tr>
+<tr>
+    <td class="rowodd"><a href="/scripts/script.php?script_id=464">VB Line-Number</a></td>
+    <td class="rowodd">Translate Line #'s reported by vb command line to source code line</td>
+</tr>
+<tr>
+    <td class="roweven"><a href="/scripts/script.php?script_id=470">HTML Photo Board</a></td>
+    <td class="roweven">Generate a HTML Thumbnail Photoboard using ImageMagic</td>
+</tr>
+<tr>
+    <td class="rowodd"><a href="/scripts/script.php?script_id=546">IDL/ATL Helper</a></td>
+    <td class="rowodd">Create/modify (win32) idl files and ATL projects</td>
+</tr>
+<tr>
+    <td class="roweven"><a href="/scripts/script.php?script_id=809">Smart Diffsplit</a></td>
+    <td class="roweven">Diffsplit that restores window settings</td>
+</tr>
+<tr>
+    <td class="rowodd"><a href="/scripts/script.php?script_id=770">Source Control</a></td>
+    <td class="rowodd">Common interface to source-control</td>
+</tr>
+<tr>
+    <td class="roweven"><a href="/scripts/script.php?script_id=859">Destructive Paste</a></td>
+    <td class="roweven">Pastes the register, replacing text</td>
+</tr>
+<tr>
+    <td class="rowodd"><a href="/scripts/script.php?script_id=872">Syntax context abbreviations</a></td>
+    <td class="rowodd">Abbreviations that only happen outside comments</td>
+</tr>
+<tr>
+    <td class="roweven"><a href="/scripts/script.php?script_id=1776">Vimgrep Replace</a></td>
+    <td class="roweven">Use vimgrep to do search and replace</td>
+</tr>
+<tr>
+    <td class="rowodd"><a href="/scripts/script.php?script_id=2477">Persistent Abbreviations</a></td>
+    <td class="rowodd">Persistent abbreviations</td>
+</tr>
+<tr>
+    <td class="roweven"><a href="/scripts/script.php?script_id=2545">Buffer grep</a></td>
+    <td class="roweven">A :vimgrep for buffers.</td>
+</tr>
+<tr>
+    <td class="rowodd"><a href="/scripts/script.php?script_id=3448">File Case Enforcer</a></td>
+    <td class="rowodd">Enforce (Windows) filesystem case in buffer names</td>
+</tr>
+</table>
+<!-- finish off the framework -->
+          </td>
+        </tr>
+      </table>
+    </td>
+
+  </tr>
+</table>
+
+<!-- END OF THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr><td colspan="4" bgcolor="#000000"><img src="/images/spacer.gif" height="2" width="1" alt=""></td></tr>
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr>
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+
+    <td align="left" valign="top"><small>
+      If you have questions or remarks about this site, visit the
+      <a href="http://vimonline.sf.net">vimonline development</a> pages.
+      Please use this site responsibly.
+      <br> 
+      
+      Questions about <a href="http://www.vim.org/about.php">Vim</a> should go
+      to the <a href="http://www.vim.org/maillist.php">maillist</a>.
+      Help Bram <a href="http://iccf-holland.org/">help Uganda</a>.
+      </small>
+	&nbsp;
+	&nbsp;
+
+	<!-- Start of StatCounter Code -->
+	<script type="text/javascript" language="javascript">
+	var sc_project=1417324; 
+	var sc_invisible=1; 
+	var sc_partition=11; 
+	var sc_security="d41633bc"; 
+	</script>
+
+	<script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script><noscript><a href="http://www.statcounter.com/" target="_blank"><img  src="http://c12.statcounter.com/counter.php?sc_project=1417324&java=0&security=d41633bc&invisible=0" alt="free tracking" border="0"></a> </noscript>
+	<!-- End of StatCounter Code -->
+          </td>
+
+    <td align="right" valign="top">
+      		<a href="http://sourceforge.net/projects/vim" rel="nofollow"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=8&type=1" width="88" height="31" border="0" alt="SourceForge.net Logo" /></a>
+    </td>
+
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+  </tr>
+
+    
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  
+  </tr>
+</table>
+
+</body>
+</html>
+
+

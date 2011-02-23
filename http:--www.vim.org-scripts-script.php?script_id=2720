@@ -1,0 +1,300 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+  <link rel="Stylesheet" type="text/css" href="/css/style.css" >
+  <title>arc.vim - A syntax highlighter & filetype plugin for Paul Graham's Arc Lisp dialect. : vim online</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <meta name="KEYWORDS" content="Vim, Vi IMproved, text editor, home, documentation, tips, scripts, news">
+  <link rel="shortcut icon" type="image/x-icon" href="/images/vim_shortcut.ico">
+</head>
+
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff"> 
+
+<!-- HEADER, SPONSOR IMAGE, VIM IMAGE AND BOOK AD -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+  <td class="lightbg">&nbsp;&nbsp;&nbsp;</td>
+  <td class="lightbg" align="left"><a href="/sponsor/index.php"><img src="/images/sponsorvim.gif" alt="sponsor Vim development" border="0"></a></td>
+    <td class="lightbg" align="center"><a href="/index.php"><img src="/images/vim_header.gif" border="0" alt="Vim logo"></a></td>
+    <td class="lightbg" align="right"><a href="http://iccf-holland.org/click5.html"><img src="/images/buyhelplearn.gif" alt="Vim Book Ad" border="0"></a></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="darkbg"><img src="/images/spacer.gif" width="1" height="10" alt=""></td>
+  </tr>
+</table>
+<!-- THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+  <col width="180">
+  <col width="1">
+
+  <tr valign="top">
+    <td class="sidebar">
+      <table width="180" cellpadding="4" cellspacing="0" border="0">
+        <tr valign="top">
+          <td class="sidebar">
+
+<!-- INCLUDE THE PAGE NAVIGATION -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+    <tr>
+        <td><small>not logged in (<a href="/login.php">login</a>)</small></td>
+    </tr>
+    <tr><td>
+<small>&nbsp;</small>
+<form action="http://www.google.com/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-3005259998294962:bvyni59kjr1" />
+    <input type="hidden" name="ie" value="ISO-8859-1" />
+    <input type="text" name="q" size="20" />
+    <br>
+    <input type="submit" name="sa" value="Search" />
+  </div>
+</form>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+    </td></tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="1"></td>
+    </tr>
+    <tr>
+        <td class="darkbg"><img src="/images/spacer.gif" alt='' border="0" height="3"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="2"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/index.php">Home</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/search.php">Advanced search</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/about.php">About Vim</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/community.php">Community</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/news/news.php">News</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/sponsor/index.php">Sponsoring</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/trivia.php">Trivia</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/docs.php">Documentation</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/download.php">Download</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/scripts/index.php">Scripts</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/tips/index.php">Tips</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/account/index.php">My Account</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/huh.php">Site Help</a></td>
+        </tr>
+</table>
+
+            <table width="172" cellpadding="0" cellspacing="0" border="0">
+              <tr><td><img src="/images/spacer.gif" alt="" border="0" width="1" height="8"></td></tr>
+              <tr><td class="darkbg"><img src="/images/spacer.gif" width="1" height="3" alt=""></td></tr>
+            </table>
+            <br>
+
+<!-- INCLUDE THE PAGE SIDEBAR TEXT -->
+&nbsp;
+
+          </td>
+        </tr>
+      </table>
+    </td>
+
+    <td class="darkbg"><img src="/images/spacer.gif" width="1" height="1" border="0" alt=""><br></td>
+    <td>
+      <table width="100%" cellpadding="10" cellspacing="0" border="0" bordercolor="red">
+        <tr>
+          <td valign="top">
+
+<span class="txth1">arc.vim : A syntax highlighter & filetype plugin for Paul Graham's Arc Lisp dialect.</span> 
+
+<br>
+<br>
+
+<!-- karma table -->
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
+  <td>
+    Rating <b>5/2</b>,
+    Downloaded by 216  </td>
+  <td class="lightbg">
+  <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
+  </td>
+  <td>
+    <a href="http://vim.wikia.com/wiki/Script:2720">Vim wiki</a>
+  </td>  
+</tr>
+</table>
+<p>
+
+<table cellspacing="0" cellpadding="0" border="0">
+<tr><td class="prompt">created by</td></tr>
+<tr><td><a href="/account/profile.php?user_id=17705">AJ V</a></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">script type</td></tr>
+<tr><td>syntax</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">description</td></tr>
+<tr><td>(Scroll down to see the install details.)<br><br>Note: if you have a bug to report, please do so with the issue tracker at <a target="_blank" href="http://bitbucket.org/fallintothis/arc-vim/issues/">http://bitbucket.org/fallintothis/arc-vim/issues/</A> since I probably won't respond to emails.<br><br>I've only tested this on Vim 7.2.&nbsp;&nbsp;I have no idea (one way or the other) how backwards-compatible it is.<br><br>SYNTAX:<br><br>The following options are available for customizing the Arc highlighter.&nbsp;&nbsp;They work well in conjunction with the accompanying Arc ftplugin options (see below).<br><br>- g:arc_rainbow<br><br>If this variable is nonzero, then matching pairs of parentheses will highlight in 10 different rainbow colors.&nbsp;&nbsp;If this variable is 0, then rainbow colors are gone; it's just normal parentheses and quasiquoted parentheses.<br><br>- g:arc_always_atstrings<br><br>In Arc 3, there is an option to enable string interpolation of arbitrary expressions using at-signs by saying<br>&nbsp;&nbsp;<br>&nbsp;&nbsp;(declare 'atstrings t)<br><br>Then, for instance, &quot;1 + 2 = @(+ 1 2)&quot; is the same as &quot;1 + 2 = 3&quot;.&nbsp;&nbsp;If g:arc_always_atstrings is nonzero, then expressions after the @-symbol inside of strings will be highlighted like normal code, as though you had (declare 'atstrings t).&nbsp;&nbsp;If this variable is 0, then atstrings will not highlight.<br><br>If you want more intelligent control over atstring highlighting, check out the accompanying ftplugin options below.<br><br>EXAMPLE:<br><br>You could put<br><br>&nbsp;&nbsp;let g:arc_always_atstrings=1<br><br>in your .vimrc, and whenever you were highlighting an Arc file, atstrings would highlight, but parentheses would be colored normally (non-rainbow), since you don't have to explicitly set either variable to 0.&nbsp;&nbsp;If they don't exist, they'll do nothing anyways.<br><br>FTPLUGIN:<br><br>The following options are available for customizing the Arc ftplugin.&nbsp;&nbsp;They are meant to work in conjunction with the accompanying Arc syntax highlighter (see above).<br><br>- g:arc_detect_atstrings<br><br>In Arc 3, there is an option to enable string interpolation of arbitrary expressions using at-signs by saying<br>&nbsp;&nbsp;<br>&nbsp;&nbsp;(declare 'atstrings t)<br><br>Then, for instance, &quot;1 + 2 = @(+ 1 2)&quot; is the same as &quot;1 + 2 = 3&quot;.&nbsp;&nbsp;If g:arc_detect_atstrings is nonzero, then expressions after the @-symbol inside of strings will be highlighted like normal code according to the following cases:<br><br>&nbsp;&nbsp;- if a form that will enable atstrings, like<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(declare 'atstrings t)<br>&nbsp;&nbsp;&nbsp;&nbsp;is in the source code, highlight expressions after @-symbols<br><br>&nbsp;&nbsp;- if a form that will disable atstrings, like<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(declare 'atstrings nil)<br>&nbsp;&nbsp;&nbsp;&nbsp;is in the source code, do not highlight expressions after @-symbols<br><br>&nbsp;&nbsp;- if there are multiple forms that contradict each other (enabling<br>&nbsp;&nbsp;&nbsp;&nbsp;atstrings in one place while disabling them in another), then be safe and<br>&nbsp;&nbsp;&nbsp;&nbsp;do not highlight expressions after @-symbols.<br><br>This option can be used as an alternative to g:arc_always_atstrings, which is found in the Arc syntax highlighter (see above).&nbsp;&nbsp;If, however, g:arc_always_atstrings is nonzero, it will take precedence over g:arc_detect_atstrings and always highlight atstrings.&nbsp;&nbsp;When g:arc_always_atstrings is 0, behavior is dictated by g:arc_detect_atstrings.<br><br>Changes in highlighting are triggered whenever you write to the file.&nbsp;&nbsp;If you change, say<br><br>&nbsp;&nbsp;(declare 'atstrings t)<br><br>to<br><br>&nbsp;&nbsp;(declare 'atstrings nil)<br><br>then :w, the atstring highlighting will be turned off.<br><br>- g:arc_bodops<br><br>IMPORTANT: This feature is currently available only if your Vim installation has +python support.&nbsp;&nbsp;See :h python<br><br>If this variable is nonzero, then on every file write your source code is inspected in an attempt to find top-level macro definitions that have body parameters.&nbsp;&nbsp;That is, <br><br>&nbsp;&nbsp;(mac foo (vars vals . body)<br>&nbsp;&nbsp;&nbsp;&nbsp;something)<br><br>will be detected, because it is a macro that takes a rest parameter named &quot;body&quot;.&nbsp;&nbsp;Whereas<br><br>&nbsp;&nbsp;(def foo (a b . body)<br>&nbsp;&nbsp;&nbsp;&nbsp;something)<br><br>will not, because it's not a macro definition, and<br><br>&nbsp;&nbsp;(def make-macro (name)<br>&nbsp;&nbsp;&nbsp;&nbsp;`(mac ,name body (pr &quot;stuff&quot;)))<br><br>will not recognize the quasiquoted macro definition, even though it takes a body parameter.<br><br>The name of each macro found in this way will be added to the &lispwords variable.&nbsp;&nbsp;Then, with auto-indentation, the macro<br><br>&nbsp;&nbsp;(mac foo body<br>&nbsp;&nbsp;&nbsp;&nbsp;bar)<br><br>will indent like<br><br>&nbsp;&nbsp;(foo a<br>&nbsp;&nbsp;&nbsp;&nbsp;b<br>&nbsp;&nbsp;&nbsp;&nbsp;c)<br><br>instead of<br><br>&nbsp;&nbsp;(foo a<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; b<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; c)<br><br>(Sorry; that probably doesn't look right in a non-fixed-width font.)&nbsp;&nbsp;This can be useful for macros that you define to be syntactic forms, much like how, say, looping constructs are defined in Arc itself.<br><br>- g:arc_highlight_lispwords<br><br>If nonzero, every word in the &lispwords variable will highlight as though it were syntax.&nbsp;&nbsp;The highlighting is updated every time you write to the file.&nbsp;&nbsp;This can be useful in conjunction with g:arc_bodops, so that after you write the macro<br><br>&nbsp;&nbsp;(mac my-each (x xs . body)<br>&nbsp;&nbsp;&nbsp;&nbsp;...do stuff...)<br><br>each occurrence of &quot;my-each&quot; will be highlighted & indented just like the &quot;each&quot; macro.&nbsp;&nbsp;You can even add words you want to be highlighted & indented by going<br><br>&nbsp;&nbsp;:setl lispwords+=foo<br><br>This lispword will then persist across file-writes, even if you've not defined a &quot;foo&quot; macro.<br><br>Most of these extra features are useless without the accompanying Arc syntax highlighter, so you probably want to use it if you use these features.<br><br>EXAMPLE:<br><br>You could put<br><br>&nbsp;&nbsp;let g:arc_detect_atstrings=1<br>&nbsp;&nbsp;let g:arc_bodops=1<br>&nbsp;&nbsp;let g:arc_highlight_lispwords=1<br><br>in your .vimrc, and when using the Arc syntax highlighter you can test, say, news.arc and see that:<br><br>&nbsp;&nbsp;- atstrings are highlighted, as there is a positive declaration at the top of the source<br>&nbsp;&nbsp;<br>&nbsp;&nbsp;- macros like &quot;adop&quot; and &quot;edop&quot; are highlighted & auto-indented as lispwords<br><br>&nbsp;&nbsp;- but the macro &quot;newsop&quot; isn't highlighted or auto-indented, because its rest parameter is named &quot;args&quot;.&nbsp;&nbsp;So, you can :setl lw+=newsop and :w to see &quot;newsop&quot; become highlighted.</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">install details</td></tr>
+<tr><td>1.&nbsp;&nbsp;If you haven't already, create your user runtime directory.&nbsp;&nbsp;You typically use the first item of the runtimepath option (see :h runtimepath).&nbsp;&nbsp;For example, using Vim's default runtimepath option on Unix:<br><br>&nbsp;&nbsp;mkdir ~/.vim<br><br>2.&nbsp;&nbsp;If you haven't already, create directories inside of this called &quot;syntax&quot; and &quot;ftplugin&quot;.&nbsp;&nbsp;Continuing the last example:<br><br>&nbsp;&nbsp;mkdir ~/.vim/syntax<br>&nbsp;&nbsp;mkdir ~/.vim/ftplugin<br><br>3.&nbsp;&nbsp;Download and extract the contents of this package (arc-vim.tar.gz).&nbsp;&nbsp;Inside, there will be two directories: &quot;syntax&quot; and &quot;ftplugin&quot;.&nbsp;&nbsp;Inside each of these are their own respective &quot;arc.vim&quot; files.&nbsp;&nbsp;Place each in their respective directories that you have from step 2 (i.e., place the package's &quot;syntax/arc.vim&quot; into &quot;~/.vim/syntax/arc.vim&quot; and &quot;ftplugin/arc.vim&quot; into &quot;~/.vim/ftplugin/arc.vim&quot;).<br><br>4.&nbsp;&nbsp;Now you can start Vim and enable the syntax highlighter.&nbsp;&nbsp;Make sure to first do<br>&nbsp;&nbsp;<br>&nbsp;&nbsp;:syntax enable<br><br>or<br>&nbsp;&nbsp;<br>&nbsp;&nbsp;:syntax on<br><br>if you don't already have this in your .vimrc or such.&nbsp;&nbsp;Then, you can do things like<br><br>&nbsp;&nbsp;:setf arc<br><br>to start highlighting the current buffer.<br><br>5.&nbsp;&nbsp;You can also start Vim and enable the filetype-plugin.&nbsp;&nbsp;Make sure to first do<br>&nbsp;&nbsp;<br>&nbsp;&nbsp;:filetype plugin on<br><br>if you don't already have this in your .vimrc or such.&nbsp;&nbsp;Then you can use commands like<br><br>&nbsp;&nbsp;:setf arc<br><br>to start using the Arc filetype-plugin.&nbsp;&nbsp;For more info, see :h ftplugins<br><br>6.&nbsp;&nbsp;If you want Vim to automatically turn on Arc syntax highlighting / use the Arc ftplugin, you can add<br><br>&nbsp;&nbsp;au BufRead,BufNewFile *.arc setf arc<br><br>to your .vimrc (or ftdetect/arc.vim or what-have-you; see :h new-filetype).<br><br>Note that if, like me, you have any existing sessions/views for a particular Arc file, Vim might be setting the filetype to whatever it was in the view (see :h views-sessions), which means that the above won't seem to have an effect!&nbsp;&nbsp;You can delete the view or manually :setf arc on such files, then all should be fine.</td></tr>
+<tr><td>&nbsp;</td></tr>
+</table>
+
+<!-- rating table -->
+<form name="rating">
+<input type="hidden" name="script_id" value="2720">
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>rate this script</b></td>
+  <td valign="middle">
+    <input type="radio" name="rating" value="life_changing">Life Changing
+    <input type="radio" name="rating" value="helpful">Helpful
+    <input type="radio" name="rating" value="unfulfilling">Unfulfilling&nbsp;
+    <input type="submit" value="rate">
+  </td>
+</tr>
+</table>
+</form>
+<span class="txth2">script versions</span> (<a href="add_script_version.php?script_id=2720">upload new version</a>)
+<p>
+Click on the package to download.
+<p>
+
+<table cellspacing="2" cellpadding="4" border="0" width="100%">
+<tr class='tableheader'>
+        <th valign="top">package</th>
+    <th valign="top">script version</th>
+    <th valign="top">date</th>
+    <th valign="top">Vim version</th>
+    <th valign="top">user</th>
+    <th valign="top">release notes</th>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=11135">arc-vim.tar.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-08-06</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=17705">AJ V</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Changes for the Arc 3.1 release ( see <a target="_blank" href="http://arclanguage.org/item?id=10254">http://arclanguage.org/item?id=10254</A> ):<br>&nbsp;&nbsp;- Use & as ssyntax instead of +<br>&nbsp;&nbsp;- Updated the changed/new Arc identifiers<br>&nbsp;&nbsp;- Removed the o from formatoptions (I found it annoying; if you set it in<br>&nbsp;&nbsp;&nbsp;&nbsp;your .vimrc or such, you can still use it)<br>&nbsp;&nbsp;- Updated the regexp for g:arc_bodops; now it will only match definitions<br>&nbsp;&nbsp;&nbsp;&nbsp;found at the beginning of a line, to avoid macro-defining-macro mismatches<br>&nbsp;&nbsp;&nbsp;&nbsp;(not a perfect solution, but catches the common cases)</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=11060">arc-vim.tar.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.0</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-07-24</i></td>
+    <td class="roweven" valign="top" nowrap>7.2</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=17705">AJ V</a></i></td>
+    <td class="roweven" valign="top" width="2000">Initial upload</td>
+</tr>
+</table>
+<!-- finish off the framework -->
+          </td>
+        </tr>
+      </table>
+    </td>
+
+  </tr>
+</table>
+
+<!-- END OF THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr><td colspan="4" bgcolor="#000000"><img src="/images/spacer.gif" height="2" width="1" alt=""></td></tr>
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr>
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+
+    <td align="left" valign="top"><small>
+      If you have questions or remarks about this site, visit the
+      <a href="http://vimonline.sf.net">vimonline development</a> pages.
+      Please use this site responsibly.
+      <br> 
+      
+      Questions about <a href="http://www.vim.org/about.php">Vim</a> should go
+      to the <a href="http://www.vim.org/maillist.php">maillist</a>.
+      Help Bram <a href="http://iccf-holland.org/">help Uganda</a>.
+      </small>
+	&nbsp;
+	&nbsp;
+
+	<!-- Start of StatCounter Code -->
+	<script type="text/javascript" language="javascript">
+	var sc_project=1417324; 
+	var sc_invisible=1; 
+	var sc_partition=11; 
+	var sc_security="d41633bc"; 
+	</script>
+
+	<script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script><noscript><a href="http://www.statcounter.com/" target="_blank"><img  src="http://c12.statcounter.com/counter.php?sc_project=1417324&java=0&security=d41633bc&invisible=0" alt="free tracking" border="0"></a> </noscript>
+	<!-- End of StatCounter Code -->
+          </td>
+
+    <td align="right" valign="top">
+      		<a href="http://sourceforge.net/projects/vim" rel="nofollow"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=8&type=1" width="88" height="31" border="0" alt="SourceForge.net Logo" /></a>
+    </td>
+
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+  </tr>
+
+    
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  
+  </tr>
+</table>
+
+</body>
+</html>
+

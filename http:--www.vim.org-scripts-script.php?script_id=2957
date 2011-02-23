@@ -1,0 +1,324 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+  <link rel="Stylesheet" type="text/css" href="/css/style.css" >
+  <title>load_template - Loading templates as html,makefile,class ... and you can make template yourself! : vim online</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <meta name="KEYWORDS" content="Vim, Vi IMproved, text editor, home, documentation, tips, scripts, news">
+  <link rel="shortcut icon" type="image/x-icon" href="/images/vim_shortcut.ico">
+</head>
+
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff"> 
+
+<!-- HEADER, SPONSOR IMAGE, VIM IMAGE AND BOOK AD -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+  <td class="lightbg">&nbsp;&nbsp;&nbsp;</td>
+  <td class="lightbg" align="left"><a href="/sponsor/index.php"><img src="/images/sponsorvim.gif" alt="sponsor Vim development" border="0"></a></td>
+    <td class="lightbg" align="center"><a href="/index.php"><img src="/images/vim_header.gif" border="0" alt="Vim logo"></a></td>
+    <td class="lightbg" align="right"><a href="http://iccf-holland.org/click5.html"><img src="/images/buyhelplearn.gif" alt="Vim Book Ad" border="0"></a></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="darkbg"><img src="/images/spacer.gif" width="1" height="10" alt=""></td>
+  </tr>
+</table>
+<!-- THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+  <col width="180">
+  <col width="1">
+
+  <tr valign="top">
+    <td class="sidebar">
+      <table width="180" cellpadding="4" cellspacing="0" border="0">
+        <tr valign="top">
+          <td class="sidebar">
+
+<!-- INCLUDE THE PAGE NAVIGATION -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+    <tr>
+        <td><small>not logged in (<a href="/login.php">login</a>)</small></td>
+    </tr>
+    <tr><td>
+<small>&nbsp;</small>
+<form action="http://www.google.com/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-3005259998294962:bvyni59kjr1" />
+    <input type="hidden" name="ie" value="ISO-8859-1" />
+    <input type="text" name="q" size="20" />
+    <br>
+    <input type="submit" name="sa" value="Search" />
+  </div>
+</form>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+    </td></tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="1"></td>
+    </tr>
+    <tr>
+        <td class="darkbg"><img src="/images/spacer.gif" alt='' border="0" height="3"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="2"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/index.php">Home</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/search.php">Advanced search</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/about.php">About Vim</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/community.php">Community</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/news/news.php">News</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/sponsor/index.php">Sponsoring</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/trivia.php">Trivia</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/docs.php">Documentation</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/download.php">Download</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/scripts/index.php">Scripts</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/tips/index.php">Tips</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/account/index.php">My Account</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/huh.php">Site Help</a></td>
+        </tr>
+</table>
+
+            <table width="172" cellpadding="0" cellspacing="0" border="0">
+              <tr><td><img src="/images/spacer.gif" alt="" border="0" width="1" height="8"></td></tr>
+              <tr><td class="darkbg"><img src="/images/spacer.gif" width="1" height="3" alt=""></td></tr>
+            </table>
+            <br>
+
+<!-- INCLUDE THE PAGE SIDEBAR TEXT -->
+&nbsp;
+
+          </td>
+        </tr>
+      </table>
+    </td>
+
+    <td class="darkbg"><img src="/images/spacer.gif" width="1" height="1" border="0" alt=""><br></td>
+    <td>
+      <table width="100%" cellpadding="10" cellspacing="0" border="0" bordercolor="red">
+        <tr>
+          <td valign="top">
+
+<span class="txth1">load_template : Loading templates as html,makefile,class ... and you can make template yourself!</span> 
+
+<br>
+<br>
+
+<!-- karma table -->
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
+  <td>
+    Rating <b>37/16</b>,
+    Downloaded by 517  </td>
+  <td class="lightbg">
+  <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
+  </td>
+  <td>
+    <a href="http://vim.wikia.com/wiki/Script:2957">Vim wiki</a>
+  </td>  
+</tr>
+</table>
+<p>
+
+<table cellspacing="0" cellpadding="0" border="0">
+<tr><td class="prompt">created by</td></tr>
+<tr><td><a href="/account/profile.php?user_id=18679">zhu nianyang</a></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">script type</td></tr>
+<tr><td>utility</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">description</td></tr>
+<tr><td>The plugin mainly provides the functionality that loading templates such as class,html,makefile and so on.The plugin also can load templates with script to take the replace of the filename or classname.(As default,the plugin has already included templates as main,singleton class,html,xml,makefile.)<br>For any question,welcome to my blog <a target="_blank" href="http://www.vimer.cn">http://www.vimer.cn</A>,<br>and welcome to email me:zny2008@gmail.com / dantezhu@vip.qq.com<br>The plugin's homepage is :<br><a target="_blank" href="http://www.vimer.cn/2010/02/vimer-cn">http://www.vimer.cn/2010/02/vimer-cn</A>%e5%8e%9f%e5%88%9bvimgvim%e6%8f%92%e4%bb%b6load_template%e6%ad%a3%e5%bc%8f%e5%8f%91%e5%b8%83.html<br>Use guide:<br>	1)Download load_template.vim,and put it into the plugin directory.<br><br>	2)Assign the directory where to load templates in your vimrc file.<br>	For example<br>	let g:template_path = 'C:\template\&#039<br>	Warning:Don't forget about the last '\&#039.<br><br>	3)New/Open a test.cpp,execute<br>	:LoadTemplate<br>	It will show the template list like this:<br>	Template filelist:<br>	0		:		cpp/main.cpp<br>	1		:		cpp/singleton.h<br>	please select:<br><br>	4)There are also options available that allow you to make your own templates(you can write vim script in it.) <br>	Just try it yourself.<br><br>=================================================<br>&#35813;&#25554;&#20214;&#20027;&#35201;&#23454;&#29616;&#20102;&#33258;&#21160;&#36733;&#20837;&#21508;&#31181;&#27169;&#26495;&#30340;&#21151;&#33021;&#65288;&#22914;&#31867;&#27169;&#26495;&#65292;html&#27169;&#26495;&#65292;makefile&#27169;&#26495;&#31561;&#31561;&#65289;&#65292;&#24182;&#19988;&#25903;&#25345;&#21160;&#24577;&#27169;&#29256;&#30340;&#21151;&#33021;&#65292;&#21363;&#33021;&#22815;&#36890;&#36807;&#33050;&#26412;&#21160;&#24577;&#30340;&#23454;&#29616;&#25991;&#20214;&#21517;&#65292;&#31867;&#21517;&#30340;&#26367;&#25442;&#12290;&#65288;&#40664;&#35748;&#24050;&#32463;&#25552;&#20379;&#20102;&#31616;&#21333;main&#20989;&#25968;&#27169;&#26495;&#12289;&#21333;&#20307;&#31867;&#27169;&#26495;&#12289;html&#26631;&#20934;&#27169;&#26495;&#12289;xml&#26631;&#20934;&#27169;&#26495;&#65289;<br>&#27426;&#36814;&#26469; <a target="_blank" href="http://www.vimer.cn&nbsp;&nbsp">http://www.vimer.cn&nbsp;&nbsp</A>; &#26469;&#20998;&#20139;&#20320;&#30340;&#27169;&#26495;&#25991;&#20214;&#65292;&#25110;&#32773;&#30452;&#25509;&#32473;&#25105;<br>&#21457;&#36865;&#37038;&#20214;zny2008@gmail.com/dantezhu@vip.qq.com<br>&#36825;&#20010;&#25554;&#20214;&#30340;&#20027;&#39029;&#26159;&#65306;<br><a target="_blank" href="http://www.vimer.cn/2010/02/vimer-cn">http://www.vimer.cn/2010/02/vimer-cn</A>%e5%8e%9f%e5%88%9bvimgvim%e6%8f%92%e4%bb%b6load_template%e6%ad%a3%e5%bc%8f%e5%8f%91%e5%b8%83.html<br><br>&#20351;&#29992;&#35828;&#26126;<br>	1&#65289;&#19979;&#36733;load_template.vim&#25554;&#20214;&#65292;&#24182;&#25918;&#22312;plugin&#30340;&#30446;&#24405;&#19979;<br>	2&#65289;&#22312;vimrc&#25991;&#20214;&#20013;&#25351;&#23450;&#20320;&#30340;&#27169;&#26495;&#30446;&#24405;&#65292;&#26469;&#25351;&#23450;&#25554;&#20214;&#35835;&#21462;&#27169;&#26495;&#30340;&#30446;&#24405;&#12290;<br>	&#22914;&#22312;&#19979;&#36733;&#21253;&#20013;&#24050;&#32463;&#24102;&#20102;&#19968;&#20010;template&#30340;&#30446;&#24405;&#65292;&#37324;&#38754;&#25353;&#29031;&#25991;&#20214;&#25193;&#23637;&#21517;&#12289;&#25991;&#20214;&#31867;&#22411;&#65292;&#20998;&#21035;&#24314;&#31435;&#20102;&#30446;&#24405;&#65292;&#20320;&#21487;&#20197;&#23558;&#36825;&#20010;template&#25991;&#20214;&#22841;&#22797;&#21046;&#21040;C:\\&#65292;&#37027;&#20040;&#23601;&#21487;&#20197;&#25351;&#23450;<br>	let g:template_path = 'C:\template\&#039<br>	&#27880;&#24847;&#65292;&#26368;&#21518;&#30340;'\&#039&#35831;&#21153;&#24517;&#19981;&#35201;&#24536;&#35760;&#65288;&#22312;linux&#19979;&#20063;&#26159;&#19968;&#26679;&#35201;&#21152; '/' &#65289;<br>	3&#65289;&#26032;&#24314;/&#25171;&#24320;&#19968;&#20010;test.cpp&#65292;&#25191;&#34892;<br>	:LoadTemplate<br>	&#35797;&#35797;&#30475;&#65292;&#26159;&#21542;&#26377;&#31867;&#20284;&#27169;&#26495;&#21015;&#34920;&#20986;&#26469;&#21862;~<br>	Template filelist:<br>	0		:		cpp/main.cpp<br>	1		:		cpp/singleton.h<br>	please select:<br>	4&#65289;&#20320;&#29978;&#33267;&#21487;&#20197;&#33258;&#24049;&#21046;&#20316;&#27169;&#26495;&#25991;&#20214;~~&#21482;&#38656;&#35201;&#21442;&#32771;&#24050;&#32463;&#23384;&#22312;&#30340;&#27169;&#26495;&#25991;&#20214;&#23601;&#34892;&#21862;~~&#25903;&#25345;vim&#33050;&#26412;&#30340;&#21734;<br></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">install details</td></tr>
+<tr><td></td></tr>
+<tr><td>&nbsp;</td></tr>
+</table>
+
+<!-- rating table -->
+<form name="rating">
+<input type="hidden" name="script_id" value="2957">
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>rate this script</b></td>
+  <td valign="middle">
+    <input type="radio" name="rating" value="life_changing">Life Changing
+    <input type="radio" name="rating" value="helpful">Helpful
+    <input type="radio" name="rating" value="unfulfilling">Unfulfilling&nbsp;
+    <input type="submit" value="rate">
+  </td>
+</tr>
+</table>
+</form>
+<span class="txth2">script versions</span> (<a href="add_script_version.php?script_id=2957">upload new version</a>)
+<p>
+Click on the package to download.
+<p>
+
+<table cellspacing="2" cellpadding="4" border="0" width="100%">
+<tr class='tableheader'>
+        <th valign="top">package</th>
+    <th valign="top">script version</th>
+    <th valign="top">date</th>
+    <th valign="top">Vim version</th>
+    <th valign="top">user</th>
+    <th valign="top">release notes</th>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=12344">load_template.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.1.0</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-02-09</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=18679">zhu nianyang</a></i></td>
+    <td class="rowodd" valign="top" width="2000">new feature:<br>you can control the cursor's last place. you can see the main.cpp template to know more.<br><br>&#26032;&#29305;&#24615;&#65306;<br>&#29616;&#22312;&#21487;&#20197;&#25511;&#21046;&#40736;&#26631;&#30340;&#26368;&#21518;&#20572;&#30041;&#20301;&#32622;&#21862;&#65292;&#20320;&#21487;&#20197;&#30475;&#19968;&#19979; main.cpp&#36825;&#20010;&#27169;&#26495;&#26469;&#20102;&#35299;&#26356;&#22810;&#12290;</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=12303">load_template.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.0.3</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-02-04</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=18679">zhu nianyang</a></i></td>
+    <td class="roweven" valign="top" width="2000">if is windows<br>let the default template directory is $VIM.'\vimfiles\template&#039<br>else if linux or else<br>let the default template directory is $HOME.'/.vim/template/'</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=12302">load_template.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.0.2</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-02-04</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=18679">zhu nianyang</a></i></td>
+    <td class="rowodd" valign="top" width="2000">fix the bug:<br>E121: &#26410;&#23450;&#20041;&#30340;&#21464;&#37327;: g:vimrc_splitstr<br><br>E15: &#26080;&#25928;&#30340;&#34920;&#36798;&#24335;: ‘~’.g:vimrc_splitstr.’template_source.vim’<br><br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=12289">load_template.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.0.1</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-02-03</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=18679">zhu nianyang</a></i></td>
+    <td class="roweven" valign="top" width="2000">the doc file miss something...</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=12288">load_template.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.0</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-02-03</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=18679">zhu nianyang</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Initial upload</td>
+</tr>
+</table>
+<!-- finish off the framework -->
+          </td>
+        </tr>
+      </table>
+    </td>
+
+  </tr>
+</table>
+
+<!-- END OF THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr><td colspan="4" bgcolor="#000000"><img src="/images/spacer.gif" height="2" width="1" alt=""></td></tr>
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr>
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+
+    <td align="left" valign="top"><small>
+      If you have questions or remarks about this site, visit the
+      <a href="http://vimonline.sf.net">vimonline development</a> pages.
+      Please use this site responsibly.
+      <br> 
+      
+      Questions about <a href="http://www.vim.org/about.php">Vim</a> should go
+      to the <a href="http://www.vim.org/maillist.php">maillist</a>.
+      Help Bram <a href="http://iccf-holland.org/">help Uganda</a>.
+      </small>
+	&nbsp;
+	&nbsp;
+
+	<!-- Start of StatCounter Code -->
+	<script type="text/javascript" language="javascript">
+	var sc_project=1417324; 
+	var sc_invisible=1; 
+	var sc_partition=11; 
+	var sc_security="d41633bc"; 
+	</script>
+
+	<script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script><noscript><a href="http://www.statcounter.com/" target="_blank"><img  src="http://c12.statcounter.com/counter.php?sc_project=1417324&java=0&security=d41633bc&invisible=0" alt="free tracking" border="0"></a> </noscript>
+	<!-- End of StatCounter Code -->
+          </td>
+
+    <td align="right" valign="top">
+      		<a href="http://sourceforge.net/projects/vim" rel="nofollow"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=8&type=1" width="88" height="31" border="0" alt="SourceForge.net Logo" /></a>
+    </td>
+
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+  </tr>
+
+    
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  
+  </tr>
+</table>
+
+</body>
+</html>
+

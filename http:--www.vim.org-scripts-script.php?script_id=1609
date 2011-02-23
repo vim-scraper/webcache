@@ -1,0 +1,436 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+  <link rel="Stylesheet" type="text/css" href="/css/style.css" >
+  <title>Ada Bundle - Complete Ada-Mode as Vim-Ball or Tar.bz2 : vim online</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <meta name="KEYWORDS" content="Vim, Vi IMproved, text editor, home, documentation, tips, scripts, news">
+  <link rel="shortcut icon" type="image/x-icon" href="/images/vim_shortcut.ico">
+</head>
+
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff"> 
+
+<!-- HEADER, SPONSOR IMAGE, VIM IMAGE AND BOOK AD -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+  <td class="lightbg">&nbsp;&nbsp;&nbsp;</td>
+  <td class="lightbg" align="left"><a href="/sponsor/index.php"><img src="/images/sponsorvim.gif" alt="sponsor Vim development" border="0"></a></td>
+    <td class="lightbg" align="center"><a href="/index.php"><img src="/images/vim_header.gif" border="0" alt="Vim logo"></a></td>
+    <td class="lightbg" align="right"><a href="http://iccf-holland.org/click5.html"><img src="/images/buyhelplearn.gif" alt="Vim Book Ad" border="0"></a></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="darkbg"><img src="/images/spacer.gif" width="1" height="10" alt=""></td>
+  </tr>
+</table>
+<!-- THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+  <col width="180">
+  <col width="1">
+
+  <tr valign="top">
+    <td class="sidebar">
+      <table width="180" cellpadding="4" cellspacing="0" border="0">
+        <tr valign="top">
+          <td class="sidebar">
+
+<!-- INCLUDE THE PAGE NAVIGATION -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+    <tr>
+        <td><small>not logged in (<a href="/login.php">login</a>)</small></td>
+    </tr>
+    <tr><td>
+<small>&nbsp;</small>
+<form action="http://www.google.com/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-3005259998294962:bvyni59kjr1" />
+    <input type="hidden" name="ie" value="ISO-8859-1" />
+    <input type="text" name="q" size="20" />
+    <br>
+    <input type="submit" name="sa" value="Search" />
+  </div>
+</form>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+    </td></tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="1"></td>
+    </tr>
+    <tr>
+        <td class="darkbg"><img src="/images/spacer.gif" alt='' border="0" height="3"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="2"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/index.php">Home</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/search.php">Advanced search</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/about.php">About Vim</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/community.php">Community</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/news/news.php">News</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/sponsor/index.php">Sponsoring</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/trivia.php">Trivia</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/docs.php">Documentation</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/download.php">Download</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/scripts/index.php">Scripts</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/tips/index.php">Tips</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/account/index.php">My Account</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/huh.php">Site Help</a></td>
+        </tr>
+</table>
+
+            <table width="172" cellpadding="0" cellspacing="0" border="0">
+              <tr><td><img src="/images/spacer.gif" alt="" border="0" width="1" height="8"></td></tr>
+              <tr><td class="darkbg"><img src="/images/spacer.gif" width="1" height="3" alt=""></td></tr>
+            </table>
+            <br>
+
+<!-- INCLUDE THE PAGE SIDEBAR TEXT -->
+&nbsp;
+
+          </td>
+        </tr>
+      </table>
+    </td>
+
+    <td class="darkbg"><img src="/images/spacer.gif" width="1" height="1" border="0" alt=""><br></td>
+    <td>
+      <table width="100%" cellpadding="10" cellspacing="0" border="0" bordercolor="red">
+        <tr>
+          <td valign="top">
+
+<span class="txth1">Ada Bundle : Complete Ada-Mode as Vim-Ball or Tar.bz2</span> 
+
+<br>
+<br>
+
+<!-- karma table -->
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
+  <td>
+    Rating <b>940/452</b>,
+    Downloaded by 2548  </td>
+  <td class="lightbg">
+  <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
+  </td>
+  <td>
+    <a href="http://vim.wikia.com/wiki/Script:1609">Vim wiki</a>
+  </td>  
+</tr>
+</table>
+<p>
+
+<table cellspacing="0" cellpadding="0" border="0">
+<tr><td class="prompt">created by</td></tr>
+<tr><td><a href="/account/profile.php?user_id=7818">Martin Krischik</a></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">script type</td></tr>
+<tr><td>ftplugin</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">description</td></tr>
+<tr><td>Contains all files for the new Ada mode. It also has a vim help file which you can call with<br><br>:help ada.txt.<br><br>Included is:<br><br> - Syntax highlight<br> - Auto indenting<br> - Tag searching<br> - Classic code completion<br> - Omni code completion<br> - Online help<br><br>For some functionality you need a ctags programm. You can user either &quot;gnat xref -v&quot; or a patched [1] version&nbsp;&nbsp;of the&nbsp;&nbsp;exuberant Ctags [2].<br><br>Don't forget to actualy activate filetype and syntax support:<br><br>:filetype plugin indent on<br>:syntax enable<br><br>The Ada mode can be be further extened with the following Scripts:<br><br> - backup.vim,				<a href="/scripts/script.php?script_id=1537">vimscript#1537</a><br> - rainbow_parenthsis.vim,	<a href="/scripts/script.php?script_id=1561">vimscript#1561</a><br> - nerd_comments.vim,		<a href="/scripts/script.php?script_id=1218">vimscript#1218</a><br> - matchit.vim,				<a href="/scripts/script.php?script_id=39">vimscript#39</a><br> - taglist.vim,				<a href="/scripts/script.php?script_id=273">vimscript#273</a><br><br>The GNU Ada project [3] offers ready patched binary rpm's including the Ada-Mode, all the scripts mentioned above and Ada aware exuberant Ctags for easy installation.<br><br>Reports errors to: <a target="_blank" href="http://code.google.com/p/vim-scripts/issues/list">http://code.google.com/p/vim-scripts/issues/list</A><br>Discuss improvements on: <a target="_blank" href="http://groups.google.com/group/vim_scripts">http://groups.google.com/group/vim_scripts</A><br><br>[1] <a href="/scripts/script.php?script_id=1535">vimscript#1535</a><br>[2] <a target="_blank" href="http://ctags.sourceforge.net">http://ctags.sourceforge.net</A><br>[3] <a target="_blank" href="http://gnuada.sourceforge.net">http://gnuada.sourceforge.net</A></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">install details</td></tr>
+<tr><td>Install from whithin vim with:<br><br>:source ada.vba<br><br>The Vim-Ball installation will install the following file:<br><br> - ada_options.vim<br> - autoload/decada.vim<br> - autoload/gnat.vim,			former <a href="/scripts/script.php?script_id=1547">vimscript#1547</a><br> - autoload/ada.vim<br> - autoload/adacomplete.vim,	former <a href="/scripts/script.php?script_id=1554">vimscript#1554</a><br> - compiler/gnat.vim,			former <a href="/scripts/script.php?script_id=1547">vimscript#1547</a><br> - compiler/decada.vim,<br> - ftdetect/ada.vim,			former <a href="/scripts/script.php?script_id=1565">vimscript#1565</a><br> - ftplugin/ada.vim,			former <a href="/scripts/script.php?script_id=1548">vimscript#1548</a><br> - indent/ada.vim,			former <a href="/scripts/script.php?script_id=137">vimscript#137</a><br> - syntax/ada.vim,			former <a href="/scripts/script.php?script_id=1353">vimscript#1353</a>, <a href="/scripts/script.php?script_id=136">vimscript#136</a><br> - doc/ada.txt<br></td></tr>
+<tr><td>&nbsp;</td></tr>
+</table>
+
+<!-- rating table -->
+<form name="rating">
+<input type="hidden" name="script_id" value="1609">
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>rate this script</b></td>
+  <td valign="middle">
+    <input type="radio" name="rating" value="life_changing">Life Changing
+    <input type="radio" name="rating" value="helpful">Helpful
+    <input type="radio" name="rating" value="unfulfilling">Unfulfilling&nbsp;
+    <input type="submit" value="rate">
+  </td>
+</tr>
+</table>
+</form>
+<span class="txth2">script versions</span> (<a href="add_script_version.php?script_id=1609">upload new version</a>)
+<p>
+Click on the package to download.
+<p>
+
+<table cellspacing="2" cellpadding="4" border="0" width="100%">
+<tr class='tableheader'>
+        <th valign="top">package</th>
+    <th valign="top">script version</th>
+    <th valign="top">date</th>
+    <th valign="top">Vim version</th>
+    <th valign="top">user</th>
+    <th valign="top">release notes</th>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=8904">ada-4.6.1.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>4.6.1-vba</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2008-07-08</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=7818">Martin Krischik</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Bram did some nitpicking - this is the improved version for Vim 7.2.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=8902">ada-4.6.1.tar.bz2</a></td>
+    <td class="roweven" valign="top" nowrap><b>4.6.1-tar</b></td>
+    <td class="roweven" valign="top" nowrap><i>2008-07-08</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=7818">Martin Krischik</a></i></td>
+    <td class="roweven" valign="top" width="2000">Bram did some nitpicking - this is the improved version for Vim 7.2.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=8900">ada-4.6.0.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>4.6.0-vba</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2008-07-08</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=7818">Martin Krischik</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Mostly bug fixes. Also the version submitted for Vim 7.2.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=8899">ada-4.6.0.tar.bz2</a></td>
+    <td class="roweven" valign="top" nowrap><b>4.6.0-tar</b></td>
+    <td class="roweven" valign="top" nowrap><i>2008-07-08</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=7818">Martin Krischik</a></i></td>
+    <td class="roweven" valign="top" width="2000">Mostly bug fixes. Also the version submitted for Vim 7.2.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=7686">ada-4.5.0.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>4.5</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2007-09-17</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=7818">Martin Krischik</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Bug fixes in the areas of key mappings, indenting, </td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=7385">ada-4.4.0.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>4.4.0</b></td>
+    <td class="roweven" valign="top" nowrap><i>2007-07-20</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=7818">Martin Krischik</a></i></td>
+    <td class="roweven" valign="top" width="2000">If you did not set g:ada_default_compiler and g:ada_default_compiler the scripts would fail miserable. Thank's to Taylor Venable for providing a patch to this problem.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=6461">ada-4.3.0.tar.bz2</a></td>
+    <td class="rowodd" valign="top" nowrap><b>4.3.0</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2006-11-22</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=7818">Martin Krischik</a></i></td>
+    <td class="rowodd" valign="top" width="2000">The VimBall is broken again. I like the VimBall idea if it only worked better. Anyway have a tar file in the meantime.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=6435">ada-4.3.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>4.3.0</b></td>
+    <td class="roweven" valign="top" nowrap><i>2006-11-18</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=7818">Martin Krischik</a></i></td>
+    <td class="roweven" valign="top" width="2000">Integrate Brams fixes. The Vim Ada Mode is not part of the standart runtime.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=6388">ada-4.2.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>4.2.0</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2006-11-08</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=7818">Martin Krischik</a></i></td>
+    <td class="rowodd" valign="top" width="2000">More bug Fixes.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=6387">ada.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>4.1.0</b></td>
+    <td class="roweven" valign="top" nowrap><i>2006-11-07</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=7818">Martin Krischik</a></i></td>
+    <td class="roweven" valign="top" width="2000">This version contains the latest fixed after suggestions from Bram. It does not provide new functionality but fixes quite a few hidden bugs.<br><br>Ada users should also get yourself a new Ctags as the Ctags Ada Mode has been updated as well. We used a snapshot from the Ctags Subversion archive which means the lates Vim-Script fixes are included as well.<br><br>As allways binary releases are available from the GNU Ada Project: <a target="_blank" href="http://gnuada.sf.net">http://gnuada.sf.net</A>.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=6272">ada.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>3.9</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2006-10-13</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=7818">Martin Krischik</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Fixed Bugs reported by Roman Marchenko. Changes Licence to Vim for runtime integration.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=6261">ada.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>3.8.1</b></td>
+    <td class="roweven" valign="top" nowrap><i>2006-10-07</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=7818">Martin Krischik</a></i></td>
+    <td class="roweven" valign="top" width="2000">Identical to the last release - only the 3.8 Vimball is dammaged. You should also use the newest Vimball release as older version have problems with the fold markers which Vimball now uses.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=6257">ada.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>3.8</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2006-10-06</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=7818">Martin Krischik</a></i></td>
+    <td class="rowodd" valign="top" width="2000">This version improves folding support for files which have been pretty printed by the GNAT pretty printer.<br><br>Note: This Vimball comes in Unix text format. It will not work if your Vim is not set up to correctly detect unix text files.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=6155">ada.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>3.7</b></td>
+    <td class="roweven" valign="top" nowrap><i>2006-09-10</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=7818">Martin Krischik</a></i></td>
+    <td class="roweven" valign="top" width="2000">Fixes for the compiler plugin and the session manager.<br><br>Also available as tar ball from the GNU Ada Project:<br><br><a target="_blank" href="http://sourceforge.net/project/showfiles.php?group_id=12974&package_id=191849">http://sourceforge.net/project/showfiles.php?group_id=12974&package_id=191849</A></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=6044">ada.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>3.5</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2006-08-06</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=7818">Martin Krischik</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Significant improvement for GNAT project manager files:<br><br>- Now a vim-session is attached to each project manager file - vim rembers now all files opened for the project.<br>- If you open only a *.gpr file it automaticly becomes the active project - you can hit &lt;F7&gt; right away.<br>- support for the gnat pretty printer added.<br><br>It's almost an IDE now ;-)</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=6039">ada.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>3.4</b></td>
+    <td class="roweven" valign="top" nowrap><i>2006-08-04</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=7818">Martin Krischik</a></i></td>
+    <td class="roweven" valign="top" width="2000">Maintanance Release: Bugfixes, Cleanup, remove dead code and add fold markers to all files. This release should be easier to maintain and extend now.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=5990">ada.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>3.3</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2006-07-25</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=7818">Martin Krischik</a></i></td>
+    <td class="rowodd" valign="top" width="2000">This version of the Ada mode improves key-mappings, user defined commands and pull down menus.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=5978">ada.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>3.2</b></td>
+    <td class="roweven" valign="top" nowrap><i>2006-07-21</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=7818">Martin Krischik</a></i></td>
+    <td class="roweven" valign="top" width="2000">This release fixes quite a few bugs. Especially the GNAT compiler support and the help file where redone. This release also adds support for Dec Ada.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=5959">ada.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>3.0</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2006-07-16</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=7818">Martin Krischik</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Initial upload</td>
+</tr>
+</table>
+<!-- finish off the framework -->
+          </td>
+        </tr>
+      </table>
+    </td>
+
+  </tr>
+</table>
+
+<!-- END OF THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr><td colspan="4" bgcolor="#000000"><img src="/images/spacer.gif" height="2" width="1" alt=""></td></tr>
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr>
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+
+    <td align="left" valign="top"><small>
+      If you have questions or remarks about this site, visit the
+      <a href="http://vimonline.sf.net">vimonline development</a> pages.
+      Please use this site responsibly.
+      <br> 
+      
+      Questions about <a href="http://www.vim.org/about.php">Vim</a> should go
+      to the <a href="http://www.vim.org/maillist.php">maillist</a>.
+      Help Bram <a href="http://iccf-holland.org/">help Uganda</a>.
+      </small>
+	&nbsp;
+	&nbsp;
+
+	<!-- Start of StatCounter Code -->
+	<script type="text/javascript" language="javascript">
+	var sc_project=1417324; 
+	var sc_invisible=1; 
+	var sc_partition=11; 
+	var sc_security="d41633bc"; 
+	</script>
+
+	<script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script><noscript><a href="http://www.statcounter.com/" target="_blank"><img  src="http://c12.statcounter.com/counter.php?sc_project=1417324&java=0&security=d41633bc&invisible=0" alt="free tracking" border="0"></a> </noscript>
+	<!-- End of StatCounter Code -->
+          </td>
+
+    <td align="right" valign="top">
+      		<a href="http://sourceforge.net/projects/vim" rel="nofollow"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=8&type=1" width="88" height="31" border="0" alt="SourceForge.net Logo" /></a>
+    </td>
+
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+  </tr>
+
+    
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  
+  </tr>
+</table>
+
+</body>
+</html>
+

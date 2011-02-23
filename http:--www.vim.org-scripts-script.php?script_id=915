@@ -1,0 +1,364 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+  <link rel="Stylesheet" type="text/css" href="/css/style.css" >
+  <title>AsNeeded - Loads plugins as-needed (functions/maps/commands)  (autoload) : vim online</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <meta name="KEYWORDS" content="Vim, Vi IMproved, text editor, home, documentation, tips, scripts, news">
+  <link rel="shortcut icon" type="image/x-icon" href="/images/vim_shortcut.ico">
+</head>
+
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff"> 
+
+<!-- HEADER, SPONSOR IMAGE, VIM IMAGE AND BOOK AD -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+  <td class="lightbg">&nbsp;&nbsp;&nbsp;</td>
+  <td class="lightbg" align="left"><a href="/sponsor/index.php"><img src="/images/sponsorvim.gif" alt="sponsor Vim development" border="0"></a></td>
+    <td class="lightbg" align="center"><a href="/index.php"><img src="/images/vim_header.gif" border="0" alt="Vim logo"></a></td>
+    <td class="lightbg" align="right"><a href="http://iccf-holland.org/click5.html"><img src="/images/buyhelplearn.gif" alt="Vim Book Ad" border="0"></a></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="darkbg"><img src="/images/spacer.gif" width="1" height="10" alt=""></td>
+  </tr>
+</table>
+<!-- THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+  <col width="180">
+  <col width="1">
+
+  <tr valign="top">
+    <td class="sidebar">
+      <table width="180" cellpadding="4" cellspacing="0" border="0">
+        <tr valign="top">
+          <td class="sidebar">
+
+<!-- INCLUDE THE PAGE NAVIGATION -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+    <tr>
+        <td><small>not logged in (<a href="/login.php">login</a>)</small></td>
+    </tr>
+    <tr><td>
+<small>&nbsp;</small>
+<form action="http://www.google.com/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-3005259998294962:bvyni59kjr1" />
+    <input type="hidden" name="ie" value="ISO-8859-1" />
+    <input type="text" name="q" size="20" />
+    <br>
+    <input type="submit" name="sa" value="Search" />
+  </div>
+</form>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+    </td></tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="1"></td>
+    </tr>
+    <tr>
+        <td class="darkbg"><img src="/images/spacer.gif" alt='' border="0" height="3"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="2"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/index.php">Home</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/search.php">Advanced search</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/about.php">About Vim</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/community.php">Community</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/news/news.php">News</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/sponsor/index.php">Sponsoring</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/trivia.php">Trivia</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/docs.php">Documentation</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/download.php">Download</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/scripts/index.php">Scripts</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/tips/index.php">Tips</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/account/index.php">My Account</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/huh.php">Site Help</a></td>
+        </tr>
+</table>
+
+            <table width="172" cellpadding="0" cellspacing="0" border="0">
+              <tr><td><img src="/images/spacer.gif" alt="" border="0" width="1" height="8"></td></tr>
+              <tr><td class="darkbg"><img src="/images/spacer.gif" width="1" height="3" alt=""></td></tr>
+            </table>
+            <br>
+
+<!-- INCLUDE THE PAGE SIDEBAR TEXT -->
+&nbsp;
+
+          </td>
+        </tr>
+      </table>
+    </td>
+
+    <td class="darkbg"><img src="/images/spacer.gif" width="1" height="1" border="0" alt=""><br></td>
+    <td>
+      <table width="100%" cellpadding="10" cellspacing="0" border="0" bordercolor="red">
+        <tr>
+          <td valign="top">
+
+<span class="txth1">AsNeeded : Loads plugins as-needed (functions/maps/commands)&nbsp;&nbsp;(autoload)</span> 
+
+<br>
+<br>
+
+<!-- karma table -->
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
+  <td>
+    Rating <b>52/16</b>,
+    Downloaded by 2228  </td>
+  <td class="lightbg">
+  <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
+  </td>
+  <td>
+    <a href="http://vim.wikia.com/wiki/Script:915">Vim wiki</a>
+  </td>  
+</tr>
+</table>
+<p>
+
+<table cellspacing="0" cellpadding="0" border="0">
+<tr><td class="prompt">created by</td></tr>
+<tr><td><a href="/account/profile.php?user_id=96">Charles Campbell</a></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">script type</td></tr>
+<tr><td>utility</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">description</td></tr>
+<tr><td>&nbsp;&nbsp;[AsNeeded V14 AND LATER REQUIRES VIMBALL V18 OR LATER FOR UNPACKING]<br><br>The AsNeeded plugin loads plugins from the .vim/AsNeeded directory only as they're needed.&nbsp;&nbsp;One major advantage over vim 7.0's autoload method is: plugins don't need to be changed!&nbsp;&nbsp; Just put the plugin in the AsNeeded directory (usually under .vim/ or vimfiles\).&nbsp;&nbsp;It'll work even better if you type :MkAsNeeded while in vim after having updated your AsNeeded directory, too.<br><br>So, how does it work?&nbsp;&nbsp;Well, whenever a plugin attempts to execute a function that hasn't been loaded yet, AsNeeded will find the script in the AsNeeded directory, load the script, and execute the function.<br><br>And, whenever you want to execute a command that's not been loaded yet, and you've run :MkAsNeeded, then the plugin will be transparently loaded and the command executed!&nbsp;&nbsp;If you didn't do :MkAsNeeded, or you wish to use a map, then instead you can use<br><br>	:AN map<br>	:AN command [arguments]<br><br>and AsNeeded will locate the map or command, load the script, and make the map or command available for your subsequent use.&nbsp;&nbsp;Alternatively, you can use<br><br>	:ANX map<br>	:ANX command [arguments]<br><br>and AsNeeded will do what :AN would do plus attempt to execute the map or command.<br><br>For even faster loading of your desired function, map, or command, you can (as of v6) use<br><br>	:MkAsNeeded<br><br>This command will create a &lt;ANtags&gt; file in your AsNeeded subdirectory which basically lists your maps, functions, and commands and couples them with their associated source file.&nbsp;&nbsp;When you then use :AN, :AsNeeded, or :ANX, AsNeeded will use that file to quickly load the associated source file.<br><br>And, now for a user testimonal!<br><br>&nbsp;&nbsp;&nbsp;&nbsp;Zdenek Sekera (by permission)<br><br>&nbsp;&nbsp;&nbsp;&nbsp;I use FuncUndefined sometimes but most of the<br>&nbsp;&nbsp;&nbsp;&nbsp;time I use the AsNeeded mechanism of Dr.Chips,<br>&nbsp;&nbsp;&nbsp;&nbsp;which is very clever, very complete and completely<br>&nbsp;&nbsp;&nbsp;&nbsp;unintrusive, there is almost nothing to do once<br>&nbsp;&nbsp;&nbsp;&nbsp;the mechanics is setup.&nbsp;&nbsp;It even finds functions<br>&nbsp;&nbsp;&nbsp;&nbsp;(mappings as well!!) inside a file of a different<br>&nbsp;&nbsp;&nbsp;&nbsp;name, etc...&nbsp;&nbsp;Very pleasant.<br><br>(alpha/beta version available at <a target="_blank" href="http://mysite.verizon.net/astronaut/vim/index.html#ASNEEDED">http://mysite.verizon.net/astronaut/vim/index.html#ASNEEDED</A>)<br></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">install details</td></tr>
+<tr><td>1. In your &lt;.vimrc&gt;: to enable plugins,<br>&nbsp;&nbsp; set nocp<br>&nbsp;&nbsp; if version &gt;= 600<br>&nbsp;&nbsp;&nbsp;&nbsp; filetype plugin on<br>&nbsp;&nbsp; endif<br><br>2. Make a &lt;.vim/AsNeeded&gt; directory:<br>&nbsp;&nbsp; cd .vim<br>&nbsp;&nbsp; mkdir AsNeeded<br><br>3. Put whatever plugins you want into the AsNeeded directory<br><br>4. Use vim 7.1 or later, or update vim 7.0's vimball plugin with <a href="/scripts/script.php?script_id=1502">vimscript#1502</a>.<br><br>5. vim AsNeeded.vba.gz<br>&nbsp;&nbsp;&nbsp;&nbsp; :so %<br>&nbsp;&nbsp;&nbsp;&nbsp;:q<br></td></tr>
+<tr><td>&nbsp;</td></tr>
+</table>
+
+<!-- rating table -->
+<form name="rating">
+<input type="hidden" name="script_id" value="915">
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>rate this script</b></td>
+  <td valign="middle">
+    <input type="radio" name="rating" value="life_changing">Life Changing
+    <input type="radio" name="rating" value="helpful">Helpful
+    <input type="radio" name="rating" value="unfulfilling">Unfulfilling&nbsp;
+    <input type="submit" value="rate">
+  </td>
+</tr>
+</table>
+</form>
+<span class="txth2">script versions</span> (<a href="add_script_version.php?script_id=915">upload new version</a>)
+<p>
+Click on the package to download.
+<p>
+
+<table cellspacing="2" cellpadding="4" border="0" width="100%">
+<tr class='tableheader'>
+        <th valign="top">package</th>
+    <th valign="top">script version</th>
+    <th valign="top">date</th>
+    <th valign="top">Vim version</th>
+    <th valign="top">user</th>
+    <th valign="top">release notes</th>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=9224">AsNeeded.vba.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>16</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2008-09-04</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=96">Charles Campbell</a></i></td>
+    <td class="rowodd" valign="top" width="2000">&lt;*&gt; ANtags now smaller (uses relative paths)<br>&lt;*&gt; saves and restore magic setting<br>&lt;*&gt; MkAsNeeded creates a menu: DrChip.ANmenu full of commands that AsNeeded can load<br>&lt;*&gt; Improved cmdsrch<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=6778">AsNeeded.vba.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>15</b></td>
+    <td class="roweven" valign="top" nowrap><i>2007-02-23</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=96">Charles Campbell</a></i></td>
+    <td class="roweven" valign="top" width="2000">Various bugfixes to automatic updating of ANtags and improvements to handling of no user-specified mapleader.<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=6204">AsNeeded.vba.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>14</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2006-09-19</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=96">Charles Campbell</a></i></td>
+    <td class="rowodd" valign="top" width="2000">(-NEW-)&nbsp;&nbsp;Setting a variable, g:AsNeededAutoMake, to something like &quot;ls -1l&quot;, lets AsNeeded keep ANtags and ANcmds up-to-date automatically!<br>(bugfix) Taglist does a quick-loading trick that involved using FuncUndefined autocmds.&nbsp;&nbsp;AsNeeded now defers to taglist instead of issuing a warning.<br>(bugfix) ei=all was inadvertently being left on; thus no autocmds were operational after AsNeeded successfully loaded a function.&nbsp;&nbsp;Fixed!<br>(bugfix) included |'patchmode'| in the SaveSettings() and RestoreSettings() bypass functions<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=5719">AsNeeded.vba.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>13</b></td>
+    <td class="roweven" valign="top" nowrap><i>2006-05-18</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=96">Charles Campbell</a></i></td>
+    <td class="roweven" valign="top" width="2000">AsNeeded now uses Thomas's idea for producing a &quot;ANcmds.vim&quot; plugin with skeleton commands. Plus some bugfixes.&nbsp;&nbsp;With this feature, commands in scripts in the AsNeeded/ directory act as if they're always available, even when the scripts haven't been loaded.<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=5429">AsNeeded.vim.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>12</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2006-03-14</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=96">Charles Campbell</a></i></td>
+    <td class="rowodd" valign="top" width="2000">(bugfix) AsNeeded needs to work around several options that the user may set.&nbsp;&nbsp;However, if a plugin changed one of these, AsNeeded &quot;restored&quot; the option at the time that AsNeeded was invoked, thereby overriding whatever the plugin/map etc may have set.&nbsp;&nbsp;AsNeeded now restores the options, then sources the plugin/map etc.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=5145">AsNeeded.vim.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>11</b></td>
+    <td class="roweven" valign="top" nowrap><i>2006-02-10</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=96">Charles Campbell</a></i></td>
+    <td class="roweven" valign="top" width="2000">Bugfixes (success message itself sometimes caused an error, internally used buffers now wiped silently, keeps/restores lz)<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=4789">AsNeeded.vim.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>10</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2005-11-21</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=96">Charles Campbell</a></i></td>
+    <td class="rowodd" valign="top" width="2000">bugfix: maps with backslashes are escaped so they can be found<br>bugfix: report option workaround<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=4423">AsNeeded.vim.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>9</b></td>
+    <td class="roweven" valign="top" nowrap><i>2005-07-12</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=96">Charles Campbell</a></i></td>
+    <td class="roweven" valign="top" width="2000">MakeANtags command and function search patterns improved<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=3877">AsNeeded.vim.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>8</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2005-02-17</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=96">Charles Campbell</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Another bug fix; this time, for some maps, tags were being generated but not executed.&nbsp;&nbsp;Fixed!<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=3870">AsNeeded.vim.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>7</b></td>
+    <td class="roweven" valign="top" nowrap><i>2005-02-16</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=96">Charles Campbell</a></i></td>
+    <td class="roweven" valign="top" width="2000">MakeANtags now warns the user when no tags were found for each scriptfile it examines in the AsNeeded directory.<br>Two bugfixes: MakeANtags was missing some maps and, under Windows, was omitting backslashes in paths.&nbsp;&nbsp;Fixed!<br></td>
+</tr>
+</table>
+<!-- finish off the framework -->
+          </td>
+        </tr>
+      </table>
+    </td>
+
+  </tr>
+</table>
+
+<!-- END OF THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr><td colspan="4" bgcolor="#000000"><img src="/images/spacer.gif" height="2" width="1" alt=""></td></tr>
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr>
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+
+    <td align="left" valign="top"><small>
+      If you have questions or remarks about this site, visit the
+      <a href="http://vimonline.sf.net">vimonline development</a> pages.
+      Please use this site responsibly.
+      <br> 
+      
+      Questions about <a href="http://www.vim.org/about.php">Vim</a> should go
+      to the <a href="http://www.vim.org/maillist.php">maillist</a>.
+      Help Bram <a href="http://iccf-holland.org/">help Uganda</a>.
+      </small>
+	&nbsp;
+	&nbsp;
+
+	<!-- Start of StatCounter Code -->
+	<script type="text/javascript" language="javascript">
+	var sc_project=1417324; 
+	var sc_invisible=1; 
+	var sc_partition=11; 
+	var sc_security="d41633bc"; 
+	</script>
+
+	<script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script><noscript><a href="http://www.statcounter.com/" target="_blank"><img  src="http://c12.statcounter.com/counter.php?sc_project=1417324&java=0&security=d41633bc&invisible=0" alt="free tracking" border="0"></a> </noscript>
+	<!-- End of StatCounter Code -->
+          </td>
+
+    <td align="right" valign="top">
+      		<a href="http://sourceforge.net/projects/vim" rel="nofollow"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=8&type=1" width="88" height="31" border="0" alt="SourceForge.net Logo" /></a>
+    </td>
+
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+  </tr>
+
+    
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  
+  </tr>
+</table>
+
+</body>
+</html>
+

@@ -1,0 +1,380 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+  <link rel="Stylesheet" type="text/css" href="/css/style.css" >
+  <title>quickfonts.vim - quickly switch between a list of favorite fonts, manage list of favorite fonts : vim online</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <meta name="KEYWORDS" content="Vim, Vi IMproved, text editor, home, documentation, tips, scripts, news">
+  <link rel="shortcut icon" type="image/x-icon" href="/images/vim_shortcut.ico">
+</head>
+
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff"> 
+
+<!-- HEADER, SPONSOR IMAGE, VIM IMAGE AND BOOK AD -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+  <td class="lightbg">&nbsp;&nbsp;&nbsp;</td>
+  <td class="lightbg" align="left"><a href="/sponsor/index.php"><img src="/images/sponsorvim.gif" alt="sponsor Vim development" border="0"></a></td>
+    <td class="lightbg" align="center"><a href="/index.php"><img src="/images/vim_header.gif" border="0" alt="Vim logo"></a></td>
+    <td class="lightbg" align="right"><a href="http://iccf-holland.org/click5.html"><img src="/images/buyhelplearn.gif" alt="Vim Book Ad" border="0"></a></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="darkbg"><img src="/images/spacer.gif" width="1" height="10" alt=""></td>
+  </tr>
+</table>
+<!-- THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+  <col width="180">
+  <col width="1">
+
+  <tr valign="top">
+    <td class="sidebar">
+      <table width="180" cellpadding="4" cellspacing="0" border="0">
+        <tr valign="top">
+          <td class="sidebar">
+
+<!-- INCLUDE THE PAGE NAVIGATION -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+    <tr>
+        <td><small>not logged in (<a href="/login.php">login</a>)</small></td>
+    </tr>
+    <tr><td>
+<small>&nbsp;</small>
+<form action="http://www.google.com/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-3005259998294962:bvyni59kjr1" />
+    <input type="hidden" name="ie" value="ISO-8859-1" />
+    <input type="text" name="q" size="20" />
+    <br>
+    <input type="submit" name="sa" value="Search" />
+  </div>
+</form>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+    </td></tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="1"></td>
+    </tr>
+    <tr>
+        <td class="darkbg"><img src="/images/spacer.gif" alt='' border="0" height="3"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="2"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/index.php">Home</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/search.php">Advanced search</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/about.php">About Vim</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/community.php">Community</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/news/news.php">News</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/sponsor/index.php">Sponsoring</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/trivia.php">Trivia</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/docs.php">Documentation</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/download.php">Download</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/scripts/index.php">Scripts</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/tips/index.php">Tips</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/account/index.php">My Account</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/huh.php">Site Help</a></td>
+        </tr>
+</table>
+
+            <table width="172" cellpadding="0" cellspacing="0" border="0">
+              <tr><td><img src="/images/spacer.gif" alt="" border="0" width="1" height="8"></td></tr>
+              <tr><td class="darkbg"><img src="/images/spacer.gif" width="1" height="3" alt=""></td></tr>
+            </table>
+            <br>
+
+<!-- INCLUDE THE PAGE SIDEBAR TEXT -->
+&nbsp;
+
+          </td>
+        </tr>
+      </table>
+    </td>
+
+    <td class="darkbg"><img src="/images/spacer.gif" width="1" height="1" border="0" alt=""><br></td>
+    <td>
+      <table width="100%" cellpadding="10" cellspacing="0" border="0" bordercolor="red">
+        <tr>
+          <td valign="top">
+
+<span class="txth1">quickfonts.vim : quickly switch between a list of favorite fonts, manage list of favorite fonts</span> 
+
+<br>
+<br>
+
+<!-- karma table -->
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
+  <td>
+    Rating <b>29/12</b>,
+    Downloaded by 2542  </td>
+  <td class="lightbg">
+  <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
+  </td>
+  <td>
+    <a href="http://vim.wikia.com/wiki/Script:202">Vim wiki</a>
+  </td>  
+</tr>
+</table>
+<p>
+
+<table cellspacing="0" cellpadding="0" border="0">
+<tr><td class="prompt">created by</td></tr>
+<tr><td><a href="/account/profile.php?user_id=89">scott urban</a></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">script type</td></tr>
+<tr><td>utility</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">description</td></tr>
+<tr><td>UPDATES <br> - allow specification of base menu in which to put quickfonts menu (e.g. 'Plugin')<br> - bug fixes and handling of gtk2 style fonts<br><br><br>This plugin manages a list of favorite fonts, and allows you to swich quickly between those fonts.&nbsp;&nbsp;This is useful if you normally like to use several fonts, for example, if your eyes get tired looking at a small font, or someone comes to look at code on your monitor, or your vision is blurry from a night of heavy drinking, you can quickly switch to a larger font, and the go back to a smaller font when the conditions allow it.<br><br>All functionality is available through an optional menu or through custom vim commands.<br><br>Fonts are read from a file specified with the global variable g:quickFontsFile or the default file $HOME/.vimquickfonts if that variable doesn't eists.&nbsp;&nbsp;At vim start up, the file is read, if it doesn't exist your list will be empty. If the 'quickFontsAutoLoad' global variable is set (i.e. in your .vimrc), the script will load the last used font upon gvim start-up. On vim quit, your list of favorites is written to the file as well as the quickfont used last.<br><br>You can switch between the fonts with the mappings Alt-&lt; and Alt-&gt;, which I find useful because they also work in some terminal programs (rxvt/xterm on some systems). You can change the mappings in the plugin if those don't suit you or disable them and add your own if you want (see help file).&nbsp;&nbsp;The same functionality is available with the commands :QuickFontBigger and :QuickFontSmaller.<br><br>You can add a font to your favorites list with the command <br>:QuickFontAdd<br>which either takes no argument, in which case the value of 'guifont' will be added if available, or if an argument of '*' is given, the guifont selector is called, if you select a font from that (with no errors) that font will be added to the list.&nbsp;&nbsp;A full font specification string can also be given as an argument. Duplicate fonts are eliminated, and new fonts are inserted sorted by pixel size in the list. UPDATE - sorting is done on font width * height rather than just width (for unix/Xwindows).&nbsp;&nbsp;You&nbsp;&nbsp;can disable this with: <br>&quot;let quickFontsNoXwininfo = 1&quot; in your vimrc.<br><br>You can remove a favorite font with the command<br>:QuickFontDel<br>which with no argument deletes the current selected font from the list, or if you give it a number, it will delete the font at that index in the list.<br><br>You can get info on your favorite font list and the currenlty selected font with the command<br>:QuickFontInfo<br><br>You can reload your font list from your config file (abandoning any changes to the list) with the command<br>:QuickFontReload<br><br>Finally, you can always edit the config file by hand, in which case, an autocommand will re-read your changes when you write the file.<br><br>Caveats: should work with non-X style fonts, except the font sorting.&nbsp;&nbsp;There are stubs for sorting fonts for other systems - just not filled out - let me know if want to help with that.<br><br></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">install details</td></tr>
+<tr><td>1 - un-gzip, untar in your ~/.vim direcory, or your vimfiles directory, or in $VIMRUNTIME<br>2 - (optional) build local help files (:help helptags)<br>3 - (optional) define plugin options in your vimrc - see ':help quickfonts'</td></tr>
+<tr><td>&nbsp;</td></tr>
+</table>
+
+<!-- rating table -->
+<form name="rating">
+<input type="hidden" name="script_id" value="202">
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>rate this script</b></td>
+  <td valign="middle">
+    <input type="radio" name="rating" value="life_changing">Life Changing
+    <input type="radio" name="rating" value="helpful">Helpful
+    <input type="radio" name="rating" value="unfulfilling">Unfulfilling&nbsp;
+    <input type="submit" value="rate">
+  </td>
+</tr>
+</table>
+</form>
+<span class="txth2">script versions</span> (<a href="add_script_version.php?script_id=202">upload new version</a>)
+<p>
+Click on the package to download.
+<p>
+
+<table cellspacing="2" cellpadding="4" border="0" width="100%">
+<tr class='tableheader'>
+        <th valign="top">package</th>
+    <th valign="top">script version</th>
+    <th valign="top">date</th>
+    <th valign="top">Vim version</th>
+    <th valign="top">user</th>
+    <th valign="top">release notes</th>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=4103">quickfonts-1.29.tar.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.29</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2005-03-30</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=89">scott urban</a></i></td>
+    <td class="rowodd" valign="top" width="2000">email updated</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=2718">quickfonts.tar.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.27</b></td>
+    <td class="roweven" valign="top" nowrap><i>2004-02-03</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=89">scott urban</a></i></td>
+    <td class="roweven" valign="top" width="2000">fix for geometry bug when 'ignorecase' is set - thanks to Stephan&nbsp;&nbsp;Hegel</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=2711">quickfonts.tar.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.26</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2004-02-02</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=89">scott urban</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Shell and documentation fixes from Stephan Hegel</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=2477">quickfonts.1.25.tar.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.25</b></td>
+    <td class="roweven" valign="top" nowrap><i>2003-11-08</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=89">scott urban</a></i></td>
+    <td class="roweven" valign="top" width="2000">- allow specification of base menu in which to put quickfonts menu (e.g. 'Plugin')<br>- fix for error when menus don't exist<br>- fix for new font style used by GTK<br>- fix for xwinfo name error - needed redraw!<br>- other minor fixes</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=1671">quickfonts-1.21.tar.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.21</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2003-01-25</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=89">scott urban</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Menus added for most functionality - can be disabled - see help document.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=1669">quickfonts-1.20.tar.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.20</b></td>
+    <td class="roweven" valign="top" nowrap><i>2003-01-24</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=89">scott urban</a></i></td>
+    <td class="roweven" valign="top" width="2000">Made start-up smoother - window no longer does a size jump when using the auto-load-last-used font feature. </td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=1666">quickfonts-1.19.tar.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.19</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2003-01-23</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=89">scott urban</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Added feature to load last font used (from quickfont list) when gvim starts up.&nbsp;&nbsp;Added flag to disable default mapping creation.&nbsp;&nbsp;Code clean-up, doc updates, etc.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=892">quickfonts-1.18.tar.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.18</b></td>
+    <td class="roweven" valign="top" nowrap><i>2002-05-28</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=89">scott urban</a></i></td>
+    <td class="roweven" valign="top" width="2000">:QuickFontAdd funtion can now take a font name - useful for a motif version I use (no GUI font selector)</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=798">quickfont-1.16.tar.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.16</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2002-04-19</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=89">scott urban</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Added QuickFontSet command that allows jumping to font by index number.&nbsp;&nbsp;Use :QuickFontInfo and :QuickFontSet x in succession.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=566">quickfonts.tar.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.14</b></td>
+    <td class="roweven" valign="top" nowrap><i>2002-02-07</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=89">scott urban</a></i></td>
+    <td class="roweven" valign="top" width="2000">Added documentation (run :helptags ~/.vim/doc); Fixed numeric sorting bug; Default config file for Windows changed to $HOME/_vimquickfonts; Fall through when xwininfo fails.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=564">quickfonts.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.13</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2002-02-07</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=89">scott urban</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Fonts can be sorted on area (char width * height) instead of just on width - this gives a bit smoother transition as you go bigger and smaller. Uses xwininfo to do this (X systems only) - you can turn it off by letting the var quickFontsNoXwininfo in your vimrc.<br>Font sorting separated into different gui systems - only X is implemented now - if you want to help with windows or others, let me know.<br>QuickFontReload command added - re-reads your font list file - effectively abandoning changes.<br>Escaping of spaces in font names.<br>General improvements</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=544">quickfonts.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.6</b></td>
+    <td class="roweven" valign="top" nowrap><i>2002-02-04</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=89">scott urban</a></i></td>
+    <td class="roweven" valign="top" width="2000">Initial upload</td>
+</tr>
+</table>
+<!-- finish off the framework -->
+          </td>
+        </tr>
+      </table>
+    </td>
+
+  </tr>
+</table>
+
+<!-- END OF THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr><td colspan="4" bgcolor="#000000"><img src="/images/spacer.gif" height="2" width="1" alt=""></td></tr>
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr>
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+
+    <td align="left" valign="top"><small>
+      If you have questions or remarks about this site, visit the
+      <a href="http://vimonline.sf.net">vimonline development</a> pages.
+      Please use this site responsibly.
+      <br> 
+      
+      Questions about <a href="http://www.vim.org/about.php">Vim</a> should go
+      to the <a href="http://www.vim.org/maillist.php">maillist</a>.
+      Help Bram <a href="http://iccf-holland.org/">help Uganda</a>.
+      </small>
+	&nbsp;
+	&nbsp;
+
+	<!-- Start of StatCounter Code -->
+	<script type="text/javascript" language="javascript">
+	var sc_project=1417324; 
+	var sc_invisible=1; 
+	var sc_partition=11; 
+	var sc_security="d41633bc"; 
+	</script>
+
+	<script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script><noscript><a href="http://www.statcounter.com/" target="_blank"><img  src="http://c12.statcounter.com/counter.php?sc_project=1417324&java=0&security=d41633bc&invisible=0" alt="free tracking" border="0"></a> </noscript>
+	<!-- End of StatCounter Code -->
+          </td>
+
+    <td align="right" valign="top">
+      		<a href="http://sourceforge.net/projects/vim" rel="nofollow"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=8&type=1" width="88" height="31" border="0" alt="SourceForge.net Logo" /></a>
+    </td>
+
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+  </tr>
+
+    
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  
+  </tr>
+</table>
+
+</body>
+</html>
+

@@ -1,0 +1,340 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+  <link rel="Stylesheet" type="text/css" href="/css/style.css" >
+  <title>FeralToggleCommentify.vim - My fork of ToggleCommentify.vim; comment lines in a program : vim online</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <meta name="KEYWORDS" content="Vim, Vi IMproved, text editor, home, documentation, tips, scripts, news">
+  <link rel="shortcut icon" type="image/x-icon" href="/images/vim_shortcut.ico">
+</head>
+
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff"> 
+
+<!-- HEADER, SPONSOR IMAGE, VIM IMAGE AND BOOK AD -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+  <td class="lightbg">&nbsp;&nbsp;&nbsp;</td>
+  <td class="lightbg" align="left"><a href="/sponsor/index.php"><img src="/images/sponsorvim.gif" alt="sponsor Vim development" border="0"></a></td>
+    <td class="lightbg" align="center"><a href="/index.php"><img src="/images/vim_header.gif" border="0" alt="Vim logo"></a></td>
+    <td class="lightbg" align="right"><a href="http://iccf-holland.org/click5.html"><img src="/images/buyhelplearn.gif" alt="Vim Book Ad" border="0"></a></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="darkbg"><img src="/images/spacer.gif" width="1" height="10" alt=""></td>
+  </tr>
+</table>
+<!-- THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+  <col width="180">
+  <col width="1">
+
+  <tr valign="top">
+    <td class="sidebar">
+      <table width="180" cellpadding="4" cellspacing="0" border="0">
+        <tr valign="top">
+          <td class="sidebar">
+
+<!-- INCLUDE THE PAGE NAVIGATION -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+    <tr>
+        <td><small>not logged in (<a href="/login.php">login</a>)</small></td>
+    </tr>
+    <tr><td>
+<small>&nbsp;</small>
+<form action="http://www.google.com/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-3005259998294962:bvyni59kjr1" />
+    <input type="hidden" name="ie" value="ISO-8859-1" />
+    <input type="text" name="q" size="20" />
+    <br>
+    <input type="submit" name="sa" value="Search" />
+  </div>
+</form>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+    </td></tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="1"></td>
+    </tr>
+    <tr>
+        <td class="darkbg"><img src="/images/spacer.gif" alt='' border="0" height="3"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="2"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/index.php">Home</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/search.php">Advanced search</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/about.php">About Vim</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/community.php">Community</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/news/news.php">News</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/sponsor/index.php">Sponsoring</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/trivia.php">Trivia</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/docs.php">Documentation</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/download.php">Download</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/scripts/index.php">Scripts</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/tips/index.php">Tips</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/account/index.php">My Account</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/huh.php">Site Help</a></td>
+        </tr>
+</table>
+
+            <table width="172" cellpadding="0" cellspacing="0" border="0">
+              <tr><td><img src="/images/spacer.gif" alt="" border="0" width="1" height="8"></td></tr>
+              <tr><td class="darkbg"><img src="/images/spacer.gif" width="1" height="3" alt=""></td></tr>
+            </table>
+            <br>
+
+<!-- INCLUDE THE PAGE SIDEBAR TEXT -->
+&nbsp;
+
+          </td>
+        </tr>
+      </table>
+    </td>
+
+    <td class="darkbg"><img src="/images/spacer.gif" width="1" height="1" border="0" alt=""><br></td>
+    <td>
+      <table width="100%" cellpadding="10" cellspacing="0" border="0" bordercolor="red">
+        <tr>
+          <td valign="top">
+
+<span class="txth1">FeralToggleCommentify.vim : My fork of ToggleCommentify.vim; comment lines in a program</span> 
+
+<br>
+<br>
+
+<!-- karma table -->
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
+  <td>
+    Rating <b>83/34</b>,
+    Downloaded by 2616  </td>
+  <td class="lightbg">
+  <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
+  </td>
+  <td>
+    <a href="http://vim.wikia.com/wiki/Script:665">Vim wiki</a>
+  </td>  
+</tr>
+</table>
+<p>
+
+<table cellspacing="0" cellpadding="0" border="0">
+<tr><td class="prompt">created by</td></tr>
+<tr><td><a href="/account/profile.php?user_id=818">Robert KellyIV</a></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">script type</td></tr>
+<tr><td>utility</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">description</td></tr>
+<tr><td>This script offers simple, basic, line oriented commenting of files.<br>Originally <a href="/scripts/script.php?script_id=4">vimscript #4</a> (ToggleCommentify.vim v1.2 ) by Vincent Nijs<br>Was mutilated into what you see here, for better or worse :)<br><br>Following list of file types are currently (v1.55) supported:<br>&nbsp;&nbsp;&nbsp;&nbsp;ox, cpp, php, java, bnk, cs, ftf, torquescript, fte, html, xml, c, css,<br>&nbsp;&nbsp;&nbsp;&nbsp;pov, vim, lisp, scheme, dosini, tex, caos, m4, config, automake, python,<br>&nbsp;&nbsp;&nbsp;&nbsp;perl, make, [^w]sh$, tcl, jproperties, vb, aspvbs, plsql, lua,<br><br><br>Three commands:<br>:CC&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot; To Comment a line/range<br>:UC&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot; To Uncomment a line/range<br>:TC&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot; To Toggle comments on each line/range.<br><br>All take optional arg to override default comment style<br>i.e. &quot;:CC --&quot;<br><br>Maps &lt;m-c&gt; to :TC if no command by that name already exists. Remap &lt;Plug&gt;FtcTc<br>&nbsp;&nbsp;&nbsp;&nbsp;at will.<br>Maps &lt;C-c&gt; to a duplicate and comment, line/range; so you can easily make a<br>&nbsp;&nbsp;&nbsp;&nbsp;duplicate of the current line/range and comment it; then edit it the<br>&nbsp;&nbsp;&nbsp;&nbsp;original. Remap &lt;Plug&gt;FtcDLAC at will.<br><br>**********<br>New with v1.55:<br>You can customize the behavior by specifying optional option vars. Each option<br>var can be specified as buffer or global, with that precedence.<br><br>Option: g:FTCOperateOnFirstColumnOnly<br>&nbsp;&nbsp;&nbsp;&nbsp;If this is 0 (false) then the comment char does not have to be at col1 to<br>&nbsp;&nbsp;&nbsp;&nbsp;be removed, in addition comment chars are placed just before the first word<br>&nbsp;&nbsp;&nbsp;&nbsp;of the line.<br>Valid Values: 0 or 1<br>Default: 1<br><br>Option: g:FTCOperateOnlyOnNonComments<br>&nbsp;&nbsp;&nbsp;&nbsp;If 1 (true) a line will not be commented if it already starts with comment<br>&nbsp;&nbsp;&nbsp;&nbsp;chars. With this 0 (false) you can (easily) comment entire functions<br>&nbsp;&nbsp;&nbsp;&nbsp;without fear of messing up commenting (i.e. '&lt;,'&gt;CC ... '&lt;,'&gt;UC ...&nbsp;&nbsp;I.e.<br>&nbsp;&nbsp;&nbsp;&nbsp;comment then uncomment. If this is true the above MAY not work (depending<br>&nbsp;&nbsp;&nbsp;&nbsp;on how the existing comments are.)<br>Valid Values: 0 or 1<br>Default: 0<br><br>Option: g:FTCOperateOnBlankLines<br>&nbsp;&nbsp;&nbsp;&nbsp;If 1 (true) blank lines will be processed, else they are skipped.<br>Valid Values: 0 or 1<br>Default: 1<br><br>Option: g:FTCBangEffectsWhat<br>&nbsp;&nbsp;&nbsp;&nbsp;Will toggle an option if command is banged: (i.e. :CC!)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1. OperateOnFirstColumnOnly<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2. OperateOnlyOnNonComments<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3. OperateOnBlankLines<br>Valid Values: 1, 2 or 3<br>Default: 1<br><br><br>I.e. in .vimrc:<br>let g:FTCOperateOnFirstColumnOnly = 0<br>let g:FTCOperateOnlyOnNonComments = 1</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">install details</td></tr>
+<tr><td>Just drop in plugins/</td></tr>
+<tr><td>&nbsp;</td></tr>
+</table>
+
+<!-- rating table -->
+<form name="rating">
+<input type="hidden" name="script_id" value="665">
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>rate this script</b></td>
+  <td valign="middle">
+    <input type="radio" name="rating" value="life_changing">Life Changing
+    <input type="radio" name="rating" value="helpful">Helpful
+    <input type="radio" name="rating" value="unfulfilling">Unfulfilling&nbsp;
+    <input type="submit" value="rate">
+  </td>
+</tr>
+</table>
+</form>
+<span class="txth2">script versions</span> (<a href="add_script_version.php?script_id=665">upload new version</a>)
+<p>
+Click on the package to download.
+<p>
+
+<table cellspacing="2" cellpadding="4" border="0" width="100%">
+<tr class='tableheader'>
+        <th valign="top">package</th>
+    <th valign="top">script version</th>
+    <th valign="top">date</th>
+    <th valign="top">Vim version</th>
+    <th valign="top">user</th>
+    <th valign="top">release notes</th>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=4220">feraltogglecommentify.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.611</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2005-04-28</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=818">Robert KellyIV</a></i></td>
+    <td class="rowodd" valign="top" width="2000">1.61 - Improved/Fixed cursor restore. Screen should not jump; ever.<br>1.611 - bugfix for above for column jumping about, *sigh*.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=2273">feraltogglecommentify.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.58</b></td>
+    <td class="roweven" valign="top" nowrap><i>2003-08-28</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=818">Robert KellyIV</a></i></td>
+    <td class="roweven" valign="top" width="2000">Added rebol ';' comment type, contribution by Tim Johnson<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=2243">feraltogglecommentify.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.57</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2003-08-19</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=818">Robert KellyIV</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Added ruby &#039#&#039 comment type, contribution by Brett Williams<br>Added sh &#039#&#039 comment type.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=2175">feraltogglecommentify.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.56</b></td>
+    <td class="roweven" valign="top" nowrap><i>2003-07-21</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=818">Robert KellyIV</a></i></td>
+    <td class="roweven" valign="top" width="2000">BUG FIX: Fixed silly cursor restore problem, screen no longer jumps on occasion.<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=2152">feraltogglecommentify.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.55</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2003-07-16</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=818">Robert KellyIV</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Integrating changes from Jörn Horstmann. Changes are marked with &quot;JH:&quot;.<br>Improvement:&nbsp;&nbsp;&nbsp;&nbsp;Added options to determine how this should react.<br>* Optionally does not mess with blank lines.<br>* Change by JH, comment does not have to be in first column<br>* Change by JH, only add comment when not already commented<br>Please see &quot;Customizing:&quot; (in the script file) for details and usage:<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=2145">feraltogglecommentify.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.54</b></td>
+    <td class="roweven" valign="top" nowrap><i>2003-07-12</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=818">Robert KellyIV</a></i></td>
+    <td class="roweven" valign="top" width="2000">2 BUG FIXes, 2 Improvements:<br>* BUG FIX: (minor) no longer complains when uncommenting and there are no comment char(s). (aka middle of a range is uncommented already)<br>* BUG FIX: Respects 'hlsearch'; won't mess with highlighting if off, etc. (Previous turned it on at end of script)<br>* Improvement: Can now comment/uncomment a fold without opening it.&nbsp;&nbsp;(courtesy of normal! zn and normal! zN)<br>* Improvement: Changed DLAC into a proper command (:DLAC) (from mapping); map &lt;Plug&gt;FtcDLAC as desired, defaults to &lt;C-c&gt;. Ranges are supported (default current line) and you can specify the comment chars just as you can with :CC, :TC, :UC.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=2043">FeralToggleCommentify.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.532</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2003-06-04</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=818">Robert KellyIV</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Initial upload</td>
+</tr>
+</table>
+<!-- finish off the framework -->
+          </td>
+        </tr>
+      </table>
+    </td>
+
+  </tr>
+</table>
+
+<!-- END OF THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr><td colspan="4" bgcolor="#000000"><img src="/images/spacer.gif" height="2" width="1" alt=""></td></tr>
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr>
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+
+    <td align="left" valign="top"><small>
+      If you have questions or remarks about this site, visit the
+      <a href="http://vimonline.sf.net">vimonline development</a> pages.
+      Please use this site responsibly.
+      <br> 
+      
+      Questions about <a href="http://www.vim.org/about.php">Vim</a> should go
+      to the <a href="http://www.vim.org/maillist.php">maillist</a>.
+      Help Bram <a href="http://iccf-holland.org/">help Uganda</a>.
+      </small>
+	&nbsp;
+	&nbsp;
+
+	<!-- Start of StatCounter Code -->
+	<script type="text/javascript" language="javascript">
+	var sc_project=1417324; 
+	var sc_invisible=1; 
+	var sc_partition=11; 
+	var sc_security="d41633bc"; 
+	</script>
+
+	<script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script><noscript><a href="http://www.statcounter.com/" target="_blank"><img  src="http://c12.statcounter.com/counter.php?sc_project=1417324&java=0&security=d41633bc&invisible=0" alt="free tracking" border="0"></a> </noscript>
+	<!-- End of StatCounter Code -->
+          </td>
+
+    <td align="right" valign="top">
+      		<a href="http://sourceforge.net/projects/vim" rel="nofollow"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=8&type=1" width="88" height="31" border="0" alt="SourceForge.net Logo" /></a>
+    </td>
+
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+  </tr>
+
+    
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  
+  </tr>
+</table>
+
+</body>
+</html>
+

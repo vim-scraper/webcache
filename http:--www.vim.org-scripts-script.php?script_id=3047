@@ -1,0 +1,316 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+  <link rel="Stylesheet" type="text/css" href="/css/style.css" >
+  <title>scalacommenter.vim - Functions for documenting Scala-code : vim online</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <meta name="KEYWORDS" content="Vim, Vi IMproved, text editor, home, documentation, tips, scripts, news">
+  <link rel="shortcut icon" type="image/x-icon" href="/images/vim_shortcut.ico">
+</head>
+
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff"> 
+
+<!-- HEADER, SPONSOR IMAGE, VIM IMAGE AND BOOK AD -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+  <td class="lightbg">&nbsp;&nbsp;&nbsp;</td>
+  <td class="lightbg" align="left"><a href="/sponsor/index.php"><img src="/images/sponsorvim.gif" alt="sponsor Vim development" border="0"></a></td>
+    <td class="lightbg" align="center"><a href="/index.php"><img src="/images/vim_header.gif" border="0" alt="Vim logo"></a></td>
+    <td class="lightbg" align="right"><a href="http://iccf-holland.org/click5.html"><img src="/images/buyhelplearn.gif" alt="Vim Book Ad" border="0"></a></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="darkbg"><img src="/images/spacer.gif" width="1" height="10" alt=""></td>
+  </tr>
+</table>
+<!-- THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+  <col width="180">
+  <col width="1">
+
+  <tr valign="top">
+    <td class="sidebar">
+      <table width="180" cellpadding="4" cellspacing="0" border="0">
+        <tr valign="top">
+          <td class="sidebar">
+
+<!-- INCLUDE THE PAGE NAVIGATION -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+    <tr>
+        <td><small>not logged in (<a href="/login.php">login</a>)</small></td>
+    </tr>
+    <tr><td>
+<small>&nbsp;</small>
+<form action="http://www.google.com/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-3005259998294962:bvyni59kjr1" />
+    <input type="hidden" name="ie" value="ISO-8859-1" />
+    <input type="text" name="q" size="20" />
+    <br>
+    <input type="submit" name="sa" value="Search" />
+  </div>
+</form>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+    </td></tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="1"></td>
+    </tr>
+    <tr>
+        <td class="darkbg"><img src="/images/spacer.gif" alt='' border="0" height="3"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="2"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/index.php">Home</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/search.php">Advanced search</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/about.php">About Vim</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/community.php">Community</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/news/news.php">News</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/sponsor/index.php">Sponsoring</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/trivia.php">Trivia</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/docs.php">Documentation</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/download.php">Download</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/scripts/index.php">Scripts</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/tips/index.php">Tips</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/account/index.php">My Account</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/huh.php">Site Help</a></td>
+        </tr>
+</table>
+
+            <table width="172" cellpadding="0" cellspacing="0" border="0">
+              <tr><td><img src="/images/spacer.gif" alt="" border="0" width="1" height="8"></td></tr>
+              <tr><td class="darkbg"><img src="/images/spacer.gif" width="1" height="3" alt=""></td></tr>
+            </table>
+            <br>
+
+<!-- INCLUDE THE PAGE SIDEBAR TEXT -->
+&nbsp;
+
+          </td>
+        </tr>
+      </table>
+    </td>
+
+    <td class="darkbg"><img src="/images/spacer.gif" width="1" height="1" border="0" alt=""><br></td>
+    <td>
+      <table width="100%" cellpadding="10" cellspacing="0" border="0" bordercolor="red">
+        <tr>
+          <td valign="top">
+
+<span class="txth1">scalacommenter.vim : Functions for documenting Scala-code</span> 
+
+<br>
+<br>
+
+<!-- karma table -->
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
+  <td>
+    Rating <b>4/1</b>,
+    Downloaded by 178  </td>
+  <td class="lightbg">
+  <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
+  </td>
+  <td>
+    <a href="http://vim.wikia.com/wiki/Script:3047">Vim wiki</a>
+  </td>  
+</tr>
+</table>
+<p>
+
+<table cellspacing="0" cellpadding="0" border="0">
+<tr><td class="prompt">created by</td></tr>
+<tr><td><a href="/account/profile.php?user_id=6544">richard emberson</a></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">script type</td></tr>
+<tr><td>utility</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">description</td></tr>
+<tr><td>Re-written using the Self.vim Object prototype system, hence<br>justifying a major version number increase<br>(see: <a target="_blank" href="http://www.vim.org/scripts/script.php?script_id=3072">http://www.vim.org/scripts/script.php?script_id=3072</A>).<br>The self.vim code is embedded in the scalacommenter.vim code<br>so you don't need to download self.vim.<br><br>Inspired by Kalle Bjorklid's JCommenter.<br>Works on Vim version 7.0 and above<br><br>This has two capabilities: <br>&nbsp;&nbsp;1) Generating a comment template, and<br>&nbsp;&nbsp;2) Formatting an existing set of comment tags.<br><br>Generating ScalaDoc comments for Scala sources.<br>This is triggered by executing the ScalaCommentWriter() function<br>&nbsp;&nbsp;1) while the cursor is over something meaningful, or<br>&nbsp;&nbsp;2) if a (visual) selection exists,<br>The selected text is parsed and the comment template generated.<br><br>The following comments are generated (in the appropriate situations):<br><br>1. File comments: user specifies the template, generated when the<br>&nbsp;&nbsp;&nbsp;&nbsp;cursor is on the first line of the file.<br>2. Class comments: generated when on top of a class declaration<br>&nbsp;&nbsp;&nbsp;&nbsp;Tags if applicable: @author, @version, @since, @param, @tparam and @throws<br>3. Trait comments: generated when on top of a trait declaration<br>&nbsp;&nbsp;&nbsp;&nbsp;Tags if applicable: @author, @version and @since<br>4. Object comments: generated when on top of a object declaration<br>&nbsp;&nbsp;&nbsp;&nbsp;Tags if applicable: @author, @version and @since<br>5. Inner Class comments: generated when on top of an inner class declaration<br>&nbsp;&nbsp;&nbsp;&nbsp;Tags if applicable: @param, @tparam and @throws<br>6. Inner Trait comments: generated when on top of an inner trait declaration<br>7. Inner Object comments: generated when on top of an inner object declaration<br>8. Method comments: generated when on top of a method declaration.<br>&nbsp;&nbsp;&nbsp;&nbsp;Tags if applicable: @param, @tparam, @return and @throws<br>9. Fields, val and var, comments: generated when on top of a var or val<br>&nbsp;&nbsp;&nbsp;&nbsp;declaration.<br><br>If executed and the class, trait, object or method already has a ScalaDoc<br>comment, an attempt is made to add/remove parameter and template parameter<br>tags as needed.<br><br>Formatting existing ScalaDoc comments for Scala sources.<br>This is triggered by executing the ScalaCommentFormatter() function<br>The user (visual) selection of the comment tag lines to be formatted<br>and invokes the ScalaCommentFormatter() function.<br>As an example, the following is selected and formatted:<br>&nbsp;&nbsp; * @author&nbsp;&nbsp;&nbsp;&nbsp;Tom&nbsp;&nbsp;Jones<br>&nbsp;&nbsp; * @version&nbsp;&nbsp; 1.3 03/10/50<br>&nbsp;&nbsp; * @param&nbsp;&nbsp;name This is the name<br>&nbsp;&nbsp; * @param&nbsp;&nbsp;value the value to associate with the value<br>&nbsp;&nbsp; *&nbsp;&nbsp;This is a second line. Here is a second second line.<br>&nbsp;&nbsp; *&nbsp;&nbsp;&nbsp;&nbsp;This is a third line. Here is a third third line.<br>&nbsp;&nbsp; * @throws java.io.EOFException For no reason<br>&nbsp;&nbsp; * @author Jane Doe<br>becomes:<br>&nbsp;&nbsp; * @author&nbsp;&nbsp;Tom Jones<br>&nbsp;&nbsp; * @author&nbsp;&nbsp;Jane Doe<br>&nbsp;&nbsp; * @version 1.3 03/10/50<br>&nbsp;&nbsp; * @param&nbsp;&nbsp; name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; This is the name<br>&nbsp;&nbsp; * @param&nbsp;&nbsp; value&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;the value to associate with the value This<br>&nbsp;&nbsp; *&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; is a second line. Here is a second second<br>&nbsp;&nbsp; *&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; line. This is a third line. Here is a third<br>&nbsp;&nbsp; *&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; third line.<br>&nbsp;&nbsp; * @throws&nbsp;&nbsp;java.io.EOFException For no reason<br><br>Note that tags are re-ordered and grouped based upon Sun's JavaDoc guide.<br>The start line selected to be formatted must be a comment tag line.<br>The end line selected to be formated should be a comment tag line<br>or a line containing additional text for a previous tag line.<br><br>Work flow:<br>&nbsp;&nbsp;Generate comment template,<br>&nbsp;&nbsp;Fill in template and then<br>&nbsp;&nbsp;Format the comment's tags.<br><br>For more details about what is produced and how to configure the production,<br>see the start of the script for additional documentation.<br></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">install details</td></tr>
+<tr><td>Add the scalacommenter.vim to your .vim directory (or whatever).<br>Here's what I have in my .vimrc:<br><br>&nbsp;&nbsp;autocmd FileType scala source $HOME/.vim/scalacommenter.vim<br>&nbsp;&nbsp;autocmd FileType scala map &lt;M-c&gt; :call ScalaCommentWriter()&lt;CR&gt;<br>&nbsp;&nbsp;autocmd FileType scala map &lt;M-f&gt; :call ScalaCommentFormatter()&lt;CR&gt;<br>&nbsp;&nbsp;autocmd FileType scala map cm :call ScalaCommentWriter()&lt;CR&gt;<br>&nbsp;&nbsp;autocmd FileType scala map cf :call ScalaCommentFormatter()&lt;CR&gt;<br>&nbsp;&nbsp;autocmd FileType scala let b:scommenter_class_author='Richard Emberson'<br>&nbsp;&nbsp;autocmd FileType scala let b:scommenter_file_author='Richard Emberson'<br>&nbsp;&nbsp;autocmd FileType scala let g:scommenter_file_copyright_list = [<br>&nbsp;&nbsp;\&nbsp;&nbsp;&nbsp;&nbsp;'COPYRIGHT',<br>&nbsp;&nbsp;\&nbsp;&nbsp;&nbsp;&nbsp;'Second line of copyright',<br>&nbsp;&nbsp;\&nbsp;&nbsp;&nbsp;&nbsp;'And a third line'<br>&nbsp;&nbsp;\]<br>&nbsp;&nbsp;autocmd FileType scala let b:scommenter_extra_line_text_offset = 20<br>&nbsp;&nbsp;autocmd FileType scala let b:scommenter_user_tags = [<br>&nbsp;&nbsp;\[&quot;pre&quot;, 0, 1, 0],<br>&nbsp;&nbsp;\[&quot;post&quot;, 0, 1, 0],<br>&nbsp;&nbsp;\[&quot;requires&quot;, 1, 1, 0],<br>&nbsp;&nbsp;\[&quot;provides&quot;, 0, 1, 0]<br>&nbsp;&nbsp;\]<br><br>The user tags: &quot;pre&quot;, &quot;post&quot;, &quot;requires&quot; and &quot;provides&quot; appear in<br>a couple of the base Scala library code - I include them just for<br>testing the user-defined tags capability.<br><br>Note that Alt-c and &lt;M-c&gt; may not work on Unix systems, hence<br>I map in command mode &quot;cm&quot; to call the ScalaCommentWriter function.<br></td></tr>
+<tr><td>&nbsp;</td></tr>
+</table>
+
+<!-- rating table -->
+<form name="rating">
+<input type="hidden" name="script_id" value="3047">
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>rate this script</b></td>
+  <td valign="middle">
+    <input type="radio" name="rating" value="life_changing">Life Changing
+    <input type="radio" name="rating" value="helpful">Helpful
+    <input type="radio" name="rating" value="unfulfilling">Unfulfilling&nbsp;
+    <input type="submit" value="rate">
+  </td>
+</tr>
+</table>
+</form>
+<span class="txth2">script versions</span> (<a href="add_script_version.php?script_id=3047">upload new version</a>)
+<p>
+Click on the package to download.
+<p>
+
+<table cellspacing="2" cellpadding="4" border="0" width="100%">
+<tr class='tableheader'>
+        <th valign="top">package</th>
+    <th valign="top">script version</th>
+    <th valign="top">date</th>
+    <th valign="top">Vim version</th>
+    <th valign="top">user</th>
+    <th valign="top">release notes</th>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=12986">scalacommenter.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.2</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-05-10</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=6544">richard emberson</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Minor correction: could not handle parameters with templates with commas: <br>&nbsp;&nbsp;def getAtomicVars(atomicMethods: List[XMethodInfo], methods: HashMap[global.Symbol, XMethodInfo], vars: HashMap[global.Symbol, XVarInfo]) : List[XVarInfo] = {<br>&nbsp;&nbsp;}<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=12896">scalacommenter.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.1</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-04-24</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=6544">richard emberson</a></i></td>
+    <td class="roweven" valign="top" width="2000">Very minor: Method recognition failed for the List methods: '::', ':::' and 'reverse_:::'.<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=12887">scalacommenter.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.0</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-04-22</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=6544">richard emberson</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Refactored comment generation code using Self.vim, the Vim<br>&nbsp;&nbsp;dictionary-base object prototype system. Unified the code that<br>&nbsp;&nbsp;generated output for both the writing and re-formatting of<br>&nbsp;&nbsp;comments.<br>Throw tags are now sorted in alphabetical order<br>Unified the comment writing code so that comment formatting,<br>&nbsp;&nbsp;first comment generation, and subsequent generation all<br>&nbsp;&nbsp;use the came code.<br>Text associated with an existing comment tag is no longer lost.<br>Add b:scommenter_top_level_tparams_only which controls if all<br>&nbsp;&nbsp;template parameters have @tparam tags generated or only those<br>&nbsp;&nbsp;at the top-level have tags generated.<br>Fixed scanning parameters, now scans past qualifiers like 'val',<br>Supports curried notations func(a: A)(b: B). <br>'var' or 'private var', etc.<br>Added b:scommenter_extra_line_text_offset allowing the user to control<br>&nbsp;&nbsp;the offset of any additional text associated with a tag.<br>There is now a b:scommenter_user_tags configuration variable allowing<br>&nbsp;&nbsp;the user to register in their .vimrc file third-party tags.<br>Added b:scommenter_warning_message_enable which controls the printing<br>&nbsp;&nbsp;of warning messages (if any)<br>Added b:scommenter_line_between_user_unknown_and_std_tags which <br>&nbsp;&nbsp;controls if a single comment line is printed between the <br>&nbsp;&nbsp;user/unknown tags and the standard tags. <br>Added b:scommenter_user_unknown_before_std_tags which controls the<br>&nbsp;&nbsp;order of formatting of the user/unknown tags and the standard tags.<br>Added b:scommenter_warn_deleted_tags which allows the user to<br>&nbsp;&nbsp;save the text from tags deleted during re-formatting.<br>Supports capturing parameter template @specialized information<br>&nbsp;&nbsp;in comments.<br>The @deprecated(text) annotation now becomes a ScalaDoc @deprecated<br>&nbsp;&nbsp; tag (just as the @throws annotation does).<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=12797">scalacommenter.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.0</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-04-09</i></td>
+    <td class="roweven" valign="top" nowrap>7.2</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=6544">richard emberson</a></i></td>
+    <td class="roweven" valign="top" width="2000">Initial upload</td>
+</tr>
+</table>
+<!-- finish off the framework -->
+          </td>
+        </tr>
+      </table>
+    </td>
+
+  </tr>
+</table>
+
+<!-- END OF THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr><td colspan="4" bgcolor="#000000"><img src="/images/spacer.gif" height="2" width="1" alt=""></td></tr>
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr>
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+
+    <td align="left" valign="top"><small>
+      If you have questions or remarks about this site, visit the
+      <a href="http://vimonline.sf.net">vimonline development</a> pages.
+      Please use this site responsibly.
+      <br> 
+      
+      Questions about <a href="http://www.vim.org/about.php">Vim</a> should go
+      to the <a href="http://www.vim.org/maillist.php">maillist</a>.
+      Help Bram <a href="http://iccf-holland.org/">help Uganda</a>.
+      </small>
+	&nbsp;
+	&nbsp;
+
+	<!-- Start of StatCounter Code -->
+	<script type="text/javascript" language="javascript">
+	var sc_project=1417324; 
+	var sc_invisible=1; 
+	var sc_partition=11; 
+	var sc_security="d41633bc"; 
+	</script>
+
+	<script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script><noscript><a href="http://www.statcounter.com/" target="_blank"><img  src="http://c12.statcounter.com/counter.php?sc_project=1417324&java=0&security=d41633bc&invisible=0" alt="free tracking" border="0"></a> </noscript>
+	<!-- End of StatCounter Code -->
+          </td>
+
+    <td align="right" valign="top">
+      		<a href="http://sourceforge.net/projects/vim" rel="nofollow"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=8&type=1" width="88" height="31" border="0" alt="SourceForge.net Logo" /></a>
+    </td>
+
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+  </tr>
+
+    
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  
+  </tr>
+</table>
+
+</body>
+</html>
+

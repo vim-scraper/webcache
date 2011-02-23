@@ -1,0 +1,348 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+  <link rel="Stylesheet" type="text/css" href="/css/style.css" >
+  <title>DumbBuf - simple buffer manager like QuickBuf.vim : vim online</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <meta name="KEYWORDS" content="Vim, Vi IMproved, text editor, home, documentation, tips, scripts, news">
+  <link rel="shortcut icon" type="image/x-icon" href="/images/vim_shortcut.ico">
+</head>
+
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff"> 
+
+<!-- HEADER, SPONSOR IMAGE, VIM IMAGE AND BOOK AD -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+  <td class="lightbg">&nbsp;&nbsp;&nbsp;</td>
+  <td class="lightbg" align="left"><a href="/sponsor/index.php"><img src="/images/sponsorvim.gif" alt="sponsor Vim development" border="0"></a></td>
+    <td class="lightbg" align="center"><a href="/index.php"><img src="/images/vim_header.gif" border="0" alt="Vim logo"></a></td>
+    <td class="lightbg" align="right"><a href="http://iccf-holland.org/click5.html"><img src="/images/buyhelplearn.gif" alt="Vim Book Ad" border="0"></a></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="darkbg"><img src="/images/spacer.gif" width="1" height="10" alt=""></td>
+  </tr>
+</table>
+<!-- THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+  <col width="180">
+  <col width="1">
+
+  <tr valign="top">
+    <td class="sidebar">
+      <table width="180" cellpadding="4" cellspacing="0" border="0">
+        <tr valign="top">
+          <td class="sidebar">
+
+<!-- INCLUDE THE PAGE NAVIGATION -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+    <tr>
+        <td><small>not logged in (<a href="/login.php">login</a>)</small></td>
+    </tr>
+    <tr><td>
+<small>&nbsp;</small>
+<form action="http://www.google.com/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-3005259998294962:bvyni59kjr1" />
+    <input type="hidden" name="ie" value="ISO-8859-1" />
+    <input type="text" name="q" size="20" />
+    <br>
+    <input type="submit" name="sa" value="Search" />
+  </div>
+</form>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+    </td></tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="1"></td>
+    </tr>
+    <tr>
+        <td class="darkbg"><img src="/images/spacer.gif" alt='' border="0" height="3"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="2"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/index.php">Home</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/search.php">Advanced search</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/about.php">About Vim</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/community.php">Community</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/news/news.php">News</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/sponsor/index.php">Sponsoring</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/trivia.php">Trivia</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/docs.php">Documentation</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/download.php">Download</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/scripts/index.php">Scripts</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/tips/index.php">Tips</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/account/index.php">My Account</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/huh.php">Site Help</a></td>
+        </tr>
+</table>
+
+            <table width="172" cellpadding="0" cellspacing="0" border="0">
+              <tr><td><img src="/images/spacer.gif" alt="" border="0" width="1" height="8"></td></tr>
+              <tr><td class="darkbg"><img src="/images/spacer.gif" width="1" height="3" alt=""></td></tr>
+            </table>
+            <br>
+
+<!-- INCLUDE THE PAGE SIDEBAR TEXT -->
+&nbsp;
+
+          </td>
+        </tr>
+      </table>
+    </td>
+
+    <td class="darkbg"><img src="/images/spacer.gif" width="1" height="1" border="0" alt=""><br></td>
+    <td>
+      <table width="100%" cellpadding="10" cellspacing="0" border="0" bordercolor="red">
+        <tr>
+          <td valign="top">
+
+<span class="txth1">DumbBuf : simple buffer manager like QuickBuf.vim</span> 
+
+<br>
+<br>
+
+<!-- karma table -->
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
+  <td>
+    Rating <b>1/3</b>,
+    Downloaded by 442  </td>
+  <td class="lightbg">
+  <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
+  </td>
+  <td>
+    <a href="http://vim.wikia.com/wiki/Script:2783">Vim wiki</a>
+  </td>  
+</tr>
+</table>
+<p>
+
+<table cellspacing="0" cellpadding="0" border="0">
+<tr><td class="prompt">created by</td></tr>
+<tr><td><a href="/account/profile.php?user_id=16618">tyru  </a></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">script type</td></tr>
+<tr><td>utility</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">description</td></tr>
+<tr><td>latest version at <a target="_blank" href="http://github.com/tyru/DumbBuf.vim/">http://github.com/tyru/DumbBuf.vim/</A><br>including missing versions, all versions are mirrored at <a target="_blank" href="http://github.com/tyru/DumbBuf.vim/downloads">http://github.com/tyru/DumbBuf.vim/downloads</A><br>Japanese description is here: <a target="_blank" href="http://vim.g.hatena.ne.jp/tyru/20091030">http://vim.g.hatena.ne.jp/tyru/20091030</A><br>screenshot is here: <a target="_blank" href="http://f.hatena.ne.jp/tyru/20091031002751">http://f.hatena.ne.jp/tyru/20091031002751</A><br><br><br>My .vimrc:<br>&nbsp;&nbsp;let dumbbuf_hotkey = '&lt;Leader&gt;b'<br>&nbsp;&nbsp;&quot; sometimes I put &lt;Esc&gt; to close dumbbuf buffer,<br>&nbsp;&nbsp;&quot; which was mapped to close QuickBuf's list :)<br>&nbsp;&nbsp;let dumbbuf_mappings = {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#039n': {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#039&lt;Esc&gt;': {'alias_to': 'q'},<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\}<br>&nbsp;&nbsp;\}<br><br>&nbsp;&nbsp;let dumbbuf_wrap_cursor = 0<br>&nbsp;&nbsp;let dumbbuf_remove_marked_when_close = 1<br><br><br>Mappings:<br>&nbsp;&nbsp;please define g:dumbbuf_hotkey at first.<br>&nbsp;&nbsp;if that is not defined, this script is not loaded.<br><br>&nbsp;&nbsp;Visual Mode:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mark buffers on selected region.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;see Normal Mode's xx for details.<br><br>&nbsp;&nbsp;Normal Mode:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;q<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:close dumbbuf buffer.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;g:dumbbuf_hotkey<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;toggle dumbbuf buffer.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;CR&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:edit buffer.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;u<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; open one by one. this is same as QuickBuf's u.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;s<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :split buffer.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;v<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :vspilt buffer.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;t<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :tabedit buffer.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;d<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :bdelete buffer.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;w<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :bwipeout buffer.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;l<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; toggle listed buffers or unlisted buffers.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :close buffer.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mark buffer.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if one or more marked buffers exist,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'s', 'v', 't', 'd', 'w', 'c'<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;get to be able to execute for that buffers at a time.<br><br>&nbsp;&nbsp;and, if you turn on 'g:dumbbuf_single_key',<br>&nbsp;&nbsp;you can use single key mappings like QuickBuf.vim.<br>&nbsp;&nbsp;see 'g:dumbbuf_single_key' at 'Global Variables' for details.<br><br><br>Global Variables:<br>&nbsp;&nbsp;g:dumbbuf_hotkey (default: no default value)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a mapping which calls dumbbuf buffer.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if this variable is not defined, this plugin will be not loaded.<br><br>&nbsp;&nbsp;g:dumbbuf_open_with (default: 'botright')<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;open dumbbuf buffer with this command.<br><br>&nbsp;&nbsp;g:dumbbuf_vertical (default: 0)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if true, open dumbbuf buffer vertically.<br><br>&nbsp;&nbsp;g:dumbbuf_buffer_height (default: 10)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dumbbuf buffer's height.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this is used when only g:dumbbuf_vertical is false.<br><br>&nbsp;&nbsp;g:dumbbuf_buffer_width (default: 25)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dumbbuf buffer's width.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this is used when only g:dumbbuf_vertical is true.<br><br>&nbsp;&nbsp;g:dumbbuf_listed_buffer_name (default: '__buffers__')<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dumbbuf buffer's filename.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;set this filename when showing 'listed buffers'.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'listed buffers' are opposite of 'unlisted-buffers'.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;see ':help unlisted-buffer'.<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NOTE: DON'T assign string which includes whitespace, or any special<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;characters like &quot;*&quot;, &quot;?&quot;, &quot;,&quot;.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;see :help file-pattern<br><br>&nbsp;&nbsp;g:dumbbuf_unlisted_buffer_name (default: '__unlisted_buffers__')<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dumbbuf buffer's filename.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;set this filename when showing 'unlisted buffers'.<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NOTE: DON'T assign string which includes whitespace, or any special<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;characters like &quot;*&quot;, &quot;?&quot;, &quot;,&quot;.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;see :help file-pattern<br><br>&nbsp;&nbsp;g:dumbbuf_cursor_pos (default: 'current')<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;jumps to this position when dumbbuf buffer opens.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this is useful for deleting some buffers continuaslly.<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'current':<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;jump to the current buffer's line.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'keep':<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;keep the cursor pos.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'top':<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;always jump to the top line.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'bottom':<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;always jump to the bottom line<br><br>&nbsp;&nbsp;g:dumbbuf_shown_type (default: '')<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;show this type of buffers list.<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'':<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if current buffer is unlisted, show unlisted buffers list.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if current buffer is listed, show listed buffers list.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'unlisted':<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;show always unlisted buffers list.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'listed':<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;show always listed buffers list.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'project':<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;show buffers each project.<br><br>&nbsp;&nbsp;g:dumbbuf_close_when_exec (default: 0)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if true, close when execute local mapping from dumbbuf buffer.<br><br>&nbsp;&nbsp;g:dumbbuf_remove_marked_when_close (default: 0)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;remove all marked buffers on closing dumbbuf buffer.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this default value is for only backward compatibility.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(if I could fix this variable name...<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 'dumbbuf_close_when_exec' =&gt; 'dumbbuf_close_on_exec')<br><br>&nbsp;&nbsp;g:dumbbuf_downward (default: 1)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if true, go downwardly when 'u' mapping.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if false, go upwardly.<br><br>&nbsp;&nbsp;g:dumbbuf_hl_cursorline (default: &quot;guibg=Red&nbsp;&nbsp;guifg=White&quot;)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;local value of highlight 'CursorLine' in dumbbuf buffer.<br><br>&nbsp;&nbsp;g:dumbbuf_wrap_cursor (default: 1)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;wrap the cursor at the top or bottom of dumbbuf buffer.<br><br>&nbsp;&nbsp;g:dumbbuf_all_shown_types (default: ['listed', 'unlisted', 'project'])<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;all available shown types.<br><br>&nbsp;&nbsp;g:dumbbuf_timeoutlen (default: 0)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;local value of &timeoutlen in dumbbuf buffer.<br><br><br>&nbsp;&nbsp;For The Experienced User:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;g:dumbbuf_disp_expr (default: see the definition)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this variable is for the experienced users.<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'v:val' has buffer's info.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NOTE: 'val' does NOT work now.<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;g:dumbbuf_options (default: see the definition)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this variable is for the experienced users.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dumbbuf buffer will be set up with these options.<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;g:dumbbuf_mappings (default: see the definition)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this variable is for the experienced users.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;these settings will override default value.<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if your .vimrc setting is<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let g:dumbbuf_mappings = {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#039n': {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#039&lt;Esc&gt;': {'alias_to': 'q'}<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\}<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\}<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;you can type &lt;Esc&gt; to close dumbbuf buffer.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;no influences for other default mappings.<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;and there are some special keys:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'alias_to': 'map'<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;make an alias for 'map'.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'swap_with': 'map'<br></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">install details</td></tr>
+<tr><td>move to your plugin's directory(~/.vim/plugin/).<br>write g:dumbbuf_hotkey setting to your .vimrc like below:<br>&nbsp;&nbsp;let g:dumbbuf_hotkey = '&lt;Leader&gt;b'</td></tr>
+<tr><td>&nbsp;</td></tr>
+</table>
+
+<!-- rating table -->
+<form name="rating">
+<input type="hidden" name="script_id" value="2783">
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>rate this script</b></td>
+  <td valign="middle">
+    <input type="radio" name="rating" value="life_changing">Life Changing
+    <input type="radio" name="rating" value="helpful">Helpful
+    <input type="radio" name="rating" value="unfulfilling">Unfulfilling&nbsp;
+    <input type="submit" value="rate">
+  </td>
+</tr>
+</table>
+</form>
+<span class="txth2">script versions</span> (<a href="add_script_version.php?script_id=2783">upload new version</a>)
+<p>
+Click on the package to download.
+<p>
+
+<table cellspacing="2" cellpadding="4" border="0" width="100%">
+<tr class='tableheader'>
+        <th valign="top">package</th>
+    <th valign="top">script version</th>
+    <th valign="top">date</th>
+    <th valign="top">Vim version</th>
+    <th valign="top">user</th>
+    <th valign="top">release notes</th>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=12534">dumbbuf.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.0.9</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-03-02</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=16618">tyru  </a></i></td>
+    <td class="rowodd" valign="top" width="2000">- Add 'o' mapping to execute ':sbuffer'. Thanks to Jan Christoph.<br>- Fix bug to fail to restore original CursorLine highlight.<br>- Change default value of g:dumbbuf_options<br>- Allow to execute mappings even on noname buffer.<br>- Add '&lt;Plug&gt;(dumbbuf-open)'.<br>&nbsp;&nbsp;g:dumbbuf_hotkey is not '',<br>&nbsp;&nbsp;g:dumbbuf_hotkey is mapped to '&lt;Plug&gt;(dumbbuf-open)'.<br>- Write document<br>- etc.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=11993">dumbbuf.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.0.8</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-01-01</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=16618">tyru  </a></i></td>
+    <td class="roweven" valign="top" width="2000">Happy New Year, Vimmers ;)<br><br>- NOTE: If you want to use mapping<br>&nbsp;&nbsp;2 more than characters to toggle dumbbuf buffer,<br>&nbsp;&nbsp;you have to change g:dumbbuf_timeoutlen.<br>&nbsp;&nbsp;for e.g.: let g:dumbbuf_timeoutlen = 100<br>&nbsp;&nbsp;But you can always use 'q' to close buffer.<br>- Change default values of g:dumbbuf_disp_expr, g:dumbbuf_options<br>&nbsp;&nbsp;(Options written in 'For The Experienced User' may be changed<br>&nbsp;&nbsp;in the future. sorry)<br>- Implement g:dumbbuf_all_shown_types.<br>- Remove g:dumbbuf_single_key, g:dumbbuf_single_key_echo_stack,<br>&nbsp;&nbsp;g:dumbbuf_updatetime<br>- Remove single key emulation.<br>&nbsp;&nbsp;This emulates normal key input<br>&nbsp;&nbsp;in order to prevent Vim from waiting candidate keys.<br>&nbsp;&nbsp;Now I know I have invented the wheel :)<br>&nbsp;&nbsp;(I changed &timeout, &timeoutlen)<br>- Suppress flicker when mapping executed.<br>- Some optimizations.<br>- Some fixes of minor bugs.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=11629">dumbbuf.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.0.7</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-10-30</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=16618">tyru  </a></i></td>
+    <td class="rowodd" valign="top" width="2000">- highlight support<br>- add option g:dumbbuf_single_key_echo_stack,<br>&nbsp;&nbsp;g:dumbbuf_hl_cursorline,<br>&nbsp;&nbsp;g:dumbbuf_remove_marked_when_close.<br>- change g:dumbbuf_disp_expr's spec.<br>- fix minor bugs and do some optimizations.<br>- replace the words 'select' to 'mark' in document and source code.<br>&nbsp;&nbsp;I would use 'select' for only visual mode's region.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=11450">dumbbuf.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.0.6</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-09-28</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=16618">tyru  </a></i></td>
+    <td class="roweven" valign="top" width="2000">0.0.5:<br>&nbsp;&nbsp;&nbsp;&nbsp;- fix bug: when using with another plugin that uses unlisted buffer,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pressing &lt;CR&gt; in dumbbuf buffer jumps into that unlisted buffer.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* Thanks to Bernhard Walle for reporting the bug :) *<br>&nbsp;&nbsp;&nbsp;&nbsp;- add g:dumbbuf_open_with.<br>0.0.6:<br>&nbsp;&nbsp;&nbsp;&nbsp;- fix bug: when there is no buffers in list,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dumbbuf can't get selected buffer info.<br>&nbsp;&nbsp;&nbsp;&nbsp;- add option g:dumbbuf_wrap_cursor, and allow 'keep' in<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;g:dumbbuf_cursor_pos.<br>&nbsp;&nbsp;&nbsp;&nbsp;- implement 'select' of buffers. mapping is 'xx'.<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=11436">dumbbuf.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.0.4</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-09-26</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=16618">tyru  </a></i></td>
+    <td class="rowodd" valign="top" width="2000">- implement single key mappings like QuickBuf.vim.<br>&nbsp;&nbsp;'let g:dumbbuf_single_key = 1' to use it.<br>- add g:dumbbuf_single_key, g:dumbbuf_updatetime.<br>- map plain gg and G mappings in local buffer.<br>- fix bug of making a waste buffer when called from<br>&nbsp;&nbsp;unlisted buffer.<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=11422">dumbbuf.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.0.3</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-09-24</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=16618">tyru  </a></i></td>
+    <td class="roweven" valign="top" width="2000">- fix bug of trapping all errors(including other plugin error).</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=11364">dumbbuf.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.0.1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-09-13</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=16618">tyru  </a></i></td>
+    <td class="rowodd" valign="top" width="2000">implement g:dumbbuf_cursor_pos, g:dumbbuf_shown_type, and 'tt' mapping.<br>and fix bug of showing listed buffers even if current buffer is unlisted.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=11359">dumbbuf.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.0.0</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-09-11</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=16618">tyru  </a></i></td>
+    <td class="roweven" valign="top" width="2000">Initial upload</td>
+</tr>
+</table>
+<!-- finish off the framework -->
+          </td>
+        </tr>
+      </table>
+    </td>
+
+  </tr>
+</table>
+
+<!-- END OF THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr><td colspan="4" bgcolor="#000000"><img src="/images/spacer.gif" height="2" width="1" alt=""></td></tr>
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr>
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+
+    <td align="left" valign="top"><small>
+      If you have questions or remarks about this site, visit the
+      <a href="http://vimonline.sf.net">vimonline development</a> pages.
+      Please use this site responsibly.
+      <br> 
+      
+      Questions about <a href="http://www.vim.org/about.php">Vim</a> should go
+      to the <a href="http://www.vim.org/maillist.php">maillist</a>.
+      Help Bram <a href="http://iccf-holland.org/">help Uganda</a>.
+      </small>
+	&nbsp;
+	&nbsp;
+
+	<!-- Start of StatCounter Code -->
+	<script type="text/javascript" language="javascript">
+	var sc_project=1417324; 
+	var sc_invisible=1; 
+	var sc_partition=11; 
+	var sc_security="d41633bc"; 
+	</script>
+
+	<script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script><noscript><a href="http://www.statcounter.com/" target="_blank"><img  src="http://c12.statcounter.com/counter.php?sc_project=1417324&java=0&security=d41633bc&invisible=0" alt="free tracking" border="0"></a> </noscript>
+	<!-- End of StatCounter Code -->
+          </td>
+
+    <td align="right" valign="top">
+      		<a href="http://sourceforge.net/projects/vim" rel="nofollow"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=8&type=1" width="88" height="31" border="0" alt="SourceForge.net Logo" /></a>
+    </td>
+
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+  </tr>
+
+    
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  
+  </tr>
+</table>
+
+</body>
+</html>
+

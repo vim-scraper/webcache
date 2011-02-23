@@ -1,0 +1,308 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+  <link rel="Stylesheet" type="text/css" href="/css/style.css" >
+  <title>cmdalias.vim - Create aliases for Vim commands. : vim online</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <meta name="KEYWORDS" content="Vim, Vi IMproved, text editor, home, documentation, tips, scripts, news">
+  <link rel="shortcut icon" type="image/x-icon" href="/images/vim_shortcut.ico">
+</head>
+
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff"> 
+
+<!-- HEADER, SPONSOR IMAGE, VIM IMAGE AND BOOK AD -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+  <td class="lightbg">&nbsp;&nbsp;&nbsp;</td>
+  <td class="lightbg" align="left"><a href="/sponsor/index.php"><img src="/images/sponsorvim.gif" alt="sponsor Vim development" border="0"></a></td>
+    <td class="lightbg" align="center"><a href="/index.php"><img src="/images/vim_header.gif" border="0" alt="Vim logo"></a></td>
+    <td class="lightbg" align="right"><a href="http://iccf-holland.org/click5.html"><img src="/images/buyhelplearn.gif" alt="Vim Book Ad" border="0"></a></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="darkbg"><img src="/images/spacer.gif" width="1" height="10" alt=""></td>
+  </tr>
+</table>
+<!-- THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+  <col width="180">
+  <col width="1">
+
+  <tr valign="top">
+    <td class="sidebar">
+      <table width="180" cellpadding="4" cellspacing="0" border="0">
+        <tr valign="top">
+          <td class="sidebar">
+
+<!-- INCLUDE THE PAGE NAVIGATION -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+    <tr>
+        <td><small>not logged in (<a href="/login.php">login</a>)</small></td>
+    </tr>
+    <tr><td>
+<small>&nbsp;</small>
+<form action="http://www.google.com/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-3005259998294962:bvyni59kjr1" />
+    <input type="hidden" name="ie" value="ISO-8859-1" />
+    <input type="text" name="q" size="20" />
+    <br>
+    <input type="submit" name="sa" value="Search" />
+  </div>
+</form>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+    </td></tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="1"></td>
+    </tr>
+    <tr>
+        <td class="darkbg"><img src="/images/spacer.gif" alt='' border="0" height="3"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="2"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/index.php">Home</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/search.php">Advanced search</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/about.php">About Vim</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/community.php">Community</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/news/news.php">News</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/sponsor/index.php">Sponsoring</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/trivia.php">Trivia</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/docs.php">Documentation</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/download.php">Download</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/scripts/index.php">Scripts</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/tips/index.php">Tips</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/account/index.php">My Account</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/huh.php">Site Help</a></td>
+        </tr>
+</table>
+
+            <table width="172" cellpadding="0" cellspacing="0" border="0">
+              <tr><td><img src="/images/spacer.gif" alt="" border="0" width="1" height="8"></td></tr>
+              <tr><td class="darkbg"><img src="/images/spacer.gif" width="1" height="3" alt=""></td></tr>
+            </table>
+            <br>
+
+<!-- INCLUDE THE PAGE SIDEBAR TEXT -->
+&nbsp;
+
+          </td>
+        </tr>
+      </table>
+    </td>
+
+    <td class="darkbg"><img src="/images/spacer.gif" width="1" height="1" border="0" alt=""><br></td>
+    <td>
+      <table width="100%" cellpadding="10" cellspacing="0" border="0" bordercolor="red">
+        <tr>
+          <td valign="top">
+
+<span class="txth1">cmdalias.vim : Create aliases for Vim commands.</span> 
+
+<br>
+<br>
+
+<!-- karma table -->
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
+  <td>
+    Rating <b>40/19</b>,
+    Downloaded by 1797  </td>
+  <td class="lightbg">
+  <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
+  </td>
+  <td>
+    <a href="http://vim.wikia.com/wiki/Script:746">Vim wiki</a>
+  </td>  
+</tr>
+</table>
+<p>
+
+<table cellspacing="0" cellpadding="0" border="0">
+<tr><td class="prompt">created by</td></tr>
+<tr><td><a href="/account/profile.php?user_id=292">Hari Krishna Dara</a></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">script type</td></tr>
+<tr><td>utility</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">description</td></tr>
+<tr><td>Sometimes we want to to change the behavior of a built-in command so end up creating a custom command, and we wish to reuse the built-in command name for it. E.g., :Runtime to replace :runtime, :Find to replace :find. I myself wanted to replace :qa with :QA (see <a target="_blank" href="http://vim.wikia.com/wiki/Tabclose_instead_of_quit-all">http://vim.wikia.com/wiki/Tabclose_instead_of_quit-all</A>), but it is hard to remember to type :QA instead of :qa everytime, that is why I created this plugin.<br><br>This plugin is just a wrapper on top of command-line abbreviations (:cabbr), to work around the big disadvantages of :cabbr. With plain :cabbr, the expansion happens anywhere the abbreviation appears while typing command-line. E.g., if you create abbreviation from runtime-&gt;Runtime, then the following will not work as you expect:<br><br>:cnoreabbr runtime Runtime<br>:%s/runtime/runduration/g<br><br>What would actually execute is:<br><br>:%s/Runtime/runduration/g<br><br>Which is not the same. The other problem is cabbr's trigger not only at the command-line, but also at search prompt, at the input prompt and any other prompts (see :help getcmdtype()). To avoid those unexpected expansions, cmdalias utilizes a light-weight wrapper function that expands the abbreviation only when it is typed as the first word of the ex command (&quot;:&quot; prompt). So, instead of the below:<br><br>:cnoreabbr runtime Runtime<br><br>You would use this:<br><br>:call CmdAlias('runtime', 'Runtime')<br><br>or simply,<br><br>:Alias runtime Runtime<br><br>These aliases pretty much work like the bash aliases. If you don't want the expansion to temporarily happen even at the beginning of a command, you have two options:<br>- After entering the command and before typing the next command press &lt;C-V&gt; (e.g., &lt;C-V&gt;&lt;Space&gt;)<br>- Start the command-line with a space and then enter the command.<br><br>The CmdAlias() function takes a 3rd optional argument called &quot;flags&quot; for which you can pass options such as &quot;&lt;buffer&gt;&quot; to make the alias local to the current buffer.<br><br>Here is the description from file header for more details:<br>Usage:<br>&nbsp;&nbsp;&nbsp;&nbsp;:call CmdAlias('&lt;lhs&gt;', '&lt;rhs&gt;', [flags])<br>&nbsp;&nbsp;&nbsp;&nbsp;or<br>&nbsp;&nbsp;&nbsp;&nbsp;:Alias &lt;lhs&gt; &lt;rhs&gt; [flags]<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>&nbsp;&nbsp;&nbsp;&nbsp;:UnAlias &lt;lhs&gt; ...<br>&nbsp;&nbsp;&nbsp;&nbsp;:Aliases [&lt;lhs&gt; ...]<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>Ex:<br>&nbsp;&nbsp;&nbsp;&nbsp;:Alias runtime Runtime<br>&nbsp;&nbsp;&nbsp;&nbsp;:Alias find Find<br>&nbsp;&nbsp;&nbsp;&nbsp;:Aliases<br>&nbsp;&nbsp;&nbsp;&nbsp;:UnAlias find<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>Description:<br>&nbsp;&nbsp;- Vim doesn't allow us to create user-defined commands unless they start<br>&nbsp;&nbsp;&nbsp;&nbsp;with an uppercase letter. I find this annoying and constrained when it<br>&nbsp;&nbsp;&nbsp;&nbsp;comes to overriding built-in commands with my own. To override built-in<br>&nbsp;&nbsp;&nbsp;&nbsp;commands, we often have to create a new command that has the same name<br>&nbsp;&nbsp;&nbsp;&nbsp;as the built-in but starting with an uppercase letter (e.g., &quot;Cd&quot;<br>&nbsp;&nbsp;&nbsp;&nbsp;instead of &quot;cd&quot;), and remember to use that everytime (besides the<br>&nbsp;&nbsp;&nbsp;&nbsp;fact that typing uppercase letters take more effort). An alternative is<br>&nbsp;&nbsp;&nbsp;&nbsp;to use the :cabbr to create an abbreviation for the built-in command<br>&nbsp;&nbsp;&nbsp;&nbsp;(:cmap is not good) to the user-defined command (e.g., &quot;cabbr cd Cd&quot;).<br>&nbsp;&nbsp;&nbsp;&nbsp;But this would generally cause more inconvenience because the<br>&nbsp;&nbsp;&nbsp;&nbsp;abbreviation gets expanded no matter where in the command-line you use<br>&nbsp;&nbsp;&nbsp;&nbsp;it. This is where the plugin comes to your rescue by arranging the cabbr<br>&nbsp;&nbsp;&nbsp;&nbsp;to expand only if typed as the first word in the command-line, in a<br>&nbsp;&nbsp;&nbsp;&nbsp;sense working like the aliases in csh or bash.<br>&nbsp;&nbsp;- The plugin provides a function to define command-line abbreviations such<br>&nbsp;&nbsp;&nbsp;&nbsp;a way that they are expanded only if they are typed as the first word of<br>&nbsp;&nbsp;&nbsp;&nbsp;a command (at &quot;:&quot; prompt). The same rules that apply to creating a<br>&nbsp;&nbsp;&nbsp;&nbsp;:cabbr apply to the second argument of CmdAlias() function too. You can<br>&nbsp;&nbsp;&nbsp;&nbsp;pass in optional flags (such as &lt;buffer&gt;) to the :cabbr command through<br>&nbsp;&nbsp;&nbsp;&nbsp;the third argument.<br>&nbsp;&nbsp;- The :cabbr's created this way, work like the bash aliases, except that<br>&nbsp;&nbsp;&nbsp;&nbsp;in this case, the alias is substituted in-place followed by the rules<br>&nbsp;&nbsp;&nbsp;&nbsp;mentioned in the |abbreviations|, and no arguments can be defined.<br>Drawbacks:<br>&nbsp;&nbsp;- If the &lt;rhs&gt; is not of the same size as &lt;lhs&gt;, the in-place expansion<br>&nbsp;&nbsp;&nbsp;&nbsp;feels odd.<br>&nbsp;&nbsp;- Since the expansion is in-place, Vim command-line history saves the<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;rhs&gt;, not the &lt;lhs&gt;. This means, you can't retrieve a command from<br>&nbsp;&nbsp;&nbsp;&nbsp;history by partially typing the &lt;lhs&gt; (you have to instead type the<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;rhs&gt; for this purpose).<br><br><br><br>Search_key_words: cmdalias Hari Krishna Dara cmap alias cmdalias.vim</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">install details</td></tr>
+<tr><td>Source it from your vimrc or just drop it in your plugin directory.<br><br>For versions prior to 2.0:<br>Requires curcmdmode.vim(1.0) (<a href="/scripts/script.php?script_id=745">vimscript #745</a>). </td></tr>
+<tr><td>&nbsp;</td></tr>
+</table>
+
+<!-- rating table -->
+<form name="rating">
+<input type="hidden" name="script_id" value="746">
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>rate this script</b></td>
+  <td valign="middle">
+    <input type="radio" name="rating" value="life_changing">Life Changing
+    <input type="radio" name="rating" value="helpful">Helpful
+    <input type="radio" name="rating" value="unfulfilling">Unfulfilling&nbsp;
+    <input type="submit" value="rate">
+  </td>
+</tr>
+</table>
+</form>
+<span class="txth2">script versions</span> (<a href="add_script_version.php?script_id=746">upload new version</a>)
+<p>
+Click on the package to download.
+<p>
+
+<table cellspacing="2" cellpadding="4" border="0" width="100%">
+<tr class='tableheader'>
+        <th valign="top">package</th>
+    <th valign="top">script version</th>
+    <th valign="top">date</th>
+    <th valign="top">Vim version</th>
+    <th valign="top">user</th>
+    <th valign="top">release notes</th>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=11356">cmdalias.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>3.0</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-09-10</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=292">Hari Krishna Dara</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Improvements due to renewed interest in the plugin.<br>- Added Alias command that is easier to use than calling CmdAlias()<br>&nbsp;&nbsp;function.<br>- Added UnAlias and Aliases commands to give a more authentic &quot;alias&quot;<br>&nbsp;&nbsp;like feel to the plugin.<br>- Detect aliases after certain configurable commands. The default<br>&nbsp;&nbsp;commands are: verbose, debug, silent, redir.<br>- Better usage error detection.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=5662">cmdalias.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.0</b></td>
+    <td class="roweven" valign="top" nowrap><i>2006-05-08</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=292">Hari Krishna Dara</a></i></td>
+    <td class="roweven" valign="top" width="2000">Release 2.0 for Vim 7.0. Essentially have rewritten the plugin for Vim<br>7.0. Now the plugin is very simple safe and reliable and doesn't even<br>depend on any other plugins (thanks to the new getcmdtype() function).<br>Also added support for passing additional flags to the CmdAlias()<br>function.<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=2267">cmdalias.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.0</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2003-08-25</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=292">Hari Krishna Dara</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Initial upload</td>
+</tr>
+</table>
+<!-- finish off the framework -->
+          </td>
+        </tr>
+      </table>
+    </td>
+
+  </tr>
+</table>
+
+<!-- END OF THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr><td colspan="4" bgcolor="#000000"><img src="/images/spacer.gif" height="2" width="1" alt=""></td></tr>
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr>
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+
+    <td align="left" valign="top"><small>
+      If you have questions or remarks about this site, visit the
+      <a href="http://vimonline.sf.net">vimonline development</a> pages.
+      Please use this site responsibly.
+      <br> 
+      
+      Questions about <a href="http://www.vim.org/about.php">Vim</a> should go
+      to the <a href="http://www.vim.org/maillist.php">maillist</a>.
+      Help Bram <a href="http://iccf-holland.org/">help Uganda</a>.
+      </small>
+	&nbsp;
+	&nbsp;
+
+	<!-- Start of StatCounter Code -->
+	<script type="text/javascript" language="javascript">
+	var sc_project=1417324; 
+	var sc_invisible=1; 
+	var sc_partition=11; 
+	var sc_security="d41633bc"; 
+	</script>
+
+	<script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script><noscript><a href="http://www.statcounter.com/" target="_blank"><img  src="http://c12.statcounter.com/counter.php?sc_project=1417324&java=0&security=d41633bc&invisible=0" alt="free tracking" border="0"></a> </noscript>
+	<!-- End of StatCounter Code -->
+          </td>
+
+    <td align="right" valign="top">
+      		<a href="http://sourceforge.net/projects/vim" rel="nofollow"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=8&type=1" width="88" height="31" border="0" alt="SourceForge.net Logo" /></a>
+    </td>
+
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+  </tr>
+
+    
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  
+  </tr>
+</table>
+
+</body>
+</html>
+

@@ -1,0 +1,348 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+  <link rel="Stylesheet" type="text/css" href="/css/style.css" >
+  <title>TagsParser - Automatic tagfile updating and tag viewer : vim online</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <meta name="KEYWORDS" content="Vim, Vi IMproved, text editor, home, documentation, tips, scripts, news">
+  <link rel="shortcut icon" type="image/x-icon" href="/images/vim_shortcut.ico">
+</head>
+
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff"> 
+
+<!-- HEADER, SPONSOR IMAGE, VIM IMAGE AND BOOK AD -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+  <td class="lightbg">&nbsp;&nbsp;&nbsp;</td>
+  <td class="lightbg" align="left"><a href="/sponsor/index.php"><img src="/images/sponsorvim.gif" alt="sponsor Vim development" border="0"></a></td>
+    <td class="lightbg" align="center"><a href="/index.php"><img src="/images/vim_header.gif" border="0" alt="Vim logo"></a></td>
+    <td class="lightbg" align="right"><a href="http://iccf-holland.org/click5.html"><img src="/images/buyhelplearn.gif" alt="Vim Book Ad" border="0"></a></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="darkbg"><img src="/images/spacer.gif" width="1" height="10" alt=""></td>
+  </tr>
+</table>
+<!-- THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+  <col width="180">
+  <col width="1">
+
+  <tr valign="top">
+    <td class="sidebar">
+      <table width="180" cellpadding="4" cellspacing="0" border="0">
+        <tr valign="top">
+          <td class="sidebar">
+
+<!-- INCLUDE THE PAGE NAVIGATION -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+    <tr>
+        <td><small>not logged in (<a href="/login.php">login</a>)</small></td>
+    </tr>
+    <tr><td>
+<small>&nbsp;</small>
+<form action="http://www.google.com/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-3005259998294962:bvyni59kjr1" />
+    <input type="hidden" name="ie" value="ISO-8859-1" />
+    <input type="text" name="q" size="20" />
+    <br>
+    <input type="submit" name="sa" value="Search" />
+  </div>
+</form>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+    </td></tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="1"></td>
+    </tr>
+    <tr>
+        <td class="darkbg"><img src="/images/spacer.gif" alt='' border="0" height="3"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="2"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/index.php">Home</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/search.php">Advanced search</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/about.php">About Vim</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/community.php">Community</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/news/news.php">News</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/sponsor/index.php">Sponsoring</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/trivia.php">Trivia</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/docs.php">Documentation</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/download.php">Download</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/scripts/index.php">Scripts</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/tips/index.php">Tips</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/account/index.php">My Account</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/huh.php">Site Help</a></td>
+        </tr>
+</table>
+
+            <table width="172" cellpadding="0" cellspacing="0" border="0">
+              <tr><td><img src="/images/spacer.gif" alt="" border="0" width="1" height="8"></td></tr>
+              <tr><td class="darkbg"><img src="/images/spacer.gif" width="1" height="3" alt=""></td></tr>
+            </table>
+            <br>
+
+<!-- INCLUDE THE PAGE SIDEBAR TEXT -->
+&nbsp;
+
+          </td>
+        </tr>
+      </table>
+    </td>
+
+    <td class="darkbg"><img src="/images/spacer.gif" width="1" height="1" border="0" alt=""><br></td>
+    <td>
+      <table width="100%" cellpadding="10" cellspacing="0" border="0" bordercolor="red">
+        <tr>
+          <td valign="top">
+
+<span class="txth1">TagsParser : Automatic tagfile updating and tag viewer</span> 
+
+<br>
+<br>
+
+<!-- karma table -->
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
+  <td>
+    Rating <b>111/33</b>,
+    Downloaded by 1749  </td>
+  <td class="lightbg">
+  <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
+  </td>
+  <td>
+    <a href="http://vim.wikia.com/wiki/Script:1535">Vim wiki</a>
+  </td>  
+</tr>
+</table>
+<p>
+
+<table cellspacing="0" cellpadding="0" border="0">
+<tr><td class="prompt">created by</td></tr>
+<tr><td><a href="/account/profile.php?user_id=10000">Aaron Cornelius</a></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">script type</td></tr>
+<tr><td>utility</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">description</td></tr>
+<tr><td><br>The TagsParser plugin does two things.<br><br>First it automatically updates the tag files when you write a file out (Dynamic Tags).&nbsp;&nbsp;This is controlled by a path so that this does not happen for every file that you ever edit.&nbsp;&nbsp;This way as soon as you save a file, you will be able to access tags via the usual vim methods ^], :tag, :ts, ^T, etc.&nbsp;&nbsp;There are various options in the plugin that control which files to tag.&nbsp;&nbsp;<br><br>This is nice if you have a bunch of source that you are working on, and like to use ctags to navigate through your source, but get annoyed at manually re-tagging your source to pick up any new variables/functions/etc.<br><br>Secondly, there is a tag viewer (the Tag Window) which uses the tag files created by the Dynamic Tag functionality of the script to display the tags that belong to the file you have open.&nbsp;&nbsp;For C/C++ and Ada files, it will display the tags hierarchically, so for example, struct members get displayed below the struct they belong to.&nbsp;&nbsp;This part of the script can be turned off if you prefer to only use the Dynamic Tags functionality.&nbsp;&nbsp;There are many options which control what is displayed and how, and of course, these are all detailed in the included help file.<br><br>Configuring the &quot;TagsParserTagsPath&quot; or &quot;TagsParserProjectConfig&quot; options can be difficult sometimes.&nbsp;&nbsp;The &quot;:TagsParserPrintPath&quot; command can help you debug the normal tags path variable, but has not been updated to support debugging the project configurations yet.&nbsp;&nbsp;See the &quot;tagsparser-config&quot; help file entry for more details, but this is the short version:<br><br>The first important thing to keep in mind, is to use either unix-style slashes (/), or to 'escape' your windows-style slashes when using a double quoted path (&quot;stuff\\foo&quot;).&nbsp;&nbsp;Alternatively single quotes can be used instead ('stuff\foo').<br><br>The second important thing to keep in mind is that the directories used in defining the project configuration root directories must be defined using the correct slash style for your platform.&nbsp;&nbsp;So for example, MS windows users _must_ use &quot;\&quot; instead of &quot;/&quot;.&nbsp;&nbsp;Following is an project configuration setup:<br><br>&nbsp;&nbsp;let g:TagsParserProjectConfig = {}<br>&nbsp;&nbsp;let g:TagsParserProjectConfig['C:\Working\PRJ1\Software\Source Code'] = {}<br>&nbsp;&nbsp;let g:TagsParserProjectConfig['C:\Working\PRJ1\Software\Source Code'] = { 'tagsPath' : 'C:/Working/PRJ1/Software/Source Code/OBJ1,C:/Working/PRJ1/Software/Source Code/OBJ1/**,C:/Working/PRJ1/Software/Source Code/BSP,C:/Working/PRJ1/Software/Source Code/BSP/**' }<br>&nbsp;&nbsp;let g:TagsParserProjectConfig['C:\Working\PRJ2\Software\OBJ1'] = {}<br>&nbsp;&nbsp;let g:TagsParserProjectConfig['C:\Working\PRJ2\Software\OBJ1'] = { 'tagsPath' : 'C:/Working/PRJ2/Software/OBJ1,C:/Working/PRJ2/Software/OBJ1/**' }<br><br>This plugin supports all filetypes that Exuberant Ctags supports, along with Ada.&nbsp;&nbsp;For Ada support I have created an Ada Mode parser for Ctags.&nbsp;&nbsp;You can find the latest version of that parser here: <a target="_blank" href="http://gnuada.svn.sourceforge.net/viewvc/gnuada/tags/">http://gnuada.svn.sourceforge.net/viewvc/gnuada/tags/</A> At the time that I am writing this version 4.1.0 was the latest and is in this directory: <a target="_blank" href="http://gnuada.svn.sourceforge.net/viewvc/gnuada/tags/ctags-ada-mode-4.1.0">http://gnuada.svn.sourceforge.net/viewvc/gnuada/tags/ctags-ada-mode-4.1.0</A> Directions to install the ada.c file are in the file itself, or you can use the add_ada.vim file to do the necessary updates to the ctags source for you.<br><br>There are many options that govern how the Tag Window appears, I have tried to setup the default options so that it will display nicely with out any customization, but if you so desire there should be many ways to adjust the way the window appears.<br><br>Please email me with any questions you have or bugs you find.&nbsp;&nbsp;I am also happy to take suggestions for features or options that would make this plugin more useful for you.<br><br>-------- Notable Additions -------<br>- Example configuration options in help file.<br><br>- Tabpage support that actually works!&nbsp;&nbsp;(I hope)...<br><br>- Debugging functionality.<br><br>- TagsParserCurrentFileCWD feature (added in an earlier release, but was missing from documentation.<br><br>--- Previous Notable Additions ---<br>- The big addition to version 0.9 is project configurations, these are only supported in Vim 7.0.&nbsp;&nbsp;The full details can be gathered if you check the help page for &quot;TagsParserProjectConfig&quot;, but a short version is here:<br>Instead of one path variable (&quot;TagsParserTagsPath&quot;), now you can configure separate paths for different 'projects'.&nbsp;&nbsp;A project is configured using a Vim hash (dictionary), where the root directory of a project is used as the hash key.&nbsp;&nbsp;Then a TagsPath, TagsLib, and various other variables can be configured uniquely for every project.&nbsp;&nbsp;This should reduce the time required to find tags in each project.<br><br>- Tabpages are now supported when using the Tag Window functionality.&nbsp;&nbsp;Also added some mappings to make it easier to navigate between tabs and buffers.&nbsp;&nbsp;See &quot;TagsParserCtrlTabUsage&quot; for detailed information.<br><br>- All commands have default key mappings (such as &lt;leader&gt;t&lt;space&gt; to toggle the Tag Window On and Off - :TagsParserToggle), and these can all be overridden by a user mapping.<br><br>- The TagsParserSaveInterval variable now prevents tagging a file too frequently (default of 30 second wait period).<br><br>- The TagsParserTagsDir variable can now be used to change the name of the directory that is created to store tag files in (default of &quot;.tags&quot;).<br><br>- The TagsParser functions are now autoloaded, hopefully this speeds up vim startup and reduces overhead when the TagsParser is not being used.<br><br>- See &quot;tagsparser-changelog&quot; for more detailed information. </td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">install details</td></tr>
+<tr><td>This script requires a few supporting things to be installed.&nbsp;&nbsp;Exuberant Ctags (<a target="_blank" href="http://ctags.sourceforge.net/">http://ctags.sourceforge.net/</A>) and if you are not using Vim 7.0, or just like it better, Perl (<a target="_blank" href="http://www.perl.com/">http://www.perl.com/</A>).<br><br>For most linux/unix people these won't be a problem.&nbsp;&nbsp;If you are running windows and need Perl, you will need to install perl (<a target="_blank" href="http://www.activestate.com/Products/ActivePerl/">http://www.activestate.com/Products/ActivePerl/</A> is a decent version), and ctags.&nbsp;&nbsp;And for those running MacOS X you will likely only need to install ctags, because the ctags that comes with MacOS X by default is not Exubernat Ctags.<br><br>Untar the tarball in a directory in your vim runtimepath.&nbsp;&nbsp;Usually ~/.vim, $VIM/vimfiles, something along those lines.&nbsp;&nbsp;There are 3 files: autoload/TagsPaser.vim, plugin/TagsPaser.vim and doc/TagsParser.txt.&nbsp;&nbsp;After these files have been extracted, run the following command in Vim &quot;:helptags &lt;path&gt;/doc&quot; to index the new TagsParser help file.<br><br>TagsParser is no longer packaged in a vimball because the TagsParser plugin does not require Vim 7.0, but the vimball plugin does.&nbsp;&nbsp;I like the concept of a vimball because it makes installation easier, but I need to make sure that the plugin distribution method supports the same number of users that the plugin supports.</td></tr>
+<tr><td>&nbsp;</td></tr>
+</table>
+
+<!-- rating table -->
+<form name="rating">
+<input type="hidden" name="script_id" value="1535">
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>rate this script</b></td>
+  <td valign="middle">
+    <input type="radio" name="rating" value="life_changing">Life Changing
+    <input type="radio" name="rating" value="helpful">Helpful
+    <input type="radio" name="rating" value="unfulfilling">Unfulfilling&nbsp;
+    <input type="submit" value="rate">
+  </td>
+</tr>
+</table>
+</form>
+<span class="txth2">script versions</span> (<a href="add_script_version.php?script_id=1535">upload new version</a>)
+<p>
+Click on the package to download.
+<p>
+
+<table cellspacing="2" cellpadding="4" border="0" width="100%">
+<tr class='tableheader'>
+        <th valign="top">package</th>
+    <th valign="top">script version</th>
+    <th valign="top">date</th>
+    <th valign="top">Vim version</th>
+    <th valign="top">user</th>
+    <th valign="top">release notes</th>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=6835">TagsParser-0.9.1.tar.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.9.1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2007-03-04</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=10000">Aaron Cornelius</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Addition of configuration examples.<br>Big fixes for tabpage/multiple file editing (sorry it was so busted in 0.9).<br>Addition of debugging functionality.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=6739">TagsParser-0.9.tar.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.9</b></td>
+    <td class="roweven" valign="top" nowrap><i>2007-02-13</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=10000">Aaron Cornelius</a></i></td>
+    <td class="roweven" valign="top" width="2000">Addition of some new features, most notably project configurations and tabpage support (these require Vim 7.0 to use though).&nbsp;&nbsp;Many bugfixes also implemented.<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=6394">TagsParser-0.7.tar.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.7</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2006-11-08</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=10000">Aaron Cornelius</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Many updates and bugfixes... Addition of fully Vim native functions, Perl is no longer required for users of Vim 7.0 and greater.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=6228">TagsParser-0.5.vba.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.5</b></td>
+    <td class="roweven" valign="top" nowrap><i>2006-09-25</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=10000">Aaron Cornelius</a></i></td>
+    <td class="roweven" valign="top" width="2000">Vimball of version 0.5</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=6227">TagsParser-0.5.tar.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.5</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2006-09-25</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=10000">Aaron Cornelius</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Another bugfix release.&nbsp;&nbsp;The complete changes are in the change log.&nbsp;&nbsp;It has been a while since I uploaded some fixes so I thought it was time.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=5824">TagsParser-0.4.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.4</b></td>
+    <td class="roweven" valign="top" nowrap><i>2006-06-11</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=10000">Aaron Cornelius</a></i></td>
+    <td class="roweven" valign="top" width="2000">Some bugfixes and modifications.<br>This is the vimball of version 0.4 (instead of a tarball).&nbsp;&nbsp;You must have the vimball script installed (<a target="_blank" href="http://www.vim.org/scripts/script.php?script_id=1502">http://www.vim.org/scripts/script.php?script_id=1502</A>), which it is by default on vim 7.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=5823">TagsParser-0.4.tar.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.4</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2006-06-11</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=10000">Aaron Cornelius</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Some bugfixes and modifications.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=5652">TagsParser-0.3.tar.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.3</b></td>
+    <td class="roweven" valign="top" nowrap><i>2006-05-07</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=10000">Aaron Cornelius</a></i></td>
+    <td class="roweven" valign="top" width="2000">Initial upload</td>
+</tr>
+</table>
+<!-- finish off the framework -->
+          </td>
+        </tr>
+      </table>
+    </td>
+
+  </tr>
+</table>
+
+<!-- END OF THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr><td colspan="4" bgcolor="#000000"><img src="/images/spacer.gif" height="2" width="1" alt=""></td></tr>
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr>
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+
+    <td align="left" valign="top"><small>
+      If you have questions or remarks about this site, visit the
+      <a href="http://vimonline.sf.net">vimonline development</a> pages.
+      Please use this site responsibly.
+      <br> 
+      
+      Questions about <a href="http://www.vim.org/about.php">Vim</a> should go
+      to the <a href="http://www.vim.org/maillist.php">maillist</a>.
+      Help Bram <a href="http://iccf-holland.org/">help Uganda</a>.
+      </small>
+	&nbsp;
+	&nbsp;
+
+	<!-- Start of StatCounter Code -->
+	<script type="text/javascript" language="javascript">
+	var sc_project=1417324; 
+	var sc_invisible=1; 
+	var sc_partition=11; 
+	var sc_security="d41633bc"; 
+	</script>
+
+	<script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script><noscript><a href="http://www.statcounter.com/" target="_blank"><img  src="http://c12.statcounter.com/counter.php?sc_project=1417324&java=0&security=d41633bc&invisible=0" alt="free tracking" border="0"></a> </noscript>
+	<!-- End of StatCounter Code -->
+          </td>
+
+    <td align="right" valign="top">
+      		<a href="http://sourceforge.net/projects/vim" rel="nofollow"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=8&type=1" width="88" height="31" border="0" alt="SourceForge.net Logo" /></a>
+    </td>
+
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+  </tr>
+
+    
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  
+  </tr>
+</table>
+
+</body>
+</html>
+

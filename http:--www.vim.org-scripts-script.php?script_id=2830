@@ -1,0 +1,348 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+  <link rel="Stylesheet" type="text/css" href="/css/style.css" >
+  <title>csv.vim - A Filetype plugin for csv files. : vim online</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <meta name="KEYWORDS" content="Vim, Vi IMproved, text editor, home, documentation, tips, scripts, news">
+  <link rel="shortcut icon" type="image/x-icon" href="/images/vim_shortcut.ico">
+</head>
+
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff"> 
+
+<!-- HEADER, SPONSOR IMAGE, VIM IMAGE AND BOOK AD -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+  <td class="lightbg">&nbsp;&nbsp;&nbsp;</td>
+  <td class="lightbg" align="left"><a href="/sponsor/index.php"><img src="/images/sponsorvim.gif" alt="sponsor Vim development" border="0"></a></td>
+    <td class="lightbg" align="center"><a href="/index.php"><img src="/images/vim_header.gif" border="0" alt="Vim logo"></a></td>
+    <td class="lightbg" align="right"><a href="http://iccf-holland.org/click5.html"><img src="/images/buyhelplearn.gif" alt="Vim Book Ad" border="0"></a></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="darkbg"><img src="/images/spacer.gif" width="1" height="10" alt=""></td>
+  </tr>
+</table>
+<!-- THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+  <col width="180">
+  <col width="1">
+
+  <tr valign="top">
+    <td class="sidebar">
+      <table width="180" cellpadding="4" cellspacing="0" border="0">
+        <tr valign="top">
+          <td class="sidebar">
+
+<!-- INCLUDE THE PAGE NAVIGATION -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+    <tr>
+        <td><small>not logged in (<a href="/login.php">login</a>)</small></td>
+    </tr>
+    <tr><td>
+<small>&nbsp;</small>
+<form action="http://www.google.com/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-3005259998294962:bvyni59kjr1" />
+    <input type="hidden" name="ie" value="ISO-8859-1" />
+    <input type="text" name="q" size="20" />
+    <br>
+    <input type="submit" name="sa" value="Search" />
+  </div>
+</form>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+    </td></tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="1"></td>
+    </tr>
+    <tr>
+        <td class="darkbg"><img src="/images/spacer.gif" alt='' border="0" height="3"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="2"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/index.php">Home</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/search.php">Advanced search</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/about.php">About Vim</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/community.php">Community</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/news/news.php">News</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/sponsor/index.php">Sponsoring</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/trivia.php">Trivia</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/docs.php">Documentation</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/download.php">Download</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/scripts/index.php">Scripts</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/tips/index.php">Tips</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/account/index.php">My Account</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/huh.php">Site Help</a></td>
+        </tr>
+</table>
+
+            <table width="172" cellpadding="0" cellspacing="0" border="0">
+              <tr><td><img src="/images/spacer.gif" alt="" border="0" width="1" height="8"></td></tr>
+              <tr><td class="darkbg"><img src="/images/spacer.gif" width="1" height="3" alt=""></td></tr>
+            </table>
+            <br>
+
+<!-- INCLUDE THE PAGE SIDEBAR TEXT -->
+&nbsp;
+
+          </td>
+        </tr>
+      </table>
+    </td>
+
+    <td class="darkbg"><img src="/images/spacer.gif" width="1" height="1" border="0" alt=""><br></td>
+    <td>
+      <table width="100%" cellpadding="10" cellspacing="0" border="0" bordercolor="red">
+        <tr>
+          <td valign="top">
+
+<span class="txth1">csv.vim : A Filetype plugin for csv files.</span> 
+
+<br>
+<br>
+
+<!-- karma table -->
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
+  <td>
+    Rating <b>15/9</b>,
+    Downloaded by 647  </td>
+  <td class="lightbg">
+  <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
+  </td>
+  <td>
+    <a href="http://vim.wikia.com/wiki/Script:2830">Vim wiki</a>
+  </td>  
+</tr>
+</table>
+<p>
+
+<table cellspacing="0" cellpadding="0" border="0">
+<tr><td class="prompt">created by</td></tr>
+<tr><td><a href="/account/profile.php?user_id=17599">Christian Brabandt</a></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">script type</td></tr>
+<tr><td>ftplugin</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">description</td></tr>
+<tr><td>This is a filetype plugin for CSV files. It was heavily influenced by the Vim<br>Wiki Tip667 (<a target="_blank" href="http://vim.wikia.com/wiki/VimTip667">http://vim.wikia.com/wiki/VimTip667</A>), though it works<br>differently.<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *csv-toc*<br>1. Installation.................................|csv-installation|<br>2. CSV.Commands.................................|csv-commands|<br>&nbsp;&nbsp;&nbsp;&nbsp;2.1 WhatColumn..............................|WhatColumn|<br>&nbsp;&nbsp;&nbsp;&nbsp;2.2 NrColumns...............................|NrColumns|<br>&nbsp;&nbsp;&nbsp;&nbsp;2.3 SearchInColumn..........................|SearchInColumn|<br>&nbsp;&nbsp;&nbsp;&nbsp;2.4 HiColumn................................|HiColumn|<br>&nbsp;&nbsp;&nbsp;&nbsp;2.5 ArrangeColumn...........................|ArrangeColumn|<br>&nbsp;&nbsp;&nbsp;&nbsp;2.6 DeleteColumn............................|DeleteColumn|<br>3. CSV Filetype configuration...................|csv-configuration|<br>&nbsp;&nbsp;&nbsp;&nbsp;3.1 Delimiter...............................|csv-delimiter|<br>&nbsp;&nbsp;&nbsp;&nbsp;3.2 Column..................................|csv-column|<br>&nbsp;&nbsp;&nbsp;&nbsp;3.3 hiGroup.................................|csv-higroup|<br><br>==============================================================================<br>1. Installation					*csv-installation*<br><br>In order to have vim automatically detect csv files, you need to have<br>|ftplugins| enabled (e.g. by having this line in your |.vimrc| file:<br><br>&nbsp;&nbsp; :filetype plugin on<br><br>To have Vim automatically detect csv files, you need to do the following.<br><br>&nbsp;&nbsp; 1) Create your user runtime directory if you do not have one yet. This <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;directory needs to be in your 'runtime' path. In Unix this would<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;typically the ~/.vim directory, while in Windows this is usually your<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;~/vimfiles directory. Use :echo expand(&quot;~&quot;) to find out, what Vim thinks<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;your user directory is. <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;To create this directory, you can do:<br><br>	&nbsp;&nbsp;:!mkdir ~/.vim <br>	&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for Unix and<br><br>	&nbsp;&nbsp;:!mkdir ~/vimfiles <br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for Windows.<br><br>&nbsp;&nbsp; 2) In that directory you create a file that will detect csv files.<br><br>	if exists(&quot;did_load_csvfiletype&quot;)<br>	&nbsp;&nbsp;finish<br>	endif<br>	let did_load_csvfiletype=1<br><br>	augroup filetypedetect<br>	&nbsp;&nbsp;au! BufRead,BufNewFile *.csv,*.dat		setfiletype csv<br>	augroup END<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;You save this file as &quot;filetype.vim&quot; in your user runtime diretory:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:w ~/.vim/filetype.vim<br><br>&nbsp;&nbsp; 3) To be able to use your new filetype.vim detection, you need to restart<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Vim. Vim will then&nbsp;&nbsp;load the csv filetype plugin for all files whose<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;names end with .csv.<br><br>==============================================================================<br>2. Installation					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*csv-commands*<br><br>The CSV ftplugin provides several Commands:<br><br>2.1 WhatColumn&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*WhatColumn*<br>--------------<br><br>If you would like to know, on which column the cursor is, use :WhatColumn.<br><br>2.2 NrColumns&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *NrColumns*<br>--------------<br><br>:NrColumns outputs the maximum number of columns available. It does this by<br>testing the first 10 lines for the number of columns. This usually should be<br>enough.<br><br>2.3 SearchInColumn&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*SearchInColumn*<br>------------------<br><br>Use :SearchInColumn to search for a pattern within a specific column. The<br>usage is:<br>:SearchInColumn &lt;nr&gt; /{pat}/<br><br>So if you would like to search in Column 1 for the word foobar, you enter<br><br>:SearchInColumn 1 /foobar/<br><br>Instead of / as delimiter, you can use any other delimiter you like.<br><br>2.4 HiColumn&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *HiColumn*<br>------------<br><br>:HiColumn &lt;nr&gt; can be used to highlight Column &lt;nr&gt;. Currently the plugin uses<br>the WildMenu Highlight Group. If you would like to change this, you need to<br>define the variable |g:csv_hiGroup|.<br><br>2.5 ArrangeColumn&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *ArrangeColumn*<br>-----------------<br><br>If you would like all columns to be arranged visually, you can use the<br>:ArrangeColumn command. Beware, that this will change your file and depending<br>on the size of your file may slow down Vim significantly. This is highly<br>experimental.<br>:ArrangeCommand will try to vertically align all columns by their maximum<br>column size.<br><br>2.6 DeleteColumn&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *DeleteColumn*<br>----------------<br><br>The command :DeleteColumn can be used to delete a specific column.<br><br>:DeleteColumn 2<br><br>will delete column 2.<br><br>==============================================================================<br>3. CSV Configuration					&nbsp;&nbsp;*csv-configuration*<br><br>The CSV plugin tries to automatically detect the field delimiter for your<br>file, cause although often the file is called CSV (comma separated values), a<br>semicolon is actually used. The column separator is stored in the buffer-local<br>variable (|b:var| delimiter. This delimiter is heavily used, because you need<br>it to define a column. Almost all commands use this variable therefore.<br><br>3.1 Delimiter&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*csv-delimiter*<br>-------------&nbsp;&nbsp; <br><br>So to override the automatic detection of the plugin and define the separator<br>manually, use:<br><br>:let b:delimiter=','<br><br>to let the comma be the delimiter.<br><br>3.2 Column&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*csv-column*<br>----------<br><br>The definition, of what a column is, is defined as buffer-local variable<br>b:col. By default this variable is initialized to:<br><br>let b:col='\%(\%([^' . b:delimiter . ']*&quot;[^&quot;]*&quot;[^' . b:delimiter . ']*' <br>&nbsp;&nbsp;&nbsp;&nbsp;\. b:delimiter . '\)\|\%([^' . b:delimiter . ']*\%(' . b:delimiter <br>&nbsp;&nbsp;&nbsp;&nbsp;\. '\|$\)\)\)'<br><br>This should take care of quoted delimiters within a column. Those should<br>obviously not count as a delimiter. <br><br>If you changed the b:delimiter variable, you need to redefine the b:col<br>variable, cause otherwise it will not reflect the change. To change the<br>variable from the comma to a semicolon, you could call in your CSV-Buffer<br>this command:<br><br>:let b:col=substitute(b:col, ',', ';', 'g')<br><br>Check with :echo b:col, if the definition is correct afterwards.<br><br>3.3 Hilighting Group&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *csv-higroup*<br>--------------------<br><br>By default the csv ftplugin uses the WildMenu highlighting Group to define how<br>the |HiColumn| command highlights columns. If you would like to define a<br>different highlighting group, you need to set this via the g:csv_hiGroup<br>variable. You can e.g. define it in your .vimrc:<br><br>:let g:csv_hiGroup = &quot;IncSearch&quot;<br><br>You need to restart Vim, if you have changed this variable.<br></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">install details</td></tr>
+<tr><td>Open csv.vim in Vim and source the file: <br><br>:so % <br><br>This will install the plugin into your $HOME/.vim/ftplugin directory and the documentation into your $HOME/.vim/doc directory. <br><br>See also the help for installing Vimball-Archives (:h vimball-intro) <br><br>Take a look at :h ft_csv.txt for the documenation <br> and read :h csv-installation to have vim automatically detect csv-files.</td></tr>
+<tr><td>&nbsp;</td></tr>
+</table>
+
+<!-- rating table -->
+<form name="rating">
+<input type="hidden" name="script_id" value="2830">
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>rate this script</b></td>
+  <td valign="middle">
+    <input type="radio" name="rating" value="life_changing">Life Changing
+    <input type="radio" name="rating" value="helpful">Helpful
+    <input type="radio" name="rating" value="unfulfilling">Unfulfilling&nbsp;
+    <input type="submit" value="rate">
+  </td>
+</tr>
+</table>
+</form>
+<span class="txth2">script versions</span> (<a href="add_script_version.php?script_id=2830">upload new version</a>)
+<p>
+Click on the package to download.
+<p>
+
+<table cellspacing="2" cellpadding="4" border="0" width="100%">
+<tr class='tableheader'>
+        <th valign="top">package</th>
+    <th valign="top">script version</th>
+    <th valign="top">date</th>
+    <th valign="top">Vim version</th>
+    <th valign="top">user</th>
+    <th valign="top">release notes</th>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15045">csv-0.9.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>9</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2011-02-19</i></td>
+    <td class="rowodd" valign="top" nowrap>7.2</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=17599">Christian Brabandt</a></i></td>
+    <td class="rowodd" valign="top" width="2000">-use conceal char depending on encoding<br>-Map normal mode keys also for visual/select and operator pending mode<br>(automatically uploaded)</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=15037">csv-0.8.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>8</b></td>
+    <td class="roweven" valign="top" nowrap><i>2011-02-17</i></td>
+    <td class="roweven" valign="top" nowrap>7.2</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=17599">Christian Brabandt</a></i></td>
+    <td class="roweven" valign="top" width="2000">-Better Error handling<br>-HiColumn! removes highlighting<br>-Enable NrColumns, that was deactivated in v.0.7<br>-a ColorScheme autocommand makes sure, that the syntax highlighting is reapplied, after changing the colorscheme.<br>-small performance improvements for |ArrangeColumn_CSV|<br>-Syntax Highlighting conceales delimiter<br>-A lot more documentation<br>-SearchInColumn now searches in the current column, if no column has been specified<br>(automatically uploaded)</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15031">csv-0.7.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>7</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2011-02-16</i></td>
+    <td class="rowodd" valign="top" nowrap>7.2</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=17599">Christian Brabandt</a></i></td>
+    <td class="rowodd" valign="top" width="2000">-Make the motion commands 'W' and 'E' work more reliable<br>-Document how to setup filetype plugins<br>-Make |WhatColumn_CSV| work more reliable (report from <a target="_blank" href="http://vim.wikia.com/Script">http://vim.wikia.com/Script</A>:3280)<br>-DeleteColumn deletes current column, if no argument given<br>-|ArrangeColumn_CSV| handles errors better<br>-Code cleanup<br>-Syntax highlighting<br>-'H' and 'L' move forward/backwards between csv fields<br>-'K' and 'J' move upwards/downwards within the same column<br>-|Sort_CSV| to sort on a certain column<br>-|csv-tips| on how to colorize the statusline<br>(automatically uploaded)</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=15021">csv-0.6.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>6</b></td>
+    <td class="roweven" valign="top" nowrap><i>2011-02-15</i></td>
+    <td class="roweven" valign="top" nowrap>7.2</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=17599">Christian Brabandt</a></i></td>
+    <td class="roweven" valign="top" width="2000">-Make |ArrangeColumn| work more reliable (had problems with multibyte chars before)<br>-Add |Header| function<br>-'W' and 'E' move forward/backwards between csv fields<br>(automatically uploaded)</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=12877">csv.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.5</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-04-20</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=17599">Christian Brabandt</a></i></td>
+    <td class="rowodd" valign="top" width="2000">enabled GLVS (see :h GLVS),<br>put cvs.vim on a public repository available at <a target="_blank" href="http://github.com/chrisbra/csv.vim">http://github.com/chrisbra/csv.vim</A></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=12607">csv.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.4a</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-03-11</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=17599">Christian Brabandt</a></i></td>
+    <td class="roweven" valign="top" width="2000">fixed documentation</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=12604">csv.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.4</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-03-11</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=17599">Christian Brabandt</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Better error handling<br>added :InitCSV to reinitialize the plugin<br>:HiColumn now by default the current column, if no argument is given</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=11615">csv.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.3</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-10-28</i></td>
+    <td class="roweven" valign="top" nowrap>7.2</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=17599">Christian Brabandt</a></i></td>
+    <td class="roweven" valign="top" width="2000">Initial upload</td>
+</tr>
+</table>
+<!-- finish off the framework -->
+          </td>
+        </tr>
+      </table>
+    </td>
+
+  </tr>
+</table>
+
+<!-- END OF THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr><td colspan="4" bgcolor="#000000"><img src="/images/spacer.gif" height="2" width="1" alt=""></td></tr>
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr>
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+
+    <td align="left" valign="top"><small>
+      If you have questions or remarks about this site, visit the
+      <a href="http://vimonline.sf.net">vimonline development</a> pages.
+      Please use this site responsibly.
+      <br> 
+      
+      Questions about <a href="http://www.vim.org/about.php">Vim</a> should go
+      to the <a href="http://www.vim.org/maillist.php">maillist</a>.
+      Help Bram <a href="http://iccf-holland.org/">help Uganda</a>.
+      </small>
+	&nbsp;
+	&nbsp;
+
+	<!-- Start of StatCounter Code -->
+	<script type="text/javascript" language="javascript">
+	var sc_project=1417324; 
+	var sc_invisible=1; 
+	var sc_partition=11; 
+	var sc_security="d41633bc"; 
+	</script>
+
+	<script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script><noscript><a href="http://www.statcounter.com/" target="_blank"><img  src="http://c12.statcounter.com/counter.php?sc_project=1417324&java=0&security=d41633bc&invisible=0" alt="free tracking" border="0"></a> </noscript>
+	<!-- End of StatCounter Code -->
+          </td>
+
+    <td align="right" valign="top">
+      		<a href="http://sourceforge.net/projects/vim" rel="nofollow"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=8&type=1" width="88" height="31" border="0" alt="SourceForge.net Logo" /></a>
+    </td>
+
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+  </tr>
+
+    
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  
+  </tr>
+</table>
+
+</body>
+</html>
+

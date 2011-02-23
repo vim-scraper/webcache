@@ -1,0 +1,348 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+  <link rel="Stylesheet" type="text/css" href="/css/style.css" >
+  <title>Pydiction - Tab-complete your Python code : vim online</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <meta name="KEYWORDS" content="Vim, Vi IMproved, text editor, home, documentation, tips, scripts, news">
+  <link rel="shortcut icon" type="image/x-icon" href="/images/vim_shortcut.ico">
+</head>
+
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff"> 
+
+<!-- HEADER, SPONSOR IMAGE, VIM IMAGE AND BOOK AD -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+  <td class="lightbg">&nbsp;&nbsp;&nbsp;</td>
+  <td class="lightbg" align="left"><a href="/sponsor/index.php"><img src="/images/sponsorvim.gif" alt="sponsor Vim development" border="0"></a></td>
+    <td class="lightbg" align="center"><a href="/index.php"><img src="/images/vim_header.gif" border="0" alt="Vim logo"></a></td>
+    <td class="lightbg" align="right"><a href="http://iccf-holland.org/click5.html"><img src="/images/buyhelplearn.gif" alt="Vim Book Ad" border="0"></a></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="darkbg"><img src="/images/spacer.gif" width="1" height="10" alt=""></td>
+  </tr>
+</table>
+<!-- THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+  <col width="180">
+  <col width="1">
+
+  <tr valign="top">
+    <td class="sidebar">
+      <table width="180" cellpadding="4" cellspacing="0" border="0">
+        <tr valign="top">
+          <td class="sidebar">
+
+<!-- INCLUDE THE PAGE NAVIGATION -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+    <tr>
+        <td><small>not logged in (<a href="/login.php">login</a>)</small></td>
+    </tr>
+    <tr><td>
+<small>&nbsp;</small>
+<form action="http://www.google.com/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-3005259998294962:bvyni59kjr1" />
+    <input type="hidden" name="ie" value="ISO-8859-1" />
+    <input type="text" name="q" size="20" />
+    <br>
+    <input type="submit" name="sa" value="Search" />
+  </div>
+</form>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+    </td></tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="1"></td>
+    </tr>
+    <tr>
+        <td class="darkbg"><img src="/images/spacer.gif" alt='' border="0" height="3"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="2"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/index.php">Home</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/search.php">Advanced search</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/about.php">About Vim</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/community.php">Community</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/news/news.php">News</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/sponsor/index.php">Sponsoring</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/trivia.php">Trivia</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/docs.php">Documentation</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/download.php">Download</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/scripts/index.php">Scripts</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/tips/index.php">Tips</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/account/index.php">My Account</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/huh.php">Site Help</a></td>
+        </tr>
+</table>
+
+            <table width="172" cellpadding="0" cellspacing="0" border="0">
+              <tr><td><img src="/images/spacer.gif" alt="" border="0" width="1" height="8"></td></tr>
+              <tr><td class="darkbg"><img src="/images/spacer.gif" width="1" height="3" alt=""></td></tr>
+            </table>
+            <br>
+
+<!-- INCLUDE THE PAGE SIDEBAR TEXT -->
+&nbsp;
+
+          </td>
+        </tr>
+      </table>
+    </td>
+
+    <td class="darkbg"><img src="/images/spacer.gif" width="1" height="1" border="0" alt=""><br></td>
+    <td>
+      <table width="100%" cellpadding="10" cellspacing="0" border="0" bordercolor="red">
+        <tr>
+          <td valign="top">
+
+<span class="txth1">Pydiction : Tab-complete your Python code</span> 
+
+<br>
+<br>
+
+<!-- karma table -->
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
+  <td>
+    Rating <b>706/238</b>,
+    Downloaded by 21129  </td>
+  <td class="lightbg">
+  <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
+  </td>
+  <td>
+    <a href="http://vim.wikia.com/wiki/Script:850">Vim wiki</a>
+  </td>  
+</tr>
+</table>
+<p>
+
+<table cellspacing="0" cellpadding="0" border="0">
+<tr><td class="prompt">created by</td></tr>
+<tr><td><a href="/account/profile.php?user_id=3923">ryan kulla</a></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">script type</td></tr>
+<tr><td>utility</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">description</td></tr>
+<tr><td>Pydiction allows you to Tab-complete Python code in Vim, including: standard, custom and third-party modules and packages. Plus keywords, built-ins, and string literals.<br><br>It consists of three main files:<br>&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;python_pydiction.vim -- The Vim plugin that creates the Tab-completion functionality for Python files.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;complete-dict -- A Vim dictionary file that contains Python keywords and module structure. This is what the plugin looks at to know which things are completable.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pydiction.py -- (Optional) Python script used to generate the dictionary. You can optionally run this script to add more modules to complete.<br><br><br>Usage<br>=====<br>Type part of a Python keyword, module name, attribute or method in &quot;insert mode&quot; in Vim, then hit the Tab key and it will auto-complete.<br><br>For example, typing:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;raw&lt;Tab&gt;<br><br>will bring up a menu of possibilities, such as:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;raw_input(<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;raw_unicode_escape_decode(<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;raw_unicode_escape_encode(<br><br>Typing:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;os.p&lt;Tab&gt;<br><br>pops up:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;os.pardir<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;os.path<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;os.pathconf(<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;os.pathconf_names<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;os.pathsep<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;os.pipe(<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...<br><br>Typing:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;co&lt;Tab&gt;<br><br>pops up:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;continue<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;coerce(<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;compile(<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...<br><br>Typing:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;foo bar&quot;.st&lt;Tab&gt;<br><br>pops up:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;startswith(<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;strip(<br><br>and so on.<br><br>As of Pydiction 1.2, there's support for completing modules that were imported via &quot;from module import submodule&quot;. For example, you could do:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;from xml.parsers import expat<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;expat.P&lt;Tab&gt;<br><br>which expands to:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;expat.ParserCreate(<br><br>You can also now Shift-Tab to Tab backwards through the popup menu.<br><br>If you feel you're getting different results in your completion menu, it's probably because you don't have Vim set to ignore case. You can remedy this with &quot;:set noic&quot;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br><br>Pydiction versus other forms of completion<br>=================================<br>Pydiction can complete Python's keywords, built-in functions, and string literals, as well as standard, custom and third-party package and module names and their attributes and methods. It can also complete fully-qualified names such as &quot;module.submodule.method&quot;, as well as non-fully qualified names such as simply &quot;method&quot;.<br><br>Pydiction uses the Tab key to do completion, rather than inefficient Ctrl key combinations and the like.<br><br>Unlike omni-completion, Pydiction works with more than just imported modules. For example you can complete Python built-in functions and keywords, such as &quot;print&quot;, &quot;raw_input&quot;, and so on.<br><br>Pydiction doesn't require Python support to be compiled into your version of Vim, nor do you need to have Python installed on the machine you use it from (unless you want to use pydiction.py)<br><br>Using a special dictionary file to complete from, Pydiction doesn't pollute any other menus that you you may be using for other types of completion, such as omni-completion or ins-completion.<br><br>Since Pydiction uses a dictionary of possible completion items, it can complete 3rd-party modules much more accurately, and quickly, than other ways. And you have full control over what can and cannot complete. If it's unable to complete anything, you can either use pydiction.py--to automatically add a new module's contents to the dictionary-- or you can manually add them using a text editor. The dictionary is just a plain text file, which also makes it portable across all platforms.&nbsp;&nbsp;For example, if you're a Django user, you can add all the django related modules to the dictionary by using pydiction.py.&nbsp;&nbsp;The latest default complete-dict already contains most of the standard library, all Python 2.x keywords, Pygame, OpenGL, wxPython, Twisted, PyQT4, ZSI, LDAP, Numarray, PyGTK, MySQLdb, PyGreSQL, pyPgSQL, PythonCard, pyvorbis, Bcrypt, OpenID, GnuPGInterface, OpenSSl, Pygments and more.<br><br>Also because Pydiction uses a dictionary file, you don't have to import a module before you can complete it, nor do you even have to have the module installed on your machine. This makes completion faster than omni-completion since it doesn't need to do any type deducing.<br><br>Pydiction only attempts to complete while editing Python files.<br><br>You can still use omni-completion, and other forms of completion, with Pydiction. In fact, they can all make a great team.<br><br>Pydiction knows when you're completing a callable method or not and, if you are, it will automatically insert an opening parentheses.<br><br>The Tab key will work as normal for everything else. Pydiction will only try to use the Tab key to complete Python code if you're editing a Python file and you first type part of some Python module or keyword.<br><br><br><br>Screenshots<br>==========<br><a target="_blank" href="http://rkulla.com/images/screenshots/pydiction1.jpg">http://rkulla.com/images/screenshots/pydiction1.jpg</A><br><a target="_blank" href="http://rkulla.com/images/screenshots/pydiction2.jpg">http://rkulla.com/images/screenshots/pydiction2.jpg</A><br><br><br>python_pydiction.vim (filetype plugin)<br>============================<br>Pydiction will make it so the Tab key on your keyboard is able to complete python code.<br><br>Version 1.0 and greater of Pydiction uses a new file called python_pydiction.vim, which is an ftplugin that only activates when you're editing a python file (e.g., you're editing a file with a &quot;.py&quot; extension or you've manually typed &quot;:set filetype=python&quot;).&nbsp;&nbsp;Past versions of Pydiction didn't use a plugin and instead just required you to change the value of &quot;isk&quot; in your vimrc, which was not desirable. Version 1.0 and greater do not require you to manually change the value of isk. It now safely changes isk for you temporarily by only setting it while you're doing Tab-completion of Python code, and it automatically changes it back to its original value whenever Tab-completion isn't being activated.&nbsp;&nbsp;Again, only Tab-completion causes Pydiction to activate; not even other forms of completion, such as &lt;Ctrl-x&gt; or &lt;Ctrl-n&gt; completion will activate Pydiction, so you're still free to use those other types of completion whenever you want to.<br><br>Pydiction works by using Vim's ins-completion functionality by temporarily remapping the Tab key to do the same thing as I_CTRL-X_CTRL_K (dictionary only completion). This means that whenever you're editing a Python file, and you start typing the name of a python keyword or module, you can press the Tab key to complete it. For example, if you type &quot;os.pa&quot; and then press Tab, Pydiction will pop up a completion menu in Vim that will look something like:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;os.pardir<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;os.path<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;os.pathconf(<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;os.pathconf_names<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;os.path.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;os.path.__all__<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;os.path.__builtins__<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;os.path.__doc__<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...<br><br>Pressing Tab again while the menu is open will scroll down the menu so you can choose whatever item you want to go with, using the popup-menu keys:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CTRL-Y&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Accept the currently selected match and stop completion.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Space&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Accept the currently selected match and insert a space.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CTRL-E&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Close the menu and not accept any match.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;....<br><br>hitting Enter will accept the currently selected match, stop completion, and insert a newline, which is usually not what you want. Use CTRL-Y or &lt;Space&gt;, instead. See &quot;:help popupmenu-keys&quot; for more options.<br><br>As of Pydiction 1.2, you can press Shift-Tab to Tab backwards as well.<br><br>Pydiction temporarily sets completeopt to &quot;menu,menuone&quot;, so that you can complete items that have one or more matches. It will set it back to whatever the original value you have completeopt set to when Tab-completion isn't being activated.<br><br>By default, Pydiction ignores case while doing Tab-completion. If you want it to do case-sensitive searches, then set noignorecase (:set noic).<br><br><br>pydiction.py<br>=========<br>Note: You can skip this section if you don't plan to add more modules to complete-dict yourself.&nbsp;&nbsp;Check if complete-dict already has the modules you intend to use.<br><br>This is the Python script used to create the &quot;complete-dict&quot; Vim dictionary file. It works by analyzing a module's structure and modelling that structure as a static file. Bundled with Pydiction is a default complete-dict; created using Python on Linux, so there won't be any real win32 specific support in it. You're free to run pydiction.py to add or upgrade modules as you see fit. The dictionary will still work if you're using windows, but it won't complete win32 related modules unless you tell it to.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br><br>Usage: In a command prompt, run: <br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$ python pydiction.py &lt;module&gt; ... [-v]<br><br>(You need to have python 2.x installed.)<br><br>Say you wanted to add a module called &quot;mymodule&quot; to complete-dict, do the following:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$ python pydiction.py mymodule<br><br>You can input more than one module name on the command-line, just separate them by spaces:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$ python pydiction.py mymodule1 mymodule2 mymodule3<br><br>The -v option will just write the results to stdout (standard output) instead of the complete-dict file.<br><br>If the backfup file &quot;complete-dict.last&quot; doesn't exist in the current directory, pydiction.py will create it for you. You should always keep a backup of your last working dictionary in case anything goes wrong, as it can get tedious having to recreate the file from scratch.<br><br>If complete-dict.last already exists, pydiction.py will ask you if you want to overwrite your old backup with the new backup.<br><br>If you try to add a module that already exists in complete-dict, pydiction.py will tell you it already exists, so don't worry about adding duplicates. In fact, you can't add duplicates, every time you run pydiction.py it looks for, and removes, any duplicates in the file.<br><br>When pydiction.py adds new modules to complete-dict, it does so in two phases. First, it adds the fully-qualified name of the module. For example:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;module.attribute<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;module.method(<br><br>then it adds the non-fully qualified name:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;attribute<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;method(<br><br>this allows you to complete your python code in the way that you imported it. E.g.:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;import module<br><br>or:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;from module import method<br><br>Say you want to complete &quot;pygame.display.set_mode&quot;. If you imported Pygame using &quot;import pygame&quot;, then you can Tab-complete using:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pygame.di&lt;Tab&gt;<br><br>to expand to &quot;pygame.display.&quot;. Then type:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;se&lt;Tab&gt; <br><br>to expand to &quot;pygame.display.set_mode(&quot;<br><br>Now say you imported using &quot;from pygame import display&quot;. To expand to &quot;display.set_mode(&quot; just type:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;display.se&lt;Tab&gt;<br><br>And if you imported using &quot;from pygame.display import set_mode&quot; just type:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;se&lt;Tab&gt;<br><br>Keep in mind that if you don't use fully-qualified module names then you might get a lot of possible menu options popping up, so you may want to use more than just two letters before you hit Tab, to try to narrow down the list.<br><br>As of Pydictoin 1.1, there is also support for string literal method completion. For example:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;&quot;.jo&lt;Tab&gt;&quot; <br><br>will expand to:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;&quot;.join(<br><br>make sure you type at least two letters of the method name if this doesn't seem to work.<br><br>This only works for quoted strings, ie: <br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'foo bar'.st&lt;Tab&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;<br>to get <br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'foo bar'.startswith(<br><br>to be able to do:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;s = 'foo bar'<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;s.st&lt;Tab&gt;<br><br>you can use Vim 7's omni-completion:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;s.st&lt;Ctrl-x&gt;&lt;Ctrl-o&gt;<br><br>which will also give you a preview window describing the methods as well as the argument list the methods take, e,g:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;startswith(prefix[, start[, end]])<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;strip([chars])<br><br>To Tab-complete your own personal modules, you put your functions in a separate file to be reused, as you normally would. For example, say you put the following function in a file called &quot;myFoo.py&quot;:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;def myBar():<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print &quot;hi&quot;<br><br>you would then need to add myFoo to complete-dict by doing:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;./pydiction.py myFoo<br><br>now you can complete myFoo.myBar() by doing:&nbsp;&nbsp;<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;myFoo.my&lt;Tab&gt;<br><br>As of Pydiction 1.2, there's support for completing modules that were imported via &quot;from module import submodule&quot;. For example, you could do:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;from xml.parsers import expat<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;expat.P&lt;Tab&gt;<br><br>which expands to:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;expat.ParserCreate( <br><br>Keep in mind that you don't have to restart Vim after you update complete-dict.<br><br><br>complete-dict<br>===========<br>This is the Vim dictionary file that python_pydiction.vim reads from and pydiction.py writes to. Without this file, Pydiction wouldn't know which Python keywords and modules it can Tab-complete.<br><br>complete-dict is only an optional file in the sense that you can create your own complete-dict if you don't want to use the default one that is bundled with Pydiction.&nbsp;&nbsp;The default complete-dict gives you a major head start, as far as what you can Tab-complete, because I did my best to put all of the Python keywords, standard library and even some popular third party modules in it for you. <br><br>The default complete-dict currently contains:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Python keywords:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;and, del, for, is, raise, assert, elif, from, lambda, return, break, else, global, not, try, class, except, if, or, while, continue, exec, import, pass, yield, def, finally, in, print&nbsp;&nbsp;&nbsp;&nbsp;<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Most of the standard library and built-ins:&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;__builtin__, __future__, os, sys, time, re, sets, string, math, Tkinter, hashlib, urllib, pydoc, etc... <br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;It also contains some popular third-party libraries: <br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pygame, wxPython, Twisted, ZSI, LDAP, OpenGL, PyGTK, PyQT4, MySQLdb, PyGreSQL, pyPgSQL, SQLite, PythonCard, Numarray, pyvorbis, Bcrypt, OpenID, GnuPGInterface, OpenSSL and Pygments.<br><br>Make sure you download the latest version of Pydiction to get the most up-to-date version of complete-dict. New modules are usually added to it every release.<br><br>If you open complete-dict in your text editor you'll see sections in it for each module, such as:<br> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--- import os ---<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;os.EX_CANTCREAT<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;os.EX_CONFIG<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;os.EX_DATAERR<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--- from os import * ---<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;EX_CANTCREAT<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;EX_CONFIG<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;EX_DATAERR<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...<br><br>If certain attributes seem to be missing, it's probably because pydiction.py removed them because they were duplicates. This mainly happens with the non-fully qualified module sections. So first try searching the entire file for whatever string you assume is missing before you try adding it. For example, if you don't see:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;__doc__<br><br>under:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--- import sys ---<br><br>it's probably because a previous module, such as &quot;os&quot;, already has it.<br>&nbsp;&nbsp;&nbsp;&nbsp;<br>If you try to recreate complete-dict from scratch, you'll need to manually add the Python keywords back to it, as those aren't generated with pydiction.py.<br><br>If you don't want certain things to Tab-complete, such as Python keywords or certain modules, simply delete them by hand from complete-dict.<br><br>Pydiction doesn't ignore &quot;private&quot; attributes or methods. I.e., those starting (but not ending) with one or two underscores, e.g., &quot;_foo&quot; or &quot;__foo&quot;.&nbsp;&nbsp;I have manually deleted things starting with a single underscore from the included complete-dict just to keep it a little more sane--since there were so many.&nbsp;&nbsp;In sticking with the Python tradition of not forcing things to be private, I have left it up to the user to decide how they want to treat their own things.&nbsp;&nbsp;If you want to delete them from your custom complete-dict's, you can use a regex to try to delete them, such as doing:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:g/\._[a-zA-Z]/d<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:g/^_[a-zA-Z]/d<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:g/^\%(_\=[^_]\)*\zs__\%(.\{-}__\)\@!/d<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;etc...<br><br><br>Options<br>======<br>You can optionally set the height of the completion menu by setting &quot;g:pydiction_menu_height&quot; in your vimrc. For example:<br>&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let g:pydiction_menu_height = 20<br><br>The default menu height is 15.<br><br><br>Tips<br>====<br>Say you create a custom object, called &quot;S&quot; by doing something like:<br>&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;S = socket.socket(socket.AF_INET, socket.SOCK_STREAM)<br><br>you can complete dynamic object methods, such as &quot;S.send()&quot;, by using Vim 7's omni-completion ftplugin (a.k.a &quot;pythoncomplete.vim&quot;) by doing:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;S.s&lt;Ctrl-x&gt;&lt;Ctrl-o&gt;<br><br>You may get unexpected results if you use autocomplpop.vim, supertab.vim or other completion or python plugins. Try disabling them individually to find out the culprit and please don't hesitate to e-mail me any workarounds or suggestions. Thanks.<br><br><br>Further reading<br>============<br>:help ftplugin<br>:help 'complete<br>:help compl-dictionary<br>:help popupmenu-completion<br>:help popupmenu-keys<br>:help iskeyword<br><br></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">install details</td></tr>
+<tr><td>UNIX/LINUX: Place python_pydiction.vim in:&nbsp;&nbsp;~/.vim/after/ftplugin/<br><br>If this directory doesn't already exist, create it. Vim looks there automatically.<br><br>WINDOWS: Assuming you installed Vim to C:\vim\, put python_pydiction.vim in C:\vim\vimfiles\ftplugin<br><br>You may install the other files (complete-dict and pydiction.py) anywhere you want. For this example, we'll assume you put them in C:\vim\vimfiles\ftplugin\pydiction\ <br><br>Don't put any files but python_pydiction.vim in the ftplugin directory, only .vim files should go there.<br><br>In your vimrc file, first add the following line to enable ftplugins:<br>&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;filetype plugin on<br><br>then make sure you set &quot;g:pydiction_location&quot; to the full path of where you installed complete-dict, i.e.:<br>&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let g:pydiction_location = 'C:/vim/vimfiles/ftplugin/pydiction/complete-dict'<br><br>Note: If you were using a version of Pydiction less than 1.0, make sure you delete the old way of doing things from your vimrc. You shouldn't have this in your vimrc anymore:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if has(&quot;autocmd&quot;)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;autocmd FileType python set complete+=k/path/to/pydiction iskeyword+=.,(<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;endif &quot; has(&quot;autocmd&quot;)<br></td></tr>
+<tr><td>&nbsp;</td></tr>
+</table>
+
+<!-- rating table -->
+<form name="rating">
+<input type="hidden" name="script_id" value="850">
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>rate this script</b></td>
+  <td valign="middle">
+    <input type="radio" name="rating" value="life_changing">Life Changing
+    <input type="radio" name="rating" value="helpful">Helpful
+    <input type="radio" name="rating" value="unfulfilling">Unfulfilling&nbsp;
+    <input type="submit" value="rate">
+  </td>
+</tr>
+</table>
+</form>
+<span class="txth2">script versions</span> (<a href="add_script_version.php?script_id=850">upload new version</a>)
+<p>
+Click on the package to download.
+<p>
+
+<table cellspacing="2" cellpadding="4" border="0" width="100%">
+<tr class='tableheader'>
+        <th valign="top">package</th>
+    <th valign="top">script version</th>
+    <th valign="top">date</th>
+    <th valign="top">Vim version</th>
+    <th valign="top">user</th>
+    <th valign="top">release notes</th>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=11062">pydiction-1.2.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.2</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-07-25</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=3923">ryan kulla</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Added &quot;from module&quot; completion, Tab backwards support, and more third party libs. </td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=11040">pydiction-1.1.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.1</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-07-20</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=3923">ryan kulla</a></i></td>
+    <td class="roweven" valign="top" width="2000">Added quoted string method completion, ZSI Web Services module completion and fixed a bug with the -v option.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=11028">pydiction-1.0.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.0</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-07-18</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=3923">ryan kulla</a></i></td>
+    <td class="rowodd" valign="top" width="2000">I Rewrote everything. It's now an ftplugin and uses the Tab key for completion. The dictionary generator works much better and you have more options. </td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=2668">pydiction-0.5.tar.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.5</b></td>
+    <td class="roweven" valign="top" nowrap><i>2004-01-19</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=3923">ryan kulla</a></i></td>
+    <td class="roweven" valign="top" width="2000">Added support for ldap, cleaned up some code and included a gnu license.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=2605">pydiction-0.4.tar.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.4</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2003-12-16</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=3923">ryan kulla</a></i></td>
+    <td class="rowodd" valign="top" width="2000">support for Numeric and numarray</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=2600">pydiction-0.3.tar.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.3</b></td>
+    <td class="roweven" valign="top" nowrap><i>2003-12-15</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=3923">ryan kulla</a></i></td>
+    <td class="roweven" valign="top" width="2000">This version allows you to supply multiple module names to pydiction.py and it will auto-append them to the pydiction file. The included pydiction file now contains support for wxPython and Twisted.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=2559">pydiction-0.2.tar.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.2</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2003-12-06</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=3923">ryan kulla</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Added support for Pygame to pydiction. And im supplying the source code to the pydiction generator so people can extend pydiction so that they can have auto-completion for their own modules/functions/etc</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=2555">pydiction</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.1</b></td>
+    <td class="roweven" valign="top" nowrap><i>2003-12-06</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=3923">ryan kulla</a></i></td>
+    <td class="roweven" valign="top" width="2000">Initial upload</td>
+</tr>
+</table>
+<!-- finish off the framework -->
+          </td>
+        </tr>
+      </table>
+    </td>
+
+  </tr>
+</table>
+
+<!-- END OF THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr><td colspan="4" bgcolor="#000000"><img src="/images/spacer.gif" height="2" width="1" alt=""></td></tr>
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr>
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+
+    <td align="left" valign="top"><small>
+      If you have questions or remarks about this site, visit the
+      <a href="http://vimonline.sf.net">vimonline development</a> pages.
+      Please use this site responsibly.
+      <br> 
+      
+      Questions about <a href="http://www.vim.org/about.php">Vim</a> should go
+      to the <a href="http://www.vim.org/maillist.php">maillist</a>.
+      Help Bram <a href="http://iccf-holland.org/">help Uganda</a>.
+      </small>
+	&nbsp;
+	&nbsp;
+
+	<!-- Start of StatCounter Code -->
+	<script type="text/javascript" language="javascript">
+	var sc_project=1417324; 
+	var sc_invisible=1; 
+	var sc_partition=11; 
+	var sc_security="d41633bc"; 
+	</script>
+
+	<script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script><noscript><a href="http://www.statcounter.com/" target="_blank"><img  src="http://c12.statcounter.com/counter.php?sc_project=1417324&java=0&security=d41633bc&invisible=0" alt="free tracking" border="0"></a> </noscript>
+	<!-- End of StatCounter Code -->
+          </td>
+
+    <td align="right" valign="top">
+      		<a href="http://sourceforge.net/projects/vim" rel="nofollow"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=8&type=1" width="88" height="31" border="0" alt="SourceForge.net Logo" /></a>
+    </td>
+
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+  </tr>
+
+    
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  
+  </tr>
+</table>
+
+</body>
+</html>
+

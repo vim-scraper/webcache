@@ -1,0 +1,348 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+  <link rel="Stylesheet" type="text/css" href="/css/style.css" >
+  <title>savevers.vim - Automatically save and diff multiple, sequentially numbered revisions (like VMS) : vim online</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <meta name="KEYWORDS" content="Vim, Vi IMproved, text editor, home, documentation, tips, scripts, news">
+  <link rel="shortcut icon" type="image/x-icon" href="/images/vim_shortcut.ico">
+</head>
+
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff"> 
+
+<!-- HEADER, SPONSOR IMAGE, VIM IMAGE AND BOOK AD -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+  <td class="lightbg">&nbsp;&nbsp;&nbsp;</td>
+  <td class="lightbg" align="left"><a href="/sponsor/index.php"><img src="/images/sponsorvim.gif" alt="sponsor Vim development" border="0"></a></td>
+    <td class="lightbg" align="center"><a href="/index.php"><img src="/images/vim_header.gif" border="0" alt="Vim logo"></a></td>
+    <td class="lightbg" align="right"><a href="http://iccf-holland.org/click5.html"><img src="/images/buyhelplearn.gif" alt="Vim Book Ad" border="0"></a></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="darkbg"><img src="/images/spacer.gif" width="1" height="10" alt=""></td>
+  </tr>
+</table>
+<!-- THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+  <col width="180">
+  <col width="1">
+
+  <tr valign="top">
+    <td class="sidebar">
+      <table width="180" cellpadding="4" cellspacing="0" border="0">
+        <tr valign="top">
+          <td class="sidebar">
+
+<!-- INCLUDE THE PAGE NAVIGATION -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+    <tr>
+        <td><small>not logged in (<a href="/login.php">login</a>)</small></td>
+    </tr>
+    <tr><td>
+<small>&nbsp;</small>
+<form action="http://www.google.com/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-3005259998294962:bvyni59kjr1" />
+    <input type="hidden" name="ie" value="ISO-8859-1" />
+    <input type="text" name="q" size="20" />
+    <br>
+    <input type="submit" name="sa" value="Search" />
+  </div>
+</form>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+    </td></tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="1"></td>
+    </tr>
+    <tr>
+        <td class="darkbg"><img src="/images/spacer.gif" alt='' border="0" height="3"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="2"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/index.php">Home</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/search.php">Advanced search</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/about.php">About Vim</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/community.php">Community</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/news/news.php">News</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/sponsor/index.php">Sponsoring</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/trivia.php">Trivia</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/docs.php">Documentation</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/download.php">Download</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/scripts/index.php">Scripts</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/tips/index.php">Tips</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/account/index.php">My Account</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/huh.php">Site Help</a></td>
+        </tr>
+</table>
+
+            <table width="172" cellpadding="0" cellspacing="0" border="0">
+              <tr><td><img src="/images/spacer.gif" alt="" border="0" width="1" height="8"></td></tr>
+              <tr><td class="darkbg"><img src="/images/spacer.gif" width="1" height="3" alt=""></td></tr>
+            </table>
+            <br>
+
+<!-- INCLUDE THE PAGE SIDEBAR TEXT -->
+&nbsp;
+
+          </td>
+        </tr>
+      </table>
+    </td>
+
+    <td class="darkbg"><img src="/images/spacer.gif" width="1" height="1" border="0" alt=""><br></td>
+    <td>
+      <table width="100%" cellpadding="10" cellspacing="0" border="0" bordercolor="red">
+        <tr>
+          <td valign="top">
+
+<span class="txth1">savevers.vim : Automatically save and diff multiple, sequentially numbered revisions (like VMS)</span> 
+
+<br>
+<br>
+
+<!-- karma table -->
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
+  <td>
+    Rating <b>157/54</b>,
+    Downloaded by 3274  </td>
+  <td class="lightbg">
+  <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
+  </td>
+  <td>
+    <a href="http://vim.wikia.com/wiki/Script:89">Vim wiki</a>
+  </td>  
+</tr>
+</table>
+<p>
+
+<table cellspacing="0" cellpadding="0" border="0">
+<tr><td class="prompt">created by</td></tr>
+<tr><td><a href="/account/profile.php?user_id=237">Ed Ralston</a></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">script type</td></tr>
+<tr><td>utility</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">description</td></tr>
+<tr><td>Automatically saves and compares multiple, sequentially numbered<br>old revisions of files (like in VMS)<br><br>If the 'patchmode' option is non-empty, then whenever a file<br>is saved, a version of the previously saved version is kept,<br>but renamed to {file}.{number}.{patchext}, where:<br>&nbsp;&nbsp;&nbsp;&nbsp;{file}&nbsp;&nbsp;&nbsp;&nbsp; is the filename of the file being saved<br>&nbsp;&nbsp;&nbsp;&nbsp;{number}&nbsp;&nbsp; is a number between 0001 and 9999<br>&nbsp;&nbsp;&nbsp;&nbsp;{patchext} is the value of the 'patchmode' option.<br><br>Optionally, the saved versions can be placed in a subdirectory.<br><br>Note that this plugin is DISABLED if 'patchmode' is empty.<br>Also, this plugin won't work if 'backupdir' is empty or if<br>'backup' is unset, so to get started, put the following in<br>your &quot;.vimrc&quot;<br><br>&nbsp;&nbsp;&nbsp;&nbsp;set backup<br>&nbsp;&nbsp;&nbsp;&nbsp;set patchmode=.clean<br><br>So, for example, if 'patchmode' is '.clean' and we save a<br>file named &quot;test.txt&quot; we'll have the following files:<br><br>-rw-r----- 1 eralston admin&nbsp;&nbsp;106 Sep 20 11:14 test.txt<br>-rw-r----- 1 eralston admin&nbsp;&nbsp;102 Sep 20 11:12 test.txt.0001.clean<br><br>If we make subsequent changes to &quot;test.txt&quot; and save it a<br>few more times, we'll end up with something like:<br><br>-rw-r----- 1 eralston admin&nbsp;&nbsp;226 Sep 20 11:43 test.txt<br>-rw-r----- 1 eralston admin&nbsp;&nbsp;102 Sep 20 11:12 test.txt.0001.clean<br>-rw-r----- 1 eralston admin&nbsp;&nbsp;106 Sep 20 11:14 test.txt.0002.clean<br>-rw-r----- 1 eralston admin&nbsp;&nbsp;132 Sep 20 11:22 test.txt.0003.clean<br>-rw-r----- 1 eralston admin&nbsp;&nbsp;148 Sep 20 11:34 test.txt.0004.clean<br><br>COMMANDS:<br>&nbsp;&nbsp; :Purge [-a] [-v] [N]<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Removes all but the patchmode files numbered N and below.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The [N] is optional, and defaults to 1.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Normally, this operates only on the patchmode files associated<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;with the current buffer, but if the [-a] flag is given, then<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;it operates on all patchmode files in the directory of the<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;current file.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If the optional [-v] (verbose) flag is given, then the filename<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;of each deleted patchmode file is printed.<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Use &quot;:Purge 0&quot; to delete all of the patchmode files for the<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;current file.<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Use &quot;:Purge -a 0&quot; to delete all of the patchmode files in<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;the directory of the current file.<br><br>&nbsp;&nbsp; :VersDiff [arg]<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Does a &quot;diffsplit&quot; on the current file with the version<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;indicated by [arg].&nbsp;&nbsp;So, for example, if the current<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;file is &quot;test.txt&quot; then the &quot;:VersDiff 5&quot; command will<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;do a &quot;diffsplit&quot; with &quot;test.txt.0005.clean&quot;, assuming<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&patchmode is &quot;.clean&quot;<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If [arg] is zero (the default), then the diff is done with<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;the current saved version of the file.<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If [arg] is negative, then the diff is done with the<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[arg]th oldest file; e.g., if [arg] is &quot;-5&quot; and there are<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;versions 0001-0023 saved on disk, then the version that<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;is diffed will be (23-5+1)=19, i.e, &quot;test.txt.0019&quot; will<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;be diffed.<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If [arg] is &quot;-cvs&quot;, then the diff is done with the most recently<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;checked-in version of the file.<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If [arg] is &quot;-&quot;, then the current VersDiff window is decremented.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If [arg] is &quot;+&quot;, then the current VersDiff window is incremented.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Note that if VersDiff is currently doing a cvs diff, then<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;the cvs revision is incremented/decremented)<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If [arg] is &quot;-c&quot;, then any current VersDiff window is closed.<br><br>HINTS:<br>&nbsp;&nbsp; If you use GNU 'ls', then try adding &quot;-I'*.clean'&quot; (without the<br>&nbsp;&nbsp; double quotes) to your 'ls' alias (assuming &patchmode==.clean)<br><br>&nbsp;&nbsp; It's also helpful to have the patchmode value in the backupskip,<br>&nbsp;&nbsp; suffixes, and wildignore vim options:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:exe &quot;set backupskip+=*&quot; . &patchmode<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:exe &quot;set suffixes+=&quot; . &patchmode<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:exe &quot;set wildignore+=*&quot; . &patchmode<br><br>&nbsp;&nbsp; Also, here are some nice mappings that allow quick comparison<br>&nbsp;&nbsp; of the current file with previous versions.&nbsp;&nbsp;Pressing &lt;F5&gt;<br>&nbsp;&nbsp; successively shows the diff with older versions.<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot; &lt;F5&gt; decrease version viewed in VersDiff window<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot; &lt;F6&gt; increase version viewed in VersDiff window<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot; &lt;F7&gt; do VersDiff with cvs version of current file<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot; &lt;F8&gt; cancel VersDiff window<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nmap &lt;silent&gt; &lt;F5&gt; :VersDiff -&lt;cr&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nmap &lt;silent&gt; &lt;F6&gt; :VersDiff +&lt;cr&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nmap &lt;silent&gt; &lt;F7&gt; :VersDiff -cvs&lt;cr&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nmap &lt;silent&gt; &lt;F8&gt; :VersDiff -c&lt;cr&gt;</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">install details</td></tr>
+<tr><td>Save the plugin as $VIMRUNTIME/plugin/savevers.vim<br>and you're good to go.&nbsp;&nbsp;The default settings should<br>work fine for most people, but to enable it, the following<br>settings (put in .vimrc) should get you started:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; set backup<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; set patchmode=.clean<br><br>This plugin can be configured by setting the following<br>variables in &quot;.vimrc&quot;<br><br>&nbsp;&nbsp; savevers_types&nbsp;&nbsp;&nbsp;&nbsp; - This is a comma-separated list of filename<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;patterns.&nbsp;&nbsp;Sets the types of files that<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;will have numbered versions.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Defaults to &quot;*&quot; (all files).<br><br>&nbsp;&nbsp; savevers_max&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Sets the maximum patchmode version.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Defaults to &quot;9999&quot;.<br><br>&nbsp;&nbsp; savevers_purge&nbsp;&nbsp;&nbsp;&nbsp; - Sets default value of [N] for the :Purge command<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Defaults to &quot;1&quot;.<br><br>&nbsp;&nbsp; savevers_dirs&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- This is a comma-separated list of directories<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;that will be tried to store the patchmode files.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The first writable directory in this list is used.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This works much like the vim 'backupdir' option.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;To set this to the same as 'backupdir', do<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :let savevers_dirs = &backupdir<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Defaults to '.', which puts all patchmode files<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;in the same directory as the original file.<br><br>&nbsp;&nbsp; versdiff_no_resize - Disables window resizing during &quot;:VersDiff&quot;<br><br>&nbsp;&nbsp; versdiff_max_cols&nbsp;&nbsp;- Limits window resizing during &quot;:VersDiff&quot;<br><br>So, for example, if the user has in ~/.vimrc:<br>&nbsp;&nbsp; let savevers_types = &quot;*.c,*.h,*.vim&quot;<br>&nbsp;&nbsp; let savevers_max = 99<br>&nbsp;&nbsp; let savevers_purge = 0<br>then only &quot;*.c&quot;, &quot;*.h&quot;, and &quot;*.vim&quot; files will be numbered,<br>and there will be a maximum of 99 versions saved.<br>Also, the &quot;:Purge&quot; command will purge all numbered versions<br>(instead of the default, which is to delete all but the oldest).<br></td></tr>
+<tr><td>&nbsp;</td></tr>
+</table>
+
+<!-- rating table -->
+<form name="rating">
+<input type="hidden" name="script_id" value="89">
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>rate this script</b></td>
+  <td valign="middle">
+    <input type="radio" name="rating" value="life_changing">Life Changing
+    <input type="radio" name="rating" value="helpful">Helpful
+    <input type="radio" name="rating" value="unfulfilling">Unfulfilling&nbsp;
+    <input type="submit" value="rate">
+  </td>
+</tr>
+</table>
+</form>
+<span class="txth2">script versions</span> (<a href="add_script_version.php?script_id=89">upload new version</a>)
+<p>
+Click on the package to download.
+<p>
+
+<table cellspacing="2" cellpadding="4" border="0" width="100%">
+<tr class='tableheader'>
+        <th valign="top">package</th>
+    <th valign="top">script version</th>
+    <th valign="top">date</th>
+    <th valign="top">Vim version</th>
+    <th valign="top">user</th>
+    <th valign="top">release notes</th>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=261">savevers.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.8</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2001-10-10</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=237">Ed Ralston</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Corrected some obscure documentation.&nbsp;&nbsp;Allow cvs revisions to be incremented/decremented.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=227">savevers.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.7</b></td>
+    <td class="roweven" valign="top" nowrap><i>2001-10-02</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=237">Ed Ralston</a></i></td>
+    <td class="roweven" valign="top" width="2000">Added option to specify directory for patchmode files</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=212">savevers.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.6</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2001-10-01</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=237">Ed Ralston</a></i></td>
+    <td class="rowodd" valign="top" width="2000">&quot;:VersDiff&quot; command improvements</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=211">savevers.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.5</b></td>
+    <td class="roweven" valign="top" nowrap><i>2001-10-01</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=237">Ed Ralston</a></i></td>
+    <td class="roweven" valign="top" width="2000">Added &quot;:VersDiff&quot; command.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=196">savevers.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.4</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2001-09-26</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=237">Ed Ralston</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Added &quot;-a&quot; and &quot;-v&quot; flags to the &quot;:Purge&quot; command.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=192">savevers.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.3</b></td>
+    <td class="roweven" valign="top" nowrap><i>2001-09-25</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=237">Ed Ralston</a></i></td>
+    <td class="roweven" valign="top" width="2000">Added configuration options</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=191">savevers.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.2</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2001-09-25</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=237">Ed Ralston</a></i></td>
+    <td class="rowodd" valign="top" width="2000">allow up to 9999 numbered versions<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=178">savevers.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.1</b></td>
+    <td class="roweven" valign="top" nowrap><i>2001-09-20</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=237">Ed Ralston</a></i></td>
+    <td class="roweven" valign="top" width="2000">Initial upload</td>
+</tr>
+</table>
+<!-- finish off the framework -->
+          </td>
+        </tr>
+      </table>
+    </td>
+
+  </tr>
+</table>
+
+<!-- END OF THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr><td colspan="4" bgcolor="#000000"><img src="/images/spacer.gif" height="2" width="1" alt=""></td></tr>
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr>
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+
+    <td align="left" valign="top"><small>
+      If you have questions or remarks about this site, visit the
+      <a href="http://vimonline.sf.net">vimonline development</a> pages.
+      Please use this site responsibly.
+      <br> 
+      
+      Questions about <a href="http://www.vim.org/about.php">Vim</a> should go
+      to the <a href="http://www.vim.org/maillist.php">maillist</a>.
+      Help Bram <a href="http://iccf-holland.org/">help Uganda</a>.
+      </small>
+	&nbsp;
+	&nbsp;
+
+	<!-- Start of StatCounter Code -->
+	<script type="text/javascript" language="javascript">
+	var sc_project=1417324; 
+	var sc_invisible=1; 
+	var sc_partition=11; 
+	var sc_security="d41633bc"; 
+	</script>
+
+	<script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script><noscript><a href="http://www.statcounter.com/" target="_blank"><img  src="http://c12.statcounter.com/counter.php?sc_project=1417324&java=0&security=d41633bc&invisible=0" alt="free tracking" border="0"></a> </noscript>
+	<!-- End of StatCounter Code -->
+          </td>
+
+    <td align="right" valign="top">
+      		<a href="http://sourceforge.net/projects/vim" rel="nofollow"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=8&type=1" width="88" height="31" border="0" alt="SourceForge.net Logo" /></a>
+    </td>
+
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+  </tr>
+
+    
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  
+  </tr>
+</table>
+
+</body>
+</html>
+

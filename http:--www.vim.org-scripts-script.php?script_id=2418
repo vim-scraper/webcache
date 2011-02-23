@@ -1,0 +1,324 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+  <link rel="Stylesheet" type="text/css" href="/css/style.css" >
+  <title>Format Helper - format functions: count doc-infor, add & del list and block, etc. : vim online</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <meta name="KEYWORDS" content="Vim, Vi IMproved, text editor, home, documentation, tips, scripts, news">
+  <link rel="shortcut icon" type="image/x-icon" href="/images/vim_shortcut.ico">
+</head>
+
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff"> 
+
+<!-- HEADER, SPONSOR IMAGE, VIM IMAGE AND BOOK AD -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+  <td class="lightbg">&nbsp;&nbsp;&nbsp;</td>
+  <td class="lightbg" align="left"><a href="/sponsor/index.php"><img src="/images/sponsorvim.gif" alt="sponsor Vim development" border="0"></a></td>
+    <td class="lightbg" align="center"><a href="/index.php"><img src="/images/vim_header.gif" border="0" alt="Vim logo"></a></td>
+    <td class="lightbg" align="right"><a href="http://iccf-holland.org/click5.html"><img src="/images/buyhelplearn.gif" alt="Vim Book Ad" border="0"></a></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="darkbg"><img src="/images/spacer.gif" width="1" height="10" alt=""></td>
+  </tr>
+</table>
+<!-- THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+  <col width="180">
+  <col width="1">
+
+  <tr valign="top">
+    <td class="sidebar">
+      <table width="180" cellpadding="4" cellspacing="0" border="0">
+        <tr valign="top">
+          <td class="sidebar">
+
+<!-- INCLUDE THE PAGE NAVIGATION -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+    <tr>
+        <td><small>not logged in (<a href="/login.php">login</a>)</small></td>
+    </tr>
+    <tr><td>
+<small>&nbsp;</small>
+<form action="http://www.google.com/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-3005259998294962:bvyni59kjr1" />
+    <input type="hidden" name="ie" value="ISO-8859-1" />
+    <input type="text" name="q" size="20" />
+    <br>
+    <input type="submit" name="sa" value="Search" />
+  </div>
+</form>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+    </td></tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="1"></td>
+    </tr>
+    <tr>
+        <td class="darkbg"><img src="/images/spacer.gif" alt='' border="0" height="3"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="2"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/index.php">Home</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/search.php">Advanced search</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/about.php">About Vim</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/community.php">Community</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/news/news.php">News</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/sponsor/index.php">Sponsoring</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/trivia.php">Trivia</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/docs.php">Documentation</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/download.php">Download</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/scripts/index.php">Scripts</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/tips/index.php">Tips</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/account/index.php">My Account</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/huh.php">Site Help</a></td>
+        </tr>
+</table>
+
+            <table width="172" cellpadding="0" cellspacing="0" border="0">
+              <tr><td><img src="/images/spacer.gif" alt="" border="0" width="1" height="8"></td></tr>
+              <tr><td class="darkbg"><img src="/images/spacer.gif" width="1" height="3" alt=""></td></tr>
+            </table>
+            <br>
+
+<!-- INCLUDE THE PAGE SIDEBAR TEXT -->
+&nbsp;
+
+          </td>
+        </tr>
+      </table>
+    </td>
+
+    <td class="darkbg"><img src="/images/spacer.gif" width="1" height="1" border="0" alt=""><br></td>
+    <td>
+      <table width="100%" cellpadding="10" cellspacing="0" border="0" bordercolor="red">
+        <tr>
+          <td valign="top">
+
+<span class="txth1">Format Helper : format functions: count doc-infor, add & del list and block, etc.</span> 
+
+<br>
+<br>
+
+<!-- karma table -->
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
+  <td>
+    Rating <b>34/10</b>,
+    Downloaded by 466  </td>
+  <td class="lightbg">
+  <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
+  </td>
+  <td>
+    <a href="http://vim.wikia.com/wiki/Script:2418">Vim wiki</a>
+  </td>  
+</tr>
+</table>
+<p>
+
+<table cellspacing="0" cellpadding="0" border="0">
+<tr><td class="prompt">created by</td></tr>
+<tr><td><a href="/account/profile.php?user_id=14764">Frank Sun</a></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">script type</td></tr>
+<tr><td>utility</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">description</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;This script provides some format functions, such as, document information statistics, list addition and deletion, text block addition and deletion, head line and foot line addition, matched parenthesis auto-completion and omni-completion enhancement. Both this functions can be used for plain text, or process comment for programming file.<br><br><br>MAINPAGE<br>=========<br><br>&nbsp;&nbsp;&nbsp;&nbsp;<a target="_blank" href="http://franksun.blogbus.com/logs/30678478.html">http://franksun.blogbus.com/logs/30678478.html</A><br><br>&nbsp;&nbsp;&nbsp;&nbsp;Most of these functionss are illustrated by some screenshots in above page.<br><br><br>FUNCTIONS OUTLINE<br>==================<br><br>1. Doc-info statistics<br>----------------------------<br><br>&nbsp;&nbsp;&nbsp;&nbsp;A command is provided to calculate doc-info, such as, number of characters (both with space and no-space), words, and lines (both empty and nonempty) within your selected area.<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;++++++++++++++++++++<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:[range]Statistics&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;++++++++++++++++++++<br><br>* Detail:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;[range] - same usage as in command line, such as, '%' (or &quot;0,$&quot;) means whole file, '.' means current line, etc. If range field is empty, then it counts current line's information by default.<br><br>* NOTE: <br><br>&nbsp;&nbsp;&nbsp;&nbsp;(1) It can handle wide (2 or 3 bytes) character languages (for instance, Chinese, Japanese, Korean, etc.). If &encoding=='utf-8', width of wide character is set to 3, otherwise 2.<br>&nbsp;&nbsp;&nbsp;&nbsp;(2) As my tests show, precision of this function is better than Win-Word's &quot;word count&quot; tool, which only identifies space as word-delimiter, meanwhile, this script takes all non-word characters ('\W') into account. Unfortunately, it is not as efficient as win-word when handles large files (to handle a file with 30,000 lines, win-word costs about 3.5 seconds, and this script costs about 9 seconds).<br><br>2. Number list addition and deletion<br>-------------------------------------------------<br><br>&nbsp;&nbsp;&nbsp;&nbsp;This is a cute function:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;(1) You can set the format of item head to any style as you wish, such as, (1), [1], {1}, 1., -1-, etc. And them can also be deleted by this script.<br>&nbsp;&nbsp;&nbsp;&nbsp;(2) It will acquire the head of the last item in previous number list, and make the first index of current list continue with the previous list's last index.<br><br>&nbsp;&nbsp;&nbsp;&nbsp;Two command are provided:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;++++++++++++++++++++++++++++++++<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:[range]AddNumberList {format}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:[range]DelNumberList {format}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; +<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;++++++++++++++++++++++++++++++++<br><br>* Detail:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;[range] - same usage as Statistics.<br>&nbsp;&nbsp;&nbsp;&nbsp;{format} - includes three segments: a presegment, a number or a question mark ('?'), and a postsegment. You can set presegment and postsegment to any style you like. If a number is located in between presegment and postsegment, then the first index of number list is set to the number. Otherwise, if a qusetion mark is located there, script will automatically acquire the last index of previous number list and continue with it.<br><br>* NOTE:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;(1) If a question mark is neighboring with numbers in a style, the index will be continued with previous list.<br><br>* Control parameters: some global variables to control format function<br><br>&nbsp;&nbsp;&nbsp;&nbsp;g:format_list_ceil (default 0): empty lines from above content to the first line of list.<br>&nbsp;&nbsp;&nbsp;&nbsp;g:format_list_floor (default 0): empty lines form the last line of list to below content.<br>&nbsp;&nbsp;&nbsp;&nbsp;g:format_list_indent (default 0): indent spaces from beginning of current line to the item head.<br>&nbsp;&nbsp;&nbsp;&nbsp;g:format_list_max_scope (default 100): max lines to search the last index of previous number list from assigned line number.<br><br>* Example:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;Here are selected lines:<br><br>#line<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;##############<br>&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;&nbsp;#&nbsp;&nbsp; this is line1&nbsp;&nbsp;&nbsp;&nbsp;#<br>&nbsp;&nbsp;&nbsp;&nbsp;2&nbsp;&nbsp;&nbsp;&nbsp;#&nbsp;&nbsp; this is line2&nbsp;&nbsp;&nbsp;&nbsp;#<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#&nbsp;&nbsp; ......&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#<br>&nbsp;&nbsp; 10&nbsp;&nbsp; #&nbsp;&nbsp; this is line10&nbsp;&nbsp;#<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;##############<br><br>If you input a command:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;:1,5 AddNumberList (1)<br><br>they will be changed to:<br><br>#line<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ################<br>&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp; #&nbsp;&nbsp; (1) this is line1&nbsp;&nbsp; #<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; #&nbsp;&nbsp;&nbsp;&nbsp;......&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; #<br>&nbsp;&nbsp;&nbsp;&nbsp;5&nbsp;&nbsp; #&nbsp;&nbsp; (5) this is line2&nbsp;&nbsp; #<br>&nbsp;&nbsp;&nbsp;&nbsp;6&nbsp;&nbsp; #&nbsp;&nbsp; this is line6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; #<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; #&nbsp;&nbsp;&nbsp;&nbsp;......&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; #<br>&nbsp;&nbsp; 10&nbsp;&nbsp;#&nbsp;&nbsp; this is line10&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ################<br><br>If you want to continue this list across 3 lines, add line 9 and line 10 to the number list, you have two approaches--first one, you can assign the index of new head manually, for instance, you've already remembered the last index of previous number list was '5', then you should input:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;:9,10 AddNumberList (6)<br><br>the other one is to call script to automatically acquire a continuous index, here, you should use question mark '?':<br><br>&nbsp;&nbsp;&nbsp;&nbsp;:9,10 AddNumberList (?)<br><br>both of these two approaches will change file to below:<br><br>#line<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ################<br>&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp; #&nbsp;&nbsp; (1) this is line1&nbsp;&nbsp;&nbsp;&nbsp;#<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; #&nbsp;&nbsp;&nbsp;&nbsp;......&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#<br>&nbsp;&nbsp;&nbsp;&nbsp;5&nbsp;&nbsp; #&nbsp;&nbsp; (5) this is line2&nbsp;&nbsp;&nbsp;&nbsp;#<br>&nbsp;&nbsp;&nbsp;&nbsp;6&nbsp;&nbsp; #&nbsp;&nbsp; this is line6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#<br>&nbsp;&nbsp;&nbsp;&nbsp;7&nbsp;&nbsp; #&nbsp;&nbsp; this is line7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#<br>&nbsp;&nbsp;&nbsp;&nbsp;8&nbsp;&nbsp; #&nbsp;&nbsp; this is line8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#<br>&nbsp;&nbsp;&nbsp;&nbsp;9&nbsp;&nbsp; #&nbsp;&nbsp; (6) this is line9&nbsp;&nbsp;&nbsp;&nbsp;#<br>&nbsp;&nbsp; 10&nbsp;&nbsp;#&nbsp;&nbsp; (7) this is line10&nbsp;&nbsp;#<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; #################<br><br>If you want to cancel this number list, just input a command:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;:1,10 DelNumberList (?)<br><br>3. Auto-fit alignation<br>---------------------------<br><br>&nbsp;&nbsp;&nbsp;&nbsp;Vim provide three command to align line, :left, :center and :right, but these command cannot align line to correct position. It is caused by some factors, such as, different size of users' screen, different size of gvim's window, and the most important factor--the 'textwidth' is equal to 80 by default. <br>&nbsp;&nbsp;&nbsp;&nbsp;Here provide three new commands that auto-fit different size of screen or window, and handle alignations correctly.<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;++++++++++++++++++<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:[range]Left&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; +<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:[range]Center&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:[range]Right&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; +<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;++++++++++++++++++<br><br>4. Enumerate list addition and deletion<br>-----------------------------------------------------<br><br>&nbsp;&nbsp;&nbsp;&nbsp;Same usage as :AddNumberList and :DelNumberList, but I think these commands will be more useful than number list, as you can set comments for any programming language, means, set the head style to comment leader.<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;++++++++++++++++++++++++++++++++<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:[range]AddEnumerateList {style}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:[range]DelEnumerateList {style}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; +<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;++++++++++++++++++++++++++++++++<br><br>* NOTE: <br><br>&nbsp;&nbsp;&nbsp;&nbsp;(1) This fucntion can be used to add or delete comments for any programming languages<br><br>* Control parameters: some global variables to control format function<br><br>&nbsp;&nbsp;&nbsp;&nbsp;g:format_list_ceil (default 0): empty lines from above content to the first line of list.<br>&nbsp;&nbsp;&nbsp;&nbsp;g:format_list_floor (default 0): empty lines form the last line of list to below content.<br>&nbsp;&nbsp;&nbsp;&nbsp;g:format_list_indent (default 0): indent spaces from beginning of current line to the item head.<br> <br>* Example:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;If you want to comment lines from line 19 to line 82 in a C++ file, just input:<br>&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;:19,82 AddEnumerateList //<br><br>input below command to cancel this enumerate list:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;:19,82 DelEnumerateList //<br><br>5. Text block addition and deletion<br>-----------------------------------------------<br><br>&nbsp;&nbsp;&nbsp;&nbsp;Two commands are provided to add text block with selected lines and delete this block.<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+++++++++++++++++++++++++++++++<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:[range]AddTextBlock {symbol}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:[range]DelTextBlock {symbol}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+++++++++++++++++++++++++++++++<br><br>* Detail:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;[range] - same usage as Statistics.<br>&nbsp;&nbsp;&nbsp;&nbsp;{symbol} - script will use this character to construct broader of boundary.<br><br>* NOTE: <br><br>&nbsp;&nbsp;&nbsp;&nbsp;(1) This fucntion can be commbined with enumerate list to add or delete comment for any programming language.<br><br>* Control parameters: some global variables to control format function<br><br>&nbsp;&nbsp;&nbsp;&nbsp;g:format_block_ceil (default 0): empty lines from above content to the boundary of block.<br>&nbsp;&nbsp;&nbsp;&nbsp;g:format_block_floor (default 0): empty lines form the boundary of block to below content.<br>&nbsp;&nbsp;&nbsp;&nbsp;g:format_block_indent (default 0): indent spaces from beginning of current line to left boundary of block.<br>&nbsp;&nbsp;&nbsp;&nbsp;g:format_block_internal_ceil (default 0): empty lines form ceiling boundary to the first line of block contents.<br>&nbsp;&nbsp;&nbsp;&nbsp;g:format_block_internal_floor (default 0):&nbsp;&nbsp;empty line form the last line of block contents to floor boundary.<br><br>* Example:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;Here are lines to add in text block:<br><br>####################<br>#&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(above contents)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#<br>#&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; #<br>#&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;block contents&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#<br>#&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; #<br>#&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(below contents)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; #<br>####################<br><br>If you input a command (all parameters by default values):<br><br>&nbsp;&nbsp;&nbsp;&nbsp;:'&lt;,'&gt; AddTextBlock *<br><br>then we have:<br><br>#########################<br>#&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(above contents)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; #<br>#&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#<br>#&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**************************&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; #<br>#&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;block contents&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#<br>#&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**************************&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; #<br>#&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#<br>#&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(below contents)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#<br>#########################<br><br>if you input:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;:'&lt;,'&gt; DelTextBlock *<br><br>we have:<br><br>####################<br>#&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(above contents)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#<br>#&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; #<br>#&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; #<br>#&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;block contents&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#<br>#&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; #<br>#&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; #<br>#&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(below contents)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; #<br>####################<br><br>6. Auto-complete matched pair parenthesis<br>------------------------------------------------------------<br><br>&nbsp;&nbsp;&nbsp;&nbsp;Here provides a function to auto-complete match parenthesis in your insert mode. It completes matched pairs of (), [], {}, and &lt;&gt;, and immediately move cursor leftwards to the middle of pairs. If you input anti-parenthesis, it will erase the extra one.<br>&nbsp;&nbsp;&nbsp;&nbsp;<br>7. Headline and footline addition<br>--------------------------------------------<br><br>&nbsp;&nbsp;&nbsp;&nbsp;Do you see previous line? Yeah, it was made by command &quot;:footlilne-&quot;. It will draw head line or foot line whose length is equal to current line.<br><br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;++++++++++++++++++++++++++++++++<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:[line number] HeadLine {symbol}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:[line number] FootLine {symbol}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;++++++++++++++++++++++++++++++++<br><br>* Detail:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;{symbol} - head line or foot line are made with this character.<br><br>8. Enhance completion function<br>-------------------------------------------<br>&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;Here provides a function to binding completion with &lt;Tab&gt; key. When you hit &lt;Tab&gt; in the insert mode, it will complete your content by your omni-function if you set your own omni-function, otherwise, the nearest known words or keywords of the dictionary you set (control by option 'dictionary') will be completed.<br><br><br>UPGRADE<br>=========<br><br>By default, GetLatestVimScripts plugin is included in Vim installation package, whose version is higher than v7. So you can use it to auto-download the newest package. Add below line into file &quot;GetLatestVimScripts.dat&quot;:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2418 1 format-helper<br><br>and use this command &quot;:GetLatestVimScripts&quot; to upgrade it.<br><br><br>********************<br>*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NOTICE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*<br>********************<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;When you want to hack this script, please make sure that the option 'Tlist_Show_Menu' is closed (set its value as 0) if &quot;Taglist&quot; plugin was installed in your Vim. Otherwise, it will popup an annoyed message &quot;E792: Empty menu name&quot;.</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">install details</td></tr>
+<tr><td>(1) For Unix: Copy &quot;format_helper.vim&quot; script to $HOME/.vim/plugin/<br><br>(2) For Windows: Copy &quot;format_helper.vim&quot; to $VIM\vimfiles\plugin\</td></tr>
+<tr><td>&nbsp;</td></tr>
+</table>
+
+<!-- rating table -->
+<form name="rating">
+<input type="hidden" name="script_id" value="2418">
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>rate this script</b></td>
+  <td valign="middle">
+    <input type="radio" name="rating" value="life_changing">Life Changing
+    <input type="radio" name="rating" value="helpful">Helpful
+    <input type="radio" name="rating" value="unfulfilling">Unfulfilling&nbsp;
+    <input type="submit" value="rate">
+  </td>
+</tr>
+</table>
+</form>
+<span class="txth2">script versions</span> (<a href="add_script_version.php?script_id=2418">upload new version</a>)
+<p>
+Click on the package to download.
+<p>
+
+<table cellspacing="2" cellpadding="4" border="0" width="100%">
+<tr class='tableheader'>
+        <th valign="top">package</th>
+    <th valign="top">script version</th>
+    <th valign="top">date</th>
+    <th valign="top">Vim version</th>
+    <th valign="top">user</th>
+    <th valign="top">release notes</th>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=9447">format-helper.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.7.8</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2008-11-07</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=14764">Frank Sun</a></i></td>
+    <td class="rowodd" valign="top" width="2000">+ Support to handle wide character language (such as Chinese, Japanese, etc): (1) &quot;:HeadLine&quot; and &quot;:FootLine&quot;; (2) &quot;:AddTextBlock&quot;.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=9436">format-helper.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.7.6</b></td>
+    <td class="roweven" valign="top" nowrap><i>2008-11-06</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=14764">Frank Sun</a></i></td>
+    <td class="roweven" valign="top" width="2000">+ Enhance character counting and word counting of Statistics() to support wide character such as Chinese, Japanese, etc.<br>+ Enhance Enumeratelist.Del(), Numberlist.Del() and Textblock.Del() to keep original indent width when their head were deleted.<br>- Fix BUGs in Numberlist.Del().</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=9411">format-helper.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.7.2</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2008-10-29</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=14764">Frank Sun</a></i></td>
+    <td class="rowodd" valign="top" width="2000">+ In order to enhance stability of script, change all global &quot;interval&quot; variables to script variables (remark with 's:').<br><br>- Fixed BUGs in Numberlist.Del(), LastNumberList(), Enumeratelist.Del().</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=9407">format-helper.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.7</b></td>
+    <td class="roweven" valign="top" nowrap><i>2008-10-28</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=14764">Frank Sun</a></i></td>
+    <td class="roweven" valign="top" width="2000">+ Enhance AddNumberList to support assigned beginning index number or automatically continue with the last index of previous number list in above context.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=9404">format-helper.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.51</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2008-10-27</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=14764">Frank Sun</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- Fixed a BUG in AddTextBlock to handle '\t';<br>+ Modified readme.txt;</td>
+</tr>
+</table>
+<!-- finish off the framework -->
+          </td>
+        </tr>
+      </table>
+    </td>
+
+  </tr>
+</table>
+
+<!-- END OF THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr><td colspan="4" bgcolor="#000000"><img src="/images/spacer.gif" height="2" width="1" alt=""></td></tr>
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr>
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+
+    <td align="left" valign="top"><small>
+      If you have questions or remarks about this site, visit the
+      <a href="http://vimonline.sf.net">vimonline development</a> pages.
+      Please use this site responsibly.
+      <br> 
+      
+      Questions about <a href="http://www.vim.org/about.php">Vim</a> should go
+      to the <a href="http://www.vim.org/maillist.php">maillist</a>.
+      Help Bram <a href="http://iccf-holland.org/">help Uganda</a>.
+      </small>
+	&nbsp;
+	&nbsp;
+
+	<!-- Start of StatCounter Code -->
+	<script type="text/javascript" language="javascript">
+	var sc_project=1417324; 
+	var sc_invisible=1; 
+	var sc_partition=11; 
+	var sc_security="d41633bc"; 
+	</script>
+
+	<script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script><noscript><a href="http://www.statcounter.com/" target="_blank"><img  src="http://c12.statcounter.com/counter.php?sc_project=1417324&java=0&security=d41633bc&invisible=0" alt="free tracking" border="0"></a> </noscript>
+	<!-- End of StatCounter Code -->
+          </td>
+
+    <td align="right" valign="top">
+      		<a href="http://sourceforge.net/projects/vim" rel="nofollow"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=8&type=1" width="88" height="31" border="0" alt="SourceForge.net Logo" /></a>
+    </td>
+
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+  </tr>
+
+    
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  
+  </tr>
+</table>
+
+</body>
+</html>
+

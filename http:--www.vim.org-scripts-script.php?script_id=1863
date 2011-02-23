@@ -1,0 +1,580 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+  <link rel="Stylesheet" type="text/css" href="/css/style.css" >
+  <title>tlib - Some utility functions : vim online</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <meta name="KEYWORDS" content="Vim, Vi IMproved, text editor, home, documentation, tips, scripts, news">
+  <link rel="shortcut icon" type="image/x-icon" href="/images/vim_shortcut.ico">
+</head>
+
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff"> 
+
+<!-- HEADER, SPONSOR IMAGE, VIM IMAGE AND BOOK AD -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+  <td class="lightbg">&nbsp;&nbsp;&nbsp;</td>
+  <td class="lightbg" align="left"><a href="/sponsor/index.php"><img src="/images/sponsorvim.gif" alt="sponsor Vim development" border="0"></a></td>
+    <td class="lightbg" align="center"><a href="/index.php"><img src="/images/vim_header.gif" border="0" alt="Vim logo"></a></td>
+    <td class="lightbg" align="right"><a href="http://iccf-holland.org/click5.html"><img src="/images/buyhelplearn.gif" alt="Vim Book Ad" border="0"></a></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="darkbg"><img src="/images/spacer.gif" width="1" height="10" alt=""></td>
+  </tr>
+</table>
+<!-- THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+  <col width="180">
+  <col width="1">
+
+  <tr valign="top">
+    <td class="sidebar">
+      <table width="180" cellpadding="4" cellspacing="0" border="0">
+        <tr valign="top">
+          <td class="sidebar">
+
+<!-- INCLUDE THE PAGE NAVIGATION -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+    <tr>
+        <td><small>not logged in (<a href="/login.php">login</a>)</small></td>
+    </tr>
+    <tr><td>
+<small>&nbsp;</small>
+<form action="http://www.google.com/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-3005259998294962:bvyni59kjr1" />
+    <input type="hidden" name="ie" value="ISO-8859-1" />
+    <input type="text" name="q" size="20" />
+    <br>
+    <input type="submit" name="sa" value="Search" />
+  </div>
+</form>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+    </td></tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="1"></td>
+    </tr>
+    <tr>
+        <td class="darkbg"><img src="/images/spacer.gif" alt='' border="0" height="3"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="2"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/index.php">Home</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/search.php">Advanced search</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/about.php">About Vim</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/community.php">Community</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/news/news.php">News</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/sponsor/index.php">Sponsoring</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/trivia.php">Trivia</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/docs.php">Documentation</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/download.php">Download</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/scripts/index.php">Scripts</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/tips/index.php">Tips</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/account/index.php">My Account</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/huh.php">Site Help</a></td>
+        </tr>
+</table>
+
+            <table width="172" cellpadding="0" cellspacing="0" border="0">
+              <tr><td><img src="/images/spacer.gif" alt="" border="0" width="1" height="8"></td></tr>
+              <tr><td class="darkbg"><img src="/images/spacer.gif" width="1" height="3" alt=""></td></tr>
+            </table>
+            <br>
+
+<!-- INCLUDE THE PAGE SIDEBAR TEXT -->
+&nbsp;
+
+          </td>
+        </tr>
+      </table>
+    </td>
+
+    <td class="darkbg"><img src="/images/spacer.gif" width="1" height="1" border="0" alt=""><br></td>
+    <td>
+      <table width="100%" cellpadding="10" cellspacing="0" border="0" bordercolor="red">
+        <tr>
+          <td valign="top">
+
+<span class="txth1">tlib : Some utility functions</span> 
+
+<br>
+<br>
+
+<!-- karma table -->
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
+  <td>
+    Rating <b>888/227</b>,
+    Downloaded by 7750  </td>
+  <td class="lightbg">
+  <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
+  </td>
+  <td>
+    <a href="http://vim.wikia.com/wiki/Script:1863">Vim wiki</a>
+  </td>  
+</tr>
+</table>
+<p>
+
+<table cellspacing="0" cellpadding="0" border="0">
+<tr><td class="prompt">created by</td></tr>
+<tr><td><a href="/account/profile.php?user_id=4037">Tom Link</a></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">script type</td></tr>
+<tr><td>utility</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">description</td></tr>
+<tr><td>This library provides some utility functions. There isn't much need to <br>install it unless another plugin requires you to do so.<br><br>The most useful functions provided by this library probably are:<br><br>tlib#input#List(), tlib#input#ListW()<br>&nbsp;&nbsp;&nbsp;&nbsp;- Display a list<br>&nbsp;&nbsp;&nbsp;&nbsp;- Dynamically filter items matching a pattern (somethat like google)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- E.g. you filter for &quot;foo -bar&quot;: show all entries containing foo but not bar.<br>&nbsp;&nbsp;&nbsp;&nbsp;- Select items from a list<br>&nbsp;&nbsp;&nbsp;&nbsp;- Do stuff<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Developers can define keys that trigger some action with the <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;selected items<br>&nbsp;&nbsp;&nbsp;&nbsp;- Demo: <a target="_blank" href="http://vimsomnia.blogspot.com/2010/11/selecting-items-from-list-with-tlibs.html">http://vimsomnia.blogspot.com/2010/11/selecting-items-from-list-with-tlibs.html</A><br><br>tlib#input#EditList<br>&nbsp;&nbsp;&nbsp;&nbsp;+ Edit a list (copy, cut, paste, delete, edit ...)<br><br>:TLet VAR = VALUE<br>&nbsp;&nbsp;&nbsp;&nbsp;Set a variable only if it doesn't already exist.<br><br>:TScratch<br>&nbsp;&nbsp;&nbsp;&nbsp;Open a scratch buffer (a buffer without a file).<br><br>:TVarArg VAR1, [VAR2, DEFAULT2] ...<br>&nbsp;&nbsp;&nbsp;&nbsp;Handle &quot;rest&quot; (variable) arguments in functions.<br>&nbsp;&nbsp;&nbsp;&nbsp;EXAMPLES:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;function! Foo(...)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TVarArg ['a', 1], 'b'<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo 'a='. a<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo 'b='. b<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;endf<br><br>TBrowseOutput COMMAND<br>&nbsp;&nbsp;&nbsp;&nbsp;Every wondered how to effciently browse the output of a command <br>&nbsp;&nbsp;&nbsp;&nbsp;without redirecting it to a file? This command takes a command as <br>&nbsp;&nbsp;&nbsp;&nbsp;argument and presents the output via |tlib#input#List()| so that you <br>&nbsp;&nbsp;&nbsp;&nbsp;can easily search for a keyword (e.g. the name of a variable or <br>&nbsp;&nbsp;&nbsp;&nbsp;function) and the like.<br>&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;If you press enter, the selected line will be copied to the command <br>&nbsp;&nbsp;&nbsp;&nbsp;line. Press ESC to cancel browsing.<br>&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;EXAMPLES:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TBrowseOutput 20verb TeaseTheCulprit<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TBrowseOutput let<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TBrowseOutput map<br><br><br>Related (small) plugins that utilize tlib and thus provide some degree of uniform user experience:<br>&nbsp;&nbsp;&nbsp;&nbsp;tbibtools (<a href="/scripts/script.php?script_id=1915">vimscript #1915</a>): bibtex-related utilities (sort, reformat, list contents ...)<br>&nbsp;&nbsp;&nbsp;&nbsp;tmarks (<a href="/scripts/script.php?script_id=2594">vimscript #2594</a>): Browse, place, & delete marks<br>&nbsp;&nbsp;&nbsp;&nbsp;tmboxbrowser (<a href="/scripts/script.php?script_id=1906">vimscript #1906</a>): A mbox browser -- Read your e-mails with vim<br>&nbsp;&nbsp;&nbsp;&nbsp;tmru (<a href="/scripts/script.php?script_id=1864">vimscript #1864</a>): Most Recently Used Files<br>&nbsp;&nbsp;&nbsp;&nbsp;trag (<a href="/scripts/script.php?script_id=2033">vimscript #2033</a>): A slightly language-aware alternative to grep<br>&nbsp;&nbsp;&nbsp;&nbsp;tregisters (<a href="/scripts/script.php?script_id=2017">vimscript #2017</a>): List, edit, and run/execute registers/clipboards<br>&nbsp;&nbsp;&nbsp;&nbsp;tselectbuffer (<a href="/scripts/script.php?script_id=1866">vimscript #1866</a>): A quick buffer selector/switcher<br>&nbsp;&nbsp;&nbsp;&nbsp;tselectfiles (<a href="/scripts/script.php?script_id=1865">vimscript #1865</a>): A quick file selector/browser/explorer (sort of)<br>&nbsp;&nbsp;&nbsp;&nbsp;ttagecho (<a href="/scripts/script.php?script_id=2055">vimscript #2055</a>): Show current tag information<br>&nbsp;&nbsp;&nbsp;&nbsp;ttagcomplete (<a href="/scripts/script.php?script_id=2069">vimscript #2069</a>): Context-sensitive tags-based completion and code skeletons<br>&nbsp;&nbsp;&nbsp;&nbsp;ttags (<a href="/scripts/script.php?script_id=2018">vimscript #2018</a>): Tag list browser (List, filter, preview, jump to tags)<br>&nbsp;&nbsp;&nbsp;&nbsp;ttoc (<a href="/scripts/script.php?script_id=2014">vimscript #2014</a>): A regexp-based table of contents of the current buffer<br>&nbsp;&nbsp;&nbsp;&nbsp;vikitasks (<a href="/scripts/script.php?script_id=2894">vimscript #2894</a>): Search viki files for tasks and display them in a list<br><br><br>For full details, please see: <br><a target="_blank" href="http://github.com/tomtom/tlib_vim/blob/master/doc/tlib.txt">http://github.com/tomtom/tlib_vim/blob/master/doc/tlib.txt</A><br><br>Also available via git<br><a target="_blank" href="http://github.com/tomtom/tlib_vim">http://github.com/tomtom/tlib_vim</A></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">install details</td></tr>
+<tr><td>When installing tlib for the first time, it might be necessary that you create the directory ~/.vim/autoload/tlib before sourcing the vimball. If you have difficulties to install this plugin, please make sure to use the current version of vimball (<a href="/scripts/script.php?script_id=1502">vimscript #1502</a>). The vimball that comes with vim 7.0 is most likely not recent enough.<br><br>Open the file and type<br><br>&nbsp;&nbsp;&nbsp;&nbsp;:so %<br><br>see :help vimball for details.</td></tr>
+<tr><td>&nbsp;</td></tr>
+</table>
+
+<!-- rating table -->
+<form name="rating">
+<input type="hidden" name="script_id" value="1863">
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>rate this script</b></td>
+  <td valign="middle">
+    <input type="radio" name="rating" value="life_changing">Life Changing
+    <input type="radio" name="rating" value="helpful">Helpful
+    <input type="radio" name="rating" value="unfulfilling">Unfulfilling&nbsp;
+    <input type="submit" value="rate">
+  </td>
+</tr>
+</table>
+</form>
+<span class="txth2">script versions</span> (<a href="add_script_version.php?script_id=1863">upload new version</a>)
+<p>
+Click on the package to download.
+<p>
+
+<table cellspacing="2" cellpadding="4" border="0" width="100%">
+<tr class='tableheader'>
+        <th valign="top">package</th>
+    <th valign="top">script version</th>
+    <th valign="top">date</th>
+    <th valign="top">Vim version</th>
+    <th valign="top">user</th>
+    <th valign="top">release notes</th>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=14245">tlib.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.41</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-11-12</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- World.UseScratch(): keepalt<br>- Really include balloon.vim<br>MD5 checksum: 3fcbc4f7556f5378d39622e62ab8f379</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=14078">tlib.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.40a</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-10-19</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
+    <td class="roweven" valign="top" width="2000">Forgot to include autoload/tlib/balloon.vim (thanks Maciej)</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13973">tlib.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.40</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-10-02</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- tlib#agent#ViewFile: Use split/sbuffer if nohidden && modified <br>- tlib#buffer#GetList(): order by &quot;basename&quot;<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13832">tlib.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.39</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-09-14</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
+    <td class="roweven" valign="top" width="2000">- tlib#World#Resize: set winfix{height|width}<br>- g:tlib#cache#dont_purge<br>- tlib#vim#RestoreWindow()<br>- tlib#ballon#...()<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=12751">tlib.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.37</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-03-31</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- g:tlib_inputlist_livesearch_threshold defaults to 1000<br>- tlib#World: optional scratch_pos field<br>- tlib#input#List: By default &lt;m-NUMBER&gt; selects by number but NUMBER is interpreted as string<br>- tlib#date<br>- TTimeCommand<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=12444">tlib.vba.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.36</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-02-20</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
+    <td class="roweven" valign="top" width="2000">- Display a message when the filter is for whatever reason invalid<br>- Removed tlib#paragraph#Delete()<br>- New: tlib#paragraph#Define(), tlib#textobjects#StandardParagraph()<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=11931">tlib.vba.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.35</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-12-21</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
+    <td class="rowodd" valign="top" width="2000">tlib#input#EditList(): return the list if the user presses esc</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=11881">tlib.vba.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.34</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-12-07</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
+    <td class="roweven" valign="top" width="2000">- tlib#buffer#HighlightLine(line): call tlib#autocmdgroup#Init()&nbsp;&nbsp;(reported by Sergey Khorev)</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=11509">tlib.vba.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.33</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-10-11</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- tlib#agent#Exit: explicitly return empty value (as a consequence, <br>pressing &lt;esc&gt; when browsing an index-list, returns 0 and not &quot;&quot;)<br>- tlib#signs<br>- tlib#input#List: set local statusline<br>- Don't reset statusline<br>- Don't use fnamemodify() to split filenames (for performance reasons)<br>- scratch: Set ft after setting up scratch options<br>- tlib#map#PumAccept(key)</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=10035">tlib.vba.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.31</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-02-25</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
+    <td class="roweven" valign="top" width="2000">- :TRequire<br>-tlib#input#List: For i-type list views, make sure agents are called <br>with the base indices.<br>- World#RestoreOrigin(): Don't assume &splitright<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=9957">tlib.vba.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.29</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-02-12</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- tlib#string#Strip(): Strip also control characters (newlines etc.)<br>- tlib#rx#Suffixes(): 'suffixes' as Regexp<br>- World#RestoreOrigin(): Don't assume &splitbelow<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=9592">tlib.vba.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.28</b></td>
+    <td class="roweven" valign="top" nowrap><i>2008-12-02</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
+    <td class="roweven" valign="top" width="2000">- tlib#input#List():<br>-- Improved handling of sticky lists; &lt;cr&gt; and &lt;Leftmouse&gt; resume a suspended list and immediately selects the item under the cursor<br>-- Experimental &quot;seq&quot; matching style: the conjunctions are sequentially ordered, they are combined with &quot;OR&quot; (disjunctions), the regexp is 'magic', and &quot;.&quot; is expanded to '.\{-}'<br>-- Experimental &quot;cnfd&quot; matching style: Same as cnf but with an &quot;elastic&quot; dot &quot;.&quot; that matches '\.\{-}'<br>-- Filtering acts as if &ic=1 && $sc=1<br>-- Weighting is done by the filter<br>- tlib#agent#Input(): Consume &lt;esc&gt; when aborting input()<br>- INCOMPATIBLE CHANGE: Changed eligible values of g:tlib_inputlist_match to &quot;cnf&quot;, &quot;cnfd&quot;, &quot;seq&quot; and &quot;fuzzy&quot;<br>- NEW: tlib#buffer#KeepCursorPosition()<br>- tlib#buffer#InsertText(): Take care of the extra line when appending text to an empty buffer.<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=9359">tlib.vba.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.27</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2008-10-16</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- NEW: tlib#normal#WithRegister()<br>- FIX: Try not to change numbered registers<br>- FIX: Cosmetic bug, wrong packaging (thanks Nathan Neff)<br>- Meaning of World#filter_format changed; new World#filter_options <br>- Filtering didn't work as advertised<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=9309">tlib.vba.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.25</b></td>
+    <td class="roweven" valign="top" nowrap><i>2008-10-05</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
+    <td class="roweven" valign="top" width="2000">- NEW: tlib#notify#TrimMessage(): trim message to prevent &quot;Press ENTER&quot; messages (contributed by Erik Falor)<br>- NEW: tlib#notify#Echo()<br>- FIX: World.CloseScratch(): Set window<br>- FIX: tlib#input#ListW(): Set initial_display = 1 on reset<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=9200">tlib.vba.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.24</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2008-08-31</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- s:prototype.SetInitialFilter: accept list as argument<br>- Maintain buffer MRU if required<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=8834">tlib.vba.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.23</b></td>
+    <td class="roweven" valign="top" nowrap><i>2008-06-21</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
+    <td class="roweven" valign="top" width="2000">- FIX: very magic mode for tlib#rx#Escape()<br>- FIX: tlib#arg#Ex: escape &quot;!&quot;<br>- Respect the setting of g:tlib_inputlist_filename_indicators<br>- tlib#input#List(): Reset syntax on resume; option to make list window &quot;sticky&quot;<br>- tlib#agent#ToggleStickyList()<br>- Simplified tlib#url#Decode()<br>- tlib#arg#Ex(): use fnameescape() if available</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=7978">tlib.vba.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.21</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2007-11-21</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- tlib#buffer#InsertText(): Respect tabs and (experimental) formatoptions+=or<br>- tlib/syntax.vim: Syntax-related functions<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=7937">tlib.vba.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.20</b></td>
+    <td class="roweven" valign="top" nowrap><i>2007-11-12</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
+    <td class="roweven" valign="top" width="2000">CHANGES:<br>- The arguments of tlib#tag#Collect() have changed.<br>- tlib#input#List(): The view can be &quot;suspended&quot; on initial display.<br>- tlib#input#List(): Follow/trace cursor functionality<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=7882">tlib.vba.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.19</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2007-11-05</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
+    <td class="rowodd" valign="top" width="2000">NEW:<br>&nbsp;&nbsp;&nbsp;&nbsp;- tag.vim<br>FIX:<br>&nbsp;&nbsp;&nbsp;&nbsp;- dir.vim: Use plain dir name in tlib#dir#Ensure()<br>&nbsp;&nbsp;&nbsp;&nbsp;- tlib#input#List(): An initial filter argument creates [[filter]] <br>&nbsp;&nbsp;&nbsp;&nbsp;and not as before [[''], [filter]].<br>&nbsp;&nbsp;&nbsp;&nbsp;- tlib#input#List(): When type was &quot;si&quot; and the item was picked by <br>&nbsp;&nbsp;&nbsp;&nbsp;filter, the wrong index was returned.<br>&nbsp;&nbsp;&nbsp;&nbsp;- tlib#input#List(): Don't check if chars are typed when displaying <br>&nbsp;&nbsp;&nbsp;&nbsp;the list for the first time.<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=7831">tlib.vba.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.18</b></td>
+    <td class="roweven" valign="top" nowrap><i>2007-10-26</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
+    <td class="roweven" valign="top" width="2000">NEW:<br>&nbsp;&nbsp;&nbsp;&nbsp;- tlib/time.vim<br>&nbsp;&nbsp;&nbsp;&nbsp;- g:tlib_inputlist_livesearch_threshold (useful on slower systems)<br>CHANGES:<br>&nbsp;&nbsp;&nbsp;&nbsp;- tlib#input#ListD(), World: Don't redisplay the list while typing <br>&nbsp;&nbsp;&nbsp;&nbsp;new letters; calculate filter regexps only once before filtering the <br>&nbsp;&nbsp;&nbsp;&nbsp;list.<br>&nbsp;&nbsp;&nbsp;&nbsp;- World.vim: Minor changes to how filenames are handled.<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=7788">tlib.vba.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.17</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2007-10-12</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
+    <td class="rowodd" valign="top" width="2000">NEW:<br>&nbsp;&nbsp;&nbsp;&nbsp;- TBrowseOutput<br>- Some minor changes<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=7762">tlib.vba.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.16</b></td>
+    <td class="roweven" valign="top" nowrap><i>2007-10-07</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
+    <td class="roweven" valign="top" width="2000">- tlib#string#Printf1()</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=7733">tlib.vba.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.15</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2007-09-30</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
+    <td class="rowodd" valign="top" width="2000">NEW:<br>&nbsp;&nbsp;&nbsp;&nbsp;- tlib#string#TrimLeft(), tlib#string#TrimRight(), tlib#string#Strip()<br>&nbsp;&nbsp;&nbsp;&nbsp;- Progress bar<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=7695">tlib.vba.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.14</b></td>
+    <td class="roweven" valign="top" nowrap><i>2007-09-19</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
+    <td class="roweven" valign="top" width="2000">NEW:<br>&nbsp;&nbsp;&nbsp;&nbsp;- tlib#buffer#InsertText()<br>CHANGES:<br>&nbsp;&nbsp;&nbsp;&nbsp;- tlib#win#[SG]etLayout(): Use a dictionnary, set &cmdheight.<br>FIXES:<br>&nbsp;&nbsp;&nbsp;&nbsp;- tlib#input#List(): Wrong order with pre-defined filters.<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=7648">tlib.vba.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.13</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2007-09-11</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
+    <td class="rowodd" valign="top" width="2000">CHANGES:<br>&nbsp;&nbsp;&nbsp;&nbsp;- Scratch: Set &fdc=0.<br>&nbsp;&nbsp;&nbsp;&nbsp;- The cache directory can be configured via g:tlib_cache<br>&nbsp;&nbsp;&nbsp;&nbsp;- Renamed tlib#buffer#SetBuffer() to tlib#buffer#Set().<br>FIXES:<br>&nbsp;&nbsp;&nbsp;&nbsp;- tlib#input#List(): Select the active item per mouse.<br>&nbsp;&nbsp;&nbsp;&nbsp;- TLet: simplified<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=7632">tlib.vba.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.12</b></td>
+    <td class="roweven" valign="top" nowrap><i>2007-09-08</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
+    <td class="roweven" valign="top" width="2000">NEW:<br>&nbsp;&nbsp;&nbsp;&nbsp;- tlib/tab.vim<br>CHANGES:<br>&nbsp;&nbsp;&nbsp;&nbsp;- Renamed tlib#win#SetWin() to tlib#win#Set()<br>IMPROVEMENTS:<br>&nbsp;&nbsp;&nbsp;&nbsp;- tlib#input#List(): &lt;left&gt;, &lt;right&gt; keys work in some lists<br>&nbsp;&nbsp;&nbsp;&nbsp;- tlib#input#List(): If an index_table is provided this will be used <br>&nbsp;&nbsp;&nbsp;&nbsp;instead of the item's list index.<br>FIXES:<br>&nbsp;&nbsp;&nbsp;&nbsp;- tlib#input#List(): Problem with scrolling, when the list was <br>&nbsp;&nbsp;&nbsp;&nbsp;shorter than the window (eg when using a vertical window).<br>&nbsp;&nbsp;&nbsp;&nbsp;- tlib#cache#Filename(): Don't rewrite name as relative filename if <br>&nbsp;&nbsp;&nbsp;&nbsp;explicitly given as argument. Avoid double (back)slashes.<br>&nbsp;&nbsp;&nbsp;&nbsp;- TLet: simplified<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=7559">tlib.vba.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.11</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2007-08-26</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
+    <td class="rowodd" valign="top" width="2000">NEW:<br>&nbsp;&nbsp;&nbsp;&nbsp;- The :TLet command replaces :TLLet (which was removed)<br>&nbsp;&nbsp;&nbsp;&nbsp;- :TScratch[!] command (with ! don't split but use the whole window)<br>&nbsp;&nbsp;&nbsp;&nbsp;- tlib#rx#Escape(text, ?magic='m')<br>&nbsp;&nbsp;&nbsp;&nbsp;- tlib#buffer#GetList(?show_hidden=0)<br>&nbsp;&nbsp;&nbsp;&nbsp;- tlib#dir#CD(), tlib#dir#Push(), tlib#dir#Pop()<br>&nbsp;&nbsp;&nbsp;&nbsp;- tlib#input#ListW: A slightly remodeled version of tlib#input#List <br>&nbsp;&nbsp;&nbsp;&nbsp;that takes a World as second argument.<br>&nbsp;&nbsp;&nbsp;&nbsp;- Added some documentation doc/tlib.txt (most of it is automatically <br>&nbsp;&nbsp;&nbsp;&nbsp;compiled from the source files)<br>CHANGES:<br>&nbsp;&nbsp;&nbsp;&nbsp;- tlib#input#List(): The default keys for AND, NOT have changed to <br>&nbsp;&nbsp;&nbsp;&nbsp;be more Google-like (space, minus); the keys can be configured via <br>&nbsp;&nbsp;&nbsp;&nbsp;global variables.<br>IMPROVEMENTS:<br>&nbsp;&nbsp;&nbsp;&nbsp;- In file listings, indicate if a file is loaded, listed, modified <br>&nbsp;&nbsp;&nbsp;&nbsp;etc.<br>&nbsp;&nbsp;&nbsp;&nbsp;- tlib#input#List(): Highlight the filter pattern<br>&nbsp;&nbsp;&nbsp;&nbsp;- tlib#input#List(): &lt;c-up/down&gt; scrolls g:tlib_scroll_lines <br>&nbsp;&nbsp;&nbsp;&nbsp;(default=10) lines<br>FIXES:<br>&nbsp;&nbsp;&nbsp;&nbsp;- tlib#input#List(): Centering line, clear match, clear & restore <br>&nbsp;&nbsp;&nbsp;&nbsp;the search register<br>&nbsp;&nbsp;&nbsp;&nbsp;- tlib#input#List(): Ensure the window layout doesn't change (if the <br>&nbsp;&nbsp;&nbsp;&nbsp;number of windows hasn't changed)<br>&nbsp;&nbsp;&nbsp;&nbsp;- tlib#arg#Ex(): Don't escape backslashes by default<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=7380">tlib.vba.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.10</b></td>
+    <td class="roweven" valign="top" nowrap><i>2007-07-18</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
+    <td class="roweven" valign="top" width="2000">- tlib#input#List(): (v)split type of commands leave the original window <br>untouched (you may use &lt;c-w&gt; to replace its contents)<br>- tlib#file#With(): Check whether an existing buffer is loaded.<br>- Scratch related functions went to tlib/scratch.vim so that they are <br>accessible from other scripts.<br>- Configure the list window height via g:tlib_inputlist_pct (1..100%)<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=7359">tlib.vba.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.9</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2007-07-17</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- Re-arrangements & modularization (this means many function names have <br>changed, on the other hand only those functions are loaded that are <br>actually needed)<br>- tlib#input#List(): Added maps with m-modifiers for &lt;c-q&gt;, &lt;c-z&gt;, &lt;c-a&gt;<br>- tlib#input#List(): Make sure &fdm is manual<br>- tlib#input#List(): When exiting the list view, consume the next 5 <br>characters in the queue (if any)<br>- tlib#input#EditList(): Now has cut, copy, paste functionality.<br>- Added documentation and examples<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=7299">tlib.vba.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.8</b></td>
+    <td class="roweven" valign="top" nowrap><i>2007-06-24</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
+    <td class="roweven" valign="top" width="2000">- FIX: Return empty cache name for buffers that have no files attached to it<br>- Some re-arranging<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=7269">tlib.vba.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.7</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2007-06-20</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- tlib#InputList(): &lt;c-z&gt; ... Suspend/Resume input loop<br>- tlib#InputList(): &lt;c-q&gt; ... Input text on the command line (useful on slow systems when working with very large lists)<br>- tlib#InputList(): AND-pattern starting with '!' will work as 'exclude matches'<br>- tlib#InputList(): FIX &lt;c-bs&gt; pop OR-patterns properly<br>- tlib#InputList(): display_format == filename: don't add '/' to directory names (avoid filesystem access)<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=7157">tlib.vba.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.6</b></td>
+    <td class="roweven" valign="top" nowrap><i>2007-05-23</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
+    <td class="roweven" valign="top" width="2000">- tlib#InputList(): Disabled &lt;c-space&gt; map<br>- tlib#InputList(): try to be smart about user itentions only if a <br>list's length is &lt; g:tlib_sortprefs_threshold (default: 200)<br>- tlib#Object: Super() method<br>- tlib#MyRuntimeDir()<br>- tlib#GetCacheName(), tlib#CacheSave(), tlib#CacheGet()<br>- tlib#Args(), tlib#GetArg()<br>- FIX: tlib#InputList(): Display problem with first item<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=7130">tlib.vba.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.5</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2007-05-17</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- tlib#InputList(): FIX: Selecting items in filtered view<br>- tlib#InputList(): &lt;c-bs&gt;: Remove last AND pattern from filter<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=7113">tlib.vba.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.4</b></td>
+    <td class="roweven" valign="top" nowrap><i>2007-05-15</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
+    <td class="roweven" valign="top" width="2000">- tlib#InputList(): Up/Down keys wrap around list<br>- tlib#InputList(): FIX: Problem when reducing the filter & using AND<br>- tlib#InputList(): FIX: Problem when using shift-up/down with filtered lists<br>- tlib#InputList(): Made &lt;a-numeric&gt; work (can be configured via <br>- tlib#InputList(): special display_format: &quot;filename&quot;<br>- tlib#Object: experimental support for some kind of OOP<br>- tlib#World: Extracted some functions from tlib.vim to tlib/World.vim<br>- tlib#FileJoin(), tlib#FileSplit(), tlib#RelativeFilename()<br>- tlib#Let()<br>- tlib#EnsureDirectoryExists(dir)<br>- tlib#DirName(dir)<br>- tlib#DecodeURL(url), tlib#EncodeChar(char), tlib#EncodeURL(url)<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=7029">tlib.vba.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.3</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2007-04-26</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- Show feedback in statusline instead of the echo area<br>- tlib#GetVar(), tlib#GetValue()<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=7021">tlib.vba.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.2</b></td>
+    <td class="roweven" valign="top" nowrap><i>2007-04-24</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
+    <td class="roweven" valign="top" width="2000">- More list convenience functions<br>- tlib#EditList()<br>- tlib#InputList(): properly handle duplicate items; it type contains <br>'i', the list index + 1 is returned, not the element<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=6998">tlib.vba.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2007-04-18</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Initial upload</td>
+</tr>
+</table>
+<!-- finish off the framework -->
+          </td>
+        </tr>
+      </table>
+    </td>
+
+  </tr>
+</table>
+
+<!-- END OF THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr><td colspan="4" bgcolor="#000000"><img src="/images/spacer.gif" height="2" width="1" alt=""></td></tr>
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr>
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+
+    <td align="left" valign="top"><small>
+      If you have questions or remarks about this site, visit the
+      <a href="http://vimonline.sf.net">vimonline development</a> pages.
+      Please use this site responsibly.
+      <br> 
+      
+      Questions about <a href="http://www.vim.org/about.php">Vim</a> should go
+      to the <a href="http://www.vim.org/maillist.php">maillist</a>.
+      Help Bram <a href="http://iccf-holland.org/">help Uganda</a>.
+      </small>
+	&nbsp;
+	&nbsp;
+
+	<!-- Start of StatCounter Code -->
+	<script type="text/javascript" language="javascript">
+	var sc_project=1417324; 
+	var sc_invisible=1; 
+	var sc_partition=11; 
+	var sc_security="d41633bc"; 
+	</script>
+
+	<script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script><noscript><a href="http://www.statcounter.com/" target="_blank"><img  src="http://c12.statcounter.com/counter.php?sc_project=1417324&java=0&security=d41633bc&invisible=0" alt="free tracking" border="0"></a> </noscript>
+	<!-- End of StatCounter Code -->
+          </td>
+
+    <td align="right" valign="top">
+      		<a href="http://sourceforge.net/projects/vim" rel="nofollow"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=8&type=1" width="88" height="31" border="0" alt="SourceForge.net Logo" /></a>
+    </td>
+
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+  </tr>
+
+    
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  
+  </tr>
+</table>
+
+</body>
+</html>
+

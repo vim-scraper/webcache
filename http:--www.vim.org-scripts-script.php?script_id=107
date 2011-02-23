@@ -1,0 +1,484 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+  <link rel="Stylesheet" type="text/css" href="/css/style.css" >
+  <title>SelectBuf - A fast and extensible buffer explorer. : vim online</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <meta name="KEYWORDS" content="Vim, Vi IMproved, text editor, home, documentation, tips, scripts, news">
+  <link rel="shortcut icon" type="image/x-icon" href="/images/vim_shortcut.ico">
+</head>
+
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff"> 
+
+<!-- HEADER, SPONSOR IMAGE, VIM IMAGE AND BOOK AD -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+  <td class="lightbg">&nbsp;&nbsp;&nbsp;</td>
+  <td class="lightbg" align="left"><a href="/sponsor/index.php"><img src="/images/sponsorvim.gif" alt="sponsor Vim development" border="0"></a></td>
+    <td class="lightbg" align="center"><a href="/index.php"><img src="/images/vim_header.gif" border="0" alt="Vim logo"></a></td>
+    <td class="lightbg" align="right"><a href="http://iccf-holland.org/click5.html"><img src="/images/buyhelplearn.gif" alt="Vim Book Ad" border="0"></a></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="darkbg"><img src="/images/spacer.gif" width="1" height="10" alt=""></td>
+  </tr>
+</table>
+<!-- THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+  <col width="180">
+  <col width="1">
+
+  <tr valign="top">
+    <td class="sidebar">
+      <table width="180" cellpadding="4" cellspacing="0" border="0">
+        <tr valign="top">
+          <td class="sidebar">
+
+<!-- INCLUDE THE PAGE NAVIGATION -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+    <tr>
+        <td><small>not logged in (<a href="/login.php">login</a>)</small></td>
+    </tr>
+    <tr><td>
+<small>&nbsp;</small>
+<form action="http://www.google.com/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-3005259998294962:bvyni59kjr1" />
+    <input type="hidden" name="ie" value="ISO-8859-1" />
+    <input type="text" name="q" size="20" />
+    <br>
+    <input type="submit" name="sa" value="Search" />
+  </div>
+</form>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+    </td></tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="1"></td>
+    </tr>
+    <tr>
+        <td class="darkbg"><img src="/images/spacer.gif" alt='' border="0" height="3"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="2"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/index.php">Home</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/search.php">Advanced search</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/about.php">About Vim</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/community.php">Community</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/news/news.php">News</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/sponsor/index.php">Sponsoring</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/trivia.php">Trivia</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/docs.php">Documentation</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/download.php">Download</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/scripts/index.php">Scripts</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/tips/index.php">Tips</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/account/index.php">My Account</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/huh.php">Site Help</a></td>
+        </tr>
+</table>
+
+            <table width="172" cellpadding="0" cellspacing="0" border="0">
+              <tr><td><img src="/images/spacer.gif" alt="" border="0" width="1" height="8"></td></tr>
+              <tr><td class="darkbg"><img src="/images/spacer.gif" width="1" height="3" alt=""></td></tr>
+            </table>
+            <br>
+
+<!-- INCLUDE THE PAGE SIDEBAR TEXT -->
+&nbsp;
+
+          </td>
+        </tr>
+      </table>
+    </td>
+
+    <td class="darkbg"><img src="/images/spacer.gif" width="1" height="1" border="0" alt=""><br></td>
+    <td>
+      <table width="100%" cellpadding="10" cellspacing="0" border="0" bordercolor="red">
+        <tr>
+          <td valign="top">
+
+<span class="txth1">SelectBuf : A fast and extensible buffer explorer.</span> 
+
+<br>
+<br>
+
+<!-- karma table -->
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
+  <td>
+    Rating <b>222/70</b>,
+    Downloaded by 6029  </td>
+  <td class="lightbg">
+  <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
+  </td>
+  <td>
+    <a href="http://vim.wikia.com/wiki/Script:107">Vim wiki</a>
+  </td>  
+</tr>
+</table>
+<p>
+
+<table cellspacing="0" cellpadding="0" border="0">
+<tr><td class="prompt">created by</td></tr>
+<tr><td><a href="/account/profile.php?user_id=292">Hari Krishna Dara</a></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">script type</td></tr>
+<tr><td>utility</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">description</td></tr>
+<tr><td>PLEASE READ THE INSTALL SECTION COMPLETELY.<br><br>SelectBuf is a buffer explorer similar to the file explorer plugin that comes<br>with Vim, the difference being that file explorer allows you to view the files<br>on the file system, where as buffer explorer limits the view to only the files<br>that are already opened in the current Vim session. It is even possible and <br>easy to extend the plugin with new commands.<br><br>Since the first time I released it in Jul '99 (try sending an email to <br>vim-thread.1235@vim.org), the script has gone many<br>revisions and enhancements both in technology and features, taking advantage of all the niceties that the new versions of Vim has to offer.<br><br>For detailed help, see &quot;:help selectbuf&quot; or read doc/selectbuf.txt. <br><br>- Install the plugin, restart vim and press &lt;F3&gt; (the default key binding) to<br>&nbsp;&nbsp;get the list of buffers.<br>- Move the cursor on to the buffer that you need to select and press &lt;CR&gt; or<br>&nbsp;&nbsp;double click with the left-mouse button.<br>- If you want to close the window without making a selection, press &lt;F3&gt;<br>&nbsp;&nbsp;again.<br>- You can also press ^W&lt;CR&gt; or O to open the file in a new or previous window.<br>&nbsp;&nbsp;You can use d to delete or D to wipeout the buffer. Use d again to<br>&nbsp;&nbsp;undelete a previously deleted buffer (you need to first view the deleted<br>&nbsp;&nbsp;buffers using u command).<br><br>You can change the default key mapping to open browser window by setting <br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nmap &lt;unique&gt; &lt;silent&gt; &lt;YourKey&gt; &lt;Plug&gt;SelectBuf<br><br>Almost everything is configurable, including all the key mappings that are<br>available. E.g., you can change the help key to &lt;C-H&gt; instead of the default ?,<br>so you can free it to do backward searches in the file list, using the<br>following mapping:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;noremap &lt;silent&gt; &lt;Plug&gt;SelBufHelpKey &lt;C-H&gt; <br><br>Some highlights of the features are:<br><br>- It is super fast as the buffer list is cached and incrementally built as new<br>&nbsp;&nbsp;files are added and the old ones are deleted.<br>- Hide buffer numbers to save on real estate (goes well with &quot;Always On&quot; mode<br>&nbsp;&nbsp;or when used with WinManager).<br>- Opens a new window to avoid disturbing your existing windows. But you can<br>&nbsp;&nbsp;change the behavior to reuse the current window or even to permanently keep<br>&nbsp;&nbsp;it open.<br>- You can select block of buffers and delete or wipeout all the buffers at once.<br>- You can toggle various settings on and off while you are in the browser. You<br>&nbsp;&nbsp;can e.g., toggle showing the buffer indicators by pressing i.<br>- Goes very well with WinManager.<br>- There are different sorting keys available. You can sort by buffer number,<br>&nbsp;&nbsp;name, type (extension), path, indicators and MRU order. You can even select a<br>&nbsp;&nbsp;default sort order<br>- If you use multiple windows, then the browser restores the window sizes after<br>&nbsp;&nbsp;closing it.<br>- Syntax coloring makes it easy to find the buffer you are looking to switch to.<br>- Full configurability.<br>- Extensibility.<br>- Support for WinManager and multiselect plugins.<br>- and many more.<br><br>For more information, read the vim help on seletbuf.<br><br><br>Search_key_words: buffer selectbuf bufexplorer explorer list select multvals genutils multiselect Hari Krishna Dara<br></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">install details</td></tr>
+<tr><td>For complete installation instructions, read the help on<br>selectbuf-installation. To get started on the help, expand the zip file in your<br>runtime directory and run :helpt on your doc directory or just read through the<br>doc/selectbuf.txt file.<br><br>Requires, <br>genutils.vim: <a href="/scripts/script.php?script_id=197">vimscript#197</a><br><br>Depends on (optional),<br>multiselect.vim: <a href="/scripts/script.php?script_id=953">vimscript#953</a><br><br>WinManager version 2.3 has some bugs because of which selectbuf may not work<br>correctly with it. I am working with Srinath to have a new version with fixes<br>until then, a version with fixes can be downloaded from: <br><br><a target="_blank" href="http://mywebpage.netscape.com/haridara/vim/winmanager.vim">http://mywebpage.netscape.com/haridara/vim/winmanager.vim</A> <br><br>For versions older than 4.0, you also need multvals.vim: <a href="/scripts/script.php?script_id=171">vimscript#171</a> in addition to genutils, and you need to download the non-autoload versions of both. See their respective installation sections for more information .<br><br>For versions older than 2.2.2,<br>bufNwinUtils.vim: <a target="_blank" href="http://vim.sourceforge.net/scripts/script.php?script_id=108">http://vim.sourceforge.net/scripts/script.php?script_id=108</A><br>lightWeightArray.vim: <a target="_blank" href="http://vim.sourceforge.net/scripts/script.php?script_id=109">http://vim.sourceforge.net/scripts/script.php?script_id=109</A><br><br></td></tr>
+<tr><td>&nbsp;</td></tr>
+</table>
+
+<!-- rating table -->
+<form name="rating">
+<input type="hidden" name="script_id" value="107">
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>rate this script</b></td>
+  <td valign="middle">
+    <input type="radio" name="rating" value="life_changing">Life Changing
+    <input type="radio" name="rating" value="helpful">Helpful
+    <input type="radio" name="rating" value="unfulfilling">Unfulfilling&nbsp;
+    <input type="submit" value="rate">
+  </td>
+</tr>
+</table>
+</form>
+<span class="txth2">script versions</span> (<a href="add_script_version.php?script_id=107">upload new version</a>)
+<p>
+Click on the package to download.
+<p>
+
+<table cellspacing="2" cellpadding="4" border="0" width="100%">
+<tr class='tableheader'>
+        <th valign="top">package</th>
+    <th valign="top">script version</th>
+    <th valign="top">date</th>
+    <th valign="top">Vim version</th>
+    <th valign="top">user</th>
+    <th valign="top">release notes</th>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=7232">selectbuf-4.3.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>4.3</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2007-06-12</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=292">Hari Krishna Dara</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- New setting selBufShowRelativePath (Nathan Huizinga<br>&nbsp;&nbsp;(nathan dot huizinga at gmail dot com)).<br>- Bug fix: |:SBSettings| is still broken.<br>Requires at least version 2.4 of genutils.<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=7205">selectbuf-4.2.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>4.2</b></td>
+    <td class="roweven" valign="top" nowrap><i>2007-06-05</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=292">Hari Krishna Dara</a></i></td>
+    <td class="roweven" valign="top" width="2000">- Bug fix: |:SBSettings| is broken.<br>- Bug fix: syntax highlighting is sometimes broken the first time browser<br>&nbsp;&nbsp;window is open.<br>- Bug fix: formatting is sometimes broken with incremental update, when<br>&nbsp;&nbsp;browser is open after certain sequence of buffer changes.<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=6173">selectbuf-4.1.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>4.1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2006-09-12</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=292">Hari Krishna Dara</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- Bug fix: multiselect usage is not conditional in some places.<br>- Bug fix: Syntax may not be setup correctly when the first time browser window<br>&nbsp;&nbsp;is opened.<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=6163">selectbuf-4.0.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>4.0</b></td>
+    <td class="roweven" valign="top" nowrap><i>2006-09-11</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=292">Hari Krishna Dara</a></i></td>
+    <td class="roweven" valign="top" width="2000">- Started using vim7 features, so it is no longer backwards compatible.<br>- No longer depends on multvals. The plugin has been reworked to use Vim7 arrays<br>&nbsp;&nbsp;and sort(), so there should be significant improvement in performance<br>&nbsp;&nbsp;everywhere.<br>- It is now autoloaded on demand, which means it will help your vim session<br>&nbsp;&nbsp;load faster.<br>- Support for multiselect has been enhanced. The selections are a lot more<br>&nbsp;&nbsp;meaningful now, as they move along with the buffers. You can even sort the<br>&nbsp;&nbsp;contents and still not loose your selections.<br>- |:SBSettings| is now more flexible and easier to use as it supports arguments<br>&nbsp;&nbsp;and command-line completion.<br>- The global variables for the settings are no longer removed, but you should<br>&nbsp;&nbsp;still run |:SBInitialize| for any side effects to take place. Use<br>&nbsp;&nbsp;|:SBSettings| to make this easier.<br>If you want to use multiselect with this plugin, make sure you download the latest version of it.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=5659">selectbuf-3.6.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>3.6</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2006-05-08</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=292">Hari Krishna Dara</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Release 3.6 for vim7 compatibility. Also includes minor changes. This<br>will probably the last release that will work in Vim 6.3/6.4 version.<br>- Restoring search string works again. New setting<br>&nbsp;&nbsp;|selBufRestoreSearchString|.<br>- New mark d, see |selectbuf-marks|.<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=4034">selectbuf-3.5.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>3.5</b></td>
+    <td class="roweven" valign="top" nowrap><i>2005-03-16</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=292">Hari Krishna Dara</a></i></td>
+    <td class="roweven" valign="top" width="2000">Bug fixes.<br>- Refresh now updates the MRU list.<br>- Fixed broken &quot;toggle details&quot; functionality.<br>- &quot;SBLaunch .&quot; now correctly launches windows explorer on the current<br>&nbsp;&nbsp;directory as expected.<br>- Entering buffer number directly in the browser window now works much<br>&nbsp;&nbsp;better.<br>- Misc. bug fixes.<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=3585">selectbuf-3.4.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>3.4</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2004-10-28</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=292">Hari Krishna Dara</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- Faster sorting of buffer list.<br>- If multiselect is installed, you can use spacebar to toggle selection. See<br>&nbsp;&nbsp;|selectbuf-multiselect|.<br>- Fixed a bug in case-insensitive sorting of buffer names.<br>- Number keys are now mapped to jump to a buffer by its number. See<br>&nbsp;&nbsp;|selectbuf-buffer-search|.<br>- Bug fixes.<br>&nbsp;&nbsp;&nbsp;&nbsp;- If SBExec created a new window, it results in a Vim error.<br>&nbsp;&nbsp;&nbsp;&nbsp;- Toggle buffer numbers is broken.<br>&nbsp;&nbsp;&nbsp;&nbsp;- Other misc. bug fixes.<br><br>Get the latest multvals (<a href="/scripts/script.php?script_id=171">vimscript #171</a>) and genutils (<a href="/scripts/script.php?script_id=197">vimscript #197</a>) plugins.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=3265">selectbuf-3.3.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>3.3</b></td>
+    <td class="roweven" valign="top" nowrap><i>2004-07-23</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=292">Hari Krishna Dara</a></i></td>
+    <td class="roweven" valign="top" width="2000">Now requires Vim 6.3.<br><br>Mostly a maintenance release.<br>	- Better launcher command for windows. You can now launch applications<br>	&nbsp;&nbsp;with arguments, and handles spaces well.<br>	- Improved the performance of delete/wipeout when the list of files is<br>	&nbsp;&nbsp;huge.<br>	- Better performance for toggling indicators,paths etc.<br>	- A fix for incremental update in split paths.<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=2919">selectbuf-3.2.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>3.2</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2004-04-07</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=292">Hari Krishna Dara</a></i></td>
+    <td class="rowodd" valign="top" width="2000">:help selectbuf-changes-3.2<br><br>- Added a feature to split file paths, instead of the setting<br>&nbsp;&nbsp;selBufHighlightOnlyFilename. See help on |selBufAlwaysShowPaths|. The browser<br>&nbsp;&nbsp;by default now starts with this mode.<br>- The display is now more compact by the use of only required number of spaces<br>&nbsp;&nbsp;than using hard tabs.<br>- A setting to ignore case while sorting, see |selBufIgnoreCaseInSort|.<br>- A new &quot;selectbuf&quot; filetype to further customize the syntax highlighting and<br>&nbsp;&nbsp;extend the functionality, see |selectbuf-filetype|. There is now an API<br>&nbsp;&nbsp;available, see |selectbuf-extend|.<br>- New command SBExec for selections, see |SBExec|. Extremely useful to execute<br>&nbsp;&nbsp;external commands.<br>- Support for multiple selections through multiselect.vim plugin, see<br>&nbsp;&nbsp;|selectbuf-multiselect|.<br>- New command (very useful, at least on MS Windows), |SBLaunch|.<br>- Improved |SelBufTHiddenKey| and |SelBufTDetailsKey| to avoid doing a full<br>&nbsp;&nbsp;refresh. It should work much faster now.<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=1961">selectbuf-3.1.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>3.1</b></td>
+    <td class="roweven" valign="top" nowrap><i>2003-05-02</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=292">Hari Krishna Dara</a></i></td>
+    <td class="roweven" valign="top" width="2000">Fixed many bugs found/reported in version 3.0. The plugin is also much more responsive under WinManager. See :h |selectbuf-changes| for information on what is fixed. Thanks a lot to David Fishburn (fishburn at sybase dot com) for reporting many issues. I also had to fix some more of the WinManager issues, so please download the latest version (with my patches) from the URL mentioned in the installation section. Also download version 1.6 of genutils plugin.<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=1876">selectbuf-3.0.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>3.0</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2003-03-29</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=292">Hari Krishna Dara</a></i></td>
+    <td class="rowodd" valign="top" width="2000">This is a major improvement over the previous version. One feature for<br>which I worked very hard is the incremental update of the buffer list.<br>The buffer opens very quickly now irrespective of how many files you<br>have currently open in your current session.&nbsp;&nbsp;Here is a brief list of<br>new features. For a complete list and their description see the :help<br>selectbuf-features<br><br>&nbsp;&nbsp;&nbsp;&nbsp;- Incremental update of the browser for speed. The browser caches the<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;the list of buffers and incrementally changes it as you open new<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;files and delete them.<br>&nbsp;&nbsp;&nbsp;&nbsp;- Hide buffer numbers to save real estate (useful with &quot;Always on&quot;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mode or with WinManager).<br>&nbsp;&nbsp;&nbsp;&nbsp;- New vim help file with detailed description of features and configuration.<br>&nbsp;&nbsp;&nbsp;&nbsp;- Block operations for buffer deletes now works well.<br>&nbsp;&nbsp;&nbsp;&nbsp;- &quot;Always On&quot; mode is now much better.<br>&nbsp;&nbsp;&nbsp;&nbsp;- Marks for a quick access to the next, previous and current buffers<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;has a better meaning.<br>&nbsp;&nbsp;&nbsp;&nbsp;- WinManager integration. This requires patches to WinManager<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;though. Until Srinath is out of his hibernation to validate my<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;patches and make the next release, it can be downloaded from:<br><br>	<a target="_blank" href="http://mywebpage.netscape.com/haridara/vim/winmanager.vim">http://mywebpage.netscape.com/haridara/vim/winmanager.vim</A><br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;With incremental update feature, opening files from WinManager now<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;literally flies. Get the latest versions of multvals and genutils plugins<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;along with this. I would very much appreciate any feedback.<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=611">selectbuf.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.2.4</b></td>
+    <td class="roweven" valign="top" nowrap><i>2002-02-19</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=292">Hari Krishna Dara</a></i></td>
+    <td class="roweven" valign="top" width="2000">- Main improvement is the faster sorting algorithm. The browser sorts much quickly and works flawlessly when there are a lot of files open (order of 200), especially when the MRU is selected. Still more can be done to imrove the sorting speed.<br>- When the browser window is opened, a message is generated with the total number of buffers and number of buffers shown.<br>- Cleaned up a lot of stuff. Now the impact of the browser on the user environment is much less as it avoids cluttering search history and restores the unnamed register.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=542">selectbuf.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.2.3</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2002-02-04</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=292">Hari Krishna Dara</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Fixed the &quot;myBufNr&quot; not defined error reported by Halim Salman.<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=528">selectbuf.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.2.2</b></td>
+    <td class="roweven" valign="top" nowrap><i>2002-02-01</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=292">Hari Krishna Dara</a></i></td>
+    <td class="roweven" valign="top" width="2000">I have finally added MRU soring support with the popular demand :) <br><br>- Now you can specify the sorting method to be by MRU files. To make mru the default order, place this line in your vimrc: <br><br>let g:selBufDefaultSortOrder = &quot;mru&quot; <br><br>You can also use SBBufToHead and SBBufToTail commands with a buffer number argument to move the specified buffer to the starting and ending of the MRU list. <br><br>- If you make any changes to the configuration, you can use the new command SBInitialize to reconfigure the internal data of selectbuf.vim. <br><br>- Fixed some misc. bugs. <br>- FIxed the broken save/restore window settings (after converting to 6.0). Now even the vertically split windows are restored correctly. <br><br>Note that you need the new improved script genutils.vim instead of the older bufNwinUtils.vim. Download it from <br><br><a target="_blank" href="http://vim.sourceforge.net/scripts/script.php?script_id=197">http://vim.sourceforge.net/scripts/script.php?script_id=197</A> <br><br>Also you need the new improved multvals.vim instead of the older lightWeightArray.vim. Download it from:<br><br><a target="_blank" href="http://vim.sourceforge.net/scripts/script.php?script_id=171">http://vim.sourceforge.net/scripts/script.php?script_id=171</A></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=353">selectbuf.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.1.11</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2001-11-15</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=292">Hari Krishna Dara</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- New feature to bulk delete/wipeout multiple buffers by selecting the rows.<br>&nbsp;&nbsp;Very useful when you load a bunch of files by mistake and you just want to<br>&nbsp;&nbsp;delete all the buffers at once. You can also sort by type and select all the<br>&nbsp;&nbsp;buffers of a particular type and delete/wipeout at once.<br>- Complete configurability of the key mappings for all the commands. You can<br>&nbsp;&nbsp;define your own key mappings for all the actions, or just for those that you<br>&nbsp;&nbsp;don't like the default key assignment. E.g., I don't like to use &quot;?&quot; for<br>&nbsp;&nbsp;showing the help (though it is more intuitive), as it disables my ability to<br>&nbsp;&nbsp;search backwards in the browser window. So I changed the assignment by<br>&nbsp;&nbsp;putting the following line in .vimrc<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;noremap &lt;silent&gt; &lt;Plug&gt;SelBufHelpKey &lt;C-H&gt;<br><br>&nbsp;&nbsp;The ? key is now freed and I can use ^H instead to toggle help header.<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=329">selectbuf.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.1.10</b></td>
+    <td class="roweven" valign="top" nowrap><i>2001-11-08</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=292">Hari Krishna Dara</a></i></td>
+    <td class="roweven" valign="top" width="2000">I am making this a 2.1 release version after a good amount of usage for the past<br>few weeks. Here is a final summary of all the new features in this release:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;- help header with a status line<br>&nbsp;&nbsp;&nbsp;&nbsp;- open/close browser using the same key (to get a quick glance of the files)<br>&nbsp;&nbsp;&nbsp;&nbsp;- optionally show buffer indicators<br>&nbsp;&nbsp;&nbsp;&nbsp;- show/hide hidden buffers<br>&nbsp;&nbsp;&nbsp;&nbsp;- separate delete and wipeout functionality<br>&nbsp;&nbsp;&nbsp;&nbsp;- refresh browser<br>&nbsp;&nbsp;&nbsp;&nbsp;- show/hide path info<br>&nbsp;&nbsp;&nbsp;&nbsp;- buffer markers for easy navigation<br>&nbsp;&nbsp;&nbsp;&nbsp;- most of the features are configurable<br>&nbsp;&nbsp;&nbsp;&nbsp;- avoid cluttering the global name space with the config variables<br>&nbsp;&nbsp;&nbsp;&nbsp;- sort/reverse sort by &quot;buffer nubmer&quot;, &quot;name&quot;, &quot;path&quot;, &quot;type&quot;, &quot;indicators&quot;<br>&nbsp;&nbsp;&nbsp;&nbsp;- must better syntax highlighting (configurable)<br>&nbsp;&nbsp;&nbsp;&nbsp;- optionally open a vertical window for the browser<br>&nbsp;&nbsp;&nbsp;&nbsp;- three operating modes for the browser<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- split: standard style, split opens the browser window<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- switch: reuse the current window (bufexplorer style)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- keep: keep browser always open. Very useful when used with the<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;previous option to open a vertically split window.<br><br>&nbsp;&nbsp;&nbsp;&nbsp;Requires 1.0.3 bufNwinUtils.vim.<br><br>Please keep sending bug reports/suggestions/comments etc.<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=318">selectbuf.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.1beta9</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2001-11-05</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=292">Hari Krishna Dara</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Forgot to mention that you require the latest bufNwinUtils.vim. Download it: <a target="_blank" href="http://vim.sourceforge.net/scripts/script.php?script_id=108">http://vim.sourceforge.net/scripts/script.php?script_id=108</A> <br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=317">selectbuf.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.1beta9</b></td>
+    <td class="roweven" valign="top" nowrap><i>2001-11-05</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=292">Hari Krishna Dara</a></i></td>
+    <td class="roweven" valign="top" width="2000">I have added most of the features that I wanted to, and also fixed all the FIXME's. So the script is now mostly clean and very stable.<br><br>- Now sort by name and sort by path are separate.<br>- Fixed the bug in remembering the cursor position.<br>- More configurability of the script. Fix for avoiding the global config params from cluttering the global namespace.<br>- You can specify a default sort order.<br>- Syntax coloring in the browser window is much better now.<br>- Added P command to show/hide paths.<br>- Improved stability.<br><br>It is very close to a release version now.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=307">selectbuf.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.1beta6</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2001-10-26</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=292">Hari Krishna Dara</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Added some cool new features and fixed some problems.<br><br>- Added sorting. You can now sort by &quot;buffer number&quot;, &quot;name&quot;, &quot;type&quot; or by &quot;indicators&quot;.<br>&nbsp;&nbsp;- Use s to select the sort type forward.<br>&nbsp;&nbsp;- Use S to select the sort type backward.<br>&nbsp;&nbsp;- Use r to sort in the reverse order.<br>&nbsp;&nbsp;- Since r is more appropriate (and familiar) for reverse sorting, I used R to refresh the browser.<br>- I got the solution for the toggling the meaning of activation key, so now you can use the same key that activates the browser to even close it. So provided you have &lt;F3&gt; mapped, you can have a quick look at the browser by pressing &lt;F3&gt; twice in quick succession.<br>- I also used some nice 6.0 features to make the browser buffer more friendly.<br>- Fixed the spurious nomodifiable problem (happens occassionally). Thanks for reporting this problem.<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=300">selectbuf.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.1beta3</b></td>
+    <td class="roweven" valign="top" nowrap><i>2001-10-23</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=292">Hari Krishna Dara</a></i></td>
+    <td class="roweven" valign="top" width="2000">Added the following useful features:<br><br>- Optionally hide fileexplorer buffers.<br>- Undelete (relist) buffers.<br>- show status line with the current settings.<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=292">selectbuf.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.1beta2</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2001-10-19</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=292">Hari Krishna Dara</a></i></td>
+    <td class="rowodd" valign="top" width="2000">I got a nice feedback from a few people that mapping cursor movement commands for functionality is asking for trouble. Since w, W, h and H are cursor movement commands, before it is too late, I changed the key mappings as follows:<br><br>Delete buffer: d from D<br>Wipeout buffer: D from W <br>Toggle hidden: u from H (u for unlisted)<br>Toggle wrap: p from w<br>Toggle help: ? from h<br><br>Now you shouldn't see many surprises when you follow your natural instincts to move cursor :)<br>Please continue to give feedback. Thank you.<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=289">selectbuf.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.1beta1</b></td>
+    <td class="roweven" valign="top" nowrap><i>2001-10-18</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=292">Hari Krishna Dara</a></i></td>
+    <td class="roweven" valign="top" width="2000">Some nice improvements.<br>- help header (can be toggled)<br>- buffer indicators on the lines of :ls (can be toggled)<br>- show hidden buffers (can be toggled)<br>- Separate delete and wipeout functionality for buffers<br>- refresh browser (without reopening) .<br>- buffer markers to easily navigate.<br>- more robust.<br>- more configurability.<br><br>It is still beta, but I have done quite a lot of testing and it seems to be stable. I would appreciate any bug reports and feedback. I have more ideas for some good features to come soon, but if you would like to see any features yourself, please let me know.<br><br>You need the 1.0.1 version of bufNwinUtils.vim</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=262">selectbuf.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.0.3</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2001-10-10</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=292">Hari Krishna Dara</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Removed the ^M's.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=248">selectbuf.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.0.2</b></td>
+    <td class="roweven" valign="top" nowrap><i>2001-10-08</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=292">Hari Krishna Dara</a></i></td>
+    <td class="roweven" valign="top" width="2000">While converting the script to 6.0, lost the hack that restores search history when the browser is closed. </td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=240">selectbuf.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b></b></td>
+    <td class="rowodd" valign="top" nowrap><i>2001-10-05</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=292">Hari Krishna Dara</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Initial upload</td>
+</tr>
+</table>
+<!-- finish off the framework -->
+          </td>
+        </tr>
+      </table>
+    </td>
+
+  </tr>
+</table>
+
+<!-- END OF THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr><td colspan="4" bgcolor="#000000"><img src="/images/spacer.gif" height="2" width="1" alt=""></td></tr>
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr>
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+
+    <td align="left" valign="top"><small>
+      If you have questions or remarks about this site, visit the
+      <a href="http://vimonline.sf.net">vimonline development</a> pages.
+      Please use this site responsibly.
+      <br> 
+      
+      Questions about <a href="http://www.vim.org/about.php">Vim</a> should go
+      to the <a href="http://www.vim.org/maillist.php">maillist</a>.
+      Help Bram <a href="http://iccf-holland.org/">help Uganda</a>.
+      </small>
+	&nbsp;
+	&nbsp;
+
+	<!-- Start of StatCounter Code -->
+	<script type="text/javascript" language="javascript">
+	var sc_project=1417324; 
+	var sc_invisible=1; 
+	var sc_partition=11; 
+	var sc_security="d41633bc"; 
+	</script>
+
+	<script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script><noscript><a href="http://www.statcounter.com/" target="_blank"><img  src="http://c12.statcounter.com/counter.php?sc_project=1417324&java=0&security=d41633bc&invisible=0" alt="free tracking" border="0"></a> </noscript>
+	<!-- End of StatCounter Code -->
+          </td>
+
+    <td align="right" valign="top">
+      		<a href="http://sourceforge.net/projects/vim" rel="nofollow"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=8&type=1" width="88" height="31" border="0" alt="SourceForge.net Logo" /></a>
+    </td>
+
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+  </tr>
+
+    
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  
+  </tr>
+</table>
+
+</body>
+</html>
+

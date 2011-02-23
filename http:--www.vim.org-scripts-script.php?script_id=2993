@@ -1,0 +1,580 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+  <link rel="Stylesheet" type="text/css" href="/css/style.css" >
+  <title>ywtxt - Ease vim to write plain documents. : vim online</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <meta name="KEYWORDS" content="Vim, Vi IMproved, text editor, home, documentation, tips, scripts, news">
+  <link rel="shortcut icon" type="image/x-icon" href="/images/vim_shortcut.ico">
+</head>
+
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff"> 
+
+<!-- HEADER, SPONSOR IMAGE, VIM IMAGE AND BOOK AD -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+  <td class="lightbg">&nbsp;&nbsp;&nbsp;</td>
+  <td class="lightbg" align="left"><a href="/sponsor/index.php"><img src="/images/sponsorvim.gif" alt="sponsor Vim development" border="0"></a></td>
+    <td class="lightbg" align="center"><a href="/index.php"><img src="/images/vim_header.gif" border="0" alt="Vim logo"></a></td>
+    <td class="lightbg" align="right"><a href="http://iccf-holland.org/click5.html"><img src="/images/buyhelplearn.gif" alt="Vim Book Ad" border="0"></a></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="darkbg"><img src="/images/spacer.gif" width="1" height="10" alt=""></td>
+  </tr>
+</table>
+<!-- THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+  <col width="180">
+  <col width="1">
+
+  <tr valign="top">
+    <td class="sidebar">
+      <table width="180" cellpadding="4" cellspacing="0" border="0">
+        <tr valign="top">
+          <td class="sidebar">
+
+<!-- INCLUDE THE PAGE NAVIGATION -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+    <tr>
+        <td><small>not logged in (<a href="/login.php">login</a>)</small></td>
+    </tr>
+    <tr><td>
+<small>&nbsp;</small>
+<form action="http://www.google.com/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-3005259998294962:bvyni59kjr1" />
+    <input type="hidden" name="ie" value="ISO-8859-1" />
+    <input type="text" name="q" size="20" />
+    <br>
+    <input type="submit" name="sa" value="Search" />
+  </div>
+</form>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+    </td></tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="1"></td>
+    </tr>
+    <tr>
+        <td class="darkbg"><img src="/images/spacer.gif" alt='' border="0" height="3"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="2"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/index.php">Home</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/search.php">Advanced search</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/about.php">About Vim</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/community.php">Community</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/news/news.php">News</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/sponsor/index.php">Sponsoring</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/trivia.php">Trivia</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/docs.php">Documentation</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/download.php">Download</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/scripts/index.php">Scripts</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/tips/index.php">Tips</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/account/index.php">My Account</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/huh.php">Site Help</a></td>
+        </tr>
+</table>
+
+            <table width="172" cellpadding="0" cellspacing="0" border="0">
+              <tr><td><img src="/images/spacer.gif" alt="" border="0" width="1" height="8"></td></tr>
+              <tr><td class="darkbg"><img src="/images/spacer.gif" width="1" height="3" alt=""></td></tr>
+            </table>
+            <br>
+
+<!-- INCLUDE THE PAGE SIDEBAR TEXT -->
+&nbsp;
+
+          </td>
+        </tr>
+      </table>
+    </td>
+
+    <td class="darkbg"><img src="/images/spacer.gif" width="1" height="1" border="0" alt=""><br></td>
+    <td>
+      <table width="100%" cellpadding="10" cellspacing="0" border="0" bordercolor="red">
+        <tr>
+          <td valign="top">
+
+<span class="txth1">ywtxt : Ease vim to write plain documents.</span> 
+
+<br>
+<br>
+
+<!-- karma table -->
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
+  <td>
+    Rating <b>1/1</b>,
+    Downloaded by 491  </td>
+  <td class="lightbg">
+  <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
+  </td>
+  <td>
+    <a href="http://vim.wikia.com/wiki/Script:2993">Vim wiki</a>
+  </td>  
+</tr>
+</table>
+<p>
+
+<table cellspacing="0" cellpadding="0" border="0">
+<tr><td class="prompt">created by</td></tr>
+<tr><td><a href="/account/profile.php?user_id=17429">Yue Wu</a></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">script type</td></tr>
+<tr><td>utility</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">description</td></tr>
+<tr><td>1&nbsp;&nbsp;Introduce:<br>&nbsp;&nbsp; <br>&nbsp;&nbsp; Ease vim to write plain document. It's at the very early stage, with<br>&nbsp;&nbsp; some fancy highlights. Any advice is welcome. My email is:<br><br>&nbsp;&nbsp; ywupub AT gmail DOT com<br><br>2&nbsp;&nbsp;Usage:<br><br>&nbsp;&nbsp; Open a new file: test.ywtxt, done.<br><br>3&nbsp;&nbsp;ywtxt file format:<br>3.1&nbsp;&nbsp;Heading format:<br><br>ywtxt treats lines start with &quot;#&nbsp;&nbsp;&quot; or &quot;1&nbsp;&nbsp;&quot;(note the following 2<br>spaces) as a 1st level heading, &quot;#.#&nbsp;&nbsp;&quot; or &quot;1.1&nbsp;&nbsp;&quot;(note the following 2<br>spaces) as a 2nd level heading, so forth.<br><br>Lines started with optional spaces and &quot;%&quot; are treated as a comment<br>line. Characters between *bold* will get bolded, /italic/ italic,<br>_underlined_ underlined.<br><br>TODO and NOTE in document will get highlighted.<br>&nbsp;&nbsp; <br>&quot;Figure #.&nbsp;&nbsp;&quot;, &quot;Fig. #.&nbsp;&nbsp;&quot;, &quot;&#22270; #.&nbsp;&nbsp;&quot;, &quot;Table #.&nbsp;&nbsp;&quot;,&nbsp;&nbsp;&quot;&#34920; #.&nbsp;&nbsp;&quot;,<br>&quot;Figure #-#.&nbsp;&nbsp;&quot;, &quot;Fig. #-#.&nbsp;&nbsp;&quot;, &quot;&#22270; #-#.&nbsp;&nbsp;&quot;, &quot;Table #-#.&nbsp;&nbsp;&quot;,&nbsp;&nbsp;&quot;&#34920; #-#.&nbsp;&nbsp;&quot;<br>will make ywtxt know it's a figure/table, and can generate the figures/tables<br>of contents for them(note there are 2 spaces following the &quot;#.&quot;.<br><br>The first line in document with a trailing space is a title:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This is a title, note the spaces after the dot.&nbsp;&nbsp;<br><br>ywtxt use foldmethod 'marker' for mom document, so everything you can do with vim folding marker also can be implemented with ywtxt.<br><br>3.2&nbsp;&nbsp;Snip support:<br><br>Hit &lt;Ctrl-j&gt; then s will prompt you insert a filetype of snip,<br>you can use &lt;tab&gt; to auto-complete the filetype name. The snip region<br>will get highlighted according to the syntax of it(if vim supports it).<br>Warn, if you insert a filetype which vim doesn't support, you will meet<br>error warning when opening the file.<br><br>Note: Trying to insert ywtxt filetype as a snip will make ywtxt's<br>folding fragible.<br><br>3.3&nbsp;&nbsp;Cross-references<br><br>Define a anchor: '[#anchor]' without the prefix '*', then hit &lt;enter&gt; on the<br>string &quot;*[path/to/file#anchor]&quot; will let you go to the anchor.<br><br>Hit &lt;Enter&gt; on the pattern &quot;*[path/to/file#anchor]&quot; in document will let you<br>go to the file and locate onto the &quot;[#anchor]&quot; position.<br>For example: <br>&nbsp;&nbsp;&nbsp;&nbsp;*[./mini2.ywtxt#string]<br>Will go to mini2.ywtxt and locate on the anchor [#string].<br><br>If you omit the &quot;file&quot; part in the pattern, then ywtxt will try to<br>locate the position in the current document.<br>For example: <br>&nbsp;&nbsp;&nbsp;&nbsp;*[#string]<br>Will go to the anchor [#string] in the current document.<br><br>If document doesn't contain [#string], ywtxt will warn you and go to normal<br>string &quot;string&quot;.<br><br>3.4&nbsp;&nbsp;More highlightings<br><br>There are times, however, when the simple markup isn't flexible enough.<br>In such cases, You can use Txtfmt (The Vim Highlighter) to add arbitrary<br>highlighting to my journal entries. The trick is to set 'filetype' equal<br>to ywtxt.txtfmt instead of ywtxt alone. The following screenshot shows<br>the result:<br>&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp; <a target="_blank" href="http://txtfmt.webs.com/ywtxt.htm">http://txtfmt.webs.com/ywtxt.htm</A><br>&nbsp;&nbsp;&nbsp;&nbsp;<br>The highlighting provided by Txtfmt is similar to &quot;rich text&quot; in a word<br>processor: foreground/background colors and all combinations of<br>underline, bold, italic, etc...<br>&nbsp;&nbsp;&nbsp;&nbsp;<br>Txtfmt (The Vim Highlighter):<br><a target="_blank" href="http://www.vim.org/scripts/script.php?script_id=2208">http://www.vim.org/scripts/script.php?script_id=2208</A><br><br>4&nbsp;&nbsp;Key maps:<br>4.1&nbsp;&nbsp;Key maps for the normal window(mother file window):<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Tab&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Fold/unfold. Under ^[keyword], echo the corresponding reference name. Under the lines in the bibliography section, jump to the citing point of the document.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Enter&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Under ^[keyword] or the lines in the bibliography section, jump into the .bib file and located to the coressponding location.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\t&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Open a table of contents(toc) window of the current document, it's named as &quot;_&lt;file you're writing&gt;_TOC_&quot; .<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Ctrl-j&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Prompt for inserting a new (parent/current/child/other level heading)/Non_export2html/Reference/Snip.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\o&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Insert a current level heading line.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\O&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Insert a parent level heading line.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\q&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Close the toc window.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\&lt;tab&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Jump into the toc window without refreshing.<br><br>4.2&nbsp;&nbsp;key maps for insert mode<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Ctrl-j&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Prompt for inserting a new (parent/current/child/other level heading)/Non_export2html/Reference/Snip.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_{} insert a subscript.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;^{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;^{} insert a superscript.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;^[&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;^[] insert a citation.<br><br>4.3&nbsp;&nbsp;key maps for toc window:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Enter&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Jump into the coressponding location of the document.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;space&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Jump into the coressponding location of the document without leaving the toc window.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Jump into the coressponding location of the document and close the toc window.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Leader&gt;&lt;tab&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Jump into the mother file window without changing the position.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;q&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Close the toc window.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;r&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Refresh the toc window.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Shift_H&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Decrease the level of heading.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Shift_L&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Increase the level of heading.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Shift_J&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Move current heading region down.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Shift_K&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Move current heading region up.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Shift_D&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Delete current heading region, and put the content into register z.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Shift_Y&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Yank current heading region, and put the content into register z.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Shift_S&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Auto number the sections mark(#.) in mother file according to the toc's showing.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;w&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Save the mother file.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;u&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Undo the mother file.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ctrl_R&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Redo the mother file.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Shift_E&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Export the ywtxt file to simple html file.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Shift_X&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Outline/un-outline the document. (Not working yet)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Shift_j&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Go to the next line and outline the document. (Not working yet)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Shift_k&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Go to the previous line and outline the document. (Not working yet)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;t&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Toggle the toc type: &quot;Con(t)ents/(F)igures/Ta(b)les/(A)nchors/(L)inks&quot;.<br><br>5&nbsp;&nbsp;html export feature:<br><br>&nbsp;&nbsp; In toc window, hit &lt;shift-e&gt; will export .ywtxt to .html file, after<br>&nbsp;&nbsp; saved the new openning buffer of the generated html file, you can<br>&nbsp;&nbsp; open the html in your browser, or even copy and paste it into your<br>&nbsp;&nbsp; office suite to reserve the looking of .ywtxt.<br><br>&nbsp;&nbsp; All strings _{} will become subscript, ^{} superscript. Comment lines<br>&nbsp;&nbsp; will be deleted. [/path/to/file.bmp] will display directly in<br>&nbsp;&nbsp; html(supports jpg, png, bmp and gif).<br><br>&nbsp;&nbsp; Hit &lt;ctrl-j&gt; then % will insert region mark: &quot;^% BEGIN_NOHTML {{{&quot;, &quot;^% END_NOHTML }}}&quot;. Regions between &quot;^% BEGIN_NOHTML {{{&quot;, &quot;^% END_NOHTML }}}&quot; will not be exported to html. Warn!!!: please don't try to nested the region, otherwise you might break up your document!!!<br><br>&nbsp;&nbsp; Hint: You can export the .ywtxt to .html, then paste it into Microsoft Word, then the levels of heading will abey with the html.<br><br>6&nbsp;&nbsp;Misc vars:<br>6.1&nbsp;&nbsp;g:ywtxt_autonumber<br><br>Configuring auto-setting the heading number after creating the heading. Note if you feel it makes vim slow down, you's better disable it.<br>Example: set g:ywtxt_autonumber=0<br><br>6.2&nbsp;&nbsp;g:ywtxt_browserapp<br><br>Configure the browser app for viewing the html after exported.<br>You must make sure browser app is runable.<br>Example: set g:ywtxt_browserapp = 'opera'<br><br>6.3&nbsp;&nbsp;g:ywtxt_tocwidth<br><br>Configuration for toc window's width. Default is the document's 1/4.<br>Example: set g:ywtxt_tocwidth=20<br><br>6.4&nbsp;&nbsp;g:ywtxt_headings_hl<br><br>Specify the colors for headings, you must strictly follow the following pattern:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;\ 'heading level':[['color for dark term', 'color for light term'], ['color for dark gui',], ['color for light gui'],<br><br>otherwise, ywtxt will produce error.&nbsp;&nbsp;Also note that the colors you specify must be ones that vim knows. The setting format is(example is the default setting) is:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;let g:ywtxt_headings_hl = {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\ '1':[['blue', 'blue'],['LightSkyBlue', 'Blue1']],<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\ '2':[['yellow', 'yellow'],['LightGoldenrod', 'DarkGoldenrod']],<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\ '3':[['cyan', 'cyan'],['Cyan1', 'Purple']],<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\ '4':[['red', 'red'],['red1', 'red']],<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\ '5':[['green', 'green'],['PaleGreen', 'ForestGreen']],<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\ '6':[['magenta', 'magenta'],['Aquamarine', 'CadetBlue']],<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\ '7':[['blue', 'blue'],['LightSteelBlue', 'Orchid']],<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\ '8':[['green', 'green'],['LightSalmon', 'RosyBrown']],<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\ '9':[['blue', 'blue'],['LightSkyBlue', 'Blue1']],<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\ '10':[['yellow', 'yellow'],['LightGoldenrod', 'DarkGoldenrod']],<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\}<br><br>You can add more highlighting levels than 10 as you wish.<br><br>TIP: You can assign blank value for the default bg/fg color in bold face.<br><br>let g:ywtxt_headings_hl = {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\ '1':[['', ''],['', '']],<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\ '2':[['', ''],['', '']],<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\ '3':[['', ''],['', '']],<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\ '4':[['', ''],['', '']],<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\ '5':[['', ''],['', '']],<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\ '6':[['', ''],['', '']],<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\ '7':[['', ''],['', '']],<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\ '8':[['', ''],['', '']],<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\ '9':[['', ''],['', '']],<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\ '10':[['', ''],['', '']],<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\}<br><br>6.5&nbsp;&nbsp;g:ywtxt_2htmlpre_usercmds, g:ywtxt_2htmlpost_usercmds<br><br>You can run cmds before and after the 2html routine, format:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;let g:ywtxt_2htmlpre_usercmds=['vim_cmd1', 'vim_cmd2']<br>&nbsp;&nbsp;&nbsp;&nbsp;let g:ywtxt_2htmlpost_usercmds=['vim_cmd3', 'vim_cmd4']<br><br>for example,<br><br>&nbsp;&nbsp;&nbsp;&nbsp;let g:ywtxt_2htmlpre_usercmds=['set nonumber']<br>&nbsp;&nbsp;&nbsp;&nbsp;let g:ywtxt_2htmlpost_usercmds=['set number']<br><br>will make the 2html routine disable the number the lines then back to 'number' option after 2html. However, if you want to do some modification operators, it's very dangrous, use at your own risk!!!<br>7&nbsp;&nbsp;Advanced features<br>7.1&nbsp;&nbsp;Customize section number style:<br><br>For global effect: add a line as the following line in your .vimrc:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;let g:ywtxt_HeadingsPat = '&quot;Chapter #&quot; &quot;Section #&quot; &quot;#.&quot; &quot;#.#&quot;'<br><br>For buffer effect: Add a line into .ywtxt(Must add it from a start of line, no any space allowed before the '%'):<br><br>&nbsp;&nbsp;&nbsp;&nbsp;% HEADINGS &quot;Chapter #&quot; &quot;Section #&quot; &quot;#.&quot; &quot;#.#&quot;<br><br>To immune from the global effect for some files: Add a line into .ywtxt(Must add it from a start of line, no any space allowed before the '%'):<br><br>&nbsp;&nbsp;&nbsp;&nbsp;% HEADINGS NONE<br><br>Explanation:<br><br>If you've defined the headings pattern as the above way, then next time you open the document,&nbsp;&nbsp;ywtxt will use all(here is &quot;Chapter #&quot; &quot;Section #&quot; &quot;#.&quot;) of patterns excluding the last one(here is &quot;#.#&quot;) as the very first level headings' pattern, the last one is used for ywtxt to determine how to auto-generate the following deeper levels, in this example, the 1st level heading will be &quot;Chapter #&nbsp;&nbsp;&quot;, 2nd &quot;Section #&nbsp;&nbsp;&quot;, 3th &quot;#.&nbsp;&nbsp;&quot;, 4th '#.# ', 5th '#.#.# ', and so on(Note the 2 spaces after the heading). You can omit the last one be a ywtxt's known pattern, then ywtxt will auto-generate the levels from the last one you've specified with &quot;#.#&quot;, &quot;#.#.#&quot;, ..., if you want ywtxt to auto-generate with other level, then you have to specify the last one with ywtxt's known heading pattern, e.g.&nbsp;&nbsp;&quot;#&quot;, &quot;#.#&quot;, &quot;#.#.#&quot;... Heading is always followed by 2 spaces(but you don't need to specify the space here, ywtxt always auto-inserts them for you.).<br><br>7.2&nbsp;&nbsp;include other files<br><br>&nbsp;&nbsp;&nbsp;&nbsp;Lines starting with '% input /dir/to/file' will include another file when 2html. The feature is very limited at present, no proper heading syntax supporting.<br><br>7.3&nbsp;&nbsp;Advanced .bib file support:<br><br>&nbsp;&nbsp; Warn: It needs you have some basic knowledge on the bib file and its<br>&nbsp;&nbsp; format, if you haven't heard of it, please skip this section. ywtxt's<br>&nbsp;&nbsp; bib supporting is very limited, now it just fits for me, only works<br>&nbsp;&nbsp; for article class.<br><br>7.3.1&nbsp;&nbsp;Usage:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1) In .ywtxt, you can insert the text like '^[keyword1]' or<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'^[keyword1, 2]' to mean referrig to a single or multiple references.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;keyword1&quot; means the keyword in .bib file.<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2) Add the following 2 lines into your foo.ywtxt file whereever you like:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;% bibfile = '/path/to/your/bib/file.bib'<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;% endbib<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3) In toc window, hit &lt;Shift-b&gt; will generate the Bibliography in<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;between the lines of mensioned above for you.<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Warn!!! everything between the above lines will be deleted, you've been warned!<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;You can<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let g:ywtxt_bib_nump = 0<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;to disable the [&lt;number&gt;] ahead of the reference list.<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4) Under the ^[keyword], use &lt;Tab&gt; to show you the reference name,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;under the lines in the Bibliography section, use &lt;Tab&gt; to go to the<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;citing location in the document.<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Under the ^[keyword] or lines in the Bibliography section, use<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Enter&gt; to jump into the .bib file and located under the<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;corresponding location.<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;After exporting to html, ^[keyword] will change into ^[&lt;num&gt;].<br><br>7.3.2&nbsp;&nbsp;multiple references sections:<br><br>You can use multiple references section, just be sure that every<br>references section has the following two lines:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;% bibfile = '/path/to/your/bib/file.bib'<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;% endbib<br><br>7.3.3&nbsp;&nbsp;.bib format:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;It has some restrictions with the bib file: every item must start at a new line, and be embraced by {}, ended with a comma ','. Every entry must be ended at a separated line with '}', following is an example:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@article{keyword1,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;title = {title},<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;author = {author1 and author2},<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;journal = {journal},<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;volumn = {1},<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;number = {1},<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;year = {2010},<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pages = {1--2},<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@book{keyword2,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;author = {author1 and author2},<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;address = {Nanjing},<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;publisher = {publisher},<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;year = {2010},<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Customize bib entry type:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;To customize your own types of bib entry, you need to let ywvim know all of them firstly:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let g:ywtxt_bib_entrytypes = [&quot;article&quot;, &quot;book&quot;] : <br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Then specify the format for each bib entry that you have specified before, the format is a list: g:ywtxt_bib_entries_{type}, with the items [entry, trailing character] or [entry, heading character, traling character], the default in ywtxt is:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let g:ywtxt_bib_entries_article = [<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\[&quot;author&quot;,&quot;. &quot;],<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\[&quot;title&quot;,&quot;. &quot;],<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\[&quot;journal&quot;,&quot;, &quot;],<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\[&quot;year&quot;,&quot;, &quot;],<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\[&quot;volume&quot;,&quot;&quot;],<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\[&quot;number&quot;,&quot;(&quot;, &quot;) :&quot;],<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\[&quot;pages&quot;,&quot;. &quot;],<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\]<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let s:ywtxt_bib_entries_book = [<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\[&quot;author&quot;,&quot;. &quot;],<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\[&quot;title&quot;,&quot;. &quot;],<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\[&quot;address&quot;,&quot;: &quot;],<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\[&quot;publisher&quot;,&quot;, &quot;],<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\[&quot;year&quot;,&quot;. &quot;],<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\]<br><br>8&nbsp;&nbsp;Thanks<br><br>&nbsp;&nbsp; txtbrowser[<a target="_blank" href="http://www.vim.org/scripts/script.php?script_id=2899">http://www.vim.org/scripts/script.php?script_id=2899</A>]'s author Guoyooo Ping for the inspiration.<br><br>9&nbsp;&nbsp;Todoes:<br>&nbsp;&nbsp; 1) Support to bib input's auto-completion and other input<br>&nbsp;&nbsp; auto-completions<br><br>&nbsp;&nbsp; 2) To integrate vimwiki's table support.</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">install details</td></tr>
+<tr><td>Installation: Extract the downloaded script tarball into ~/.vim/, it has following files:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;plugin/ywtxt.vim<br>&nbsp;&nbsp;&nbsp;&nbsp;ftplugin/ywtxt.vim<br>&nbsp;&nbsp;&nbsp;&nbsp;syntax/ywtxt.vim<br><br>Add the following line into ~/.vimrc:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;au BufRead,BufNewFile *.ywtxt set ft=ywtxt<br><br>Done. If you don't like the file name's suffix .ywtxt, you can change it to whatever you want.<br><br>An Example file mini.ywtxt:<br>=======&gt; mini.ywtxt start &lt;========<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Title <br><br>% HEADINGS &quot;Chapter #&quot; &quot;Section #&quot; &quot;#.&quot; &quot;#.#&quot;<br><br>Chapter 1&nbsp;&nbsp;Hello<br><br>Fig. #.&nbsp;&nbsp;wfwefe<br><br>*[#anchor]<br><br>Section 1&nbsp;&nbsp;Bla<br>% [#anchor]<br><br>Figure #.&nbsp;&nbsp;wfwefef<br>Refer to ^[bibkw]<br>Refer to ^[bibkw3]<br><br>Section 2&nbsp;&nbsp;References<br>% bibfile = './mini.bib'<br>[1] Ref Title 1. Yue Wu 1. Ref Jou 1. 2010. 1(2) :3--4. <br>[2] Ref Title 3. Yue Wu 3. Ref Jou 3. 2010. 1(2) :3--4. <br>% endbib<br><br>Chapter 2&nbsp;&nbsp;Hello2<br><br>Table #.&nbsp;&nbsp;wfwefef<br><br>Section 1&nbsp;&nbsp;Bla2<br><br>Refer to ^[bibkw2]<br>Refer to ^[bibkw]<br>Refer to ^[bibkw3]<br>Refer to the book^[bibkw4].<br><br>Section 2&nbsp;&nbsp;References<br><br>% bibfile = './mini.bib'<br>[1] Ref Title 2. Yue Wu 2. Ref Jou 2. 2010. 1(2) :3--4. <br>[2] Ref Title 1. Yue Wu 1. Ref Jou 1. 2010. 1(2) :3--4. <br>[3] Ref Title 3. Yue Wu 3. Ref Jou 3. 2010. 1(2) :3--4. <br>[4] Yue Wu book. Book1. Pekin: publisher, 2010. <br>% endbib<br><br>% vim:ft=ywtxt:<br>=======&gt; mini.ywtxt end &lt;========<br> <br> An Example file mini.bib:<br>=======&gt; mini.bib start &lt;========<br>@article{bibkw,<br>&nbsp;&nbsp;&nbsp;&nbsp;author = {Yue Wu 1},<br>&nbsp;&nbsp;&nbsp;&nbsp;title = {Ref Title 1},<br>&nbsp;&nbsp;&nbsp;&nbsp;journal = {Ref Jou 1},<br>&nbsp;&nbsp;&nbsp;&nbsp;year = {2010},<br>&nbsp;&nbsp;&nbsp;&nbsp;volume = {1},<br>&nbsp;&nbsp;&nbsp;&nbsp;number = {2},<br>&nbsp;&nbsp;&nbsp;&nbsp;pages = {3--4},<br>}<br>@article{bibkw2,<br>&nbsp;&nbsp;&nbsp;&nbsp;author = {Yue Wu 2},<br>&nbsp;&nbsp;&nbsp;&nbsp;title = {Ref Title 2},<br>&nbsp;&nbsp;&nbsp;&nbsp;journal = {Ref Jou 2},<br>&nbsp;&nbsp;&nbsp;&nbsp;year = {2010},<br>&nbsp;&nbsp;&nbsp;&nbsp;volume = {1},<br>&nbsp;&nbsp;&nbsp;&nbsp;number = {2},<br>&nbsp;&nbsp;&nbsp;&nbsp;pages = {3--4},<br>}<br>@article{bibkw3,<br>&nbsp;&nbsp;&nbsp;&nbsp;author = {Yue Wu 3},<br>&nbsp;&nbsp;&nbsp;&nbsp;title = {Ref Title 3},<br>&nbsp;&nbsp;&nbsp;&nbsp;journal = {Ref Jou 3},<br>&nbsp;&nbsp;&nbsp;&nbsp;year = {2010},<br>&nbsp;&nbsp;&nbsp;&nbsp;volume = {1},<br>&nbsp;&nbsp;&nbsp;&nbsp;number = {2},<br>&nbsp;&nbsp;&nbsp;&nbsp;pages = {3--4},<br>}<br>@book{bibkw4,<br>&nbsp;&nbsp;&nbsp;&nbsp;author = {Yue Wu book},<br>&nbsp;&nbsp;&nbsp;&nbsp;title = {Book1},<br>&nbsp;&nbsp;&nbsp;&nbsp;address = {Pekin},<br>&nbsp;&nbsp;&nbsp;&nbsp;publisher = {publisher},<br>&nbsp;&nbsp;&nbsp;&nbsp;year = {2010},<br>}<br>=======&gt; mini.bib end &lt;========</td></tr>
+<tr><td>&nbsp;</td></tr>
+</table>
+
+<!-- rating table -->
+<form name="rating">
+<input type="hidden" name="script_id" value="2993">
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>rate this script</b></td>
+  <td valign="middle">
+    <input type="radio" name="rating" value="life_changing">Life Changing
+    <input type="radio" name="rating" value="helpful">Helpful
+    <input type="radio" name="rating" value="unfulfilling">Unfulfilling&nbsp;
+    <input type="submit" value="rate">
+  </td>
+</tr>
+</table>
+</form>
+<span class="txth2">script versions</span> (<a href="add_script_version.php?script_id=2993">upload new version</a>)
+<p>
+Click on the package to download.
+<p>
+
+<table cellspacing="2" cellpadding="4" border="0" width="100%">
+<tr class='tableheader'>
+        <th valign="top">package</th>
+    <th valign="top">script version</th>
+    <th valign="top">date</th>
+    <th valign="top">Vim version</th>
+    <th valign="top">user</th>
+    <th valign="top">release notes</th>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13460">ywtxt_0.18.tar.bz2</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.18</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-08-03</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=17429">Yue Wu</a></i></td>
+    <td class="rowodd" valign="top" width="2000">1. Greatly improved: speed issue for large document.<br><br>2. Major changed: foldmethod changed from 'syntax' to 'marker' in documnet for speed issue, so you need to append '{{{' and '}}} to lines '^% BEGIN.*$' and '^% END.*$' respectively to fold your old format of ywtxt documents. Method:<br>:%s/^\(% BEGIN.*\)/\1 {{{/c<br>:%s/^\(% END.*\)/\1 }}}/c<br>Sorry for inconvenience!<br><br>3. Fixed: bug in wrong location when inserting nohtml region.<br><br>4. Changed: heading creation will prompt you to insert heading text.<br><br>5. Improved toc generation speed.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13446">ywtxt_0.17.tar.bz2</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.17</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-07-31</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=17429">Yue Wu</a></i></td>
+    <td class="roweven" valign="top" width="2000">1. Added: In toc window, keymap J, K to move a heading region up/down. D/Y to delete/yank a heading region, and put deleted/yanked content into &quot;z.<br>2. Changed: key map to re-indent heading level in toc window \&gt; -&gt; L; \&lt; -&gt; H<br>3. Changed: Doesn't fold document's headings for speed issue.<br>4. Changed: g:ywtxt_autonumber is on by default, heading creation will set section number.<br>5. Improved: g:ywtxt_headings_hl, now you can assign blank value for the default bg/fg color in bold face.<br>6. Improved: heading syntax.<br>7. Fixed: bug in heading creation.<br>8. Fixed: export2html bug in nohtml region</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13061">ywtxt_0.16_1.tar.bz2</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.16_1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-05-27</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=17429">Yue Wu</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Added support for non_export2html region &quot;^% BEGIN_NOHTML&quot;, &quot;^% END_NOHTML&quot;(keymap: &lt;ctrl-o&gt;%).<br><br>Improved the function for switching the types of toc: &quot;Con(t)ents/(F)igures/Ta(b)les/(A)nchors/(L)inks&quot;<br><br>Fixed non-working keymap for &lt;space&gt; in toc window.<br><br>Fixed reindentation bug with customized headings.<br><br>Fixed a heading level bug with the customized heading which contains &quot;#.&quot;.<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13039">ywtxt_0.16.tar.bz2</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.16</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-05-21</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=17429">Yue Wu</a></i></td>
+    <td class="roweven" valign="top" width="2000">1) Changed the reference region format, please see document for details.<br><br>2) Abandoned var: g:ywtxt_biblioname.<br><br>3) Added operator to create arbitrary heading level(&lt;Ctrl-j&gt; o).<br><br>4) Added syntax for title: The first line in document with a trailing space.<br><br>5) Added book type to the default bib type.<br>[1] Authors. Book name. City: publisher, year.<br><br>6) Changed export-to-html routine, now will generate a tmp file firstly(foo.ywtxt -&gt; foo_ywtxt -&gt; foo_ywtxt.html -&gt; rm foo_ywtxt).<br><br>7) Added vars: g:ywtxt_2htmlpre_usercmds, g:ywtxt_2htmlpost_usercmds, see doc for details(Section 6.5).<br><br>8) Added var: g:ywtxt_bib_nump to set/unset [&lt;number&gt;] in References list when generating references. Default: 1.<br><br>9) Added feature '% input file', to include another file when 2html. The feature is very limited, no proper heading syntax supporting.<br><br>10) Improved syntax for bold/underlined/italic chars in-between * around the Chinese charactors.<br><br>11) Improved the cursor postion in the document after doing operators in toc window.<br><br>12) Fixed locating back to the document after finishing exporting to html.<br><br>13) Fixed non-working of changing bib keywords to numbers while exporting to html.<br><br>14) Fixed a bug of heading recorgnization.<br><br>15) Fixed a bug with the function of the bib file finding.<br><br>16) Fixed error while hit &lt;tab&gt; on '~'.<br><br>17) Fixed error related to &lt;tab&gt; (reference recognization).</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=12890">ywtxt_0.15_6.tar.bz2</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.15_6</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-04-23</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=17429">Yue Wu</a></i></td>
+    <td class="rowodd" valign="top" width="2000">1) Changed, removed and integrated keymaps for creating headings/reference/snip, works both in normal/insert mode(&lt;Ctrl-j&gt;).<br>2) Added var for configuring auto-setting the heading number after creating a heading(set g:ywtxt_autonumber=1). Note it will be slow.<br>3) Improved syntax bug for bold/underlined/italic/.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=12779">ywtxt_0.15_5.tar.bz2</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.15_5</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-04-03</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=17429">Yue Wu</a></i></td>
+    <td class="roweven" valign="top" width="2000">Fixed a bug of location with &lt;space&gt;, thanks Zhang Xin's good catch.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=12778">ywtxt_0.15_4.tar.bz2</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.15_4</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-04-03</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=17429">Yue Wu</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Fixed snip inserting bug which is brought by the last update.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=12777">ywtxt_0.15_3.tar.bz2</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.15_3</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-04-03</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=17429">Yue Wu</a></i></td>
+    <td class="roweven" valign="top" width="2000">1) Added syntax for figure/table(figure #-#.; table #-#.)<br>2) Fixed comment region bug.<br>3) Removed setting to nowrap in toc window.<br>4) Removed '[' as a file name charactor, now &lt;C-x&gt;&lt;C-f&gt; can complete the file name after '['.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=12704">ywtxt_0.15_2.tar.bz2</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.15_2</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-03-25</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=17429">Yue Wu</a></i></td>
+    <td class="rowodd" valign="top" width="2000">1) Improved anchor-locating behavior for Chinese and English.<br>2) Changed highlight for anchor.<br>3) Added keymap for insert mode: _{ _{}</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=12696">ywtxt_0.15_1.tar.bz2</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.15_1</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-03-24</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=17429">Yue Wu</a></i></td>
+    <td class="roweven" valign="top" width="2000">1) Added definition for anchor &quot;[#anchor]&quot;, please see the section cross-references in document. Thanks for Adrien Pied Piérard's suggestion.<br>2) Removed keymap in insert mode: _(_{}). Thanks for Adrien Pied Piérard's suggestion.<br>3) Added syntax highligh for anchor. Thanks for Adrien Pied Piérard's suggestion.<br>4) Removed textwidth setting.<br>5) Suppressed new file msg when open toc window.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=12683">ywtxt_0.15.tar.bz2</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.15</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-03-23</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=17429">Yue Wu</a></i></td>
+    <td class="rowodd" valign="top" width="2000">1) Added var g:ywtxt_browserapp to support opening html directly after export to html, see section &quot;Misc vars&quot; for detail.<br>2) Added support for Cross-references(*[file#anchor]). Please see the section &quot;ywtxt file format&quot; for details.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=12674">ywtxt_0.14_2.tar.bz2</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.14_2</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-03-22</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=17429">Yue Wu</a></i></td>
+    <td class="roweven" valign="top" width="2000">1) Fixed outline/unoutline in toc window.<br>2) Suppressed the not pattern found warning when exporting to html.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=12665">ywtxt_0.14_1.tar.bz2</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.14_1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-03-19</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=17429">Yue Wu</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Fixed toc window not refresh after undo/redo</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=12663">ywtxt_0.14.tar.bz2</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.14</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-03-19</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=17429">Yue Wu</a></i></td>
+    <td class="roweven" valign="top" width="2000">1) Added configurable heading highlighting(g:ywtxt_headings_hl) support. Please see the document for details.<br>2) Added encoding declaration in syntax/ywtxt.vim and ftplugin/ywtxt.vim, to prevent encoding issue. thanks zhangxin's report.<br>3) Improved italic, bold, and underlined definition to allow blank spaces in between.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=12636">ywtxt_0.13_2.tar.bz2</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.13_2</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-03-16</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=17429">Yue Wu</a></i></td>
+    <td class="rowodd" valign="top" width="2000">1) Fixed errors caused by operations on toc window title line. Thanks pengo's catching.<br>2) Speeded up a little for the toc window opening and jumping.<br>3) Added syntax: &quot;&#22270; #.&nbsp;&nbsp;&quot;,&nbsp;&nbsp;&quot;&#34920; #.&nbsp;&nbsp;&quot;.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=12631">ywtxt_0.13_1.tar.bz2</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.13_1</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-03-15</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=17429">Yue Wu</a></i></td>
+    <td class="roweven" valign="top" width="2000">Fixed bug: operations in toc winodow unworking.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=12630">ywtxt_0.13.tar.bz2</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.13</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-03-15</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=17429">Yue Wu</a></i></td>
+    <td class="rowodd" valign="top" width="2000">1) Added feature: Customized heading pattern can be set globally(g:ywtxt_HeadingsPat), please see the advanced features in the document for details.<br>2) Improved: The setting for customized heading pattern needn't force user to specify the last pattern to be a ywtxt known pattern.<br>3) Improved the handling of the title line in toc window.<br>4) Improved uncontinious section support, thanks for zhangxin's catch.<br>5) Ignore the unproper user setting for customized section pattern.<br>6) Fixed a bug in keymap shift-x: Outline/un-outline.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=12620">ywtxt_0.12_3.tar.bz2</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.12_3</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-03-13</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=17429">Yue Wu</a></i></td>
+    <td class="roweven" valign="top" width="2000">Fixed a bug in customize section pattern which has spaces in name.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=12619">ywtxt_0.12_2.tar.bz2</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.12_2</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-03-13</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=17429">Yue Wu</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Fixed a bug in bib generation.<br>Fixed a heading syntax bug.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=12618">ywtxt_0.12_1.tar.bz2</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.12_1</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-03-13</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=17429">Yue Wu</a></i></td>
+    <td class="roweven" valign="top" width="2000">Fixed bug: toc location uncorrectly.<br>Fixed reindent bug.<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=12617">ywtxt_0.12.tar.bz2</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.12</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-03-13</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=17429">Yue Wu</a></i></td>
+    <td class="rowodd" valign="top" width="2000">1) Added feature to customize section number style, please see the advanced features section in document.<br><br>2) Improved snip folding and syntax supportings.<br><br>3) Improved the displaying of toc.<br><br>4) Improved keymap in toc window: Shift-x fold/unfold all.<br>Thanks for pengo's suggestion.<br><br>5) Added warning before trying to generate references region.<br>Thanks for pengo's suggestion.<br><br>6) Improved the uncontinuous headings handling.<br>thanks for pengo's catching.<br><br>7) Changed: Syntax for figure and table to:<br>&quot;Figure #.&nbsp;&nbsp;&quot;<br>&quot;Fig. #.&nbsp;&nbsp;&quot;<br>&quot;Table #.&nbsp;&nbsp;&quot;<br><br>8) Added support on Figure/table of contents. Hit 't' in toc window to toggle<br>toc's type.<br><br>9) Added support for the Multiple reference sections. Please see the<br>advanced feature in document.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=12589">ywtxt_0.11_2.tar.bz2</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.11_2</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-03-10</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=17429">Yue Wu</a></i></td>
+    <td class="roweven" valign="top" width="2000">1) Fixed non-working toc window.<br>2) Fixed references region identification. Thanks for pengo's catching.<br>3) Improved toc window intendation. Thanks for pengo's suggestion.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=12588">ywtxt_0.11_1.tar.bz2</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.11_1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-03-10</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=17429">Yue Wu</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Fixed folding and toc highlighting bugs.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=12587">ywtxt_0.11.tar.bz2</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.11</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-03-10</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=17429">Yue Wu</a></i></td>
+    <td class="roweven" valign="top" width="2000">1) NOTE! Imcompatible changed!!!: heading format changed again till 0.10: &quot;1&nbsp;&nbsp;&quot;, &quot;#.#&nbsp;&nbsp;&quot;(note the following has 2 spaces!)<br>How to upgrade:<br>0.10 user: :call Ywtxt_old2new()&lt;CR&gt; This function will be abandoned in next release.<br>earlier than 0.10 user: :%s/^\(\%(\%(#\|\d\+\)\.\)*\)\(#\|\d\+\)\.\(\s\)/\1\2\3 /g<br>2) snip support. &lt;Leader&gt;I inserts snip, auto-completion supported. See the document for details.<br>3) Added keymaps for toc window: J, K: outline next/previous line.<br>4) Abandoned indentation feature.<br>5) Fixed html export bugs. Thanks for pengo's great catch.<br>6) note and todo strings get highlighted anywhere.<br>7) Added done(DONE) syntax.<br>8) Optimized the toc display.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=12586">ywtxt_0.10_3.tar.bz2</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.10_3</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-03-10</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=17429">Yue Wu</a></i></td>
+    <td class="rowodd" valign="top" width="2000">This will be the last 0.10 series verion, please see all 0.10 series's changelog and the updated document to get how to update. Note again! you can use :call Ywtxt_old2new() then ggVG= to reformat the old version, but please care the inproperly reformat!!! Ywtxt_old2new() will be abandoned in next version! You've been warned.<br>1) Fixed a heading determination error.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=12585">ywtxt_0.10_2.tar.bz2</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.10_2</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-03-10</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=17429">Yue Wu</a></i></td>
+    <td class="roweven" valign="top" width="2000">This will be the last 0.10 series verion, please see all 0.10 series's changelog and the updated document to get how to update. Note again! you can use :call Ywtxt_old2new() then ggVG= to reformat the old version, but please care the inproperly reformat!!! Ywtxt_old2new() will be abandoned in next version! You've been warned.<br>1) Improved heading determination<br>2) Improved Indentation function</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=12584">ywtxt_0.10_1.tar.bz2</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.10_1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-03-09</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=17429">Yue Wu</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Fixed: a serious toc heading bug.<br>Note!!! Please see the version *0.10*'s changelog and the updated document for detailed changes, otherwise ywtxt will not work properly with the older format in the new version!</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=12581">ywtxt_0.10.tar.bz2</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.10</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-03-09</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=17429">Yue Wu</a></i></td>
+    <td class="roweven" valign="top" width="2000">1) Uncompatible Changed!: Heading format changed to &quot;#. &quot;, &quot;&nbsp;&nbsp; #.# &quot;, old user can use :call Ywtxt_old2new() to reformat the old format of ywtxt, note that function Ywtxt_old2new() will abandon in next version.<br>2) Widened: Comment region definition: Lines starts with optional spaces and % considered as comment.<br>3) Changed: Delete comment region when export to html.<br>4) Added: Markup for superscript(^{}) and subscript(_{})<br>5) Added: imap for _(_{}), ^{(^{}) and ^[(^[])<br>6) Added: g:ywtxt_tocwidth for configuration of toc window's width. Thanks for pengo's suggestion.<br>7) Improved: Highlight note and todo strings in headings. Add &quot;&#27880;&#24847;&quot; in note syntax. Thanks for pengo's suggestion.<br>8) Added: markup of &quot;[/path/to/local.pic]&quot; (jpg, png, bmp, gif) can be viewed in exporting html directly.<br>9) Changed: bibliography's name to references.<br>10) Added: Auto Indent.<br>11) Improved: toc window cursorline.<br>12) Improved: reindent func.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=12573">ywtxt_0.9.tar.bz2</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.9</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-03-07</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=17429">Yue Wu</a></i></td>
+    <td class="rowodd" valign="top" width="2000">1) Added simple html export. Hit &lt;Shift-e&gt; in toc window will export .ywtxt to .html, set the references keyword to number in document.<br>2) Added keymap in toc window: &lt;Shift-X&gt; will outline the heading in document.<br>3) Changed definition of keymap &lt;space&gt;: open the heading in document without leaving the toc window.<br>4) Abandoned the :call Ywtxt_GenBibliography() way to generate bibliography, use &lt;Shift-b&gt; in toc window instead.<br>5) Improved reindent function.<br>6) Suppressed the no folding found warning of &lt;tab&gt;.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=12559">ywtxt_0.8.tar.bz2</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.8</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-03-05</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=17429">Yue Wu</a></i></td>
+    <td class="roweven" valign="top" width="2000">1) Changed toc window openning from horizotally to vertically.<br>2) Added syntax for TODO, NOTE.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=12540">ywtxt_0.7.tar.bz2</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.7</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-03-02</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=17429">Yue Wu</a></i></td>
+    <td class="rowodd" valign="top" width="2000">1) Added support and keymaps for bibliography generation and viewing, please see the advancd feature in the document for details.<br>2) Improved the header creation funtion.<br>3) Added syntax for Figure capture.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=12519">ywtxt_0.6.tar.bz2</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.6</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-02-28</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=17429">Yue Wu</a></i></td>
+    <td class="roweven" valign="top" width="2000">1) Added feature: auto number the section numbers in file according to the toc, and added key maps in toc window(S, w, &lt;leader&gt;&lt;tab&gt;, &lt;C-r&gt;, u) and normal file(&lt;leader&gt;&lt;tab&gt;). See the document for details.<br>2) Added syntax for bold(*b*), underline(_u_) and italic(/i/).<br>3) Fixed cursor location of toc window.<br>4) Cleaned some unused vars.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=12513">ywtxt_0.5.tar.bz2</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.5</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-02-27</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=17429">Yue Wu</a></i></td>
+    <td class="rowodd" valign="top" width="2000">1. Improved the toc refresh.<br>2. Removed the dangerous saving operation when changing the level of header.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=12512">ywtxt_0.4.tar.bz2</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.4</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-02-27</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=17429">Yue Wu</a></i></td>
+    <td class="roweven" valign="top" width="2000">Added support for auto-generating numbered sections in toc window.<br>Fixed unprecisely jumping from toc's bug.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=12508">ywtxt_0.3.tar.bz2</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.3</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-02-27</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=17429">Yue Wu</a></i></td>
+    <td class="rowodd" valign="top" width="2000">1) Fixed syntax for headers matching bug.<br>2) Added feature of changing the level of headers with \&lt; and \&gt; in toc window (Warn!: file will get saved!).<br>3) Added keymap &lt;enter&gt;, x for toc window, see the document for detail.<br>4) Added syntax for [keywords,keywords], figures(Fig. #.&lt;space&gt;) and tables(Table #).</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=12505">ywtxt_0.2.tar.bz2</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.2</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-02-26</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=17429">Yue Wu</a></i></td>
+    <td class="roweven" valign="top" width="2000">1) Added highlight for headers(up to 10 levels).<br>2) Fixed toc generation and cursor location bugs.<br>3) Remove normal window key maps for toc window.<br>4) Changed toc window name to the _&lt;file name root&gt;_TOC_<br>5) Added Function for refreshing the toc window(bind it to r in toc window).<br>6) Added key map for normal window: \q&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Close the toc window.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=12502">ywtxt_0.1.tar.bz2</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-02-26</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=17429">Yue Wu</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Initial upload</td>
+</tr>
+</table>
+<!-- finish off the framework -->
+          </td>
+        </tr>
+      </table>
+    </td>
+
+  </tr>
+</table>
+
+<!-- END OF THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr><td colspan="4" bgcolor="#000000"><img src="/images/spacer.gif" height="2" width="1" alt=""></td></tr>
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr>
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+
+    <td align="left" valign="top"><small>
+      If you have questions or remarks about this site, visit the
+      <a href="http://vimonline.sf.net">vimonline development</a> pages.
+      Please use this site responsibly.
+      <br> 
+      
+      Questions about <a href="http://www.vim.org/about.php">Vim</a> should go
+      to the <a href="http://www.vim.org/maillist.php">maillist</a>.
+      Help Bram <a href="http://iccf-holland.org/">help Uganda</a>.
+      </small>
+	&nbsp;
+	&nbsp;
+
+	<!-- Start of StatCounter Code -->
+	<script type="text/javascript" language="javascript">
+	var sc_project=1417324; 
+	var sc_invisible=1; 
+	var sc_partition=11; 
+	var sc_security="d41633bc"; 
+	</script>
+
+	<script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script><noscript><a href="http://www.statcounter.com/" target="_blank"><img  src="http://c12.statcounter.com/counter.php?sc_project=1417324&java=0&security=d41633bc&invisible=0" alt="free tracking" border="0"></a> </noscript>
+	<!-- End of StatCounter Code -->
+          </td>
+
+    <td align="right" valign="top">
+      		<a href="http://sourceforge.net/projects/vim" rel="nofollow"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=8&type=1" width="88" height="31" border="0" alt="SourceForge.net Logo" /></a>
+    </td>
+
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+  </tr>
+
+    
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  
+  </tr>
+</table>
+
+</body>
+</html>
+

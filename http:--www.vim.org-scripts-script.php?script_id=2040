@@ -1,0 +1,372 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+  <link rel="Stylesheet" type="text/css" href="/css/style.css" >
+  <title>tcalc - A small ruby-based RPN-calculator : vim online</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <meta name="KEYWORDS" content="Vim, Vi IMproved, text editor, home, documentation, tips, scripts, news">
+  <link rel="shortcut icon" type="image/x-icon" href="/images/vim_shortcut.ico">
+</head>
+
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff"> 
+
+<!-- HEADER, SPONSOR IMAGE, VIM IMAGE AND BOOK AD -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+  <td class="lightbg">&nbsp;&nbsp;&nbsp;</td>
+  <td class="lightbg" align="left"><a href="/sponsor/index.php"><img src="/images/sponsorvim.gif" alt="sponsor Vim development" border="0"></a></td>
+    <td class="lightbg" align="center"><a href="/index.php"><img src="/images/vim_header.gif" border="0" alt="Vim logo"></a></td>
+    <td class="lightbg" align="right"><a href="http://iccf-holland.org/click5.html"><img src="/images/buyhelplearn.gif" alt="Vim Book Ad" border="0"></a></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="darkbg"><img src="/images/spacer.gif" width="1" height="10" alt=""></td>
+  </tr>
+</table>
+<!-- THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+  <col width="180">
+  <col width="1">
+
+  <tr valign="top">
+    <td class="sidebar">
+      <table width="180" cellpadding="4" cellspacing="0" border="0">
+        <tr valign="top">
+          <td class="sidebar">
+
+<!-- INCLUDE THE PAGE NAVIGATION -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+    <tr>
+        <td><small>not logged in (<a href="/login.php">login</a>)</small></td>
+    </tr>
+    <tr><td>
+<small>&nbsp;</small>
+<form action="http://www.google.com/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-3005259998294962:bvyni59kjr1" />
+    <input type="hidden" name="ie" value="ISO-8859-1" />
+    <input type="text" name="q" size="20" />
+    <br>
+    <input type="submit" name="sa" value="Search" />
+  </div>
+</form>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+    </td></tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="1"></td>
+    </tr>
+    <tr>
+        <td class="darkbg"><img src="/images/spacer.gif" alt='' border="0" height="3"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="2"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/index.php">Home</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/search.php">Advanced search</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/about.php">About Vim</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/community.php">Community</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/news/news.php">News</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/sponsor/index.php">Sponsoring</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/trivia.php">Trivia</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/docs.php">Documentation</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/download.php">Download</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/scripts/index.php">Scripts</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/tips/index.php">Tips</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/account/index.php">My Account</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/huh.php">Site Help</a></td>
+        </tr>
+</table>
+
+            <table width="172" cellpadding="0" cellspacing="0" border="0">
+              <tr><td><img src="/images/spacer.gif" alt="" border="0" width="1" height="8"></td></tr>
+              <tr><td class="darkbg"><img src="/images/spacer.gif" width="1" height="3" alt=""></td></tr>
+            </table>
+            <br>
+
+<!-- INCLUDE THE PAGE SIDEBAR TEXT -->
+&nbsp;
+
+          </td>
+        </tr>
+      </table>
+    </td>
+
+    <td class="darkbg"><img src="/images/spacer.gif" width="1" height="1" border="0" alt=""><br></td>
+    <td>
+      <table width="100%" cellpadding="10" cellspacing="0" border="0" bordercolor="red">
+        <tr>
+          <td valign="top">
+
+<span class="txth1">tcalc : A small ruby-based RPN-calculator</span> 
+
+<br>
+<br>
+
+<!-- karma table -->
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
+  <td>
+    Rating <b>4/1</b>,
+    Downloaded by 1430  </td>
+  <td class="lightbg">
+  <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
+  </td>
+  <td>
+    <a href="http://vim.wikia.com/wiki/Script:2040">Vim wiki</a>
+  </td>  
+</tr>
+</table>
+<p>
+
+<table cellspacing="0" cellpadding="0" border="0">
+<tr><td class="prompt">created by</td></tr>
+<tr><td><a href="/account/profile.php?user_id=4037">Tom Link</a></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">script type</td></tr>
+<tr><td>utility</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">description</td></tr>
+<tr><td>It turns out that ruby is pretty good at maths and deals well with <br>complex or rational numbers etc. Anyway, in certain occasions a postfix <br>syntax and a stack are better suited for calculations than ruby's infix <br>syntax. So, here comes ...<br><br>:TCalc[!]<br>&nbsp;&nbsp;&nbsp;&nbsp;A small ruby-based[*] RPN-calculator, a simple ASCII function <br>&nbsp;&nbsp;&nbsp;&nbsp;plotter, and stack-based playground :-).<br><br>The tcalc.rb script can also be used as a stand-alone calculator (with <br>optional support for curses and readline). Run &quot;tcalc --help&quot; for <br>information on the command-line options.<br><br>Input:<br>&nbsp;&nbsp;&nbsp;&nbsp;- Numbers (anything that starts with &quot;-&quot; or a decimal)<br>&nbsp;&nbsp;&nbsp;&nbsp;- Strings (anything that matches /^&quot;(.*?)&quot;$/)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Be aware that the strings and numbers get evaluated by ruby. <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;You can thus execute ruby code by input like: -1;p'foo'<br>&nbsp;&nbsp;&nbsp;&nbsp;- Methods & constants of the following classes are available:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Float&nbsp;&nbsp;&nbsp;&nbsp;:: <a target="_blank" href="http://www.ruby-doc.org/core/classes/Float.html">http://www.ruby-doc.org/core/classes/Float.html</A><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Complex&nbsp;&nbsp;:: <a target="_blank" href="http://www.ruby-doc.org/core/classes/Complex.html">http://www.ruby-doc.org/core/classes/Complex.html</A><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Rational :: <a target="_blank" href="http://www.ruby-doc.org/core/classes/Rational.html">http://www.ruby-doc.org/core/classes/Rational.html</A><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Integer&nbsp;&nbsp;:: <a target="_blank" href="http://www.ruby-doc.org/core/classes/Integer.html">http://www.ruby-doc.org/core/classes/Integer.html</A><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Matrix&nbsp;&nbsp; :: <a target="_blank" href="http://www.ruby-doc.org/core/classes/Matrix.html">http://www.ruby-doc.org/core/classes/Matrix.html</A><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Vector&nbsp;&nbsp; :: <a target="_blank" href="http://www.ruby-doc.org/core/classes/Vector.html">http://www.ruby-doc.org/core/classes/Vector.html</A><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Math&nbsp;&nbsp;&nbsp;&nbsp; :: <a target="_blank" href="http://www.ruby-doc.org/core/classes/Math.html">http://www.ruby-doc.org/core/classes/Math.html</A><br>&nbsp;&nbsp;&nbsp;&nbsp;- #N (pull the item at position N to the top)<br>&nbsp;&nbsp;&nbsp;&nbsp;- Commands: COMMAND[COUNT][,ARGUMENT]<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- If COUNT is &quot;#&quot;, the top element will be used.<br>&nbsp;&nbsp;&nbsp;&nbsp;- Enter, escape =&gt; exit<br><br>Tokens are separated by blanks (à la forth). The blanks between the <br>words thus are significant.<br></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">install details</td></tr>
+<tr><td>As VIM-plugin:<br>Extract the archive's contents to ~/vimfiles (or ~/.vim).<br><br>Stand-alone ruby script:<br>Copy the file ruby/tcalc.rb to your path (you could also rename it to <br>tcalc).<br><br><br>Also available via git<br><a target="_blank" href="http://github.com/tomtom/tcalc_vim">http://github.com/tomtom/tcalc_vim</A></td></tr>
+<tr><td>&nbsp;</td></tr>
+</table>
+
+<!-- rating table -->
+<form name="rating">
+<input type="hidden" name="script_id" value="2040">
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>rate this script</b></td>
+  <td valign="middle">
+    <input type="radio" name="rating" value="life_changing">Life Changing
+    <input type="radio" name="rating" value="helpful">Helpful
+    <input type="radio" name="rating" value="unfulfilling">Unfulfilling&nbsp;
+    <input type="submit" value="rate">
+  </td>
+</tr>
+</table>
+</form>
+<span class="txth2">script versions</span> (<a href="add_script_version.php?script_id=2040">upload new version</a>)
+<p>
+Click on the package to download.
+<p>
+
+<table cellspacing="2" cellpadding="4" border="0" width="100%">
+<tr class='tableheader'>
+        <th valign="top">package</th>
+    <th valign="top">script version</th>
+    <th valign="top">date</th>
+    <th valign="top">Vim version</th>
+    <th valign="top">user</th>
+    <th valign="top">release notes</th>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=8028">tcalc.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.11</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2007-12-05</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- New words: all?, any?, array_*, and, or, !=<br>- Curses frontend: Show possible completions; map 127 to backspace, F1 <br>to 'ls'; improved handling of cursor keys etc.<br>- Debugger (sort of)<br>- FIX: Nested blocks & more<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=8009">tcalc.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.10</b></td>
+    <td class="roweven" valign="top" nowrap><i>2007-11-30</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
+    <td class="roweven" valign="top" width="2000">- rm,* ... Remove all words<br>- If g:tcalc_lines &lt; 0, use fixed window height.<br>- VIM: use the tcalc window to display plots, lists etc.<br>- FIX: Nested words and some more<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=8000">tcalc.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.9</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2007-11-28</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- FIX: Curses frontend: Display error messages properly<br>- FIX: readline support.<br>- FIX: sort words on completion<br>- Distribute as zip<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=7995">tcalc.vba.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.8</b></td>
+    <td class="roweven" valign="top" nowrap><i>2007-11-27</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
+    <td class="roweven" valign="top" width="2000">- Named arguments: args is a synonym for assert but provides for named <br>arguments.<br>- New words: Sequence/seq, map, mmap, plot (a simple ASCII function <br>plotter), stack_size, stack_empty?, iqueue_size, iqueue_empty?<br>- Syntactic sugar for assignments: VALUE -&gt; VAR<br>- Defined &quot;Array&quot; as a synonym for &quot;group&quot;<br>- &quot;define&quot; command as alternative to the forth-like syntax for defining <br>words<br>- Dynamic binding of words/variables (the words &quot;begin ... end&quot; <br>establish a new scope)<br>- The stack, the input queue, and the dictionary are accessible like <br>words (__STACK__, __IQUEUE__, __WORDS__)<br>- TCalc and tcalc#Calculator take initial tokens as argument.<br>- TCalc! with [!] will reset the stack & input queue.<br>- Completion of partial commands<br>- Readline-support for CLI mode (--no-curses).<br>- Simple key handling for the curses-based frontend<br>- Non-VIM-versons save the history in ~/.tcalc/history.txt<br>- #VAR,METHOD has slightly changed.<br>- TCalc syntax file.<br>- FIX: Command line completion<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=7844">tcalc.vba.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.7</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2007-10-29</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- Comments: /* ... */<br>- New words:<br>&nbsp;&nbsp;&nbsp;&nbsp;- assert: Display an error message if the stack doesn't match the <br>&nbsp;&nbsp;&nbsp;&nbsp;assertion.<br>&nbsp;&nbsp;&nbsp;&nbsp;- validate: Like assert but push a boolean (the result of the check) <br>&nbsp;&nbsp;&nbsp;&nbsp;on the stack.<br>&nbsp;&nbsp;&nbsp;&nbsp;- do: synonym for recapture.<br>&nbsp;&nbsp;&nbsp;&nbsp;- source: load a file (see also g:tcalc_dir)<br>&nbsp;&nbsp;&nbsp;&nbsp;- require: load a ruby library<br>&nbsp;&nbsp;&nbsp;&nbsp;- p: print an object (doesn't do much, but prettyprint seems <br>&nbsp;&nbsp;&nbsp;&nbsp;to have problems)<br>&nbsp;&nbsp;&nbsp;&nbsp;- history (useful when using tcalc as stand-alone calculator)<br>- tcalc.rb can now be used as stand-alone program (a simple <br>curses-based frontend).<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=7832">tcalc.vba.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.6</b></td>
+    <td class="roweven" valign="top" nowrap><i>2007-10-26</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
+    <td class="roweven" valign="top" width="2000">- Included support for rational and complex numbers<br>- Included matrix support <br>- Syntax for pushing arrays [ a b c ... ]<br>- New &quot;at&quot; method to select an item from array-like objects<br>- Removed shortcut variables.<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=7789">tcalc.vba.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.5</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2007-10-12</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- Minor fix: command regexp<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=7765">tcalc.vba.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.4</b></td>
+    <td class="roweven" valign="top" nowrap><i>2007-10-08</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
+    <td class="roweven" valign="top" width="2000">- COUNT can be &quot;#&quot;, in which case the top number on the stack will be <br>used (e.g. &quot;3 dup3&quot; is the same as &quot;3 3 dup#&quot;)<br>- Disabled vars, (, ) commands<br>- Variables are words<br>- New words can be defined in a forth-like manner &quot;:NAME ... ;&quot;<br>- Built-in commands get evaluated before any methods.<br>- Messages can be sent to objects on the stack by &quot;#N,METHOD&quot;, e.g. &quot;1 2 <br>g2 3 #1,&lt;&lt;&quot; yields &quot;[1,2,3]&quot;<br>- The copyN, cN command now means: push a copy of element N.<br>- ( ... ) push unprocessed tokens as array<br>- recapture command (feed an array of unprocessed tokens to the input <br>queue)<br>- if, ifelse commands<br>- delN, deleteN commands<br>- Can push strings (&quot;foo bar&quot;)<br>- &quot;Symbols&quot; à la 'foo (actually a string)<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=7764">tcalc.vba.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.3</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2007-10-07</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- The swap count argument is increased by one (for conformance with the <br>rot command).<br>- Shortcuts are now RPN expression (elements at the stack can be <br>referred to by # (= top element) or #N).<br>- Removed g:tcalc_reverse_display<br>- Positions on the stack can be referred to by #N.<br>- rot works the other way round<br>- d, dup command<br>- clear command<br>- print, hex, HEX, oct, dec, bin, float, format commands<br>- Removed dependency on tlib<br>- Variables; ls, vars, let, =, rm commands<br>- Command line completion for variables and commands<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=7763">tcalc.vba.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.2</b></td>
+    <td class="roweven" valign="top" nowrap><i>2007-10-07</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
+    <td class="roweven" valign="top" width="2000">- Arguments were (not properly) reverted: 12 4 / now yields 3.<br>- The input will be split into tokens, i.e. you can input &quot;1 2 + &lt;cr&gt;&quot; <br>or &quot;1&lt;cr&gt;2&lt;cr&gt;+&lt;cr&gt;&quot;. (Command-line completions doesn't work properly <br>though.)<br>- The syntax has slightly changed: &quot;CmdCount,Arg&quot;, eg, &quot;y3,a&quot;<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=7761">tcalc.vba.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2007-10-07</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Initial upload</td>
+</tr>
+</table>
+<!-- finish off the framework -->
+          </td>
+        </tr>
+      </table>
+    </td>
+
+  </tr>
+</table>
+
+<!-- END OF THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr><td colspan="4" bgcolor="#000000"><img src="/images/spacer.gif" height="2" width="1" alt=""></td></tr>
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr>
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+
+    <td align="left" valign="top"><small>
+      If you have questions or remarks about this site, visit the
+      <a href="http://vimonline.sf.net">vimonline development</a> pages.
+      Please use this site responsibly.
+      <br> 
+      
+      Questions about <a href="http://www.vim.org/about.php">Vim</a> should go
+      to the <a href="http://www.vim.org/maillist.php">maillist</a>.
+      Help Bram <a href="http://iccf-holland.org/">help Uganda</a>.
+      </small>
+	&nbsp;
+	&nbsp;
+
+	<!-- Start of StatCounter Code -->
+	<script type="text/javascript" language="javascript">
+	var sc_project=1417324; 
+	var sc_invisible=1; 
+	var sc_partition=11; 
+	var sc_security="d41633bc"; 
+	</script>
+
+	<script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script><noscript><a href="http://www.statcounter.com/" target="_blank"><img  src="http://c12.statcounter.com/counter.php?sc_project=1417324&java=0&security=d41633bc&invisible=0" alt="free tracking" border="0"></a> </noscript>
+	<!-- End of StatCounter Code -->
+          </td>
+
+    <td align="right" valign="top">
+      		<a href="http://sourceforge.net/projects/vim" rel="nofollow"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=8&type=1" width="88" height="31" border="0" alt="SourceForge.net Logo" /></a>
+    </td>
+
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+  </tr>
+
+    
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  
+  </tr>
+</table>
+
+</body>
+</html>
+

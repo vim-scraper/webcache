@@ -1,0 +1,516 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+  <link rel="Stylesheet" type="text/css" href="/css/style.css" >
+  <title>slimv.vim - SLIME-like Lisp and Clojure REPL inside Vim with Profiling, Hyperspec, Paredit : vim online</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <meta name="KEYWORDS" content="Vim, Vi IMproved, text editor, home, documentation, tips, scripts, news">
+  <link rel="shortcut icon" type="image/x-icon" href="/images/vim_shortcut.ico">
+</head>
+
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff"> 
+
+<!-- HEADER, SPONSOR IMAGE, VIM IMAGE AND BOOK AD -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+  <td class="lightbg">&nbsp;&nbsp;&nbsp;</td>
+  <td class="lightbg" align="left"><a href="/sponsor/index.php"><img src="/images/sponsorvim.gif" alt="sponsor Vim development" border="0"></a></td>
+    <td class="lightbg" align="center"><a href="/index.php"><img src="/images/vim_header.gif" border="0" alt="Vim logo"></a></td>
+    <td class="lightbg" align="right"><a href="http://iccf-holland.org/click5.html"><img src="/images/buyhelplearn.gif" alt="Vim Book Ad" border="0"></a></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="darkbg"><img src="/images/spacer.gif" width="1" height="10" alt=""></td>
+  </tr>
+</table>
+<!-- THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+  <col width="180">
+  <col width="1">
+
+  <tr valign="top">
+    <td class="sidebar">
+      <table width="180" cellpadding="4" cellspacing="0" border="0">
+        <tr valign="top">
+          <td class="sidebar">
+
+<!-- INCLUDE THE PAGE NAVIGATION -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+    <tr>
+        <td><small>not logged in (<a href="/login.php">login</a>)</small></td>
+    </tr>
+    <tr><td>
+<small>&nbsp;</small>
+<form action="http://www.google.com/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-3005259998294962:bvyni59kjr1" />
+    <input type="hidden" name="ie" value="ISO-8859-1" />
+    <input type="text" name="q" size="20" />
+    <br>
+    <input type="submit" name="sa" value="Search" />
+  </div>
+</form>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+    </td></tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="1"></td>
+    </tr>
+    <tr>
+        <td class="darkbg"><img src="/images/spacer.gif" alt='' border="0" height="3"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="2"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/index.php">Home</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/search.php">Advanced search</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/about.php">About Vim</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/community.php">Community</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/news/news.php">News</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/sponsor/index.php">Sponsoring</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/trivia.php">Trivia</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/docs.php">Documentation</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/download.php">Download</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/scripts/index.php">Scripts</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/tips/index.php">Tips</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/account/index.php">My Account</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/huh.php">Site Help</a></td>
+        </tr>
+</table>
+
+            <table width="172" cellpadding="0" cellspacing="0" border="0">
+              <tr><td><img src="/images/spacer.gif" alt="" border="0" width="1" height="8"></td></tr>
+              <tr><td class="darkbg"><img src="/images/spacer.gif" width="1" height="3" alt=""></td></tr>
+            </table>
+            <br>
+
+<!-- INCLUDE THE PAGE SIDEBAR TEXT -->
+&nbsp;
+
+          </td>
+        </tr>
+      </table>
+    </td>
+
+    <td class="darkbg"><img src="/images/spacer.gif" width="1" height="1" border="0" alt=""><br></td>
+    <td>
+      <table width="100%" cellpadding="10" cellspacing="0" border="0" bordercolor="red">
+        <tr>
+          <td valign="top">
+
+<span class="txth1">slimv.vim : SLIME-like Lisp and Clojure REPL inside Vim with Profiling, Hyperspec, Paredit</span> 
+
+<br>
+<br>
+
+<!-- karma table -->
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
+  <td>
+    Rating <b>173/53</b>,
+    Downloaded by 2710  </td>
+  <td class="lightbg">
+  <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
+  </td>
+  <td>
+    <a href="http://vim.wikia.com/wiki/Script:2531">Vim wiki</a>
+  </td>  
+</tr>
+</table>
+<p>
+
+<table cellspacing="0" cellpadding="0" border="0">
+<tr><td class="prompt">created by</td></tr>
+<tr><td><a href="/account/profile.php?user_id=16470">Tamas Kovacs</a></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">script type</td></tr>
+<tr><td>utility</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">description</td></tr>
+<tr><td>Slimv tries to mimic a subset of SLIME's (Superior Lisp Interaction Mode for Emacs) functionality inside Vim on Linux, Windows and Mac OS X. The script defines functions and keybindings to send s-expressions to a console mode Lisp or Clojure REPL (Read-Eval-Print Loop). Slimv runs its own REPL or connects to a running REPL started by a previous Slimv session, the connection is established when the first Slimv command is executed (e.g. an s-expression is evaluated).<br><br>The Lisp REPL buffer can also be opened inside Vim as a Vim buffer with syntax highlighting and autoindenting, Lisp commands may be entered in the command line, just as in a regular REPL. The script also has a basic support for Clojure REPL.<br><br>Slimv supports the same profiling tool that comes with SLIME. The script also has a Common Lisp Hyperspec lookup feature and it is able to lookup symbols in the Clojure API, as well as in JavaDoc. Symbol name completion is supported via Vim's omni-completion based on the hyperspec symbol database.<br><br>Slimv comes with Paredit Mode, which is similar to the functionality of paredit.el in Emacs. Paredit Mode tries to maintain the balanced state of matched characters (parenthesis marks, square brackets, double quotes). Matched characters are inserted and removed in pairs, also when working with a block of text (well, mostly). Slimv also implements many paredit.el s-expression handling functions, like Split/Join/Wrap/Splice. Slurpage and Barfage known from Emacs is also possible but in a different fashion: you don't move the list element in or out of the list, rather you move the opening or closing parenthesis over the element or sub-list.<br><br>Check out the screenshot of Slimv having a clisp REPL buffer:<br><a target="_blank" href="http://img6.imageshack.us/img6/5104/slimvscreenshotx.png">http://img6.imageshack.us/img6/5104/slimvscreenshotx.png</A><br><br>Another screenshot of Slimv running the Clojure Ants demo:<br><a target="_blank" href="http://img21.imageshack.us/img21/3949/slimvants.png">http://img21.imageshack.us/img21/3949/slimvants.png</A><br><br>And this is the symbol name completion in action (no, the pink background is not done by Slimv, this is Vim's default):<br><a target="_blank" href="http://img18.imageshack.us/img18/5859/slimvcompl.png">http://img18.imageshack.us/img18/5859/slimvcompl.png</A><br><br>Here follows a list of Slimv commands, any similarity with SLIME's menu is not coincidental. :)<br>For a more complete description with keybindings see the included documentation.<br><br>Edit commands:<br>&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;Close Form<br>&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;Complete Symbol<br>&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;Paredit Toggle<br><br>Evaluation commands:<br>&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;Eval Defun<br>&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;Eval Last Expression<br>&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;Pprint Eval Last Expression<br>&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;Eval Region<br>&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;Eval Buffer<br>&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;Interactive Eval<br>&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;Undefine Function<br><br>Debug commands:<br>&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;Macroexpand-1<br>&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;Macroexpand<br>&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;Trace<br>&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;Untrace<br>&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;Disassemble<br>&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;Inspect<br><br>Compile commands:<br>&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;Compile Defun<br>&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;Compile and Load File<br>&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;Compile File<br>&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;Compile Region<br><br>Profile commands:<br>&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;Load Profiler<br>&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;Profile<br>&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;Unprofile<br>&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;Unprofile All<br>&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;Show Profiled<br>&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;Profile Report<br>&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;Profile Reset<br><br>Documentation commands:<br>&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;Describe Symbol<br>&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;Apropos<br>&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;Hyperspec<br>&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;Generate Tags<br><br>REPL commands:<br>&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;Connect to Server<br>&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;Send Input<br>&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;Interrupt Lisp Process<br>&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;Close and Send Input<br>&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;Previous Input<br>&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;Next Input<br><br>Many Slimv commands operate on s-expressions or symbols, just like in SLIME. Place the cursor at any location inside the s-expression or on the symbol's name then invoke the command. This builds a command specific form and sends it to the running REPL for evaluation.<br><br>For more information see the documentation coupled with the script, please refer to section &quot;External Utilities&quot; for other useful Lisp editing tips not covered by Slimv.</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">install details</td></tr>
+<tr><td>For the latest development version please visit the Slimv repository:<br><a target="_blank" href="http://bitbucket.org/kovisoft/slimv/">http://bitbucket.org/kovisoft/slimv/</A><br><br>Extract the zip archive into your vimfiles or runtime directory. The archive contains the following files:<br>&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;doc/slimv.txt<br>&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;ftdetect/clojure.vim<br>&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;ftplugin/metering.lisp<br>&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;ftplugin/slimv.py<br>&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;ftplugin/slimv.vim<br>&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;ftplugin/slimv-clhs.vim<br>&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;ftplugin/slimv-cljapi.vim<br>&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;ftplugin/slimv-javadoc.vim<br>&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;ftplugin/clojure/slimv-clojure.vim<br>&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;ftplugin/lisp/slimv-lisp.vim<br>&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;indent/clojure.vim<br>&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;plugin/paredit.vim<br>&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;syntax/clojure/slimv-syntax-clojure.vim<br><br>Slimv works on Windows, Linux and Mac OS X (via Terminal.app), Cygwin is supported (but needs the Windows Python). The script requires the following programs installed on your system:<br>&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;Lisp (any console Common Lisp should be OK) or Clojure<br>&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;Python 2.4 or later<br>&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;Pywin32 is recommended on Windows<br>Slimv tries to autodetect your Lisp/Clojure and Python installation directories. If it fails to determine the correct directories, then you need to enter path definitions into your vimrc file:<br>&nbsp;&nbsp;&nbsp;&nbsp;let g:slimv_python = 'C:/MyPythonDir/python.exe'<br>&nbsp;&nbsp;&nbsp;&nbsp;let g:slimv_lisp = 'C:/MyLispDir/mylisp.exe'<br><br>Should the autodetection for Clojure fail, set the Lisp path to the complete Clojure REPL startup command, something like:<br>&nbsp;&nbsp;&nbsp;&nbsp;let g:slimv_lisp = '&quot;java -cp /myclojuredir/clojure.jar clojure.main&quot;'<br><br>Linux users using terminal emulator other than xterm should define the complete command to run the Slimv client + server. Here follows an example with konsole and clisp:<br>&nbsp;&nbsp;&nbsp;&nbsp;let g:slimv_client = 'python ~/.vim/plugin/slimv.py -r &quot;konsole -T Slimv -e @p @s -l clisp -s&quot;'<br><br>See the included documentation for more complete installation and customization instructions.</td></tr>
+<tr><td>&nbsp;</td></tr>
+</table>
+
+<!-- rating table -->
+<form name="rating">
+<input type="hidden" name="script_id" value="2531">
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>rate this script</b></td>
+  <td valign="middle">
+    <input type="radio" name="rating" value="life_changing">Life Changing
+    <input type="radio" name="rating" value="helpful">Helpful
+    <input type="radio" name="rating" value="unfulfilling">Unfulfilling&nbsp;
+    <input type="submit" value="rate">
+  </td>
+</tr>
+</table>
+</form>
+<span class="txth2">script versions</span> (<a href="add_script_version.php?script_id=2531">upload new version</a>)
+<p>
+Click on the package to download.
+<p>
+
+<table cellspacing="2" cellpadding="4" border="0" width="100%">
+<tr class='tableheader'>
+        <th valign="top">package</th>
+    <th valign="top">script version</th>
+    <th valign="top">date</th>
+    <th valign="top">Vim version</th>
+    <th valign="top">user</th>
+    <th valign="top">release notes</th>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=14848">Slimv076.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.7.6</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2011-01-24</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=16470">Tamas Kovacs</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Cursor position is kept during evaluation, most Slimv commands made silent, bugfixes: find defun start when cursor is on a comment, keep newlines in Compile-Region, infinite loop when selecting form in empty buffer, error when opening REPL buffer with g:slimv_repl_split=0, REPL blinking in insert mode when visualbell is on, added the comma to the list of macro prefix characters (thanks to John Obbele), long/short Windows filename problem for REPL buffer.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=14687">Slimv075.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.7.5</b></td>
+    <td class="roweven" valign="top" nowrap><i>2011-01-05</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=16470">Tamas Kovacs</a></i></td>
+    <td class="roweven" valign="top" width="2000">Added Cygwin compatibility using the Windows Python (thanks to Jerome Baum), display client error message when eval was not successful, form is passed to client via stdin instead of temp file, bugfixes: automatic reconnection when server closed and reopened, delete and yank also via named registers in paredit.vim, handle double quotes in Compile-Defun and Compile-Region.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=14527">Slimv074.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.7.4</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-12-16</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=16470">Tamas Kovacs</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Added autodetection for simple 'clojure' command on Linux, removed duplicates from history of commands entered in REPL buffer (those recallable with &lt;Up&gt;), bugfixes: infinite loop during eval when 'in-package' or 'in-ns' was in comment, Lisp prompt identification problems in REPL buffer, input line duplication in SBCL on Linux (assigned &quot;*debug-io*&quot; to stdin), Eval Defun sometimes missed last &quot;)&quot;.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=14445">Slimv073.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.7.3</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-12-05</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=16470">Tamas Kovacs</a></i></td>
+    <td class="roweven" valign="top" width="2000">Added compatibility with Python 3.x, bugfixes: input lines for REPL were doubled on Linux (thanks to Andrew Hills), however not yet fixed for SBCL, enclose Slimv path in double quotes if contains space, select form when standing on prefix character (e.g. ' or `).</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=14276">Slimv072.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.7.2</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-11-16</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=16470">Tamas Kovacs</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Added autodetection for /usr/local/bin/clojure on Linux, added special characters to Lisp keyword selection (iskeyword), run Vim's original ftplugin/lisp.vim for Clojure filetype, bugfixes: PareditWrap error when g:paredit_shortmaps=1 (thanks to Jon Thacker), buffer selection problems in case of three of more buffers (thanks to Philipp Marek), conflicting keybindings for SlimvGenerateTags, unmap error messages when g:paredit_mode=0.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=14202">Slimv071.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.7.1</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-11-07</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=16470">Tamas Kovacs</a></i></td>
+    <td class="roweven" valign="top" width="2000">Added option g:slimv_browser_cmd for opening hyperspec in a custom webbrowser (on behalf of Andreas Salwasser), added paredit handling for d&lt;motion&gt;, c&lt;motion&gt;, p and P commands: keep paren balance when deleting and pasting text, Paredit Toggle function removes and re-adds paredit keybindings, bugfix: D and C deleted till beginning of line if () or [] found, handle escaped \&quot; characters inside string.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13980">Slimv070.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.7.0</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-10-02</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=16470">Tamas Kovacs</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Added package/namespace support, new way of refreshing the REPL buffer via autocommands, removed 'RUNNING' mode, cursor stays in the current buffer at evaluation, added option g:slimv_updatetime, removed options related to the old way of refreshing (g:slimv_repl_return and g:slimv_repl_wait), removed debug logging, updated Clojure API to version 1.2, extended keyword definition when selecting symbols, bugfix: defmacro detection problem (again).</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13810">Slimv063.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.6.3</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-09-11</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=16470">Tamas Kovacs</a></i></td>
+    <td class="roweven" valign="top" width="2000">Added option to return cursor to the editor window from REPL buffer after evaluating an s-expression, Wrap: if standing on a paren then wrap the whole s-expression, Wrap selection: exit visual mode after command, Bugfixes: inserting double quotes in paredit mode (like &quot;\&quot;&quot;), dd in paredit mode when unbalanced form is inside comment, reopen REPL buffer after closing it via &quot;:q&quot;, comment and string detection error with noignorecase setting, wrong positioning when moving parenthesis to the right, defmacro detection problem, paredit wrap selection missed last character when 'selection' was not &quot;exclusive&quot;.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13151">Slimv062.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.6.2</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-06-09</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=16470">Tamas Kovacs</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Added support for Mac OS X via Terminal.app (on behalf of Vlad Hanciuta), added string &quot;clj&quot; as a detector for Clojure (by Vlad Hanciuta), bugfixes: paredit wrap function missed last character when 'selection' was not &quot;exclusive&quot; (thanks to Marcin Fatyga), input was stuck inside SBCL debugger (on behalf of Philipp Marek and Dmitry Petukhov), occasional error messages during REPL buffer update, REPL menu was sometimes missing, occasional command line color problems.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=12909">Slimv061.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.6.1</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-04-27</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=16470">Tamas Kovacs</a></i></td>
+    <td class="roweven" valign="top" width="2000">Added Split/Join/Wrap/Splice functions to Paredit Mode. Bugfixes: delete commands put erased characters into yank buffer, D does not delete whole line.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=12829">Slimv060.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.6.0</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-04-14</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=16470">Tamas Kovacs</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Added paredit mode, set wrap for REPL buffer.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=12388">Slimv056.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.5.6</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-02-15</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=16470">Tamas Kovacs</a></i></td>
+    <td class="roweven" valign="top" width="2000">Improved REPL buffer response time, added debug log flushing frequency, bugfix: early exit of REPL refresh mode on some machines.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=12039">Slimv055.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.5.5</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-01-09</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=16470">Tamas Kovacs</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Updated Clojure API to 1.1, expand tilde-prefix to home directory on Linux, autodetect Clojure in the user home directory on Linux.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=11733">Slimv054.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.5.4</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-11-15</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=16470">Tamas Kovacs</a></i></td>
+    <td class="roweven" valign="top" width="2000">Added autodetection for clojure-contrib.jar and Clozure CL, applied lisp_rainbow to Clojure's [], renamed Clojure indent plugin to clojure.vim, switched on lisp indentation for Clojure files.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=10736">Slimv053.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.5.3</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-06-04</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=16470">Tamas Kovacs</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Added Interrupt-Lisp-Process command, added mapping for the REPL menu, added special forms to Clojre API lookup, bugfixes: put cursor after the last character in insert mode when refreshing REPL buffer, fixed some Ctrl-C handling problems.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=10553">Slimv052.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.5.2</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-05-06</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=16470">Tamas Kovacs</a></i></td>
+    <td class="roweven" valign="top" width="2000">Adapted Clojure API lookup and JAR autodetection to version 1.0, Complete-Symbol moved to separate Edit submenu, added Close-Form command.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=10446">Slimv051.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.5.1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-04-24</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=16470">Tamas Kovacs</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Added symbol name completion based on the Hyperspec database.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=10420">Slimv050.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.5.0</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-04-19</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=16470">Tamas Kovacs</a></i></td>
+    <td class="roweven" valign="top" width="2000">Major project reorganization: Slimv is now a Lisp and Clojure filetype plugin; added Common Lisp Hyperspec, Clojure API and JavaDoc lookup; separate menu for REPL buffer; menu items work in every Vim mode; fixed mark 's usage bug.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=10282">Slimv041.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.4.1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-03-25</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=16470">Tamas Kovacs</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Added profiler support for SBCL, new commands: Show Profiled/Send Input/Close and Send Input/Previous Input/Next Input, highlight error messages.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=10263">Slimv040.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.4.0</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-03-22</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=16470">Tamas Kovacs</a></i></td>
+    <td class="roweven" valign="top" width="2000">Added SLIME's profiling tool with support from Slimv, added command to generate tags file, fixed eval problems of large buffers, fixed Compile And Load filename problems with '&#039 on Windows, recycle old REPL temporary file at next server startup.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=10230">Slimv030.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.3.0</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-03-16</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=16470">Tamas Kovacs</a></i></td>
+    <td class="rowodd" valign="top" width="2000">REPL buffer enhancements: added syntax highlighting and automatic indentation, it is possible to enter a multi-line command, Ctrl-C is working; server REPL window performance enhancement on Linux.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=10140">Slimv022.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.2.2</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-03-08</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=16470">Tamas Kovacs</a></i></td>
+    <td class="roweven" valign="top" width="2000">Fixed REPL input and output mix-up problems, evaluation performance enhancement, corrected some more macroexpand problems.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=10111">Slimv021.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.2.1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-03-04</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=16470">Tamas Kovacs</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Added basic Clojure support, fixed some macroexpand and REPL refresh problems.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=10062">Slimv020.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.2.0</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-02-28</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=16470">Tamas Kovacs</a></i></td>
+    <td class="roweven" valign="top" width="2000">Major update: Lisp REPL inside a Vim buffer</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=10004">Slimv014.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.1.4</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-02-21</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=16470">Tamas Kovacs</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Ctrl+C is propagated to Lisp REPL, so it is possible to interrupt a running program. Bugfix: delayed display of last line in REPL window on Linux.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=9991">Slimv013.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.1.3</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-02-17</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=16470">Tamas Kovacs</a></i></td>
+    <td class="roweven" valign="top" width="2000">Handle DOS and Unix style line endings on Windows, don't write logfile when debug level not set</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=9959">Slimv012.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.1.2</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-02-12</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=16470">Tamas Kovacs</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Windows users do not need pywin32 anymore</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=9914">Slimv.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.1.1</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-02-04</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=16470">Tamas Kovacs</a></i></td>
+    <td class="roweven" valign="top" width="2000">Corrected memory fill up problem after a long REPL session.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=9892">Slimv.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-01-31</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=16470">Tamas Kovacs</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Initial upload</td>
+</tr>
+</table>
+<!-- finish off the framework -->
+          </td>
+        </tr>
+      </table>
+    </td>
+
+  </tr>
+</table>
+
+<!-- END OF THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr><td colspan="4" bgcolor="#000000"><img src="/images/spacer.gif" height="2" width="1" alt=""></td></tr>
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr>
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+
+    <td align="left" valign="top"><small>
+      If you have questions or remarks about this site, visit the
+      <a href="http://vimonline.sf.net">vimonline development</a> pages.
+      Please use this site responsibly.
+      <br> 
+      
+      Questions about <a href="http://www.vim.org/about.php">Vim</a> should go
+      to the <a href="http://www.vim.org/maillist.php">maillist</a>.
+      Help Bram <a href="http://iccf-holland.org/">help Uganda</a>.
+      </small>
+	&nbsp;
+	&nbsp;
+
+	<!-- Start of StatCounter Code -->
+	<script type="text/javascript" language="javascript">
+	var sc_project=1417324; 
+	var sc_invisible=1; 
+	var sc_partition=11; 
+	var sc_security="d41633bc"; 
+	</script>
+
+	<script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script><noscript><a href="http://www.statcounter.com/" target="_blank"><img  src="http://c12.statcounter.com/counter.php?sc_project=1417324&java=0&security=d41633bc&invisible=0" alt="free tracking" border="0"></a> </noscript>
+	<!-- End of StatCounter Code -->
+          </td>
+
+    <td align="right" valign="top">
+      		<a href="http://sourceforge.net/projects/vim" rel="nofollow"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=8&type=1" width="88" height="31" border="0" alt="SourceForge.net Logo" /></a>
+    </td>
+
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+  </tr>
+
+    
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  
+  </tr>
+</table>
+
+</body>
+</html>
+

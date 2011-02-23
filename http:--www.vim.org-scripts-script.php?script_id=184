@@ -1,0 +1,444 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+  <link rel="Stylesheet" type="text/css" href="/css/style.css" >
+  <title>vtreeexplorer - tree based file explorer - the original : vim online</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <meta name="KEYWORDS" content="Vim, Vi IMproved, text editor, home, documentation, tips, scripts, news">
+  <link rel="shortcut icon" type="image/x-icon" href="/images/vim_shortcut.ico">
+</head>
+
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff"> 
+
+<!-- HEADER, SPONSOR IMAGE, VIM IMAGE AND BOOK AD -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+  <td class="lightbg">&nbsp;&nbsp;&nbsp;</td>
+  <td class="lightbg" align="left"><a href="/sponsor/index.php"><img src="/images/sponsorvim.gif" alt="sponsor Vim development" border="0"></a></td>
+    <td class="lightbg" align="center"><a href="/index.php"><img src="/images/vim_header.gif" border="0" alt="Vim logo"></a></td>
+    <td class="lightbg" align="right"><a href="http://iccf-holland.org/click5.html"><img src="/images/buyhelplearn.gif" alt="Vim Book Ad" border="0"></a></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="darkbg"><img src="/images/spacer.gif" width="1" height="10" alt=""></td>
+  </tr>
+</table>
+<!-- THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+  <col width="180">
+  <col width="1">
+
+  <tr valign="top">
+    <td class="sidebar">
+      <table width="180" cellpadding="4" cellspacing="0" border="0">
+        <tr valign="top">
+          <td class="sidebar">
+
+<!-- INCLUDE THE PAGE NAVIGATION -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+    <tr>
+        <td><small>not logged in (<a href="/login.php">login</a>)</small></td>
+    </tr>
+    <tr><td>
+<small>&nbsp;</small>
+<form action="http://www.google.com/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-3005259998294962:bvyni59kjr1" />
+    <input type="hidden" name="ie" value="ISO-8859-1" />
+    <input type="text" name="q" size="20" />
+    <br>
+    <input type="submit" name="sa" value="Search" />
+  </div>
+</form>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+    </td></tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="1"></td>
+    </tr>
+    <tr>
+        <td class="darkbg"><img src="/images/spacer.gif" alt='' border="0" height="3"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="2"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/index.php">Home</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/search.php">Advanced search</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/about.php">About Vim</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/community.php">Community</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/news/news.php">News</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/sponsor/index.php">Sponsoring</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/trivia.php">Trivia</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/docs.php">Documentation</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/download.php">Download</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/scripts/index.php">Scripts</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/tips/index.php">Tips</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/account/index.php">My Account</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/huh.php">Site Help</a></td>
+        </tr>
+</table>
+
+            <table width="172" cellpadding="0" cellspacing="0" border="0">
+              <tr><td><img src="/images/spacer.gif" alt="" border="0" width="1" height="8"></td></tr>
+              <tr><td class="darkbg"><img src="/images/spacer.gif" width="1" height="3" alt=""></td></tr>
+            </table>
+            <br>
+
+<!-- INCLUDE THE PAGE SIDEBAR TEXT -->
+&nbsp;
+
+          </td>
+        </tr>
+      </table>
+    </td>
+
+    <td class="darkbg"><img src="/images/spacer.gif" width="1" height="1" border="0" alt=""><br></td>
+    <td>
+      <table width="100%" cellpadding="10" cellspacing="0" border="0" bordercolor="red">
+        <tr>
+          <td valign="top">
+
+<span class="txth1">vtreeexplorer : tree based file explorer - the original</span> 
+
+<br>
+<br>
+
+<!-- karma table -->
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
+  <td>
+    Rating <b>739/237</b>,
+    Downloaded by 13673  </td>
+  <td class="lightbg">
+  <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
+  </td>
+  <td>
+    <a href="http://vim.wikia.com/wiki/Script:184">Vim wiki</a>
+  </td>  
+</tr>
+</table>
+<p>
+
+<table cellspacing="0" cellpadding="0" border="0">
+<tr><td class="prompt">created by</td></tr>
+<tr><td><a href="/account/profile.php?user_id=89">scott urban</a></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">script type</td></tr>
+<tr><td>utility</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">description</td></tr>
+<tr><td>Creates a tree based file explorer within vim.<br><br>This is like the directory explorer plugin that ships with vim, but instead of presenting just one directory at a time, this plugin present portions of the filesystem hierarch in a tree view.&nbsp;&nbsp;This type of view should be familiar from modern graphical file managers.&nbsp;&nbsp;This explorer persents navigation, exploration, and opening of files only -&nbsp;&nbsp;unlike the standard directory explorer that allow you to delete and rename files.&nbsp;&nbsp; This a handy tool for becoming familiar with source trees.<br><br><br>Feature summary:<br>- directories are foldable (fold markers are highlighted invisible)<br>- directories and links are syntax highlighted<br>- open a file in a new window<br>- mappings for naviagation (keyboard and mouse) - goto parent, change dir, go up, cd to home, refesh, etc<br>- lazy loading of directory structure - one directory at a time.&nbsp;&nbsp;Recursive expansion also available.<br><br>Caveats:<br>May not work well for obscure systems - unix and windows work well.&nbsp;&nbsp;Please send bugs or patches.<br><br>This is a reimplementation of the treeexplorerer (see <a target="_blank" href="http://vim.sourceforge.net/scripts/script.php?script_id=183">http://vim.sourceforge.net/scripts/script.php?script_id=183</A> ) that doesn't require perl or the tree command - it's pure vim.<br><br>Scott</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">install details</td></tr>
+<tr><td>1. un-gzip, untar in your $HOME/.vim, $VIMRUNTIME, or equivalent directories.&nbsp;&nbsp;Or un-gzip and un-tar and source the vtreeexplorer.vim file to test.<br><br>2. you can add the help to your help index with :helptags ~/.vim/doc (if you put the files there).<br><br> :VTreeExplore<br>&nbsp;&nbsp; or<br> :VSTreeExplore<br><br>quick help is at top of window<br><br>See vtreeexplorer.txt of :help vtreeexplorer (if you did :helptags above) for more detailed help.<br></td></tr>
+<tr><td>&nbsp;</td></tr>
+</table>
+
+<!-- rating table -->
+<form name="rating">
+<input type="hidden" name="script_id" value="184">
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>rate this script</b></td>
+  <td valign="middle">
+    <input type="radio" name="rating" value="life_changing">Life Changing
+    <input type="radio" name="rating" value="helpful">Helpful
+    <input type="radio" name="rating" value="unfulfilling">Unfulfilling&nbsp;
+    <input type="submit" value="rate">
+  </td>
+</tr>
+</table>
+</form>
+<span class="txth2">script versions</span> (<a href="add_script_version.php?script_id=184">upload new version</a>)
+<p>
+Click on the package to download.
+<p>
+
+<table cellspacing="2" cellpadding="4" border="0" width="100%">
+<tr class='tableheader'>
+        <th valign="top">package</th>
+    <th valign="top">script version</th>
+    <th valign="top">date</th>
+    <th valign="top">Vim version</th>
+    <th valign="top">user</th>
+    <th valign="top">release notes</th>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=8097">vtreeexplorer-1.28.tar.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.28</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2007-12-28</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=89">scott urban</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Added 'O' command which replaces explorer window with editing of file when activated on file in tree - idea from Brian Doyle.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=7928">vtreeexplorer-1.27.tar.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.27</b></td>
+    <td class="roweven" valign="top" nowrap><i>2007-11-10</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=89">scott urban</a></i></td>
+    <td class="roweven" valign="top" width="2000">Add feature where files and directories matching global variable g:treeExplHidePattern will be not shown.&nbsp;&nbsp;Can be updated at anytime.&nbsp;&nbsp;Hiding toggled with the existing mechanism. Thanks to Vaclav Kulakovsky for the idea and patch.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=7927">vtreeexplorer-1.26.tar.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.26</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2007-11-10</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=89">scott urban</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Fix for bug that occurs when opening a file after splitting the vtree window. Thanks to genelisp/isaac</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=7926">vtreeexplorer-1.25.tar.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.25</b></td>
+    <td class="roweven" valign="top" nowrap><i>2007-11-10</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=89">scott urban</a></i></td>
+    <td class="roweven" valign="top" width="2000">Added support for tabs with the 'e' shortcut - thanks to Krzysztof Ko&#347;ciuszkiewicz</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=6086">vtreeexplorer-1.24.tar.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.24</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2006-08-21</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=89">scott urban</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Don't clobber yank register, fixes for vim 7, misc fixes.&nbsp;&nbsp;Thanks to A. Kruize, D. Mayle, M. Grentel</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=4709">vtreeexplorer-1.23.tar.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.23</b></td>
+    <td class="roweven" valign="top" nowrap><i>2005-10-30</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=89">scott urban</a></i></td>
+    <td class="roweven" valign="top" width="2000">Fixes for functionality on windows.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=4705">vtreeexplorer-1.22.tar.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.22</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2005-10-28</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=89">scott urban</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- bug fix for vim6 - thanks to Steve Hall<br>- avoid register clobbering - thanks to Bindu Wavell</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=4704">vtreeexplorer-1.21.tar.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.21</b></td>
+    <td class="roweven" valign="top" nowrap><i>2005-10-27</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=89">scott urban</a></i></td>
+    <td class="roweven" valign="top" width="2000">- more compact default layout (width of tree layout is customizable)<br>- updated contact info</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=3740">vtreeexplorer-1.20.tar.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.20</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2004-12-30</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=89">scott urban</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Auto-loading for TreeExplorer buffer type - useful if you save and restore a session with the explorer in it. Updated email address.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=1672">vtreeexplorer-1.19.tar.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.19</b></td>
+    <td class="roweven" valign="top" nowrap><i>2003-01-26</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=89">scott urban</a></i></td>
+    <td class="roweven" valign="top" width="2000">Fix for filenames that contain '#' - thanks to Klaus Fabritius.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=1223">vtreeexplorer.tar.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.16</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2002-09-19</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=89">scott urban</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Minor fix when opening modified buffer that is&nbsp;&nbsp;already open in more than 1 window - Yegappan Lakshman</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=1043">vtreeexplorer.tar.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.15</b></td>
+    <td class="roweven" valign="top" nowrap><i>2002-07-23</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=89">scott urban</a></i></td>
+    <td class="roweven" valign="top" width="2000">Syntax bug - must have hit&nbsp;&nbsp;'J' instead of 'j' at some point.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=1041">vtreeexplorer.tar.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.14</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2002-07-22</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=89">scott urban</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Add mapping for mouse button on tree - like 'open' (thanks to Douglas Potts).</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=604">vtreeexplorer.tar.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.13</b></td>
+    <td class="roweven" valign="top" nowrap><i>2002-02-17</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=89">scott urban</a></i></td>
+    <td class="roweven" valign="top" width="2000">Bugfix for VSTreeExplore - thanks to Benoit Cerrina<br>Added help documenation.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=493">vtreeexplorer.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.10</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2002-01-18</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=89">scott urban</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Added directory sorting and D mapping to toggle between 3 modes. Highlighting change for links. Support for opening more than one tree explorer at once.&nbsp;&nbsp;Code cleanups and factoring.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=489">vtreeexplorer.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.9</b></td>
+    <td class="roweven" valign="top" nowrap><i>2002-01-17</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=89">scott urban</a></i></td>
+    <td class="roweven" valign="top" width="2000">Added ~ to chars escaped in file names. Suppressed message output. Handle when top dir is of the form C:\ for dos/win systems.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=488">vtreeexplorer.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.8</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2002-01-17</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=89">scott urban</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Changed recursive expand from E to X mapping. Added E mapping to open regular file explorer on cursor dir.&nbsp;&nbsp;Added :CD command to switch to direcotry (useful maybe to CD: D: on windows?) - still some escaping bugs on that one.&nbsp;&nbsp;Fixed bug for dirs/files that start with tree parts. Better escaping of file/dir names. Other minor fixes and clean ups.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=486">vtreeexplorer.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.7</b></td>
+    <td class="roweven" valign="top" nowrap><i>2002-01-17</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=89">scott urban</a></i></td>
+    <td class="roweven" valign="top" width="2000">Added command to refresh cursor dir.&nbsp;&nbsp;Added command to recursively expand subdirs of cursor dir (caution: this could take a long time for big subdir trees).&nbsp;&nbsp;Changed the hidded files toggle to refresh current dir after. Fixes for windows. Other minor fixes. Using CVS version numbers now, sorry for the jump.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=481">vtreeexplorer.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.01</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2002-01-16</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=89">scott urban</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Fixed problem with esaping dir names with spaces - still some issues with using it in windows.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=480">vtreeexplorer.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.0</b></td>
+    <td class="roweven" valign="top" nowrap><i>2002-01-16</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=89">scott urban</a></i></td>
+    <td class="roweven" valign="top" width="2000">Initial upload</td>
+</tr>
+</table>
+<!-- finish off the framework -->
+          </td>
+        </tr>
+      </table>
+    </td>
+
+  </tr>
+</table>
+
+<!-- END OF THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr><td colspan="4" bgcolor="#000000"><img src="/images/spacer.gif" height="2" width="1" alt=""></td></tr>
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr>
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+
+    <td align="left" valign="top"><small>
+      If you have questions or remarks about this site, visit the
+      <a href="http://vimonline.sf.net">vimonline development</a> pages.
+      Please use this site responsibly.
+      <br> 
+      
+      Questions about <a href="http://www.vim.org/about.php">Vim</a> should go
+      to the <a href="http://www.vim.org/maillist.php">maillist</a>.
+      Help Bram <a href="http://iccf-holland.org/">help Uganda</a>.
+      </small>
+	&nbsp;
+	&nbsp;
+
+	<!-- Start of StatCounter Code -->
+	<script type="text/javascript" language="javascript">
+	var sc_project=1417324; 
+	var sc_invisible=1; 
+	var sc_partition=11; 
+	var sc_security="d41633bc"; 
+	</script>
+
+	<script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script><noscript><a href="http://www.statcounter.com/" target="_blank"><img  src="http://c12.statcounter.com/counter.php?sc_project=1417324&java=0&security=d41633bc&invisible=0" alt="free tracking" border="0"></a> </noscript>
+	<!-- End of StatCounter Code -->
+          </td>
+
+    <td align="right" valign="top">
+      		<a href="http://sourceforge.net/projects/vim" rel="nofollow"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=8&type=1" width="88" height="31" border="0" alt="SourceForge.net Logo" /></a>
+    </td>
+
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+  </tr>
+
+    
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  
+  </tr>
+</table>
+
+</body>
+</html>
+

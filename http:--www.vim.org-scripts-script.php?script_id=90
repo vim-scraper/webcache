@@ -1,0 +1,716 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+  <link rel="Stylesheet" type="text/css" href="/css/style.css" >
+  <title>vcscommand.vim - CVS/SVN/SVK/git/hg/bzr integration plugin : vim online</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <meta name="KEYWORDS" content="Vim, Vi IMproved, text editor, home, documentation, tips, scripts, news">
+  <link rel="shortcut icon" type="image/x-icon" href="/images/vim_shortcut.ico">
+</head>
+
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff"> 
+
+<!-- HEADER, SPONSOR IMAGE, VIM IMAGE AND BOOK AD -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+  <td class="lightbg">&nbsp;&nbsp;&nbsp;</td>
+  <td class="lightbg" align="left"><a href="/sponsor/index.php"><img src="/images/sponsorvim.gif" alt="sponsor Vim development" border="0"></a></td>
+    <td class="lightbg" align="center"><a href="/index.php"><img src="/images/vim_header.gif" border="0" alt="Vim logo"></a></td>
+    <td class="lightbg" align="right"><a href="http://iccf-holland.org/click5.html"><img src="/images/buyhelplearn.gif" alt="Vim Book Ad" border="0"></a></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="darkbg"><img src="/images/spacer.gif" width="1" height="10" alt=""></td>
+  </tr>
+</table>
+<!-- THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+  <col width="180">
+  <col width="1">
+
+  <tr valign="top">
+    <td class="sidebar">
+      <table width="180" cellpadding="4" cellspacing="0" border="0">
+        <tr valign="top">
+          <td class="sidebar">
+
+<!-- INCLUDE THE PAGE NAVIGATION -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+    <tr>
+        <td><small>not logged in (<a href="/login.php">login</a>)</small></td>
+    </tr>
+    <tr><td>
+<small>&nbsp;</small>
+<form action="http://www.google.com/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-3005259998294962:bvyni59kjr1" />
+    <input type="hidden" name="ie" value="ISO-8859-1" />
+    <input type="text" name="q" size="20" />
+    <br>
+    <input type="submit" name="sa" value="Search" />
+  </div>
+</form>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+    </td></tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="1"></td>
+    </tr>
+    <tr>
+        <td class="darkbg"><img src="/images/spacer.gif" alt='' border="0" height="3"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="2"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/index.php">Home</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/search.php">Advanced search</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/about.php">About Vim</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/community.php">Community</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/news/news.php">News</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/sponsor/index.php">Sponsoring</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/trivia.php">Trivia</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/docs.php">Documentation</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/download.php">Download</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/scripts/index.php">Scripts</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/tips/index.php">Tips</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/account/index.php">My Account</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/huh.php">Site Help</a></td>
+        </tr>
+</table>
+
+            <table width="172" cellpadding="0" cellspacing="0" border="0">
+              <tr><td><img src="/images/spacer.gif" alt="" border="0" width="1" height="8"></td></tr>
+              <tr><td class="darkbg"><img src="/images/spacer.gif" width="1" height="3" alt=""></td></tr>
+            </table>
+            <br>
+
+<!-- INCLUDE THE PAGE SIDEBAR TEXT -->
+&nbsp;
+
+          </td>
+        </tr>
+      </table>
+    </td>
+
+    <td class="darkbg"><img src="/images/spacer.gif" width="1" height="1" border="0" alt=""><br></td>
+    <td>
+      <table width="100%" cellpadding="10" cellspacing="0" border="0" bordercolor="red">
+        <tr>
+          <td valign="top">
+
+<span class="txth1">vcscommand.vim : CVS/SVN/SVK/git/hg/bzr integration plugin</span> 
+
+<br>
+<br>
+
+<!-- karma table -->
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
+  <td>
+    Rating <b>2935/1125</b>,
+    Downloaded by 40433  </td>
+  <td class="lightbg">
+  <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
+  </td>
+  <td>
+    <a href="http://vim.wikia.com/wiki/Script:90">Vim wiki</a>
+  </td>  
+</tr>
+</table>
+<p>
+
+<table cellspacing="0" cellpadding="0" border="0">
+<tr><td class="prompt">created by</td></tr>
+<tr><td><a href="/account/profile.php?user_id=241">Bob Hiestand</a></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">script type</td></tr>
+<tr><td>utility</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">description</td></tr>
+<tr><td>VIM 7 plugin useful for manipulating files controlled by CVS, SVN, SVK, git, bzr, and hg within VIM, including committing changes and performing diffs using the vimdiff system.&nbsp;&nbsp;Keywords:&nbsp;&nbsp;bazaar bzr cvs CVS cvscommand git mercurial hg subversion SVN svk vcscommand<br><br>The source for this plugin is available in git at <a target="_blank" href="git://repo.or.cz/vcscommand">git://repo.or.cz/vcscommand</A> .&nbsp;&nbsp;A web front end is available at <a target="_blank" href="http://repo.or.cz/w/vcscommand.git">http://repo.or.cz/w/vcscommand.git</A> .<br><br>Please submit any issues at <a target="_blank" href="http://code.google.com/p/vcscommand/">http://code.google.com/p/vcscommand/</A><br></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">install details</td></tr>
+<tr><td>If you are upgrading from the cvscommand.vim script, remove the cvscommand.vim plugin and the cvscommand.txt help file from your system before installing this version.&nbsp;&nbsp;Also, read the CHANGES.txt file to learn about changes since cvscommand.vim.<br><br>For Vim 7:<br><br>&nbsp;&nbsp;Unzip the installation file.<br>&nbsp;&nbsp;Move the vcscommand.vim, vcscvs.vim, vcssvn.vim, vcssvk.vim, and vcsgit.vim scripts into your plugin directory.<br>&nbsp;&nbsp;Move the vcscommand.txt file into your doc directory and use the ':helptags' command to add it to your help directory (:help add-local-help).<br><br>Optionally, you can move the syntax scripts into your syntax directory to get syntax highlighting of annotate result buffers.<br><br>For vim 6.x:<br><br>Use a previous version of the script (1.76 of cvscommand.zip).&nbsp;&nbsp;This only supports CVS.</td></tr>
+<tr><td>&nbsp;</td></tr>
+</table>
+
+<!-- rating table -->
+<form name="rating">
+<input type="hidden" name="script_id" value="90">
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>rate this script</b></td>
+  <td valign="middle">
+    <input type="radio" name="rating" value="life_changing">Life Changing
+    <input type="radio" name="rating" value="helpful">Helpful
+    <input type="radio" name="rating" value="unfulfilling">Unfulfilling&nbsp;
+    <input type="submit" value="rate">
+  </td>
+</tr>
+</table>
+</form>
+<span class="txth2">script versions</span> (<a href="add_script_version.php?script_id=90">upload new version</a>)
+<p>
+Click on the package to download.
+<p>
+
+<table cellspacing="2" cellpadding="4" border="0" width="100%">
+<tr class='tableheader'>
+        <th valign="top">package</th>
+    <th valign="top">script version</th>
+    <th valign="top">date</th>
+    <th valign="top">Vim version</th>
+    <th valign="top">user</th>
+    <th valign="top">release notes</th>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13751">vcscommand-1.99.42.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.99.42</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-09-03</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=241">Bob Hiestand</a></i></td>
+    <td class="rowodd" valign="top" width="2000">svnannotate:&nbsp;&nbsp;handle longer revision numbers<br><br>VCSVimDiff:&nbsp;&nbsp;handle 1 vimdiff session per tab<br><br>menu:&nbsp;&nbsp;Add VCSCommandDisableMenu, VCSCommandMenuRoot, and VCSCommandMenuPriority variables to customize the GUI menu.<br><br>vcshg:&nbsp;&nbsp;correct message for empty commit<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13632">vcscommand-1.99.41.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.99.41</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-08-20</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=241">Bob Hiestand</a></i></td>
+    <td class="roweven" valign="top" width="2000">VCSStatus:&nbsp;&nbsp;fix option pass-through<br><br>git:&nbsp;&nbsp;show correct message for empty commit<br><br>all:&nbsp;&nbsp;fixed scratch buffer naming when buffers are not listed<br><br>hg:&nbsp;&nbsp;Provide a more useful commit info buffer<br><br>hg:&nbsp;&nbsp;show feedback on vcsadd via verbose option<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=12743">vcscommand-1.99.40.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.99.40</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-03-30</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=241">Bob Hiestand</a></i></td>
+    <td class="rowodd" valign="top" width="2000">*&nbsp;&nbsp;Do not write to bzr log when identifying<br><br>*&nbsp;&nbsp;vcssvn:&nbsp;&nbsp;Handle newer SVN 'status -vu' format.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=12736">vcscommand-1.99.39.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.99.39</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-03-29</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=241">Bob Hiestand</a></i></td>
+    <td class="roweven" valign="top" width="2000">*IMPORTANT for Windows Users*&nbsp;&nbsp;Please let me know if this change breaks your commit functionality.<br><br>*&nbsp;&nbsp;Removes use of 'shellslash' from the commit process.<br><br>* Adds a call to user-defined autocommand VCSBufferCreated after the commit log message buffer is created.<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=12440">vcscommand-1.99.38.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.99.38</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-02-19</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=241">Bob Hiestand</a></i></td>
+    <td class="rowodd" valign="top" width="2000">VCSVimDiff:&nbsp;&nbsp;Preserve filetype in review buffers.<br><br>This fixes a feature broken in 1.99.36.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=12274">vcscommand-1.99.37.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.99.37</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-02-02</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=241">Bob Hiestand</a></i></td>
+    <td class="roweven" valign="top" width="2000">filetype of scratch buffers changed to lowercase for consistency.<br><br>Syntax files renamed to lowercase.&nbsp;&nbsp;You will probably want to remove existing syntax files from this plugin before installing this version.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=12230">vcscommand-1.99.36.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.99.36</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-01-29</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=241">Bob Hiestand</a></i></td>
+    <td class="rowodd" valign="top" width="2000">VCSAnnotate now jumps to the current line in the annotated buffer (if annotating the current revision).<br><br>VCSLog for CVS no longer sets the file type to 'rcslog'.&nbsp;&nbsp;If you use that for syntax coloring, you may want to add something like the following to your vimrc:<br><br>au FileType CVSlog set syntax=rcslog</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=12191">vcscommand-1.99.35.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.99.35</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-01-26</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=241">Bob Hiestand</a></i></td>
+    <td class="roweven" valign="top" width="2000">Fixed hang in MacVim on Snow Leopard (thanks to Adam Lickel).</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=12073">vcscommand-1.99.34.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.99.34</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-01-11</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=241">Bob Hiestand</a></i></td>
+    <td class="rowodd" valign="top" width="2000">vcshg:&nbsp;&nbsp;Added annotate syntax.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=12031">vcscommand.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.99.33</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-01-08</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=241">Bob Hiestand</a></i></td>
+    <td class="roweven" valign="top" width="2000">HG improvements:<br><br>Fixed variable assignment bug in GetBufferInfo.<br>Add username to blame output.<br>Added split annotate view.<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=12026">vcscommand.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.99.32</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-01-07</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=241">Bob Hiestand</a></i></td>
+    <td class="rowodd" valign="top" width="2000">* Resolve ambiguous file/branch names.<br>* Work correctly with blanks in 'VCSCommandXXXExec' variable.<br><br>vcsbzr:&nbsp;&nbsp;Add VCSCommandDisableAll kill switch.<br>vcsbzr:&nbsp;&nbsp;use annotate split mode.<br>vcscvs:&nbsp;&nbsp;Made GetRevision() script-local.<br>vcshg: Identify hg version control when not in the root of a repository.<br>gitAnnotate.vim:&nbsp;&nbsp;match original commits in blame<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=11049">vcscommand.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.99.31</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-07-21</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=241">Bob Hiestand</a></i></td>
+    <td class="roweven" valign="top" width="2000">Added VCSAnnotate! (and VCSBlame!) (default keybinding &lt;leader&gt;cN) to split the resulting buffer into separate header and content windows.<br><br>Included support for bzr and hg (as generously provided by others).<br><br>Added syntax file for git annotate buffers.<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=11044">vcscommand.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>beta30</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-07-20</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=241">Bob Hiestand</a></i></td>
+    <td class="rowodd" valign="top" width="2000">vcscvs:&nbsp;&nbsp;Removed useless (and bug-inspiring) aunmenu.<br><br>vcscvs:&nbsp;&nbsp;Remove extraneous debug message issued by recent cvs.<br><br>Fixed typo in sample macro documentation.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=9965">vcscommand.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>beta29</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-02-13</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=241">Bob Hiestand</a></i></td>
+    <td class="roweven" valign="top" width="2000">Added 'VCSCommandVCSTypeOverride' variable for explicitly overriding VCS type detection for specific directories.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=9279">vcscommand.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>beta28</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2008-09-24</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=241">Bob Hiestand</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Add 'VCSCommandDisableAll' variable to prevent the plugin or any extensions from loading.<br><br>vcssvn:&nbsp;&nbsp;prevent hangs caused by querying the user for input by specifying '--non-interactive' on the appropriate commands.<br><br>Use &diffopt to seed the default DiffSplit orientation. (James Vega)<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=9278">vcscommand.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>beta28</b></td>
+    <td class="roweven" valign="top" nowrap><i>2008-09-24</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=241">Bob Hiestand</a></i></td>
+    <td class="roweven" valign="top" width="2000">Add 'VCSCommandDisableAll' variable to prevent the plugin or any extensions from loading.<br><br>vcssvn:&nbsp;&nbsp;prevent hangs caused by querying the user for input by specifying '--non-interactive' on the appropriate commands.<br><br>Use &diffopt to seed the default DiffSplit orientation. (James Vega)<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=9188">vcscommand.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>beta27</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2008-08-28</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=241">Bob Hiestand</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Shortcut / mapping configuration changes:<br><br>Do not fail out of plugin at first failed mapping.&nbsp;&nbsp;Indicate mapping conflicts only if 'verbose' is set.<br>&nbsp;&nbsp;&nbsp;&nbsp;<br>Add new option 'VCSCommandMapPrefix' for overriding the default prefix '&lt;Leader&gt;c' in mappings.<br>&nbsp;&nbsp;&nbsp;&nbsp;<br>Add new option 'VCSCommandMappings' to completely override all default mappings.<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=8827">vcscommand.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>beta 26</b></td>
+    <td class="roweven" valign="top" nowrap><i>2008-06-19</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=241">Bob Hiestand</a></i></td>
+    <td class="roweven" valign="top" width="2000">vcsgit:&nbsp;&nbsp;Set &ft correctly for VCSStatus buffers.<br><br>vcsgit:&nbsp;&nbsp;Quote the blob name for VCSReview to handle paths with spaces.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=8747">vcscommand.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>beta25</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2008-06-03</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=241">Bob Hiestand</a></i></td>
+    <td class="rowodd" valign="top" width="2000">This fixes the&nbsp;&nbsp;'cdpath' error in git VCSReview and (2 argument) VCSVimDiff.<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=8709">vcscommand.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>beta24</b></td>
+    <td class="roweven" valign="top" nowrap><i>2008-05-20</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=241">Bob Hiestand</a></i></td>
+    <td class="roweven" valign="top" width="2000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Revert &quot;Call subversion with the '--non-interactive' switch to avoid locking up when authentication can't be prompted.&quot;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Use 'setlocal' instead of 'set' for all buffer option changes.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Use 'enew' followed by 'file' instead of 'edit' when creating output buffers.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Don't execute autocommands when naming VCS command output buffers.<br><br>This set of changes may avoid issues related to autocommands that execute when the command result buffer is opened.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=8459">vcscommand.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>beta22</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2008-03-17</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=241">Bob Hiestand</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Added VCSCommandGitDescribeArgList option to control allowed modes of 'git describe' used in GetBufferInfo for git.&nbsp;&nbsp;This is a comma-separated list of arguments to try against git-describe.&nbsp;&nbsp;This is an attempt to have prioritized fallbacks of descriptions, and runs in order until it finds a valid description.&nbsp;&nbsp;This value defaults to ',tags,all,always', and so first searches annotated tags, then tags, then all references, then a commit description.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=8435">vcscommand.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>beta21</b></td>
+    <td class="roweven" valign="top" nowrap><i>2008-03-11</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=241">Bob Hiestand</a></i></td>
+    <td class="roweven" valign="top" width="2000">Tweaked buffer info for git buffers.<br><br>Don't clobber &cp when testing for a vcs command.<br><br>Added 'options' Dict to VCSCommandDoCommand for tweaking framework behavior.<br><br>Allow non-zero vcs command exit status when 'allowNonZeroExit' option is passed to VCSCommandDoCommand.<br><br>Implemented VCSStatus for git as (repository-wide) 'git status'.<br><br>Converted to leading tab style.<br><br>Distinguish between exact and inexact identifications by extensions.<br><br>Mark git identification as inexact, so that using another VCS to control directories somewhere under a git-controlled directory does not identify the files incorrectly as git.<br><br>Moved CHANGES.txt content into help file.<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=8210">vcscommand.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>beta20</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2008-02-01</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=241">Bob Hiestand</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Implemented (first pass of) git support.<br><br>Temporarily removed buffer status/command verification scheme.<br><br>Save and restore 'foldlevel' with VCSVimDiff.<br><br>Added VCSRemove as alias for VCSDelete.<br>Added VCSBlame as alias for VCSAnnotate.<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=7435">vcscommand.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>beta19</b></td>
+    <td class="roweven" valign="top" nowrap><i>2007-07-31</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=241">Bob Hiestand</a></i></td>
+    <td class="roweven" valign="top" width="2000">Load the plugin with nocompatible set, as it should have been done a few years ago.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=7119">vcscommand.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>beta18</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2007-05-15</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=241">Bob Hiestand</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Added 'VCSCommandDisableMappings' and 'VCSCommandDisableExtensionMappings' options.&nbsp;&nbsp;If set, these variables prevent creation of the default command key mappings.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=7112">vcscommand.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>beta17</b></td>
+    <td class="roweven" valign="top" nowrap><i>2007-05-15</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=241">Bob Hiestand</a></i></td>
+    <td class="roweven" valign="top" width="2000">Use 'executable()' to test for VCS tools (to avoid potentially slow operation at plugin load time).<br><br>Always pass current revision to VCSAnnotate when using CVS with no arguments.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=7044">vcscommand.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>beta16</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2007-04-30</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=241">Bob Hiestand</a></i></td>
+    <td class="rowodd" valign="top" width="2000">VCSLog accepts passthrough options.<br>VCSDiff correctly checks whether second argument starts with hyphen when deciding whether to pass-through.<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=7025">vcscommand.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>beta15</b></td>
+    <td class="roweven" valign="top" nowrap><i>2007-04-24</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=241">Bob Hiestand</a></i></td>
+    <td class="roweven" valign="top" width="2000">Use 'haslocaldir()' if available to correctly handle windows that used :lcd.<br><br>Made VCSDiff pass-through.<br><br>Fixed SVK VCSDiff implementation.<br><br>Made VCSCommands work a bit better on directory buffers (netrw).<br><br>Replaced delayed extension registration to directly loading the main plugin from<br>extension plugins.&nbsp;&nbsp;This allows base functions declared in the main plugin to<br>be used in the extensions.<br><br>Fixed SVN diff to actually use 'VCSCommandSVNDiffOpt' option.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=6975">vcscommand.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>beta14</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2007-04-12</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=241">Bob Hiestand</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Reincarnated 'CVSAnnotateParent' option for CVS as 'VCSCommandCVSAnnotateParent'.<br><br>Close all vcscommand result buffers when vim exits to prevent them from being written to the viminfo file.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=6858">vcscommand.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>beta13</b></td>
+    <td class="roweven" valign="top" nowrap><i>2007-03-12</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=241">Bob Hiestand</a></i></td>
+    <td class="roweven" valign="top" width="2000">Fixed following commands (broken in Beta 12):<br>&nbsp;&nbsp;VCSLock<br>&nbsp;&nbsp;VCSRevert<br>&nbsp;&nbsp;VCSUnlock<br>&nbsp;&nbsp;VCSUpdate</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=6814">vcscommand.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>beta12</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2007-02-28</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=241">Bob Hiestand</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Added SVK support.<br><br>Replaced SVN-specific command SVNInfo with VCSInfo, which is defined for SVK<br>and SVN.&nbsp;&nbsp;This is mapped to '&lt;leader&gt;ci' by default; as a consequence, the<br>default mapping for the CVS-specific CVSEditors command was changed to<br>'&lt;leader&gt;cE'.<br><br>Made VCSAnnotate accept parameters to pass to the underlying VCS.<br><br>Made error messages for operations on non-versioned files more consistent.<br><br>Added check to disable individual VCS extension plugins.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=6761">vcscommand.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>beta11</b></td>
+    <td class="roweven" valign="top" nowrap><i>2007-02-20</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=241">Bob Hiestand</a></i></td>
+    <td class="roweven" valign="top" width="2000">Added VCSCommandSVNDiffExt option to allow external diff applications.<br>Added VCSDelete command.<br>Added pass-through parameters to VCS Add, Delete, Log, Status, Lock, and Unlock commands (extra parameters to the command are given to the underlying VCS command).</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=6368">vcscommand.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>Beta10</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2006-11-02</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=241">Bob Hiestand</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Changed file type of commit log buffers to 'commitlog' (from 'commit log') to avoid FileType errors.<br><br>Added 'VCSCommandSVNDiffOpt' to pass options to the svn diff -x parameter.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=6160">vcscommand.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>Beta9</b></td>
+    <td class="roweven" valign="top" nowrap><i>2006-09-11</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=241">Bob Hiestand</a></i></td>
+    <td class="roweven" valign="top" width="2000">Added 'VCSCommandResultBufferNameExtension' option for adding a custom extension to the VCS output buffer names.&nbsp;&nbsp;This is intended to help users experiencing issues due to autocommands and other settings that depend on buffer name.<br><br>Added 'VCSCommandResultBufferNameFunction' option for completely over-riding the procedure for generating the result buffer names.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=6070">vcscommand.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>Beta8</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2006-08-14</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=241">Bob Hiestand</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Changed behavior of plugin within Explorer/netrw -style directory buffers.&nbsp;&nbsp;Commands within such a buffer now act as though invoked on that directory, and so affect all files (and subdirectories), regardless of where the cursor is within the directory buffer.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=6055">vcscommand.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>Beta5</b></td>
+    <td class="roweven" valign="top" nowrap><i>2006-08-09</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=241">Bob Hiestand</a></i></td>
+    <td class="roweven" valign="top" width="2000">Corrected shortcut help text in commit message buffer.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=6054">vcscommand.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>Beta4</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2006-08-09</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=241">Bob Hiestand</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Changed default mappings back to those from cvscommand (starting with<br>'&lt;Leader&gt;c' instead of '&lt;Leader&gt;v'.&nbsp;&nbsp;This is to avoid conflict with existing plugins using the '&lt;Leader&gt;v' prefix.&nbsp;&nbsp;Please note that the mappings can still be overridden by the user using &lt;Plug&gt; mappings.&nbsp;&nbsp;Please consult the documentation for more information.<br><br>Removed special characters other than parentheses from output buffer names.&nbsp;&nbsp;This is to address buffer name problems on Windows.<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=6040">vcscommand.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>Beta3</b></td>
+    <td class="roweven" valign="top" nowrap><i>2006-08-04</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=241">Bob Hiestand</a></i></td>
+    <td class="roweven" valign="top" width="2000">Initial public release of vcscommand (based on cvscommand) to integrate subversion (SVN) and utilize VIM 7.0 features.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=5302">cvscommand.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.76</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2006-02-22</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=241">Bob Hiestand</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Added optional direct specification of log message on :CVSCommit command (to avoid using the log message buffer).&nbsp;&nbsp;Usage:<br><br>:CVSCommit &lt;log message text here&gt;</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=5208">cvscommand.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.75</b></td>
+    <td class="roweven" valign="top" nowrap><i>2006-02-13</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=241">Bob Hiestand</a></i></td>
+    <td class="roweven" valign="top" width="2000">Forced file changed check whenever the original CVS file could have changed, even in split window environments (per Luca Gerli).</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=5069">cvscommand.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.74</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2006-02-06</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=241">Bob Hiestand</a></i></td>
+    <td class="rowodd" valign="top" width="2000">* Added ability to use CVSCommand functions / hotkeys on directory listing buffers, specifically the file explorer.<br>* CVSAnnotate:&nbsp;&nbsp;Previously, if CVSAnnotate was invoked on a CVSAnnotate buffer, the new annotate buffer would go to the version just prior to the one on the current line.&nbsp;&nbsp;Now, the new buffer uses the version on the current line.&nbsp;&nbsp;To obtain the old behavior, set CVSCommandAnnotateParent to a non-zero value.&nbsp;&nbsp;The header lines resulting from the cvs annotate command are now trimmed.&nbsp;&nbsp;No attempt is made to jump to the 'correct' line in a CVSAnnotate buffer, as it is unlikely to be the correct line anyway.<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=4999">cvscommand.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.73</b></td>
+    <td class="roweven" valign="top" nowrap><i>2006-01-23</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=241">Bob Hiestand</a></i></td>
+    <td class="roweven" valign="top" width="2000">Fixed typo in sample map in documentation per Luca Gerli.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=4987">cvscommand.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.72</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2006-01-17</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=241">Bob Hiestand</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Moved version check to after the loaded_cvscommand check.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=4798">cvscommand.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.71</b></td>
+    <td class="roweven" valign="top" nowrap><i>2005-11-22</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=241">Bob Hiestand</a></i></td>
+    <td class="roweven" valign="top" width="2000">Restored CVSVimDiffFinish user autocommand which executes after a CVSVimDiff<br>(in order to allow customization of window placement, etc).<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=4728">cvscommand.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.70</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2005-11-10</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=241">Bob Hiestand</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Fixes bug that resulted in working directory change.<br><br>Displays warning to user and will not load if running on VIM earlier than 6.2.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=4403">cvscommand.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.68</b></td>
+    <td class="roweven" valign="top" nowrap><i>2005-06-30</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=241">Bob Hiestand</a></i></td>
+    <td class="roweven" valign="top" width="2000">Fixed bug with autochdir and CVSCommit.<br>(Repackaged from previous upload, which had new script in wrong place and old script in right place).du</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=3491">cvscommand.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.67</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2004-09-27</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=241">Bob Hiestand</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Corrected b:CVSRepository variable for CVSAdd'd files.&nbsp;&nbsp;This will fix status line display for these files, if the default (cvs) status line is used.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=3450">cvscommand.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.66</b></td>
+    <td class="roweven" valign="top" nowrap><i>2004-09-14</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=241">Bob Hiestand</a></i></td>
+    <td class="roweven" valign="top" width="2000">Changed maintainer email address.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=3294">cvscommand.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.65</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2004-08-02</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=241">Bob Hiestand</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Added instructions for integrating with SSH.<br><br>Added CVSCommandCVSExec option to specify cvs executable path.<br><br>Added CVSBufferSetup user event.<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=3018">cvscommand.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.64</b></td>
+    <td class="roweven" valign="top" nowrap><i>2004-05-12</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=241">Bob Hiestand</a></i></td>
+    <td class="roweven" valign="top" width="2000">Delete folds created by vimdiff mode in CVSVimDiff if the original window used manual folds, when it is restored.<br><br>Always set scrollbind in the result window of a CVSVimDiff in order to combat the effects of splitting windows resetting scrollbind.&nbsp;&nbsp;Please let me know if this causes anyone trouble.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=2126">cvscommand.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.63</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2003-07-03</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=241">Bob Hiestand</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Bugfix release.&nbsp;&nbsp;Buffers start with 1, not 0.&nbsp;&nbsp;Switch to the original buffer first before destorying CVS buffers in<br>CVSGotoOriginal! in order to preserve window layout.<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=2123">cvscommand.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.62</b></td>
+    <td class="roweven" valign="top" nowrap><i>2003-07-02</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=241">Bob Hiestand</a></i></td>
+    <td class="roweven" valign="top" width="2000">Added b:CVSRepository as a standard variable if buffer setup is enabled.<br><br>Changed sample status line to display the repository version number if it differs from<br>the working version number.<br><br>Added recursive annotation functionality.<br><br>Silenced text puts to set up the CVSCommit buffer.<br><br>Added CVSVimDiffFinish event for window placement customization.<br><br>Implemented the remove-all-CVS-buffers aspect of CVSGotoOriginal! in a slightly<br>more sane way.<br><br>Added 'foldenable' to the list of restored options for<br>CVSVimDiff.<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=1949">cvscommand.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.54</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2003-04-28</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=241">Bob Hiestand</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Added recognition of numerical tags for use as sticky tags.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=1929">cvscommand.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.52</b></td>
+    <td class="roweven" valign="top" nowrap><i>2003-04-18</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=241">Bob Hiestand</a></i></td>
+    <td class="roweven" valign="top" width="2000">Added the CVSGotoOriginal[!] command and mappings (&lt;Leader&gt;cg and &lt;Leader&gt; cG for with and without '!', respectively).&nbsp;&nbsp;This command jumps to the source buffer if the current buffer is a CVS output buffer.&nbsp;&nbsp;The '!' also closes all CVS output buffer for the given source buffer.</td>
+</tr>
+</table>
+<!-- finish off the framework -->
+          </td>
+        </tr>
+      </table>
+    </td>
+
+  </tr>
+</table>
+
+<!-- END OF THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr><td colspan="4" bgcolor="#000000"><img src="/images/spacer.gif" height="2" width="1" alt=""></td></tr>
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr>
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+
+    <td align="left" valign="top"><small>
+      If you have questions or remarks about this site, visit the
+      <a href="http://vimonline.sf.net">vimonline development</a> pages.
+      Please use this site responsibly.
+      <br> 
+      
+      Questions about <a href="http://www.vim.org/about.php">Vim</a> should go
+      to the <a href="http://www.vim.org/maillist.php">maillist</a>.
+      Help Bram <a href="http://iccf-holland.org/">help Uganda</a>.
+      </small>
+	&nbsp;
+	&nbsp;
+
+	<!-- Start of StatCounter Code -->
+	<script type="text/javascript" language="javascript">
+	var sc_project=1417324; 
+	var sc_invisible=1; 
+	var sc_partition=11; 
+	var sc_security="d41633bc"; 
+	</script>
+
+	<script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script><noscript><a href="http://www.statcounter.com/" target="_blank"><img  src="http://c12.statcounter.com/counter.php?sc_project=1417324&java=0&security=d41633bc&invisible=0" alt="free tracking" border="0"></a> </noscript>
+	<!-- End of StatCounter Code -->
+          </td>
+
+    <td align="right" valign="top">
+      		<a href="http://sourceforge.net/projects/vim" rel="nofollow"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=8&type=1" width="88" height="31" border="0" alt="SourceForge.net Logo" /></a>
+    </td>
+
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+  </tr>
+
+    
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  
+  </tr>
+</table>
+
+</body>
+</html>
+

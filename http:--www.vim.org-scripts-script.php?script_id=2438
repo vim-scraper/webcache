@@ -1,0 +1,380 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+  <link rel="Stylesheet" type="text/css" href="/css/style.css" >
+  <title>EasyGrep - Fast and Easy Find and Replace Across Multiple Files : vim online</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <meta name="KEYWORDS" content="Vim, Vi IMproved, text editor, home, documentation, tips, scripts, news">
+  <link rel="shortcut icon" type="image/x-icon" href="/images/vim_shortcut.ico">
+</head>
+
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff"> 
+
+<!-- HEADER, SPONSOR IMAGE, VIM IMAGE AND BOOK AD -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+  <td class="lightbg">&nbsp;&nbsp;&nbsp;</td>
+  <td class="lightbg" align="left"><a href="/sponsor/index.php"><img src="/images/sponsorvim.gif" alt="sponsor Vim development" border="0"></a></td>
+    <td class="lightbg" align="center"><a href="/index.php"><img src="/images/vim_header.gif" border="0" alt="Vim logo"></a></td>
+    <td class="lightbg" align="right"><a href="http://iccf-holland.org/click5.html"><img src="/images/buyhelplearn.gif" alt="Vim Book Ad" border="0"></a></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="darkbg"><img src="/images/spacer.gif" width="1" height="10" alt=""></td>
+  </tr>
+</table>
+<!-- THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+  <col width="180">
+  <col width="1">
+
+  <tr valign="top">
+    <td class="sidebar">
+      <table width="180" cellpadding="4" cellspacing="0" border="0">
+        <tr valign="top">
+          <td class="sidebar">
+
+<!-- INCLUDE THE PAGE NAVIGATION -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+    <tr>
+        <td><small>not logged in (<a href="/login.php">login</a>)</small></td>
+    </tr>
+    <tr><td>
+<small>&nbsp;</small>
+<form action="http://www.google.com/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-3005259998294962:bvyni59kjr1" />
+    <input type="hidden" name="ie" value="ISO-8859-1" />
+    <input type="text" name="q" size="20" />
+    <br>
+    <input type="submit" name="sa" value="Search" />
+  </div>
+</form>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+    </td></tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="1"></td>
+    </tr>
+    <tr>
+        <td class="darkbg"><img src="/images/spacer.gif" alt='' border="0" height="3"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="2"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/index.php">Home</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/search.php">Advanced search</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/about.php">About Vim</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/community.php">Community</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/news/news.php">News</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/sponsor/index.php">Sponsoring</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/trivia.php">Trivia</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/docs.php">Documentation</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/download.php">Download</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/scripts/index.php">Scripts</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/tips/index.php">Tips</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/account/index.php">My Account</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/huh.php">Site Help</a></td>
+        </tr>
+</table>
+
+            <table width="172" cellpadding="0" cellspacing="0" border="0">
+              <tr><td><img src="/images/spacer.gif" alt="" border="0" width="1" height="8"></td></tr>
+              <tr><td class="darkbg"><img src="/images/spacer.gif" width="1" height="3" alt=""></td></tr>
+            </table>
+            <br>
+
+<!-- INCLUDE THE PAGE SIDEBAR TEXT -->
+&nbsp;
+
+          </td>
+        </tr>
+      </table>
+    </td>
+
+    <td class="darkbg"><img src="/images/spacer.gif" width="1" height="1" border="0" alt=""><br></td>
+    <td>
+      <table width="100%" cellpadding="10" cellspacing="0" border="0" bordercolor="red">
+        <tr>
+          <td valign="top">
+
+<span class="txth1">EasyGrep : Fast and Easy Find and Replace Across Multiple Files</span> 
+
+<br>
+<br>
+
+<!-- karma table -->
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
+  <td>
+    Rating <b>158/49</b>,
+    Downloaded by 2255  </td>
+  <td class="lightbg">
+  <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
+  </td>
+  <td>
+    <a href="http://vim.wikia.com/wiki/Script:2438">Vim wiki</a>
+  </td>  
+</tr>
+</table>
+<p>
+
+<table cellspacing="0" cellpadding="0" border="0">
+<tr><td class="prompt">created by</td></tr>
+<tr><td><a href="/account/profile.php?user_id=15016">Daniel Price</a></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">script type</td></tr>
+<tr><td>utility</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">description</td></tr>
+<tr><td>EasyGrep makes using vimgrep easier.&nbsp;&nbsp;When using EasyGrep, searching for a word is as easy as typing &lt;leader&gt;vv (v v, not double-u) over the word for which you want to search.&nbsp;&nbsp;This search can also be accomplished with the :Grep command.<br><br>EasyGrep provides three modes in which you can do your searches:<br>&nbsp;&nbsp;All - all files will be searched&nbsp;&nbsp;(default)<br>&nbsp;&nbsp;Buffers - all files currently open in vim will be searched<br>&nbsp;&nbsp;TrackExt - all files that match the extension of the currently opened file will be searched.&nbsp;&nbsp;Additionally, this extension can be mapped to a user defined set of extensions that will also be searched (see EasyGrepFileAssociations).<br>&nbsp;&nbsp;&nbsp;&nbsp;For example: when test.cpp is open, files that match any one of *.cpp *.hpp *.cxx *.hxx *.cc *.c *.h will be searched when a search is initiated.<br><br>Setting options is easy, simply type &lt;leader&gt;vo or :GrepOptions.&nbsp;&nbsp;EasyGrep provides a great set of defaults but can also be configured to start up just how you like it; see the script for these options.&nbsp;&nbsp;Most vimgrep (and grepprg) options are supported.&nbsp;&nbsp;<br><br>For a screencast of the script in action go here: <a target="_blank" href="http://downloads.veryspeedy.net/vim/EasyGrep.gif">http://downloads.veryspeedy.net/vim/EasyGrep.gif</A><br><br>Full keymappings and commands:<br><br><br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;Leader&gt;vv&nbsp;&nbsp;- Grep for the word under the cursor, match all occurences,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;like |gstar|<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;Leader&gt;vV&nbsp;&nbsp;- Grep for the word under the cursor, match whole word, like <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|star|<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;Leader&gt;va&nbsp;&nbsp;- Like vv, but add to existing list<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;Leader&gt;vA&nbsp;&nbsp;- Like vV, but add to existing list<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;Leader&gt;vr&nbsp;&nbsp;- Perform a global search search on the word under the cursor<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;and prompt for a pattern with which to replace it.<br><br>In addition to grepping the word under the cursor, text may be visually<br>selected and these mappings may be used analogously to as they are used above.<br>Visual selections will automatically be escaped so as not to confuse the<br>selection with a regular expression.<br><br>&nbsp;&nbsp;&nbsp;&nbsp;Each of the above commands will search files according to settings<br>&nbsp;&nbsp;&nbsp;&nbsp;controlled by:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;Leader&gt;vo&nbsp;&nbsp;- Select the files to search in and set grep options<br><br>&nbsp;&nbsp;&nbsp;&nbsp;:Grep [arg]<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Search for the specified arg, like &lt;Leader&gt;vv.&nbsp;&nbsp;When an ! is added,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;search like &lt;Leader&gt;vV<br><br>&nbsp;&nbsp;&nbsp;&nbsp;:GrepAdd [arg]<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Search for the specified arg, add to existing file list, as in<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Leader&gt;va.&nbsp;&nbsp;When an ! is added, search like &lt;Leader&gt;vA<br><br>&nbsp;&nbsp;&nbsp;&nbsp;:Replace [target] [replacement]<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Perform a global search and replace.&nbsp;&nbsp;The function searches<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;the same set of files a grep for the desired target and opens a dialog to<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;confirm replacement.<br>&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;:ReplaceUndo<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Undoes the last :Replace operation.&nbsp;&nbsp;Does not stack successive<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;searches; only the last replace may be undone.&nbsp;&nbsp;This function may not<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;work well when edits are made between a call to Replace and a call to<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ReplaceUndo.<br><br>&nbsp;&nbsp;&nbsp;&nbsp;:GrepOptions [arg]<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Open a window to set grep options.</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">install details</td></tr>
+<tr><td>Copy EasyGrep.vim and EasyGrepFileAssociations to your plugin directory; copy EasyGrep.txt to your doc directory.&nbsp;&nbsp;Run helptags on your doc directory.</td></tr>
+<tr><td>&nbsp;</td></tr>
+</table>
+
+<!-- rating table -->
+<form name="rating">
+<input type="hidden" name="script_id" value="2438">
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>rate this script</b></td>
+  <td valign="middle">
+    <input type="radio" name="rating" value="life_changing">Life Changing
+    <input type="radio" name="rating" value="helpful">Helpful
+    <input type="radio" name="rating" value="unfulfilling">Unfulfilling&nbsp;
+    <input type="submit" value="rate">
+  </td>
+</tr>
+</table>
+</form>
+<span class="txth2">script versions</span> (<a href="add_script_version.php?script_id=2438">upload new version</a>)
+<p>
+Click on the package to download.
+<p>
+
+<table cellspacing="2" cellpadding="4" border="0" width="100%">
+<tr class='tableheader'>
+        <th valign="top">package</th>
+    <th valign="top">script version</th>
+    <th valign="top">date</th>
+    <th valign="top">Vim version</th>
+    <th valign="top">user</th>
+    <th valign="top">release notes</th>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=14198">EasyGrep.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.98</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-11-06</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=15016">Daniel Price</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Highlight: The Replace and ReplaceUndo commands were reimplemented.&nbsp;&nbsp;The granularity of matches inside of a Replace call were improved so that you can now decide replacements individually per line.<br>&nbsp;&nbsp;&nbsp;&nbsp;Additionally, Complex operations such as replacing x[i][j][k] with x(i,j,k) and following it up with a ReplaceUndo are now possible.<br><br>&nbsp;&nbsp;&nbsp;&nbsp;e.g.<br>&nbsp;&nbsp;&nbsp;&nbsp;:Replace /x\[\([^]]\+\)\]\[\([^]]\+\)\]\[\([^]]\+\)\]/x(\1,\2,\3)/<br>&nbsp;&nbsp;&nbsp;&nbsp;:ReplaceUndo<br><br>&nbsp;&nbsp;&nbsp;&nbsp;Please report any regressions with either of these functions.<br><br>Feature: Added count command line option (-m 4 or -4)<br>Feature: Improved Grep options window keybindings; searching within the options explorer window is now possible<br>Feature: Expanded searches to include all of the active buffers' directories<br>Bugfix:&nbsp;&nbsp;Fixed recursive operation and expanded search from reporting duplicate results<br>Bugfix:&nbsp;&nbsp;Fixed &lt;C-e&gt; and &lt;C-y&gt; in replace mode<br>Feature: Added EasyGrepWindowPosition for specifying where the error list window will be opened<br>Feature: Added FilterErrorlist command for filtering the results within the quickfix or location list windows<br>Feature: Improved printout when no matches are found<br>Feature: Improved searching when an entire line is selected</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=11717">EasyGrep.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>.96</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-11-13</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=15016">Daniel Price</a></i></td>
+    <td class="roweven" valign="top" width="2000">Feature: Expanded upon the list of file associations <br>Feature: Expanded searches to the current buffer's directory in addition to the current working directory <br>Feature: Added command line arguments to :Grep and :Replace for recursive searches and case sensitivity <br>Feature: Added toggle for window replace mode <br>Feature: Added toggle for showing file associations list in options explorer <br>Bugfix: Case insensitivity would fail in replacing some patterns</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=10265">EasyGrep.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.951</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-03-23</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=15016">Daniel Price</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Update to 0.95: Fixed an error in calling ReplaceCurrentWord identified by Eric Ho.<br><br>Feature: Added search and replace on visual selections. <br>Feature: Improved Grepping for items that can be interpreted as regular expressions.&nbsp;&nbsp;Selections are assumed to be literal, whereas explicit commands are assumed to be regular expressions. <br>Feature: Removed option g:EasyGrepNoDirectMappings in favor of g:EasyGrepOptionPrefix, which allows the option prefix to be changed. <br>Bugfix:&nbsp;&nbsp;The tracked extension would sometimes fail to be updated when switching between buffers <br>Documentation: Split the documentation into its own file; greatly expanded upon its contents. <br>Change: Activating a mode that is already activated will no longer deactivate it. <br>Change: GrepOptions no longer accepts an argument; use user mode instead. <br>Change: Clarified mapping names; custom mappings will need to be reset.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=9869">EasyGrep.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.9</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-01-27</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=15016">Daniel Price</a></i></td>
+    <td class="roweven" valign="top" width="2000">Feature: Added forward slash delineated pattern to the Replace command<br>e.g. :Replace /target/replacement/<br>that allows more complicated replacements; you can now work with<br>patterns that have spaces in them.<br>Bugfix: If cursorline is off at the start of a replace, now ensuring that cursorline is turned off for all buffers, and not just the last one<br>Bugfix: fixed an issue with an extra tab being opened during a replacement</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=9800">EasyGrep.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.8</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-01-11</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=15016">Daniel Price</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Implemented case sensitivity that is independent of ignorecase; thanks to Doro Wu for contributing to this functionality<br>Changed shortcut key for hidden files from 'i' to 'h'</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=9724">EasyGrep.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.7</b></td>
+    <td class="roweven" valign="top" nowrap><i>2008-12-26</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=15016">Daniel Price</a></i></td>
+    <td class="roweven" valign="top" width="2000">Expanded search of EasyGrepFileAssociations list to every component of 'runtimepath'.&nbsp;&nbsp;This solves a starting message for those who placed EasyGrepFileAssociations in a location other than the first location in 'runtimepath'.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=9639">EasyGrep.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.6</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2008-12-09</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=15016">Daniel Price</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Fixed paths with spaces in them<br>Folds will now be disabled where replacements are to be made<br>Fixed an error with checking for extra warnings<br>Better highlighting while replacing<br>Recursive mode can no longer be activated when Buffers mode is activated</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=9552">EasyGrep.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.5</b></td>
+    <td class="roweven" valign="top" nowrap><i>2008-11-24</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=15016">Daniel Price</a></i></td>
+    <td class="roweven" valign="top" width="2000">Fixed an issue with tracking the file extension where sometimes the desired extension wouldn't be registered.<br>Better reporting when no files match.<br>Now warning when searching from a working directory that doesn't match the current file's directory.<br>Added g:EasyGrepExtraWarnings option.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=9534">EasyGrep.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.4</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2008-11-21</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=15016">Daniel Price</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Improved Replace and ReplaceUndo<br>Added two configurable modes for how the windows operate when doing a global replace.<br>Fixed an issue with linked filetypes.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=9520">EasyGrep.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.3</b></td>
+    <td class="roweven" valign="top" nowrap><i>2008-11-19</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=15016">Daniel Price</a></i></td>
+    <td class="roweven" valign="top" width="2000">Added experimental :Replace and :ReplaceUndo commands; keymapped &lt;leader&gt;vr for :Replace<br>Improved response when no matches</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=9509">EasyGrep.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.2</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2008-11-15</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=15016">Daniel Price</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Added option to toggle showing fewer or more options; showing fewer options by default.<br>Added option '?' to print the current configuration and save it to a register.<br>Now creating direct mapping by default; see g:EasyGrepNoDirectMappings to turn this off.<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=9493">EasyGrep.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.1</b></td>
+    <td class="roweven" valign="top" nowrap><i>2008-11-13</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=15016">Daniel Price</a></i></td>
+    <td class="roweven" valign="top" width="2000">Initial upload</td>
+</tr>
+</table>
+<!-- finish off the framework -->
+          </td>
+        </tr>
+      </table>
+    </td>
+
+  </tr>
+</table>
+
+<!-- END OF THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr><td colspan="4" bgcolor="#000000"><img src="/images/spacer.gif" height="2" width="1" alt=""></td></tr>
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr>
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+
+    <td align="left" valign="top"><small>
+      If you have questions or remarks about this site, visit the
+      <a href="http://vimonline.sf.net">vimonline development</a> pages.
+      Please use this site responsibly.
+      <br> 
+      
+      Questions about <a href="http://www.vim.org/about.php">Vim</a> should go
+      to the <a href="http://www.vim.org/maillist.php">maillist</a>.
+      Help Bram <a href="http://iccf-holland.org/">help Uganda</a>.
+      </small>
+	&nbsp;
+	&nbsp;
+
+	<!-- Start of StatCounter Code -->
+	<script type="text/javascript" language="javascript">
+	var sc_project=1417324; 
+	var sc_invisible=1; 
+	var sc_partition=11; 
+	var sc_security="d41633bc"; 
+	</script>
+
+	<script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script><noscript><a href="http://www.statcounter.com/" target="_blank"><img  src="http://c12.statcounter.com/counter.php?sc_project=1417324&java=0&security=d41633bc&invisible=0" alt="free tracking" border="0"></a> </noscript>
+	<!-- End of StatCounter Code -->
+          </td>
+
+    <td align="right" valign="top">
+      		<a href="http://sourceforge.net/projects/vim" rel="nofollow"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=8&type=1" width="88" height="31" border="0" alt="SourceForge.net Logo" /></a>
+    </td>
+
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+  </tr>
+
+    
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  
+  </tr>
+</table>
+
+</body>
+</html>
+

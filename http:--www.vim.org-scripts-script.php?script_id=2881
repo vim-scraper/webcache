@@ -1,0 +1,316 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+  <link rel="Stylesheet" type="text/css" href="/css/style.css" >
+  <title>mib_translator - Translate SNMP OIDs from within Vim : vim online</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <meta name="KEYWORDS" content="Vim, Vi IMproved, text editor, home, documentation, tips, scripts, news">
+  <link rel="shortcut icon" type="image/x-icon" href="/images/vim_shortcut.ico">
+</head>
+
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff"> 
+
+<!-- HEADER, SPONSOR IMAGE, VIM IMAGE AND BOOK AD -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+  <td class="lightbg">&nbsp;&nbsp;&nbsp;</td>
+  <td class="lightbg" align="left"><a href="/sponsor/index.php"><img src="/images/sponsorvim.gif" alt="sponsor Vim development" border="0"></a></td>
+    <td class="lightbg" align="center"><a href="/index.php"><img src="/images/vim_header.gif" border="0" alt="Vim logo"></a></td>
+    <td class="lightbg" align="right"><a href="http://iccf-holland.org/click5.html"><img src="/images/buyhelplearn.gif" alt="Vim Book Ad" border="0"></a></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="darkbg"><img src="/images/spacer.gif" width="1" height="10" alt=""></td>
+  </tr>
+</table>
+<!-- THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+  <col width="180">
+  <col width="1">
+
+  <tr valign="top">
+    <td class="sidebar">
+      <table width="180" cellpadding="4" cellspacing="0" border="0">
+        <tr valign="top">
+          <td class="sidebar">
+
+<!-- INCLUDE THE PAGE NAVIGATION -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+    <tr>
+        <td><small>not logged in (<a href="/login.php">login</a>)</small></td>
+    </tr>
+    <tr><td>
+<small>&nbsp;</small>
+<form action="http://www.google.com/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-3005259998294962:bvyni59kjr1" />
+    <input type="hidden" name="ie" value="ISO-8859-1" />
+    <input type="text" name="q" size="20" />
+    <br>
+    <input type="submit" name="sa" value="Search" />
+  </div>
+</form>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+    </td></tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="1"></td>
+    </tr>
+    <tr>
+        <td class="darkbg"><img src="/images/spacer.gif" alt='' border="0" height="3"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="2"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/index.php">Home</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/search.php">Advanced search</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/about.php">About Vim</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/community.php">Community</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/news/news.php">News</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/sponsor/index.php">Sponsoring</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/trivia.php">Trivia</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/docs.php">Documentation</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/download.php">Download</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/scripts/index.php">Scripts</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/tips/index.php">Tips</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/account/index.php">My Account</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/huh.php">Site Help</a></td>
+        </tr>
+</table>
+
+            <table width="172" cellpadding="0" cellspacing="0" border="0">
+              <tr><td><img src="/images/spacer.gif" alt="" border="0" width="1" height="8"></td></tr>
+              <tr><td class="darkbg"><img src="/images/spacer.gif" width="1" height="3" alt=""></td></tr>
+            </table>
+            <br>
+
+<!-- INCLUDE THE PAGE SIDEBAR TEXT -->
+&nbsp;
+
+          </td>
+        </tr>
+      </table>
+    </td>
+
+    <td class="darkbg"><img src="/images/spacer.gif" width="1" height="1" border="0" alt=""><br></td>
+    <td>
+      <table width="100%" cellpadding="10" cellspacing="0" border="0" bordercolor="red">
+        <tr>
+          <td valign="top">
+
+<span class="txth1">mib_translator : Translate SNMP OIDs from within Vim</span> 
+
+<br>
+<br>
+
+<!-- karma table -->
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
+  <td>
+    Rating <b>0/0</b>,
+    Downloaded by 120  </td>
+  <td class="lightbg">
+  <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
+  </td>
+  <td>
+    <a href="http://vim.wikia.com/wiki/Script:2881">Vim wiki</a>
+  </td>  
+</tr>
+</table>
+<p>
+
+<table cellspacing="0" cellpadding="0" border="0">
+<tr><td class="prompt">created by</td></tr>
+<tr><td><a href="/account/profile.php?user_id=17322">Caglar Toklu</a></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">script type</td></tr>
+<tr><td>utility</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">description</td></tr>
+<tr><td>FILE: mib_translator.vim<br>Vim plugin<br><br>This plugin allows you to translate the SNMP OIDs from within Vim.<br><br>Screenshot for version 0.0.3:<br><a target="_blank" href="http://dl.dropbox.com/u/3027364/mib_translator/mib_translator0.0.3_a.png">http://dl.dropbox.com/u/3027364/mib_translator/mib_translator0.0.3_a.png</A><br><br>You can see a screenshot of the plugin(0.0.1, uncolored unlike the newer ones) in the following link.<br><a target="_blank" href="http://caglartoklu.blogspot.com/2009/12/snmp-oid-translator-plugin-for-vim.html">http://caglartoklu.blogspot.com/2009/12/snmp-oid-translator-plugin-for-vim.html</A><br><br>AUTHOR:<br>&nbsp;&nbsp;Caglar Toklu caglartoklu[aat]gmail.com<br>&nbsp;&nbsp;<a target="_blank" href="http://caglartoklu.blogspot.com/">http://caglartoklu.blogspot.com/</A><br><br>LICENSE:<br>&nbsp;&nbsp;Copyright (C) 2009&nbsp;&nbsp;Caglar Toklu<br><br>&nbsp;&nbsp;This program is free software: you can redistribute it and/or modify<br>&nbsp;&nbsp;it under the terms of the GNU General Public License as published by<br>&nbsp;&nbsp;the Free Software Foundation, either version 3 of the License, or<br>&nbsp;&nbsp;(at your option) any later version.<br><br>&nbsp;&nbsp;This program is distributed in the hope that it will be useful,<br>&nbsp;&nbsp;but WITHOUT ANY WARRANTY; without even the implied warranty of<br>&nbsp;&nbsp;MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.&nbsp;&nbsp;See the<br>&nbsp;&nbsp;GNU General Public License for more details.<br><br>&nbsp;&nbsp;You should have received a copy of the GNU General Public License<br>&nbsp;&nbsp;along with this program.&nbsp;&nbsp;If not, see <a target="_blank" href="http://www.gnu.org/licenses/">http://www.gnu.org/licenses/</A>.<br><br>CHANGELOG:<br>0.0.4, 2010-04-12<br>- Fixed: If the opened buffer is deleted by hand, that raised an error when the buffer is opened again.<br>0.0.3, 2010-04-12<br>- Fixed: Opened buffer remained unmodifiable for the second run.<br>0.0.2, 2010-04-12<br>- The opened buffer is colored with MIB file syntax, making it more readable.<br>- The opened buffer is not modifiable from now on.<br>- Made it more compatible with other plugins, the functions starts with 's:'.<br>0.0.1, 2009-12-04<br>- First version with forward and reverse OID translation<br><br>COMMANDS:<br>&nbsp;&nbsp;:OidReverseTranslate &lt;oidName&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;Displays the OID information if the OID name is given. This is the reverse translation.<br>&nbsp;&nbsp;&nbsp;&nbsp;:OidReverseTranslate ipv6MIB<br>&nbsp;&nbsp;:OidTranslate &lt;oidNumber&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;Displays the OID information if the OID number is given. This is the forward translation.<br>&nbsp;&nbsp;&nbsp;&nbsp;:OidTranslate .1.3.6.1.2.1.55<br><br>USAGE:<br>&nbsp;&nbsp;You can use the plugin as the COMMANDS section shows.<br>&nbsp;&nbsp;Note that you do not have to open a MIB file to use this plugin.<br>&nbsp;&nbsp;It will work anyway, but if you open a MIB file, you can use as:<br>&nbsp;&nbsp;&nbsp;&nbsp;1. Get the cursor to a OID name, for example ipv6MIB.<br>&nbsp;&nbsp;&nbsp;&nbsp;2. Type : to get to command mode.<br>&nbsp;&nbsp;&nbsp;&nbsp;3. Type OidReverseTranslate<br>&nbsp;&nbsp;&nbsp;&nbsp;4. Type &lt;space&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;5. Type &lt;C-r&gt; &lt;C-w&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;6. Press &lt;enter&gt;<br><br><br>CONFIGURATION:<br>&nbsp;&nbsp;The options are:<br><br>&nbsp;&nbsp;g:OidTranslatorBufferName:<br>&nbsp;&nbsp;&nbsp;&nbsp;The name of the MIB translator buffer.<br>&nbsp;&nbsp;&nbsp;&nbsp;The tranlated values will be displayed here.<br>&nbsp;&nbsp;&nbsp;&nbsp;There is no need to change this if there are no clash with another plugin.<br>&nbsp;&nbsp;&nbsp;&nbsp;Default is 'OIDTranslator'.<br><br>&nbsp;&nbsp;g:OidTranslatorBufferSize:<br>&nbsp;&nbsp;&nbsp;&nbsp;The size of the buffer. It is the line count. If your screen is small, you can reduce the this size, or if your screen is huge, you can raise this number.<br>&nbsp;&nbsp;&nbsp;&nbsp;Default is 10.<br><br>&nbsp;&nbsp;g:SnmpTranslatePath:<br>&nbsp;&nbsp;&nbsp;&nbsp;The executable path of the snmptranslate command of Net-SNMP.<br>&nbsp;&nbsp;&nbsp;&nbsp;If the bin folder is in your path, no need to change this setting.<br>&nbsp;&nbsp;&nbsp;&nbsp;If it is not, set this option from your VIMRC.<br>&nbsp;&nbsp;&nbsp;&nbsp;The value must the path to the executable, not the directory including the executable.<br>&nbsp;&nbsp;&nbsp;&nbsp;For example, a valid value is:<br>&nbsp;&nbsp;&nbsp;&nbsp;let g:SnmpTranslatePath = 'C:\\usr\\bin\\snmptranslate.exe'<br>&nbsp;&nbsp;&nbsp;&nbsp;The default value is 'snmptranslate', so that it can directly run without modification if snmptranslate is included in a directory on path.<br>&nbsp;&nbsp;&nbsp;&nbsp;Note that if Net-SNMP is not on the path, even though you define this option correct, snmptranslate itself can have difficulties to find the MIB files, so it is recommended to keep it on the path and not changing this option.<br><br>REQUIREMENTS:<br>&nbsp;&nbsp;- Net-SNMP package must be installed on your system.<br>&nbsp;&nbsp;&nbsp;&nbsp;<a target="_blank" href="http://net-snmp.sourceforge.net/">http://net-snmp.sourceforge.net/</A><br>&nbsp;&nbsp;&nbsp;&nbsp;It is also strongly recommended to add 'C:\usr\bin' to the path in Windows.<br></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">install details</td></tr>
+<tr><td>&nbsp;&nbsp;- Drop the script into your plugin directory.<br>&nbsp;&nbsp;- The name of the plugin starts with the string 'mib', which means it can be used with files with '.mib' extension if the plugin is placed in the ftplugin directory.<br>&nbsp;&nbsp;&nbsp;&nbsp;But, most of the MIB files have the extension of '.txt', and some have the extension '.my'.<br>&nbsp;&nbsp;&nbsp;&nbsp;Also, it can be used from anywhere since it has actually nothing to do with the file extension, so it is better to place it in the plugin directory instead of ftplugin.<br>&nbsp;&nbsp;&nbsp;&nbsp;For example, you can use it from a .py file too.</td></tr>
+<tr><td>&nbsp;</td></tr>
+</table>
+
+<!-- rating table -->
+<form name="rating">
+<input type="hidden" name="script_id" value="2881">
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>rate this script</b></td>
+  <td valign="middle">
+    <input type="radio" name="rating" value="life_changing">Life Changing
+    <input type="radio" name="rating" value="helpful">Helpful
+    <input type="radio" name="rating" value="unfulfilling">Unfulfilling&nbsp;
+    <input type="submit" value="rate">
+  </td>
+</tr>
+</table>
+</form>
+<span class="txth2">script versions</span> (<a href="add_script_version.php?script_id=2881">upload new version</a>)
+<p>
+Click on the package to download.
+<p>
+
+<table cellspacing="2" cellpadding="4" border="0" width="100%">
+<tr class='tableheader'>
+        <th valign="top">package</th>
+    <th valign="top">script version</th>
+    <th valign="top">date</th>
+    <th valign="top">Vim version</th>
+    <th valign="top">user</th>
+    <th valign="top">release notes</th>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=12844">mib_translator.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.0.4</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-04-16</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=17322">Caglar Toklu</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- Fixed: If the opened buffer is deleted by hand, that raised an error when the buffer is opened again.<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=12843">mib_translator.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.0.3</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-04-16</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=17322">Caglar Toklu</a></i></td>
+    <td class="roweven" valign="top" width="2000">- Fixed: Opened buffer remained unmodifiable for the second run.<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=12842">mib_translator.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.0.2</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-04-16</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=17322">Caglar Toklu</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- The opened buffer is colored with MIB file syntax, making it more readable.<br>- The opened buffer is not modifiable from now on.<br>- Made it more compatible with other plugins, the functions starts with 's:'.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=11851">mib_translator.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.0.1</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-12-03</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=17322">Caglar Toklu</a></i></td>
+    <td class="roweven" valign="top" width="2000">Initial upload</td>
+</tr>
+</table>
+<!-- finish off the framework -->
+          </td>
+        </tr>
+      </table>
+    </td>
+
+  </tr>
+</table>
+
+<!-- END OF THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr><td colspan="4" bgcolor="#000000"><img src="/images/spacer.gif" height="2" width="1" alt=""></td></tr>
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr>
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+
+    <td align="left" valign="top"><small>
+      If you have questions or remarks about this site, visit the
+      <a href="http://vimonline.sf.net">vimonline development</a> pages.
+      Please use this site responsibly.
+      <br> 
+      
+      Questions about <a href="http://www.vim.org/about.php">Vim</a> should go
+      to the <a href="http://www.vim.org/maillist.php">maillist</a>.
+      Help Bram <a href="http://iccf-holland.org/">help Uganda</a>.
+      </small>
+	&nbsp;
+	&nbsp;
+
+	<!-- Start of StatCounter Code -->
+	<script type="text/javascript" language="javascript">
+	var sc_project=1417324; 
+	var sc_invisible=1; 
+	var sc_partition=11; 
+	var sc_security="d41633bc"; 
+	</script>
+
+	<script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script><noscript><a href="http://www.statcounter.com/" target="_blank"><img  src="http://c12.statcounter.com/counter.php?sc_project=1417324&java=0&security=d41633bc&invisible=0" alt="free tracking" border="0"></a> </noscript>
+	<!-- End of StatCounter Code -->
+          </td>
+
+    <td align="right" valign="top">
+      		<a href="http://sourceforge.net/projects/vim" rel="nofollow"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=8&type=1" width="88" height="31" border="0" alt="SourceForge.net Logo" /></a>
+    </td>
+
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+  </tr>
+
+    
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  
+  </tr>
+</table>
+
+</body>
+</html>
+

@@ -1,0 +1,332 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+  <link rel="Stylesheet" type="text/css" href="/css/style.css" >
+  <title>number marks - showing marks using number array in color, easy to trace. : vim online</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <meta name="KEYWORDS" content="Vim, Vi IMproved, text editor, home, documentation, tips, scripts, news">
+  <link rel="shortcut icon" type="image/x-icon" href="/images/vim_shortcut.ico">
+</head>
+
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff"> 
+
+<!-- HEADER, SPONSOR IMAGE, VIM IMAGE AND BOOK AD -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+  <td class="lightbg">&nbsp;&nbsp;&nbsp;</td>
+  <td class="lightbg" align="left"><a href="/sponsor/index.php"><img src="/images/sponsorvim.gif" alt="sponsor Vim development" border="0"></a></td>
+    <td class="lightbg" align="center"><a href="/index.php"><img src="/images/vim_header.gif" border="0" alt="Vim logo"></a></td>
+    <td class="lightbg" align="right"><a href="http://iccf-holland.org/click5.html"><img src="/images/buyhelplearn.gif" alt="Vim Book Ad" border="0"></a></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="darkbg"><img src="/images/spacer.gif" width="1" height="10" alt=""></td>
+  </tr>
+</table>
+<!-- THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+  <col width="180">
+  <col width="1">
+
+  <tr valign="top">
+    <td class="sidebar">
+      <table width="180" cellpadding="4" cellspacing="0" border="0">
+        <tr valign="top">
+          <td class="sidebar">
+
+<!-- INCLUDE THE PAGE NAVIGATION -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+    <tr>
+        <td><small>not logged in (<a href="/login.php">login</a>)</small></td>
+    </tr>
+    <tr><td>
+<small>&nbsp;</small>
+<form action="http://www.google.com/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-3005259998294962:bvyni59kjr1" />
+    <input type="hidden" name="ie" value="ISO-8859-1" />
+    <input type="text" name="q" size="20" />
+    <br>
+    <input type="submit" name="sa" value="Search" />
+  </div>
+</form>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+    </td></tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="1"></td>
+    </tr>
+    <tr>
+        <td class="darkbg"><img src="/images/spacer.gif" alt='' border="0" height="3"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="2"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/index.php">Home</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/search.php">Advanced search</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/about.php">About Vim</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/community.php">Community</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/news/news.php">News</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/sponsor/index.php">Sponsoring</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/trivia.php">Trivia</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/docs.php">Documentation</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/download.php">Download</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/scripts/index.php">Scripts</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/tips/index.php">Tips</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/account/index.php">My Account</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/huh.php">Site Help</a></td>
+        </tr>
+</table>
+
+            <table width="172" cellpadding="0" cellspacing="0" border="0">
+              <tr><td><img src="/images/spacer.gif" alt="" border="0" width="1" height="8"></td></tr>
+              <tr><td class="darkbg"><img src="/images/spacer.gif" width="1" height="3" alt=""></td></tr>
+            </table>
+            <br>
+
+<!-- INCLUDE THE PAGE SIDEBAR TEXT -->
+&nbsp;
+
+          </td>
+        </tr>
+      </table>
+    </td>
+
+    <td class="darkbg"><img src="/images/spacer.gif" width="1" height="1" border="0" alt=""><br></td>
+    <td>
+      <table width="100%" cellpadding="10" cellspacing="0" border="0" bordercolor="red">
+        <tr>
+          <td valign="top">
+
+<span class="txth1">number marks : showing marks using number array in color, easy to trace.</span> 
+
+<br>
+<br>
+
+<!-- karma table -->
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
+  <td>
+    Rating <b>38/14</b>,
+    Downloaded by 975  </td>
+  <td class="lightbg">
+  <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
+  </td>
+  <td>
+    <a href="http://vim.wikia.com/wiki/Script:2194">Vim wiki</a>
+  </td>  
+</tr>
+</table>
+<p>
+
+<table cellspacing="0" cellpadding="0" border="0">
+<tr><td class="prompt">created by</td></tr>
+<tr><td><a href="/account/profile.php?user_id=13635">Hongli Gao</a></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">script type</td></tr>
+<tr><td>utility</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">description</td></tr>
+<tr><td>You can show your marks using number array in color, and you can delete one or all marks(now, you can replace a mark to another place). The color depend on your color scheme setting. You easy to trace the marks using hot key, move to ahead or behind. The mark's number make you easy to understand where you are. And you also can save and reload these marks in a file.<br><br>&#36825;&#20010;&#33050;&#26412;&#26174;&#31034;&#29992;&#24102;&#39068;&#33394;&#30340;&#25968;&#23383;&#26631;&#26126;&#30340;[&#26631;&#35760;]&#65292;&#20320;&#21487;&#20197;&#21024;&#38500;&#20320;&#19981;&#24819;&#29992;&#30340;&#26576;&#20010;[&#26631;&#35760;]&#65292;&#25110;&#32773;&#29992;F4&#38190;&#20840;&#37096;&#21024;&#25481;&#25152;&#26377;&#30340;[&#26631;&#35760;](&#29616;&#22312;&#20063;&#21487;&#20197;&#25226;&#19968;&#20010;&#26631;&#35760;&#31227;&#21160;&#20301;&#32622;&#65292;&#32780;&#19981;&#25913;&#21464;&#20182;&#30340;&#25968;&#23383;&#26631;&#21495;)&#12290;&#24102;&#39068;&#33394;&#30340;&#25968;&#23383;[&#26631;&#35760;]&#20351;&#20320;&#26356;&#23481;&#26131;&#20102;&#35299;&#24403;&#21069;&#34892;&#22312;&#20195;&#30721;&#20013;&#30340;&#20301;&#32622;&#65292;&#26041;&#20415;&#29702;&#35299;&#20195;&#30721;&#12290;[&#26631;&#35760;]&#30340;&#39068;&#33394;&#20381;&#36182;&#20110;&#20320;&#30340;&#39068;&#33394;&#35774;&#23450;&#25991;&#20214;&#12290;&#19981;&#21516;&#30340;&#39068;&#33394;&#39118;&#26684;&#21487;&#33021;&#21448;&#19981;&#21516;&#30340;[&#26631;&#35760;]&#39068;&#33394;&#24335;&#26679;&#12290;&#20320;&#21487;&#20197;&#24456;&#26041;&#20415;&#30340;&#20351;&#29992;&#24555;&#25463;&#38190;&#21521;&#21069;&#25110;&#32773;&#21521;&#21518;&#36319;&#36394;&#20320;&#30340;[&#26631;&#35760;]&#12290;&#20320;&#20063;&#21487;&#20197;&#20445;&#23384;&#20320;&#30340;[&#26631;&#35760;]&#21040;&#20320;&#25351;&#23450;&#30340;&#25991;&#20214;&#22841;&#19979;&#38754;&#65292;&#28982;&#21518;&#20197;&#21518;&#20877;&#27425;&#25171;&#24320;&#25152;&#26377;&#30340;[&#26631;&#35760;]&#12290;<br><br># &#20004;&#20010;&#37325;&#35201;&#26356;&#26032;&#65292;&#31227;&#21160;&#26631;&#35760;&#21644;&#22312;&#19981;&#21516;&#30340;tab&#39029;&#20043;&#38388;&#36339;&#36716;, &#22914;&#26524;&#20320;&#26377;&#20004;&#20010;&#20197;&#19978;&#30340;tab&#39029;&#30340;&#35805;&#12290;<br>&quot; ##&nbsp;&nbsp;You can set marks only less 100.&nbsp;&nbsp;##<br>&quot; ##&nbsp;&nbsp;If you have more than two tabpage, you can jump from one tabpage to another one.&nbsp;&nbsp;##<br><br>&#36825;&#20010;&#33050;&#26412;&#22240;&#20026;signs&#30340;&#26174;&#31034;&#30340;&#21407;&#22240;&#65292;&#25152;&#20197;&#21482;&#25552;&#20379;&#26368;&#22823;99&#20010;[&#26631;&#35760;]&#12290;<br><br>screenshot / &#25235;&#22270;<br><a target="_blank" href="http://wiki.ubuntu.org.cn/images/b/b6/Vim_marks.PNG">http://wiki.ubuntu.org.cn/images/b/b6/Vim_marks.PNG</A><br><br> USAGE:<br> 1:make a mark, or delete it: <br>&nbsp;&nbsp;ctrl + F2<br>&nbsp;&nbsp;mm<br> 2:move to ahead mark:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;shift + F2<br>&nbsp;&nbsp;mv<br> 3:move to next mark:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>&nbsp;&nbsp;F2<br>&nbsp;&nbsp;mb<br> 4:delete all marks:<br>&nbsp;&nbsp;F4<br>5:moving a mark:<br>&nbsp;&nbsp;m.<br>&nbsp;&nbsp;(press m. at the one mark, and move the cursor to another line, press m. again. )<br>6:save marks<br>&nbsp;&nbsp;F6&#65292; input a name&#65292; press ENTER<br>7:reload marks<br>&nbsp;&nbsp;F5&#65292; input a name&#65292; press ENTER<br><br>&#29992;&#27861;&#65306;<br>&#65288;&#19979;&#38754;&#25152;&#26377;&#30340;&#25805;&#20316;&#37117;&#26159;&#22312;&#38750;&#25554;&#20837;&#27169;&#24335;&#19979;&#65292;&#20809;&#26631;&#32622;&#20110;&#20320;&#35201;&#25805;&#20316;&#30340;&#34892;&#65289;<br>1&#65306;&#35774;&#23450;&#19968;&#20010;[&#26631;&#35760;]&#65292;&#25110;&#32773;&#21462;&#28040;&#36825;&#20010;[&#26631;&#35760;]<br>&nbsp;&nbsp;&nbsp;&nbsp;&#25353;Ctrl+F2 &#25110;&#32773; mm &#65288;&#24555;&#36895;&#36830;&#30528;&#25353;&#20004;&#19979;m&#23383;&#27597;&#38190;&#65289;<br>2&#65306;&#21521;&#21069;&#31227;&#21160;<br>&nbsp;&nbsp; &#25353; shift + F2 &#25110;&#32773; mv &#65288;&#24555;&#36895;&#25353;&#23383;&#27597;m&#21644;&#23383;&#27597;v&#38190;&#65289;<br>3&#65306;&#21521;&#21518;&#31227;&#21160;<br>&nbsp;&nbsp; &#25353; F2 &#25110;&#32773; mb<br>4&#65306;&#21462;&#28040;&#25152;&#26377;&#30340;[&#26631;&#35760;]<br>&nbsp;&nbsp;&nbsp;&nbsp;&#25353;F4&#38190;&nbsp;&nbsp;&nbsp;&nbsp;&#65288;&#25353;&#21462;&#28040;&#21518;&#65292;&#20877;&#27425;&#26631;&#35760;&#26102;&#20505;&#37325;&#26032;&#20174;01&#21040;99&#24320;&#22987;&#26631;&#25968;&#65289;<br>5:&#31227;&#21160;&#19968;&#20010;[&#26631;&#35760;]<br>&nbsp;&nbsp;&nbsp;&nbsp;&#25226;&#20809;&#26631;&#31227;&#21160;&#21040;&#19968;&#20010;&#26377;&#26631;&#35760;&#30340;&#34892;&#65292;&#25353;m. &#36825;&#26102;&#36825;&#20010;&#26631;&#35760;&#25913;&#21464;&#39068;&#33394;&#65292;<br>&nbsp;&nbsp;&nbsp;&nbsp;&#28982;&#21518;&#25226;&#20809;&#26631;&#31227;&#21040;&#19968;&#20010;&#27809;&#26377;&#26631;&#35760;&#30340;&#34892;&#65292;&#20877;&#19968;&#27425;&#25353;m.&nbsp;&nbsp;&#21017;&#25226;&#21018;&#25165;&#30340;<br>&nbsp;&nbsp; &#26631;&#35760;&#31227;&#21160;&#21040;&#24403;&#21069;&#34892;&#12290;<br>6:&#20445;&#23384;&#26631;&#35760;<br>&nbsp;&nbsp; &#25353;F6&#65292;&#36755;&#20837;&#19968;&#20010;&#21517;&#31216;&#65292;&#25353;&#22238;&#36710;&#12290;<br>7&#65306;&#35835;&#20837;&#26631;&#35760;<br>&nbsp;&nbsp; &#25353;F5&#65292;&#36755;&#20837;&#19968;&#20010;&#20197;&#20445;&#23384;&#36807;&#30340;&#21517;&#31216;&#65292;&#25353;&#22238;&#36710;&#12290;<br></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">install details</td></tr>
+<tr><td>Unzip marks_corey.zip into your vim's plugin folder.<br>&#65293;&#65293;&#65293;&#65293;&#65293;&#65293;&#65293;&#65293;&#65293;&#65293;&#65293;&#65293;&#65293;&#65293;&#65293;&#65293;&#65293;&#65293;&#65293;&#65293;&#65293;&#65293;<br>&quot; If you want to save the marks to a file. Do it like below:<br>&quot; Put the one line<br>&quot; let g:Signs_file_path_corey='c:\&#039<br>&quot; into your gvimrc or _vimrc, change it to your path.<br>&lt;F6&gt;&nbsp;&nbsp; # Save marks.<br>&lt;F5&gt;&nbsp;&nbsp; # reload signs.<br><br>&#31616;&#21333;&#30340;&#35299;&#21387;&#36825;&#20010;&#21387;&#32553;&#25991;&#20214;&#21040;&#20320;&#30340;vim&#30340;plugin&#25991;&#20214;&#22841;&#19979;&#12290;<br>&#22914;&#26524;&#35201;&#20351;&#29992;[&#26631;&#35760;]&#20445;&#23384;&#21151;&#33021;&#65292;&#26368;&#22909;&#20320;&#35201;&#22312;&#20320;&#30340;gvimrc&#65292;&#25110;&#32773;_vimrc&#37324;&#38754;&#35774;&#32622;<br>let g:Signs_file_path_corey='c:\&#039 &lt;&lt;&#20320;&#21487;&#20197;&#20462;&#25913;&#25104;&#20320;&#30340;&#26377;&#35835;&#20889;&#26435;&#38480;&#30340;&#25991;&#20214;&#22841;&#12290;<br>&lt;F6&gt;&nbsp;&nbsp; # &#20445;&#23384;&#25152;&#26377;&#12308;&#26631;&#35760;&#12309;<br>&lt;F5&gt;&nbsp;&nbsp; # &#24674;&#22797;&#25152;&#26377;&#12308;&#26631;&#35760;&#12309;<br><br></td></tr>
+<tr><td>&nbsp;</td></tr>
+</table>
+
+<!-- rating table -->
+<form name="rating">
+<input type="hidden" name="script_id" value="2194">
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>rate this script</b></td>
+  <td valign="middle">
+    <input type="radio" name="rating" value="life_changing">Life Changing
+    <input type="radio" name="rating" value="helpful">Helpful
+    <input type="radio" name="rating" value="unfulfilling">Unfulfilling&nbsp;
+    <input type="submit" value="rate">
+  </td>
+</tr>
+</table>
+</form>
+<span class="txth2">script versions</span> (<a href="add_script_version.php?script_id=2194">upload new version</a>)
+<p>
+Click on the package to download.
+<p>
+
+<table cellspacing="2" cellpadding="4" border="0" width="100%">
+<tr class='tableheader'>
+        <th valign="top">package</th>
+    <th valign="top">script version</th>
+    <th valign="top">date</th>
+    <th valign="top">Vim version</th>
+    <th valign="top">user</th>
+    <th valign="top">release notes</th>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13689">marks_corey.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.4</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-08-27</i></td>
+    <td class="rowodd" valign="top" nowrap>7.3</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=13635">Hongli Gao</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Afford two hotkeys, <br>&lt;F5&gt; load marks' file, <br>&lt;F6&gt; save marks to a file. <br><br>--NOTED&nbsp;&nbsp;THIS------------------------ <br>Add <br><br>let g:Signs_file_path_corey='c:&#039 <br><br>to your gvimrc, change it to your path. <br>----------------------------- <br>&#25552;&#20379;&#20004;&#20010;&#26032;&#30340;&#24555;&#25463;&#38190;&#65292; <br>&#25353;F5&#35835;&#20837;&#26631;&#35760;&#25991;&#20214;&#65292; <br>&#25353;F6&#20445;&#23384;&#26631;&#35760;&#21040;&#25991;&#20214;&#37324;&#12290; <br>----------------------------------- <br>&#27880;&#24847;&#65292;&#20320;&#30340;gvimrc&#25991;&#20214;&#37324;&#38754;&#38656;&#35201;&#21152;&#20837;&#20197;&#19979;&#19968;&#34892;&#12290; <br><br>let g:Signs_file_path_corey='c:&#039 <br><br>&#24182;&#19988;&#25913;&#25104;&#20320;&#33258;&#24049;&#21916;&#27426;&#30340;&#30446;&#24405;&#12290;</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=11272">marks_corey.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.3</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-08-27</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=13635">Hongli Gao</a></i></td>
+    <td class="roweven" valign="top" width="2000">If the buffer is not in the buffer list the sign cannot be added when you reload the marks from a file.<br>&#24403;&#20320;&#37325;&#26032;&#35835;&#21462;&#20445;&#23384;&#22312;&#25991;&#20214;&#37324;&#30340;&#26631;&#35760;&#26102;&#65292;&#22914;&#26524;&#37027;&#20010;&#26631;&#35760;&#25152;&#22312;&#30340;buffer&#27809;&#26377;&#22312;&#24403;&#21069;&#30340;buffer list&#37324;&#38754;&#30340;&#26102;&#20505;&#65292;&#19981;&#33021;&#27491;&#30830;&#30340;&#26174;&#31034;&#26631;&#35760;&#12290;</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=8558">marks_corey.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.2</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2008-04-14</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=13635">Hongli Gao</a></i></td>
+    <td class="rowodd" valign="top" width="2000">I'm sorry for updating frequently, this time only for optimizing!<br>1:reduce screen flash rate when jumping with tabpage.<br>2:reuse the biggest number for the marks.<br><br>&#25265;&#27465;&#36825;&#20040;&#39057;&#32321;&#26356;&#26032;&#65292;&#36825;&#27425;&#26159;&#20026;&#20102;&#20248;&#21270;&#30340;&#30446;&#30340;&#65281;<br>1:&#24403;&#22312;tabpage&#20043;&#38388;&#36339;&#36716;&#24471;&#26102;&#20505;&#65292;&#38477;&#20302;&#30011;&#38754;&#38378;&#28865;<br>2:&#37325;&#26032;&#20351;&#29992;&#34987;&#21024;&#38500;&#30340;&#26368;&#22823;&#21495;&#30721;&#65292;&#20063;&#23601;&#26159;&#22312;&#19968;&#22788;&#19981;&#20572;&#30340;&#20351;&#29992;mm&#65292;&#21495;&#30721;&#19981;&#20877;&#26080;&#38480;&#22686;&#38271;</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=8548">marks_corey.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.0</b></td>
+    <td class="roweven" valign="top" nowrap><i>2008-04-12</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=13635">Hongli Gao</a></i></td>
+    <td class="roweven" valign="top" width="2000">New functions, now you can moving a mark to another place.<br>and you can jump marks from one tabpage to another one,<br>this depends on whether you have more than two tabpages at one time, otherwise jumping will be in one window. So I call this copy 1.0.<br>But this not very good at two windows in one tabpage, I will improve it in future.<br><br>&#28155;&#21152;&#23454;&#29992;&#21151;&#33021;&#65292; &#23601;&#26159;&#31227;&#21160;&#19968;&#20010;&#26631;&#35760;&#21040;&#21478;&#19968;&#20010;&#20301;&#32622;&#12290;<br>&#21516;&#26102;&#23454;&#29616;&#20102;&#22312;&#19981;&#21516;tabpage&#39029;&#20013;&#38388;&#36339;&#36716;&#26631;&#35760;&#30340;&#21151;&#33021;&#12290;<br>&#22914;&#26524;&#20320;&#36339;&#36716;&#26631;&#35760;&#30340;&#26102;&#20505;&#20351;&#29992;&#20102;&#20004;&#20010;&#20197;&#19978;&#30340;tab&#39029;&#65292;&#37027;&#20040;&#23601;&#22312;tab&#39029;&#20043;&#38388;<br>&#36339;&#36716;&#65292;&#24182;&#19988;&#21487;&#20197;&#22312;&#26032;tab&#39029;&#37324;&#38754;&#25171;&#24320;&#24403;&#21069;&#27809;&#26377;&#25171;&#24320;&#30340;&#25991;&#20214;&#12290;<br>&#20294;&#26159;&#30446;&#21069;&#27809;&#26377;&#24456;&#22909;&#30340;&#23454;&#29616;&#19968;&#20010;tab&#39029;&#37324;&#38754;&#26377;&#22810;&#20010;&#31383;&#21475;&#30340;&#38382;&#39064;&#12290;<br>&#20197;&#21518;&#35299;&#20915;&#36825;&#20010;&#38382;&#39064;&#12290;<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=8492">marks_corey.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.2</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2008-03-25</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=13635">Hongli Gao</a></i></td>
+    <td class="rowodd" valign="top" width="2000">just unzip this file and cover your old version file.<br>&#35299;&#21387;&#21518;&#65292;&#35206;&#30422;&#21407;&#26469;&#30340;&#25991;&#20214;&#23601;&#21487;&#20197;&#12290;<br><br>fixed a makeing number bug, when you restore the marks from a file. Before this, you restore marks, then the script will makeing number from 01.<br><br>&#20462;&#22797;&#19968;&#20010;&#38169;&#35823;&#65292;&#35835;&#21462;&#20445;&#23384;&#22312;&#25991;&#20214;&#37324;&#30340;&#26631;&#35760;&#21518;&#65292;&#20877;&#27425;&#36861;&#21152;&#26631;&#35760;&#26102;&#65292;&#20250;&#37325;&#26032;&#24320;&#22987;&#20174;01&#32534;&#21495;&#12290;&#22914;&#26524;&#19981;&#20351;&#29992;&#26631;&#35760;&#20445;&#23384;&#21151;&#33021;&#19981;&#20250;&#26377;&#36825;&#20010;&#38382;&#39064;&#12290;</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=8470">marks_corey.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.1</b></td>
+    <td class="roweven" valign="top" nowrap><i>2008-03-20</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=13635">Hongli Gao</a></i></td>
+    <td class="roweven" valign="top" width="2000">Initial upload</td>
+</tr>
+</table>
+<!-- finish off the framework -->
+          </td>
+        </tr>
+      </table>
+    </td>
+
+  </tr>
+</table>
+
+<!-- END OF THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr><td colspan="4" bgcolor="#000000"><img src="/images/spacer.gif" height="2" width="1" alt=""></td></tr>
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr>
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+
+    <td align="left" valign="top"><small>
+      If you have questions or remarks about this site, visit the
+      <a href="http://vimonline.sf.net">vimonline development</a> pages.
+      Please use this site responsibly.
+      <br> 
+      
+      Questions about <a href="http://www.vim.org/about.php">Vim</a> should go
+      to the <a href="http://www.vim.org/maillist.php">maillist</a>.
+      Help Bram <a href="http://iccf-holland.org/">help Uganda</a>.
+      </small>
+	&nbsp;
+	&nbsp;
+
+	<!-- Start of StatCounter Code -->
+	<script type="text/javascript" language="javascript">
+	var sc_project=1417324; 
+	var sc_invisible=1; 
+	var sc_partition=11; 
+	var sc_security="d41633bc"; 
+	</script>
+
+	<script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script><noscript><a href="http://www.statcounter.com/" target="_blank"><img  src="http://c12.statcounter.com/counter.php?sc_project=1417324&java=0&security=d41633bc&invisible=0" alt="free tracking" border="0"></a> </noscript>
+	<!-- End of StatCounter Code -->
+          </td>
+
+    <td align="right" valign="top">
+      		<a href="http://sourceforge.net/projects/vim" rel="nofollow"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=8&type=1" width="88" height="31" border="0" alt="SourceForge.net Logo" /></a>
+    </td>
+
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+  </tr>
+
+    
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  
+  </tr>
+</table>
+
+</body>
+</html>
+

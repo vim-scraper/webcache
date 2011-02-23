@@ -1,0 +1,356 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+  <link rel="Stylesheet" type="text/css" href="/css/style.css" >
+  <title>xterm16.vim - An adjustable contrast color scheme for GUI and 8, 16 or 256 color terminals. : vim online</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <meta name="KEYWORDS" content="Vim, Vi IMproved, text editor, home, documentation, tips, scripts, news">
+  <link rel="shortcut icon" type="image/x-icon" href="/images/vim_shortcut.ico">
+</head>
+
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff"> 
+
+<!-- HEADER, SPONSOR IMAGE, VIM IMAGE AND BOOK AD -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+  <td class="lightbg">&nbsp;&nbsp;&nbsp;</td>
+  <td class="lightbg" align="left"><a href="/sponsor/index.php"><img src="/images/sponsorvim.gif" alt="sponsor Vim development" border="0"></a></td>
+    <td class="lightbg" align="center"><a href="/index.php"><img src="/images/vim_header.gif" border="0" alt="Vim logo"></a></td>
+    <td class="lightbg" align="right"><a href="http://iccf-holland.org/click5.html"><img src="/images/buyhelplearn.gif" alt="Vim Book Ad" border="0"></a></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="darkbg"><img src="/images/spacer.gif" width="1" height="10" alt=""></td>
+  </tr>
+</table>
+<!-- THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+  <col width="180">
+  <col width="1">
+
+  <tr valign="top">
+    <td class="sidebar">
+      <table width="180" cellpadding="4" cellspacing="0" border="0">
+        <tr valign="top">
+          <td class="sidebar">
+
+<!-- INCLUDE THE PAGE NAVIGATION -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+    <tr>
+        <td><small>not logged in (<a href="/login.php">login</a>)</small></td>
+    </tr>
+    <tr><td>
+<small>&nbsp;</small>
+<form action="http://www.google.com/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-3005259998294962:bvyni59kjr1" />
+    <input type="hidden" name="ie" value="ISO-8859-1" />
+    <input type="text" name="q" size="20" />
+    <br>
+    <input type="submit" name="sa" value="Search" />
+  </div>
+</form>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+    </td></tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="1"></td>
+    </tr>
+    <tr>
+        <td class="darkbg"><img src="/images/spacer.gif" alt='' border="0" height="3"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="2"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/index.php">Home</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/search.php">Advanced search</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/about.php">About Vim</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/community.php">Community</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/news/news.php">News</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/sponsor/index.php">Sponsoring</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/trivia.php">Trivia</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/docs.php">Documentation</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/download.php">Download</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/scripts/index.php">Scripts</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/tips/index.php">Tips</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/account/index.php">My Account</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/huh.php">Site Help</a></td>
+        </tr>
+</table>
+
+            <table width="172" cellpadding="0" cellspacing="0" border="0">
+              <tr><td><img src="/images/spacer.gif" alt="" border="0" width="1" height="8"></td></tr>
+              <tr><td class="darkbg"><img src="/images/spacer.gif" width="1" height="3" alt=""></td></tr>
+            </table>
+            <br>
+
+<!-- INCLUDE THE PAGE SIDEBAR TEXT -->
+&nbsp;
+
+          </td>
+        </tr>
+      </table>
+    </td>
+
+    <td class="darkbg"><img src="/images/spacer.gif" width="1" height="1" border="0" alt=""><br></td>
+    <td>
+      <table width="100%" cellpadding="10" cellspacing="0" border="0" bordercolor="red">
+        <tr>
+          <td valign="top">
+
+<span class="txth1">xterm16.vim : An adjustable contrast color scheme for GUI and 8, 16 or 256 color terminals.</span> 
+
+<br>
+<br>
+
+<!-- karma table -->
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
+  <td>
+    Rating <b>390/173</b>,
+    Downloaded by 6212  </td>
+  <td class="lightbg">
+  <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
+  </td>
+  <td>
+    <a href="http://vim.wikia.com/wiki/Script:795">Vim wiki</a>
+  </td>  
+</tr>
+</table>
+<p>
+
+<table cellspacing="0" cellpadding="0" border="0">
+<tr><td class="prompt">created by</td></tr>
+<tr><td><a href="/account/profile.php?user_id=3615">gi1242 gi1242</a></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">script type</td></tr>
+<tr><td>color scheme</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">description</td></tr>
+<tr><td>An adjustable contrast fully customisable color scheme for GUI & 8, 16 or 256 color terminals, designed to minimise eyestrain. The main features are:<br><br>	- Four color maps:<br>	&nbsp;&nbsp;&nbsp;&nbsp;'allblue'&nbsp;&nbsp; : A colormap with most foreground colors blueish (to<br>		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;minimize contrast etc.)<br>	&nbsp;&nbsp;&nbsp;&nbsp;'soft'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: A colormap with foreground colors of similar<br>		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;intensities to reduce eyestrain.<br>	&nbsp;&nbsp;&nbsp;&nbsp;'softlight' : A colormap with a bright background (for web<br>		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;hosting etc.)<br>	&nbsp;&nbsp;&nbsp;&nbsp;'standard'&nbsp;&nbsp;: A colormap for use on terminals with only 8/16<br>			&nbsp;&nbsp; colors.<br>	&nbsp;&nbsp;The first three colormaps will work only on 256 color capable<br>	&nbsp;&nbsp;terminals or the GUI. The last one will work anywhere.<br><br>	- Adjustable brightness / contrast. Lets you easily adjust the<br>	&nbsp;&nbsp;brightness and contrast settings. Extremely useful (for instance)<br>	&nbsp;&nbsp;when there is a glare on your monitor, or for long late dim light<br>	&nbsp;&nbsp;dim light late at night :)<br><br>	- Terminal and GUI support. If you use xterm, rxvt or mrxvt (compiled<br>	&nbsp;&nbsp;with 256 colors), then the colors on your terminal will be almost<br>	&nbsp;&nbsp;identical to your GUI colors. On any other terminal emulator, a few<br>	&nbsp;&nbsp;scripts (included) and parts of this help are designed to help you<br>	&nbsp;&nbsp;get the colors you want.<br><br>	- LCD / CRT Monitor support. The color response of LCD and CRT<br>	&nbsp;&nbsp;monitors is pretty different. This color scheme has an option to<br>	&nbsp;&nbsp;adjust colors on CRT monitors to give a similar appearance.<br><br>	- Customizable colors. If you find any color unreadable or ugly, you<br>	&nbsp;&nbsp;can change it easily. When adjusting the brightness, your custom<br>	&nbsp;&nbsp;colors will be suitably adjusted too!<br><br>	- Customizable highlighting groups. If you don't like the highlighting<br>	&nbsp;&nbsp;of any particular group, you can change it to suit your needs. This<br>	&nbsp;&nbsp;is useful for instance if you want the cursor to be brighter than<br>	&nbsp;&nbsp;everything else / etc.<br><br>The first screenshot below is also the complete documentation and description.<br><br>Screenshots:<br><br><a target="_blank" href="http://www.math.cmu.edu/~gautam/per/opensource/xterm16/xterm16-doc.html">http://www.math.cmu.edu/~gautam/per/opensource/xterm16/xterm16-doc.html</A> [Complete documentation and description]<br><a target="_blank" href="http://www.math.cmu.edu/~gautam/per/opensource/xterm16/xterm16-src.html">http://www.math.cmu.edu/~gautam/per/opensource/xterm16/xterm16-src.html</A> [HTMLised source]<br><a target="_blank" href="http://www.math.cmu.edu/~gautam/per/opensource/xterm16/c-source.html">http://www.math.cmu.edu/~gautam/per/opensource/xterm16/c-source.html</A> [HTMLised C code]<br><a target="_blank" href="http://www.math.cmu.edu/~gautam/per/opensource/xterm16/timestamp-doc.html">http://www.math.cmu.edu/~gautam/per/opensource/xterm16/timestamp-doc.html</A> [Another VIM help file]<br><a target="_blank" href="http://www.math.cmu.edu/~gautam/per/opensource/xterm16/email.html">http://www.math.cmu.edu/~gautam/per/opensource/xterm16/email.html</A> [HTMLised email]<br><a target="_blank" href="http://www.math.cmu.edu/~gautam/per/opensource/xterm16/mrxvt.png">http://www.math.cmu.edu/~gautam/per/opensource/xterm16/mrxvt.png</A> [Transparent background in mrxvt]<br><br>(On javascript enabled 'good' browsers, you should be able to adjust the Brightness, colormap and monitor type in each of the HTMLised screenshots above.)<br></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">install details</td></tr>
+<tr><td>For local installation, put the |xterm16.vim| file in your ~/.vim/colors directory. To install globally put it in $VIMRUNTIME/colors. Finally add the following lines to your {.vimrc}: &gt;<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&quot; let xterm16_brightness = 'default'&nbsp;&nbsp;&nbsp;&nbsp; &quot; Change if needed<br>&nbsp;&nbsp;&nbsp;&nbsp;&quot; let xterm16_colormap = 'allblue'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot; Change if needed<br>&nbsp;&nbsp;&nbsp;&nbsp;colo xterm16<br><br>If you want to change the default colors on your terminal (to match those in the screenshots) look at the file &quot;xterm16.txt&quot; (in Vim if you want it to look pretty) for details. (You can also view it online at the above links)</td></tr>
+<tr><td>&nbsp;</td></tr>
+</table>
+
+<!-- rating table -->
+<form name="rating">
+<input type="hidden" name="script_id" value="795">
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>rate this script</b></td>
+  <td valign="middle">
+    <input type="radio" name="rating" value="life_changing">Life Changing
+    <input type="radio" name="rating" value="helpful">Helpful
+    <input type="radio" name="rating" value="unfulfilling">Unfulfilling&nbsp;
+    <input type="submit" value="rate">
+  </td>
+</tr>
+</table>
+</form>
+<span class="txth2">script versions</span> (<a href="add_script_version.php?script_id=795">upload new version</a>)
+<p>
+Click on the package to download.
+<p>
+
+<table cellspacing="2" cellpadding="4" border="0" width="100%">
+<tr class='tableheader'>
+        <th valign="top">package</th>
+    <th valign="top">script version</th>
+    <th valign="top">date</th>
+    <th valign="top">Vim version</th>
+    <th valign="top">user</th>
+    <th valign="top">release notes</th>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=6172">xterm16-2.43.tbz2</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.43</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2006-09-12</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=3615">gi1242 gi1242</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Added highlighting groups for the Tab line (thanks to Paddy Newman).</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=5721">xterm16-2.42.tbz2</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.42</b></td>
+    <td class="roweven" valign="top" nowrap><i>2006-05-18</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=3615">gi1242 gi1242</a></i></td>
+    <td class="roweven" valign="top" width="2000">Fixed glaring documentation error (should set t_Co=256, and not 16). Minor highlighting group bugfixes. </td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=5565">xterm16-2.41.tbz2</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.41</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2006-04-16</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=3615">gi1242 gi1242</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Minor changes to highlighting groups: Added cursorline & cursorcollumn (thanks to Georg Dhan for pointing this out). Also made sure that Comments are a different color than other highlighting groups in the 'allblue' colormap.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=5515">xterm16-2.4.tbz2</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.4</b></td>
+    <td class="roweven" valign="top" nowrap><i>2006-04-04</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=3615">gi1242 gi1242</a></i></td>
+    <td class="roweven" valign="top" width="2000">Added an &quot;allblue&quot; colormap (makes all foreground colors a shade of blue). Also added a &quot;softlight&quot; colormap with light background for webhosting. Added syntax items for Vim7 (is still backward compatible to vim6.4)</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=4342">xterm16-2.2.tbz2</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.2</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2005-06-04</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=3615">gi1242 gi1242</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Now fully supports rxvt and mrxvt when compiled with 256 colors. Included an option for transparency with mrxvt. Added a perl script to make changing colors on 16 color terminals easier. Few minor color modifications (StatusLine, StatusLineNC). I mainly wrote this so I can switch to mrxvt with transparency without changing my precious colors :)</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=3636">xterm16-2.1.tbz2</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.1</b></td>
+    <td class="roweven" valign="top" nowrap><i>2004-11-15</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=3615">gi1242 gi1242</a></i></td>
+    <td class="roweven" valign="top" width="2000">Improved version to support adjustable brightness and contrast, CRT / LCD monitors. Includes a new 'soft' colormap, where all foreground colors are of almost 'equal' intensity for long late night coding sessions. This version takes advantage of xterm's color support. If you use xterm (compiled with 256 colors), then this script can adjust the colors automatically (without making you mess with .Xresources etc). [Ofcourse, it works on other terminals / GUI too].</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=2520">xterm16.tbz2</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.3</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2003-11-26</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=3615">gi1242 gi1242</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Changed the Diff / Fold highlighting groups. Added files to change default colors of ctheme (thanks to Juhapekka Tolvanen) and rxvt.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=2463">xterm16.tbz2</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.2</b></td>
+    <td class="roweven" valign="top" nowrap><i>2003-11-06</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=3615">gi1242 gi1242</a></i></td>
+    <td class="roweven" valign="top" width="2000">Added support to remap the unreadable darkblue on the linux console. Disabled HTML groups from using cterm attributes and used colors instead. Added options to customise GUI colors. All options added here can be disabled.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=2451">xterm16.tbz2</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2003-11-04</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=3615">gi1242 gi1242</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Minor Changes to highlighting groups. Now includes files to change colors on xterm, konsole or gnome-terminal to make the red / dark blue colors more readable.</td>
+</tr>
+</table>
+<!-- finish off the framework -->
+          </td>
+        </tr>
+      </table>
+    </td>
+
+  </tr>
+</table>
+
+<!-- END OF THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr><td colspan="4" bgcolor="#000000"><img src="/images/spacer.gif" height="2" width="1" alt=""></td></tr>
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr>
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+
+    <td align="left" valign="top"><small>
+      If you have questions or remarks about this site, visit the
+      <a href="http://vimonline.sf.net">vimonline development</a> pages.
+      Please use this site responsibly.
+      <br> 
+      
+      Questions about <a href="http://www.vim.org/about.php">Vim</a> should go
+      to the <a href="http://www.vim.org/maillist.php">maillist</a>.
+      Help Bram <a href="http://iccf-holland.org/">help Uganda</a>.
+      </small>
+	&nbsp;
+	&nbsp;
+
+	<!-- Start of StatCounter Code -->
+	<script type="text/javascript" language="javascript">
+	var sc_project=1417324; 
+	var sc_invisible=1; 
+	var sc_partition=11; 
+	var sc_security="d41633bc"; 
+	</script>
+
+	<script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script><noscript><a href="http://www.statcounter.com/" target="_blank"><img  src="http://c12.statcounter.com/counter.php?sc_project=1417324&java=0&security=d41633bc&invisible=0" alt="free tracking" border="0"></a> </noscript>
+	<!-- End of StatCounter Code -->
+          </td>
+
+    <td align="right" valign="top">
+      		<a href="http://sourceforge.net/projects/vim" rel="nofollow"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=8&type=1" width="88" height="31" border="0" alt="SourceForge.net Logo" /></a>
+    </td>
+
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+  </tr>
+
+    
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  
+  </tr>
+</table>
+
+</body>
+</html>
+

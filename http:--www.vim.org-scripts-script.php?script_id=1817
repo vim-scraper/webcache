@@ -1,0 +1,340 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+  <link rel="Stylesheet" type="text/css" href="/css/style.css" >
+  <title>buffers_search_and_replace - Simple but powerful buffer(s) search & replace tool : vim online</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <meta name="KEYWORDS" content="Vim, Vi IMproved, text editor, home, documentation, tips, scripts, news">
+  <link rel="shortcut icon" type="image/x-icon" href="/images/vim_shortcut.ico">
+</head>
+
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff"> 
+
+<!-- HEADER, SPONSOR IMAGE, VIM IMAGE AND BOOK AD -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+  <td class="lightbg">&nbsp;&nbsp;&nbsp;</td>
+  <td class="lightbg" align="left"><a href="/sponsor/index.php"><img src="/images/sponsorvim.gif" alt="sponsor Vim development" border="0"></a></td>
+    <td class="lightbg" align="center"><a href="/index.php"><img src="/images/vim_header.gif" border="0" alt="Vim logo"></a></td>
+    <td class="lightbg" align="right"><a href="http://iccf-holland.org/click5.html"><img src="/images/buyhelplearn.gif" alt="Vim Book Ad" border="0"></a></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="darkbg"><img src="/images/spacer.gif" width="1" height="10" alt=""></td>
+  </tr>
+</table>
+<!-- THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+  <col width="180">
+  <col width="1">
+
+  <tr valign="top">
+    <td class="sidebar">
+      <table width="180" cellpadding="4" cellspacing="0" border="0">
+        <tr valign="top">
+          <td class="sidebar">
+
+<!-- INCLUDE THE PAGE NAVIGATION -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+    <tr>
+        <td><small>not logged in (<a href="/login.php">login</a>)</small></td>
+    </tr>
+    <tr><td>
+<small>&nbsp;</small>
+<form action="http://www.google.com/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-3005259998294962:bvyni59kjr1" />
+    <input type="hidden" name="ie" value="ISO-8859-1" />
+    <input type="text" name="q" size="20" />
+    <br>
+    <input type="submit" name="sa" value="Search" />
+  </div>
+</form>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+    </td></tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="1"></td>
+    </tr>
+    <tr>
+        <td class="darkbg"><img src="/images/spacer.gif" alt='' border="0" height="3"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="2"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/index.php">Home</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/search.php">Advanced search</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/about.php">About Vim</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/community.php">Community</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/news/news.php">News</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/sponsor/index.php">Sponsoring</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/trivia.php">Trivia</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/docs.php">Documentation</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/download.php">Download</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/scripts/index.php">Scripts</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/tips/index.php">Tips</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/account/index.php">My Account</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/huh.php">Site Help</a></td>
+        </tr>
+</table>
+
+            <table width="172" cellpadding="0" cellspacing="0" border="0">
+              <tr><td><img src="/images/spacer.gif" alt="" border="0" width="1" height="8"></td></tr>
+              <tr><td class="darkbg"><img src="/images/spacer.gif" width="1" height="3" alt=""></td></tr>
+            </table>
+            <br>
+
+<!-- INCLUDE THE PAGE SIDEBAR TEXT -->
+&nbsp;
+
+          </td>
+        </tr>
+      </table>
+    </td>
+
+    <td class="darkbg"><img src="/images/spacer.gif" width="1" height="1" border="0" alt=""><br></td>
+    <td>
+      <table width="100%" cellpadding="10" cellspacing="0" border="0" bordercolor="red">
+        <tr>
+          <td valign="top">
+
+<span class="txth1">buffers_search_and_replace : Simple but powerful buffer(s) search & replace tool</span> 
+
+<br>
+<br>
+
+<!-- karma table -->
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
+  <td>
+    Rating <b>23/8</b>,
+    Downloaded by 783  </td>
+  <td class="lightbg">
+  <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
+  </td>
+  <td>
+    <a href="http://vim.wikia.com/wiki/Script:1817">Vim wiki</a>
+  </td>  
+</tr>
+</table>
+<p>
+
+<table cellspacing="0" cellpadding="0" border="0">
+<tr><td class="prompt">created by</td></tr>
+<tr><td><a href="/account/profile.php?user_id=11919">Alexandru Ionut Munteanu</a></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">script type</td></tr>
+<tr><td>utility</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">description</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;The &quot;Buffers Search & Replace&quot; plugin is a simple but powerful buffer(s)<br>search & replace tool. Search results can be set in the 'delete' category and replacement<br>can be performed on the remaining or deleted search results.<br><br>Please report any bugs or feature requests.<br><br>Available commands :<br>------------------------------<br>&nbsp;&nbsp;&nbsp;&nbsp;:Bs &lt;search_regex&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;:&lt;range&gt; Bsc &lt;search_regex&gt;<br><br>The 'Bs' command is searching in all the buffers and 'Bsc' only in the current buffer.<br><br>&nbsp;&nbsp;&nbsp;&nbsp;:Bsf &lt;buffer_name_filter_regex&gt; &lt;search_regex&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;:Bse &lt;buffer_name_exclusion_regex&gt; &lt;search_regex&gt;<br><br>The 'Bsf' command is searching in all the buffers whose name match &lt;buffer_name_filter_regex&gt; and<br>'Bse' in all buffers whose name doesn't match &lt;buffer_name_exclusion_regex&gt;.<br><br>Default key mappings in the buffer with the results :<br>---------------------------------------------------------------------<br>&nbsp;&nbsp;&quot;Space&quot;&nbsp;&nbsp;: moves the cursor on the first result of the next buffer<br>&nbsp;&nbsp;&quot;Enter or Control-j&quot;&nbsp;&nbsp; : shows or jumps to the result under the cursor<br>&nbsp;&nbsp;&quot;J&quot;&nbsp;&nbsp;: enables or disables jumping on the buffer when pressing Enter or Control-j<br>&nbsp;&nbsp;&quot;A&quot;&nbsp;&nbsp;: enables or disables auto-showing the context of the results when pressing j or k<br>&nbsp;&nbsp;&quot;d&quot; : deletes the current range search result (default: current line)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (the deleted search results are showed at the bottom of the buffer)<br>&nbsp;&nbsp;&quot;D&quot; : definitely deletes the current range search result (default: current line)<br>&nbsp;&nbsp;&quot;Q&quot;&nbsp;&nbsp;: enables or disables auto-quitting the buffer results when jumping<br>&nbsp;&nbsp;&quot;O&quot;&nbsp;&nbsp;: toggles between showing options or showing results<br>&nbsp;&nbsp;&quot;r&quot;&nbsp;&nbsp;: replace action on the non-deleted searched results<br>&nbsp;&nbsp;&quot;R&quot;&nbsp;&nbsp;: replace action on the deleted searched results<br>&nbsp;&nbsp;&quot;u&quot;&nbsp;&nbsp;: replaces this search with a newer one (with the same keyword)<br>&nbsp;&nbsp;&quot;i&quot;&nbsp;&nbsp;: enables or disables the search match highlighting on the buffer with the results<br>&nbsp;&nbsp;&quot;I&quot;&nbsp;&nbsp;: enables or disables the search match highlighting on the other buffers (not the buffer with the results)<br>&nbsp;&nbsp;&quot;x&quot;&nbsp;&nbsp;: enables or disables quite-full-screen<br>&nbsp;&nbsp;&quot;q&quot;&nbsp;&nbsp;: deletes the buffer with the results<br>&nbsp;&nbsp;&quot;?&quot;&nbsp;&nbsp;: toggles between showing help or showing results<br><br>Screenshot : <a target="_blank" href="http://ioalex.net/buffers_search_and_replace/screenshot.png">http://ioalex.net/buffers_search_and_replace/screenshot.png</A><br>Small demo video (ogg theora) : <a target="_blank" href="http://ioalex.net/buffers_search_and_replace/demo.ogv">http://ioalex.net/buffers_search_and_replace/demo.ogv</A><br><br>For more information, contact me or read the more complete documentation at the start of the plugin file.</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">install details</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;Installation :<br><br>Download the file &quot;buffers_search.vim&quot; and put it into the plugins<br>directory; on a unix-like system, the user plugin directory could be<br>&quot;~/.vim/plugin&quot;.<br><br>&nbsp;&nbsp;&nbsp;&nbsp;Optional configuration :<br><br>Variables that you can modify :<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *the variables take the possible values 0 or 1 (0 is disabled, 1 is enabled)<br>&nbsp;&nbsp; -g:Bs_stay_on_buffer_results_when_entering_result : if to jump on<br>&nbsp;&nbsp;&nbsp;&nbsp;the result or not when pressing enter (option &quot;J&quot;) (default is 1)<br>&nbsp;&nbsp; -g:Bs_auto_jump : if to auto-show the result or not when moving<br>&nbsp;&nbsp;&nbsp;&nbsp;with j and k (option &quot;A&quot;) (default is 1)<br>&nbsp;&nbsp; -g:Bs_toggle_quit_enter : if you want to quit the buffer with the<br>&nbsp;&nbsp;&nbsp;&nbsp;search results when jumping (option &quot;Q&quot;) (default is 0)<br>&nbsp;&nbsp; -g:Bs_results_buffer_match : if you want to have syntax highlight<br>&nbsp;&nbsp;&nbsp;&nbsp;on the search string in the buffer with the results (option &quot;i&quot;)<br>&nbsp;&nbsp;&nbsp;&nbsp;(default is 1)<br>&nbsp;&nbsp; -g:Bs_buffers_match : if you want to have syntax highlight on the<br>&nbsp;&nbsp;&nbsp;&nbsp;search string in other buffers (option &quot;I&quot;) (default is 1)</td></tr>
+<tr><td>&nbsp;</td></tr>
+</table>
+
+<!-- rating table -->
+<form name="rating">
+<input type="hidden" name="script_id" value="1817">
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>rate this script</b></td>
+  <td valign="middle">
+    <input type="radio" name="rating" value="life_changing">Life Changing
+    <input type="radio" name="rating" value="helpful">Helpful
+    <input type="radio" name="rating" value="unfulfilling">Unfulfilling&nbsp;
+    <input type="submit" value="rate">
+  </td>
+</tr>
+</table>
+</form>
+<span class="txth2">script versions</span> (<a href="add_script_version.php?script_id=1817">upload new version</a>)
+<p>
+Click on the package to download.
+<p>
+
+<table cellspacing="2" cellpadding="4" border="0" width="100%">
+<tr class='tableheader'>
+        <th valign="top">package</th>
+    <th valign="top">script version</th>
+    <th valign="top">date</th>
+    <th valign="top">Vim version</th>
+    <th valign="top">user</th>
+    <th valign="top">release notes</th>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=10356">buffers_search_and_replace.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.5.2</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-04-06</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=11919">Alexandru Ionut Munteanu</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- added option to set range when searching through current buffer (:&lt;range&gt; Bsc &lt;search_regex&gt;)<br>- &lt;range&gt; must be &#039&lt;,&#039&gt; for searching in visual selection<br>- fixed the &#039u&#039 event to update with the current search type<br>- added a top line showing the type of the search<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=10191">buffers_search_and_replace.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.5.1</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-03-12</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=11919">Alexandru Ionut Munteanu</a></i></td>
+    <td class="roweven" valign="top" width="2000">-added command to search and exclude some buffers from the search :<br>&nbsp;&nbsp;&nbsp;&nbsp; :Bse &lt;buffer_name_exclusion_regex&gt; &lt;search_regex&gt;<br>-added searching on custom buffers (buffer name filtering) command :<br>&nbsp;&nbsp;&nbsp;&nbsp; :Bsf &lt;buffer_name_filter_regex&gt; &lt;search_regex&gt;<br>*thank you Vasilii Pascal :)</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=10157">buffers_search_and_replace.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.5</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-03-10</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=11919">Alexandru Ionut Munteanu</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Optimised 'd' action, in order not to refresh the buffer each time.<br>Warning ! 'r' option for refreshing the screen has been replaced with the 'replace' action !<br>Action 'D', 'r' and 'R' added :<br>&quot;D&quot;&nbsp;&nbsp;: definitely deletes the current range search result (default: current line),<br>&quot;r&quot;&nbsp;&nbsp;: replace action on the non-deleted searched results<br>&quot;R&quot;&nbsp;&nbsp;: replace action on the deleted searched results<br>Changed name to buffers_search_and_replace.vim</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=10136">buffers_search.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.4</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-03-07</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=11919">Alexandru Ionut Munteanu</a></i></td>
+    <td class="roweven" valign="top" width="2000">-option 'd' implemented :<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;d&quot;&nbsp;&nbsp;: deletes the current range search result (default: current line)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; the deleted search results are showed at the bottom of<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; the buffer; deleting a deleted search results will<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; set it again as search result<br>-added the ':Bsc &lt;search_string&gt;' command for searching only in the current buffer</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=6856">buffers_search.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.3</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2007-03-11</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=11919">Alexandru Ionut Munteanu</a></i></td>
+    <td class="rowodd" valign="top" width="2000">-changed some internals to follow Jimmy advices (like using buffer numbers <br>instead of buffer names to support unnamed buffers); thanks!<br>-options J,A,Q,O,r,u,i,I,x,? implemented (see docs)<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=6849">buffers_search.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.2</b></td>
+    <td class="roweven" valign="top" nowrap><i>2007-03-07</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=11919">Alexandru Ionut Munteanu</a></i></td>
+    <td class="roweven" valign="top" width="2000">Fixed an important bug : the search did not returned all the matches<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=6847">buffers_search.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2007-03-07</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=11919">Alexandru Ionut Munteanu</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Initial upload</td>
+</tr>
+</table>
+<!-- finish off the framework -->
+          </td>
+        </tr>
+      </table>
+    </td>
+
+  </tr>
+</table>
+
+<!-- END OF THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr><td colspan="4" bgcolor="#000000"><img src="/images/spacer.gif" height="2" width="1" alt=""></td></tr>
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr>
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+
+    <td align="left" valign="top"><small>
+      If you have questions or remarks about this site, visit the
+      <a href="http://vimonline.sf.net">vimonline development</a> pages.
+      Please use this site responsibly.
+      <br> 
+      
+      Questions about <a href="http://www.vim.org/about.php">Vim</a> should go
+      to the <a href="http://www.vim.org/maillist.php">maillist</a>.
+      Help Bram <a href="http://iccf-holland.org/">help Uganda</a>.
+      </small>
+	&nbsp;
+	&nbsp;
+
+	<!-- Start of StatCounter Code -->
+	<script type="text/javascript" language="javascript">
+	var sc_project=1417324; 
+	var sc_invisible=1; 
+	var sc_partition=11; 
+	var sc_security="d41633bc"; 
+	</script>
+
+	<script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script><noscript><a href="http://www.statcounter.com/" target="_blank"><img  src="http://c12.statcounter.com/counter.php?sc_project=1417324&java=0&security=d41633bc&invisible=0" alt="free tracking" border="0"></a> </noscript>
+	<!-- End of StatCounter Code -->
+          </td>
+
+    <td align="right" valign="top">
+      		<a href="http://sourceforge.net/projects/vim" rel="nofollow"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=8&type=1" width="88" height="31" border="0" alt="SourceForge.net Logo" /></a>
+    </td>
+
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+  </tr>
+
+    
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  
+  </tr>
+</table>
+
+</body>
+</html>
+

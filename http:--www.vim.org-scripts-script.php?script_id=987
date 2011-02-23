@@ -1,0 +1,508 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+  <link rel="Stylesheet" type="text/css" href="/css/style.css" >
+  <title>DoxygenToolkit.vim - Simplify Doxygen documentation in C, C++, Python. : vim online</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <meta name="KEYWORDS" content="Vim, Vi IMproved, text editor, home, documentation, tips, scripts, news">
+  <link rel="shortcut icon" type="image/x-icon" href="/images/vim_shortcut.ico">
+</head>
+
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff"> 
+
+<!-- HEADER, SPONSOR IMAGE, VIM IMAGE AND BOOK AD -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+  <td class="lightbg">&nbsp;&nbsp;&nbsp;</td>
+  <td class="lightbg" align="left"><a href="/sponsor/index.php"><img src="/images/sponsorvim.gif" alt="sponsor Vim development" border="0"></a></td>
+    <td class="lightbg" align="center"><a href="/index.php"><img src="/images/vim_header.gif" border="0" alt="Vim logo"></a></td>
+    <td class="lightbg" align="right"><a href="http://iccf-holland.org/click5.html"><img src="/images/buyhelplearn.gif" alt="Vim Book Ad" border="0"></a></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="darkbg"><img src="/images/spacer.gif" width="1" height="10" alt=""></td>
+  </tr>
+</table>
+<!-- THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+  <col width="180">
+  <col width="1">
+
+  <tr valign="top">
+    <td class="sidebar">
+      <table width="180" cellpadding="4" cellspacing="0" border="0">
+        <tr valign="top">
+          <td class="sidebar">
+
+<!-- INCLUDE THE PAGE NAVIGATION -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+    <tr>
+        <td><small>not logged in (<a href="/login.php">login</a>)</small></td>
+    </tr>
+    <tr><td>
+<small>&nbsp;</small>
+<form action="http://www.google.com/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-3005259998294962:bvyni59kjr1" />
+    <input type="hidden" name="ie" value="ISO-8859-1" />
+    <input type="text" name="q" size="20" />
+    <br>
+    <input type="submit" name="sa" value="Search" />
+  </div>
+</form>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+    </td></tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="1"></td>
+    </tr>
+    <tr>
+        <td class="darkbg"><img src="/images/spacer.gif" alt='' border="0" height="3"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="2"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/index.php">Home</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/search.php">Advanced search</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/about.php">About Vim</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/community.php">Community</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/news/news.php">News</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/sponsor/index.php">Sponsoring</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/trivia.php">Trivia</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/docs.php">Documentation</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/download.php">Download</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/scripts/index.php">Scripts</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/tips/index.php">Tips</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/account/index.php">My Account</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/huh.php">Site Help</a></td>
+        </tr>
+</table>
+
+            <table width="172" cellpadding="0" cellspacing="0" border="0">
+              <tr><td><img src="/images/spacer.gif" alt="" border="0" width="1" height="8"></td></tr>
+              <tr><td class="darkbg"><img src="/images/spacer.gif" width="1" height="3" alt=""></td></tr>
+            </table>
+            <br>
+
+<!-- INCLUDE THE PAGE SIDEBAR TEXT -->
+&nbsp;
+
+          </td>
+        </tr>
+      </table>
+    </td>
+
+    <td class="darkbg"><img src="/images/spacer.gif" width="1" height="1" border="0" alt=""><br></td>
+    <td>
+      <table width="100%" cellpadding="10" cellspacing="0" border="0" bordercolor="red">
+        <tr>
+          <td valign="top">
+
+<span class="txth1">DoxygenToolkit.vim : Simplify Doxygen documentation in C, C++, Python.</span> 
+
+<br>
+<br>
+
+<!-- karma table -->
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
+  <td>
+    Rating <b>301/134</b>,
+    Downloaded by 8984  </td>
+  <td class="lightbg">
+  <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
+  </td>
+  <td>
+    <a href="http://vim.wikia.com/wiki/Script:987">Vim wiki</a>
+  </td>  
+</tr>
+</table>
+<p>
+
+<table cellspacing="0" cellpadding="0" border="0">
+<tr><td class="prompt">created by</td></tr>
+<tr><td><a href="/account/profile.php?user_id=5172">Mathias Lorente</a></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">script type</td></tr>
+<tr><td>utility</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">description</td></tr>
+<tr><td>Currently five purposes have been defined :<br><br>Generates a doxygen license comment.&nbsp;&nbsp;The tag text is configurable.<br><br>Generates a doxygen author skeleton.&nbsp;&nbsp;The tag text is configurable.<br><br>Generates a doxygen comment skeleton for a C, C++ or Python function or class,<br>including @brief, @param (for each named argument), and @return.&nbsp;&nbsp;The tag<br>text as well as a comment block header and footer are configurable.<br>(Consequently, you can have \brief, etc. if you wish, with little effort.)<br><br>Ignore code fragment placed in a block defined by #ifdef ... #endif (C/C++).&nbsp;&nbsp;The<br>block name must be given to the function.&nbsp;&nbsp;All of the corresponding blocks<br>in all the file will be treated and placed in a new block DOX_SKIP_BLOCK (or<br>any other name that you have configured).&nbsp;&nbsp;Then you have to update<br>PREDEFINED value in your doxygen configuration file with correct block name.<br>You also have to set ENABLE_PREPROCESSING to YES.<br><br>Generate a doxygen group (begining and ending). The tag text is<br>configurable.<br><br>Use:<br>- Type of comments (C/C++: /// or /** ... */, Python: ## and # ) :<br>&nbsp;&nbsp;In vim, default C++ comments are : /** ... */. But if you prefer to use ///<br>&nbsp;&nbsp;Doxygen comments just add 'let g:DoxygenToolkit_commentType = &quot;C++&quot;'<br>&nbsp;&nbsp;(without quotes) in your .vimrc file<br><br>- License :<br>&nbsp;&nbsp;In vim, place the cursor on the line that will follow doxygen license<br>&nbsp;&nbsp;comment.&nbsp;&nbsp;Then, execute the command :DoxLic.&nbsp;&nbsp;This will generate license<br>&nbsp;&nbsp;comment and leave the cursor on the line just after.<br><br>- Author :<br>&nbsp;&nbsp;In vim, place the cursor on the line that will follow doxygen author<br>&nbsp;&nbsp;comment.&nbsp;&nbsp;Then, execute the command :DoxAuthor.&nbsp;&nbsp;This will generate the<br>&nbsp;&nbsp;skeleton and leave the cursor just after @author tag if no variable<br>&nbsp;&nbsp;define it, or just after the skeleton.<br><br>- Function / class comment :<br>&nbsp;&nbsp;In vim, place the cursor on the line of the function header (or returned<br>&nbsp;&nbsp;value of the function) or the class.&nbsp;&nbsp;Then execute the command :Dox.&nbsp;&nbsp;This<br>&nbsp;&nbsp;will generate the skeleton and leave the cursor after the @brief tag.<br><br>- Ignore code fragment (C/C++ only) :<br>&nbsp;&nbsp;In vim, if you want to ignore all code fragment placed in a block such as :<br>&nbsp;&nbsp;&nbsp;&nbsp;#ifdef DEBUG<br>&nbsp;&nbsp;&nbsp;&nbsp;...<br>&nbsp;&nbsp;&nbsp;&nbsp;#endif<br>&nbsp;&nbsp;You only have to execute the command :DoxUndoc(DEBUG) !<br>&nbsp;&nbsp;<br>- Group :<br>&nbsp;&nbsp;In vim, execute the command :DoxBlock to insert a doxygen block on the<br>&nbsp;&nbsp;following line.<br><br>Limitations:<br>- Assumes that the function name (and the following opening parenthesis) is<br>&nbsp;&nbsp;at least on the third line after current cursor position.<br>- Not able to update a comment block after it's been written.<br>- Blocks delimiters (header and footer) are only included for function<br>&nbsp;&nbsp;comment.<br>- Assumes that cindent is used.<br>- Comments in function parameters (such as void foo(int bar /* ... */, baz))<br>&nbsp;&nbsp;are not yet supported.<br><br><br>Example:<br>Given:<br>int<br>&nbsp;&nbsp;foo(char mychar,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int myint,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;double* myarray,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int mask = DEFAULT)<br>{ //...<br>}<br><br>Issuing the :Dox command with the cursor on the function declaration would<br>generate<br><br>/**<br> * @brief<br> *<br> * @param mychar<br> * @param myint<br> * @param myarray<br> * @param mask<br> *<br> * @return<br> */<br><br><br>To customize the output of the script, see the g:DoxygenToolkit_*<br>variables in the script's source.&nbsp;&nbsp;These variables can be set in your<br>.vimrc.<br><br>For example, my .vimrc contains:<br>let g:DoxygenToolkit_briefTag_pre=&quot;@Synopsis&nbsp;&nbsp;&quot;<br>let g:DoxygenToolkit_paramTag_pre=&quot;@Param &quot;<br>let g:DoxygenToolkit_returnTag=&quot;@Returns&nbsp;&nbsp; &quot;<br>let g:DoxygenToolkit_blockHeader=&quot;--------------------------------------------------------------------------&quot;<br>let g:DoxygenToolkit_blockFooter=&quot;----------------------------------------------------------------------------&quot;<br>let g:DoxygenToolkit_authorName=&quot;Mathias Lorente&quot;<br>let g:DoxygenToolkit_licenseTag=&quot;My own license&quot;&nbsp;&nbsp; &lt;-- !!! Does not end with &quot;\&lt;enter&gt;&quot;</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">install details</td></tr>
+<tr><td>Copy to your '~/.vim/plugin' directory</td></tr>
+<tr><td>&nbsp;</td></tr>
+</table>
+
+<!-- rating table -->
+<form name="rating">
+<input type="hidden" name="script_id" value="987">
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>rate this script</b></td>
+  <td valign="middle">
+    <input type="radio" name="rating" value="life_changing">Life Changing
+    <input type="radio" name="rating" value="helpful">Helpful
+    <input type="radio" name="rating" value="unfulfilling">Unfulfilling&nbsp;
+    <input type="submit" value="rate">
+  </td>
+</tr>
+</table>
+</form>
+<span class="txth2">script versions</span> (<a href="add_script_version.php?script_id=987">upload new version</a>)
+<p>
+Click on the package to download.
+<p>
+
+<table cellspacing="2" cellpadding="4" border="0" width="100%">
+<tr class='tableheader'>
+        <th valign="top">package</th>
+    <th valign="top">script version</th>
+    <th valign="top">date</th>
+    <th valign="top">Vim version</th>
+    <th valign="top">user</th>
+    <th valign="top">release notes</th>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=14064">DoxygenToolkit.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.2.13</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-10-16</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=5172">Mathias Lorente</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Correct insertion position and 'xxx_post' parameters.<br>&nbsp;&nbsp; - Insert position is correct when g:DoxygenToolkit_compactOneLineDoc = &quot;yes&quot; and let g:DoxygenToolkit_commentType = &quot;C++&quot; are set.<br>&nbsp;&nbsp; - When you define:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;g:DoxygenToolkit_briefTag_pre = &quot;@brief &quot;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;g:DoxygenToolkit_briefTag_post = &quot;&lt;++&gt;&quot;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;g:DoxygenToolkit_briefTag_funcName = &quot;yes&quot;<br>&nbsp;&nbsp;&nbsp;&nbsp; Documentation generated with these parameters is something like:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/// @brief foo &lt;++&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp; You can configure similarly parameters to get something like:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/// @brief foo &lt;++&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/// @param bar &lt;++&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/// @param baz &lt;++&gt;</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13796">DoxygenToolkit.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.2.12</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-09-09</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=5172">Mathias Lorente</a></i></td>
+    <td class="roweven" valign="top" width="2000">Position the cursor at the right position for one line documentation.<br>(thanks to brian kropf)</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13675">DoxygenToolkit.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.2.11</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-08-25</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=5172">Mathias Lorente</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Remove trailing blank characters where they are not needed. (Thanks to Lukas Grässlin)</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13524">DoxygenToolkit.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.2.10</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-08-08</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=5172">Mathias Lorente</a></i></td>
+    <td class="roweven" valign="top" width="2000">'extern' keyword added in list of values to ignore for return type.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13521">DoxygenToolkit.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.2.9</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-08-08</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=5172">Mathias Lorente</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Correct bugs related to templates and add support for throw statement (many thanks to Dennis Lubert):<br>- Template parameter of different type from class and typename are recognized.<br>- Indentation mistake while detecting template.<br>- New options are available: g:DoxygenToolkit_throwTag_pre (default set to '@throw ', can be changed to '@exception ' and g:DoxygenToolkit_throwTag_post<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13505">DoxygenToolkit.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.2.8</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-08-06</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=5172">Mathias Lorente</a></i></td>
+    <td class="roweven" valign="top" width="2000">Add support for documentation of template parameters.<br>(Thanks to Dennis)</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=11878">DoxygenToolkit.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.2.7</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-12-06</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=5172">Mathias Lorente</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Increase comparibility with c/c++ IDE</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=11765">DoxygenToolkit.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.2.6</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-11-19</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=5172">Mathias Lorente</a></i></td>
+    <td class="roweven" valign="top" width="2000">Bug correction (thanks to Jhon Do):<br>DoxygenToolkit_briefTag_funcName and other xxx_xxName parameters should work properly now.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=11228">DoxygenToolkit.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.2.5</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-08-21</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=5172">Mathias Lorente</a></i></td>
+    <td class="rowodd" valign="top" width="2000">DoxLic function is corrected (thanks to Roland Kammerer). Date and name are properly set.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=10579">DoxygenToolkit.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.2.4</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-05-11</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=5172">Mathias Lorente</a></i></td>
+    <td class="roweven" valign="top" width="2000">Bug correction (thanks to Anders Bo Rasmussen)<br>&nbsp;&nbsp; - C++: now functions like&nbsp;&nbsp;void foo(type &bar); are correctly documented.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The parameter's name is 'bar' (and no more '&bar').</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=10284">DoxygenToolkit.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.2.3</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-03-26</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=5172">Mathias Lorente</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Added @version tag into the DocBlock generated by DoxygenAuthorFunc() (thanks to Dave Walter).</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=9847">DoxygenToolkit.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.2.2</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-01-20</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=5172">Mathias Lorente</a></i></td>
+    <td class="roweven" valign="top" width="2000">Comments are now allowed in function declaration. Example:<br>- C/C++:&nbsp;&nbsp; void func( int foo, // first param<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; int bar&nbsp;&nbsp;/* second param */);<br><br>- Python:&nbsp;&nbsp;def func( foo,&nbsp;&nbsp;# first param<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; bar ) # second param</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=9823">DoxygenToolkit.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.2.1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-01-15</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=5172">Mathias Lorente</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Bug correction (many thanks to Alexey Radkov)<br>- C/C++: following function/method are now correctly documented:<br>&nbsp;&nbsp; - operator(),<br>&nbsp;&nbsp; - constructor with initialization parameter(s),<br>&nbsp;&nbsp; - pure virtual method,<br>&nbsp;&nbsp; - const method.<br><br>- Python:<br>&nbsp;&nbsp; - Single line function are now correctly documented.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=9809">DoxygenToolkit.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.2.0</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-01-13</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=5172">Mathias Lorente</a></i></td>
+    <td class="roweven" valign="top" width="2000">The main function has been rewritten (I hope it is cleaner).<br> - There is now support for function pointer as parameter (C/C++).<br> - You can configure the script to get one line documentation (for<br>&nbsp;&nbsp; attribute instance for example, you need to set<br>&nbsp;&nbsp; g:DoxygenToolkit_compactOneLineDoc to &quot;yes&quot;).<br><br> - NEW: Support Python scripts:<br>&nbsp;&nbsp; - Function/method are not scanned, so by default they are considered<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;as if they always return something (modify this behavior by defining<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;g:DoxygenToolkit_python_autoFunctionReturn to &quot;no&quot;)<br>&nbsp;&nbsp; - self parameter is automatically ignored when scanning function<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;parameters (you can change this behavior by defining<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;g:DoxygenToolkit_python_autoRemoveSelfParam to &quot;no&quot;)</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=6978">DoxygenToolkit.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.1.17</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2007-04-15</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=5172">Mathias Lorente</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Number of lines scanned is now configurable. Default value is still 10 lines. (Thanks to Spencer Collyer for this improvement).<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=6809">DoxygenToolkit.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.1.16</b></td>
+    <td class="roweven" valign="top" nowrap><i>2007-02-27</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=5172">Mathias Lorente</a></i></td>
+    <td class="roweven" valign="top" width="2000">Bug correction : now, function that returns null pointer are correctly documented (thanks to Ronald WAHL for his report and patch).<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=6735">DoxygenToolkit.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.1.15</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2007-02-11</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=5172">Mathias Lorente</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Generated documentation with block header/footer activated do not integrate header and footer anymore.<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=6376">DoxygenToolkit.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.1.14</b></td>
+    <td class="roweven" valign="top" nowrap><i>2006-11-04</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=5172">Mathias Lorente</a></i></td>
+    <td class="roweven" valign="top" width="2000">New option available for cinoptions : g:DoxygenToolkit_cinoptions (default value is still c1C1)<br>Thanks to Arnaud GODET for this. Now comment can have different indentation style.<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=4177">DoxygenToolkit.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.1.13</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2005-04-17</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=5172">Mathias Lorente</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Changes for linux kernel comment style</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=4048">DoxygenToolkit.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.1.12</b></td>
+    <td class="roweven" valign="top" nowrap><i>2005-03-21</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=5172">Mathias Lorente</a></i></td>
+    <td class="roweven" valign="top" width="2000">Fixed indentation in comments (suggested by Soh Kok Hong and required by other users)</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=3800">DoxygenToolkit.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.1.12</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2005-01-27</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=5172">Mathias Lorente</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Now you can use your own comment tag (not only C or C++). In this case, you have to define: 'g:DoxygenToolkit_startCommentTag', 'g:DoxygenToolkit_interCommentTag' and 'g:DoxygenToolkit_endCommentTag' in your .vimrc file.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=3646">DoxygenToolkit.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.1.11</b></td>
+    <td class="roweven" valign="top" nowrap><i>2004-11-22</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=5172">Mathias Lorente</a></i></td>
+    <td class="roweven" valign="top" width="2000">The real 0.1.11 version...<br>Sorry for my mistake (thank to Jason Mills who pointed me out this error....)</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=3086">DoxygenToolkit.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.1.10</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2004-06-01</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=5172">Mathias Lorente</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Bug correction for constructors / destructor and functions preceded by spaces (or tabs).</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=3058">DoxygenToolkit.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.1.9</b></td>
+    <td class="roweven" valign="top" nowrap><i>2004-05-25</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=5172">Mathias Lorente</a></i></td>
+    <td class="roweven" valign="top" width="2000">Fixed filename bug when including doxygen author comment whereas file has not been open directly on commamd line.<br>Now /// or /** doxygen comments are correctly integrated (except for license).</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=3054">DoxygenToolkit.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.1.8</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2004-05-24</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=5172">Mathias Lorente</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Some changes and bug correction for some configuration (thanks to Jason Mills).</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=3029">DoxygenToolkit.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.1.7</b></td>
+    <td class="roweven" valign="top" nowrap><i>2004-05-17</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=5172">Mathias Lorente</a></i></td>
+    <td class="roweven" valign="top" width="2000">Bug correction in DoxygenUndocumentFunc.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=3025">DoxygenToolkit.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.1.6</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2004-05-14</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=5172">Mathias Lorente</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Few code modification and new functionalities</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=3023">DoxygenToolkit.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.1.5</b></td>
+    <td class="roweven" valign="top" nowrap><i>2004-05-14</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=5172">Mathias Lorente</a></i></td>
+    <td class="roweven" valign="top" width="2000">Initial upload</td>
+</tr>
+</table>
+<!-- finish off the framework -->
+          </td>
+        </tr>
+      </table>
+    </td>
+
+  </tr>
+</table>
+
+<!-- END OF THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr><td colspan="4" bgcolor="#000000"><img src="/images/spacer.gif" height="2" width="1" alt=""></td></tr>
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr>
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+
+    <td align="left" valign="top"><small>
+      If you have questions or remarks about this site, visit the
+      <a href="http://vimonline.sf.net">vimonline development</a> pages.
+      Please use this site responsibly.
+      <br> 
+      
+      Questions about <a href="http://www.vim.org/about.php">Vim</a> should go
+      to the <a href="http://www.vim.org/maillist.php">maillist</a>.
+      Help Bram <a href="http://iccf-holland.org/">help Uganda</a>.
+      </small>
+	&nbsp;
+	&nbsp;
+
+	<!-- Start of StatCounter Code -->
+	<script type="text/javascript" language="javascript">
+	var sc_project=1417324; 
+	var sc_invisible=1; 
+	var sc_partition=11; 
+	var sc_security="d41633bc"; 
+	</script>
+
+	<script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script><noscript><a href="http://www.statcounter.com/" target="_blank"><img  src="http://c12.statcounter.com/counter.php?sc_project=1417324&java=0&security=d41633bc&invisible=0" alt="free tracking" border="0"></a> </noscript>
+	<!-- End of StatCounter Code -->
+          </td>
+
+    <td align="right" valign="top">
+      		<a href="http://sourceforge.net/projects/vim" rel="nofollow"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=8&type=1" width="88" height="31" border="0" alt="SourceForge.net Logo" /></a>
+    </td>
+
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+  </tr>
+
+    
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  
+  </tr>
+</table>
+
+</body>
+</html>
+

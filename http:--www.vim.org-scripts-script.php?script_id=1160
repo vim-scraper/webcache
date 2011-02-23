@@ -1,0 +1,484 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+  <link rel="Stylesheet" type="text/css" href="/css/style.css" >
+  <title>tSkeleton - File Templates and Code Skeletons/Snippets : vim online</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <meta name="KEYWORDS" content="Vim, Vi IMproved, text editor, home, documentation, tips, scripts, news">
+  <link rel="shortcut icon" type="image/x-icon" href="/images/vim_shortcut.ico">
+</head>
+
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff"> 
+
+<!-- HEADER, SPONSOR IMAGE, VIM IMAGE AND BOOK AD -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+  <td class="lightbg">&nbsp;&nbsp;&nbsp;</td>
+  <td class="lightbg" align="left"><a href="/sponsor/index.php"><img src="/images/sponsorvim.gif" alt="sponsor Vim development" border="0"></a></td>
+    <td class="lightbg" align="center"><a href="/index.php"><img src="/images/vim_header.gif" border="0" alt="Vim logo"></a></td>
+    <td class="lightbg" align="right"><a href="http://iccf-holland.org/click5.html"><img src="/images/buyhelplearn.gif" alt="Vim Book Ad" border="0"></a></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="darkbg"><img src="/images/spacer.gif" width="1" height="10" alt=""></td>
+  </tr>
+</table>
+<!-- THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+  <col width="180">
+  <col width="1">
+
+  <tr valign="top">
+    <td class="sidebar">
+      <table width="180" cellpadding="4" cellspacing="0" border="0">
+        <tr valign="top">
+          <td class="sidebar">
+
+<!-- INCLUDE THE PAGE NAVIGATION -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+    <tr>
+        <td><small>not logged in (<a href="/login.php">login</a>)</small></td>
+    </tr>
+    <tr><td>
+<small>&nbsp;</small>
+<form action="http://www.google.com/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-3005259998294962:bvyni59kjr1" />
+    <input type="hidden" name="ie" value="ISO-8859-1" />
+    <input type="text" name="q" size="20" />
+    <br>
+    <input type="submit" name="sa" value="Search" />
+  </div>
+</form>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+    </td></tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="1"></td>
+    </tr>
+    <tr>
+        <td class="darkbg"><img src="/images/spacer.gif" alt='' border="0" height="3"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="2"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/index.php">Home</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/search.php">Advanced search</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/about.php">About Vim</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/community.php">Community</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/news/news.php">News</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/sponsor/index.php">Sponsoring</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/trivia.php">Trivia</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/docs.php">Documentation</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/download.php">Download</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/scripts/index.php">Scripts</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/tips/index.php">Tips</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/account/index.php">My Account</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/huh.php">Site Help</a></td>
+        </tr>
+</table>
+
+            <table width="172" cellpadding="0" cellspacing="0" border="0">
+              <tr><td><img src="/images/spacer.gif" alt="" border="0" width="1" height="8"></td></tr>
+              <tr><td class="darkbg"><img src="/images/spacer.gif" width="1" height="3" alt=""></td></tr>
+            </table>
+            <br>
+
+<!-- INCLUDE THE PAGE SIDEBAR TEXT -->
+&nbsp;
+
+          </td>
+        </tr>
+      </table>
+    </td>
+
+    <td class="darkbg"><img src="/images/spacer.gif" width="1" height="1" border="0" alt=""><br></td>
+    <td>
+      <table width="100%" cellpadding="10" cellspacing="0" border="0" bordercolor="red">
+        <tr>
+          <td valign="top">
+
+<span class="txth1">tSkeleton : File Templates and Code Skeletons/Snippets</span> 
+
+<br>
+<br>
+
+<!-- karma table -->
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
+  <td>
+    Rating <b>1507/408</b>,
+    Downloaded by 5004  </td>
+  <td class="lightbg">
+  <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
+  </td>
+  <td>
+    <a href="http://vim.wikia.com/wiki/Script:1160">Vim wiki</a>
+  </td>  
+</tr>
+</table>
+<p>
+
+<table cellspacing="0" cellpadding="0" border="0">
+<tr><td class="prompt">created by</td></tr>
+<tr><td><a href="/account/profile.php?user_id=4037">Tom Link</a></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">script type</td></tr>
+<tr><td>utility</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">description</td></tr>
+<tr><td>tSkeleton provides file templates and code skeletons (snippets). These <br>templates may contain special tags that are replaced with some computed <br>value (e.g., variables, user input ...), vimscript code, or place <br>holders/jump positions (when used in conjunction with imap.vim or <br>|TSkeletonMapGoToNextTag()|.<br><br><br>File templates:<br><br>In order to add support for a new filetype, save a skeleton file to <br>~/.vim/skeletons/file.suffix and add something like this to your .vimrc <br>file:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;autocmd BufNewFile *.suffix&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; TSkeletonSetup template.suffix<br>&nbsp;&nbsp;&nbsp;&nbsp;autocmd BufNewFile /here/*.suffix TSkeletonSetup othertemplate.suffix<br><br>Alternatively, you can store templates as:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;~/vimfiles/skeletons/templates/GROUP/FILETYPE PATTERN<br><br><br>Code skeletons:<br><br>Smaller skeleton bits are stored in SKELETONS/bits/FILETYPE/ or <br>SKELETONS/bits/general/. I.e., code skeletons can be filetype specific <br>or generally available.<br><br>The filenames of the bits may be grouped in submenus as in:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;../tex/&Define.%5Cnew&command<br>&nbsp;&nbsp;&nbsp;&nbsp;../tex/&Define.%5Cnew&environment<br><br>This will create skeletons for \newcommand and \newenvironment but will <br>group the skeletons under the TSkel.Define. menu with the respective <br>accelerators.<br><br><br>Default key maps:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;Leader&gt;## ... Expand name under cursor<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;Leader&gt;#t ... Insert code skeleton via command line<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;c-\&gt;&lt;c-\&gt; ... In insert mode, expand the bit before the cursor (on <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; a German keyboard this happens to be &lt;c-#&gt;&lt;c-#&gt;)<br><br><br>General remarks:<br><br>A list of special tags:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;+FILE NAME ROOT+&gt; :: the file name root<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;+FILE NAME+&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:: the file name<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;+FILE SUFFIX+&gt;&nbsp;&nbsp;&nbsp;&nbsp;:: the file suffix<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;+FILE DIRNAME+&gt;&nbsp;&nbsp; :: the file's directory<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;+NOTE+&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :: a note<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;+DATE+&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :: the current date (the format is controlled via <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;g:tskelDateFormat)<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;+AUTHOR+&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :: the author's name (g:tskelUserName)<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;+EMAIL+&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:: the author's e-mail (g:tskelUserEmail)<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;+WEBSITE+&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:: the author's homepage (g:tskelUserWWW)<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;+LICENSE+&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:: the name of the license this file is released <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;under (g:tskelLicense)<br><br>tSkeleton also supports the following pseudo-tags:<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;+CURSOR+&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :: where to place the cursor after insertion<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;+&NAME+&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:: a vim option<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;+g:NAME+&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :: a global variable<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;+b:NAME+&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :: a buffer local variable<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;+?QUERY?+&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:: query the user<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;+?VAR|QUERY?+&gt;&nbsp;&nbsp;&nbsp;&nbsp;:: query the user and propose some choices from <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;the variable ${VAR}<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;+bit:BIT&gt;, &lt;+bit:BIT|&quot;DEFAULT&quot;&gt;, &lt;+bit:BIT|COMMANDS&gt; :: insert a <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bit; if the bit isn't defined for the current <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;filetype, use DEFAULT; if DEFAULT matches &quot;.*&quot; <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;insert it as a string; otherwise interpret it <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;as a command sequence to be fed to normal<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;+tskel:TSKELETON&gt; ... :: same as the above<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;+include(TSKELETON)+&gt; :: Another synonym for the above.<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;+call:FUNCTION(ARGS)+&gt; :: Insert the result value of some function<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;+execute(EX COMMAND)+&gt; :: Run a vim command.<br><br>Flow control:<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;+if(CONDITION)+&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;+elseif(CONDITION)+&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;+else+&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;+endif+&gt;<br><br>Loops:<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;+for(VAR in LIST)+&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;+endfor+&gt;, &lt;+endfor(VAR)+&gt;<br><br>Variables:<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;+let(VAR=VALUE)+&gt;<br><br>Interaction:<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;+input(VAR, QUERY, [DEFAULT], [COMPLETION])+&gt;<br><br>Other:<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;+nl+&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;+joinline+&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;+nop+&gt;<br><br>A wiki like table could then be constructed using a skeleton like this:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;+input('s:my_rows?!', 'Rows: ')+&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;+input('s:my_cols?!', 'Cols: ')+&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;+for(i in range(s:my_rows))+&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;|&lt;+for(j in range(s:my_cols))+&gt; &lt;+CURSOR+&gt; |&lt;+endfor(j)+&gt;&lt;+nop+&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;+endfor(i)+&gt;<br><br>Unknown tags are kept in the expanded skeleton. These tags can be used <br>as cursor jump marks. This syntax was originally used by imap (vimscript <br>#244 or <a href="/scripts/script.php?script_id=475">vimscript #475</a>). If you don't want to install imap, you can also&nbsp;&nbsp;<br>use |TSkeletonMapGoToNextTag()|.<br><br>You can use <a href="/scripts/script.php?script_id=3326">vimscript #3326</a> to enhance your templates with dynamic placeholders.<br><br><br>Demo:<br><a target="_blank" href="http://vimsomnia.blogspot.com/2010/11/tskeleton-and-stakeholders-vim-plugins.html">http://vimsomnia.blogspot.com/2010/11/tskeleton-and-stakeholders-vim-plugins.html</A><br><br><br>Also available via git<br><a target="_blank" href="http://github.com/tomtom/tskeleton_vim">http://github.com/tomtom/tskeleton_vim</A><br></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">install details</td></tr>
+<tr><td>This script requires tlib (<a href="/scripts/script.php?script_id=1863">vimscript #1863</a>).<br><br>Edit the vba file and type:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;:so %<br><br>See :help vimball for details. If you use vim 7.0, you probably need to <br>update vimball (<a href="/scripts/script.php?script_id=1502">vimscript #1502</a>) first.<br><br>IMPORTANT: When updating from an older version, please remove the cache <br>files in ~/vimfiles/cache/tskel_*/** (or select &quot;Reset&quot; from the menu) <br>and (if existent) the directories ~/vimfiles/skeletons/menu, <br>~/vimfiles/skeletons/bbits.<br><br><br>If you don't already have some skeletons, you may want to download <br>the file tSkeleton-Samples.zip from the list below.<br><br><br>The files are stored in ~/vimfiles/skeletons or ~/.vim/skeletons (see <br>g:tskelDir). The directory structure should look like this:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;skeletons/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NAME.SUFFIX (templates for new files)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;templates/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GROUP/ (templates for new files)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FILETYPE PATTERN.SUFFIX<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;map/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FILETYPE (map files for conditional expansion)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bits/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FILETYPE.txt (single line templates)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;general/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GENERAL CODE SKELETONS ...<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FILETYPE/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FILETYPE SPECIFIC CODE SKELETONS: ONE SKELETON PER FILE ...<br><br><br>You might want to use imaps.vim's (<a href="/scripts/script.php?script_id=244">vimscript #244</a> or <a href="/scripts/script.php?script_id=475">vimscript #475</a>) place <br>holders in conjunction with this plugin..<br><br><br>If you don't use imaps.vim, you can :call TSkeletonMapGoToNextTag(). <br>Like imaps, this will map &lt;c-j&gt; to a function that makes the cursor jump <br>to the next tag.<br><br><br>ATTENTION:<br><br>If you had an older version (pre 4.0) installed, you might also want to <br>remove the older cache directories in ~/.vim/skeletons/ (eg menu, <br>bbits).<br><br>If you add a new skeleton or template, you'll also have to do <br>:TSkeletonBitReset to make the plugin rescan the source directory.<br><br>If you update from 1.0, be aware that the default &quot;markup&quot; for place <br>holders has changed.<br><br>tSkeleton up to 2.1 is not compatible with vim7 up to patch 8. You need <br>at least vim 7.0.08 to use this plugin. For windows, current executables <br>including patches can be downloaded from the cream website.<br><br>tSkeleton 3 can cause an unpatched vim7 to crash. I'm not sure about <br>that though. If this happens to you, please update (vim) to a more <br>recent version.<br></td></tr>
+<tr><td>&nbsp;</td></tr>
+</table>
+
+<!-- rating table -->
+<form name="rating">
+<input type="hidden" name="script_id" value="1160">
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>rate this script</b></td>
+  <td valign="middle">
+    <input type="radio" name="rating" value="life_changing">Life Changing
+    <input type="radio" name="rating" value="helpful">Helpful
+    <input type="radio" name="rating" value="unfulfilling">Unfulfilling&nbsp;
+    <input type="submit" value="rate">
+  </td>
+</tr>
+</table>
+</form>
+<span class="txth2">script versions</span> (<a href="add_script_version.php?script_id=1160">upload new version</a>)
+<p>
+Click on the package to download.
+<p>
+
+<table cellspacing="2" cellpadding="4" border="0" width="100%">
+<tr class='tableheader'>
+        <th valign="top">package</th>
+    <th valign="top">script version</th>
+    <th valign="top">date</th>
+    <th valign="top">Vim version</th>
+    <th valign="top">user</th>
+    <th valign="top">release notes</th>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=14266">tskeleton.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>4.10</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-11-15</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- Improved integration with stakeholders.vim<br>- s:SelectTagMode(): CursorSet() should respect value of g:tskelSelectTagMode<br>- tskeleton#GoToNextTag(): Missed last character for &lt;++&gt; tags if &sel wasn't &quot;exclusive&quot;<br>- FIX: further &selection-related issues<br>MD5 checksum: d126a6069b3d4452c0402f3db12286a0</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13833">tskeleton.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>4.9</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-09-14</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
+    <td class="roweven" valign="top" width="2000">- CHANGE: Renamed plugin/tSkeleton.vim to plugin/tskeleton.vim<br>- CHANGE: Moved the definition of some variables from plugin/tSkeleton.vim to autoload/tskeleton.vim<br>- If g:tskelMapLeader is empty, don't define maps.<br>- Don't build a menu if g:tskelMenuPrefix == ''.<br>- If g:tskelDontSetup is defined and g:tskelMenuPrefix == '', autoload/tskeleton.vim won't be loaded on startup.<br>- Don't create g:tskelBitsDir if it doesn't exist<br>- &quot;Mini bits&quot;: Load all .tskelmini files from the current file's&nbsp;&nbsp;directory upwards<br>- s:InsertDefault handles &lt;+CURSOR+&gt; tags<br>- tskeleton#HyperComplete_query(): Set w:tskeleton_hypercomplete<br>- FIX: g:tskelHyperType = &quot;pum&quot; didn't work properly.<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=11545">tSkeleton.vba.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>4.7</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-10-18</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- TSkeletonMapHyperComplete() (default: &lt;c-space&gt;): Map a magic key that expands skeletons or, if no matching templates were found, completions, tags, words etc.<br>- Minibits: Allow single words as bit definition: &quot;word&quot; expands to &quot;word&lt;+CURSOR+&gt;&quot;<br>- TSkeletonSetup: allow full filenames as argument<br>- Auto templates: don't cd into the templates directory<br>- tskeleton#ExpandBitUnderCursor(): Third argument is a dictionary.<br>- FIX: Problem with &lt;+name/expandsion+&gt; kind of tags when located at the beginning or end of a line<br>- s:GetBitDefs()<br>- Improved tskeleton#Complete() (for use as completefunc or omnifunc)<br>- FIX: Cursor positioning after expanding templates without a &lt;+CURSOR+&gt; tag<br>- Don't build the menu for tSkeleton scratch buffers<br>- Require tlib 0.29<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=9595">tSkeleton.vba.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>4.5</b></td>
+    <td class="roweven" valign="top" nowrap><i>2008-12-02</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
+    <td class="roweven" valign="top" width="2000">- Make sure tlib is loaded even if it is installed in a different rtp-directory<br>- Call s:InitBufferMenu() earlier.<br>- C modifier: Consider _ whitespace<br>- g:tskelMarkerExtra (extra markers for tskeleton#GoToNextTag)<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=8126">tSkeleton.vba.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>4.3</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2008-01-05</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- bbcode group<br>- tskelKeyword_{&ft} and tskelGroup_{&ft} variables can be buffer-local<br>- Case-sensitivity can be configured via [bg]:tskelCaseSensitive and <br>[bg]:tskelCaseSensitive_{&filetype}<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=7941">tSkeleton.vba.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>4.2</b></td>
+    <td class="roweven" valign="top" nowrap><i>2007-11-12</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
+    <td class="roweven" valign="top" width="2000">- Enable &lt;+CURSOR/foo+&gt;. After expansion &quot;foo&quot; will be selected.<br>- New (old) default values: removed 'abbreviations' from g:tskelTypes <br>and set g:tskelAutoAbbrevs to 0 in order to minimize surprises.<br>- Enabled tex-Skeletons for the viki filetype<br>- FIX: Place the cursor at the end of an inserted bit that contains no <br>cursor marker (which was the original behaviour).<br>- Split html bits into html and html_common; the java group includes <br>html_common.<br>- CHANGE: Made bit names case-sensitive<br>- NEW: select() tag (similar to the query tag)<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=7696">tSkeleton.vba.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>4.1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2007-09-19</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- Automatically define iabbreviations by adding [bg]:tskelAbbrevPostfix <br>(default: '#') to the bit name (i.e., a bit with the file &quot;foo.bar&quot; will <br>by default create the menu entry &quot;TSkel.foo.bar&quot; for the bit &quot;bar&quot; and <br>the abbreviation &quot;bar#&quot;). If this causes problems, set <br>g:tskelAutoAbbrevs to 0.<br>- Bits can have a &lt;tskel:abbrev&gt; section that defines the abbreviation.<br>- New type 'abbreviations': This will make your abbreviations accessible <br>as templates (in case you can't remember their names)<br>- New experimental &lt;tskel:condition&gt; section (a vim expression) that <br>checks if a bit is eligible in the current context.<br>- New &lt;+input()+&gt; tag.<br>- New &lt;+execute()+&gt; tag.<br>- New &lt;+let(VAR=VALUE)+&gt; tag.<br>- &lt;+include(NAME)+&gt; as synonym for &lt;+bit:NAME+&gt;.<br>- Experimental &lt;+if()+&gt; ... &lt;+elseif()+&gt; ... &lt;+else+&gt; ... &lt;+endif+&gt;, <br>&lt;+for(var in list)+&gt; ... &lt;+endfor+&gt; tags.<br>- Special tags &lt;+nop+&gt;, &lt;+joinline+&gt;, &lt;+nl+&gt; to prevent certain <br>problems.<br>- These special tags have to be lower case.<br>- Made tskeleton#GoToNextTag() smarter in recognizing something like: <br>&lt;+/DEFAULT+&gt;.<br>- Defined &lt;Leader&gt;## and &lt;Leader&gt;#&lt;space&gt; (see g:tskelMapLeader) as <br>visual command (the user will be queried for the name of a skeleton)<br>- Some functions have moved and changed names. It should now be possible <br>to plug-in custom template expanders (or re-use others).<br>- Use append() via tlib#buffer#InsertText() to insert bits. This could <br>cause old problems to reappear although it seems to work fine.<br>- The markup should now be properly configurable (per buffer; you can <br>set template-specific markers in the tskel:here_before section).<br>- Require tlib 0.14<br>- The default value for g:tskelUseBufferCache is 0 as many people might <br>find the accumulation of cached information somewhat surprising. Unless <br>you use tag/functions type of skeleton bit, it's unnecessary anyway.<br>- Removed the dependency on genutils.<br>- The g:tskelMarkerCursor variable was removed and replaced with <br>g:tskelMarkerCursor_mark and g:tskelMarkerCursor_rx.<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=7633">tSkeleton.vba.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>4.0</b></td>
+    <td class="roweven" valign="top" nowrap><i>2007-09-08</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
+    <td class="roweven" valign="top" width="2000">- Renamed g:tskelPattern* variables to g:tskelMarker*<br>- If g:tskelMarkerHiGroup is non-empty, place holders will be <br>highlighted in this group.<br>- Re-enable 'mini' in g:tskelTypes.<br>- Calling TSkeletonBit with no argument, brings up the menu.<br>- Require tlib 0.12<br>- CHANGE: The cache is now stored in ~/vimfiles/cache/ (use <br>tlib#cache#Filename)<br>- INCOMPATIBLE CHANGE: Use autoload/tskeleton.vim<br>- FIX: Problem with cache name<br>- FIX: Problem in s:IsDefined()<br>- FIX: TSkeletonEditBit completion didn't work before expanding a bit.<br>- FIX: Command-line completion when tSkeleton wasn't invoked yet (and <br>menu wasn't built).<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=7379">tSkeleton.vba.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>3.5</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2007-07-18</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- FIX: Minor problem with auto-templates<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=7366">tSkeleton.vba.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>3.4</b></td>
+    <td class="roweven" valign="top" nowrap><i>2007-07-17</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
+    <td class="roweven" valign="top" width="2000">- Automatically reset bits information after editing a bit.<br>- Automatically define autocommands for templates with the form &quot;NAME <br>PATTERN&quot; (where &quot;#&quot; in the pattern is replaced with &quot;*&quot;), i.e. the <br>template file &quot;text #%2ffoo%2f#.txt&quot; will define a template for all new <br>files matching &quot;*/foo/*.txt&quot;; the filetype will be set to &quot;text&quot;<br>- These &quot;auto templates&quot; must be located in <br>~/.vim/skeletons/templates/GROUP/<br>- TSkeletonCB_FILENAME(), TSkeletonCB_DIRNAME()<br>- FIX: TSkeletonGoToNextTag() didn't work properly with ### type of <br>markers.<br>- FIX: TSkeletonLateExpand(): tag at first column<br>- FIX: In templates, empty lines sometimes were not inserted in the <br>document<br>- FIX: Build menu on SessionLoadPost event.<br>- FIX: Protect against autocommands that move the cursor on a BufEnter <br>event<br>- FIX: Some special characters in the skeleton bit expansion were escaped <br>twice with backslashes.<br>- Require tlib 0.9<br>- Make sure &foldmethod=manual in the scratch buffer<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=7140">tSkeleton.vba.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>3.3</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2007-05-17</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- New :TSkeletonEditBit command<br>- FIX: Embedded &lt;tskel&gt; tags in file templates didn't work<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=7115">tSkeleton.vba.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>3.2</b></td>
+    <td class="roweven" valign="top" nowrap><i>2007-05-15</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
+    <td class="roweven" valign="top" width="2000">- &quot;tags&quot; & &quot;functions&quot; types are disabled by default due to a noticeable <br>delay on initialization; add 'tags' and 'functions' to g:tskelTypes to <br>re-enable them (with the new caching strategy, it's usable, but can <br>produce much noise; but this depends of course on the way you handle <br>tags)<br>- Improved caching strategy: cache filetype bits in <br>skeletons/cache_bits; cache buffer-specific bits in <br>skeletons/cache_bbits/&filetype/path (set g:tskelUseBufferCache to 0 to <br>turn this off; this speeds up things quite a lot but creates many files <br>on the long run, so you might want to purge the cache from time to time)<br>- embedded &lt;tskel:&gt; tags are now extracted on initialization and not <br>when the skeleton is expanded (I'm not sure yet if it is better this <br>way)<br>- CHANGE: dropped support for the ~/.vim/skeletons/prefab subdirectory; <br>you'll have to move the templates, if any, to ~/.vim/skeletons<br>- FIX: :TSkeletonEdit, :TSkeletonSetup command-line completion<br>- FIX: Problem with fold markers in bits when &fdm was marker<br>- FIX: Problems with PrepareBits()<br>- FIX: Problems when the skeletons/menu/ subdirectory didn't exist<br>- TSkeletonExecInDestBuffer(code): speed-up<br>- Moved functions from EncodeURL.vim to tlib.vim<br>- Updated the manual<br>- Renamed the skeletons/menu subdirectory to skeletons/cache_menu<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=7030">tSkeleton.vba.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>3.1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2007-04-26</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- Tag-based code completion for vim<br>- Made the supported skeleton types configurable via g:tskelTypes<br>- FIX: Tag-based skeletons the name of which contain blanks<br>- FIX: Undid shortcut that prevented the &lt;+bit:+&gt; tag from working<br>- Preliminary support for using keys like &lt;space&gt; for insert mode <br>expansion.<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=7023">tSkeleton.vba.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>3.0</b></td>
+    <td class="roweven" valign="top" nowrap><i>2007-04-24</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
+    <td class="roweven" valign="top" width="2000">This version is probably less stable than the predecessor. Or maybe not.<br>- Partial rewrite for vim7 (drop vim6 support)<br>- Now depends on tlib (<a href="/scripts/script.php?script_id=1863">vimscript #1863</a>)<br>- &quot;query&quot; now uses a more sophisticated version from autoload/tlib.vim<br>- The default value for g:tskelQueryType is &quot;query&quot;.<br>- Experimental (proof of concept) code completion for vim script <br>(already sourced user-defined functions only). Use :delf <br>TSkelFiletypeBits_prototypes_vim to disable this as it can take some <br>time on initialization.<br>- Experimental (proof of concept) tags-based code completion for ruby.&nbsp;&nbsp;<br>Use :delf TSkelProcessTag_ruby to disable this. It's only partially <br>useful as it simply works on method names and knows nothing about <br>classes, modules etc. But it gives you an argument list to fill in. It <br>shouldn't be too difficult to adapt this for other filetypes for which <br>such an approach could be more useful.<br>- The code makes it now possible to somehow plug in custom bit types by <br>defining TSkelFiletypeBits_{NAME}(dict, filetype), or <br>TSkelFiletypeBits_{NAME}_{FILETYPE}(dict, filetype), <br>TSkelBufferBits_{NAME}(dict, filetype), <br>TSkelBufferBits_{NAME}_{FILETYPE}(dict, filetype).<br>- FIX s:RetrieveAgent_read(): Delete last line, which should fix the <br>problem with extraneous return characters in recursively included <br>skeleton bits.<br>- FIX: bits containing backslashes<br>- FIX TSkeletonGoToNextTag(): Moving cursor when no tag was found.<br>- FIX: Minibits are now properly displayed in the menu.<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=7022">tSkeleton-Samples.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>3.0samples</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2007-04-24</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
+    <td class="rowodd" valign="top" width="2000">This files contains some templates to be used with this plugin. They were previously distributed with the plugin.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=6245">tSkeleton.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.3a</b></td>
+    <td class="roweven" valign="top" nowrap><i>2006-10-03</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
+    <td class="roweven" valign="top" width="2000">Support for current versions of genutils (&gt; 2.0), really</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=6220">tSkeleton.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.2</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2006-09-23</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- Don't display query menu, when there is only one eligible bit<br>- EncodeURL.vim now correctly en/decoded urls<br>- UTF8 compatibility -- use col() instead of virtcol() (thanks to Elliot Shank)<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=5676">tSkeleton.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.1</b></td>
+    <td class="roweven" valign="top" nowrap><i>2006-05-10</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
+    <td class="roweven" valign="top" width="2000">- Don't accidentally remove torn off menus; rebuild the menu less often<br>- Maintain insert mode (don't switch back to normal mode) in &lt;c-\&gt;&lt;c-\&gt; imap<br>- If no menu support is available, use the &lt;SID&gt;Query function to let the user select among eligible bits (see also g:tskelQueryType)<br>- Create a normal and an insert mode menu<br>- Fixed selection of eligible bits<br>- Ensure that g:tskelDir ends with a (back)slash<br>- Search for 'skeletons/' in &runtimepath & set g:tskelDir accordingly<br>- If a template is named &quot;#.suffix&quot;, an autocmd is created automatically.<br>- Set g:tskelQueryType to 'popup' only if gui is win32 or gtk.<br>- Minor tweak for vim 7.0 compatibility<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=4488">tSkeleton.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.0</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2005-08-11</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- You can define &quot;groups of bits&quot; (e.g. in php mode, all html bits are <br>&nbsp;&nbsp;available too)<br>- context sensitive expansions (only very few examples yet); this causes <br>&nbsp;&nbsp;some slowdown; if it is too slow, delete the files in .vim/skeletons/map/<br>- one-line &quot;mini bits&quot; defined in either <br>&nbsp;&nbsp;./vim/skeletons/bits/{&filetype}.txt or in $PWD/.tskelmini<br>- Added a few LaTeX, HTML and many Viki skeleton bits<br>- Added EncodeURL.vim<br>- Hierarchical bits menu by calling a bit &quot;SUBMENU.BITNAME&quot; (the &quot;namespace&quot; <br>&nbsp;&nbsp;is flat though; the prefix has no effect on the bit name; see the &quot;bib&quot; <br>&nbsp;&nbsp;directory for an example)<br>- the bit file may have an ampersand (&) in their names to define the <br>&nbsp;&nbsp;keyboard shortcut<br>- Some special characters in bit names may be encoded as hex (%XX as in <br>&nbsp;&nbsp;URLs)<br>- Insert mode: map g:tskelMapInsert ('&lt;c-\&gt;&lt;c-\&gt;', which happens to be the <br>&nbsp;&nbsp;&lt;c-#&gt; key on a German qwertz keyboard) to TSkeletonExpandBitUnderCursor()<br>- New &lt;tskel:msg&gt; tag in skeleton bits<br>- g:tskelKeyword_{&filetype} variable to define keywords by regexp (when <br>&nbsp;&nbsp;'iskeyword' isn't flexible enough)<br>- removed the g:tskelSimpleBits option<br>- Fixed some problems with the menu<br>- Less use of globpath()<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=4447">tSkeleton.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.5</b></td>
+    <td class="roweven" valign="top" nowrap><i>2005-07-28</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
+    <td class="roweven" valign="top" width="2000">- Menu of small skeleton &quot;bits&quot;<br>- TSkeletonLateExpand() (mapped to &lt;Leader&gt;#x)<br>- Disabled &lt;Leader&gt;# mapping (use it as a prefix only)<br>- Fixed copy & paste error (loaded_genutils)<br>- g:tskelDir defaults to $HOME .&quot;/vimfiles/skeletons/&quot; on Win32<br>- Some speedup<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=4297">tSkeleton.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.4</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2005-05-19</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- Popup menu with possible completions if TSkeletonExpandBitUnderCursor() is <br>called for an unknown code skeleton (if there is only one possible completion, <br>this one is automatically selected)<br>- Make sure not to change the alternate file and not to distort the window <br>layout<br>- require genutils<br>- Syntax highlighting for code skeletons<br>- Skeleton bits can now be expanded anywhere in the line. This makes it <br>possible to sensibly use small bits like date or time.<br>- Minor adjustments<br>- g:tskelMapLeader for easy customization of key mapping (changed the map <br>leader to &quot;&lt;Leader&gt;#&quot; in order to avoid a conflict with Align; set <br>g:tskelMapLeader to &quot;&lt;Leader&gt;t&quot; to get the old mappings)<br>- Utility function: TSkeletonGoToNextTag(); imaps.vim like key bindings via TSkeletonMapGoToNextTag()<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=3972">tSkeleton.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.3</b></td>
+    <td class="roweven" valign="top" nowrap><i>2005-03-06</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
+    <td class="roweven" valign="top" width="2000">- TSkeletonCleanUpBibEntry (mapped to &lt;Leader&gt;tc for bib files)<br>- complete set of bibtex entries<br>- fixed problem with [&bg]: tags<br>- fixed typo that caused some slowdown<br>- other bug fixes<br>- a query must be enclosed in question marks as in &lt;+?Which ID?+&gt;<br>- the &quot;test_tSkeleton&quot; skeleton can be used to test if tSkeleton is working<br>- and: after/before blocks must not contain function definitions<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=3951">tSkeleton.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.2</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2005-03-02</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- new pseudo tags: bit (recursive code skeletons), call (insert function result)<br>- before & after sections in bit definitions may contain function definitions<br>- fixed: no bit name given in &lt;SID&gt;SelectBit()<br>- don't use ={motion} to indent text, but simply shift it<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=3786">tSkeleton.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.1</b></td>
+    <td class="roweven" valign="top" nowrap><i>2005-01-20</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
+    <td class="roweven" valign="top" width="2000">- Skeleton bits (small inline skeletons or whatever you want to call it)<br>- User-defined tags<br>- Modifiers &lt;+NAME:MODIFIERS+&gt; (c=capitalize, u=toupper, l=tolower, s//=substitute)<br>- the default markup for tags has changed to &lt;+TAG+&gt; (for &quot;compatibility&quot; with <br>imaps.vim), the cursor position is marked as &lt;+CURSOR+&gt; (but this can be <br>changed by setting g:tskelPatternLeft, g:tskelPatternRight, and <br>g:tskelPatternCursor)<br>- in the not so simple mode, skeleton bits can contain vim code that is <br>evaluated after expanding the template tags (see .../skeletons/bits/vim/if for <br>an example)<br>- function TSkeletonExpandBitUnderCursor(), which is mapped to &lt;Leader&gt;#<br>- utility function: TSkeletonIncreaseRevisionNumber()<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=3718">tSkeleton.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.0</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2004-12-20</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Initial upload</td>
+</tr>
+</table>
+<!-- finish off the framework -->
+          </td>
+        </tr>
+      </table>
+    </td>
+
+  </tr>
+</table>
+
+<!-- END OF THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr><td colspan="4" bgcolor="#000000"><img src="/images/spacer.gif" height="2" width="1" alt=""></td></tr>
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr>
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+
+    <td align="left" valign="top"><small>
+      If you have questions or remarks about this site, visit the
+      <a href="http://vimonline.sf.net">vimonline development</a> pages.
+      Please use this site responsibly.
+      <br> 
+      
+      Questions about <a href="http://www.vim.org/about.php">Vim</a> should go
+      to the <a href="http://www.vim.org/maillist.php">maillist</a>.
+      Help Bram <a href="http://iccf-holland.org/">help Uganda</a>.
+      </small>
+	&nbsp;
+	&nbsp;
+
+	<!-- Start of StatCounter Code -->
+	<script type="text/javascript" language="javascript">
+	var sc_project=1417324; 
+	var sc_invisible=1; 
+	var sc_partition=11; 
+	var sc_security="d41633bc"; 
+	</script>
+
+	<script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script><noscript><a href="http://www.statcounter.com/" target="_blank"><img  src="http://c12.statcounter.com/counter.php?sc_project=1417324&java=0&security=d41633bc&invisible=0" alt="free tracking" border="0"></a> </noscript>
+	<!-- End of StatCounter Code -->
+          </td>
+
+    <td align="right" valign="top">
+      		<a href="http://sourceforge.net/projects/vim" rel="nofollow"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=8&type=1" width="88" height="31" border="0" alt="SourceForge.net Logo" /></a>
+    </td>
+
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+  </tr>
+
+    
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  
+  </tr>
+</table>
+
+</body>
+</html>
+

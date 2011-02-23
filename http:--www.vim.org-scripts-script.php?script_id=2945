@@ -1,0 +1,748 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+  <link rel="Stylesheet" type="text/css" href="/css/style.css" >
+  <title>AutomaticTexPlugin - Background compilation, completion, bib serch, toc and other nice features. : vim online</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <meta name="KEYWORDS" content="Vim, Vi IMproved, text editor, home, documentation, tips, scripts, news">
+  <link rel="shortcut icon" type="image/x-icon" href="/images/vim_shortcut.ico">
+</head>
+
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff"> 
+
+<!-- HEADER, SPONSOR IMAGE, VIM IMAGE AND BOOK AD -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+  <td class="lightbg">&nbsp;&nbsp;&nbsp;</td>
+  <td class="lightbg" align="left"><a href="/sponsor/index.php"><img src="/images/sponsorvim.gif" alt="sponsor Vim development" border="0"></a></td>
+    <td class="lightbg" align="center"><a href="/index.php"><img src="/images/vim_header.gif" border="0" alt="Vim logo"></a></td>
+    <td class="lightbg" align="right"><a href="http://iccf-holland.org/click5.html"><img src="/images/buyhelplearn.gif" alt="Vim Book Ad" border="0"></a></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="darkbg"><img src="/images/spacer.gif" width="1" height="10" alt=""></td>
+  </tr>
+</table>
+<!-- THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+  <col width="180">
+  <col width="1">
+
+  <tr valign="top">
+    <td class="sidebar">
+      <table width="180" cellpadding="4" cellspacing="0" border="0">
+        <tr valign="top">
+          <td class="sidebar">
+
+<!-- INCLUDE THE PAGE NAVIGATION -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+    <tr>
+        <td><small>not logged in (<a href="/login.php">login</a>)</small></td>
+    </tr>
+    <tr><td>
+<small>&nbsp;</small>
+<form action="http://www.google.com/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-3005259998294962:bvyni59kjr1" />
+    <input type="hidden" name="ie" value="ISO-8859-1" />
+    <input type="text" name="q" size="20" />
+    <br>
+    <input type="submit" name="sa" value="Search" />
+  </div>
+</form>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+    </td></tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="1"></td>
+    </tr>
+    <tr>
+        <td class="darkbg"><img src="/images/spacer.gif" alt='' border="0" height="3"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="2"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/index.php">Home</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/search.php">Advanced search</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/about.php">About Vim</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/community.php">Community</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/news/news.php">News</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/sponsor/index.php">Sponsoring</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/trivia.php">Trivia</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/docs.php">Documentation</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/download.php">Download</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/scripts/index.php">Scripts</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/tips/index.php">Tips</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/account/index.php">My Account</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/huh.php">Site Help</a></td>
+        </tr>
+</table>
+
+            <table width="172" cellpadding="0" cellspacing="0" border="0">
+              <tr><td><img src="/images/spacer.gif" alt="" border="0" width="1" height="8"></td></tr>
+              <tr><td class="darkbg"><img src="/images/spacer.gif" width="1" height="3" alt=""></td></tr>
+            </table>
+            <br>
+
+<!-- INCLUDE THE PAGE SIDEBAR TEXT -->
+&nbsp;
+
+          </td>
+        </tr>
+      </table>
+    </td>
+
+    <td class="darkbg"><img src="/images/spacer.gif" width="1" height="1" border="0" alt=""><br></td>
+    <td>
+      <table width="100%" cellpadding="10" cellspacing="0" border="0" bordercolor="red">
+        <tr>
+          <td valign="top">
+
+<span class="txth1">AutomaticTexPlugin : Background compilation, completion, bib serch, toc and other nice features.</span> 
+
+<br>
+<br>
+
+<!-- karma table -->
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
+  <td>
+    Rating <b>381/103</b>,
+    Downloaded by 1152  </td>
+  <td class="lightbg">
+  <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
+  </td>
+  <td>
+    <a href="http://vim.wikia.com/wiki/Script:2945">Vim wiki</a>
+  </td>  
+</tr>
+</table>
+<p>
+
+<table cellspacing="0" cellpadding="0" border="0">
+<tr><td class="prompt">created by</td></tr>
+<tr><td><a href="/account/profile.php?user_id=18896">Marcin Szamotulski</a></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">script type</td></tr>
+<tr><td>ftplugin</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">description</td></tr>
+<tr><td>If you have any question, ideas, or suggestion please do not hesitate to write, it is always nice to get some feedback ...<br>and many THANKS for RATES, :).<br><br>The plugin is known to not work on MS Windows, a help with porting is welcome.<br><br>This is a file type plugin for vim to comfortably write LaTeX (TeX) documents, which provides functionality not met in other such file type plugins.&nbsp;&nbsp;It makes you FREE from compiling procedure, making this process automatic using autocommands. Features include (this is not a complete list):<br><br>Compilation Features:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; * Background tex processing<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; * Making LaTeX documents with just one command <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/ bibliography, makeindex, table of contents, lists of: figures, tables, theorems [with ntheorem package] /<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; * various debug modes: silent/debug/verbose.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/ automatically close debug window (:copen) if there are no errors /<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; * show errors, warnings, citation/reference warnings, <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;font warnings, files used ...<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/ error file is automatically read after compilation /<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; * open log function, in log file you can sync the tex source with the log file (then errors in the source file will be higlighted!) or the xpdf viewer with the log file. There are also maps to go to next/previous error/warning/info/... message.<br><br>Editing Features:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; * indentation<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; * selection tools for environments (vie, vae) , in line math (vim, vam)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; * toggling the environment name <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/ and changes the label if you use the labeling system; this needs activation /&nbsp;&nbsp; <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; * toggling the star (add remove a star from environment)<br><br>Completions:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; * completion for commands (also user defined in associate files), <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;environments, citations, references, tikz commands, keywords, provided abbreviations, and much more<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/ there are two completion modes: when you know what you want with &lt;Tab&gt; <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; and when you search for a command with &lt;S-Tab&gt; /<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Some completion features:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ math commands are completed only in math mode<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ tikz commands are completed only in tikz environments<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ completion of \ref, \eqref by numbers from the output (\ref{1.3&lt;Tab&gt; ...)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ completion is connected to closing last environment/bracket functions<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; so that you have all under one key &lt;Tab&gt; by default<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ completion for \usefont{}{}{}{}, \fonttype{}, .... commands<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; / finds completions in font definition files /<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ completion for \cite{ supports regular expression which are<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; passed to the searching tool in bibliography files<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; * closing brackets and environments (preserves nested environments in&nbsp;&nbsp;100%)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; / which is included into completion with &lt;Tab&gt; key)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; * many usefull maps<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; * abbreviations for environments (with tab completion)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>Moving Tools:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; * table of contents<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; / which allows moving through files, chapters, sections, opening a preview window /&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; * list of labels<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; / as with toc, you can see the context of the label in a preview window /<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; * moving commands to next environment<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; / configured with vim commands: 'n' and 'N' for repeating / the vim commands: 'n' and 'N' for repeating /<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; / also to next [inline/displayed] math environment /<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; / support of project files /<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; * % operates on $:$ (in plain tex also on $$:$$), brackets and <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\begin:\end pairs /which also get highlighted/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; * (TeX/LaTeX) oriented normal gf map<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; / gf = go to file under cursor, if there is no file under the cursor gives a recursive list input files /<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; + with nice indentation for the list of files to chose<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; + with g:atp_developer = 1 you can easily open package (.sty) and classes (.cls) files<br><br>Searching Tools:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; * reverse/inverse searching for xdvi<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; * search for definitions ( \def ) declared in input files<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/ like [D command but works with multiple line definitions /<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; * extended search in bib files<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; * query amsref web page for bibliography data&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; * a function which toggles a command map of &lt;space&gt; to \_s\+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/ this is a handy way to search in text which is broken into lines /<br><br>Support for Projects<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; * project script which restores project specific variables ( for example: b:atp_MainFile, b:ListOfFiles - the list of files included in the project, ...) <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/ The project script name is &lt;MainProjectFile&gt;.project.vim /<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/ It is possible to store many projects in one directory! /<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; * GotoFile function (replace vim gf map), which list all the input files for the main project file and let you go to one of them (it also sets the main file variable for the new buffer to correct value automaticaly).<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; * A command to search in project files (like it would be just one long file)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; + supports flags: bceswW of vim search() function and the <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; vim 'wrapscan' option.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* :Labels command (which list all defined labels) support project files.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* :TOC command (Table of Contents) almost supports project files (work in progress).<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* :NInput/:PInput commands : to go to next/previous input file.<br><br>This plugin includes: <a href="/scripts/script.php?script_id=3109">vimscript#3109</a>&nbsp;&nbsp;(LatexBox by David Munger).<br><br>Project Web Page:&nbsp;&nbsp;<a target="_blank" href="https://launchpad.net/automatictexplugin">https://launchpad.net/automatictexplugin</A><br>BUG tracker:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a target="_blank" href="https://bugs.launchpad.net/automatictexplugin">https://bugs.launchpad.net/automatictexplugin</A></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">install details</td></tr>
+<tr><td>To install open the vimball file and source it ':so %' or ':source %'. You can use $HOME/.atp.vim configuration file to set the atp variables, which is handy for local-buffer settings.</td></tr>
+<tr><td>&nbsp;</td></tr>
+</table>
+
+<!-- rating table -->
+<form name="rating">
+<input type="hidden" name="script_id" value="2945">
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>rate this script</b></td>
+  <td valign="middle">
+    <input type="radio" name="rating" value="life_changing">Life Changing
+    <input type="radio" name="rating" value="helpful">Helpful
+    <input type="radio" name="rating" value="unfulfilling">Unfulfilling&nbsp;
+    <input type="submit" value="rate">
+  </td>
+</tr>
+</table>
+</form>
+<span class="txth2">script versions</span> (<a href="add_script_version.php?script_id=2945">upload new version</a>)
+<p>
+Click on the package to download.
+<p>
+
+<table cellspacing="2" cellpadding="4" border="0" width="100%">
+<tr class='tableheader'>
+        <th valign="top">package</th>
+    <th valign="top">script version</th>
+    <th valign="top">date</th>
+    <th valign="top">Vim version</th>
+    <th valign="top">user</th>
+    <th valign="top">release notes</th>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=14840">AutomaticTexPlugin_8.6.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>8.6</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2011-01-23</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=18896">Marcin Szamotulski</a></i></td>
+    <td class="rowodd" valign="top" width="2000">See the help file for changes.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=14503">AutomaticTexPlugin_8.5.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>8.5</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-12-14</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=18896">Marcin Szamotulski</a></i></td>
+    <td class="roweven" valign="top" width="2000">* AMSRef : bang has opposite meaning now.<br>* Many small fixes. <br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=14338">AutomaticTexPlugin_8.4.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>8.4</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-11-21</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=18896">Marcin Szamotulski</a></i></td>
+    <td class="rowodd" valign="top" width="2000">* Small fixes.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=14223">AutomaticTexPlugin_8.3.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>8.3</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-11-10</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=18896">Marcin Szamotulski</a></i></td>
+    <td class="roweven" valign="top" width="2000">* Abbreviations (see :h atp-news) and fixes of vip.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=14177">AutomaticTexPlugin_8.2.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>8.2</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-11-04</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=18896">Marcin Szamotulski</a></i></td>
+    <td class="rowodd" valign="top" width="2000"> * Some fixes. As usual, check :h atp-news</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=14123">AutomaticTexPlugin_8.1.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>8.1</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-10-26</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=18896">Marcin Szamotulski</a></i></td>
+    <td class="roweven" valign="top" width="2000">Some fixes in the new command AMSRef, completion for :GotoFile, :EditIntpuFile commands.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=14107">AutomaticTexPlugin_8.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>8</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-10-24</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=18896">Marcin Szamotulski</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Filetype plugin for bib files added.<br>Command to obtain bib data from amsref web page interface (for both bib files and bibliography environments)<br>For lots of other new stuff read :h atp-news</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=14046">AutomaticTexPlugin_7.7.2.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>7.7.2</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-10-12</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=18896">Marcin Szamotulski</a></i></td>
+    <td class="roweven" valign="top" width="2000">See :h atp-news (:DefiSearch fixed, but also more)</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=14017">AutomaticTexPlugin_7.7.1.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>7.7.1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-10-07</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=18896">Marcin Szamotulski</a></i></td>
+    <td class="rowodd" valign="top" width="2000">A bug fixed reported by B. Garcia Carreras.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=14016">AutomaticTexPlugin_7.7.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>7.7</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-10-07</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=18896">Marcin Szamotulski</a></i></td>
+    <td class="roweven" valign="top" width="2000">Licence: GPL v3+.<br>See :h atp-news</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13959">AutomaticTexPlugin_7.6.1.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>7.6.1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-09-30</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=18896">Marcin Szamotulski</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Read :h atp-news.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13828">AutomaticTexPlugin_7.5.3.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>7.5.3</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-09-14</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=18896">Marcin Szamotulski</a></i></td>
+    <td class="roweven" valign="top" width="2000">* See :h atp-news</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13750">AutomaticTexPlugin_7.5.2.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>7.5.2</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-09-03</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=18896">Marcin Szamotulski</a></i></td>
+    <td class="rowodd" valign="top" width="2000">A bug fixed in SyncTex (log file tool).</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13749">AutomaticTexPlugin_7.5.1.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>7.5.1</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-09-03</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=18896">Marcin Szamotulski</a></i></td>
+    <td class="roweven" valign="top" width="2000">Bug fixes.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13743">AutomaticTexPlugin_7.5.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>7.5</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-09-02</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=18896">Marcin Szamotulski</a></i></td>
+    <td class="rowodd" valign="top" width="2000">See help file for release notes (:h atp-news). There are several new features!</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13654">AutomaticTexPlugin_7.4.1.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>7.4.1</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-08-23</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=18896">Marcin Szamotulski</a></i></td>
+    <td class="roweven" valign="top" width="2000">* A bug fixed in :BibChoose command<br>* and in tex_atp.vim file</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13649">AutomaticTexPlugin_7.4.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>7.4</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-08-23</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=18896">Marcin Szamotulski</a></i></td>
+    <td class="rowodd" valign="top" width="2000">* &lt;NEW FEATURE&gt; TexAlign wrapper command around Align command (<a href="/scripts/script.php?script_id=884">vimscript#884</a>) see :h atp-news <br>* TeXDoc -&gt; TexDoc <br>* History feature reviewed, now every file has separate history file (like for vim view files) see :h atp-news<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13629">AutomaticTexPlugin_7.3.9.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>7.3.9</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-08-19</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=18896">Marcin Szamotulski</a></i></td>
+    <td class="roweven" valign="top" width="2000">* Some fixes in GotoFile command and function which generates tree of project files (hopefully it will also work in plaintex files, but this is not tested).<br>* Now the history feature stores only two variables b:atp_MainFile and atp_History. Storing more in one file was not the best idea (shortly time of loading history becomes quite big), nice solution for this is to make history file per buffer (like view files, which unfortunately don't have option to store local buffer variables).</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13626">AutomaticTexPlugin_7.3.8.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>7.3.8</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-08-19</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=18896">Marcin Szamotulski</a></i></td>
+    <td class="rowodd" valign="top" width="2000">* a small fix.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13602">AutomaticTexPlugin_7.3.7.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>7.3.7</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-08-17</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=18896">Marcin Szamotulski</a></i></td>
+    <td class="roweven" valign="top" width="2000">* &lt;New Feature&gt; Highlight for notification message (that TeX is processing the file) in status line (see :h atp-news).<br>* Some fixes.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13579">AutomaticTexPlugin_7.3.6.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>7.3.6</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-08-15</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=18896">Marcin Szamotulski</a></i></td>
+    <td class="rowodd" valign="top" width="2000">* Some fixes in the new history feature. Read :h atp-news for changes.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13570">AutomaticTexPlugin_7.3.5.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>7.3.5</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-08-14</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=18896">Marcin Szamotulski</a></i></td>
+    <td class="roweven" valign="top" width="2000"> :Labels, map \L supports project files.<br>* :TOC works in project files (but only if the toc lines are not inside a included file, make this better this is in my plans)<br>* Completion for labels matches labels without pretended '^' in the beginning of the pattern.<br>* Added a section in doc with tips: ':h atp-tips' You are cordially invited to contribute to this section! <br>* &lt;NEW FEATURE&gt; history file wich cache some variables, which makes a better support for project files (among other variables b:atp_MainFile is remebered)<br>* doc file show highlight color for atp syntax groups, see :h atp-highlight<br>* ToggleNn command (toggles if vim normal commands are vim or from atp. In the second case :S command is used. This is (by default) on in project files.<br>* :ShowOptions[!] [pattern] 	without bang it shows all values of local variables matching [pattern], with bang also global variables set by atp are shown. This helps to find a variable. For more details see :h atp-:ShowOptions<br>* BibSearch[!] [pattern] [flag]	bang added, with it it regenerates the tree of files (only important in some situtation in project files). Secondly, it removes ligatures before the pattern is matched.<br>* vip, vap and related maps see :h atp-news and :h atp-tips.<br>* :Viewer, :DebugMode, :Compiler commands, see :h atp-news <br>* menu key has changed from L to X (press Ctrl-x to see the menu). Menu now shows your compiler and current viewer.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13522">AutomaticTexPlugin_7.3.3.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>7.3.3</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-08-08</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=18896">Marcin Szamotulski</a></i></td>
+    <td class="rowodd" valign="top" width="2000">* The command :EditInputFile == :GotoFile and they both work in the same way as nmap gf (with small difference that they do not look what is under the cursor)<br>* Small fixes.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13504">AutomaticTexPlugin_7.3.2.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>7.3.2</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-08-06</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=18896">Marcin Szamotulski</a></i></td>
+    <td class="roweven" valign="top" width="2000"> &lt;NEW FEATURE&gt; sync okular viewer with tex source, read :h atp-viewers-okular.<br> * b:atp_ViewerOption removed, read: :h atp-Viewer_Option<br> * and some bug fixes and small changes (especially in editing LaTeX project files)<br> * Note: some tools for editing TeX project files might not work that fast: for example the ':S' command, which relied on making tree of input files, in TeX there is no method of distiguishing between input packages and input parts of the book. Packages are can have its own dependencies so scanning them all might take some time. As for know there is no solution for that.<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13492">AutomaticTexPlugin_7.3.1.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>7.3.1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-08-05</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=18896">Marcin Szamotulski</a></i></td>
+    <td class="rowodd" valign="top" width="2000"> &lt;NEW FEATURE&gt; nmap gf, see ':h atp-news'.<br> &lt;NEW FEATURE&gt; read ':h atp-viewers-okular' and learn how to sync gvim with okular.<br>* Some changes in :S command, see ':h atp-S'.<br>* Speed up of :Labels command, some work done to support projects. <br>* Labels by number completion support one more layout of aux file.<br>* Several bug fixes.<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13459">AutomaticTexPlugin_7.3.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>7.3</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-08-02</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=18896">Marcin Szamotulski</a></i></td>
+    <td class="roweven" valign="top" width="2000">* &lt;New Feature&gt; MakeLatex[!] to make latex documents (bibliographies, index, table of contents, lists of: tables, figures, theorems [using ntheorem package]. See :h atp-news.<br>* &lt;New Feature&gt; :S command to search in project files, which works like / command to search patterns. Supports almost all searching flags of the search() function, for example b (backward), wW (wrap/nowrap around the end of file), c (match at the cursor position). This allows for finding next '\input{' phrase in the source tree.<br>* Delete[!] Bang [!] added, with bang delets also the output file (pdf or dvi)<br>* HihglightMatchingPair functionn supports '\big' commands (and friends). Also highlights \begin{env_name} when the cursor is on the env_name.<br>* Some changes in the list of labels (take a try with \L).<br>* FontSearch[!], FontPreview[!] bang [!] added, with bang mathes the full path of fd file against the supplied pattern, without just the name.<br>* The file is not process also in Insert mode but with different value of 'updatetime' vim option, you can configure it with g:atp_insert_updatetime (if it is set to 0 the file will not be processed while vim is in the Insert mode). The default value is 2sec.<br>* Default value of updatetime is 800 (set only if when you have not changed the default value, if you want to use the default just set it to 4001) (This means that after 800milisec after CursorHold the file will be processed by LaTeX).<br>* Some other fixes.<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13408">AutomaticTexPlugin_7.2.1.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>7.2.1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-07-26</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=18896">Marcin Szamotulski</a></i></td>
+    <td class="rowodd" valign="top" width="2000">* &lt;New Feature&gt; ToC allows to remove, paste section see ':h atp-news' for further info. <br>* &lt;New Feature&gt; Completion of labels by numbers (from output file) added (see ':h atp-news') how to use it. The compiler is copying the aux file to the b:atp_OutDir iff the compilation was without errors /it is better this way for the completion/ Supported classes: article, amsart, book, report, memoir (probably also others), if you run into problems, just send an email with the class name. <br>* &lt;New Feature&gt; Closing environemnts supports $$:$$ pairs (if filetype==&quot;plaintex&quot; or b:atp_TexFlavour==&quot;plaintex&quot;)<br>* &lt;New Feature&gt; Input() function which inserts text depending on math/text mode: there are now only maps:<br>&nbsp;&nbsp;imap \rm	to insert \textrm{ or \mathrm accordingly	<br>&nbsp;&nbsp;		also other maps defined in this way:<br>&nbsp;&nbsp;imap \it	\textit:\mathit<br>&nbsp;&nbsp;imap \sf	\textsf:\mathsf<br>&nbsp;&nbsp;imap \tt	\texttt:\mathtt&nbsp;&nbsp;&nbsp;&nbsp; <br>&nbsp;&nbsp;imap \no	\textnormal:\mathnormal		<br>* Furhter changes in imaps:&nbsp;&nbsp;<br>&nbsp;&nbsp;imap ]I	inserts itemize, <br>&nbsp;&nbsp;imap ]E	inserts enumerate,<br>&nbsp;&nbsp;imap ]i	inserts \item,<br>&nbsp;&nbsp;imap ]T	inserts tikzpicture environment,<br>&nbsp;&nbsp;imap ]L	inserts lemma environment<br>&nbsp;&nbsp;imap \cal	inserts \mathcal{<br>&nbsp;&nbsp;vmap \un	wrap with \underline{:}<br>* vim, vam mappings inseted of vi$, va$ (to mark the inside/auther math evnironments)<br><br>* atprc.vim file can be also placed under the path: ftplugin/ATP_Files/atprc.vim <br>* syntax file for log messages + changes in coots-beauty color file.<br>* \lpr mapping removed (you can use the command :SshPrint, \lpr was interfering with \l)<br>* added some bracket sizes to closing of brackets<br>* \ne, \pe maps to search for next/previous environment (search pattern is added to the search history: thus the commands allows for 'n', and 'N' normal vim maps (alos after '/' the pattern will be present in the search history).<br>* NextSection, PreviousSection commands and maps works in visual and operator pending modes.<br>* variable change g:atp_math_opened -&gt; g:atp_MathOpened with default value 1.<br>* indent key added &quot;O&quot; (':h indentkeys') <br>* some changes in doc (colorful titles :)<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13331">AutomaticTexPlugin_7.1.2.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>7.1.2</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-07-14</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=18896">Marcin Szamotulski</a></i></td>
+    <td class="roweven" valign="top" width="2000">* ':ShowErrors o' opens log file. I wrote a nice syntax file for the log so that it is easier to read it.<br>* Some changes in visual maps:<br>&nbsp;&nbsp; vie, vae&nbsp;&nbsp;&nbsp;&nbsp; mark environment (but not mathematics) \begin:\end<br>&nbsp;&nbsp; vi$, va$&nbsp;&nbsp;&nbsp;&nbsp; mark math modes: $:$, \(:\), \[:\], $$:$$ (only if b:atp_TexFlavour = &quot;plaintex&quot; which is done automatically if the filetype is set to plaintex)<br>&nbsp;&nbsp; vi), va)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mark brackets: (:), {:}, [:]<br>&nbsp;&nbsp; vI), vA)&nbsp;&nbsp;&nbsp;&nbsp; mark brackets (as above) the inner and auter pair of the most auter bracket (in the nesting sence)<br>&nbsp;&nbsp; vis, vas (experimental)&nbsp;&nbsp;mark by syntax, i - inner, a - outer but with a slightly different meening than above (inner for the most top syntax in the synstack, and outer for the most bottom syntax item) they exclude texDocZone and texSectionZones as they are not always synchronized (some times might be large)<br><br>* &quot;:InteligentWrapSelection&quot; command: now \rm (in visual mode) will wrap with \textrm{...} in text and \mathrm{...} in math (also other wrapping maps defined in this way, read &quot;:h atp-command-InteligentWrapSelection&quot;<br>* ':TeXdoc 'command by default opens g:atp_TeXdocDefault (which by deafault is equal &quot;-a lshort&quot;, you can set it to &quot;-a lshort faq&quot; or &quot;-a faq&quot; ...) <br>* Some minor bugs fixed.<br>* Enjoy :)</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13329">AutomaticTexPlugin_7.1.2.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>7.1.2</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-07-14</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=18896">Marcin Szamotulski</a></i></td>
+    <td class="rowodd" valign="top" width="2000">* ShowErrors o </td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13311">AutomaticTexPlugin_7.1.1.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>7.1.1</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-07-09</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=18896">Marcin Szamotulski</a></i></td>
+    <td class="roweven" valign="top" width="2000">* A small bug fix.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13310">AutomaticTexPlugin_7.1.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>7.1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-07-09</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=18896">Marcin Szamotulski</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Please READ release notes for version 7.0<br>* revisions in TabCompletion function <br>* revisions in CloseLastEnvironment function&nbsp;&nbsp;&nbsp;&nbsp;/they both use faster code/<br>* g:atp_MathVimOptions variable: it is a dictionary with entries: vim_option_name : [ value_in_math_mode, value_in_non_math ] for example { 'textwidth' : [0, 78], 'linebreak' : [ 'nolinebreak', 'linebreak'] }<br>Function which sets the values is set using autocommands with groups: InsertLeave, InsertEnter, CursorMovedI, using CursorMoved seems to slow down vim to much.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13298">AutomaticTexPlugin_7.0.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>7.0</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-07-06</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=18896">Marcin Szamotulski</a></i></td>
+    <td class="roweven" valign="top" width="2000">* THE PLUGIN HAS A NEW LAYOUT (under your .vim directory! If you DO NOT WAN'T TO MESS YOUR .VIMRC directory, first use the old vimball file AutomaticTexPlugin.vba /version =&lt; 6.7/ and the command RmVimball and then install the new version).<br>* with the new version you can use $HOME/.atprc.vim file to set the variables (useful for the local-buffer variables).<br>* TeXdoc command, mapped to &lt;F1&gt; with nice completion (which is using texdoc configuration files (texdoc.cnf)), you can also pass command line options to texdoc (for example ':TeXDoc -l -A lshort'), if run without any options prints the info message of texdoc (like texdoc or texdoc -h in the command line).<br>* t:atp_DebugMode and g:atp_DefaultDebugMode variables with possible values: 'silent', 'debug', 'verbose'. <br>* Changes in ShowError (new flag 'all' and some other things ... )<br>* NEnv, PEnv commands set the last pattern, if you want to search further (forward or backward) you can use 'n' and 'N' vim keys.<br>* When the cursor is positioned on \begin:\end, \left:\right, $:$ the mathing pairs are highlighted like the matching pairs of brackets (with the same highlight group) (by D. Munger).<br>* Hihglighting of \begin:\end, $:$, \[:\], \(:\) and if filetype is 'plaintex' (or the variable b:atp_TexFlavour = 'plaintex') also $$:$$ (based on function written by D. Munger)<br>* Select environment with &quot;vie&quot; &quot;vae&quot; /or &quot;ie&quot; &quot;ae&quot; in visual mode/ (by D. Munger)<br>* Select inline math environments ($:$, \(:\) and \[:\]) with &quot;vi$&quot; and &quot;va$&quot; (by D. Munger)<br>* Simplifications of SshPrint command<br>* g:atp_ToggleMathTextWidth - if set to 1 ( the default is 1 if textwidth != 0 and 0 other wise ) vim textwidth option will be set to 0 if the cursor stands in math environment (currently works only for $:$, \(:\), \[:\], and $$:$$ ). <br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13254">AutomaticTexPlugin.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>6.7</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-06-28</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=18896">Marcin Szamotulski</a></i></td>
+    <td class="rowodd" valign="top" width="2000">* new CALL BACK mechanism as suggest by D.Munger (many thanks!) <br>* CALL BACK and status line notification are now on by default - if (pdf)latex is working (pdf)latex is written in the status line together with number of insatnces (the value of b:atp_running variable). <br>* local buffer variable names (:help b:) are chenged. If atp detects an old variable set by you it will ask you to change its name (and copy its value to the new variable!). </td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13246">AutomaticTexPlugin.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>6.6</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-06-26</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=18896">Marcin Szamotulski</a></i></td>
+    <td class="roweven" valign="top" width="2000">* a bug fixed in intedation file<br>* tikz keyword completion adds unclosed bracket to the popup menu</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13241">AutomaticTexPlugin.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>6.5</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-06-26</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=18896">Marcin Szamotulski</a></i></td>
+    <td class="rowodd" valign="top" width="2000">see the DOCUMENTATION for more on new features:<br>* FontPreview and FontSearch commands allow for previewing many font defition files at once.<br>* new WrapSelection function, vmaps: \bf, \it, etc, but also some of \begin{}:\end{} pairs&nbsp;&nbsp;<br>* \s adds a star to an environment<br>* &lt;F4&gt; cycles through environment names of the current environment&nbsp;&nbsp;(if g:atp_toggle_labels = 1 it also changes the prefix of a label, for example from 'thm:' -&gt; 'lem:' ).<br>* color completion for the \textcolor{}{} command (it finds defined colors in tex file and in input files as well)<br>* smart completion for all arguments of \usefont{}{}{}{} command, and for commands \fontencoding{}, \fontfamily{}, \fontseries{}, \fontshape{} and \DecalreFixedFont.<br>* More nice features from David Munger (LatexBox plugin): % operates also on \begin{}:\end{} paris, some changes in omnicompletion. <br>* motion maps: &lt;LocalLeader&gt;NS, &lt;LocalLeader&gt;PS, &lt;LocalLeader&gt;NC, &lt;LocalLeader&gt;PC, &lt;LocalLeader&gt;NP, &lt;LocalLeader&gt;PP&nbsp;&nbsp;- N/P next previous S/C/P - section/chapter/part<br>* g:atp_imap_first_leader=&quot;#&quot; g:atp_imap_second_leader=&quot;##&quot;, g:atp_imap_third_leader=&quot;]&quot;, g:atp_imap_fourth_leader=&quot;[&quot;,&nbsp;&nbsp;variables which let you configure the leaders for imaps. There are also leaders for vmaps: g:atp_vmap_text_font_leader = &quot;&lt;LocalLeader&gt;&quot;, g:atp_vmap_math_font_leader = &quot;&lt;LocalLeader&gt;m&quot;, g:atp_vmap_environment_leader = &quot;&quot; (empty),g:atp_vmap_bracket_leader =&quot;&lt;LocalLeader&gt;&quot; and g:atp_vmap_big_bracket_leader	= &quot;&lt;LocalLeader&gt;b&quot;.<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13211">AutomaticTexPlugin.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>6.4</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-06-18</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=18896">Marcin Szamotulski</a></i></td>
+    <td class="roweven" valign="top" width="2000">* OmniCompletion for \ref and \eqref: you can complete either part of the label or the number of the environment/equation in your output file! by D.Munger (LatexBox plugin).<br>* some other small changes in OmniCompletion by D.Munger.<br>* small correction in main compiler function: if called by ViewOutput, when the output file did not exists, it will load the file regardless there were errors during compilation.<br>* some nice changes in completion (both usual and omni) for \cite command. Now the output of both looks the same: in the popup menu you will see the one abbreviation letter (a - article, B - book, b - booklet, etc...), author (authors) year, and the title.<br>* \cite{&lt;vim-pattern&gt;&lt;Tab&gt; !!! for example '.*author1\&.*author2' (a feature taken from LatexBox by D.Munger)<br>* I renamed the variables g:texextensions to g:atp_tex_extensions.<br>* g:atp_delete_output if equal 1 Delete function (mapped to &lt;F6&gt;d) will remove also output file (pdf or dvi according to b:atp_texcompiler variable).<br>* g:atp_package_list is now generated according to the list of available packages in your tex distribution (used by tab completion for \usepackage).<br>* ]m&nbsp;&nbsp;imaps to \(:\) and ]M imaps to \[:\]<br>* FontPreview command (see :] atp-FontPreview).<br>* b:autex is set to 0 for files under any tex directory as returned by 'kpsewhich -show-path tex' (except the current dir) otherwise b:autex=1 (b:autex toggles on/off the automatic tex processing).</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13181">AutomaticTexPlugin.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>6.3</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-06-14</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=18896">Marcin Szamotulski</a></i></td>
+    <td class="rowodd" valign="top" width="2000">* Two new completion methods: for \documentclass and for \bibliographystyle.&nbsp;&nbsp;They found all the files (classes, bib styles files) accessible in your tex distribution.&nbsp;&nbsp;<br>* OmniCompletion written by D.Munger (the author of Latex-Box plugin) (omnicompletion for \cite{} works smoothly in gvim! is fast even with big bib data bases. In the popup menu shows the author and the title entries)<br>* imap: ]e puts \end{} ]u puts \begin{enumerate}<br>* CloseLastBracket() - a function integrated into tab completion: closes brackets (:), \{:\} and \[:\] presrves the size commands: \left:\right, \bigl:\bigr, etc...&nbsp;&nbsp;, and preserves nested brackets (but do not checks if the bracket is put in the right place, like CloseLastEnv() function).<br>* Tab_Completion is now much much faster !!!<br>* TOC map \t : doesn't regenerate the toc data base (unless if it doesn't exist), while :TOC command does. This makes the TOC work faster.<br>* TOC some corections and a great speed up. <br>* Some fixes in the algorithm which closes environments.<br>* atplib.vim -- some function are now in the library atplib.vim, atp loads faster!<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13136">AutomaticTexPlugin.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>6.2</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-06-06</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=18896">Marcin Szamotulski</a></i></td>
+    <td class="roweven" valign="top" width="2000">* LocalCommands and DefiSearch functions both by default search for '\def' and '\newcommands' only up to first appearance of \begin{document}. A bug fixed in search function which makes both function work twice as fast. <br>* BibSearch: If there are no flags given but only keyword flags BibSearch uses the default g:defaultbibflags.<br>* BibSearch: speed up: search function is up to 5 times faster, when no arguments are supplied (which for example when completing '\cite{'). The function which shows results is now 3 times faster. For a file which has ~1700 bib fields it takes ~10 seconds to show all results. <br>* BibSearch: a flag 'k' added for lines 'key = {...}' in a bib file.<br>* IMAPs are CHANGED!, there are no imaps with [, only with ], which makes it more convenient to write latex optional arguments. If you want to use old maps put: &quot;let g:atp_env_maps_old=1&quot; in your vimrc file. See &quot;:h atp-mappings-environments&quot;.<br>* Small Changes in the menu. (Toggle function works better).<br>* Completion supports comment lines (i.e. now, it is not closing opened environments which start in a comment line)</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13093">AutomaticTexPlugin.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>6.1.1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-06-02</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=18896">Marcin Szamotulski</a></i></td>
+    <td class="rowodd" valign="top" width="2000">* Fix of printing command ':SshPrint'.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13090">AutomaticTexPlugin.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>6.1</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-06-02</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=18896">Marcin Szamotulski</a></i></td>
+    <td class="roweven" valign="top" width="2000">* Completion for keywords of tikz package added. <br>* b:atp_local_completion=0 -- do not search for locally defined commands and environments, =1 search for them after first completion (default), =2 search at starup.<br>* LocaCommands -- commands to update locally defined commands and environments.&nbsp;&nbsp;<br>* Do not close environments which are opened in the lines \def, \newcommand, \renewcommand.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13079">AutomaticTexPlugin.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>6.0</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-05-31</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=18896">Marcin Szamotulski</a></i></td>
+    <td class="rowodd" valign="top" width="2000">* NEW FEATURE: FontSearch: finds fd files in your system and lists them, press &lt;Enter&gt; to open the fd file, &lt;Tab&gt; to list the fonts defined, p to PREVIEW the fonts, P to preview the fonts and open buffer with the tex source (useful to see errors using ShowErrors command), in all 3 kinds of windows (fd list,fd file, tex source) q deletes the buffer (so that your lists of buffers doesn't become too long, if you want the buffer to remain in the list use ':q'. Some might not work, but this is on the tex side (usually because lack of some other kings of files: encoding, font metrics, etc...). You can search CTAN archive to find them.<br>* Final changes to completion (check the description of the algorithm of closing environments :h atp-completion-env)<br>* Now the doc file appears in local additions (:h local-additions). <br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13050">AutomaticTexPlugin.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>5.0</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-05-24</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=18896">Marcin Szamotulski</a></i></td>
+    <td class="roweven" valign="top" width="2000">* Change in the compilation algorithm: now it uses temporary directories rather than temporary files, what allows for externalisation in tikz (thanks to D.Munger for reporting). The jobname switch of tex is now not used (only -output-directory).<br>* Tab completion supports CLOSING ENVIRONMENTS: \\begin{}\\end{} and mathematical ones: \\(:\\), \\[:\\] !!! Environments may be NESTED. See &#039:h atp-completion&#039. There are two modes of completion: expert mode (mapped to &lt;Tab&gt;) and non expert mode (mapped to&nbsp;&nbsp;&lt;Shift&gt;+&lt;Tab&gt;), the first with fewer matches of commands, the second if you are searching for some command.&nbsp;&nbsp;Completion of commands checks if you are in math mode (only if entire document is written without $:$ and $$:$$ math modes, as it is hard to implement such a feature for this opening/closing pairs.). You can switch it on/off in the menu. Completion supports: commands, inline_math (automatically closes &#039\\(&#039), displayed_math (closes &#039\\[&#039), package names, tikz libraries (for the tikz package), environment names, close, labels, bibitems (for \\cite and \\nocite commands), environments, names of input files (searches for file names under b:outdir and g:texmfdir), bibfiles.<br>* Wrap selection due to D. Munger (thanks!).<br>The following are yet in the help file:<br>* The status line notification that tex is working (you need to set g:atp_status_notification=1 and g:atp_callback=1), by default is off (this changes mode from input to normal when tex ends). <br>* Debug mode: you can set g:atp_show_errors=1 (and g:atp_callback=1) by default is off. You can open the log file (using :copen), and after tex ends the log file will be reread and the log will be updates. (As with status line notification: call back mechanism switches the mode from input to normal). <br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13020">AutomaticTexPlugin.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>4.91</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-05-17</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=18896">Marcin Szamotulski</a></i></td>
+    <td class="rowodd" valign="top" width="2000">* Tab completion supports \bibitems (even if there are bibliographies across different input files).</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13015">AutomaticTexPlugin.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>4.9</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-05-16</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=18896">Marcin Szamotulski</a></i></td>
+    <td class="roweven" valign="top" width="2000">* Tab -- intelligent completion for environments, commands, package names, labels and citations (still not in doc). If you want to use tab for its usual role put 'let g:atp_no_tab_maps = 1', into your vimrc file. Then the completion is mapped to F7. Also completes \begin{env} adding \end{env} in next line.<br>* If you use amsmath package then the completion supports extra commands and environments defined in this package. In case you use a document class which silently loads the package you can set the variable g:atp_amsmath = 1 in your vimrc file.<br>* If you have your own commands for which you want to add completion you can easily add them.<br>* special space map for command line searching under F2 (still not in doc)<br>* Menu (still not in doc)<br>* EditInputFile allows to switch between input files and the main file.<br>* and other small changes and bug fixes.<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=12971">AutomaticTexPlugin.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>4.6</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-05-07</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=18896">Marcin Szamotulski</a></i></td>
+    <td class="rowodd" valign="top" width="2000">* Files which name have white spaces are properly handled.<br>* nice colors for diff mode in gui in terminal versions.<br>* DefiSearch returns 'Definition not found' if it is not found. <br>* NextSection, PrevSection function and corresponding commands to move between parts, chapters and sections.<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=12902">AutomaticTexPlugin.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>4.5</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-04-26</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=18896">Marcin Szamotulski</a></i></td>
+    <td class="roweven" valign="top" width="2000">* Corrections in Inverse/Reverse Searching for dvi. <br>&nbsp;&nbsp; See the doc ':h atp-viewers-xdvi' for the functions.<br>* ShowErrors works better (warning messages about references, <br>&nbsp;&nbsp;citations and fonts), new flags fi,p and F to show font info messages, <br>&nbsp;&nbsp;which packages are loaded, and which files are loaded by tex. <br>&nbsp;&nbsp;See the doc ':h atp-ShowErrors'<br>* and some other small corrections.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=12792">AutomaticTexPlugin.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>4.4</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-04-06</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=18896">Marcin Szamotulski</a></i></td>
+    <td class="rowodd" valign="top" width="2000">two small fixes, thanks to a user :) .</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=12647">AutomaticTexPlugin.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>4.3</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-03-17</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=18896">Marcin Szamotulski</a></i></td>
+    <td class="roweven" valign="top" width="2000">* another small fixes</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=12644">AutomaticTexPlugin.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>4.2</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-03-17</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=18896">Marcin Szamotulski</a></i></td>
+    <td class="rowodd" valign="top" width="2000">* small fixes</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=12634">AutomaticTexPlugin.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>4.1</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-03-15</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=18896">Marcin Szamotulski</a></i></td>
+    <td class="roweven" valign="top" width="2000">* NEnv, PEnv - moving to next/previous environment (which is supplied as a command agrument [completion])<br>* support for projects: when edditing an input file the g:mainfile will be processed by tex compiler, the value of g:mainfile is set automatically, but you have to first open the main project file.<br>* EditInputFile has completion for the first argument which an imput file to open, the second argument is now the command for opening a buffer ('edit','split','vsplit', the default is 'edit') and the third one is the buffer name (default = current buffer) <br>* EditInputFile allows to open bibfiles&nbsp;&nbsp;<br>* $TEXMFOUTPUT variable integrated (if it is set then it its used to set&nbsp;&nbsp;b:outdir variable)<br>* $BIBINPUTS variable integrated<br>* ShowErrors fixed, custom completion added&nbsp;&nbsp;<br>* SShPrint prints over ssh <br>		g:atp_printer_options<br>		g:atp_ssh<br>&nbsp;&nbsp;it has a custom complition set which help to choose the printer	<br>* b:ViewerOptions <br>* g:{b:Viewer}Options<br>* SetXdvi - sets all the option for xdvi viewer (including inverse/reversesearching)<br>* SetXpdv - sets the options for xpdf viewer (inverse/reverse searching is not supported yet)</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=12530">AutomaticTexPlugin.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>4</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-03-01</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=18896">Marcin Szamotulski</a></i></td>
+    <td class="rowodd" valign="top" width="2000">* TOC shows the short name of sections if it is non empty.<br>* TOC, Labels, and BibSearch uses split/vsplit (instead of new/vnew) what increase the spead.<br>* new commands: ShowErrors and SetErrors (see ':h atp-ShowErrors')<br>* map 2\l :2TEX<br>* imap [i \item&nbsp;&nbsp;'now without spaces after \item'<br>* CTOC value appears in the status line<br>* CTOC is using t:toc if it exists <br>* a small change in syntax file bibsearch_atp.vim<br>* change of a map: TOC is now mapped to \t (not T, which is a useful vim map)<br>* g:toc_window_width, g:labels_window_width<br>* t:buflist stores now full path, t:bufname is a full path <br>* some changes in status line<br>* a nice status line of ToC, Labels and Bibsearch windows<br>* some language corrections in doc file<br>* Labels window: setl nospell<br>* Input files appear corectly in ToC<br>* b:auruns variable (see :h atp-auruns)</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=12366">AutomaticTexPlugin.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>3.2</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-02-12</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=18896">Marcin Szamotulski</a></i></td>
+    <td class="roweven" valign="top" width="2000">Two new functions:<br>&nbsp;&nbsp;&nbsp;&nbsp;FindInputFiles<br>&nbsp;&nbsp;&nbsp;&nbsp;EditInputFile<br>color scheme supports gui version. </td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=12346">AutomaticTexPlugin.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>3.1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-02-09</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=18896">Marcin Szamotulski</a></i></td>
+    <td class="rowodd" valign="top" width="2000">ToC (table of contents) supports multiple opened files. And allows to switch between buffers or windows.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=12306">AutomaticTexPlugin.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>3</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-02-04</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=18896">Marcin Szamotulski</a></i></td>
+    <td class="roweven" valign="top" width="2000">This version has several fixes, plus several new features:<br><br>1) BibSearch opens now a new window, a syntax file for the results is provided, which is based on syntax file for bib files (see :h atp-bibsearch-highlight)<br>2) TOC command, which displays in seperate window interactive table of contents (wich the same numbering as in the output file), <br>&nbsp;&nbsp;&nbsp;&nbsp; I also provide a syntax file for TOC files<br>3) Lables command which dispalys in a seprate interactiv window lables found in your file<br><br>Windows openned by TOC and Labels commands have functions which make it easy to copy the label (of chapter or of the label) to a registar or directly to you file, or to move to the label, or to echo the line with the label and to split the window of your tex file and one of them move to the label, to see its contens.<br><br>If you open table of contents or the list of labels cursor position is set to the chapter (label) which you are currently editing.<br><br>see :h atp-TOC() and :h atp-Labels()<br><br>Best regards and happy texing :)<br>Marcin Szamotulski<br>4) I provide a color file, called coot-beauty-256 (it needs support for 256 colors).<br>4) Status line now shows the current chapter/section of the edited tex file.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=12265">AutomaticTexPlugin.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-02-01</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=18896">Marcin Szamotulski</a></i></td>
+    <td class="rowodd" valign="top" width="2000">a small fix: the option g:vertical is now working as desired.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=12263">AutomaticTexPlugin.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>2</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-02-01</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=18896">Marcin Szamotulski</a></i></td>
+    <td class="roweven" valign="top" width="2000">I added a powerful functions to search in bibliographic files (*.bib) for entries which match a vim regexp. One choose which entries are shown (articles,books, etc..., but also author,title,etc...). The function can easily copy the bibfield key to a register or directly to the tex source file. <br><br>I also supply a syntax file for output of this search function which is a small modification of the standard syntax file for bib files. </td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=12194">AutomaticTexPlugin.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-01-26</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=18896">Marcin Szamotulski</a></i></td>
+    <td class="rowodd" valign="top" width="2000">GetLatestScript support added.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=12192">AutomaticTexPlugin.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>1</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-01-26</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=18896">Marcin Szamotulski</a></i></td>
+    <td class="roweven" valign="top" width="2000">Initial upload</td>
+</tr>
+</table>
+<!-- finish off the framework -->
+          </td>
+        </tr>
+      </table>
+    </td>
+
+  </tr>
+</table>
+
+<!-- END OF THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr><td colspan="4" bgcolor="#000000"><img src="/images/spacer.gif" height="2" width="1" alt=""></td></tr>
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr>
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+
+    <td align="left" valign="top"><small>
+      If you have questions or remarks about this site, visit the
+      <a href="http://vimonline.sf.net">vimonline development</a> pages.
+      Please use this site responsibly.
+      <br> 
+      
+      Questions about <a href="http://www.vim.org/about.php">Vim</a> should go
+      to the <a href="http://www.vim.org/maillist.php">maillist</a>.
+      Help Bram <a href="http://iccf-holland.org/">help Uganda</a>.
+      </small>
+	&nbsp;
+	&nbsp;
+
+	<!-- Start of StatCounter Code -->
+	<script type="text/javascript" language="javascript">
+	var sc_project=1417324; 
+	var sc_invisible=1; 
+	var sc_partition=11; 
+	var sc_security="d41633bc"; 
+	</script>
+
+	<script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script><noscript><a href="http://www.statcounter.com/" target="_blank"><img  src="http://c12.statcounter.com/counter.php?sc_project=1417324&java=0&security=d41633bc&invisible=0" alt="free tracking" border="0"></a> </noscript>
+	<!-- End of StatCounter Code -->
+          </td>
+
+    <td align="right" valign="top">
+      		<a href="http://sourceforge.net/projects/vim" rel="nofollow"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=8&type=1" width="88" height="31" border="0" alt="SourceForge.net Logo" /></a>
+    </td>
+
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+  </tr>
+
+    
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  
+  </tr>
+</table>
+
+</body>
+</html>
+

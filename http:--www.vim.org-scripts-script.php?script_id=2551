@@ -1,0 +1,348 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+  <link rel="Stylesheet" type="text/css" href="/css/style.css" >
+  <title>Vicle - Vim - Interpreter Command Line Editor. Like Chimp or Slimv. : vim online</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <meta name="KEYWORDS" content="Vim, Vi IMproved, text editor, home, documentation, tips, scripts, news">
+  <link rel="shortcut icon" type="image/x-icon" href="/images/vim_shortcut.ico">
+</head>
+
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff"> 
+
+<!-- HEADER, SPONSOR IMAGE, VIM IMAGE AND BOOK AD -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+  <td class="lightbg">&nbsp;&nbsp;&nbsp;</td>
+  <td class="lightbg" align="left"><a href="/sponsor/index.php"><img src="/images/sponsorvim.gif" alt="sponsor Vim development" border="0"></a></td>
+    <td class="lightbg" align="center"><a href="/index.php"><img src="/images/vim_header.gif" border="0" alt="Vim logo"></a></td>
+    <td class="lightbg" align="right"><a href="http://iccf-holland.org/click5.html"><img src="/images/buyhelplearn.gif" alt="Vim Book Ad" border="0"></a></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="darkbg"><img src="/images/spacer.gif" width="1" height="10" alt=""></td>
+  </tr>
+</table>
+<!-- THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+  <col width="180">
+  <col width="1">
+
+  <tr valign="top">
+    <td class="sidebar">
+      <table width="180" cellpadding="4" cellspacing="0" border="0">
+        <tr valign="top">
+          <td class="sidebar">
+
+<!-- INCLUDE THE PAGE NAVIGATION -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+    <tr>
+        <td><small>not logged in (<a href="/login.php">login</a>)</small></td>
+    </tr>
+    <tr><td>
+<small>&nbsp;</small>
+<form action="http://www.google.com/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-3005259998294962:bvyni59kjr1" />
+    <input type="hidden" name="ie" value="ISO-8859-1" />
+    <input type="text" name="q" size="20" />
+    <br>
+    <input type="submit" name="sa" value="Search" />
+  </div>
+</form>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+    </td></tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="1"></td>
+    </tr>
+    <tr>
+        <td class="darkbg"><img src="/images/spacer.gif" alt='' border="0" height="3"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="2"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/index.php">Home</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/search.php">Advanced search</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/about.php">About Vim</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/community.php">Community</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/news/news.php">News</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/sponsor/index.php">Sponsoring</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/trivia.php">Trivia</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/docs.php">Documentation</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/download.php">Download</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/scripts/index.php">Scripts</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/tips/index.php">Tips</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/account/index.php">My Account</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/huh.php">Site Help</a></td>
+        </tr>
+</table>
+
+            <table width="172" cellpadding="0" cellspacing="0" border="0">
+              <tr><td><img src="/images/spacer.gif" alt="" border="0" width="1" height="8"></td></tr>
+              <tr><td class="darkbg"><img src="/images/spacer.gif" width="1" height="3" alt=""></td></tr>
+            </table>
+            <br>
+
+<!-- INCLUDE THE PAGE SIDEBAR TEXT -->
+&nbsp;
+
+          </td>
+        </tr>
+      </table>
+    </td>
+
+    <td class="darkbg"><img src="/images/spacer.gif" width="1" height="1" border="0" alt=""><br></td>
+    <td>
+      <table width="100%" cellpadding="10" cellspacing="0" border="0" bordercolor="red">
+        <tr>
+          <td valign="top">
+
+<span class="txth1">Vicle : Vim - Interpreter Command Line Editor. Like Chimp or Slimv.</span> 
+
+<br>
+<br>
+
+<!-- karma table -->
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
+  <td>
+    Rating <b>122/32</b>,
+    Downloaded by 713  </td>
+  <td class="lightbg">
+  <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
+  </td>
+  <td>
+    <a href="http://vim.wikia.com/wiki/Script:2551">Vim wiki</a>
+  </td>  
+</tr>
+</table>
+<p>
+
+<table cellspacing="0" cellpadding="0" border="0">
+<tr><td class="prompt">created by</td></tr>
+<tr><td><a href="/account/profile.php?user_id=14069">Jose Figueroa Martinez</a></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">script type</td></tr>
+<tr><td>utility</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">description</td></tr>
+<tr><td>Vim - Interpreter Command Line Editor. Use vim like a front-end for edit commands and send it to an interactive interpreter open in a GNU Screen session.<br><br>Features:<br><br>- Command History, just like a shell<br>- History save/load<br>- Can send only selected text or custom selection<br><br>I have been using Python, Ruby, Common Lisp, Scheme, Clojure, Ksh, and others interpreters through Vim and Vicle (and GNU Screen, of course).<br><br>Usage:<br><br>- Load a Screen session and then load an interpreter (ipython, irb, shell,<br>&nbsp;&nbsp;sbcl, clisp, clojure,&nbsp;&nbsp;etc.) in the shell:<br>&nbsp;&nbsp;% screen -S rubySession<br>&nbsp;&nbsp;% irb<br>&nbsp;&nbsp;&gt;&gt;<br><br>- Open Vim with the vicle plugin and type a command (without press ENTER):<br>&nbsp;&nbsp;puts &quot;Ruby interpreter&quot;<br><br>- Type &lt;C-c&gt;&lt;C-c&gt;&nbsp;&nbsp;or &lt;C-CR&gt; or :VicleSend&nbsp;&nbsp;to send to the interpreter the<br>&nbsp;&nbsp;current line (that can be changed by setting other Selection String).<br><br>- If the identifiers of the screen are not set, you are going be asked for<br>&nbsp;&nbsp;it (put the session name and window number where your interpreter are.<br>&nbsp;&nbsp;All the windows in a Screen session have a unique number.<br>&nbsp;&nbsp;You can use TAB key for completion in the Session name):<br><br>&nbsp;&nbsp;Session name: rubySession<br>&nbsp;&nbsp;Window number: 0<br><br>&nbsp;&nbsp;In the screen window you are going to see:<br>&nbsp;&nbsp;&gt;&gt; puts &quot;Ruby interpreter&quot;<br>&nbsp;&nbsp;Ruby interpreter<br>&nbsp;&nbsp;=&gt; nil<br><br>&nbsp;&nbsp;If you disable the Edition Mode by calling the command :VicleEditionToggle<br>&nbsp;&nbsp;the &lt;C-CR&gt; and the other shortcut are going to send all the content of the<br>&nbsp;&nbsp;screen and after that, the screen of Vim are going to be cleared, just<br>&nbsp;&nbsp;like a normal command line.<br><br>- You scroll through the commands with the key &lt;C-Up&gt; and &lt;C-Down&gt;&nbsp;&nbsp; just<br>&nbsp;&nbsp;like the history of the shell.<br><br>- Edition Mode<br>&nbsp;&nbsp;This mode do not clear the screen after send the command. Also, it send a<br>&nbsp;&nbsp;command selected by a custom Selection String that is in the variable<br><br>&nbsp;&nbsp;w:vicle_selection_string<br><br>&nbsp;&nbsp;Edition Mode is 1 (ON) by default.<br><br>&nbsp;&nbsp;By default, vicle in Edition mode send the current line.<br>&nbsp;&nbsp;Toggle the Edition Mode using the command :VicleEditionToggle<br><br>&nbsp;&nbsp;The selection string is by default &quot;0v$y&quot;: go to column 0, enter visual<br>&nbsp;&nbsp;mode, go to the end of line and yank. Always is necesary to end with the<br>&nbsp;&nbsp;yank command &quot;y&quot;.<br>&nbsp;&nbsp;It can be set to &quot;{v}y&quot; to select the current paragraph<br><br>- Sending selected text using Vim's Visual Mode<br>&nbsp;&nbsp;Just select the text and press &lt;C-CR&gt; or &lt;C-c&gt;&lt;C-c&gt; to send the selected<br>&nbsp;&nbsp;text without clear the screen. It is the same in Vicle Edition Mode and<br>&nbsp;&nbsp;Vicle Not Edicion Mode (send command and clear vim screen)<br><br>&nbsp;&nbsp;Just select the text. Vicle are going to yank it.<br><br>- Usefull commands for manage the history. Use absolute paths for history files:<br>&nbsp;&nbsp;:VicleHistoryToggle&nbsp;&nbsp; &quot; activate or deactivate history<br>&nbsp;&nbsp;:VicleHistoryClear<br>&nbsp;&nbsp;:VicleHistorySize<br>&nbsp;&nbsp;:VicleHistorySave<br>&nbsp;&nbsp;:VicleHistoryLoad<br><br>- To change the screen name and window name use the command<br>&nbsp;&nbsp;:VicleSession<br><br>- Some global variables that you can define in your .vimrc:<br><br>&nbsp;&nbsp;let g:vicle_session_name&nbsp;&nbsp;&nbsp;&nbsp;= 'normal_session_name'<br>&nbsp;&nbsp;let g:vicle_session_window&nbsp;&nbsp;= 'normal_session_window'<br><br>&nbsp;&nbsp;let g:vicle_history_active&nbsp;&nbsp; = 0 &quot; deactivate history<br>&nbsp;&nbsp;let g:vicle_edition_mode&nbsp;&nbsp;&nbsp;&nbsp; = 1 &quot; active edition mode<br>&nbsp;&nbsp;let g:vicle_selection_string = &quot;0v$y&quot;&nbsp;&nbsp;&quot; yank current line<br><br>&nbsp;&nbsp;let g:vicle_hcs&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = '~~~your_command_separator~~~'<br><br>Tips:<br><br>- If you want to send commands to a Ruby interpreter (irb), open a file like<br>&nbsp;&nbsp;work.rb or other with the extension .rb&nbsp;&nbsp;or set the filetype manually<br>&nbsp;&nbsp;:set filetype=ruby<br><br> This apply to other languages supported by vim.<br><br>- For use Vicle with diferent languages<br><br>&nbsp;&nbsp;autocmd FileType python let w:vicle_selection_string = &quot;0v}y&quot;<br>&nbsp;&nbsp;autocmd FileType lisp let w:vicle_edition_mode = 1 | let w:vicle_history_active = 0 | let w:vicle_selection_string = &quot;v%y&quot;<br><br>- Use of rlwrap to run the interpreter<br><br>&nbsp;&nbsp;It is known that by trying and testing that running the interpreter with rlwrap improves the performances of vicle.<br><br>&nbsp;&nbsp;Clojure with rlwrap:<br>&nbsp;&nbsp;screen -S clojure rlwrap java -cp clojure.jar clojure.main<br><br>- About the limit of size for the buffers to send<br><br>&nbsp;&nbsp;Vicle call many times to Screen when the buffer to send its bigger than 1000 characters. This let vicle to send really big buffers.<br><br><br>Inspired On:<br><br>&nbsp;&nbsp;Slime for Vim from Jonathan Palardy<br>&nbsp;&nbsp;<a target="_blank" href="http://technotales.wordpress.com/2007/10/03/like-slime-for-vim/">http://technotales.wordpress.com/2007/10/03/like-slime-for-vim/</A><br>&nbsp;&nbsp;and the work of Jerris Welt<br>&nbsp;&nbsp;<a target="_blank" href="http://www.jerri.de/blog/archives/2006/05/02/scripting_screen_for_fun_and_profit/">http://www.jerri.de/blog/archives/2006/05/02/scripting_screen_for_fun_and_profit/</A><br></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">install details</td></tr>
+<tr><td>Just put it in your vim's plugins directory.<br><br>This plugin doesn't work in Windows, as far as I know. I tried to run it on Cygwin but nothing.</td></tr>
+<tr><td>&nbsp;</td></tr>
+</table>
+
+<!-- rating table -->
+<form name="rating">
+<input type="hidden" name="script_id" value="2551">
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>rate this script</b></td>
+  <td valign="middle">
+    <input type="radio" name="rating" value="life_changing">Life Changing
+    <input type="radio" name="rating" value="helpful">Helpful
+    <input type="radio" name="rating" value="unfulfilling">Unfulfilling&nbsp;
+    <input type="submit" value="rate">
+  </td>
+</tr>
+</table>
+</form>
+<span class="txth2">script versions</span> (<a href="add_script_version.php?script_id=2551">upload new version</a>)
+<p>
+Click on the package to download.
+<p>
+
+<table cellspacing="2" cellpadding="4" border="0" width="100%">
+<tr class='tableheader'>
+        <th valign="top">package</th>
+    <th valign="top">script version</th>
+    <th valign="top">date</th>
+    <th valign="top">Vim version</th>
+    <th valign="top">user</th>
+    <th valign="top">release notes</th>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=14060">vicle.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.2.1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-10-15</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=14069">Jose Figueroa Martinez</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Fix for OSX reported by Guy Haskin F:<br>&nbsp;&nbsp;&quot;It seems like anything greater than about 380 characters fails to send<br>&nbsp;&nbsp; corretly.&quot;<br><br>Changes:<br>&nbsp;&nbsp;&quot; You can put this definition in your .vimrc to fix the reported problem in OSX.<br>&nbsp;&nbsp;let g:vicle_max_buffer&nbsp;&nbsp;= 300</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=12818">vicle.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.2</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-04-12</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=14069">Jose Figueroa Martinez</a></i></td>
+    <td class="roweven" valign="top" width="2000">- Removed the size limit for the buffer to send by calling &quot;screen&quot; multiple times.<br>- Fixed behavior with multiple tabs.<br>- Tip: It is better to run the interpreter under &quot;rlwrap&quot;.<br>- Limitation: Sending to much text can be slow.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=11523">vicle.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.1.3</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-10-13</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=14069">Jose Figueroa Martinez</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Fixed copying multiple times the same selection when sending a selected text</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=11520">vicle.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.1.2</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-10-12</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=14069">Jose Figueroa Martinez</a></i></td>
+    <td class="roweven" valign="top" width="2000">Fixed cursor return to the last position when sending a command</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=11483">vicle.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.1.1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-10-04</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=14069">Jose Figueroa Martinez</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- Edition Mode are 1 (On) by default.<br>- Fixed the annoying &quot;Press ENTER ....&quot; that happend when yank send more than 2 lines to Screen.<br>- More documentation</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=11473">vicle.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.1</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-10-02</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=14069">Jose Figueroa Martinez</a></i></td>
+    <td class="roweven" valign="top" width="2000">- Added a Edition Mode that not clear the Vim screen and send only a custom selection of text. By default, the current line.<br>- Added the feature for send selected text using the Vim's Visual Mode<br>- Added more tips to use vicle with more than one language</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=10019">vicle.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.0.1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-02-24</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=14069">Jose Figueroa Martinez</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Fix problem with load/saving history commands, removed some doc, a command for send the content.<br>The previous version are for Vim7 too. Sorry for the mistake.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=10015">vicle.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.0.0</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-02-23</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=14069">Jose Figueroa Martinez</a></i></td>
+    <td class="roweven" valign="top" width="2000">Initial upload</td>
+</tr>
+</table>
+<!-- finish off the framework -->
+          </td>
+        </tr>
+      </table>
+    </td>
+
+  </tr>
+</table>
+
+<!-- END OF THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr><td colspan="4" bgcolor="#000000"><img src="/images/spacer.gif" height="2" width="1" alt=""></td></tr>
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr>
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+
+    <td align="left" valign="top"><small>
+      If you have questions or remarks about this site, visit the
+      <a href="http://vimonline.sf.net">vimonline development</a> pages.
+      Please use this site responsibly.
+      <br> 
+      
+      Questions about <a href="http://www.vim.org/about.php">Vim</a> should go
+      to the <a href="http://www.vim.org/maillist.php">maillist</a>.
+      Help Bram <a href="http://iccf-holland.org/">help Uganda</a>.
+      </small>
+	&nbsp;
+	&nbsp;
+
+	<!-- Start of StatCounter Code -->
+	<script type="text/javascript" language="javascript">
+	var sc_project=1417324; 
+	var sc_invisible=1; 
+	var sc_partition=11; 
+	var sc_security="d41633bc"; 
+	</script>
+
+	<script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script><noscript><a href="http://www.statcounter.com/" target="_blank"><img  src="http://c12.statcounter.com/counter.php?sc_project=1417324&java=0&security=d41633bc&invisible=0" alt="free tracking" border="0"></a> </noscript>
+	<!-- End of StatCounter Code -->
+          </td>
+
+    <td align="right" valign="top">
+      		<a href="http://sourceforge.net/projects/vim" rel="nofollow"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=8&type=1" width="88" height="31" border="0" alt="SourceForge.net Logo" /></a>
+    </td>
+
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+  </tr>
+
+    
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  
+  </tr>
+</table>
+
+</body>
+</html>
+

@@ -1,0 +1,436 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+  <link rel="Stylesheet" type="text/css" href="/css/style.css" >
+  <title>VOoM - Vim Outliner of Markers -- two-pane outliner and related utilities : vim online</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <meta name="KEYWORDS" content="Vim, Vi IMproved, text editor, home, documentation, tips, scripts, news">
+  <link rel="shortcut icon" type="image/x-icon" href="/images/vim_shortcut.ico">
+</head>
+
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff"> 
+
+<!-- HEADER, SPONSOR IMAGE, VIM IMAGE AND BOOK AD -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+  <td class="lightbg">&nbsp;&nbsp;&nbsp;</td>
+  <td class="lightbg" align="left"><a href="/sponsor/index.php"><img src="/images/sponsorvim.gif" alt="sponsor Vim development" border="0"></a></td>
+    <td class="lightbg" align="center"><a href="/index.php"><img src="/images/vim_header.gif" border="0" alt="Vim logo"></a></td>
+    <td class="lightbg" align="right"><a href="http://iccf-holland.org/click5.html"><img src="/images/buyhelplearn.gif" alt="Vim Book Ad" border="0"></a></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="darkbg"><img src="/images/spacer.gif" width="1" height="10" alt=""></td>
+  </tr>
+</table>
+<!-- THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+  <col width="180">
+  <col width="1">
+
+  <tr valign="top">
+    <td class="sidebar">
+      <table width="180" cellpadding="4" cellspacing="0" border="0">
+        <tr valign="top">
+          <td class="sidebar">
+
+<!-- INCLUDE THE PAGE NAVIGATION -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+    <tr>
+        <td><small>not logged in (<a href="/login.php">login</a>)</small></td>
+    </tr>
+    <tr><td>
+<small>&nbsp;</small>
+<form action="http://www.google.com/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-3005259998294962:bvyni59kjr1" />
+    <input type="hidden" name="ie" value="ISO-8859-1" />
+    <input type="text" name="q" size="20" />
+    <br>
+    <input type="submit" name="sa" value="Search" />
+  </div>
+</form>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+    </td></tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="1"></td>
+    </tr>
+    <tr>
+        <td class="darkbg"><img src="/images/spacer.gif" alt='' border="0" height="3"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="2"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/index.php">Home</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/search.php">Advanced search</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/about.php">About Vim</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/community.php">Community</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/news/news.php">News</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/sponsor/index.php">Sponsoring</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/trivia.php">Trivia</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/docs.php">Documentation</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/download.php">Download</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/scripts/index.php">Scripts</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/tips/index.php">Tips</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/account/index.php">My Account</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/huh.php">Site Help</a></td>
+        </tr>
+</table>
+
+            <table width="172" cellpadding="0" cellspacing="0" border="0">
+              <tr><td><img src="/images/spacer.gif" alt="" border="0" width="1" height="8"></td></tr>
+              <tr><td class="darkbg"><img src="/images/spacer.gif" width="1" height="3" alt=""></td></tr>
+            </table>
+            <br>
+
+<!-- INCLUDE THE PAGE SIDEBAR TEXT -->
+&nbsp;
+
+          </td>
+        </tr>
+      </table>
+    </td>
+
+    <td class="darkbg"><img src="/images/spacer.gif" width="1" height="1" border="0" alt=""><br></td>
+    <td>
+      <table width="100%" cellpadding="10" cellspacing="0" border="0" bordercolor="red">
+        <tr>
+          <td valign="top">
+
+<span class="txth1">VOoM : Vim Outliner of Markers -- two-pane outliner and related utilities</span> 
+
+<br>
+<br>
+
+<!-- karma table -->
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
+  <td>
+    Rating <b>57/18</b>,
+    Downloaded by 2122  </td>
+  <td class="lightbg">
+  <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
+  </td>
+  <td>
+    <a href="http://vim.wikia.com/wiki/Script:2657">Vim wiki</a>
+  </td>  
+</tr>
+</table>
+<p>
+
+<table cellspacing="0" cellpadding="0" border="0">
+<tr><td class="prompt">created by</td></tr>
+<tr><td><a href="/account/profile.php?user_id=17268">Vlad Irnov</a></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">script type</td></tr>
+<tr><td>utility</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">description</td></tr>
+<tr><td>VOoM (Vim Outliner of Markers) is a plugin for Vim that emulates a two-pane text outliner.<br><br>Screenshots and an animation: <a target="_blank" href="http://vim-voom.webs.com/">http://vim-voom.webs.com/</A><br><br>VOoM was originally written to work with start fold markers with level numbers, that is {{{1, {{{2, {{{3, etc. This is the most versatile outline markup -- it is suitable for organizing all kinds of files, including source code, and it allows features not possible with other markups. (See :help fold-marker. Markers are specified by option 'foldmarker'. End fold markers with levels, }}}3, }}}2, etc. are not supported.)<br><br>Current VOoM version can also work with several other markup formats that have headlines and support an outline structure. (Headlines are also called headings, headers, section headers, titles.) The following markup modes are available:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;wiki&nbsp;&nbsp;-- MediaWiki, headlines are surrounded by '='<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;vimwiki&nbsp;&nbsp;-- vimwiki plugin (script_id=2226)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;viki&nbsp;&nbsp;-- Viki/Deplate plugin (script_id=861), Emacs Org-mode<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rest&nbsp;&nbsp;-- reStructuredText section titles<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;markdown&nbsp;&nbsp;-- Markdown, both header styles<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;html&nbsp;&nbsp;-- HTML heading tags, single line only<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;thevimoutliner&nbsp;&nbsp;-- The Vim Outliner plugin (script_id=517)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;vimoutliner&nbsp;&nbsp;-- VimOutliner plugin<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;python&nbsp;&nbsp;-- Python code class browser<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Please email me if you would like support for your favorite lightweight markup language.**<br><br>FEATURES:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Works with Vim buffers, not with files on disk as ctags-based tools.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Automagic outline update on entering the Tree buffer.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Not a 'filetype' plugin. Not tied to a particular outline format. Has (almost) no side effects on the buffer being outlined.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Fast and efficient enough to handle MB-sized files with &gt;1000 headlines. (Some modes can be slower.)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Outline structure manipulation: move nodes Up/Down, Promote/Demote, Copy/Cut/Paste, Insert New Headline, Sort in various ways.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Command to search nodes, boolean AND/NOT search.<br><br><br>=========================================<br>&nbsp;&nbsp;&nbsp;&nbsp;OVERVIEW<br>=========================================<br>There are four main Ex commands: Voom, Voomhelp, Voomexec, Voomlog.<br><br>:Voom<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Create outline of the current buffer. Outline is constructed from lines with start fold markers with level numbers (specified by option &foldmarker). Outline is displayed in a special buffer in separate window which emulates the tree pane of a two-pane outliner. Such buffers are referred to as Tree buffers. The current buffer becomes a Body buffer.<br><br>:Voom {MarkupMode}<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Create outline from headlines in format defined by markup mode. See above for available modes.<br><br>:Voomhelp<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Open help file voom.txt as outline in a new tabpage.<br><br>:Voomexec [vim|py]<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Execute text in the current node or fold as Vim script or Python script. This is useful for testing code snippets and for organizing scripts by segregating them into nodes or folds. This command can be used independently of the outlining functionality provided by the command :Voom.<br><br>:Voomlog<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Create scratch buffer __PyLog__ and redirect Python's stdout and stderr to it. This is useful when developing Python scripts and when scripting Vim with Python. This feature is completely independent from the rest of the plugin.<br><br>NOTE: commands Voomexec and Voomlog attempt to emulate similar features of Leo outlining editor. A Python file with code snippets organized via fold markers, plus the command :Voomexec, plus the PyLog buffer is an alternative to Python's interactive interpreter.<br><br><br>=========================================<br>&nbsp;&nbsp;&nbsp;&nbsp;REQUIREMENTS<br>=========================================<br>This plugin uses Python and requires Python-enabled Vim 7.x, that is Vim compiled with the Python interface. Your Vim is Python-enabled if it can do<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:py print 2**0.5<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:py import sys; print sys.version<br><br>Python version should be 2.4-2.7. Python 3 is not supported.<br><br>Vim version 7.2 or above is preferred. Version 7.1 should also work. Versions 7.0 might work as well but has not been tested. Vim should be compiled using normal or bigger feature set.<br><br><br>=========================================<br>&nbsp;&nbsp;&nbsp;&nbsp;QUICK DEMO (no installation needed)<br>=========================================<br>Extract VOoM archive to any folder. Open &quot;plugin/voom.vim&quot; in Vim and do<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:so %<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:Voom<br>This will create Tree buffer for voom.vim, which will become a Body buffer.<br><br>All VOoM mappings, except Return and Tab, are for Tree buffers only.<br><br>&lt;Up&gt;, &lt;Down&gt;, &lt;Left&gt;, &lt;Right&gt; arrow keys move around the Tree and select new node (Normal mode).<br><br>&lt;Return&gt; selects node the cursor is on and then cycles between Tree and Body. So, to select another node, move to it with h, j, etc. and hit Return.<br><br>&lt;Tab&gt; cycles between Tree and Body windows without selecting node.<br><br>&lt;Space&gt; expands/contracts node without selecting it. Standard Vim folding command (zo, zc, zR, zM, etc.) can be used as well.<br><br>Left mouse click in the Tree selects node. If the click is outside of headline text, the node's expanded/contracted status is toggled.<br><br>Edit a headline (line with a numbered fold marker) in voom.vim and go back into the Tree: the outline will be updated.<br><br>&lt;C-Up&gt;, &lt;C-Down&gt; move node or a range of sibling nodes Up/Down.<br>&lt;C-Left&gt;, &lt;C-Right&gt; move nodes Left/Right (promote/demote).<br>(If the above CTRL mappings are not recognized by your Vim, you can also move nodes Up/Down/Left/Right with &lt;LocalLeader&gt;u/d/l/r .)<br><br><br>Execute the command :Voomhelp to see all commands and mappings.<br><br><br>To create outline for another buffer, execute the command :Voom for it<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:tab h netrw<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:Voom<br>Folder &quot;voom_samples&quot; contains some outlines to experiment with. File &quot;calendar_outline.txt&quot; is a rather large outline for stress-testing purposes: 3.1 MB, 56527 lines, 4160 headlines.<br><br><br>To outline the most common Wiki format (headlines are marked by strings of = on both sides)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:Voom wiki<br><br><br>To try Python Log Buffer feature:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:Voomlog<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:py assert 2==3<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:py print u'\u2248 \u2260'<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:py import this<br></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">install details</td></tr>
+<tr><td>Copy content of the plugin folder (file &quot;voom.vim&quot;, folder &quot;voom&quot; with .py files) to your local Vim plugin folder. Copy help file &quot;doc/voom.txt&quot; to your local doc folder. This will make commands Voom, Voomhelp, Voomexec, Voomlog available from any buffer.<br>To update help tags (see :help add-local-help):<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:helptags $HOME/vimfiles/doc&nbsp;&nbsp;&nbsp;&nbsp;(Windows)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:helptags $HOME/.vim/doc&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (*nix)<br><br>NOTE 1: In version 2.0 this plugin was renamed from VOOF (Vim Outliner Of Folds/Foldmarkers) to VOoM (Vim Outliner of Markers). &quot;voom&quot; is used everywhere instead of &quot;voof&quot;, case of letters preserved: all commands start with &quot;Voom&quot; instead of &quot;Voof&quot;, user options start with &quot;g:voom_&quot;, etc. If you are upgrading from previous versions, please delete old &quot;voof&quot; files (voof.vim, voof.py, voof.pyc, voof.txt), delete file &quot;voofScript.py&quot; if any, edit user options in vimrc if you have any, run :helptags.<br><br>NOTE 2: Since version 4.0 all Python files are located in folder plugin/voom. If you are upgrading from previous versions you should delete old files in plugin folder: plugin/voom.py, plugin/voom.pyc, plugin/voomScript.py (if any).<br></td></tr>
+<tr><td>&nbsp;</td></tr>
+</table>
+
+<!-- rating table -->
+<form name="rating">
+<input type="hidden" name="script_id" value="2657">
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>rate this script</b></td>
+  <td valign="middle">
+    <input type="radio" name="rating" value="life_changing">Life Changing
+    <input type="radio" name="rating" value="helpful">Helpful
+    <input type="radio" name="rating" value="unfulfilling">Unfulfilling&nbsp;
+    <input type="submit" value="rate">
+  </td>
+</tr>
+</table>
+</form>
+<span class="txth2">script versions</span> (<a href="add_script_version.php?script_id=2657">upload new version</a>)
+<p>
+Click on the package to download.
+<p>
+
+<table cellspacing="2" cellpadding="4" border="0" width="100%">
+<tr class='tableheader'>
+        <th valign="top">package</th>
+    <th valign="top">script version</th>
+    <th valign="top">date</th>
+    <th valign="top">Vim version</th>
+    <th valign="top">user</th>
+    <th valign="top">release notes</th>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=14922">VOoM-4.0b4.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>4.0b4</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2011-01-31</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=17268">Vlad Irnov</a></i></td>
+    <td class="rowodd" valign="top" width="2000">* New Tree mappings for navigating outline:<br>&nbsp;&nbsp;&nbsp;&nbsp;P (go to parent node),<br>&nbsp;&nbsp;&nbsp;&nbsp;c (go to parent and contract it),<br>&nbsp;&nbsp;&nbsp;&nbsp;C (contract siblings or everything in Visual selection),<br>&nbsp;&nbsp;&nbsp;&nbsp;o (go to first child),<br>&nbsp;&nbsp;&nbsp;&nbsp;O (expand siblings or everything in Visual selection),<br>&nbsp;&nbsp;&nbsp;&nbsp;K/J/U/D (go to previous/next/uppermost/downmost sibling),<br>&nbsp;&nbsp;&nbsp;&nbsp;s (show headline text), S (show UNL).<br>* Fixed some bugs.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=14681">VOoM-4.0b3.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>4.0b3</b></td>
+    <td class="roweven" valign="top" nowrap><i>2011-01-05</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=17268">Vlad Irnov</a></i></td>
+    <td class="roweven" valign="top" width="2000">* Added mode for Markdown markup.<br>* Fixed severe bug in reST mode.<br>* Sorting can now be done for any range of sibling nodes.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=14109">VOoM-4.0b2.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>4.0b2</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-10-24</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=17268">Vlad Irnov</a></i></td>
+    <td class="rowodd" valign="top" width="2000">* Added support for the following markups: reStructuredText, Python code, The Vim Outliner, VimOutliner.<br>* BUG FIX: indiscriminate use of 'noautocmd' was screwing up some autocommands.<br>* Option g:voom_verify_oop is now enabled by default.<br>* Option g:voom_rstrip_chars (dictionary) has been removed. Instead there are options g:voom_rstrip_chars_{filetype} for each filetype of interest.<br>* See CHANGELOG for other changes.<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13879">VOoM-4.0b1.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>4.0b1</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-09-21</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=17268">Vlad Irnov</a></i></td>
+    <td class="roweven" valign="top" width="2000">* Added support for headline markups other than start fold markers with levels. Available markup modes: wiki, vimwiki, viki, html.<br><br>* Changed plugin directory structure. All Python files are now located in folder plugin/voom. You should delete old files in plugin folder: plugin/voom.py, plugin/voom.pyc, plugin/voomScript.py.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13454">VOoM-3.0.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>3.0</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-08-01</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=17268">Vlad Irnov</a></i></td>
+    <td class="rowodd" valign="top" width="2000">* New command :VoomSort [options] for sorting outline.<br><br>* Outline buffer (Tree) is no longer automatically wiped out when the source buffer (Body) is unloaded, deleted, or wiped out. Instead, outline is locked until the source buffer is loaded again. This change was necessary to eliminate crashes after :q, :q! and similar problems. This can also make working with outlines easier when buffers routinely get unloaded, as when 'hidden' or 'bufhidden' are not set.<br><br>* Option 'bufhidden' for Tree and PyLog buffers is set to &quot;wipe&quot; instead of &quot;hide&quot;.<br><br>* Various glitches fixed. Memory usage reduced, especially when outlining large buffers.<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13082">VOoM-2.1.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.1</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-06-01</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=17268">Vlad Irnov</a></i></td>
+    <td class="roweven" valign="top" width="2000">* It's now possible to customize how Tree headline text is constructed for individual filetypes:<br> - 'commentstring' and new user option g:voom_rstrip_chars control which characters are stripped from the right side of headlines when default procedure is used.<br> - The default procedure for Tree headline text construction can be replaced with user-defined functions via an add-on. Sample add-on is included.<br><br>* Fixed bug in PyLog buffer: original sys.stdout and sys.stderr could be lost after some actions.<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=12762">VOoM-2.0.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.0</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-04-01</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=17268">Vlad Irnov</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- This plugin was renamed from VOOF to VOoM. All commands start with &quot;Voom&quot; instead of &quot;Voof&quot;, files were renamed, and so on. Please see Install section for instructions on how to upgrade from previous versions.<br>- Added rudimentary support for add-ons, a sample add-on. Fixed probable bug in mouse click mapping.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=12547">VOOF-1.92.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.92</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-03-03</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=17268">Vlad Irnov</a></i></td>
+    <td class="roweven" valign="top" width="2000">Improved performance of several outline operations when working with very large outlines. Optimized some code.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=12325">VOOF-1.91.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.91</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-02-07</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=17268">Vlad Irnov</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Voofgrep can perform boolean AND and NOT searches.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=11927">VOOF-1.9.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.9</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-12-19</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=17268">Vlad Irnov</a></i></td>
+    <td class="roweven" valign="top" width="2000">It's now possible to save and restore Tree buffer folding.<br>Command &quot;Voofrun&quot; was renamed &quot;Voofexec&quot;.<br>Several other small changes.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=11407">VOOF-1.8.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.8</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-09-18</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=17268">Vlad Irnov</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Fixed bug in mappings.<br>Added highlighting for warnings and other messages.<br>Distribution now follows Vim directory structure: there are plugin and doc folders.<br>Changed license to WTFPL, version 2.<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=11295">VOOF-1.7.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.7</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-08-31</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=17268">Vlad Irnov</a></i></td>
+    <td class="roweven" valign="top" width="2000">more foolproofing</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=11238">VOOF-1.6.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.6</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-08-23</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=17268">Vlad Irnov</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Added defensive measures that prevent data corruption when outline update fails for any reason.<br>Fixed some bugs.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=11192">VOOF-1.5.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.5</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-08-15</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=17268">Vlad Irnov</a></i></td>
+    <td class="roweven" valign="top" width="2000">New commands: Voofgrep, Voofunl.<br>Fixed bug in &quot;Move Down&quot; outline operation.<br>Various improvements.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=11001">VOOF_14.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.4</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-07-13</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=17268">Vlad Irnov</a></i></td>
+    <td class="rowodd" valign="top" width="2000">New Tree navigation commands: go to next/previous marked node. Various small changes and fixes.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=10748">VOOF_13.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.3</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-06-06</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=17268">Vlad Irnov</a></i></td>
+    <td class="roweven" valign="top" width="2000">Added support for non-default start fold markers specified by 'foldmarker' option. Various other small improvements and fixes.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=10704">VOOF_12.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.2</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-05-30</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=17268">Vlad Irnov</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Minor bug fixes and edits. See CHANGELOG node in voof.txt.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=10682">VOOF_11.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.1</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-05-27</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=17268">Vlad Irnov</a></i></td>
+    <td class="roweven" valign="top" width="2000">Bug fix involving nomodifiable and readonly buffers.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=10679">VOOF.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.0</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-05-26</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=17268">Vlad Irnov</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Initial upload</td>
+</tr>
+</table>
+<!-- finish off the framework -->
+          </td>
+        </tr>
+      </table>
+    </td>
+
+  </tr>
+</table>
+
+<!-- END OF THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr><td colspan="4" bgcolor="#000000"><img src="/images/spacer.gif" height="2" width="1" alt=""></td></tr>
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr>
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+
+    <td align="left" valign="top"><small>
+      If you have questions or remarks about this site, visit the
+      <a href="http://vimonline.sf.net">vimonline development</a> pages.
+      Please use this site responsibly.
+      <br> 
+      
+      Questions about <a href="http://www.vim.org/about.php">Vim</a> should go
+      to the <a href="http://www.vim.org/maillist.php">maillist</a>.
+      Help Bram <a href="http://iccf-holland.org/">help Uganda</a>.
+      </small>
+	&nbsp;
+	&nbsp;
+
+	<!-- Start of StatCounter Code -->
+	<script type="text/javascript" language="javascript">
+	var sc_project=1417324; 
+	var sc_invisible=1; 
+	var sc_partition=11; 
+	var sc_security="d41633bc"; 
+	</script>
+
+	<script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script><noscript><a href="http://www.statcounter.com/" target="_blank"><img  src="http://c12.statcounter.com/counter.php?sc_project=1417324&java=0&security=d41633bc&invisible=0" alt="free tracking" border="0"></a> </noscript>
+	<!-- End of StatCounter Code -->
+          </td>
+
+    <td align="right" valign="top">
+      		<a href="http://sourceforge.net/projects/vim" rel="nofollow"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=8&type=1" width="88" height="31" border="0" alt="SourceForge.net Logo" /></a>
+    </td>
+
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+  </tr>
+
+    
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  
+  </tr>
+</table>
+
+</body>
+</html>
+

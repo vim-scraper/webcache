@@ -1,0 +1,332 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+  <link rel="Stylesheet" type="text/css" href="/css/style.css" >
+  <title>Proj - Simple project tool : vim online</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <meta name="KEYWORDS" content="Vim, Vi IMproved, text editor, home, documentation, tips, scripts, news">
+  <link rel="shortcut icon" type="image/x-icon" href="/images/vim_shortcut.ico">
+</head>
+
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff"> 
+
+<!-- HEADER, SPONSOR IMAGE, VIM IMAGE AND BOOK AD -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+  <td class="lightbg">&nbsp;&nbsp;&nbsp;</td>
+  <td class="lightbg" align="left"><a href="/sponsor/index.php"><img src="/images/sponsorvim.gif" alt="sponsor Vim development" border="0"></a></td>
+    <td class="lightbg" align="center"><a href="/index.php"><img src="/images/vim_header.gif" border="0" alt="Vim logo"></a></td>
+    <td class="lightbg" align="right"><a href="http://iccf-holland.org/click5.html"><img src="/images/buyhelplearn.gif" alt="Vim Book Ad" border="0"></a></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="darkbg"><img src="/images/spacer.gif" width="1" height="10" alt=""></td>
+  </tr>
+</table>
+<!-- THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+  <col width="180">
+  <col width="1">
+
+  <tr valign="top">
+    <td class="sidebar">
+      <table width="180" cellpadding="4" cellspacing="0" border="0">
+        <tr valign="top">
+          <td class="sidebar">
+
+<!-- INCLUDE THE PAGE NAVIGATION -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+    <tr>
+        <td><small>not logged in (<a href="/login.php">login</a>)</small></td>
+    </tr>
+    <tr><td>
+<small>&nbsp;</small>
+<form action="http://www.google.com/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-3005259998294962:bvyni59kjr1" />
+    <input type="hidden" name="ie" value="ISO-8859-1" />
+    <input type="text" name="q" size="20" />
+    <br>
+    <input type="submit" name="sa" value="Search" />
+  </div>
+</form>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+    </td></tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="1"></td>
+    </tr>
+    <tr>
+        <td class="darkbg"><img src="/images/spacer.gif" alt='' border="0" height="3"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="2"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/index.php">Home</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/search.php">Advanced search</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/about.php">About Vim</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/community.php">Community</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/news/news.php">News</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/sponsor/index.php">Sponsoring</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/trivia.php">Trivia</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/docs.php">Documentation</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/download.php">Download</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/scripts/index.php">Scripts</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/tips/index.php">Tips</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/account/index.php">My Account</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/huh.php">Site Help</a></td>
+        </tr>
+</table>
+
+            <table width="172" cellpadding="0" cellspacing="0" border="0">
+              <tr><td><img src="/images/spacer.gif" alt="" border="0" width="1" height="8"></td></tr>
+              <tr><td class="darkbg"><img src="/images/spacer.gif" width="1" height="3" alt=""></td></tr>
+            </table>
+            <br>
+
+<!-- INCLUDE THE PAGE SIDEBAR TEXT -->
+&nbsp;
+
+          </td>
+        </tr>
+      </table>
+    </td>
+
+    <td class="darkbg"><img src="/images/spacer.gif" width="1" height="1" border="0" alt=""><br></td>
+    <td>
+      <table width="100%" cellpadding="10" cellspacing="0" border="0" bordercolor="red">
+        <tr>
+          <td valign="top">
+
+<span class="txth1">Proj : Simple project tool</span> 
+
+<br>
+<br>
+
+<!-- karma table -->
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
+  <td>
+    Rating <b>720/189</b>,
+    Downloaded by 571  </td>
+  <td class="lightbg">
+  <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
+  </td>
+  <td>
+    <a href="http://vim.wikia.com/wiki/Script:2719">Vim wiki</a>
+  </td>  
+</tr>
+</table>
+<p>
+
+<table cellspacing="0" cellpadding="0" border="0">
+<tr><td class="prompt">created by</td></tr>
+<tr><td><a href="/account/profile.php?user_id=15449">Thomas Allen</a></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">script type</td></tr>
+<tr><td>utility</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">description</td></tr>
+<tr><td>Proj lets you save settings for your project in a simple file.<br><br><a target="_blank" href="http://github.com/tmallen/proj-vim">http://github.com/tmallen/proj-vim</A><br><br>Commands:<br>&nbsp;&nbsp;&nbsp;&nbsp;Note that the easiest way to use Proj is with the key mappings bound <br>&nbsp;&nbsp;&nbsp;&nbsp;to the commands below. &lt;Leader&gt;pt is the default mapping to open a <br>&nbsp;&nbsp;&nbsp;&nbsp;tab-specific project, for instance.<br><br>&nbsp;&nbsp;&nbsp;&nbsp;:ProjAdd<br>&nbsp;&nbsp;&nbsp;&nbsp; Prompts to add a new project in the current directory.<br><br>&nbsp;&nbsp;&nbsp;&nbsp;:ProjFile<br>&nbsp;&nbsp;&nbsp;&nbsp; Open the project file in a split.<br><br>&nbsp;&nbsp;&nbsp;&nbsp;:ProjInfo<br>&nbsp;&nbsp;&nbsp;&nbsp; Show all of the current project's settings in the status line.<br><br>&nbsp;&nbsp;&nbsp;&nbsp;:ProjMenu<br>&nbsp;&nbsp;&nbsp;&nbsp; Open a menu with all of these commands.<br><br>&nbsp;&nbsp;&nbsp;&nbsp;:ProjNotes<br>&nbsp;&nbsp;&nbsp;&nbsp; Open the project notes file in a split.<br><br>&nbsp;&nbsp;&nbsp;&nbsp;:ProjOpen<br>&nbsp;&nbsp;&nbsp;&nbsp; Prompt to open a project.<br><br>&nbsp;&nbsp;&nbsp;&nbsp;:ProjOpenTab<br>&nbsp;&nbsp;&nbsp;&nbsp; Prompt to open a project for the open tab. Projects opened this way will<br>&nbsp;&nbsp;&nbsp;&nbsp; only be active in the opened tab, so that each tab can contain a project.<br><br>&nbsp;&nbsp;&nbsp;&nbsp;:ProjRefresh<br>&nbsp;&nbsp;&nbsp;&nbsp; Reload the current project.<br><br>&nbsp;&nbsp;&nbsp;&nbsp;:ProjReload<br>&nbsp;&nbsp;&nbsp;&nbsp; Reload the project file.<br><br>&nbsp;&nbsp;&nbsp;&nbsp;:ProjVim<br>&nbsp;&nbsp;&nbsp;&nbsp; Open the project's vim settings file in a split.<br><br>File Syntax:<br>&nbsp;&nbsp;&nbsp;&nbsp;DOS .ini<br><br>Available Settings:<br>&nbsp;&nbsp;&nbsp;&nbsp;browser - A custom command for the filebrowser<br>&nbsp;&nbsp;&nbsp;&nbsp;notes - Path to a text file with project notes<br>&nbsp;&nbsp;&nbsp;&nbsp;path - Path to the project root directory<br>&nbsp;&nbsp;&nbsp;&nbsp;vim - Path to a file with vim commands<br>&nbsp;&nbsp;&nbsp;&nbsp;docksend - Upload all files in the project on save if the TransmitFtp<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;plugin is available<br><br>Sample Project File:<br>&nbsp;&nbsp;&nbsp;&nbsp;; This is a comment<br>&nbsp;&nbsp;&nbsp;&nbsp;[project]<br>&nbsp;&nbsp;&nbsp;&nbsp;path = /path/to/project<br>&nbsp;&nbsp;&nbsp;&nbsp;vim = /path/to/settings_file.vim<br>&nbsp;&nbsp;&nbsp;&nbsp;docksend ; boolean option<br><br>&nbsp;&nbsp;&nbsp;&nbsp;[path-with-spaces]<br>&nbsp;&nbsp;&nbsp;&nbsp;path = /path/to/my\ project ; Escape spaces with \<br><br>Global Options:<br>&nbsp;&nbsp;&nbsp;&nbsp;* g:ProjDisableMappings (default: 0) - Set to 1 to turn off all<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mappings defined by this plugin<br>&nbsp;&nbsp;&nbsp;&nbsp;* g:ProjFile (default: '~/.vimproj') - Path to the project file.<br>&nbsp;&nbsp;&nbsp;&nbsp;* g:ProjFileBrowser (default: 'NERDTree') - The filebrowser command.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Set to 'off' to not open a filebrowser.<br>&nbsp;&nbsp;&nbsp;&nbsp;* g:ProjMapLeader (default: '&lt;Leader&gt;p') - The prefix for default mappings<br>&nbsp;&nbsp;&nbsp;&nbsp;* g:ProjNoteFile (default: 'notes.txt') - Path to the project notes file<br>&nbsp;&nbsp;&nbsp;&nbsp;* g:ProjSplitMethod (default: 'vsp') - Command to use when opening a file<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;with a Proj command such as ProjFile.<br><br>&nbsp;&nbsp;&nbsp;&nbsp;Default maps: These are all prefixed with g:ProjMapLeader by default.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;g:ProjAddMap (default: 'a') - Calls :ProjAdd<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;g:ProjFileMap (default: 'f') - Calls :ProjFile<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;g:ProjInfoMap (default: 'i') - Calls :ProjInfo<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;g:ProjMenuMap (default: 'm') - Calls :ProjMenu<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;g:ProjNotesMap (default: 'n') - Calls :ProjNotes<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;g:ProjOpenMap (default: 'o') - Calls :ProjOpen<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;g:ProjOpenTabMap (default: 't') - Calls :ProjOpenTab<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;g:ProjReloadMap (default: 'r') - Calls :ProjReload<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;g:ProjVim (default: 'v') - Calls :ProjVim</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">install details</td></tr>
+<tr><td>1. Extract the downloaded proj.tgz file<br>2. Copy proj/doc/proj.txt to .vim/doc/proj.txt<br>3. Copy proj/plugin/proj.vim to .vim/plugin/proj.vim<br>4. Run :helptags ~/.vim/doc to load the documentation<br>5. Create a file at ~/.vimproj or your custom g:ProjFile location with your projects</td></tr>
+<tr><td>&nbsp;</td></tr>
+</table>
+
+<!-- rating table -->
+<form name="rating">
+<input type="hidden" name="script_id" value="2719">
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>rate this script</b></td>
+  <td valign="middle">
+    <input type="radio" name="rating" value="life_changing">Life Changing
+    <input type="radio" name="rating" value="helpful">Helpful
+    <input type="radio" name="rating" value="unfulfilling">Unfulfilling&nbsp;
+    <input type="submit" value="rate">
+  </td>
+</tr>
+</table>
+</form>
+<span class="txth2">script versions</span> (<a href="add_script_version.php?script_id=2719">upload new version</a>)
+<p>
+Click on the package to download.
+<p>
+
+<table cellspacing="2" cellpadding="4" border="0" width="100%">
+<tr class='tableheader'>
+        <th valign="top">package</th>
+    <th valign="top">script version</th>
+    <th valign="top">date</th>
+    <th valign="top">Vim version</th>
+    <th valign="top">user</th>
+    <th valign="top">release notes</th>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=14001">proj.tgz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.5.1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-10-06</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=15449">Thomas Allen</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Fixed incorrect ProjOpenTab menu action.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=14000">proj.tgz</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.5</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-10-06</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=15449">Thomas Allen</a></i></td>
+    <td class="roweven" valign="top" width="2000">Tab-specific projects.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13903">proj.tgz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.4</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-09-24</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=15449">Thomas Allen</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Cleanup, more mappings, menu, basic prompts.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13379">proj.tgz</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.3.1</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-07-21</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=15449">Thomas Allen</a></i></td>
+    <td class="roweven" valign="top" width="2000">Bugfixes for ProjNotes toggle, project entry with no docksend key.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13375">proj.tgz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.3</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-07-21</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=15449">Thomas Allen</a></i></td>
+    <td class="rowodd" valign="top" width="2000">TransmitFTP docksend integration. ProjAdd mapping.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=12122">proj.tbz</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.2</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-01-18</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=15449">Thomas Allen</a></i></td>
+    <td class="roweven" valign="top" width="2000">ProjAdd command. Windows pathname bugfix (thanks Mikhail Stepura)</td>
+</tr>
+</table>
+<!-- finish off the framework -->
+          </td>
+        </tr>
+      </table>
+    </td>
+
+  </tr>
+</table>
+
+<!-- END OF THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr><td colspan="4" bgcolor="#000000"><img src="/images/spacer.gif" height="2" width="1" alt=""></td></tr>
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr>
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+
+    <td align="left" valign="top"><small>
+      If you have questions or remarks about this site, visit the
+      <a href="http://vimonline.sf.net">vimonline development</a> pages.
+      Please use this site responsibly.
+      <br> 
+      
+      Questions about <a href="http://www.vim.org/about.php">Vim</a> should go
+      to the <a href="http://www.vim.org/maillist.php">maillist</a>.
+      Help Bram <a href="http://iccf-holland.org/">help Uganda</a>.
+      </small>
+	&nbsp;
+	&nbsp;
+
+	<!-- Start of StatCounter Code -->
+	<script type="text/javascript" language="javascript">
+	var sc_project=1417324; 
+	var sc_invisible=1; 
+	var sc_partition=11; 
+	var sc_security="d41633bc"; 
+	</script>
+
+	<script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script><noscript><a href="http://www.statcounter.com/" target="_blank"><img  src="http://c12.statcounter.com/counter.php?sc_project=1417324&java=0&security=d41633bc&invisible=0" alt="free tracking" border="0"></a> </noscript>
+	<!-- End of StatCounter Code -->
+          </td>
+
+    <td align="right" valign="top">
+      		<a href="http://sourceforge.net/projects/vim" rel="nofollow"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=8&type=1" width="88" height="31" border="0" alt="SourceForge.net Logo" /></a>
+    </td>
+
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+  </tr>
+
+    
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  
+  </tr>
+</table>
+
+</body>
+</html>
+

@@ -1,0 +1,316 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+  <link rel="Stylesheet" type="text/css" href="/css/style.css" >
+  <title>java_getset.vim - Automatically add getter/setters for Java properties (including array-based) : vim online</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <meta name="KEYWORDS" content="Vim, Vi IMproved, text editor, home, documentation, tips, scripts, news">
+  <link rel="shortcut icon" type="image/x-icon" href="/images/vim_shortcut.ico">
+</head>
+
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff"> 
+
+<!-- HEADER, SPONSOR IMAGE, VIM IMAGE AND BOOK AD -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+  <td class="lightbg">&nbsp;&nbsp;&nbsp;</td>
+  <td class="lightbg" align="left"><a href="/sponsor/index.php"><img src="/images/sponsorvim.gif" alt="sponsor Vim development" border="0"></a></td>
+    <td class="lightbg" align="center"><a href="/index.php"><img src="/images/vim_header.gif" border="0" alt="Vim logo"></a></td>
+    <td class="lightbg" align="right"><a href="http://iccf-holland.org/click5.html"><img src="/images/buyhelplearn.gif" alt="Vim Book Ad" border="0"></a></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="darkbg"><img src="/images/spacer.gif" width="1" height="10" alt=""></td>
+  </tr>
+</table>
+<!-- THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+  <col width="180">
+  <col width="1">
+
+  <tr valign="top">
+    <td class="sidebar">
+      <table width="180" cellpadding="4" cellspacing="0" border="0">
+        <tr valign="top">
+          <td class="sidebar">
+
+<!-- INCLUDE THE PAGE NAVIGATION -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+    <tr>
+        <td><small>not logged in (<a href="/login.php">login</a>)</small></td>
+    </tr>
+    <tr><td>
+<small>&nbsp;</small>
+<form action="http://www.google.com/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-3005259998294962:bvyni59kjr1" />
+    <input type="hidden" name="ie" value="ISO-8859-1" />
+    <input type="text" name="q" size="20" />
+    <br>
+    <input type="submit" name="sa" value="Search" />
+  </div>
+</form>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+    </td></tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="1"></td>
+    </tr>
+    <tr>
+        <td class="darkbg"><img src="/images/spacer.gif" alt='' border="0" height="3"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="2"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/index.php">Home</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/search.php">Advanced search</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/about.php">About Vim</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/community.php">Community</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/news/news.php">News</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/sponsor/index.php">Sponsoring</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/trivia.php">Trivia</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/docs.php">Documentation</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/download.php">Download</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/scripts/index.php">Scripts</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/tips/index.php">Tips</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/account/index.php">My Account</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/huh.php">Site Help</a></td>
+        </tr>
+</table>
+
+            <table width="172" cellpadding="0" cellspacing="0" border="0">
+              <tr><td><img src="/images/spacer.gif" alt="" border="0" width="1" height="8"></td></tr>
+              <tr><td class="darkbg"><img src="/images/spacer.gif" width="1" height="3" alt=""></td></tr>
+            </table>
+            <br>
+
+<!-- INCLUDE THE PAGE SIDEBAR TEXT -->
+&nbsp;
+
+          </td>
+        </tr>
+      </table>
+    </td>
+
+    <td class="darkbg"><img src="/images/spacer.gif" width="1" height="1" border="0" alt=""><br></td>
+    <td>
+      <table width="100%" cellpadding="10" cellspacing="0" border="0" bordercolor="red">
+        <tr>
+          <td valign="top">
+
+<span class="txth1">java_getset.vim : Automatically add getter/setters for Java properties (including array-based)</span> 
+
+<br>
+<br>
+
+<!-- karma table -->
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
+  <td>
+    Rating <b>185/78</b>,
+    Downloaded by 4158  </td>
+  <td class="lightbg">
+  <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
+  </td>
+  <td>
+    <a href="http://vim.wikia.com/wiki/Script:490">Vim wiki</a>
+  </td>  
+</tr>
+</table>
+<p>
+
+<table cellspacing="0" cellpadding="0" border="0">
+<tr><td class="prompt">created by</td></tr>
+<tr><td><a href="/account/profile.php?user_id=1258">Pete Kazmier</a></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">script type</td></tr>
+<tr><td>utility</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">description</td></tr>
+<tr><td>This filetype plugin enables a user to automatically add getter/setter<br>methods for Java properties.&nbsp;&nbsp;The script will insert a getter, setter,<br>or both depending on the command/mapping invoked.&nbsp;&nbsp;Users can select<br>properties one at a time, or in bulk (via a visual block or specifying a<br>range).&nbsp;&nbsp;In either case, the selected block may include comments as they<br>will be ignored during the parsing.&nbsp;&nbsp;For example, you could select all<br>of these properties with a single visual block.<br><br>public class Test <br>{ <br>&nbsp;&nbsp; // Start your selection here<br>&nbsp;&nbsp; private static int count;<br><br>&nbsp;&nbsp; /** The name */<br>&nbsp;&nbsp; private String name;<br><br>&nbsp;&nbsp; /** The array of addresses */<br>&nbsp;&nbsp; private String[] address;<br>&nbsp;&nbsp; // End your selection here<br><br>&nbsp;&nbsp; public static void main(String[] args)<br>&nbsp;&nbsp; {<br>&nbsp;&nbsp; }<br>}<br><br>The script will also add the 'static' modifier to the method if the<br>property was declared as 'static'.&nbsp;&nbsp;Array-based properties will get<br>additional methods added to support indexing.&nbsp;&nbsp;In addition, if a<br>property is declared 'final', it will not generate a setter for it.<br>If a previous getter OR setter exists for a property, the script will<br>not add any methods (under the assumption that you've manually added<br>your own).<br><br>The getters/setters that are inserted can be configured by the user.<br>First, the insertion point can be selected.&nbsp;&nbsp;It can be one of the<br>following: before the current line / block, after the current line /<br>block, or at the end of the class (default).&nbsp;&nbsp;Finally, the text that is<br>inserted can be configured by defining your own templates.&nbsp;&nbsp;This allows<br>the user to format for his/her coding style.&nbsp;&nbsp;For example, the default<br>value for s:javagetset_getterTemplate is:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;/**<br>&nbsp;&nbsp;&nbsp;&nbsp; * Get %varname%.<br>&nbsp;&nbsp;&nbsp;&nbsp; * <br>&nbsp;&nbsp;&nbsp;&nbsp; * @return %varname% as %type%.<br>&nbsp;&nbsp;&nbsp;&nbsp; */<br>&nbsp;&nbsp;&nbsp;&nbsp;%modifiers% %type% %funcname%()<br>&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;&nbsp; <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return %varname%;<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br><br>Where the items surrounded by % are parameters that are substituted when<br>the script is invoked on a particular property.&nbsp;&nbsp;For more information on<br>configuration, please see the section below on the INTERFACE.<br><br>INTERFACE (commands, mappings, and variables) <br>The following section documents the commands, mappings, and variables<br>used to customize the behavior of this script.<br><br>Commands:<br>&nbsp;&nbsp;:InsertGetterSetter<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Inserts a getter/setter for the property on the current line, or<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;the range of properties specified via a visual block or x,y range<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;notation.&nbsp;&nbsp;The user is prompted to determine what type of method<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;to insert.<br>&nbsp;&nbsp;<br>&nbsp;&nbsp;:InsertGetterOnly<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Inserts a getter for the property on the current line, or the<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;range of properties specified via a visual block or x,y range<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;notation.&nbsp;&nbsp;The user is not prompted.<br>&nbsp;&nbsp;<br>&nbsp;&nbsp;:InsertSetterOnly<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Inserts a setter for the property on the current line, or the<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;range of properties specified via a visual block or x,y range<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;notation.&nbsp;&nbsp;The user is not prompted.<br>&nbsp;&nbsp;<br>&nbsp;&nbsp;:InsertBothGetterSetter<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Inserts a getter and setter for the property on the current line,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;or the range of properties specified via a visual block or x,y<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;range notation.&nbsp;&nbsp;The user is not prompted.<br><br>Mappings:<br>&nbsp;&nbsp;The following mappings are pre-defined.&nbsp;&nbsp;You can disable the mappings<br>&nbsp;&nbsp;by setting a variable (see the Variables section below).&nbsp;&nbsp;The default<br>&nbsp;&nbsp;key mappings use the &lt;LocalLeader&gt; which is the backslash key by<br>&nbsp;&nbsp;default '&#039.&nbsp;&nbsp;This can also be configured via a variable (see below).<br>&nbsp;&nbsp;<br>&nbsp;&nbsp;&lt;LocalLeader&gt;p&nbsp;&nbsp; (or &lt;Plug&gt;JavagetsetInsertGetterSetter)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Inserts a getter/setter for the property on the current line, or<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;the range of properties specified via a visual block.&nbsp;&nbsp;User is<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;prompted for choice.<br>&nbsp;&nbsp;<br>&nbsp;&nbsp;&lt;LocalLeader&gt;g&nbsp;&nbsp; (or &lt;Plug&gt;JavagetsetInsertGetterOnly)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Inserts a getter for the property on the current line, or the<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;range of properties specified via a visual block.&nbsp;&nbsp;User is not<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;prompted.<br>&nbsp;&nbsp;<br>&nbsp;&nbsp;&lt;LocalLeader&gt;s&nbsp;&nbsp; (or &lt;Plug&gt;JavagetsetInsertSetterOnly)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Inserts a getter for the property on the current line, or the<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;range of properties specified via a visual block.&nbsp;&nbsp;User is not<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;prompted.<br>&nbsp;&nbsp;<br>&nbsp;&nbsp;&lt;LocalLeader&gt;b&nbsp;&nbsp; (or &lt;Plug&gt;JavagetsetInsertBothGetterSetter) <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Inserts both a getter and setter for the property on the current<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;line, or the range of properties specified via a visual block.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;User is not prompted.<br>&nbsp;&nbsp;<br>&nbsp;&nbsp;If you want to define your own mapping, you can map whatever you want<br>&nbsp;&nbsp;to &lt;Plug&gt;JavagetsetInsertGetterSetter (or any of the other &lt;Plug&gt;s<br>&nbsp;&nbsp;defined above).&nbsp;&nbsp;For example,<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;map &lt;buffer&gt; &lt;C-p&gt; &lt;Plug&gt;JavagetsetInsertGetterSetter<br><br>&nbsp;&nbsp;When you define your own mapping, the default mapping does not get<br>&nbsp;&nbsp;set, only the mapping you specify.<br><br>Variables:<br>&nbsp;&nbsp;The following variables allow you to customize the behavior of this<br>&nbsp;&nbsp;script so that you do not need to make changes directly to the script.<br>&nbsp;&nbsp;These variables can be set in your vimrc.<br>&nbsp;&nbsp;<br>&nbsp;&nbsp;no_plugin_maps <br>&nbsp;&nbsp;&nbsp;&nbsp;Setting this variable will disable all key mappings defined by any<br>&nbsp;&nbsp;&nbsp;&nbsp;of your plugins (if the plugin writer adhered to the standard<br>&nbsp;&nbsp;&nbsp;&nbsp;convention documented in the scripting section of the VIM manual)<br>&nbsp;&nbsp;&nbsp;&nbsp;including this one.<br>&nbsp;&nbsp;<br>&nbsp;&nbsp;no_java_maps<br>&nbsp;&nbsp;&nbsp;&nbsp;Setting this variable will disable all key mappings defined by any<br>&nbsp;&nbsp;&nbsp;&nbsp;java specific plugin including this one.<br>&nbsp;&nbsp;<br>&nbsp;&nbsp;maplocalleader<br>&nbsp;&nbsp;&nbsp;&nbsp;By default, the key mappings defined by this script use<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;LocalLeader&gt; which is the backslash character by default.&nbsp;&nbsp;You can<br>&nbsp;&nbsp;&nbsp;&nbsp;change this by setting this variable to a different key.&nbsp;&nbsp;For<br>&nbsp;&nbsp;&nbsp;&nbsp;example, if you want to use the comma-key, you can add this line to<br>&nbsp;&nbsp;&nbsp;&nbsp;your vimrc:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let maplocalleader = ','<br>&nbsp;&nbsp;<br>&nbsp;&nbsp;b:javagetset_insertPosition<br>&nbsp;&nbsp;&nbsp;&nbsp;This variable determines the location where the getter and/or setter<br>&nbsp;&nbsp;&nbsp;&nbsp;will be inserted.&nbsp;&nbsp;Currently, three positions have been defined:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0 - insert at the end of the class (default)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1 - insert before the current line / block<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2 - insert after the current line / block<br><br>&nbsp;&nbsp;b:javagetset_getterTemplate<br>&nbsp;&nbsp;b:javagetset_setterTemplate<br>&nbsp;&nbsp;b:javagetset_getterArrayTemplate<br>&nbsp;&nbsp;b:javagetset_setterArrayTemplate<br>&nbsp;&nbsp;&nbsp;&nbsp;These variables determine the text that will be inserted for a<br>&nbsp;&nbsp;&nbsp;&nbsp;getter, setter, array-based getter, and array-based setter<br>&nbsp;&nbsp;&nbsp;&nbsp;respectively.&nbsp;&nbsp;The templates may contain the following placeholders<br>&nbsp;&nbsp;&nbsp;&nbsp;which will be substituted by their appropriate values at insertion<br>&nbsp;&nbsp;&nbsp;&nbsp;time:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;%type%&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Java type of the property<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;%varname%&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The name of the property<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;%funcname%&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The method name (&quot;getXzy&quot; or &quot;setXzy&quot;)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;%modifiers%&nbsp;&nbsp;&nbsp;&nbsp; &quot;public&quot; followed by &quot;static&quot; if the property is static<br>&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;For example, if you wanted to set the default getter template so<br>&nbsp;&nbsp;&nbsp;&nbsp;that it would produce the following block of code for a property<br>&nbsp;&nbsp;&nbsp;&nbsp;defined as &quot;public static String name&quot;:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/**<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; * Get name.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; * @return name as String<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; */<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public static String getName() { return name; }<br>&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;This block of code can be produced by adding the following variable<br>&nbsp;&nbsp;&nbsp;&nbsp;definition to your vimrc file.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let b:javagetset_getterTemplate =<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\ &quot;\n&quot; .<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\ &quot;/**\n&quot; .<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\ &quot; * Get %varname%.\n&quot; .<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\ &quot; * @return %varname% as %type%.\n&quot; .<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\ &quot; */\n&quot; .<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\ &quot;%modifiers% %type% %funcname%() { return %varname%; }&quot;<br><br>&nbsp;&nbsp;&nbsp;&nbsp;The defaults for these variables are defined in the script.&nbsp;&nbsp;For<br>&nbsp;&nbsp;&nbsp;&nbsp;both the getterTemplate and setterTemplate, there is a corresponding<br>&nbsp;&nbsp;&nbsp;&nbsp;array-baded template that is invoked if a property is array-based.<br>&nbsp;&nbsp;&nbsp;&nbsp;This allows you to set indexed-based getters/setters if you desire.<br>&nbsp;&nbsp;&nbsp;&nbsp;This is the default behavior.<br></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">install details</td></tr>
+<tr><td>1. Copy the script to your ${HOME}/.vim/ftplugins directory and make<br>&nbsp;&nbsp; sure its named &quot;java_getset.vim&quot; or &quot;java_something.vim&quot; where<br>&nbsp;&nbsp; &quot;something&quot; can be anything you want.<br><br>2. (Optional) Customize the mapping and/or templates.&nbsp;&nbsp;You can create<br>&nbsp;&nbsp; your own filetype plugin (just make sure its loaded before this one)<br>&nbsp;&nbsp; and set the variables in there (i.e. ${HOME}/.vim/ftplugin/java.vim)<br><br></td></tr>
+<tr><td>&nbsp;</td></tr>
+</table>
+
+<!-- rating table -->
+<form name="rating">
+<input type="hidden" name="script_id" value="490">
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>rate this script</b></td>
+  <td valign="middle">
+    <input type="radio" name="rating" value="life_changing">Life Changing
+    <input type="radio" name="rating" value="helpful">Helpful
+    <input type="radio" name="rating" value="unfulfilling">Unfulfilling&nbsp;
+    <input type="submit" value="rate">
+  </td>
+</tr>
+</table>
+</form>
+<span class="txth2">script versions</span> (<a href="add_script_version.php?script_id=490">upload new version</a>)
+<p>
+Click on the package to download.
+<p>
+
+<table cellspacing="2" cellpadding="4" border="0" width="100%">
+<tr class='tableheader'>
+        <th valign="top">package</th>
+    <th valign="top">script version</th>
+    <th valign="top">date</th>
+    <th valign="top">Vim version</th>
+    <th valign="top">user</th>
+    <th valign="top">release notes</th>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=1523">java_getset.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.10</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2002-12-02</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=1258">Pete Kazmier</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Fixed another bug, didn't properly escape the carriage return when used in the normal command.&nbsp;&nbsp;Sorry about the numerous uploads, I'm a VIM newbie.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=1518">java_getset.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.9</b></td>
+    <td class="roweven" valign="top" nowrap><i>2002-11-30</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=1258">Pete Kazmier</a></i></td>
+    <td class="roweven" valign="top" width="2000">Fixed a bug where the inserted methods were not positioned properly in some cases. </td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=1497">java_getset.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.6</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2002-11-27</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=1258">Pete Kazmier</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Corrected the way the end of the current class was determined (previously, sometimes the inserted methods would be inserted outside of the class body).&nbsp;&nbsp;Also, I changed the test to see if the script was previously loaded as it seems that the script was not loaded as the variable b:did_ftpplugin is set by lots of scripts.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=1486">java_getset.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.5</b></td>
+    <td class="roweven" valign="top" nowrap><i>2002-11-26</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=1258">Pete Kazmier</a></i></td>
+    <td class="roweven" valign="top" width="2000">User is now able to configure the position where getter/setters are inserted.&nbsp;&nbsp;In addition, separate commands have been defined so users do not always have to be prompted (:InsertGetterOnly, :InsertSetterOnly, :InsertBothGetterSetter).&nbsp;&nbsp;Key mappings have also be mapped for these commands by default.&nbsp;&nbsp;Finally, more verbose documentation has been provided.&nbsp;&nbsp;Thanks to Dan Sharp for his comments and suggestions.</td>
+</tr>
+</table>
+<!-- finish off the framework -->
+          </td>
+        </tr>
+      </table>
+    </td>
+
+  </tr>
+</table>
+
+<!-- END OF THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr><td colspan="4" bgcolor="#000000"><img src="/images/spacer.gif" height="2" width="1" alt=""></td></tr>
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr>
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+
+    <td align="left" valign="top"><small>
+      If you have questions or remarks about this site, visit the
+      <a href="http://vimonline.sf.net">vimonline development</a> pages.
+      Please use this site responsibly.
+      <br> 
+      
+      Questions about <a href="http://www.vim.org/about.php">Vim</a> should go
+      to the <a href="http://www.vim.org/maillist.php">maillist</a>.
+      Help Bram <a href="http://iccf-holland.org/">help Uganda</a>.
+      </small>
+	&nbsp;
+	&nbsp;
+
+	<!-- Start of StatCounter Code -->
+	<script type="text/javascript" language="javascript">
+	var sc_project=1417324; 
+	var sc_invisible=1; 
+	var sc_partition=11; 
+	var sc_security="d41633bc"; 
+	</script>
+
+	<script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script><noscript><a href="http://www.statcounter.com/" target="_blank"><img  src="http://c12.statcounter.com/counter.php?sc_project=1417324&java=0&security=d41633bc&invisible=0" alt="free tracking" border="0"></a> </noscript>
+	<!-- End of StatCounter Code -->
+          </td>
+
+    <td align="right" valign="top">
+      		<a href="http://sourceforge.net/projects/vim" rel="nofollow"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=8&type=1" width="88" height="31" border="0" alt="SourceForge.net Logo" /></a>
+    </td>
+
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+  </tr>
+
+    
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  
+  </tr>
+</table>
+
+</body>
+</html>
+

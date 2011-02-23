@@ -1,0 +1,364 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+  <link rel="Stylesheet" type="text/css" href="/css/style.css" >
+  <title>vimgrep.vim - Editing utilities using grep/find without external grep/find programs : vim online</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <meta name="KEYWORDS" content="Vim, Vi IMproved, text editor, home, documentation, tips, scripts, news">
+  <link rel="shortcut icon" type="image/x-icon" href="/images/vim_shortcut.ico">
+</head>
+
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff"> 
+
+<!-- HEADER, SPONSOR IMAGE, VIM IMAGE AND BOOK AD -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+  <td class="lightbg">&nbsp;&nbsp;&nbsp;</td>
+  <td class="lightbg" align="left"><a href="/sponsor/index.php"><img src="/images/sponsorvim.gif" alt="sponsor Vim development" border="0"></a></td>
+    <td class="lightbg" align="center"><a href="/index.php"><img src="/images/vim_header.gif" border="0" alt="Vim logo"></a></td>
+    <td class="lightbg" align="right"><a href="http://iccf-holland.org/click5.html"><img src="/images/buyhelplearn.gif" alt="Vim Book Ad" border="0"></a></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="darkbg"><img src="/images/spacer.gif" width="1" height="10" alt=""></td>
+  </tr>
+</table>
+<!-- THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+  <col width="180">
+  <col width="1">
+
+  <tr valign="top">
+    <td class="sidebar">
+      <table width="180" cellpadding="4" cellspacing="0" border="0">
+        <tr valign="top">
+          <td class="sidebar">
+
+<!-- INCLUDE THE PAGE NAVIGATION -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+    <tr>
+        <td><small>not logged in (<a href="/login.php">login</a>)</small></td>
+    </tr>
+    <tr><td>
+<small>&nbsp;</small>
+<form action="http://www.google.com/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-3005259998294962:bvyni59kjr1" />
+    <input type="hidden" name="ie" value="ISO-8859-1" />
+    <input type="text" name="q" size="20" />
+    <br>
+    <input type="submit" name="sa" value="Search" />
+  </div>
+</form>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+    </td></tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="1"></td>
+    </tr>
+    <tr>
+        <td class="darkbg"><img src="/images/spacer.gif" alt='' border="0" height="3"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="2"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/index.php">Home</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/search.php">Advanced search</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/about.php">About Vim</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/community.php">Community</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/news/news.php">News</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/sponsor/index.php">Sponsoring</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/trivia.php">Trivia</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/docs.php">Documentation</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/download.php">Download</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/scripts/index.php">Scripts</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/tips/index.php">Tips</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/account/index.php">My Account</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/huh.php">Site Help</a></td>
+        </tr>
+</table>
+
+            <table width="172" cellpadding="0" cellspacing="0" border="0">
+              <tr><td><img src="/images/spacer.gif" alt="" border="0" width="1" height="8"></td></tr>
+              <tr><td class="darkbg"><img src="/images/spacer.gif" width="1" height="3" alt=""></td></tr>
+            </table>
+            <br>
+
+<!-- INCLUDE THE PAGE SIDEBAR TEXT -->
+&nbsp;
+
+          </td>
+        </tr>
+      </table>
+    </td>
+
+    <td class="darkbg"><img src="/images/spacer.gif" width="1" height="1" border="0" alt=""><br></td>
+    <td>
+      <table width="100%" cellpadding="10" cellspacing="0" border="0" bordercolor="red">
+        <tr>
+          <td valign="top">
+
+<span class="txth1">vimgrep.vim : Editing utilities using grep/find without external grep/find programs</span> 
+
+<br>
+<br>
+
+<!-- karma table -->
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
+  <td>
+    Rating <b>17/9</b>,
+    Downloaded by 1849  </td>
+  <td class="lightbg">
+  <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
+  </td>
+  <td>
+    <a href="http://vim.wikia.com/wiki/Script:1038">Vim wiki</a>
+  </td>  
+</tr>
+</table>
+<p>
+
+<table cellspacing="0" cellpadding="0" border="0">
+<tr><td class="prompt">created by</td></tr>
+<tr><td><a href="/account/profile.php?user_id=5397">Dave Silvia</a></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">script type</td></tr>
+<tr><td>utility</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">description</td></tr>
+<tr><td>grep/find utility wholly contained in Vim.&nbsp;&nbsp;Commands implemented specifically to aid the editing task, not just find pattern matches.&nbsp;&nbsp;Vimgrep() provides grep utility without an external grep type program.&nbsp;&nbsp;It includes :help documentation grep-ing, selective or mass editing of files with matches, and display of output to command line or a named buffer.&nbsp;&nbsp;Vimfind() provides find utility without an external find type program and offers same selective/mass editing as Vimgrep(). See doc directory in package for various documentation file formats and select one for more information.</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">install details</td></tr>
+<tr><td>NOTE:&nbsp;&nbsp;REQUIRES vsutil_vim.zip <a target="_blank" href="http://www.vim.org/scripts/script.php?script_id=1056">http://www.vim.org/scripts/script.php?script_id=1056</A><br>Unzip into your .vim|vimfiles directory.</td></tr>
+<tr><td>&nbsp;</td></tr>
+</table>
+
+<!-- rating table -->
+<form name="rating">
+<input type="hidden" name="script_id" value="1038">
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>rate this script</b></td>
+  <td valign="middle">
+    <input type="radio" name="rating" value="life_changing">Life Changing
+    <input type="radio" name="rating" value="helpful">Helpful
+    <input type="radio" name="rating" value="unfulfilling">Unfulfilling&nbsp;
+    <input type="submit" value="rate">
+  </td>
+</tr>
+</table>
+</form>
+<span class="txth2">script versions</span> (<a href="add_script_version.php?script_id=1038">upload new version</a>)
+<p>
+Click on the package to download.
+<p>
+
+<table cellspacing="2" cellpadding="4" border="0" width="100%">
+<tr class='tableheader'>
+        <th valign="top">package</th>
+    <th valign="top">script version</th>
+    <th valign="top">date</th>
+    <th valign="top">Vim version</th>
+    <th valign="top">user</th>
+    <th valign="top">release notes</th>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=3407">vimgrep.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>3.2</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2004-09-01</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=5397">Dave Silvia</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Version 3.2<br>&nbsp;&nbsp;Added:<br>&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;VimfindEdit/EditVimfind()<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; operates the same as<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; VimgrepEdit/EditVimgrep()<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; VimgrepEditDel functionality<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; also applies.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=3357">vimgrep_vim.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>3.1</b></td>
+    <td class="roweven" valign="top" nowrap><i>2004-08-19</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=5397">Dave Silvia</a></i></td>
+    <td class="roweven" valign="top" width="2000">Version 3.1<br>&nbsp;&nbsp;Enhanced:<br>&nbsp;&nbsp; -&nbsp;&nbsp;Rewrote s:vimGrep() for<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;search optimization.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=3330">vimgrep_vim.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>3.0 b</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2004-08-13</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=5397">Dave Silvia</a></i></td>
+    <td class="rowodd" valign="top" width="2000">decoupled vsutil.vim<br>decoupled curBuf.vim<br>these are now separate packages</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=3313">vimgrep_vim.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>3.0</b></td>
+    <td class="roweven" valign="top" nowrap><i>2004-08-10</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=5397">Dave Silvia</a></i></td>
+    <td class="roweven" valign="top" width="2000">Version 3.0<br>&nbsp;&nbsp;New:<br>&nbsp;&nbsp; -&nbsp;&nbsp;Rewrote to change optional<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;arguments to switches instead<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;of positional arguments.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Simplifies usage.<br>&nbsp;&nbsp; -&nbsp;&nbsp;Changed documentation to<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reflect same.<br>&nbsp;&nbsp;Misc:<br>&nbsp;&nbsp; -&nbsp;&nbsp;Some minor code clean up<br>&nbsp;&nbsp; -&nbsp;&nbsp;Removed use of dummy file<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for empty Vim session.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=3308">vimgrep_vim.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.2</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2004-08-08</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=5397">Dave Silvia</a></i></td>
+    <td class="rowodd" valign="top" width="2000"> Version 2.2<br>&nbsp;&nbsp;Fixed:<br>&nbsp;&nbsp; -&nbsp;&nbsp;Inappropriate inclusion of<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;command/function arguments.<br>&nbsp;&nbsp;New:<br>&nbsp;&nbsp; -&nbsp;&nbsp;Added BuiltInHelp<br>&nbsp;&nbsp; -&nbsp;&nbsp;Added VimfindToBuf<br>&nbsp;&nbsp; -&nbsp;&nbsp;Added VimfindList<br>&nbsp;&nbsp; -&nbsp;&nbsp;Added VimgrepList<br>&nbsp;&nbsp; -&nbsp;&nbsp;Added VimgrepHelpList<br>&nbsp;&nbsp; -&nbsp;&nbsp;Added Command/Function Help<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;menu/mapped '??'<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Vim[find|grep]List opens a<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;buffer listing file name<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;results from the respective<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;function.&nbsp;&nbsp;Then simply cursor<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;to a line in the list, and<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;press 'o' to open the listed<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;file in an edit buffer.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=3300">vimgrep_vim.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.1</b></td>
+    <td class="roweven" valign="top" nowrap><i>2004-08-03</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=5397">Dave Silvia</a></i></td>
+    <td class="roweven" valign="top" width="2000">Many's the slip<br>Twixt cup and lip<br><br>Somehow the wrong version<br>got put into the zip<br>This is the corrected one</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=3299">vimgrep_vim.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2004-08-03</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=5397">Dave Silvia</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Version 2.1<br>&nbsp;&nbsp;Fixed:<br>&nbsp;&nbsp; -&nbsp;&nbsp;echo-ed results scrolling off<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;command line by adding Pause()<br>&nbsp;&nbsp; -&nbsp;&nbsp;problem with file argument<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;being '/' would append '/*' to<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;search which always failed.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Now only appends extra '/' if<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;file argument does not end in<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'/' or '&#039.<br>&nbsp;&nbsp;Enhanced:<br>&nbsp;&nbsp; -&nbsp;&nbsp;Stopped search after first match<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if FNonly.&nbsp;&nbsp;Do no search at all<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if srchpat == '\%$'<br>&nbsp;&nbsp;New:<br>&nbsp;&nbsp; -&nbsp;&nbsp;Added Vimfind<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(inspired by email from<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hari Krishna Dara)</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=3292">vimgrep_vim.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.0</b></td>
+    <td class="roweven" valign="top" nowrap><i>2004-08-01</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=5397">Dave Silvia</a></i></td>
+    <td class="roweven" valign="top" width="2000">Version 2.0<br>&nbsp;&nbsp;Changed script name to vimgrep.vim<br>&nbsp;&nbsp;Introduced naming convention for<br>&nbsp;&nbsp;commands and functions.&nbsp;&nbsp;Commands<br>&nbsp;&nbsp;begin Vimgrep[\w*], functions and<br>&nbsp;&nbsp;variables begin [\w*]Vimgrep<br><br>&nbsp;&nbsp;Function MiniVimGrep() obsoleted.<br>&nbsp;&nbsp;Replaced with Vimgrep().<br>&nbsp;&nbsp;Wrapper exists to maintain<br>&nbsp;&nbsp;backward compatibility.<br><br>&nbsp;&nbsp;New:<br>&nbsp;&nbsp; -&nbsp;&nbsp;Added opening of edit buffers<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for successfully grep-ed files.<br>&nbsp;&nbsp; -&nbsp;&nbsp;Added help files grep-ing.<br>&nbsp;&nbsp; -&nbsp;&nbsp;Added delete of edit/help<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;buffers.<br>&nbsp;&nbsp; -&nbsp;&nbsp;Added gvim menu/toolbar items<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;and key mappings for deleting.<br>&nbsp;&nbsp; -&nbsp;&nbsp;Included documentation files.<br>&nbsp;&nbsp; -&nbsp;&nbsp;rewrote, beefed up, made more<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;robust, and otherwise enhanced.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=3253">minigrep.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2004-07-20</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=5397">Dave Silvia</a></i></td>
+    <td class="rowodd" valign="top" width="2000">The two public functions are:<br><br>&nbsp;&nbsp;&nbsp;&nbsp; MiniVimGrep(pattern,file(s),[match case],[file names only])<br>&nbsp;&nbsp;&nbsp;&nbsp; BufMiniGrep(pattern,[match case],[file names only])<br><br>where optional<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'match case' is zero or non-zero<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'file names only' is zero or non-zero<br><br><br>MiniVimGrep() operates on file(s) arguments and BufMiniGrep() operates on open buffers.<br><br>Version 1.1<br>&nbsp;&nbsp;For grep-ing in open buffers:<br>&nbsp;&nbsp; -&nbsp;&nbsp;Added BufMiniGrep for grep-ing all open buffers<br>&nbsp;&nbsp; -&nbsp;&nbsp;Added code to set cursor to line 1, col 1 in the file in case it is<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;being done with open buffers.&nbsp;&nbsp;Then the cursor is set back to its<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;original position.<br>&nbsp;&nbsp; -&nbsp;&nbsp;Added code to allow passing '%' or '' for file, meaning current buffer<br>&nbsp;&nbsp; -&nbsp;&nbsp;Added augroup and autocmd to save the buffer number so it can be used<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;to return to the original buffer if grep-ing in open buffers<br><br>&nbsp;&nbsp;For multiple files<br>&nbsp;&nbsp; -&nbsp;&nbsp;Added code to check for comma and newline file name separators.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Comma allows the user to specify 'file' argument as<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;file1,file2,...&quot;, while newline allows 'file' argument to be<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;something like glob(expand(&quot;%:p:h&quot;).&quot;/*&quot;) or<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;glob(&quot;&lt;some-path&gt;/*&quot;)<br>&nbsp;&nbsp; -&nbsp;&nbsp;Added code to check if file is the same as the original open<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;buffer, if so, don't do bdelete.<br>&nbsp;&nbsp; -&nbsp;&nbsp;Added second optional argument for returning file names only.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If non-zero, just return file names, not the matching lines.<br><br>&nbsp;&nbsp;Misc<br>&nbsp;&nbsp; -&nbsp;&nbsp;Added code to test for empty files<br>&nbsp;&nbsp; -&nbsp;&nbsp;Added code to test for directories</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=3249">minigrep.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.0</b></td>
+    <td class="roweven" valign="top" nowrap><i>2004-07-19</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=5397">Dave Silvia</a></i></td>
+    <td class="roweven" valign="top" width="2000">Initial upload</td>
+</tr>
+</table>
+<!-- finish off the framework -->
+          </td>
+        </tr>
+      </table>
+    </td>
+
+  </tr>
+</table>
+
+<!-- END OF THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr><td colspan="4" bgcolor="#000000"><img src="/images/spacer.gif" height="2" width="1" alt=""></td></tr>
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr>
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+
+    <td align="left" valign="top"><small>
+      If you have questions or remarks about this site, visit the
+      <a href="http://vimonline.sf.net">vimonline development</a> pages.
+      Please use this site responsibly.
+      <br> 
+      
+      Questions about <a href="http://www.vim.org/about.php">Vim</a> should go
+      to the <a href="http://www.vim.org/maillist.php">maillist</a>.
+      Help Bram <a href="http://iccf-holland.org/">help Uganda</a>.
+      </small>
+	&nbsp;
+	&nbsp;
+
+	<!-- Start of StatCounter Code -->
+	<script type="text/javascript" language="javascript">
+	var sc_project=1417324; 
+	var sc_invisible=1; 
+	var sc_partition=11; 
+	var sc_security="d41633bc"; 
+	</script>
+
+	<script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script><noscript><a href="http://www.statcounter.com/" target="_blank"><img  src="http://c12.statcounter.com/counter.php?sc_project=1417324&java=0&security=d41633bc&invisible=0" alt="free tracking" border="0"></a> </noscript>
+	<!-- End of StatCounter Code -->
+          </td>
+
+    <td align="right" valign="top">
+      		<a href="http://sourceforge.net/projects/vim" rel="nofollow"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=8&type=1" width="88" height="31" border="0" alt="SourceForge.net Logo" /></a>
+    </td>
+
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+  </tr>
+
+    
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  
+  </tr>
+</table>
+
+</body>
+</html>
+

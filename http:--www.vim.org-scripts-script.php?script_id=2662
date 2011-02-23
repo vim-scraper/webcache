@@ -1,0 +1,492 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+  <link rel="Stylesheet" type="text/css" href="/css/style.css" >
+  <title>ywvim - Another input method(IM) for VIM, supports all modes. : vim online</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <meta name="KEYWORDS" content="Vim, Vi IMproved, text editor, home, documentation, tips, scripts, news">
+  <link rel="shortcut icon" type="image/x-icon" href="/images/vim_shortcut.ico">
+</head>
+
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff"> 
+
+<!-- HEADER, SPONSOR IMAGE, VIM IMAGE AND BOOK AD -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+  <td class="lightbg">&nbsp;&nbsp;&nbsp;</td>
+  <td class="lightbg" align="left"><a href="/sponsor/index.php"><img src="/images/sponsorvim.gif" alt="sponsor Vim development" border="0"></a></td>
+    <td class="lightbg" align="center"><a href="/index.php"><img src="/images/vim_header.gif" border="0" alt="Vim logo"></a></td>
+    <td class="lightbg" align="right"><a href="http://iccf-holland.org/click5.html"><img src="/images/buyhelplearn.gif" alt="Vim Book Ad" border="0"></a></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="darkbg"><img src="/images/spacer.gif" width="1" height="10" alt=""></td>
+  </tr>
+</table>
+<!-- THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+  <col width="180">
+  <col width="1">
+
+  <tr valign="top">
+    <td class="sidebar">
+      <table width="180" cellpadding="4" cellspacing="0" border="0">
+        <tr valign="top">
+          <td class="sidebar">
+
+<!-- INCLUDE THE PAGE NAVIGATION -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+    <tr>
+        <td><small>not logged in (<a href="/login.php">login</a>)</small></td>
+    </tr>
+    <tr><td>
+<small>&nbsp;</small>
+<form action="http://www.google.com/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-3005259998294962:bvyni59kjr1" />
+    <input type="hidden" name="ie" value="ISO-8859-1" />
+    <input type="text" name="q" size="20" />
+    <br>
+    <input type="submit" name="sa" value="Search" />
+  </div>
+</form>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+    </td></tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="1"></td>
+    </tr>
+    <tr>
+        <td class="darkbg"><img src="/images/spacer.gif" alt='' border="0" height="3"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="2"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/index.php">Home</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/search.php">Advanced search</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/about.php">About Vim</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/community.php">Community</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/news/news.php">News</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/sponsor/index.php">Sponsoring</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/trivia.php">Trivia</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/docs.php">Documentation</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/download.php">Download</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/scripts/index.php">Scripts</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/tips/index.php">Tips</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/account/index.php">My Account</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/huh.php">Site Help</a></td>
+        </tr>
+</table>
+
+            <table width="172" cellpadding="0" cellspacing="0" border="0">
+              <tr><td><img src="/images/spacer.gif" alt="" border="0" width="1" height="8"></td></tr>
+              <tr><td class="darkbg"><img src="/images/spacer.gif" width="1" height="3" alt=""></td></tr>
+            </table>
+            <br>
+
+<!-- INCLUDE THE PAGE SIDEBAR TEXT -->
+&nbsp;
+
+          </td>
+        </tr>
+      </table>
+    </td>
+
+    <td class="darkbg"><img src="/images/spacer.gif" width="1" height="1" border="0" alt=""><br></td>
+    <td>
+      <table width="100%" cellpadding="10" cellspacing="0" border="0" bordercolor="red">
+        <tr>
+          <td valign="top">
+
+<span class="txth1">ywvim : Another input method(IM) for VIM, supports all modes.</span> 
+
+<br>
+<br>
+
+<!-- karma table -->
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
+  <td>
+    Rating <b>22/9</b>,
+    Downloaded by 1061  </td>
+  <td class="lightbg">
+  <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
+  </td>
+  <td>
+    <a href="http://vim.wikia.com/wiki/Script:2662">Vim wiki</a>
+  </td>  
+</tr>
+</table>
+<p>
+
+<table cellspacing="0" cellpadding="0" border="0">
+<tr><td class="prompt">created by</td></tr>
+<tr><td><a href="/account/profile.php?user_id=17429">Yue Wu</a></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">script type</td></tr>
+<tr><td>utility</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">description</td></tr>
+<tr><td>======= Chinese version =======<br>&#27880;&#24847;!!!<br>=======<br>&#22914;&#26524;&#20320;&#26159; ywvim &#30340;&#32769;&#29992;&#25143;, &#22312;&#21319;&#32423;&#21040;&#26032;&#29256;&#26412;&#21069;, &#35831;&#27880;&#24847;&#20320;&#30340;&#26087;&#29256;&#26412;&#21040;&#26032;&#29256;&#26412;&#38388;*&#25152;&#26377;*&#30340;&#21457;&#24067;&#20844;&#21578;&#21644;&#24050;&#30693; bugs, &#28982;&#21518;&#26597;&#25214;&#23545;&#24212;&#35774;&#32622;&#30340;&#35828;&#26126;, &#20197;&#20813;&#19981;&#20860;&#23481;&#30340;&#25913;&#21464;&#32473;&#20320;&#24102;&#26469;&#19981;&#20415;.<br>&#22914;&#26524;&#20320;&#22312;&#20351;&#29992;&#20013;&#21457;&#29616;&#20102;&#38382;&#39064;, &#22312;&#25253;&#21578;&#20043;&#21069;, &#35831;&#20808;&#26597;&#30475;&#19979;&#38754;&#30340;&quot;&#24050;&#30693;&#38382;&#39064;&quot;&#37096;&#20998;, &#30830;&#23450;&#26159;&#21542;&#20026;&#24050;&#30693; bug.<br><br>&#19979;&#36733;&#26368;&#26032;&#33050;&#26412;(1.20): <a target="_blank" href="http://www.vim.org/scripts/download_script.php?src_id=11117">http://www.vim.org/scripts/download_script.php?src_id=11117</A><br>&#19979;&#36733;&#26368;&#26032;&#30721;&#34920;(1.13): <a target="_blank" href="http://www.vim.org/scripts/download_script.php?src_id=10786">http://www.vim.org/scripts/download_script.php?src_id=10786</A><br><br>&#20171;&#32461;:<br>=====<br>ywvim &#26159;&#19968;&#27454;&#19981;&#20381;&#36182;&#22806;&#37096;&#36755;&#20837;&#27861;&#30340;, &#22312; vim &#37324;&#36755;&#20837;&#20013;&#25991;&#30340;&#24037;&#20855;. &#25903;&#25345;&#22312; vim &#30340;&#25152;&#26377;&#27169;&#24335;&#19979;&#36755;&#20837;&#20013;&#25991;. &#23427;&#38754;&#21521;&#30340;&#23545;&#35937;&#20027;&#35201;&#20026;&#24418;&#30721;&#29992;&#25143;, &#23545;&#20110;&#25340;&#38899;&#29992;&#25143;, &#20320;&#21487;&#20197;&#35797;&#35797;&#26377;&#26356;&#22810;&#21151;&#33021;&#30340; vimim[<a target="_blank" href="http://www.vim.org/scripts/script.php?script_id=2506">http://www.vim.org/scripts/script.php?script_id=2506</A>].<br>&#22351;&#28040;&#24687;: ywvim &#21644; vimim &#30340;&#38190;&#32465;&#23450;&#20914;&#31361;, &#20320;&#24517;&#39035;&#22312;&#20004;&#32773;&#20013;&#20570;&#20986;&#36873;&#25321;.<br><br>.vimrc &#37324;&#30340;&#35774;&#32622;:<br>================<br>&#25226;&#19979;&#38754;&#30340;&#20960;&#34892;&#25918;&#21040;&#20320;&#30340; .vimrc &#20013;:<br><br>-----<br>let g:ywvim_ims=[<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\['cj', '&#20179;&#39049;', 'cangjie.ywvim'],<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\['wb', '&#20116;&#31508;', 'wubi.ywvim'],<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\['wb98', '&#20116;&#31508;98', 'wubi98.ywvim'],<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\['zm', '&#37073;&#30721;', 'zhengma.ywvim'],<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\['zy', '&#27880;&#38899;', 'zhuyin.ywvim'],<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\['ar30', '&#34892;&#21015;', 'array30.ywvim'],<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\['py', '&#25340;&#38899;', 'pinyin.ywvim'],<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\]<br><br>let g:ywvim_py = { 'helpim':'cj', 'gb':0 }<br><br>let g:ywvim_zhpunc = 1<br>let g:ywvim_listmax = 5<br>let g:ywvim_esc_autoff = 0<br>let g:ywvim_autoinput = 1<br>let g:ywvim_pagec = 1<br>let g:ywvim_helpim_on = 1<br>let g:ywvim_matchexact = 0<br>let g:ywvim_chinesecode = 1<br>let g:ywvim_gb = 0<br>let g:ywvim_preconv = 'g2b'<br>let g:ywvim_conv = ''<br>let g:ywvim_lockb = 0<br>-----<br><br>&#35299;&#37322;:<br><br>&#25152;&#26377;&#21464;&#37327;&#20013;, &#21482;&#26377; g:ywvim_ims &#26159;&#24517;&#39035;&#35201;&#35774;&#32622;&#30340;.<br><br>1. g:ywvim_ims &#26159;&#27880;&#20876;&#20320;&#30340;&#36755;&#20837;&#27861;&#30340;&#21464;&#37327;, &#26684;&#24335;&#20026;:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\['&#36755;&#20837;&#27861;&#30340;&#25340;&#38899;&#31616;&#31216;', '&#36755;&#20837;&#27861;&#30340;&#20013;&#25991;&#21517;&#31216;', '&#30721;&#34920;&#25991;&#20214;']<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>&#27604;&#22914; \['cj', '&#20179;&#39049;', 'cangjie.ywvim'], &#21487;&#20197;&#35835;&#20026;: &#20179;&#39049;&#36755;&#20837;&#27861;, &#31616;&#31216;&#20026; cj, &#30721;&#34920;&#25991;&#20214;&#20026; cangjie.ywvim.<br>ywvim &#20250;&#33258;&#21160;&#25195;&#25551; ywvim.vim &#30340;&#21516;&#19968;&#30446;&#24405;&#21450;&#20854;&#23376;&#30446;&#24405;, &#22914;&#26524;&#26377;&#21516;&#21517;&#25991;&#20214;, &#20197;&#31532;&#19968;&#20010;&#20248;&#20808;.<br>&#31532;&#19968;&#34892;&#30340;&#20026;&#40664;&#35748;&#36755;&#20837;&#27861;.<br>&#20320;&#21487;&#20197;&#25226;&#20320;&#19981;&#38656;&#35201;&#30340;&#36755;&#20837;&#27861;&#30340;&#34892;&#21024;&#21435;.<br><br>2. let g:ywvim_py = { 'helpim':'cj', 'gb':0 }<br><br>&#21333;&#29420;&#35774;&#32622;&#27599;&#20010;&#30721;&#34920;&#30340;&#21442;&#25968;, &#30721;&#34920;&#32423;&#21035;&#20248;&#20808;&#20110;&#20840;&#23616;&#32423;&#21035;. &#30721;&#34920;&#32423;&#21035;&#30340;&#21442;&#25968;&#35774;&#32622;&#26684;&#24335;&#26159;:<br> <br>&nbsp;&nbsp;&nbsp;&nbsp;g:ywvim_{&#36755;&#20837;&#27861;&#30340;&#31616;&#31216;} = {'&#21442;&#25968;':'&#21442;&#25968;&#35774;&#32622;'}<br><br>&#30446;&#21069;&#26377;&#36825;&#20960;&#20010;&#21442;&#25968;&#25903;&#25345;&#23616;&#37096;&#35774;&#32622;:<br>listmax: &#20505;&#36873;&#26694;&#25968;&#30446;.<br>maxelement: &#26368;&#22823;&#35789;&#38271;.<br>helpim: &#21453;&#26597;&#30721;&#34920;&#30340;&#31616;&#31216;.<br>zhpunc: &#20013;&#25991;&#26631;&#28857;&#24320;&#20851;.<br>matchexact: &#31934;&#30830;&#21305;&#37197;&#24320;&#20851;.<br>gb: &#21482;&#36755;&#20837; gb2312 &#33539;&#22260;&#27721;&#23383;.<br> <br>&#27604;&#22914;&#20320;&#21487;&#20197;&#36825;&#26679;&#35774;:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;let g:ywvim_zy = {'listmax':6, 'maxelement':1, 'gb':0}<br><br>&#24847;&#24605;&#26159;, &#23545;&#20110;&#27880;&#38899;(zy)&#36755;&#20837;&#27861;, &#20505;&#36873;&#26694;&#20010;&#25968;(listmax)&#20026; 6, &#26368;&#22823;&#35789;&#38271;(maxelement)&#20026; 1, &#21482;&#36755;&#20837;&#22312; gb2312 &#33539;&#22260;&#30340;&#27721;&#23383;('gb':0).<br><br>&#20320;&#20063;&#21487;&#20197;&#20840;&#23616;&#35774;&#32622;&#26576;&#20010;&#21464;&#37327;, &#26684;&#24335;&#26159; let g:ywvim_listmax = 5, &#36825;&#26679;&#23601;&#19981;&#29992;&#20026;&#27599;&#20010;&#30721;&#34920;&#37117;&#35774;&#30456;&#21516;&#30340;&#35774;&#32622;&#20102;. &#19979;&#38754;&#37117;&#26159;&#20840;&#23616;&#21464;&#37327;.<br><br>3. g:ywvim_zhpunc: &#35774;&#32622;&#40664;&#35748;&#20013;&#25991;&#26631;&#28857;&#36755;&#20837;&#24320;&#20851;, 1 &#20026;&#24320;, &#40664;&#35748;&#25171;&#24320;&#25340;&#38899;&#36755;&#20837;, 2 &#20026;&#20851;.<br><br>4. g:ywvim_listmax: &#20505;&#36873;&#39033;&#20010;&#25968;.<br><br>5. g:ywvim_esc_autoff: &#35774;&#32622;&#31163;&#24320;&#25554;&#20837;&#27169;&#24335;&#26102;&#26159;&#21542;&#33258;&#21160;&#20851;&#38381; ywvim. 1 &#20026;&#33258;&#21160;, 0 &#20026;&#25163;&#21160;.<br>(&#24863;&#35874;&#22312; #arch-cn@irc.oftc.net &#30340; snow &#25552;&#30340;&#35201;&#27714;.)<br><br>6. let g:ywvim_autoinput = 1: &#25903;&#25345;&#20004;&#31181;&#31243;&#24230;&#30340;&#33258;&#21160;&#27169;&#24335;. &#35774;&#20026; 2 &#20026;&#37325;&#24230;&#33258;&#21160;, &#20219;&#20309;&#21333;&#30721;&#23383;&#37117;&#33258;&#21160;&#19978;&#23631;. 2 &#20026;&#20013;&#24230;&#33258;&#21160;, &#21482;&#22312;&#32763;&#39029;&#26102;&#20986;&#29616;&#30340;&#21333;&#30721;&#23383;&#25165;&#19978;&#23631;.<br>(&#24863;&#35874;&#22312; #arch-cn@irc.oftc.net &#19978;&#30340; medicalwei &#25552;&#20379;&#30340;&#24314;&#35758;)<br><br>7. let g:ywvim_pagec = 1: &#35774;&#20026; 1 &#34920;&#31034;&#21487;&#20197;&#22312;&#20505;&#36873;&#39029;&#20013;&#24490;&#29615;&#32763;&#39029;.<br>(&#24863;&#35874;&#22312; #arch-cn@irc.oftc.net &#19978;&#30340; medicalwei &#25552;&#20379;&#30340;&#24314;&#35758;)<br><br>8. let g:ywvim_helpim_on = 0: &#35774;&#20026; 1 &#34920;&#31034;&#25171;&#24320;&#21453;&#26597;&#30721;&#34920;&#30340;&#21151;&#33021;.<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&#35686;&#21578;: &#23545;&#20110;&#22823;&#30721;&#34920;&#20250;&#23548;&#33268;&#20854;&#36895;&#24230;&#38477;&#20302;.<br><br>9. let g:ywvim_matchexact = 0: &#35774;&#20026; 1 &#34920;&#31034;&#21482;&#26174;&#31034;&#20840;&#30721;&#21305;&#37197;&#30340;&#23383;.<br>(&#24863;&#35874;&#22312; #arch-cn@irc.oftc.net &#19978;&#30340; medicalwei &#25552;&#20379;&#30340;&#24314;&#35758;)<br><br>10. let g:ywvim_chinesecode = 1: &#23545;&#20110;&#26377;&#20013;&#25991;&#23383;&#27597;&#30340;&#36755;&#20837;&#27861;(&#27604;&#22914;&#27880;&#38899;, &#20179;&#39049;),<br>&#24050;&#38190;&#20837;&#30340;&#23383;&#27597;&#29992;&#20013;&#25991;&#23383;&#27597;&#26469;&#26174;&#31034;, &#32780;&#19981;&#26159;&#33521;&#25991;&#23383;&#27597;. &#27604;&#22914;&#22312;&#27880;&#38899;&#37324;, &#20320;&#36755;&#20837; ji3 &#21518;,<br>&#26174;&#31034;&#30340;&#26159; &#12584;&#12571;&#711;, &#32780;&#19981;&#26159; ji3<br>(&#24863;&#35874;&#22312; #arch-cn@irc.oftc.net &#19978;&#30340; medicalwei &#25552;&#20379;&#30340;&#24314;&#35758;)<br><br>11. let g:ywvim_gb = 1, &#35774;&#20026; 1 &#20026;&#21482;&#36755;&#20837; gb2312 &#33539;&#22260;&#27721;&#23383;.<br><br>12. let g:ywvim_preconv = 'g2b', &#40664;&#35748;&#31616;&#32321;&#36716;&#25442;&#26041;&#21521;.<br><br>13. let g:ywvim_conv = 'g2b', &#35373;&#32622;&#31777;&#32321;&#36681;&#25563;&#26041;&#21521;, 'g2b' &#28858;&#31777;&#36575;&#32321;, 'b2g' &#28858;&#32321;&#36681;&#31777;, ''(&#30041;&#31354;)&#28858;&#38364;&#38281;<br>(&#24863;&#35874;&#22312; www.newsmth.net &#19978;&#30340; vace &#25552;&#20379;&#30340;&#24314;&#35758;)<br><br>14. let g:ywvim_lockb = 0, &#20026; 0 &#26102;, &#22312;&#31354;&#30721;&#26159;&#19981;&#38145;&#23450;&#38190;&#30424;.<br><br>&#20351;&#29992;:<br>=====<br>&lt;C-\&gt; &#36755;&#20837;&#27861;&#24320;&#20851;.<br><br>;(&#20998;&#21495;) &#20020;&#26102;&#33521;&#25991;.<br><br>z &#20020;&#26102;&#25340;&#38899;.<br><br>&lt;C-^&gt; &#35774;&#32622;&#36755;&#20837;&#27861;:<br>&nbsp;&nbsp;&nbsp;&nbsp;&#30721;&#34920;&#20999;&#25442;.<br>&nbsp;&nbsp;&nbsp;&nbsp;&#20013;&#33521;&#26631;&#28857;&#20999;&#25442;.<br>&nbsp;&nbsp;&nbsp;&nbsp;&#26368;&#22823;&#35789;&#38271;: &#20320;&#24819;&#36755;&#20837;&#30340;&#26368;&#38271;&#30340;&#35789;. &#35774;&#20026; 1 &#20026;&#21333;&#23383;&#27169;&#35797;.<br>&nbsp;&nbsp;&nbsp;&nbsp;&#31616;&#32321;&#36716;&#25442;&#24320;&#20851;.<br>&nbsp;&nbsp;&nbsp;&nbsp;gb2312&#24320;&#20851;: &#35753; ywvim &#28388;&#25481; gb2312 &#33539;&#22260;&#20869;&#30340;&#27721;&#23383;.<br>&nbsp;&nbsp;&nbsp;&nbsp;&#21453;&#26597;&#30721;&#34920;&#24320;&#20851;.<br><br>,.-=&nbsp;&nbsp;&nbsp;&nbsp;&#19978;&#19979;&#32763;&#39029;.<br><br>&#31354;&#26684;&#25110;&#25968;&#23383;&#36873;&#23383;, &#22238;&#36710;&#36755;&#33521;&#25991;.<br>; &#20998;&#21495;&#36873;&#25321;&#31532;&#20108;&#20505;&#36873;&#35789;. (&#24863;&#35874;&#22312; www.newsmth.net &#30340; vace &#30340;&#24314;&#35758;.)<br><br>&#27880;&#38899;&#29992;&#25143;&#27880;&#24847;!!!:<br>&#20004;&#27425;&#31354;&#26684;&#20026;&#32763;&#39029;.<br>&#22238;&#36710;&#20026;&#36755;&#20837;&#40664;&#35748;&#27721;&#23383;.<br>&#40664;&#35748;&#27809;&#26377;&#32465;&#20219;&#20309;&#38190;&#21040;&#20020;&#33521;&#21644;&#20020;&#25340;(&#20320;&#21487;&#20197;&#26356;&#25913;).<br><br>&#24050;&#30693;&#38382;&#39064;:<br>=========<br>1. &#22914;&#26524;&#24403;&#21069; buffer &#30340; ywvim &#29366;&#24577;&#20026;&#24320;, &#26032;&#24320;&#19968;&#20010; buffer &#21518;&#20250;&#26174;&#31034; ywvim &#20026;&#24320;&#21551;&#29366;&#24577;, &#20294;&#23454;&#38469;&#19981;&#26159;, &#27492;&#26102;&#21482;&#38656;&#25353;&#20004;&#27425; &lt;C-\&gt; &#20851;&#38381;&#21644;&#25171;&#24320; ywvim &#21363;&#21487;. &#21407;&#22240;&#19981;&#26126;.<br>&#20020;&#26102;&#35299;&#20915;&#26041;&#27861;: &#24320;&#21551; g:ywvim_esc_autoff: let g:ywvim_esc_autoff = 1, &#20445;&#35777;&#22312;&#36864;&#20986;&#25554;&#20837;&#27169;&#24335;&#21518;&#33258;&#21160;&#36864;&#20986; ywvim.<br><br>2. &#21453;&#26597;&#30721;&#34920;&#22312;&#38750; utf-8 encoding &#26102;&#24037;&#20316;&#26080;&#27861;&#27491;&#24120;&#24037;&#20316;. &#20020;&#26102;&#35299;&#20915;&#26041;&#26696;: &#22312;&#30721;&#34920;&#30340;&#20027;&#37096;&#20998;&#30340;&#27599;&#34892;&#26368;&#21518;&#21152;&#19968;&#20010;&#31354;&#26684;(&#23448;&#26041;&#30340;&#30721;&#34920;&#24050;&#32463;&#36825;&#26679;&#22788;&#29702;&#36807;&#20102;).<br><br>3. &#21453;&#26597;&#30721;&#34920;&#23545;&#20110;&#22823;&#30721;&#34920;&#21453;&#24212;&#36895;&#24230;&#36807;&#24930;. &#20020;&#26102;&#35299;&#20915;&#26041;&#26696;, &#25442;&#35789;&#27719;&#37327;&#36739;&#23567;&#30340;&#30721;&#34920;&#25110;&#32773;&#25226; listmax &#35774;&#23567;&#19968;&#28857;.<br><br>4. enmode &#21644;&#21487;&#21464;&#20013;&#25991;&#26631;&#28857;&#30340;&#20914;&#31361;.<br>&#24403;&#32465;&#23450; enmode &#21040;&#21487;&#21464;&#20013;&#25991;&#26631;&#28857;&#22914; &quot; &#21644; ' &#26102;, &#24037;&#20316;&#19981;&#27491;&#24120;. enmode &#38656;&#35201;&#19968;&#20010;&#26032;&#30340;&#26426;&#21046;.<br><br>&#22238;&#39304;:<br>=====<br>&#35831;&#21457;&#22238;&#39304;, &#34917;&#19969;&#25110;&#24314;&#35758;&#21040;&#25105;&#30005;&#23376;&#37038;&#31665;.<br><br>&#24453;&#20570;:<br>============<br><br>&#24120;&#35265;&#38382;&#39064;:<br>============<br>Q: &#22686;&#21152;&#27169;&#31946;&#26597;&#25214;? &#22686;&#21152;&#33258;&#21160;&#35843;&#39057;?<br>A: &#23545;&#20110;&#20687;&#20316;&#32773;&#19968;&#26679;&#30340;&#21333;&#23383;&#24418;&#30721;&#29992;&#25143;, &#27169;&#31946;&#26597;&#25214;&#26159;&#23436;&#20840;&#29992;&#19981;&#21040;&#30340;&#21151;&#33021;, &#25152;&#20197;&#27809;&#26377;&#20852;&#36259;&#20063;&#27809;&#26377;&#26102;&#38388;&#24320;&#21457;. &#22914;&#26524;&#20320;&#24076;&#26395;&#26377;&#35813;&#29305;&#24615;, &#35831;&#21457;&#34917;&#19969;&#32473;&#25105;.<br>&#32780;&#33258;&#21160;&#35843;&#39057;&#23545;&#20110;&#24418;&#30721;&#26469;&#35828;, &#31616;&#30452;&#23601;&#26159;&#28798;&#38590;, &#20294;&#23545;&#38899;&#30721;&#26469;&#35828;&#21487;&#33021;&#24456;&#26377;&#29992;. &#22914;&#26524;&#20320;&#35273;&#24471;&#26377;&#29992;, &#20320;&#20063;&#21487;&#20197;&#21457;&#34917;&#19969;&#32473;&#25105;. &#35874;&#35874;.<br><br>&#30721;&#34920;&#26684;&#24335;:<br>=========<br>ywvim &#29992;&#30340;&#30721;&#34920;&#26159;&#26368;&#31616;&#21333;&#30340;&#26222;&#36890;&#25991;&#26412;, &#25152;&#20197;&#20320;&#21487;&#20197;&#24456;&#23481;&#26131;&#30340;&#23450;&#21046;&#20986;&#33258;&#24049;&#30340;&#30721;&#34920;. &#35831;&#30830;&#20445;&#20320;&#30340;&#30721;&#34920;&#20197; utf-8 &#30340;&#32534;&#30721;&#20445;&#23384;.<br><br>&#20998;&#22235;&#37096;&#20998;:[Description], [CharDefinition], [Punctuation] &#21644; [Main]. &#39034;&#24207;&#19981;&#33021;&#39072;&#20498;:<br>[Description]&#26159;&#36755;&#20837;&#27861;&#30340;&#19968;&#33324;&#21442;&#25968;.<br>[CharDefinition] &#26159;&#32473;&#20687;&#27880;&#38899;, &#20179;&#39049;&#31561;&#26377;&#20013;&#25991;&#23383;&#27597;&#30340;&#36755;&#20837;&#27861;&#29992;&#30340;.<br>[Punctuation]&#26159;&#26631;&#28857;, [Main]&#26159;&#20027;&#30721;&#34920;.<br><br>[Description]<br>Name=&#20489;&#38945;&#20116;&#20195;&nbsp;&nbsp; &lt;== &#30721;&#34920;&#21517;&#31216;.<br>MaxCodes=5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;== &#26368;&#22823;&#30721;&#38271;.<br>MaxElement=1&nbsp;&nbsp;&lt;== &#26368;&#22823;&#35789;&#38271;. &#24863;&#35874;&#22312; www.newsmth.net &#30340; vace &#30340;&#24314;&#35758;.<br>UsedCodes=abcdefghijklmnopqrstuvwxyz &lt;== &#36755;&#20837;&#27861;&#25152;&#29992;&#21040;&#30340;&#38190;&#20301;<br>EnChar=;&nbsp;&nbsp;&nbsp;&nbsp;&lt;= &#20020;&#26102;&#36755;&#20837;&#33521;&#25991;&#30340;&#20999;&#25442;&#38190;.<br>PyChar=z&nbsp;&nbsp;&nbsp;&nbsp;&lt;= &#20020;&#26102;&#36755;&#20837;&#25340;&#38899;&#38190;.<br>InputZhSecKeys=; &lt;= &#36755;&#20837;&#31532;&#20108;&#37325;&#30721;&#38190;.<br>&#19979;&#38754;&#36873;&#39033;&#22343;&#20026;&#27880;&#38899;&#29992;&#25143;&#25152;&#35774;, &#20854;&#20182;&#36755;&#20837;&#27861;&#19981;&#24517;&#35774;&#32622;.<br>EndCodes=&nbsp;&nbsp;&lt;= &#32467;&#26463;&#23383;&#30721;&#30340;&#38190;&#20301;.<br>InputZhKeys=&nbsp;&nbsp;&lt;= &#36755;&#20837;&#20013;&#25991;&#30340;&#25353;&#38190;<br>InputEnKeys=&nbsp;&nbsp;&lt;= &#36755;&#20837;&#33521;&#25991;&#30340;&#25353;&#38190;<br>PageUpExtraKeys= &lt;= &#39069;&#22806;&#19978;&#32763;&#39029;&#38190;<br>PageDnExtraKeys= &lt;= &#39069;&#22806;&#19979;&#32763;&#39029;&#38190;<br><br>[CharDefinition]<br>a &#26085;&nbsp;&nbsp;&lt;== &#20013;&#25991;&#23383;&#27597;&#30340;&#23450;&#20041;&#22312;&#36825;&#37324;&#23450;&#20041;. &#22914;&#26524;&#27809;&#26377;, &#30041;&#31354;&#21363;&#21487;.<br><br>[Punctuation]<br>{ &#12302;<br>&quot; &#8220; &#8221;<br><br>[Main]<br>a &#26085; &#26352; &lt;== &#30001;&#23383;&#30721;&#21644;&#27721;&#23383;&#32452;&#25104;&#19968;&#34892;. &#22914;&#26524;&#24819;&#35753;&#21453;&#26597;&#30721;&#34920;&#22312;&#38750; utf-8 &#19979;&#20063;&#33021;&#24037;&#20316;, &#35831;&#22312;&#26368;&#21518;&#38754;&#21152;&#19968;&#20010;&#31354;&#26684;, &#20855;&#20307;&#21407;&#22240;&#19981;&#26126;, &#21738;&#20301;&#24110;&#25105;&#20462;&#22797;&#21602;?<br><br>======= English version =======<br>=======<br>NOTE!!!<br>=======<br>If you are a ywvim's old user, before upgrade to the latest version, please have a look at *all* of the release notes and known bugs then look for the more details about the corresponding part of them in the description, because maybe some imcompatible changes have been made between your old version and the latest one.<br>If you find a bug when using, please look at the &quot;known bugs&quot; section to make sure whether it's a know bug before you report.<br><br>Download the lastest script(1.20): <a target="_blank" href="http://www.vim.org/scripts/download_script.php?src_id=11117">http://www.vim.org/scripts/download_script.php?src_id=11117</A><br>Download the lastest mabiao(1.13): <a target="_blank" href="http://www.vim.org/scripts/download_script.php?src_id=10786">http://www.vim.org/scripts/download_script.php?src_id=10786</A><br><br>Introduce:<br>==========<br>ywvim is an input method for vim without the help of any external input method tools, it can input chinese in all modes of vim. Its target user is mainly of &#24418;&#30721;, and lacks many fancy features for &#25340;&#38899; users, for such a featureful IM, please have a look at vimim[<a target="_blank" href="http://www.vim.org/scripts/script.php?script_id=2506">http://www.vim.org/scripts/script.php?script_id=2506</A>].<br>Bad news: ywvim's key mappings conflict with vimim, you have to make a choice between them.<br><br>settings in .vimrc:<br>===================<br>put some lines like the following into your ~/.vimrc:<br><br>-----<br>let g:ywvim_ims=[<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\['cj', '&#20179;&#39049;', 'cangjie.ywvim'],<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\['wb', '&#20116;&#31508;', 'wubi.ywvim'],<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\['wb98', '&#20116;&#31508;98', 'wubi98.ywvim'],<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\['zm', '&#37073;&#30721;', 'zhengma.ywvim'],<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\['zy', '&#27880;&#38899;', 'zhuyin.ywvim'],<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\['ar30', '&#34892;&#21015;', 'array30.ywvim'],<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\['py', '&#25340;&#38899;', 'pinyin.ywvim'],<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\]<br>let g:ywvim_py = { 'helpim':'cj', 'gb':0 }<br>let g:ywvim_zhpunc = 1<br>let g:ywvim_listmax = 5<br>let g:ywvim_esc_autoff = 0<br>let g:ywvim_autoinput = 1<br>let g:ywvim_pagec = 1<br>let g:ywvim_helpim_on = 0<br>let g:ywvim_matchexact = 0<br>let g:ywvim_chinesecode = 1<br>let g:ywvim_gb = 0<br>let g:ywvim_preconv = 'g2b'<br>let g:ywvim_conv = ''<br>let g:ywvim_lockb = 0<br>-----<br><br>Explanation:<br><br>g:ywvim_ims is a must-have variable among so many options.<br><br>1. g:ywvim_ims is the variable that registers your input methods, the format is:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\['English_abbreviation_for_IM', 'Chinese_name_of_IM', 'mabiao_file']<br><br>For example, \['cj', '&#20179;&#39049;', 'cangjie.ywvim'], can be described as: cangjie input method, English abbreviation is cj, mabiao file is pinyin.ywvim.<br>ywvim will try to search the dir and subdirs under it, and use the first one if there are files shared with the same name..<br>the first one is the defaut one.<br>You can delete the lines of IM that you don't need at all.<br><br>2. let g:ywvim_py = { 'helpim':'cj', 'gb':0 }<br><br>You can setup a parameter which only has effect on a particular IM, IM's has higher priority on global's. Its format is:<br> <br>&nbsp;&nbsp;&nbsp;&nbsp;g:ywvim_{English_abbreviation_for_IM} = {'parameter':'setting'}<br><br>These parameters support local effect:<br>listmax: candidates max number.<br>maxelement: max length of phrase.<br>helpim: help IM's English abbreviation.<br>zhpunc: Input Chinese punctuations.<br>matchexact: show only the exact matched.<br>gb: set it to 1 means only input Chinese in gb2312.<br> <br>For instance you can setup like this:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;let g:ywvim_zy = {'listmax':6, 'maxelement':1, 'gb':0}<br><br>it means, for zhuyin(zy) IM, candidates max rumber(maxlist) is 6, max phrase(maxelement) is 1, only input Chinese in gb2312('gb':0).<br><br>You also can setup a parameter globally, format is let g:ywvim_listmax = 5, so you can setup a parameter easily for every IM.<br><br>3. g:ywvim_zhpunc: toggle the default Chinese punctuation on(1) or off(0).<br><br>4. g:ywvim_listmax: maxmum number of candidates.<br><br>5. g:ywvim_esc_autoff: whether auto toggle ywvim to be off when escaping from insertmode, 1 means yes, 0 no.<br>(Thanks to snow on #arch-cn@irc.oftc.net who gave this feature request.)<br><br>6. let g:ywvim_autoinput = 1:&nbsp;&nbsp;supports two extends of auto input, set it to 2 is high auto, every singe candiate is auto inputted, 1 is media auto, just auto input when pageup/down.<br>(Thanks for medicalwei on #arch-cn@irc.oftc.net's suggestion.)<br><br>7. let g:ywvim_pagec = 1: set to 1 means circle pages when reaching the end.<br>(Thanks for medicalwei on #arch-cn@irc.oftc.net's suggestion.)<br><br>8. let g:ywvim_helpim_on = 0: set it to 1 means support of help mabiao.<br><br>&nbsp;&nbsp;&nbsp;&nbsp;Warn: The speed is terrible slow for extremly large mabiao.<br><br>9. let g:ywvim_matchexact = 0: set to 1 means only show the exact matched Chinese.<br>(Thanks for medicalwei on #arch-cn@irc.oftc.net's suggestion.)<br><br>10. let g:ywvim_chinesecode = 1: when set, show the Chinese alphabets instead of English.<br>(Thanks for medicalwei on #arch-cn@irc.oftc.net's suggestion.)<br><br>11. let g:ywvim_gb = 1, set it to 1 means only input Chinese in gb2312.<br><br>12. let g:ywvim_preconv = 'g2b', define the preferred simplified-traditional conversion direction.<br><br>13. let g:ywvim_conv = 'g2b', direction of auto convertion bwtween Simplified and Traditional Chinese. 'g2b' Simplified -&gt; Traditional, 'b2g' Traditional -&gt; Simplified, '' (Leave it blank) disables feature.<br>(Thanks for vace on www.newsmth.net's suggestion.)<br><br>14. let g:ywvim_lockb = 0, 0 means not to lock up the keyboard when there's no charactor matched with.<br><br>Usage:<br>======<br>&lt;C-\&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Toggle ywvim between on and off.<br><br>;(semicolon) occasional English key.<br><br>z&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; occasional English key.<br><br>&lt;C-^&gt; setup ywvim:<br>&nbsp;&nbsp;&nbsp;&nbsp;&#30721;&#34920;&#20999;&#25442;.<br>&nbsp;&nbsp;&nbsp;&nbsp;&#20013;&#33521;&#26631;&#28857;&#20999;&#25442;.<br>&nbsp;&nbsp;&nbsp;&nbsp;&#26368;&#22823;&#35789;&#38271;: &#20320;&#24819;&#36755;&#20837;&#30340;&#26368;&#38271;&#30340;&#35789;. &#35774;&#20026; 1 &#20026;&#21333;&#23383;&#27169;&#35797;.<br>&nbsp;&nbsp;&nbsp;&nbsp;&#31616;&#32321;&#36716;&#25442;&#24320;&#20851;.<br>&nbsp;&nbsp;&nbsp;&nbsp;gb2312&#24320;&#20851;: &#35753; ywvim &#28388;&#25481; gb2312 &#33539;&#22260;&#20869;&#30340;&#27721;&#23383;.<br>&nbsp;&nbsp;&nbsp;&nbsp;&#21453;&#26597;&#30721;&#34920;&#24320;&#20851;.<br><br>,.-=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pageup/pagedown.<br><br>space or num key for input Chinese, Enter inputs English.<br>; Select the second candiate. Thanks for vace on www.newsmth.net's suggestion.)<br><br>NOTE for zhuyin users!!!:<br>two continual space is pagedown.<br>Enter is to select the defaut Chinese charator.<br>English key and Pinyin key don't be bond to any keys by default(you can configure it).<br><br>Known Bugs:<br>===========<br>1. If ywvim is on in current buffer, and if you edit a new buffer, the status of ywvim seems to be on, but it isn't actual, you need to hit two &lt;C-\&gt;s to toggle ywvim off and on to make it work again. I have no idea why it happens.<br>Workaround: switch on g:ywvim_esc_autoff: let g:ywvim_esc_autoff = 1, to make sure quit ywvim after escape from insert mode always.<br><br>2. help mabiao can't work correctly on non-utf-8 encoding. Workaround: append an extra space at every line in the main part of mabiao file(Offical mabiao has done it.)<br><br>3. Slow issue on big help mabiao. Workaround: use a relative small mabiao, or set the listmax to a smaller value.<br><br>4. enmode conflicts with paticular Chinese punctuations.<br>Such as &quot; and '. Enmode needs a new mechanism to implement.<br><br>Feedback:<br>=========<br>Please send the feedback, patch or advice to my email.<br><br>TODOes:<br>======<br><br>FAQ:<br>============<br>Q: Supports fuzzy searching? Supports auto frequency?<br>A: Author doesn't use fuzzy searching at all, but if you have patch, please send<br>it to me.<br>About auto frequency, it's a hell for shape input method, but maybe useful for pinyin users. If you can patch it, please do it and send the patch to the author. Thanks.<br><br>Mabiao file format:<br>===================<br>The mabiao which ywvim uses is just plaintext, so everyone can create his own mabiao easily. Please make sure the mabiao is in utf-8 fileencoding.<br><br>Contains four fields: [Description], [CharDefinition], [Punctuation] and [Main]. They must be appeared in fire in sequences:<br>[Description] general parameter of a input method.<br>[CharDefinition] For the IM like zhuyin and cangjie that have Chinese alphabets.<br>[Punctuation] contains punctuations, [Main] is the main part.<br><br>[Description]<br>Name=&#20489;&#38945;&#20116;&#20195;&nbsp;&nbsp; &lt;== mabiao's name.<br>MaxCodes=5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;== Max code number.<br>MaxElement=1&nbsp;&nbsp;&lt;== max phase length. Thanks for vace on www.newsmth.net's suggestion.<br>UsedCodes=abcdefghijklmnopqrstuvwxyz &lt;== All keys that needs to triggle IM input.<br>EnChar=;&nbsp;&nbsp;&nbsp;&nbsp;&lt;= occasional English key.<br>PyChar=z&nbsp;&nbsp;&nbsp;&nbsp;&lt;= occasional PinYin key.<br>InputZhSecKeys=; &lt;= Key for input the second candidate.<br>Following is for ZhuYin alike IM, other IM don't need to set them at all.<br>EndCodes=&nbsp;&nbsp;&lt;= Why keys mean input Chinese has ended.<br>InputZhKeys=&nbsp;&nbsp;&lt;= Input Chinese's key.<br>InputEnKeys=&nbsp;&nbsp;&lt;= Input English's key.<br>PageUpExtraKeys= &lt;= Extra keys for pageup.<br>PageDnExtraKeys= &lt;= Extra keys for pagedown.<br><br>[CharDefinition]<br>a &#26085;&nbsp;&nbsp;&lt;== Definition of Chinese alphabets. If hasn't, leave it blank.<br><br>[Punctuation]<br>{ &#12302;<br>&quot; &#8220; &#8221;<br><br>[Main]<br>a &#26085; &#26352; &lt;== Char code and Chinese Charactors. Leave a space at the end of a line<br>if help mabiao can't work correctly when on utf-8's encoding. I don't know the<br>reason, could someone help me for fixing it please?<br></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">install details</td></tr>
+<tr><td>&#23433;&#35013;:<br>=====<br>&#38468;&#20214; ywvim.vim-&lt;version&gt;.tar.bz2 &#26159; ywvim &#33050;&#26412;, ywvim_mb-&lt;version&gt;.tar.bz2 &#21253;&#21547;&#20102;&#24120;&#29992;&#30721;&#34920;, &#26377;&#27880;&#38899;, &#34892;&#21015;, &#20179;&#39049;, &#25340;&#38899;, &#37073;&#30721;, &#20116;&#31508;86 &#21644; 98 &#30340;&#30721;&#34920;, &#19968;&#20010; gb2312 &#33539;&#22260;&#30340;&#27721;&#23383;&#21015;&#34920;, g2b &#31616;&#32321;&#36716;&#25442;&#34920;.<br>(&#24863;&#35874;&#22312; #arch-cn@irc.oftc.net &#19978;&#30340; medicalwei &#23545;&#27880;&#38899;&#25552;&#20379;&#30340;&#24314;&#35758;.)<br>(&#24863;&#35874;&#22312; newsmth.net &#19978;&#30340; vace &#23545; g2b &#25552;&#20379;&#30340;&#20449;&#24687;)<br><br>&#35201;&#20351;&#29992; ywvim, &#20320;&#38656;&#35201; ywvim.vim &#33050;&#26412;&#21644;&#33267;&#23569;&#19968;&#20010;&#30721;&#34920;. &#35201;&#20351;&#29992;&#31616;&#32321;&#36716;&#25442;&#21151;&#33021;, &#20320;&#38656;&#35201; g2b &#31616;&#32321;&#36716;&#25442;&#34920;. &#35201;&#20351;&#29992;&#21482;&#36755;&#20837; gb2312 &#37324;&#27721;&#23383;&#21151;&#33021;, &#20320;&#38656;&#35201; gb2312 &#33539;&#22260;&#30340;&#27721;&#23383;&#21015;&#34920;.<br><br>&#24403; ywvim &#26377;&#26032;&#29256;&#26412;&#26102;, &#19968;&#33324;&#21482;&#38656;&#26356;&#26032;&#33050;&#26412;&#21363;&#21487;, &#38500;&#38750;&#26377;&#19987;&#38376;&#36890;&#30693;&#25552;&#31034;&#20320;&#30721;&#34920;&#38656;&#35201;&#26356;&#26032;. &#35831;&#30830;&#20445;&#20320;&#19979;&#30340;&#26159;&#26368;&#26032;&#30340;&#33050;&#26412;&#21644;&#30721;&#34920;(&#29256;&#26412;&#19981;&#19968;&#23450;&#30456;&#21516;.)<br><br>&#35299;&#21387;&#33050;&#26412;&#21644;&#30721;&#34920;&#21040;&#20320;&#30340; ~/.vim/plugin &#30446;&#24405;&#19979;(windows &#20026; vimfiles/plugin).<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$ cd ~/.vim/plugin<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$ tar xvf ywvim.vim.tar.bz2; tar xvf ywvim_mb.tar.bz2<br><br>&#26377;&#20123;&#31995;&#32479;&#30340; tar &#29256;&#26412;&#36739;&#32769;, &#24517;&#39035;&#29992; tar jxvf &#26469;&#35299;&#21387;. &#26377;&#26102;&#22312;&#20320;&#35299;&#21387;&#30721;&#34920;&#21253;&#26102;, &#20250;&#25552;&#31034;&#26377;&#38169;&#35823;, &#22240;&#20026;&#25105;&#29992;&#30340;&#26159; FreeBSD, &#19988;&#25991;&#20214;&#37117;&#25918;&#22312;&#19968;&#20010; fat32 &#20998;&#21306;, &#21407;&#22240;&#26410;&#26126;, &#20294;&#19968;&#33324;&#37117;&#21487;&#25918;&#24515;&#30340;&#26080;&#35270;&#20043;.<br><br>Install:<br>========<br>The attachment ywvim.vim-&lt;version&gt;.tar.bz2 is the ywvim script itselt, ywvim_mb-&lt;version&gt;.tar.bz2 contains some common input methods mabiao(&#30721;&#34920;): zhuyin, array, cangjie, pinyin, zhengma, wubi 86/98, a gb2312 charactors list, g2b Simplified and Traditional Chinese convertion list.<br>(Thanks for medicalwei on #arch-cn@irc.oftc.net's suggestion on zhuyin.)<br>(Thanks for vace on newsmth.net's info on g2b.)<br><br>You need both script and at least one of mabiao in order to make ywvim to work. You needs g2b.ywvim for simplified-traditional convertion. You needs gb2312 charactors list for inputing charactors only in gb2312 ranges.<br><br>When ywvim has new version, it's general enough to update only the ywvim script, unless there is announcing that info you should need to update the mabiao. Please make sure you use the lastest version of script and mabiao(the version may not be the same).<br><br>Unpack the script and mabiao into your ~/.vim/plugin.<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$ cd ~/.vim/plugin<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$ tar xvf ywvim.vim.tar.bz2; tar xvf ywvim_mb.tar.bz2<br><br>Some OS with older version tar needs to use tar jxvf explicitly. Sometimes it has errors when unpack the mabiao tarball, my OS is FreeBSD and the files located in a fat32 filesystem, I don't know the reason, but you can ignore it in most case.</td></tr>
+<tr><td>&nbsp;</td></tr>
+</table>
+
+<!-- rating table -->
+<form name="rating">
+<input type="hidden" name="script_id" value="2662">
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>rate this script</b></td>
+  <td valign="middle">
+    <input type="radio" name="rating" value="life_changing">Life Changing
+    <input type="radio" name="rating" value="helpful">Helpful
+    <input type="radio" name="rating" value="unfulfilling">Unfulfilling&nbsp;
+    <input type="submit" value="rate">
+  </td>
+</tr>
+</table>
+</form>
+<span class="txth2">script versions</span> (<a href="add_script_version.php?script_id=2662">upload new version</a>)
+<p>
+Click on the package to download.
+<p>
+
+<table cellspacing="2" cellpadding="4" border="0" width="100%">
+<tr class='tableheader'>
+        <th valign="top">package</th>
+    <th valign="top">script version</th>
+    <th valign="top">date</th>
+    <th valign="top">Vim version</th>
+    <th valign="top">user</th>
+    <th valign="top">release notes</th>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=11117">ywvim.vim_1.20.tar.bz2</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.20</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-08-02</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=17429">Yue Wu</a></i></td>
+    <td class="rowodd" valign="top" width="2000">&#20026;&quot;&#31354;&#30721;&#19981;&#38145;&#38190;&#30424;&quot;&#20248;&#21270;&#20102;&#24555;&#25463;&#38190;&lt;C-w&gt;&#30340;&#34920;&#29616;.<br>Improved key map &lt;C-w&gt; behavior for the 'unlocked keyboard'.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=11116">ywvim.vim_1.19.tar.bz2</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.19</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-08-01</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=17429">Yue Wu</a></i></td>
+    <td class="roweven" valign="top" width="2000">&#22686;&#21152; added:<br>1. &#40664;&#35748;&#30340;&#31616;&#32321;&#36716;&#25442;&#26041;&#21521;. Preferred simplified-traditonal conv direction: <br>&nbsp;&nbsp;&nbsp;&nbsp;let g:ywvim_preconv = 'g2b'<br>2. &#31354;&#30721;&#26102;&#19981;&#38145;&#23450;&#38190;&#30424;&#35774;&#32622;. Don't lock keyboard when no matched:<br>&nbsp;&nbsp;&nbsp;&nbsp;let g:ywvim_lockb = 0</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=11063">ywvim.vim-1.18.tar.bz2</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.18</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-07-25</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=17429">Yue Wu</a></i></td>
+    <td class="rowodd" valign="top" width="2000">&#35299;&#20915;&#20102; enmode &#19982;&#20013;&#25991;&#26631;&#28857;&#20914;&#31361; bug.<br>Workaround for enmode conflicts with Chinese punctuations' bug.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=10890">ywvim.vim-1.17.tar.bz2</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.17</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-06-24</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=17429">Yue Wu</a></i></td>
+    <td class="roweven" valign="top" width="2000">1. &#20462;&#27491;&#22312; windows &#19978;&#30340;&#21629;&#20196;&#34892;&#26174;&#31034; bug.<br>(&#24863;&#35874;&#22312; newsmth.net &#19978;&#30340; vace &#30340;&#25253;&#21578;)<br>2. g:ywvim_chinesepunc &#25913;&#21517;&#20026; g:ywvim_zhpunc.<br><br>1. Fix cmdline display bug on windows.<br>(Thanks to vace on newsmth.net who catch this bug.)<br>2. g:ywvim_chinesepunc was renamed to g:ywvim_zhpunc.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=10798">ywvim.vim-1.16.tar.bz2</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.16</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-06-11</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=17429">Yue Wu</a></i></td>
+    <td class="rowodd" valign="top" width="2000">&#32469;&#36807;&#22312; windows &#19979;&#30340; E341 &#30340; bug(&#36825;&#26159; vim &#30340; bug..).<br>Avoid bug of E341 on windows.(It's a vim's bug..).</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=10792">ywvim.vim-1.15.tar.bz2</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.15</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-06-09</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=17429">Yue Wu</a></i></td>
+    <td class="roweven" valign="top" width="2000">1. &#20462;&#22797;&#38750;&#25554;&#20837;&#27169;&#24335;&#20381;&#36182;&#20110;&#25554;&#20837;&#27169;&#24335;&#30340; bug. &#29616;&#22312;&#21487;&#20197;&#38543;&#26102;&#38543;&#22320;&#22312;&#20219;&#20309;&#27169;&#24335;&#20351;&#29992; ywvim &#20102;!<br>Fixed non insert mode depended on insert mode's bug, now you can toggle ywvim unlimitedly in every mode as you like!<br><br>2. &#25913;&#21892;&#20102;&#22312;&#38750;&#25554;&#20837;&#27169;&#24335;&#26102;&#30340;&#26174;&#31034;.<br>Improved displaying when in non insert modes.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=10788">ywvim.vim-1.14.tar.bz2</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.14</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-06-09</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=17429">Yue Wu</a></i></td>
+    <td class="rowodd" valign="top" width="2000">&#20462;&#22797;&#31616;&#32321;&#36716;&#25442;&#22312;&#38750; utf-8 &#19979;&#22833;&#25928;&#38382;&#39064;.<br>(&#24863;&#35874;&#22312; newsmth.net &#19978;&#30340; vace &#30340;&#25253;&#21578;)<br><br>Fixed Sim. &lt;-&gt; Trad. can't work on non utf-8 encoding.<br>(Thanks to vace on newsmth.net who catch this bug.)</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=10787">ywvim.vim-1.13.tar.bz2</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.13</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-06-09</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=17429">Yue Wu</a></i></td>
+    <td class="roweven" valign="top" width="2000">1. g:ywvim_helpmbstatus &#25913;&#21517;&#20026; g:ywvim_helpim_on.<br>1. g:ywvim_helpmbstatus is renamed to g:ywvim_helpim_on.<br><br>2. &#25913;&#21892;&#20102;&#29366;&#24577;&#26639;&#30340;&#39068;&#33394;&#26174;&#31034;&#25928;&#26524;.<br>2. Improved some hightlights of statusline.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=10786">ywvim_mb-1.13.tar.bz2</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.13</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-06-09</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=17429">Yue Wu</a></i></td>
+    <td class="rowodd" valign="top" width="2000">&#30721;&#34920;&#26356;&#26032;!<br>g2b.ywvim &#31616;&#32321;&#35789;&#37327;&#22686;&#21152; 2466 -&gt; 3145.<br>(&#24863;&#35874;&#22312; newsmth.net &#19978;&#30340; vace &#25552;&#20379;&#20449;&#24687;)<br>Mabiao updated!<br>Number of g2b.ywvim's charcotr 2466 -&gt; 3145.<br>(Thanks for vace on newsmth.net's info.)</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=10783">ywvim.vim-1.12.tar.bz2</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.12</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-06-08</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=17429">Yue Wu</a></i></td>
+    <td class="roweven" valign="top" width="2000">&#20462;&#22797; &#31616;&#32321;&#36716;&#25442; bug.<br>(&#24863;&#35874;&#22312; newsmth.net &#19978;&#30340; vace &#30340;&#21453;&#39243;)<br>fixed bug on Sim. -&gt; Tra.<br>(Thanks to vace on newsmth.net who catch this bug.)</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=10782">ywvim.vim-1.11.tar.bz2</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.11</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-06-08</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=17429">Yue Wu</a></i></td>
+    <td class="rowodd" valign="top" width="2000">1. &#21462;&#28040; g:ywvim_whitelstfile, &#21462;&#28040;&#30721;&#34920;&#32423;&#21035;&#21464;&#37327;: whitelstfile, wlst. &#22686;&#21152; g:ywvim_gb &#21644;&#30721;&#34920;&#32423;&#21035;&#21464;&#37327; gb.<br>1. Abandon g:ywvim_whitelstfile, abandon local varible: whitelstfile, wlst. added g:ywvim_gb and local variable gb.<br><br>2. added g:ywvim_conv.<br>2. added g:ywvim_conv.<br><br>3. &#21462;&#28040; &lt;C-m&gt; &#20999;&#25442;&#30333;&#21517;&#21333;. &#22686;&#21152; &lt;C-^&gt; g &#20999;&#25442; gb/gbk.<br>3. Adandon: &lt;C-m&gt; for toggling white list. Added &lt;C-^&gt; g to toggle gb/gbk.<br><br>4. &#20462;&#22797; gbk encoding &#36755;&#20837;&#27861;&#21517;&#31216;&#20081;&#30721; bug.<br>(&#24863;&#35874;&#22312; www.newsmth.net &#19978;&#30340; vace &#21453;&#39304;)<br>4. Fix bug on gbk encoding.<br>(Thanks for vace on www.newsmth.net's report.)<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=10781">ywvim_mb-1.11.tar.bz2</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.11</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-06-08</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=17429">Yue Wu</a></i></td>
+    <td class="roweven" valign="top" width="2000">&#30908;&#34920;&#26356;&#26032;!<br>mabiao updated!<br>&#22686;&#21152; g2b.ywvim, &#31777;&#32321;&#36681;&#25563;&#35382;&#20856;.<br>Add a g2b.ywvim, for converting between Simplified and Traditional Chinese.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=10771">ywvim.vim-1.10.tar.bz2</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.10</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-06-08</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=17429">Yue Wu</a></i></td>
+    <td class="rowodd" valign="top" width="2000">1. &lt;C-m&gt; &#20999;&#25442;&#30333;&#21517;&#21333;.<br>1. &lt;C-m&gt; toggles whitelist.<br><br>2. &#29366;&#24577;&#26639;&#36755;&#20837;&#27861;&#21517;&#31216;&#29992;&#19981;&#21516;&#39068;&#33394;&#25552;&#31034;&#30333;&#21517;&#21333;&#24320;&#21551;&#29366;&#24577;.<br>(&#24863;&#35874;&#22312; newsmth.net &#19978;&#30340; vace &#25552;&#20379;&#30340;&#24314;&#35758;)<br>2. use different color for differ the status of whitelist.<br>(Thanks for vace on newsmth.net's suggestion.)<br><br>3. &#20462;&#22797; windowns gbk &#29615;&#22659;&#20081;&#30721;.<br>3. fix garbled charactor on windows gbk encoding.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=10770">ywvim.vim-1.9.tar.bz2</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.9</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-06-07</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=17429">Yue Wu</a></i></td>
+    <td class="roweven" valign="top" width="2000">1. g:ywvim_ims &#30340;&#26684;&#24335;&#25913;&#21464;, &#35831;&#21153;&#24517;&#35201;&#26356;&#25913;&#26684;&#24335;(&#35814;&#35265;&#35828;&#26126;)!<br>1. Format of g:ywvim_ims has been changed, you must adjust it!<br><br>2. &#21487;&#20197;&#21333;&#29420;&#35774;&#32622;&#27599;&#20010;&#30721;&#34920;&#30340;&#21442;&#25968;. &#30721;&#34920;&#32423;&#21035;&#20248;&#20808;(&#35814;&#35265;&#35828;&#26126;).<br>2. Most variables can be locale on IM now.<br><br>3. &#22686;&#21152; g:ywvim_wlst_on, &#25511;&#21046;&#30333;&#21517;&#21333;&#24320;&#20851;.<br>Added g:ywvim_wlst_on, for controling while list support.<br><br>4. &#22686;&#21152; g:ywvim_whitelstfile, &#35774;&#32622;&#30333;&#21517;&#20214;&#25991;&#20214;.<br>Added g:ywvim_whitelstfile, for setup while list file.<br><br>5. &#20462;&#22797;&#31934;&#30830;&#21305;&#37197;&#24320;&#21551;&#26102;&#30340;&#31354;&#30721;&#36755;&#20986;&#20986;&#38169;&#30340; bug.<br>fixed a bug which is introduce from matchexact.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=10763">ywvim.vim-1.8.tar.bz2</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.8</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-06-07</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=17429">Yue Wu</a></i></td>
+    <td class="rowodd" valign="top" width="2000">1. &#21435;&#25481;&#20174;&#20013;&#25991;&#26631;&#28857;&#36716;&#21040;&#33521;&#25991;&#26631;&#28857;&#38169;&#35823;&#30340;&#34411;&#23376;.<br>(&#24863;&#35874;&#22312; #arch-cn@irc.oftc.net &#19978;&#30340; medicalwei &#25552;&#20379;&#30340;&#20449;&#24687;.)<br>1. Fix a bug when switch punctuation from chinese to English.<br>(Thanks for medicalwei on #arch-cn@irc.oftc.net's catch.)<br><br>2. &#22686;&#21152;&#21482;&#26174;&#31034;&#20840;&#30721;&#21305;&#37197;&#30340;&#23383; let g:ywvim_matchexact = 1<br>2. Add a feature for showing the exact matched Chinese. g:ywvim_matchexact = 1.<br><br>3. &#22686;&#21152;&#20013;&#25991;&#23383;&#27597;&#26174;&#31034;&#25903;&#25345;: let g:ywvim_chinesecode = 1<br>3. Add a feature for displaying Chinese alphabets instead of English.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=10762">ywvim_mb-1.8.tar.bz2</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.8</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-06-07</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=17429">Yue Wu</a></i></td>
+    <td class="roweven" valign="top" width="2000">&#30721;&#34920;&#26356;&#26032;.<br>1. &#22686;&#21152;&#20102; [CharDefinition] &#21306;&#22495;.<br>Added a field of [CharDefinition].</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=10760">ywvim.vim-1.7.tar.bz2</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.7</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-06-07</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=17429">Yue Wu</a></i></td>
+    <td class="rowodd" valign="top" width="2000">1. &#20462;&#22797;&#20102; g:ywvim_autoinput &#22312;&#27880;&#38899;&#19978;&#30340; bug. (&#24863;&#35874;&#22312; #arch@irc.oftc.net &#19978;&#30340; medicalwei &#25552;&#20379;&#30340;&#32447;&#32034;)<br>1. Fix g:ywvim_autoinput bug when using zhuyin.(Thanks to medicalwei on #arch-cn@irc.oftc.net who catch this bug.)<br><br>2. g:ywvim_autoinput &#29616;&#22312;&#25903;&#25345;&#20004;&#31181;&#31243;&#24230;&#30340;&#33258;&#21160;&#27169;&#24335;. &#35774;&#20026; 2 &#20026;&#37325;&#24230;&#33258;&#21160;, &#20219;&#20309;&#21333;&#30721;&#23383;&#37117;&#33258;&#21160;&#19978;&#23631;. 2 &#20026;&#20013;&#24230;&#33258;&#21160;, &#21482;&#22312;&#32763;&#39029;&#26102;&#20986;&#29616;&#30340;&#21333;&#30721;&#23383;&#25165;&#19978;&#23631;.<br>2. g:ywvim_autoinput now supports two extends of auto input, set it to 2 is high auto, every singe candiate is auto inputted, 1 is media auto, just auto input when pageup/down.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=10759">ywvim_mb-1.7.tar.bz2</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.7</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-06-07</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=17429">Yue Wu</a></i></td>
+    <td class="roweven" valign="top" width="2000">Mabiaos are packed by tar and bzip.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=10758">ywvim.vim-1.6.rar</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.6</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-06-07</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=17429">Yue Wu</a></i></td>
+    <td class="rowodd" valign="top" width="2000">1. &#24223;&#38500; g:ywvim_phasemaxlen.<br>1. abandon g:ywvim_phasemaxlen.<br><br>2. &#22686;&#21152; g:ywvim_helpmbstatus &#25511;&#21046;&#21453;&#26597;&#30721;&#34920;&#24320;&#21551;.<br>2. Add g:ywvim_helpmbstatus for controling help mabiao.<br><br>3. &#22686;&#21152; ; &#36873;&#25321;&#31532;&#20108;&#20505;&#36873;&#35789;&#21151;&#33021;.<br>3. Add using ; to select the second candiate.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=10757">ywvim_mb-1.6.rar</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.6</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-06-07</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=17429">Yue Wu</a></i></td>
+    <td class="roweven" valign="top" width="2000">1. &#30721;&#34920;&#26356;&#26032;.<br>&#22686;&#21152; MaxElement &#30340;&#25903;&#25345;. &#38656;&#35201;&#20840;&#23616;&#25913;&#21464;&#26368;&#22823;&#35789;&#38271;&#35774;&#32622;&#30340;&#35831;&#20462;&#25913;&#36825;&#34892;, &#20020;&#26102;&#25913;&#21464;&#21487;&#20197;&#36890;&#36807; &lt;C-^&gt; &#35774;&#32622;.<br>1. mabiao updated.<br>add MaxElement support, now you need to modify this line for changing global setting for max phase length, for local setting, use &lt;C-^&gt;.<br><br>2. &#20462;&#25913;&#20102;&#34892;&#21015;&#30721;&#34920;&#30340;&#38169;&#35823;.<br>2. fix bug in arrary30.ywvim.<br><br>3. &#22312;&#30721;&#34920;&#30340;&#27599;&#19968;&#34892;&#22686;&#21152;&#19968;&#20010;&#31354;&#26684;&#26242;&#26102;&#35299;&#20915;&#21453;&#26597;&#30721;&#34920;&#19981;&#33021;&#22312;&#38750; utf-8 &#19979;&#24037;&#20316;&#30340;&#38382;&#39064;.<br>3. Add a space in each line for dirty workaround help mabiao not working on non-utf8 encoding.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=10753">ywvim.vim-1.5.tar.bz2</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.5</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-06-06</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=17429">Yue Wu</a></i></td>
+    <td class="rowodd" valign="top" width="2000">1. Add let g:ywvim_autoinput = 1<br>&nbsp;&nbsp;&nbsp;&nbsp;auto input the only candidate.<br>&nbsp;&nbsp;&nbsp;&nbsp;&#22686;&#21152;&#33258;&#21160;&#19978;&#23631;&#36873;&#39033;.<br>2. Add let g:ywvim_pagec = 1<br>&nbsp;&nbsp;&nbsp;&nbsp;circle pageup/pagedown.<br>&nbsp;&nbsp;&nbsp;&nbsp;&#22686;&#21152;&#32763;&#39029;&#24490;&#29615;.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=10752">ywvim.vim_1.4.tar.bz2</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.4</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-06-06</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=17429">Yue Wu</a></i></td>
+    <td class="roweven" valign="top" width="2000">1. &#27880;&#38899; support is added.<br>&nbsp;&nbsp; &#22686;&#21152;&#27880;&#38899;&#25903;&#25345;.<br>2. Support for new options in mabiao is added.<br>&nbsp;&nbsp; &#25903;&#25345;&#26032;&#22686;&#30340;&#30721;&#34920;&#36873;&#39033;.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=10751">ywvim_mb_1.4.tar.bz2</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.4</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-06-06</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=17429">Yue Wu</a></i></td>
+    <td class="rowodd" valign="top" width="2000">1. &#27880;&#38899; mabiao is added.<br>&nbsp;&nbsp;&nbsp;&nbsp;&#22686;&#21152;&#20102;&#27880;&#38899;&#30721;&#34920;&#30340;&#25903;&#25345;.<br>2. mabiao file supports more options:<br>&nbsp;&nbsp;&nbsp;&nbsp;&#30721;&#34920;&#25991;&#20214;&#25903;&#25345;&#26356;&#22810;&#30340;&#36873;&#39033;:<br>EndCodes=<br>InputZhKeys=<br>InputEnKeys=<br>PageUpExtraKeys=<br>PageDnExtraKeys=</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=10747">ywvim.vim-1.3.tar.bz2</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.3</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-06-05</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=17429">Yue Wu</a></i></td>
+    <td class="roweven" valign="top" width="2000">(1) remove the limitation of whitelist only works for utf-8 encoding.<br>&#21435;&#38500;&#20102;&#30333;&#21517;&#21333;&#30340; utf-8 encoding &#38480;&#21046;.<br>(2) Fixed bug that whitelist has no effect.<br>&#21435;&#38500;&#20102;&#30333;&#21517;&#21333;&#22833;&#25928;&#30340;&#34411;&#23376;.<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=10744">ywvim.vim-1.2.tar.bz2</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.2</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-06-05</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=17429">Yue Wu</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Add an option: g:ywvim_esc_autoff, now you can set it to 1 to let vim auto toggle the IM to be off when escape from insert mode.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=10742">ywvim.vim-1.1.tar.bz2</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.1</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-06-05</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=17429">Yue Wu</a></i></td>
+    <td class="roweven" valign="top" width="2000">format of g:ywvim_ims has been changed for convenient usage.</td>
+</tr>
+</table>
+<!-- finish off the framework -->
+          </td>
+        </tr>
+      </table>
+    </td>
+
+  </tr>
+</table>
+
+<!-- END OF THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr><td colspan="4" bgcolor="#000000"><img src="/images/spacer.gif" height="2" width="1" alt=""></td></tr>
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr>
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+
+    <td align="left" valign="top"><small>
+      If you have questions or remarks about this site, visit the
+      <a href="http://vimonline.sf.net">vimonline development</a> pages.
+      Please use this site responsibly.
+      <br> 
+      
+      Questions about <a href="http://www.vim.org/about.php">Vim</a> should go
+      to the <a href="http://www.vim.org/maillist.php">maillist</a>.
+      Help Bram <a href="http://iccf-holland.org/">help Uganda</a>.
+      </small>
+	&nbsp;
+	&nbsp;
+
+	<!-- Start of StatCounter Code -->
+	<script type="text/javascript" language="javascript">
+	var sc_project=1417324; 
+	var sc_invisible=1; 
+	var sc_partition=11; 
+	var sc_security="d41633bc"; 
+	</script>
+
+	<script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script><noscript><a href="http://www.statcounter.com/" target="_blank"><img  src="http://c12.statcounter.com/counter.php?sc_project=1417324&java=0&security=d41633bc&invisible=0" alt="free tracking" border="0"></a> </noscript>
+	<!-- End of StatCounter Code -->
+          </td>
+
+    <td align="right" valign="top">
+      		<a href="http://sourceforge.net/projects/vim" rel="nofollow"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=8&type=1" width="88" height="31" border="0" alt="SourceForge.net Logo" /></a>
+    </td>
+
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+  </tr>
+
+    
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  
+  </tr>
+</table>
+
+</body>
+</html>
+

@@ -1,0 +1,372 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+  <link rel="Stylesheet" type="text/css" href="/css/style.css" >
+  <title>LustyJuggler - Switch very quickly between your active buffers : vim online</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <meta name="KEYWORDS" content="Vim, Vi IMproved, text editor, home, documentation, tips, scripts, news">
+  <link rel="shortcut icon" type="image/x-icon" href="/images/vim_shortcut.ico">
+</head>
+
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff"> 
+
+<!-- HEADER, SPONSOR IMAGE, VIM IMAGE AND BOOK AD -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+  <td class="lightbg">&nbsp;&nbsp;&nbsp;</td>
+  <td class="lightbg" align="left"><a href="/sponsor/index.php"><img src="/images/sponsorvim.gif" alt="sponsor Vim development" border="0"></a></td>
+    <td class="lightbg" align="center"><a href="/index.php"><img src="/images/vim_header.gif" border="0" alt="Vim logo"></a></td>
+    <td class="lightbg" align="right"><a href="http://iccf-holland.org/click5.html"><img src="/images/buyhelplearn.gif" alt="Vim Book Ad" border="0"></a></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="darkbg"><img src="/images/spacer.gif" width="1" height="10" alt=""></td>
+  </tr>
+</table>
+<!-- THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+  <col width="180">
+  <col width="1">
+
+  <tr valign="top">
+    <td class="sidebar">
+      <table width="180" cellpadding="4" cellspacing="0" border="0">
+        <tr valign="top">
+          <td class="sidebar">
+
+<!-- INCLUDE THE PAGE NAVIGATION -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+    <tr>
+        <td><small>not logged in (<a href="/login.php">login</a>)</small></td>
+    </tr>
+    <tr><td>
+<small>&nbsp;</small>
+<form action="http://www.google.com/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-3005259998294962:bvyni59kjr1" />
+    <input type="hidden" name="ie" value="ISO-8859-1" />
+    <input type="text" name="q" size="20" />
+    <br>
+    <input type="submit" name="sa" value="Search" />
+  </div>
+</form>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+    </td></tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="1"></td>
+    </tr>
+    <tr>
+        <td class="darkbg"><img src="/images/spacer.gif" alt='' border="0" height="3"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="2"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/index.php">Home</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/search.php">Advanced search</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/about.php">About Vim</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/community.php">Community</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/news/news.php">News</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/sponsor/index.php">Sponsoring</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/trivia.php">Trivia</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/docs.php">Documentation</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/download.php">Download</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/scripts/index.php">Scripts</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/tips/index.php">Tips</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/account/index.php">My Account</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/huh.php">Site Help</a></td>
+        </tr>
+</table>
+
+            <table width="172" cellpadding="0" cellspacing="0" border="0">
+              <tr><td><img src="/images/spacer.gif" alt="" border="0" width="1" height="8"></td></tr>
+              <tr><td class="darkbg"><img src="/images/spacer.gif" width="1" height="3" alt=""></td></tr>
+            </table>
+            <br>
+
+<!-- INCLUDE THE PAGE SIDEBAR TEXT -->
+&nbsp;
+
+          </td>
+        </tr>
+      </table>
+    </td>
+
+    <td class="darkbg"><img src="/images/spacer.gif" width="1" height="1" border="0" alt=""><br></td>
+    <td>
+      <table width="100%" cellpadding="10" cellspacing="0" border="0" bordercolor="red">
+        <tr>
+          <td valign="top">
+
+<span class="txth1">LustyJuggler : Switch very quickly between your active buffers</span> 
+
+<br>
+<br>
+
+<!-- karma table -->
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
+  <td>
+    Rating <b>76/27</b>,
+    Downloaded by 2249  </td>
+  <td class="lightbg">
+  <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
+  </td>
+  <td>
+    <a href="http://vim.wikia.com/wiki/Script:2050">Vim wiki</a>
+  </td>  
+</tr>
+</table>
+<p>
+
+<table cellspacing="0" cellpadding="0" border="0">
+<tr><td class="prompt">created by</td></tr>
+<tr><td><a href="/account/profile.php?user_id=12358">Stephen Bach</a></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">script type</td></tr>
+<tr><td>utility</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">description</td></tr>
+<tr><td>LustyJuggler is a high speed buffer juggler.&nbsp;&nbsp;Having to consciously think about which buffer you need to switch to sucks, so use this instead.<br><br>Someone made a screen cast showing it in action (jump to 6:20):<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a target="_blank" href="http://lococast.net/archives/185">http://lococast.net/archives/185</A><br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Some older stuff:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a target="_blank" href="http://viewglob.sourceforge.net/lusty-juggler-animated.gif">http://viewglob.sourceforge.net/lusty-juggler-animated.gif</A><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a target="_blank" href="http://viewglob.sourceforge.net/lusty-juggler-annotated.png">http://viewglob.sourceforge.net/lusty-juggler-annotated.png</A><br><br>Launch the juggler with this key combo:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Leader&gt;lj<br><br>The command bar at bottom is replaced with a new bar showing the names of your currently opened buffers in most-recently-used order.<br><br>The buffer names are mapped to these keys:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1st --&gt; a or 1<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2nd --&gt; s or 2<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3rd --&gt; d or 3<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4th --&gt; f or 4<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5th --&gt; g or 5<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6th --&gt; h or 6<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7th --&gt; j or 7<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8th --&gt; k or 8<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;9th --&gt; l or 9<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;10th --&gt; ; or 0<br><br>So if you type &quot;f&quot; or &quot;4&quot;, the fourth buffer name will be highlighted and the bar will shift to center it as necessary (and show more of the buffer names on the right).<br><br>If you want to switch to that buffer, press &quot;f&quot; or &quot;4&quot; again or press &quot;&lt;ENTER&gt;&quot;.&nbsp;&nbsp;Alternatively, press one of the other mapped keys to highlight another buffer.<br><br>If you changed your mind, cancel the juggler with any of &quot;q&quot;, &quot;&lt;ESC&gt;&quot;, &quot;&lt;C-c&quot;, &quot;&lt;BS&gt;&quot;, &quot;&lt;Del&gt;&quot;, or &quot;&lt;C-h&gt;&quot;.<br><br>If you like LustyJuggler, you may also like LustyExplorer: <a href="/scripts/script.php?script_id=1890">vimscript #1890</a><br><br>Development repository: <a target="_blank" href="http://github.com/sjbach/lusty">http://github.com/sjbach/lusty</A></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">install details</td></tr>
+<tr><td>Copy the script into your $HOME/.vim/plugin directory so that it will be sourced on startup.<br><br>NOTE: This plugin requires Vim be compiled with Ruby interpretation.&nbsp;&nbsp;If you do not currently have this functionality, see the &quot;Install Details:&quot; section of the script for directions on adding it.&nbsp;&nbsp;It's not too tough.<br><br>Also: because of a bug in Vim's maparg() call, this plugin can interact poorly with plugins that remap common normal mode keys such as &quot;d&quot; (for dd, dw, etc.) and &quot;&lt;ENTER&gt;&quot;.&nbsp;&nbsp;These include YankRing and SuperTab.</td></tr>
+<tr><td>&nbsp;</td></tr>
+</table>
+
+<!-- rating table -->
+<form name="rating">
+<input type="hidden" name="script_id" value="2050">
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>rate this script</b></td>
+  <td valign="middle">
+    <input type="radio" name="rating" value="life_changing">Life Changing
+    <input type="radio" name="rating" value="helpful">Helpful
+    <input type="radio" name="rating" value="unfulfilling">Unfulfilling&nbsp;
+    <input type="submit" value="rate">
+  </td>
+</tr>
+</table>
+</form>
+<span class="txth2">script versions</span> (<a href="add_script_version.php?script_id=2050">upload new version</a>)
+<p>
+Click on the package to download.
+<p>
+
+<table cellspacing="2" cellpadding="4" border="0" width="100%">
+<tr class='tableheader'>
+        <th valign="top">package</th>
+    <th valign="top">script version</th>
+    <th valign="top">date</th>
+    <th valign="top">Vim version</th>
+    <th valign="top">user</th>
+    <th valign="top">release notes</th>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=14536">lusty-juggler.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.2</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-12-17</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=12358">Stephen Bach</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- Don't show unlisted buffers. (Thanks to Johannes Holzfuß)<br>- New Alt-Tab mode to emulate window manager switching.&nbsp;&nbsp;See g:LustyJugglerAltTabMode in documentation. (Thanks to Martin Wache)<br>- Save and restore keymappings. (Thanks to Vincent Driessen)</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13094">lusty-juggler.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.1.4</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-06-03</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=12358">Stephen Bach</a></i></td>
+    <td class="roweven" valign="top" width="2000">- don't error if ENTER is pressed before selection<br>- avoid a &quot;Press ENTER to continue&quot; message.&nbsp;&nbsp;(Thanks to Bartosz Leper)<br>- don't error when the QuickFix buffer is open.&nbsp;&nbsp;(Thanks to Marco Barberis)</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=12558">lusty-juggler.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.1.3</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-03-05</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=12358">Stephen Bach</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- Fix portability with the updated Vim-&gt;Ruby data type conversion in devhead Vim.<br>- Fix portability with Ruby 1.9.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=11020">lusty-juggler.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.1.2</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-07-16</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=12358">Stephen Bach</a></i></td>
+    <td class="roweven" valign="top" width="2000">Fix ENTER key to select the active buffer.&nbsp;&nbsp;Thanks to Bartosz Leper.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=11015">lusty-juggler.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.1.1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-07-16</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=12358">Stephen Bach</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Fix a startup bug in OS X and Windows.&nbsp;&nbsp;Thanks to Bartosz Leper.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=10686">lusty-juggler.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.1.0</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-05-27</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=12358">Stephen Bach</a></i></td>
+    <td class="roweven" valign="top" width="2000">- Substantially shorten displayed buffer names; usually only the basename is shown.&nbsp;&nbsp;Thanks to Matt Tolton for the idea.<br>- Add GetLatestVimScripts compatibility.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=9506">lusty-juggler.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.0.4</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2008-11-15</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=12358">Stephen Bach</a></i></td>
+    <td class="rowodd" valign="top" width="2000">The g:LustyJugglerShowKeys option should not be required to be set.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=9288">lusty-juggler.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.0.3</b></td>
+    <td class="roweven" valign="top" nowrap><i>2008-09-27</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=12358">Stephen Bach</a></i></td>
+    <td class="roweven" valign="top" width="2000">Added g:LustyJugglerShowKeys for prefixing buffer names.&nbsp;&nbsp;Thanks to Juan Frias for the original patch.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=9171">lusty-juggler.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.0.2</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2008-08-25</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=12358">Stephen Bach</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- Colouring for path elements.<br>- Added :JugglePrevious, a smarter version of the :b# command.<br>- Refactoring.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=7837">lusty-juggler.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.0.1</b></td>
+    <td class="roweven" valign="top" nowrap><i>2007-10-26</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=12358">Stephen Bach</a></i></td>
+    <td class="roweven" valign="top" width="2000">- Fixed the layout algorithm so as not to veer right.<br>- Disabled showmode when juggler is active.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=7820">lusty-juggler.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.0</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2007-10-23</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=12358">Stephen Bach</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Initial upload</td>
+</tr>
+</table>
+<!-- finish off the framework -->
+          </td>
+        </tr>
+      </table>
+    </td>
+
+  </tr>
+</table>
+
+<!-- END OF THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr><td colspan="4" bgcolor="#000000"><img src="/images/spacer.gif" height="2" width="1" alt=""></td></tr>
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr>
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+
+    <td align="left" valign="top"><small>
+      If you have questions or remarks about this site, visit the
+      <a href="http://vimonline.sf.net">vimonline development</a> pages.
+      Please use this site responsibly.
+      <br> 
+      
+      Questions about <a href="http://www.vim.org/about.php">Vim</a> should go
+      to the <a href="http://www.vim.org/maillist.php">maillist</a>.
+      Help Bram <a href="http://iccf-holland.org/">help Uganda</a>.
+      </small>
+	&nbsp;
+	&nbsp;
+
+	<!-- Start of StatCounter Code -->
+	<script type="text/javascript" language="javascript">
+	var sc_project=1417324; 
+	var sc_invisible=1; 
+	var sc_partition=11; 
+	var sc_security="d41633bc"; 
+	</script>
+
+	<script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script><noscript><a href="http://www.statcounter.com/" target="_blank"><img  src="http://c12.statcounter.com/counter.php?sc_project=1417324&java=0&security=d41633bc&invisible=0" alt="free tracking" border="0"></a> </noscript>
+	<!-- End of StatCounter Code -->
+          </td>
+
+    <td align="right" valign="top">
+      		<a href="http://sourceforge.net/projects/vim" rel="nofollow"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=8&type=1" width="88" height="31" border="0" alt="SourceForge.net Logo" /></a>
+    </td>
+
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+  </tr>
+
+    
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  
+  </tr>
+</table>
+
+</body>
+</html>
+

@@ -1,0 +1,404 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+  <link rel="Stylesheet" type="text/css" href="/css/style.css" >
+  <title>Pago - Powerful Screenplay Formatting : vim online</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <meta name="KEYWORDS" content="Vim, Vi IMproved, text editor, home, documentation, tips, scripts, news">
+  <link rel="shortcut icon" type="image/x-icon" href="/images/vim_shortcut.ico">
+</head>
+
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff"> 
+
+<!-- HEADER, SPONSOR IMAGE, VIM IMAGE AND BOOK AD -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+  <td class="lightbg">&nbsp;&nbsp;&nbsp;</td>
+  <td class="lightbg" align="left"><a href="/sponsor/index.php"><img src="/images/sponsorvim.gif" alt="sponsor Vim development" border="0"></a></td>
+    <td class="lightbg" align="center"><a href="/index.php"><img src="/images/vim_header.gif" border="0" alt="Vim logo"></a></td>
+    <td class="lightbg" align="right"><a href="http://iccf-holland.org/click5.html"><img src="/images/buyhelplearn.gif" alt="Vim Book Ad" border="0"></a></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="darkbg"><img src="/images/spacer.gif" width="1" height="10" alt=""></td>
+  </tr>
+</table>
+<!-- THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+  <col width="180">
+  <col width="1">
+
+  <tr valign="top">
+    <td class="sidebar">
+      <table width="180" cellpadding="4" cellspacing="0" border="0">
+        <tr valign="top">
+          <td class="sidebar">
+
+<!-- INCLUDE THE PAGE NAVIGATION -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+    <tr>
+        <td><small>not logged in (<a href="/login.php">login</a>)</small></td>
+    </tr>
+    <tr><td>
+<small>&nbsp;</small>
+<form action="http://www.google.com/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-3005259998294962:bvyni59kjr1" />
+    <input type="hidden" name="ie" value="ISO-8859-1" />
+    <input type="text" name="q" size="20" />
+    <br>
+    <input type="submit" name="sa" value="Search" />
+  </div>
+</form>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+    </td></tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="1"></td>
+    </tr>
+    <tr>
+        <td class="darkbg"><img src="/images/spacer.gif" alt='' border="0" height="3"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="2"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/index.php">Home</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/search.php">Advanced search</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/about.php">About Vim</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/community.php">Community</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/news/news.php">News</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/sponsor/index.php">Sponsoring</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/trivia.php">Trivia</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/docs.php">Documentation</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/download.php">Download</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/scripts/index.php">Scripts</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/tips/index.php">Tips</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/account/index.php">My Account</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/huh.php">Site Help</a></td>
+        </tr>
+</table>
+
+            <table width="172" cellpadding="0" cellspacing="0" border="0">
+              <tr><td><img src="/images/spacer.gif" alt="" border="0" width="1" height="8"></td></tr>
+              <tr><td class="darkbg"><img src="/images/spacer.gif" width="1" height="3" alt=""></td></tr>
+            </table>
+            <br>
+
+<!-- INCLUDE THE PAGE SIDEBAR TEXT -->
+&nbsp;
+
+          </td>
+        </tr>
+      </table>
+    </td>
+
+    <td class="darkbg"><img src="/images/spacer.gif" width="1" height="1" border="0" alt=""><br></td>
+    <td>
+      <table width="100%" cellpadding="10" cellspacing="0" border="0" bordercolor="red">
+        <tr>
+          <td valign="top">
+
+<span class="txth1">Pago : Powerful Screenplay Formatting</span> 
+
+<br>
+<br>
+
+<!-- karma table -->
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
+  <td>
+    Rating <b>24/11</b>,
+    Downloaded by 550  </td>
+  <td class="lightbg">
+  <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
+  </td>
+  <td>
+    <a href="http://vim.wikia.com/wiki/Script:2447">Vim wiki</a>
+  </td>  
+</tr>
+</table>
+<p>
+
+<table cellspacing="0" cellpadding="0" border="0">
+<tr><td class="prompt">created by</td></tr>
+<tr><td><a href="/account/profile.php?user_id=15542">Mike Zazaian</a></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">script type</td></tr>
+<tr><td>ftplugin</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">description</td></tr>
+<tr><td>Pago is probably the most powerful terminal-based screenwriting script available for any platform, and allows the use of vim as a fully-functional piece of screenwriting software such as Final Draft or Celtx.&nbsp;&nbsp;While some elements of the script are unstable, it undergoes daily testing and revision, becoming more mature as I use it every day for my own screenwriting projects.<br><br>PLEASE PROVIDE ME WITH FEEDBACK if you use or test this software -- any comments or requested features will be given full consideration.&nbsp;&nbsp;(zazaian (at) gmail (dot) com).&nbsp;&nbsp;Your thoughts are essential to developing this program into a piece of software that best serves the open source community.<br><br>Overview<br>========<br>* Supports all major formatting elements of a screenplay, based on both logical and commonly accepted conventions of the screenplay form.<br>* Automatically enforces all boundaries within each screenplay element, ensuring proper formatting to the exact specifications of a screenplay.<br>* Allows access to all six available screenplay ELEMENTS without any complex keyboard shortcuts or commands, using only the keys &lt;Backspace&gt;, &lt;Tab&gt;, &lt;Enter&gt;, &lt;Up&gt;, &lt;Down&gt;, &lt;Left&gt;, &lt;Right&gt;.<br>* Allows easy cycling through blank screenplay elements using both the &lt;Tab&gt; and &lt;Backspace&gt; keys.<br><br>&nbsp;&nbsp;Features<br>&nbsp;&nbsp;========<br>&nbsp;&nbsp;* Pressing TAB cycles through empty screenplay elements in the order:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;ACTION --&gt; DIALOGUE --&gt; PARENTHETICAL --&gt; CHARACTER --&gt; TRANSITION --&gt; ACTION<br><br>&nbsp;&nbsp;&nbsp;&nbsp;* Pressing &lt;Tab&gt; from a blank TRANSITION element will cycle back to the<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;beginning of the line, triggering a blank ACTION element.<br><br>&nbsp;&nbsp;&nbsp;&nbsp;* Parentheses are automatically inserted when calling a blank PARENTHETICAL<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;element.&nbsp;&nbsp;Pressing &lt;Tab&gt; from within blank parentheses will automatically<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;delete the parentheses and jump to a blank CHARACTER element.<br><br>&nbsp;&nbsp;&nbsp;&nbsp;* A colon (&quot;:&quot;) is automatically inserted at the end of the line when an<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TRANSITION element is called.&nbsp;&nbsp;The cursor remains at the spot of the colon<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;when text is either entered or deleted.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* Text typed within a TRANSITION element is automatically RIGHT-JUSTIFIED.<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* Pressing &lt;Enter&gt; from a TRANSITION element jumps two lines down the page<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;and prompts a blank SCENE HEADING element.<br><br>&nbsp;&nbsp;* Pressing &lt;Backspace&gt; on an empty line cycles through empty screenplay elements<br>&nbsp;&nbsp;&nbsp;&nbsp;in the reverse order:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;TRANSITION --&gt; CHARACTER --&gt; PARENTHETICAL --&gt; DIALOGUE --&gt; ACTION<br>&nbsp;&nbsp;&nbsp;&nbsp;--&gt; END OF PREVIOUS ELEMENT<br><br>&nbsp;&nbsp;&nbsp;&nbsp;* Pressing &lt;Backspace&gt; from a blank line jumps to the end of the previous<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;element or, if the above two lines are blank, will create a blank ACTION<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;element two lines above the previous cursorline.<br>&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;* Pressing &lt;Backspace&gt; on a line with text will delete the character to the<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;left of the cursor.<br><br>&nbsp;&nbsp;* All text typed with a SCENE HEADING, CHARACTER, or TRANSITION element will be<br>&nbsp;&nbsp;&nbsp;&nbsp;automatically CAPITALIZED.<br><br>&nbsp;&nbsp;* To create a SCENE HEADING element, press enter while in a blank ACTION element.<br>&nbsp;&nbsp;&nbsp;&nbsp;The Cursorline will be HIGHLIGHTED and all text typed within the element will<br>&nbsp;&nbsp;&nbsp;&nbsp;be CAPITALIZED.<br><br>&nbsp;&nbsp;* While in a blank SCENE HEADING element:<br>&nbsp;&nbsp;&nbsp;&nbsp;* Press the &lt;Space&gt; bar to cycle through the common prefixes INT., EXT., and<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;INT./EXT.<br>&nbsp;&nbsp;&nbsp;&nbsp;* Press &lt;Enter&gt; to jump down two lines to a new, blank ACTION element.<br><br>&nbsp;&nbsp;* Active screenplay element is displayed in CAPS in the status bar.<br><br>&nbsp;&nbsp;* Page number is displayed in the status bar.&nbsp;&nbsp;This estimates the number of pages<br>&nbsp;&nbsp;&nbsp;&nbsp;within your screeplay using a 56-line-per-page standard.<br><br>&nbsp;&nbsp;* Pressing &lt;Up&gt; in either INSERT or NORMAL modes jumps to the beginning of the<br>&nbsp;&nbsp;&nbsp;&nbsp;line above the cursorline.<br><br>&nbsp;&nbsp;* Pressing &lt;Down&gt; in either INSERT or NORMAL modes jumps to the end of the<br>&nbsp;&nbsp;&nbsp;&nbsp;line above the cursorline.<br><br>&nbsp;&nbsp;* Holding &lt;Left&gt; in either INSERT or NORMAL modes scrolls through to the<br>&nbsp;&nbsp;&nbsp;&nbsp;beginning of the current element, then jumps to the end of the previous<br>&nbsp;&nbsp;&nbsp;&nbsp;element.<br><br>&nbsp;&nbsp;* Holding &lt;Right&gt; in either INSERT or NORMAL modes scrolls through to the<br>&nbsp;&nbsp;&nbsp;&nbsp;end of the current element, then jumps to the beginning of the next<br>&nbsp;&nbsp;&nbsp;&nbsp;element.<br><br>&nbsp;&nbsp;* Typing text within a screenplay element such as DIALOGUE or ACTION will<br>&nbsp;&nbsp;&nbsp;&nbsp;automatically reformat the paragraph if text exceeds the preset end of the<br>&nbsp;&nbsp;&nbsp;&nbsp;line.&nbsp;&nbsp;This improves upon use of the :tw (text width) and :wrap commands by<br>&nbsp;&nbsp;&nbsp;&nbsp;formatting text that is typed within a paragraph, rather than simply at the end<br>&nbsp;&nbsp;&nbsp;&nbsp;of it.<br><br><br>Planned Features<br>==============<br>* Easily output text file to a fully-formatted .PDF file.<br>* Drop-Down lists for previously used:<br>&nbsp;&nbsp;* Character Names<br>&nbsp;&nbsp;* Character Parentheticals (O.S., O.C., V.O., CONT'D)<br>&nbsp;&nbsp;* Scene Headings<br>* Integrated version control using the Bazaar version control system.<br>&nbsp;&nbsp;* Allows the use of a single file for a screenplay, rather than keeping multiple copies.<br>&nbsp;&nbsp;* Easily discern the differences between various writing sessions.<br>&nbsp;&nbsp;* Retain deleted scenes, lines and actions from various writing sessions.<br>* Command-line abbreviations will simplify both version control and other useful features.<br>* Optional syntax highlighting<br>* Character and scene reports</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">install details</td></tr>
+<tr><td>* Drop this file in your ${VIMRUNTIME}/ftplugin/ directory, which is likely located at ~/.vim/ftplugin/ <br><br>* add the following lines to your ~/.vimrc file:<br>&nbsp;&nbsp;:filetype on<br>&nbsp;&nbsp;:filetype plugin on<br>&nbsp;&nbsp;:au BufRead,BufNewFile *.pago&nbsp;&nbsp;&nbsp;&nbsp;set filetype=pago<br><br>* Ensure the suffix the file you are editing is .pago.</td></tr>
+<tr><td>&nbsp;</td></tr>
+</table>
+
+<!-- rating table -->
+<form name="rating">
+<input type="hidden" name="script_id" value="2447">
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>rate this script</b></td>
+  <td valign="middle">
+    <input type="radio" name="rating" value="life_changing">Life Changing
+    <input type="radio" name="rating" value="helpful">Helpful
+    <input type="radio" name="rating" value="unfulfilling">Unfulfilling&nbsp;
+    <input type="submit" value="rate">
+  </td>
+</tr>
+</table>
+</form>
+<span class="txth2">script versions</span> (<a href="add_script_version.php?script_id=2447">upload new version</a>)
+<p>
+Click on the package to download.
+<p>
+
+<table cellspacing="2" cellpadding="4" border="0" width="100%">
+<tr class='tableheader'>
+        <th valign="top">package</th>
+    <th valign="top">script version</th>
+    <th valign="top">date</th>
+    <th valign="top">Vim version</th>
+    <th valign="top">user</th>
+    <th valign="top">release notes</th>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=9807">pago.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.2.31</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-01-13</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=15542">Mike Zazaian</a></i></td>
+    <td class="rowodd" valign="top" width="2000">* Completed function wherein pressing Enter from a dialogue element creates a parenthetical<br>&nbsp;&nbsp;&nbsp;&nbsp;on the next line.&nbsp;&nbsp;If it is left empty, pressing enter again deletes the empty brackets and<br>&nbsp;&nbsp;&nbsp;&nbsp;creates a new character element two lines down.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=9797">pago.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.2.29</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-01-11</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=15542">Mike Zazaian</a></i></td>
+    <td class="roweven" valign="top" width="2000">Fixed a number of bus related to auto-formatting.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=9567">pago.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.2.25</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2008-11-25</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=15542">Mike Zazaian</a></i></td>
+    <td class="rowodd" valign="top" width="2000">* Temporarily reverted to the gw}a style of paragraph formatting while the more elaborate formatting function is being tested and developed further.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=9566">pago.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.2.24</b></td>
+    <td class="roweven" valign="top" nowrap><i>2008-11-25</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=15542">Mike Zazaian</a></i></td>
+    <td class="roweven" valign="top" width="2000">* Adjusted new auto-formatting function to accommodate backspacing.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=9565">pago.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.2.23</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2008-11-25</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=15542">Mike Zazaian</a></i></td>
+    <td class="rowodd" valign="top" width="2000">* Marked improvements in the auto-formatting function, using a filter of the fmt unix command.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=9562">pago.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.2.22</b></td>
+    <td class="roweven" valign="top" nowrap><i>2008-11-24</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=15542">Mike Zazaian</a></i></td>
+    <td class="roweven" valign="top" width="2000">* Status bar is activated on script initialization.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=9561">pago.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.2.21</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2008-11-24</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=15542">Mike Zazaian</a></i></td>
+    <td class="rowodd" valign="top" width="2000">* Fixed small bug from version 0.2.19 that effected formatting of PARENTHETICAL elements.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=9560">pago.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.2.20</b></td>
+    <td class="roweven" valign="top" nowrap><i>2008-11-24</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=15542">Mike Zazaian</a></i></td>
+    <td class="roweven" valign="top" width="2000">* &lt;PageUp&gt; and &lt;PageDown&gt; keys now detect the screenplay elements they land on as per the other direction and navigation keys.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=9559">pago.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.2.19</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2008-11-24</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=15542">Mike Zazaian</a></i></td>
+    <td class="rowodd" valign="top" width="2000">* Fixed bug that affected automatic formatting of PARENTHETICAL elements.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=9550">pago.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.2.18</b></td>
+    <td class="roweven" valign="top" nowrap><i>2008-11-23</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=15542">Mike Zazaian</a></i></td>
+    <td class="roweven" valign="top" width="2000">* Empty files now start properly indented on an ACTION element.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=9548">pago.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.2.17</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2008-11-23</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=15542">Mike Zazaian</a></i></td>
+    <td class="rowodd" valign="top" width="2000">* Fixed major bug of auto-formatting functionality that considered all ELEMENTS not seperated by a black line to be the same paragraph.&nbsp;&nbsp;Consequently, PARENTHETICAL elements would be formatted into a DIALOGUE element if dialogue was added above or below the PARENTHETICAL element.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=9547">pago.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.2.16</b></td>
+    <td class="roweven" valign="top" nowrap><i>2008-11-22</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=15542">Mike Zazaian</a></i></td>
+    <td class="roweven" valign="top" width="2000">* Fixed bug in which current screenplay ELEMENT isn't established on script init.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=9541">pago.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.2.15</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2008-11-21</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=15542">Mike Zazaian</a></i></td>
+    <td class="rowodd" valign="top" width="2000">* Fixed issues with &lt;Space&gt; bar not shifting text to the left when used within the TRANSITION element.<br>* Fixed issues with &lt;Backspace&gt; deleting all text when used within the TRANSITION element.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=9533">pago.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.2.14</b></td>
+    <td class="roweven" valign="top" nowrap><i>2008-11-21</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=15542">Mike Zazaian</a></i></td>
+    <td class="roweven" valign="top" width="2000">Fixed bug: pressing backspace from the beginning of an action line containing text now brings the text from that line to the previous line and automatically formats the ACTION element.&nbsp;&nbsp;This action would previously backspace the text beyond the 10-space padding for ACTION elements. </td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=9515">pago.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.2.13</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2008-11-18</i></td>
+    <td class="rowodd" valign="top" nowrap>7.2</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=15542">Mike Zazaian</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Initial upload</td>
+</tr>
+</table>
+<!-- finish off the framework -->
+          </td>
+        </tr>
+      </table>
+    </td>
+
+  </tr>
+</table>
+
+<!-- END OF THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr><td colspan="4" bgcolor="#000000"><img src="/images/spacer.gif" height="2" width="1" alt=""></td></tr>
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr>
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+
+    <td align="left" valign="top"><small>
+      If you have questions or remarks about this site, visit the
+      <a href="http://vimonline.sf.net">vimonline development</a> pages.
+      Please use this site responsibly.
+      <br> 
+      
+      Questions about <a href="http://www.vim.org/about.php">Vim</a> should go
+      to the <a href="http://www.vim.org/maillist.php">maillist</a>.
+      Help Bram <a href="http://iccf-holland.org/">help Uganda</a>.
+      </small>
+	&nbsp;
+	&nbsp;
+
+	<!-- Start of StatCounter Code -->
+	<script type="text/javascript" language="javascript">
+	var sc_project=1417324; 
+	var sc_invisible=1; 
+	var sc_partition=11; 
+	var sc_security="d41633bc"; 
+	</script>
+
+	<script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script><noscript><a href="http://www.statcounter.com/" target="_blank"><img  src="http://c12.statcounter.com/counter.php?sc_project=1417324&java=0&security=d41633bc&invisible=0" alt="free tracking" border="0"></a> </noscript>
+	<!-- End of StatCounter Code -->
+          </td>
+
+    <td align="right" valign="top">
+      		<a href="http://sourceforge.net/projects/vim" rel="nofollow"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=8&type=1" width="88" height="31" border="0" alt="SourceForge.net Logo" /></a>
+    </td>
+
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+  </tr>
+
+    
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  
+  </tr>
+</table>
+
+</body>
+</html>
+

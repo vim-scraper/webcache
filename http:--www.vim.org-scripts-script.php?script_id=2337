@@ -1,0 +1,412 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+  <link rel="Stylesheet" type="text/css" href="/css/style.css" >
+  <title>ku - An interface for anything : vim online</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <meta name="KEYWORDS" content="Vim, Vi IMproved, text editor, home, documentation, tips, scripts, news">
+  <link rel="shortcut icon" type="image/x-icon" href="/images/vim_shortcut.ico">
+</head>
+
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff"> 
+
+<!-- HEADER, SPONSOR IMAGE, VIM IMAGE AND BOOK AD -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+  <td class="lightbg">&nbsp;&nbsp;&nbsp;</td>
+  <td class="lightbg" align="left"><a href="/sponsor/index.php"><img src="/images/sponsorvim.gif" alt="sponsor Vim development" border="0"></a></td>
+    <td class="lightbg" align="center"><a href="/index.php"><img src="/images/vim_header.gif" border="0" alt="Vim logo"></a></td>
+    <td class="lightbg" align="right"><a href="http://iccf-holland.org/click5.html"><img src="/images/buyhelplearn.gif" alt="Vim Book Ad" border="0"></a></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="darkbg"><img src="/images/spacer.gif" width="1" height="10" alt=""></td>
+  </tr>
+</table>
+<!-- THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+  <col width="180">
+  <col width="1">
+
+  <tr valign="top">
+    <td class="sidebar">
+      <table width="180" cellpadding="4" cellspacing="0" border="0">
+        <tr valign="top">
+          <td class="sidebar">
+
+<!-- INCLUDE THE PAGE NAVIGATION -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+    <tr>
+        <td><small>not logged in (<a href="/login.php">login</a>)</small></td>
+    </tr>
+    <tr><td>
+<small>&nbsp;</small>
+<form action="http://www.google.com/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-3005259998294962:bvyni59kjr1" />
+    <input type="hidden" name="ie" value="ISO-8859-1" />
+    <input type="text" name="q" size="20" />
+    <br>
+    <input type="submit" name="sa" value="Search" />
+  </div>
+</form>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+    </td></tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="1"></td>
+    </tr>
+    <tr>
+        <td class="darkbg"><img src="/images/spacer.gif" alt='' border="0" height="3"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="2"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/index.php">Home</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/search.php">Advanced search</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/about.php">About Vim</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/community.php">Community</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/news/news.php">News</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/sponsor/index.php">Sponsoring</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/trivia.php">Trivia</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/docs.php">Documentation</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/download.php">Download</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/scripts/index.php">Scripts</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/tips/index.php">Tips</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/account/index.php">My Account</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/huh.php">Site Help</a></td>
+        </tr>
+</table>
+
+            <table width="172" cellpadding="0" cellspacing="0" border="0">
+              <tr><td><img src="/images/spacer.gif" alt="" border="0" width="1" height="8"></td></tr>
+              <tr><td class="darkbg"><img src="/images/spacer.gif" width="1" height="3" alt=""></td></tr>
+            </table>
+            <br>
+
+<!-- INCLUDE THE PAGE SIDEBAR TEXT -->
+&nbsp;
+
+          </td>
+        </tr>
+      </table>
+    </td>
+
+    <td class="darkbg"><img src="/images/spacer.gif" width="1" height="1" border="0" alt=""><br></td>
+    <td>
+      <table width="100%" cellpadding="10" cellspacing="0" border="0" bordercolor="red">
+        <tr>
+          <td valign="top">
+
+<span class="txth1">ku : An interface for anything</span> 
+
+<br>
+<br>
+
+<!-- karma table -->
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
+  <td>
+    Rating <b>40/17</b>,
+    Downloaded by 1324  </td>
+  <td class="lightbg">
+  <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
+  </td>
+  <td>
+    <a href="http://vim.wikia.com/wiki/Script:2337">Vim wiki</a>
+  </td>  
+</tr>
+</table>
+<p>
+
+<table cellspacing="0" cellpadding="0" border="0">
+<tr><td class="prompt">created by</td></tr>
+<tr><td><a href="/account/profile.php?user_id=13595">Kana Natsuno</a></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">script type</td></tr>
+<tr><td>utility</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">description</td></tr>
+<tr><td>*ku* is a Vim plugin to provide new interface for Vim.&nbsp;&nbsp;With ku,<br><br>- You can choose many items from various sources such as buffers, files and<br>&nbsp;&nbsp;others.&nbsp;&nbsp;This selection is very efficient, because ku supports it by<br>&nbsp;&nbsp;automatic and elegant completion, so that you don't have to type much.<br><br>- Then you can take an action on the selected item.&nbsp;&nbsp;Various actions are<br>&nbsp;&nbsp;available for each kind of items.<br><br><br>To start a selection, execute |:Ku| or |ku#start()|.&nbsp;&nbsp;|the-ku-window| will be<br>opened at the top of the current tabpage.&nbsp;&nbsp;The window is to select items and<br>to do an action on a selected item.&nbsp;&nbsp;In the window,<br><br>- |ins-completion-menu| is automatically appeared to show available items.<br>&nbsp;&nbsp;As you input a character, the menu is updated to show more proper items for<br>&nbsp;&nbsp;the given input.<br><br>&nbsp;&nbsp;If you want to know how ku interpret what you input,<br>&nbsp;&nbsp;see |ku-pattern|, |ku-auto-component-completion| and |ku-prefix-expansion|.<br><br>- If you find what you want in the menu, select it with &lt;C-n&gt; or &lt;C-p&gt;.&nbsp;&nbsp;If<br>&nbsp;&nbsp;the first item in the menu is what you want, you don't have to select it.<br><br>- Then you can take an action on the selected item with &lt;Enter&gt; or &lt;Tab&gt;.<br><br>&nbsp;&nbsp;- With &lt;Enter&gt;, ku executes the default action for the item.<br><br>&nbsp;&nbsp;- With &lt;Tab&gt;, ku shows a list of available actions for the item.&nbsp;&nbsp;Each<br>&nbsp;&nbsp;&nbsp;&nbsp;action is labeled with a key to execute it.&nbsp;&nbsp;If you type one of the keys,<br>&nbsp;&nbsp;&nbsp;&nbsp;the corresponding action will be executed.<br><br>&nbsp;&nbsp;&lt;Enter&gt; and &lt;Tab&gt; are just the default key bindings.&nbsp;&nbsp;You can customize<br>&nbsp;&nbsp;them, of course.&nbsp;&nbsp;See |ku-key-mappings| and |ku#default_key_mappings()|.<br>&nbsp;&nbsp;If you want to customize key bindings in a list of actions by &lt;Tab&gt;, see<br>&nbsp;&nbsp;|ku#custom_key()|, |ku-default-key-table| and |ku-key-table|.<br><br>- If you don't want to take any action and stop to select, type &lt;C-c&gt; in any<br>&nbsp;&nbsp;mode.&nbsp;&nbsp;The window is closed and the current tabpage is restored to the<br>&nbsp;&nbsp;previous state.<br><br><br>In ku, a kind of items is called &quot;source&quot;.&nbsp;&nbsp;Some sources are available by<br>default.&nbsp;&nbsp;See |ku-default-sources| for the details.&nbsp;&nbsp;You can write your own<br>sources if you want to select and to take action on something which is not<br>provided by the default sources.&nbsp;&nbsp;To add sources, put the corresponding<br>scripts into &quot;autoload/ku/&quot; directories in 'runtimepath'.&nbsp;&nbsp;As scripts are put,<br>ku recognizes them automatically, so that you don't have to reboot Vim.&nbsp;&nbsp;See<br>alsso |ku-sources| for the details.<br><br><br>Screenshots:<br><a target="_blank" href="http://www.flickr.com/photos/whileimautomaton/tags/vim-ku/">http://www.flickr.com/photos/whileimautomaton/tags/vim-ku/</A><br><br>Demonstration movie:<br><a target="_blank" href="http://www.screencast.com/t/P6nJkJ0DE">http://www.screencast.com/t/P6nJkJ0DE</A><br><br><br>Requirements:<br>- Vim 7.1.299 or later<br><br>Sources and related scripts:<br><a target="_blank" href="http://www.vim.org/scripts/script_search_results.php?keywords=ku">http://www.vim.org/scripts/script_search_results.php?keywords=ku</A><br><br>Latest version:<br><a target="_blank" href="http://github.com/kana/vim-ku">http://github.com/kana/vim-ku</A><br><br>Document in HTML format:<br><a target="_blank" href="http://kana.github.com/config/vim/ku.html">http://kana.github.com/config/vim/ku.html</A></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">install details</td></tr>
+<tr><td>...</td></tr>
+<tr><td>&nbsp;</td></tr>
+</table>
+
+<!-- rating table -->
+<form name="rating">
+<input type="hidden" name="script_id" value="2337">
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>rate this script</b></td>
+  <td valign="middle">
+    <input type="radio" name="rating" value="life_changing">Life Changing
+    <input type="radio" name="rating" value="helpful">Helpful
+    <input type="radio" name="rating" value="unfulfilling">Unfulfilling&nbsp;
+    <input type="submit" value="rate">
+  </td>
+</tr>
+</table>
+</form>
+<span class="txth2">script versions</span> (<a href="add_script_version.php?script_id=2337">upload new version</a>)
+<p>
+Click on the package to download.
+<p>
+
+<table cellspacing="2" cellpadding="4" border="0" width="100%">
+<tr class='tableheader'>
+        <th valign="top">package</th>
+    <th valign="top">script version</th>
+    <th valign="top">date</th>
+    <th valign="top">Vim version</th>
+    <th valign="top">user</th>
+    <th valign="top">release notes</th>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=10699">vim-ku-0.2.4.1.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.2.4.1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-05-29</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=13595">Kana Natsuno</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Bug fixes:<br>- |ku-file|: Fix a serious bug which was mixed in ku source file version 0.1.3.&nbsp;&nbsp;See |ku-file-changelog-0.1.4| for the details.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=10697">vim-ku-0.2.4.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.2.4</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-05-28</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=13595">Kana Natsuno</a></i></td>
+    <td class="roweven" valign="top" width="2000">Feature enhancements:<br>- |ku-file|: Support to deal with files in archives.&nbsp;&nbsp;See also |ku-file-changelog-0.1.3| for the details.<br><br>Misc. improvements:<br>- |filetype-ku|: Modify the default initialization on |the-ku-buffer|.&nbsp;&nbsp;Old versions don't override existing key mappings.&nbsp;&nbsp;New versions now override existing key mappings.&nbsp;&nbsp;It is convenient for starters to use ku without any configuration.<br><br>&nbsp;&nbsp;For example, many people customize &lt;Tab&gt; to complete something in<br>&nbsp;&nbsp;Insert mode.&nbsp;&nbsp;In such cases, old versions don't override &lt;Tab&gt; to<br>&nbsp;&nbsp;|&lt;Plug&gt;(ku-choose-an-action)|, but it's very inconvenient to use ku.<br>&nbsp;&nbsp;All key mappings defined by |ku#default_key_mappings()| are local to<br>&nbsp;&nbsp;a buffer, so that it's not necessary to avoid overriding.<br><br>&nbsp;&nbsp;Thanks to rphillips and other persons for reporting this problem.<br><br>Bug fixes:<br>- |ku#restart()|: Fix a bug that is caused by a change in the previous version.&nbsp;&nbsp;As ku#restart() is called, the prompt character will be inserted many times.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=10657">vim-ku-0.2.3.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.2.3</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-05-22</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=13595">Kana Natsuno</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Feature enhancements:<br>- Add |g:ku_personal_runtime| to customize where information such as |ku-input-history| to be saved.<br>- Add |:KuReload| and |ku#reload()| to reload the whole system of ku.<br><br>Misc. improvements:<br>- Improve an error message.<br>- Add tests, not perfect yet.<br>- |ku-input-history|: Change the directory to save input history.&nbsp;&nbsp;Use the first directory in the default value of 'runtimepath', instead of the current value of 'runtimepath'.&nbsp;&nbsp;Because some users customize 'runtimepath', and the first directory in such values may not refer a directory for personal settings.<br><br>Bug fixes:<br>- Fix a bug that ku list the same sources many times if there are 2 or more source scripts which filenames are the same in 'runtimepath'.<br>- Fix bugs that ku may be confuse if typeahead buffer is not empty at the beginning of a |ku-session|.<br>- |ku#set_the_current_input_pattern()|:<br>&nbsp;&nbsp;- Fix a wrong description in the document.<br>&nbsp;&nbsp;- Fix a bug on the treatment of a given string.&nbsp;&nbsp;If a given string starts with the same character as the prompt, that character is treated as the prompt and not a part of the given string, so it's not easy to set such strings.<br>&nbsp;&nbsp;- Fix a bug on the automatic completion.&nbsp;&nbsp;The cursor position may be altered in several cases.<br><br>See also:<br>- |ku-source-changelog-0.1.2|</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=10601">vim-ku-0.2.2.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.2.2</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-05-15</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=13595">Kana Natsuno</a></i></td>
+    <td class="roweven" valign="top" width="2000">Bug fixes:<br>- Fix an assumption that the separator for pathes is &quot;/&quot;.&nbsp;&nbsp;This assumption causes unexpected behavior on some environments such as Microsoft Windows.<br>- Fix a wrong condition to use 'shellslash'.<br><br>Feature enhancements:<br>- Add API functions to deal with pathes.&nbsp;&nbsp;See also:<br>&nbsp;&nbsp;- |ku#make_path()|<br>&nbsp;&nbsp;- |ku#path_separator()|<br><br>See also:<br>- |ku-file-changelog-0.1.2|</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=10510">vim-ku-0.2.1.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.2.1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-05-03</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=13595">Kana Natsuno</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Bug fixes:<br>- |&lt;Plug&gt;(ku-choose-action)|: Fix a bug that an error message is displayed unexpectedly, whenever a key which is not associated with any action is pressed.<br>- Fix a bug that the current source name in |the-ku-buffer| is not highlighted correctly in some cases.<br>- Document: Fix a wrong description on the default value of |g:ku_history_reloading_style|.&nbsp;&nbsp;It is &quot;idle&quot;, not &quot;once&quot;.<br>- |ku__source|: Fix a bug that it doesn't exist for items which are not completed by ku.<br>- |ku-action-left| and other actions: Fix a bug that they don't close a window or a tab page created by them even if |ku-action-default| is failed.<br><br>Incompatible changes:<br>- Change the behavior not to take any action if an input pattern is empty and there is no item, because there is nothing to do in such case.<br>- Change the specification on |ku-action|.&nbsp;&nbsp;Now the function corresponding to an action must return 0 if it succeeds, or a string which represents an error message if it fails.&nbsp;&nbsp;Old versions don't touch on return values.<br><br>Misc.:<br>- Refactor the core.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=10479">vim-ku-0.2.0.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.2.0</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-04-28</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=13595">Kana Natsuno</a></i></td>
+    <td class="roweven" valign="top" width="2000">- Add |ku__source|.<br>- Fix a few assumptions on path separator.<br>- Improve the performance to complete items.&nbsp;&nbsp;Now it is 10 times faster than old versions.<br>- Modify the sorting order of items.&nbsp;&nbsp;If an item contains any character of |g:ku_component_separators|, it is prior to other items which don't contain that characters.&nbsp;&nbsp;For example, if there are two items &quot;foo/bar&quot; and &quot;foo-bar&quot;, new versions put &quot;foo/bar&quot; before &quot;foo-bar&quot;, while old versions put &quot;foo-bar&quot; before &quot;foo/bar&quot;.&nbsp;&nbsp;This change is to avoid selecting unexpected item with |ku-auto-component-completion|.<br>- |ku-auto-component-completion|:<br>&nbsp;&nbsp;- Improve the conditions to activate.&nbsp;&nbsp;Now it is not unexpectedly activated for some cases.<br>&nbsp;&nbsp;- Improve how many components to be completed.<br>- |g:ku_acc_style|: New.<br><br>Incompatible changes:<br>- Change many points about |ku-sources| and |ku-action|.<br>&nbsp;&nbsp;- Sources for 0.1.x are not compatible with 0.2.x.<br>&nbsp;&nbsp;- |ku#{source}#gather_items()|:<br>&nbsp;&nbsp;&nbsp;&nbsp;- Change the naming rules about additional entries for each item: Old versions use &quot;_{source}_...&quot; and &quot;_ku_...&quot;.&nbsp;&nbsp;New versions use &quot;ku_{source}_...&quot; and &quot;ku__...&quot; instead.<br>&nbsp;&nbsp;&nbsp;&nbsp;- Add several rules on return values.<br>&nbsp;&nbsp;- |ku#{source}#gather_items()|: New API to implement.<br>&nbsp;&nbsp;- |ku#{source}#acc_valid_p()|: Change the default value if it is not defined.&nbsp;&nbsp;Old versions always return true.&nbsp;&nbsp;New versions always return false.<br>&nbsp;&nbsp;- |ku-special-sources|: Delete this concept.&nbsp;&nbsp;Now all source scripts may provide more than one sources.<br>&nbsp;&nbsp;- |ku#{source}#available_sources()|: New function to implement.<br>&nbsp;&nbsp;- |ku-source-api|: Most of functions must take an additional argument about source name.<br>&nbsp;&nbsp;- |ku#{source}#event_handler()|: Delete.&nbsp;&nbsp;This function is now split into the following functions:<br>&nbsp;&nbsp;&nbsp;&nbsp;- |ku#{source}#on_before_action()|<br>&nbsp;&nbsp;&nbsp;&nbsp;- |ku#{source}#on_source_enter()|<br>&nbsp;&nbsp;&nbsp;&nbsp;- |ku#{source}#on_source_leave()|<br>- |ku-pattern|:<br>&nbsp;&nbsp;- Change the definition of &quot;word&quot; pattern.&nbsp;&nbsp;Old versions use spaces and slashes as wildcards.&nbsp;&nbsp;New versions use only spaces as wildcards.<br>&nbsp;&nbsp;- Add an assumption - see |ku-pattern-prefix-assumption|.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=9733">vim-ku-0.1.9.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.1.9</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2008-12-30</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=13595">Kana Natsuno</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- Add |g:ku_history_reloading_style|.<br>- Change the default timings to reload and to save |ku-input-history|.&nbsp;&nbsp;See also &quot;idle&quot; on |g:ku_history_reloading_style|.&nbsp;&nbsp;Old versions use &quot;each&quot;, but &quot;idle&quot; is used instead from now on.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=9721">vim-ku-0.1.8.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.1.8</b></td>
+    <td class="roweven" valign="top" nowrap><i>2008-12-24</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=13595">Kana Natsuno</a></i></td>
+    <td class="roweven" valign="top" width="2000">- Add |g:ku_choosing_actions_sorting_style|.<br>- Change the sorting style of |&lt;Plug&gt;(ku-choose-an-action)|.&nbsp;&nbsp;See also |g:ku_choosing_actions_sorting_style|.<br>- Fix some bugs - see |ku-buffer-changelog| and |ku-file-changelog|.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=9646">vim-ku-0.1.7.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.1.7</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2008-12-11</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=13595">Kana Natsuno</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- Include new source |ku-source|.<br>- Change the default value of |g:ku_history_added_p|.&nbsp;&nbsp;Now it also omits patterns for source |ku-source|.<br>- Add |&lt;Plug&gt;(ku-choose-source)| and the default key mapping for it (see |ku#default_key_mappings()|).<br>- Add |ku#get_the_current_input_pattern()|.<br>- Add |ku#set_the_current_input_pattern()|.<br>- Fix typos in this document.<br>- Revise the internal stuffs.<br>- Change |ku#restart()| to use the last inputted pattern and the last active source.&nbsp;&nbsp;Old versions don't use ones if a selection is canceled by |&lt;Plug&gt;(ku-cancel)|.<br>- Add |ku-action-selection| and the entry for it in |ku-default-key-table|.<br>- Show an additional message while choosing an action for |&lt;Plug&gt;(ku-do-persistent-action)|.&nbsp;&nbsp;In older versions, it cannot be distinct from a message either |&lt;Plug&gt;(ku-do-persistent-action)| or |&lt;Plug&gt;(choose-an-action)| is used.<br><br>Incompatible changes:<br>- Remove |ku-action-persistent|; use |&lt;Plug&gt;(ku-do-persistent-action)| instead.<br>- Change |ku-action-cancel| - now it cannot be overridden, though it should not be overridden from the beginning.<br>- Don't add the current input pattern into |ku-input-history| if the action to be taken is |ku-action-cancel|.&nbsp;&nbsp;Old versions do add, but it seems to be unexpected behabior.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=9631">vim-ku-0.1.6.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.1.6</b></td>
+    <td class="roweven" valign="top" nowrap><i>2008-12-08</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=13595">Kana Natsuno</a></i></td>
+    <td class="roweven" valign="top" width="2000">- Add |ku#switch_source()|.<br>- Add |ku-action-persistent|, |&lt;Plug&gt;(ku-do-persistent-action)| and the default key mapping for it (see |ku#default_key_mappings()|).<br>- Include new source |ku-history|.<br>- Add |ku#available_source_p()|.<br>- Change the default value of |g:ku_history_added_p|.&nbsp;&nbsp;Now it also omits patterns for source |ku-history|.<br><br>Incompatible changes:<br>- Change the behavior of |:Ku| and |ku#start()| if ku is already active.&nbsp;&nbsp;Old ones change the current source to the specified source.&nbsp;&nbsp;New ones don't nothing.&nbsp;&nbsp;Use |ku#switch_source()| to change the current source.<br>- Change the specification of |g:ku_history_added_p|.&nbsp;&nbsp;It took a single argument, but now, it takes 2 arguments.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=9629">vim-ku-0.1.5.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.1.5</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2008-12-07</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=13595">Kana Natsuno</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- Show the information about |ku-input-history| in |the-ku-buffer|.<br>- |ku#custom_action()|: Accept &quot;common&quot; for {source2} to specify an<br>&nbsp;&nbsp;action from the default action table for all sources.&nbsp;&nbsp;For example:<br>&gt;<br>&nbsp;&nbsp;call ku#custom_action('buffer', 'xyzzy', 'common', 'tab-Right')<br>&lt;<br>- Modify |ku-action-right| and other actions to refer &quot;default&quot; action<br>&nbsp;&nbsp;from the default action table of the current source.&nbsp;&nbsp;Because they<br>&nbsp;&nbsp;may fall into infinite loop if user-defined &quot;default&quot; action refers<br>&nbsp;&nbsp;&quot;default&quot; action.<br>- Add |g:ku_history_size|.<br>- Add |&lt;Plug&gt;(ku-older-history-and-source)| and<br>&nbsp;&nbsp;|&lt;Plug&gt;(ku-newer-history-and-source)|.<br>- Add |&lt;Plug&gt;(ku-history-source)|.<br><br>Incompatible changes:<br>- Change the format of value returned by |ku#input_history()|.<br>&nbsp;&nbsp;Now it is a list of dictionaries, not a list of strings.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=9351">vim-ku-0.1.4.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.1.4</b></td>
+    <td class="roweven" valign="top" nowrap><i>2008-10-14</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=13595">Kana Natsuno</a></i></td>
+    <td class="roweven" valign="top" width="2000">- Add |ku#{source}#acc_valid_p()| to filter items for<br>&nbsp;&nbsp;|ku-auto-component-completion|.<br>- Add |g:ku_history_added_p|.<br>- Fix an error when input history becomes larger than its maximum<br>&nbsp;&nbsp;size.<br>- Add a way to disable a specific action.&nbsp;&nbsp;See |ku-disable-action|.<br>- Set 'filetype' of |the-ku-buffer| to &quot;ku&quot;.<br>- Add syntax highlighting for |the-ku-buffer| and messages by<br>&nbsp;&nbsp;|&lt;Plug&gt;(ku-choose-an-action)|.<br>- Refactor on minor stuffs.<br><br>Incompatible changes:<br>- Don't publish &quot;User plugin-ku-buffer-initialized&quot;.<br>&nbsp;&nbsp;Use &quot;FileType ku&quot; and/or filetype plugin instead.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=9290">vim-ku-0.1.3.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.1.3</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2008-09-28</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=13595">Kana Natsuno</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- Inconpatible change:<br>&nbsp;&nbsp;- For |ku-special-sources|, |ku-source-api| takes the name of the<br>&nbsp;&nbsp;&nbsp;&nbsp;current source as the 1st argument.<br>&nbsp;&nbsp;- |ku-SourceEnter| and |ku-SourceLeave| don't take extra argument.<br>- |ku#custom_action()|: Add new way to specify {function}.<br>- |ku#start()|: Add {initial-pattern}.<br>- Show some information on the selected item while choosing action.<br>- Add |ku-input-history|.<br>- Add |ku#restart()|.<br>- Add source-specific priority on sorting items.&nbsp;&nbsp;See<br>&nbsp;&nbsp;|_ku_sort_priority| for the detail.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=9134">vim-ku-0.1.2.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.1.2</b></td>
+    <td class="roweven" valign="top" nowrap><i>2008-08-16</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=13595">Kana Natsuno</a></i></td>
+    <td class="roweven" valign="top" width="2000">- Fix a bug in |ku-prefix-expansion| - it didn't expand proper prefix if there are 2 or more prefixes which have the same head part.&nbsp;&nbsp;For example, if there are prefixes &quot;ab&quot;, &quot;abc&quot;, &quot;abcd&quot; and so forth, it is not possible to predict which prefix will be expanded for user input &quot;abcd/efgh&quot;.&nbsp;&nbsp;It should expand &quot;abcd&quot;, but it may use &quot;abc&quot; or &quot;ab&quot; instead.<br>- Add |ku-assumptions|.<br>- Change the name of the ku buffer for Microsoft Windows to avoid unexpected behavior (see |g:ku_buffer_name| for the detail).<br>- Add |g:ku_buffer_name|.<br>- Improve |ku-auto-directory-completion|.&nbsp;&nbsp;Now the feature is called as |ku-auto-component-completion|.<br>- Fix a bug in |ku-auto-directory-completion|.&nbsp;&nbsp;It may raise an error if user input contains a special character.<br>- Add |ku-prefix-expansion|.<br>- Fix |:KuDoAction| to check whether ku is active or not.<br>- Improve the performance of |ku#available_sources()|.<br>- Add priorities for |ku-sources-list|.<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=9102">vim-ku-0.1.1.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.1.1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2008-08-10</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=13595">Kana Natsuno</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- Add |ku-special-sources|.<br>- Remove the feature to provide |metarw-schemes| as |ku-sources|.<br>&nbsp;&nbsp;This feature is implemented as a special source and it is included<br>&nbsp;&nbsp;in |metarw| 0.0.1 or later.<br>- Fix requirements - ku uses |fnameescape()| which is added since Vim<br>&nbsp;&nbsp;7.1.299.&nbsp;&nbsp;(thanks to id:thinca)</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=9097">vim-ku-0.1.0.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.1.0</b></td>
+    <td class="roweven" valign="top" nowrap><i>2008-08-09</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=13595">Kana Natsuno</a></i></td>
+    <td class="roweven" valign="top" width="2000">Initial upload.</td>
+</tr>
+</table>
+<!-- finish off the framework -->
+          </td>
+        </tr>
+      </table>
+    </td>
+
+  </tr>
+</table>
+
+<!-- END OF THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr><td colspan="4" bgcolor="#000000"><img src="/images/spacer.gif" height="2" width="1" alt=""></td></tr>
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr>
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+
+    <td align="left" valign="top"><small>
+      If you have questions or remarks about this site, visit the
+      <a href="http://vimonline.sf.net">vimonline development</a> pages.
+      Please use this site responsibly.
+      <br> 
+      
+      Questions about <a href="http://www.vim.org/about.php">Vim</a> should go
+      to the <a href="http://www.vim.org/maillist.php">maillist</a>.
+      Help Bram <a href="http://iccf-holland.org/">help Uganda</a>.
+      </small>
+	&nbsp;
+	&nbsp;
+
+	<!-- Start of StatCounter Code -->
+	<script type="text/javascript" language="javascript">
+	var sc_project=1417324; 
+	var sc_invisible=1; 
+	var sc_partition=11; 
+	var sc_security="d41633bc"; 
+	</script>
+
+	<script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script><noscript><a href="http://www.statcounter.com/" target="_blank"><img  src="http://c12.statcounter.com/counter.php?sc_project=1417324&java=0&security=d41633bc&invisible=0" alt="free tracking" border="0"></a> </noscript>
+	<!-- End of StatCounter Code -->
+          </td>
+
+    <td align="right" valign="top">
+      		<a href="http://sourceforge.net/projects/vim" rel="nofollow"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=8&type=1" width="88" height="31" border="0" alt="SourceForge.net Logo" /></a>
+    </td>
+
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+  </tr>
+
+    
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  
+  </tr>
+</table>
+
+</body>
+</html>
+

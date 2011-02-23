@@ -1,0 +1,484 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+  <link rel="Stylesheet" type="text/css" href="/css/style.css" >
+  <title>PHP-correct-Indenting - A new indent script for php with many improvements never seen before : vim online</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <meta name="KEYWORDS" content="Vim, Vi IMproved, text editor, home, documentation, tips, scripts, news">
+  <link rel="shortcut icon" type="image/x-icon" href="/images/vim_shortcut.ico">
+</head>
+
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff"> 
+
+<!-- HEADER, SPONSOR IMAGE, VIM IMAGE AND BOOK AD -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+  <td class="lightbg">&nbsp;&nbsp;&nbsp;</td>
+  <td class="lightbg" align="left"><a href="/sponsor/index.php"><img src="/images/sponsorvim.gif" alt="sponsor Vim development" border="0"></a></td>
+    <td class="lightbg" align="center"><a href="/index.php"><img src="/images/vim_header.gif" border="0" alt="Vim logo"></a></td>
+    <td class="lightbg" align="right"><a href="http://iccf-holland.org/click5.html"><img src="/images/buyhelplearn.gif" alt="Vim Book Ad" border="0"></a></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="darkbg"><img src="/images/spacer.gif" width="1" height="10" alt=""></td>
+  </tr>
+</table>
+<!-- THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+  <col width="180">
+  <col width="1">
+
+  <tr valign="top">
+    <td class="sidebar">
+      <table width="180" cellpadding="4" cellspacing="0" border="0">
+        <tr valign="top">
+          <td class="sidebar">
+
+<!-- INCLUDE THE PAGE NAVIGATION -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+    <tr>
+        <td><small>not logged in (<a href="/login.php">login</a>)</small></td>
+    </tr>
+    <tr><td>
+<small>&nbsp;</small>
+<form action="http://www.google.com/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-3005259998294962:bvyni59kjr1" />
+    <input type="hidden" name="ie" value="ISO-8859-1" />
+    <input type="text" name="q" size="20" />
+    <br>
+    <input type="submit" name="sa" value="Search" />
+  </div>
+</form>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+    </td></tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="1"></td>
+    </tr>
+    <tr>
+        <td class="darkbg"><img src="/images/spacer.gif" alt='' border="0" height="3"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="2"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/index.php">Home</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/search.php">Advanced search</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/about.php">About Vim</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/community.php">Community</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/news/news.php">News</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/sponsor/index.php">Sponsoring</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/trivia.php">Trivia</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/docs.php">Documentation</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/download.php">Download</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/scripts/index.php">Scripts</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/tips/index.php">Tips</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/account/index.php">My Account</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/huh.php">Site Help</a></td>
+        </tr>
+</table>
+
+            <table width="172" cellpadding="0" cellspacing="0" border="0">
+              <tr><td><img src="/images/spacer.gif" alt="" border="0" width="1" height="8"></td></tr>
+              <tr><td class="darkbg"><img src="/images/spacer.gif" width="1" height="3" alt=""></td></tr>
+            </table>
+            <br>
+
+<!-- INCLUDE THE PAGE SIDEBAR TEXT -->
+&nbsp;
+
+          </td>
+        </tr>
+      </table>
+    </td>
+
+    <td class="darkbg"><img src="/images/spacer.gif" width="1" height="1" border="0" alt=""><br></td>
+    <td>
+      <table width="100%" cellpadding="10" cellspacing="0" border="0" bordercolor="red">
+        <tr>
+          <td valign="top">
+
+<span class="txth1">PHP-correct-Indenting : A new indent script for php with many improvements never seen before</span> 
+
+<br>
+<br>
+
+<!-- karma table -->
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
+  <td>
+    Rating <b>285/139</b>,
+    Downloaded by 11263  </td>
+  <td class="lightbg">
+  <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
+  </td>
+  <td>
+    <a href="http://vim.wikia.com/wiki/Script:1120">Vim wiki</a>
+  </td>  
+</tr>
+</table>
+<p>
+
+<table cellspacing="0" cellpadding="0" border="0">
+<tr><td class="prompt">created by</td></tr>
+<tr><td><a href="/account/profile.php?user_id=5986">John Wellesz</a></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">script type</td></tr>
+<tr><td>indent</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">description</td></tr>
+<tr><td>GitHub: <a target="_blank" href="https://github.com/2072/PHP-Indenting-for-VIm">https://github.com/2072/PHP-Indenting-for-VIm</A><br><br>(The version 1.33 of this script is already included in VIM 7.3)<br><br>Features:<br>- Indent &quot;perfectly&quot; PHP code.<br>- Comment or non-PHP code doesn't break the algorithm.<br>- Non-PHP code, multiline /**/ comments and &quot;Here Document&quot; content remain unchanged.<br>- HTML &lt;Script.*&gt; tags are indented as PHP and like if their content was part of the surrounding PHP code.<br>- Fast optimized indenting, the script knows when it's indenting large blocks and skips some unnecessary tests...<br>- Support folding (folds don't break the indenting)<br>- Auto-formatting for comments (using the Vim option formatoptions=qroc).<br>- Indent correctly complex &quot;non bracketted blocks&quot; (like in language C):<br><br>&nbsp;&nbsp;&nbsp;&nbsp;Example: (start of line spaces are replaced by ____)<br>&lt;?php<br>if (!isset($History_lst_sel)) <br>____if (!isset($History_lst_sel)) <br>________if (!isset($History_lst_sel)) {<br>____________$History_lst_sel=0;<br>________} else<br>____________$foo=&quot;truc&quot;;<br>____else<br>_______$bla= &quot;foo&quot;;<br>$command_hist = TRUE;<br>?&gt;<br><br>- Direct indenting, the text is indented as you type it.<br>- switch/case are indented correctly.<br>- Script source code well commented.<br>- Bug free as far as I know :)<br><br>A more complete example of its capabilities:<br><br>&lt;?php<br>if ($foo=&quot;thing&quot;) // as you see an opened bracket isn't needed to indent correctly :)<br>____if (foo(&quot;something&quot;))<br>____{<br>________somethingelse(&quot;blabla&quot;);<br>?&gt;<br><br><br>&lt;html&gt;<br>&lt;head&gt;<br>&lt;title&gt;SOME HTML CODE&lt;/title&gt;<br>&lt;?<br>________echo &quot;Something here&quot;;<br>?&gt;<br>________&lt;script type=&quot;text/javascript&quot;&gt;<br>________// Note the indentation of the script as if part of PHP<br><br>________var truc=0;<br>________if (truc) {<br>____________nothing();<br>________}<br><br>________&lt;/script&gt;<br><br>&lt;/head&gt;<br>&lt;body&gt;<br><br>&lt;b&gt;some closing and oppenning bracket here } } {<br>nothing to indent here :)<br>&lt;/b&gt;<br><br>&lt;/body&gt;<br>&lt;/html&gt;<br><br><br>&lt;?<br>________Somethingelse(true);<br>____}<br><br>if (foo)<br>____/* a useless comment here<br>____with useless code:<br>____if (broken code) {<br>___________________blabla();<br>____*/<br>____if (testHereDocument()) {<br><br><br>________echo &lt;&lt;&lt;HEREDOC<br>Here is an Here Document style<br>echo, very useful.<br>The following code isn't indented<br>if (test)<br>while (foo) {<br>nothing();<br>}<br>HEREDOC;<br><br>____}<br><br>bye();<br>?&gt;<br><br>That's all folks!<br><br>This script can also be found there: (with colorful examples)<br><a target="_blank" href="http://www.2072productions.com/to/phpindent.txt">http://www.2072productions.com/to/phpindent.txt</A><br><br>There is also a newsletter where you can subscribe at:<br><a target="_blank" href="http://www.2072productions.com/to/php-indent-for-vim-newsletter.php">http://www.2072productions.com/to/php-indent-for-vim-newsletter.php</A><br>(only about new releases of this script)<br><br>Enjoy :)<br></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">install details</td></tr>
+<tr><td>Just make sure the name of the file is php.vim and copy it under your vimfiles/indent folder.<br>PHP syntax coloring must be turned on.<br><br>Available options:<br><br>let PHP_autoformatcomment = 0 (default is 1)<br>To disable autoformating of comment by default.<br>If set to 0, this script will let the 'formatoptions' setting intact.<br><br>let PHP_default_indenting = # of sw (default is 0)<br># of sw will be added to the indent of each line of PHP code (non PHP code isn't affected).<br><br>let PHP_removeCRwhenUnix = 1<br>Will make the script automatically remove CR at end of lines (by default this option is unset), NOTE that you MUST remove CR when the fileformat is UNIX else the indentation won't be correct...<br><br>let PHP_BracesAtCodeLevel = 1<br>Will indent the '{' and '}' at the same level than the code they contain.</td></tr>
+<tr><td>&nbsp;</td></tr>
+</table>
+
+<!-- rating table -->
+<form name="rating">
+<input type="hidden" name="script_id" value="1120">
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>rate this script</b></td>
+  <td valign="middle">
+    <input type="radio" name="rating" value="life_changing">Life Changing
+    <input type="radio" name="rating" value="helpful">Helpful
+    <input type="radio" name="rating" value="unfulfilling">Unfulfilling&nbsp;
+    <input type="submit" value="rate">
+  </td>
+</tr>
+</table>
+</form>
+<span class="txth2">script versions</span> (<a href="add_script_version.php?script_id=1120">upload new version</a>)
+<p>
+Click on the package to download.
+<p>
+
+<table cellspacing="2" cellpadding="4" border="0" width="100%">
+<tr class='tableheader'>
+        <th valign="top">package</th>
+    <th valign="top">script version</th>
+    <th valign="top">date</th>
+    <th valign="top">Vim version</th>
+    <th valign="top">user</th>
+    <th valign="top">release notes</th>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15001">php.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.34</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2011-02-14</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=5986">John Wellesz</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- Fix: string with /* would be treated as comment start when using single quote. (Thanks to Manic Chuang for the fix)</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13998">php.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.33_fixed</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-10-05</i></td>
+    <td class="roweven" valign="top" nowrap>7.3</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=5986">John Wellesz</a></i></td>
+    <td class="roweven" valign="top" width="2000">Fixes a formatting issue concerning php.vim itself, (CRLF back to LF)</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13433">php.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.33</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-07-30</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=5986">John Wellesz</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- Rewrote Switch(){case:default:} handling from scratch in a simpler more logical and infallible way.<br>- Added a new option: PHP_outdentphpescape to indent PHP tags as the surrounding code.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=9543">php.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.30</b></td>
+    <td class="roweven" valign="top" nowrap><i>2008-11-22</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=5986">John Wellesz</a></i></td>
+    <td class="roweven" valign="top" width="2000">- Fixed empty case/default identation again :/<br>- The ResetOptions() function will be called each time the ftplugin calls this script, previously it was executed on BufWinEnter and Syntax events.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=9400">php.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.29</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2008-10-26</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=5986">John Wellesz</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Fixed php file detection for ResetOptions() used for comments formatting. It now uses the same tests as filetype.vim. ResetOptions() will be correctly called for *.phtml, *.ctp and *.inc files.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=8779">php.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.28</b></td>
+    <td class="roweven" valign="top" nowrap><i>2008-06-10</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=5986">John Wellesz</a></i></td>
+    <td class="roweven" valign="top" width="2000">- Added support for NOWDOC tags ($foo = &lt;&lt;&lt;'bar')<br>- New option: PHP_vintage_case_default_indent (default off)<br>- End HEREDOC delimiters were not considered as such if they were not followed by a ';'.<br>- if a &quot;case&quot; was preceded by another &quot;case&quot; on the previous line, the second &quot;case&quot; was indented incorrectly.<br>- '/*' character sequences found on a line starting by a '#' were not dismissed by the indenting algorithm and could cause indentation problem in some cases.<br>- Fix some indentation errors on multi line conditions and multi line statements.<br>- Fix when array indenting is broken and a closing ');' is placed at the start of the line, following lines will be indented correctly.<br>- Minor fixes and optimizations.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=6783">php.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.24</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2007-02-24</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=5986">John Wellesz</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- Added compatibility with the latest version of php.vim syntax file by Peter Hodge (<a target="_blank" href="http://www.vim.org/scripts/script.php?script_id=1571">http://www.vim.org/scripts/script.php?script_id=1571</A>)<br>This fixes wrong indentation and ultra-slow indenting on large php files...<br>- fixed spelling in comments<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=4975">php.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.23</b></td>
+    <td class="roweven" valign="top" nowrap><i>2006-01-14</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=5986">John Wellesz</a></i></td>
+    <td class="roweven" valign="top" width="2000">- &lt;script&gt; html tags are now correctly indented the same way their content is.<br>- &lt;?.*?&gt; (on a single line) php declarations are now always considered as non-php code and let untouched.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=4964">php.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.22</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2006-01-12</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=5986">John Wellesz</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- PHPDoc comments are now indented according to the surrounding code.<br>- This is also true for '/* */' multi-line comments when the second line begins by a '*'.<br>- Single line '/* */' comments are also indented.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=4952">php.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.21</b></td>
+    <td class="roweven" valign="top" nowrap><i>2006-01-07</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=5986">John Wellesz</a></i></td>
+    <td class="roweven" valign="top" width="2000">- 'try' and 'catch' were not registered as block starters so the '{' after a 'try' or 'catch' could be wrongly indented... <br>(thanks to Gert Muller for finding this issue)</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=4791">php.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.20</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2005-11-21</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=5986">John Wellesz</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- Line beginning by a single or double quote followed by a space would cause problems... this was related to the bug correction of version 1.10 - Thanks to David F. for finding this (he was lucky). <br>- Changed the way this script set the 'formatoptions' setting, now it uses '-=' and '+=' <br>- New option: PHP_autoformatcomment (defaults to 1), if set to 0 the 'formatoptions' setting will not be altered. <br>- When PHP_autoformatcomment is not 0, the 'comments' setting is set to the type of comments that PHP supports.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=4776">php.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.19</b></td>
+    <td class="roweven" valign="top" nowrap><i>2005-11-18</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=5986">John Wellesz</a></i></td>
+    <td class="roweven" valign="top" width="2000">- Indentation of '*/' delimiter of '/**/' won't be broken by strings or '//' comments containing the &quot;/*&quot; character sequence.<br>- I Forgot to register 'interface' and 'abstract' as block starters so the '{' after them could be wrongly indented...</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=4590">php.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.181</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2005-09-16</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=5986">John Wellesz</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- I Forgot to register 'class' as a block starter so the '{' after a 'class' could be wrongly indented...</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=4587">php.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.18</b></td>
+    <td class="roweven" valign="top" nowrap><i>2005-09-15</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=5986">John Wellesz</a></i></td>
+    <td class="roweven" valign="top" width="2000">- No more problem with Vim 6.3 and UTF-8.<br>- Opening braces &quot;{&quot; are always indented according to their block starter.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=4411">php.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.17</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2005-07-06</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=5986">John Wellesz</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- Now starting and ending '*' of multiline '/* */' comments are aligned on the '*' of the '/*' comment starter.<br>- Some code improvements that make indentation faster.<br>- Now following parts of split lines are indented:<br>&nbsp;&nbsp;&nbsp;&nbsp;Instead of:<br>	$foo=<br>	&quot;foo&quot;<br>	.&quot;foo&quot;;<br><br>&nbsp;&nbsp;&nbsp;&nbsp;You have:<br>	$foo=<br>	&nbsp;&nbsp;&nbsp;&nbsp;&quot;foo&quot;<br>	&nbsp;&nbsp; .&quot;foo&quot;;<br><br>- If a &quot;case : break;&quot; was declared on a single line, the following &quot;case&quot; was not indented correctly.<br>- If a &lt;/script&gt; html tag was preceded by a &quot;?&gt;&quot; it wasn't indented.<br>- Some other minor corrections and improvements.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=4387">php.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.15</b></td>
+    <td class="roweven" valign="top" nowrap><i>2005-06-23</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=5986">John Wellesz</a></i></td>
+    <td class="roweven" valign="top" width="2000">- Corrected some problems with the indentation of multiline &quot;array()&quot; declarations.<br>- Added auto-formatting for comments (using the Vim option formatoptions=qroc).<br>- Added the script option PHP_BracesAtCodeLevel to indent the '{' and '}' at the same level than the code they contain.<br>- Some code cleaning and typo corrections (Thanks to Emanuele Giaquinta for his patches)</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=4330">php.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.12</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2005-05-31</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=5986">John Wellesz</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- The bug involving searchpair() and utf-8 encoding in Vim 6.3 will not make this script to hang but you'll have to be careful to not write '/* */' comments with other '/*' inside the comments else the indentation won't be correct.<br>NOTE: This is true only if you are using utf-8 and vim 6.3.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=4291">php.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.11</b></td>
+    <td class="roweven" valign="top" nowrap><i>2005-05-17</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=5986">John Wellesz</a></i></td>
+    <td class="roweven" valign="top" width="2000">If the &quot;case&quot; of a &quot;switch&quot; wasn't alone on its line and if the &quot;switch&quot; was at col 0 (or at default indenting) the lines following the &quot;case&quot; were not indented.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=3893">php.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.10</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2005-02-22</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=5986">John Wellesz</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Lines beginning by a single or double quote were not indented in some cases.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=3838">php.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.09</b></td>
+    <td class="roweven" valign="top" nowrap><i>2005-02-07</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=5986">John Wellesz</a></i></td>
+    <td class="roweven" valign="top" width="2000">The javaScript code was not always directly indented when typing.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=3754">php.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.08</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2005-01-09</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=5986">John Wellesz</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- End comment tags '*/' are indented like start tags '/*'.<br>- When typing a multiline comment, '}' are indented according to other commented '{'.<br>- Added a new option 'PHP_removeCRwhenUnix' to automatically remove CR at end of lines when the file format is Unix.<br>- Changed the file format of this very file to Unix.<br>- This version seems to correct several issues some people had with 1.07.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=3732">php.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.07</b></td>
+    <td class="roweven" valign="top" nowrap><i>2004-12-27</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=5986">John Wellesz</a></i></td>
+    <td class="roweven" valign="top" width="2000">- Added support for &quot;Here document&quot; tags: <br>-&nbsp;&nbsp; HereDoc end tag are indented properly. <br>-&nbsp;&nbsp; HereDoc content remain unchanged. <br>- All the code that is outside PHP delimiter remains unchanged. <br>- New feature: The content of &lt;script.*&gt; html tag is considered as PHP and indented according to the surrounding PHP code. <br>- &quot;else if&quot; are detected as &quot;elseif&quot;. <br>- Multiline /**/ are indented when the user type it but remain unchanged when indenting from their beginning. <br>- Fixed indenting of // and # comments. <br>- php_sync_method option is set to 0 (fromstart). This is required for complex php script else the indent may fail. <br>- Files with non PHP code at the beginning could alter the indent of the following PHP code. <br>- Other minor improvments and corrections.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=3714">php.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.06</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2004-12-19</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=5986">John Wellesz</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- Switch block were no longer indented correctly...<br>- Added an option to use a default indenting instead of 0.<br>- A problem with ^\s*);\= lines where ending a non '{}' structure.<br>- Changed script local variable to be buffer local variable instead.<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=3710">php.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.05</b></td>
+    <td class="roweven" valign="top" nowrap><i>2004-12-15</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=5986">John Wellesz</a></i></td>
+    <td class="roweven" valign="top" width="2000">Lines containing &quot;&lt;?php.* ?&gt;&quot; and &quot;?&gt; .*&lt;?php&quot; (start and end tag on the same line) are no longer indented at col 1 but as normal code.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=3595">php.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.0</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2004-11-01</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=5986">John Wellesz</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Initial upload</td>
+</tr>
+</table>
+<!-- finish off the framework -->
+          </td>
+        </tr>
+      </table>
+    </td>
+
+  </tr>
+</table>
+
+<!-- END OF THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr><td colspan="4" bgcolor="#000000"><img src="/images/spacer.gif" height="2" width="1" alt=""></td></tr>
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr>
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+
+    <td align="left" valign="top"><small>
+      If you have questions or remarks about this site, visit the
+      <a href="http://vimonline.sf.net">vimonline development</a> pages.
+      Please use this site responsibly.
+      <br> 
+      
+      Questions about <a href="http://www.vim.org/about.php">Vim</a> should go
+      to the <a href="http://www.vim.org/maillist.php">maillist</a>.
+      Help Bram <a href="http://iccf-holland.org/">help Uganda</a>.
+      </small>
+	&nbsp;
+	&nbsp;
+
+	<!-- Start of StatCounter Code -->
+	<script type="text/javascript" language="javascript">
+	var sc_project=1417324; 
+	var sc_invisible=1; 
+	var sc_partition=11; 
+	var sc_security="d41633bc"; 
+	</script>
+
+	<script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script><noscript><a href="http://www.statcounter.com/" target="_blank"><img  src="http://c12.statcounter.com/counter.php?sc_project=1417324&java=0&security=d41633bc&invisible=0" alt="free tracking" border="0"></a> </noscript>
+	<!-- End of StatCounter Code -->
+          </td>
+
+    <td align="right" valign="top">
+      		<a href="http://sourceforge.net/projects/vim" rel="nofollow"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=8&type=1" width="88" height="31" border="0" alt="SourceForge.net Logo" /></a>
+    </td>
+
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+  </tr>
+
+    
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  
+  </tr>
+</table>
+
+</body>
+</html>
+

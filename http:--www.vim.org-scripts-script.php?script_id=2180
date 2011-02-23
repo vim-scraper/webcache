@@ -1,0 +1,332 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+  <link rel="Stylesheet" type="text/css" href="/css/style.css" >
+  <title>ColorSchemeEditor - PyGTK GUI to more easily create colorschemes (keywords: color scheme editor) : vim online</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <meta name="KEYWORDS" content="Vim, Vi IMproved, text editor, home, documentation, tips, scripts, news">
+  <link rel="shortcut icon" type="image/x-icon" href="/images/vim_shortcut.ico">
+</head>
+
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff"> 
+
+<!-- HEADER, SPONSOR IMAGE, VIM IMAGE AND BOOK AD -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+  <td class="lightbg">&nbsp;&nbsp;&nbsp;</td>
+  <td class="lightbg" align="left"><a href="/sponsor/index.php"><img src="/images/sponsorvim.gif" alt="sponsor Vim development" border="0"></a></td>
+    <td class="lightbg" align="center"><a href="/index.php"><img src="/images/vim_header.gif" border="0" alt="Vim logo"></a></td>
+    <td class="lightbg" align="right"><a href="http://iccf-holland.org/click5.html"><img src="/images/buyhelplearn.gif" alt="Vim Book Ad" border="0"></a></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="darkbg"><img src="/images/spacer.gif" width="1" height="10" alt=""></td>
+  </tr>
+</table>
+<!-- THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+  <col width="180">
+  <col width="1">
+
+  <tr valign="top">
+    <td class="sidebar">
+      <table width="180" cellpadding="4" cellspacing="0" border="0">
+        <tr valign="top">
+          <td class="sidebar">
+
+<!-- INCLUDE THE PAGE NAVIGATION -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+    <tr>
+        <td><small>not logged in (<a href="/login.php">login</a>)</small></td>
+    </tr>
+    <tr><td>
+<small>&nbsp;</small>
+<form action="http://www.google.com/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-3005259998294962:bvyni59kjr1" />
+    <input type="hidden" name="ie" value="ISO-8859-1" />
+    <input type="text" name="q" size="20" />
+    <br>
+    <input type="submit" name="sa" value="Search" />
+  </div>
+</form>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+    </td></tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="1"></td>
+    </tr>
+    <tr>
+        <td class="darkbg"><img src="/images/spacer.gif" alt='' border="0" height="3"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="2"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/index.php">Home</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/search.php">Advanced search</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/about.php">About Vim</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/community.php">Community</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/news/news.php">News</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/sponsor/index.php">Sponsoring</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/trivia.php">Trivia</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/docs.php">Documentation</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/download.php">Download</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/scripts/index.php">Scripts</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/tips/index.php">Tips</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/account/index.php">My Account</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/huh.php">Site Help</a></td>
+        </tr>
+</table>
+
+            <table width="172" cellpadding="0" cellspacing="0" border="0">
+              <tr><td><img src="/images/spacer.gif" alt="" border="0" width="1" height="8"></td></tr>
+              <tr><td class="darkbg"><img src="/images/spacer.gif" width="1" height="3" alt=""></td></tr>
+            </table>
+            <br>
+
+<!-- INCLUDE THE PAGE SIDEBAR TEXT -->
+&nbsp;
+
+          </td>
+        </tr>
+      </table>
+    </td>
+
+    <td class="darkbg"><img src="/images/spacer.gif" width="1" height="1" border="0" alt=""><br></td>
+    <td>
+      <table width="100%" cellpadding="10" cellspacing="0" border="0" bordercolor="red">
+        <tr>
+          <td valign="top">
+
+<span class="txth1">ColorSchemeEditor : PyGTK GUI to more easily create colorschemes (keywords: color scheme editor)</span> 
+
+<br>
+<br>
+
+<!-- karma table -->
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
+  <td>
+    Rating <b>35/11</b>,
+    Downloaded by 1090  </td>
+  <td class="lightbg">
+  <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
+  </td>
+  <td>
+    <a href="http://vim.wikia.com/wiki/Script:2180">Vim wiki</a>
+  </td>  
+</tr>
+</table>
+<p>
+
+<table cellspacing="0" cellpadding="0" border="0">
+<tr><td class="prompt">created by</td></tr>
+<tr><td><a href="/account/profile.php?user_id=12386">erik falor</a></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">script type</td></tr>
+<tr><td>utility</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">description</td></tr>
+<tr><td>This plugin provides a GUI tool which simplifies creating/editing Vim<br>colorscheme files.&nbsp;&nbsp;It consists of a Vim plugin as well as a Python program,<br>and utilizes Vim's command server interface |clientserver| for communications.<br><br>New in version 1.1:<br>The list of highlight groups now displays a swatch of the current foreground/<br>background colors.&nbsp;&nbsp;You can see right away which colors are used for each<br>highlight group.&nbsp;&nbsp;<br>After getting some negative feedback over my last few colorscheme contributions,<br>I have added a readability column to this tool that analyses the color contrast <br>between foreground and background colors.&nbsp;&nbsp;I hope that this will lead to <br>colorschemes that are easy on the eyes for all Vim users.<br><br>See the screenshots:<br><br><a target="_blank" href="http://i49.servimg.com/u/f49/12/09/64/12/metada10.jpg">http://i49.servimg.com/u/f49/12/09/64/12/metada10.jpg</A><br><a target="_blank" href="http://i49.servimg.com/u/f49/12/09/64/12/colors10.png">http://i49.servimg.com/u/f49/12/09/64/12/colors10.png</A><br><br>The goals that I hope to achieve through this plugin are to improve the<br>quality of existing colorschemes by allowing the authors the freedom to create<br>colorschemes in a natural WYSIWYG fashion.&nbsp;&nbsp;Immediate visual feedback lets the<br>author quickly assess the effects of their changes, and allows them to easily<br>choose just the right color for a highlight element.&nbsp;&nbsp;By displaying all of the<br>&quot;preferred&quot; highlight groups in a treeview, colorscheme authors can ensure<br>that all of the important highlights have been changed to fit in with the<br>overall scheme.&nbsp;&nbsp;Users of colorschemes can use this plugin to tweak their<br>favorite colorschemes more to their liking.<br><br>Colorschemes generated with this plugin are backwards-compatible with earlier<br>versions of Gvim that do not use such highlight groups as CursorLine or Pmenu.<br><br>Your palette of custom colors is saved in the colorscheme file, so that your<br>choices persist between editing sessions.&nbsp;&nbsp;This helps you maintain<br>a consistent look-and-feel while you are in the process of creating the<br>colorscheme.&nbsp;&nbsp;Other metadata related to the colorscheme, such as licensing<br>information and your contact information are accessible from within the editor<br>as well.<br><br>This plugin makes a nice compliment to my earlier work, ColorSchemeMenuMaker.<br>&nbsp;&nbsp;&nbsp;&nbsp;<a target="_blank" href="http://www.vim.org/scripts/script.php?script_id=2004">http://www.vim.org/scripts/script.php?script_id=2004</A><br><br>If you have already installed ColorSchemeMenuMaker, the menu entry for<br>ColorSchemeEditor will appear at the bottom of the &quot;ColorSchemes&quot; menu item.<br>Additionally, you may invoke it via the :ColorSchemeEditor command.<br><br>Send bugs, suggestions, flames, etc. to NOSPAMewfalor@NOSPAMgmail.com - NOSPAM.<br><br></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">install details</td></tr>
+<tr><td>ColorSchemeEditor requires that your version of Vim is compiled with the |gui|<br>and |clientserver| features.<br><br>The GUI editor is written with Python, with PyGTK and Glade comprising the<br>graphical interface.<br><br>If you want to use this on Un*x systems, make sure you have those three<br>packages and their dependencies installed.<br><br>More specifically, Gentoo users will need at least the following packages:<br>dev-lang/python x11-libs/gtk+ gnome-base/libglade dev-python/pygtk<br><br>Ubuntu users will need at least these packages: libglade2-0, python, python-gtk2, python-glade2<br><br><br>Windows users will need at least the following software packages:<br>Python&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a target="_blank" href="http://www.python.org/download/">http://www.python.org/download/</A><br>PyGTK&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a target="_blank" href="http://www.pygtk.org/downloads.html">http://www.pygtk.org/downloads.html</A><br>Pygobject&nbsp;&nbsp;&nbsp;&nbsp;See above<br>Pycairo&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;See above<br>gladewin32&nbsp;&nbsp; <a target="_blank" href="http://gladewin32.sourceforge.net/modules/news/">http://gladewin32.sourceforge.net/modules/news/</A><br><br>Once the requisite software packages are installed, simply unzip the plugin<br>package into your ~/.vim (or ~/vimfiles) directory.&nbsp;&nbsp;The<br>ColorSchemeEditor.{py,vim,glade} files should all wind up in the plugin<br>directory.<br><br>Any new instances of Gvim will now show the 'ColorSchemes' menu, and are ready<br>to go.&nbsp;&nbsp;Within already running instances of Gvim, you may execute<br><br>&nbsp;&nbsp;&nbsp;&nbsp;:runtime plugin/ColorSchemeEditor.vim <br><br>to load the plugin.<br><br>Also, you should run helptags: <br><br>&nbsp;&nbsp;&nbsp;&nbsp;:helptags $HOME/.vim/doc<br></td></tr>
+<tr><td>&nbsp;</td></tr>
+</table>
+
+<!-- rating table -->
+<form name="rating">
+<input type="hidden" name="script_id" value="2180">
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>rate this script</b></td>
+  <td valign="middle">
+    <input type="radio" name="rating" value="life_changing">Life Changing
+    <input type="radio" name="rating" value="helpful">Helpful
+    <input type="radio" name="rating" value="unfulfilling">Unfulfilling&nbsp;
+    <input type="submit" value="rate">
+  </td>
+</tr>
+</table>
+</form>
+<span class="txth2">script versions</span> (<a href="add_script_version.php?script_id=2180">upload new version</a>)
+<p>
+Click on the package to download.
+<p>
+
+<table cellspacing="2" cellpadding="4" border="0" width="100%">
+<tr class='tableheader'>
+        <th valign="top">package</th>
+    <th valign="top">script version</th>
+    <th valign="top">date</th>
+    <th valign="top">Vim version</th>
+    <th valign="top">user</th>
+    <th valign="top">release notes</th>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=8663">ColorSchemeEditor.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.2.2</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2008-05-08</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=12386">erik falor</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Write colorscheme files with UNIX line endings, even on non-UNIX OSes.<br>If the system's vim executable was not compiled with +clientserver feature, fall back to using gvim executable for IPC.<br>Save dialog now prompts before overwriting an existing file. <br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=8593">ColorSchemeEditor.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.2</b></td>
+    <td class="roweven" valign="top" nowrap><i>2008-04-23</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=12386">erik falor</a></i></td>
+    <td class="roweven" valign="top" width="2000">Conditionally include SpellBad, SpellCap, SpellLocal, and SpellRare highlight groups if spelling feature is enabled.<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=8551">ColorSchemeEditor.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2008-04-12</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=12386">erik falor</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Added Features:<br>Color swatch displayed in TreeView along with hex triplet<br>Display rgb.txt colors database in an auxiliary window<br>Foreground and background color combinations for each highlight group are analysed for readability.<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=8398">ColorSchemeEditor.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.0.2 beta</b></td>
+    <td class="roweven" valign="top" nowrap><i>2008-03-05</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=12386">erik falor</a></i></td>
+    <td class="roweven" valign="top" width="2000">Wasn't launching GUI in background on Unix systems<br>Python 2.4 doesn't have finally keyword<br>Fixed a segfault in the TreeView on the PyGTK side.<br>Fixed a dict lookup exception in PopulateHighlightTree().<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=8395">ColorSchemeEditor.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.0.1 beta</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2008-03-05</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=12386">erik falor</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Generated colorschemes were not compatible with Vim 6.3.<br>Hooked up help text to Help menu item.<br>Fixed a few more small items.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=8391">ColorSchemeEditor.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.0 Beta</b></td>
+    <td class="roweven" valign="top" nowrap><i>2008-03-04</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=12386">erik falor</a></i></td>
+    <td class="roweven" valign="top" width="2000">Initial upload</td>
+</tr>
+</table>
+<!-- finish off the framework -->
+          </td>
+        </tr>
+      </table>
+    </td>
+
+  </tr>
+</table>
+
+<!-- END OF THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr><td colspan="4" bgcolor="#000000"><img src="/images/spacer.gif" height="2" width="1" alt=""></td></tr>
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr>
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+
+    <td align="left" valign="top"><small>
+      If you have questions or remarks about this site, visit the
+      <a href="http://vimonline.sf.net">vimonline development</a> pages.
+      Please use this site responsibly.
+      <br> 
+      
+      Questions about <a href="http://www.vim.org/about.php">Vim</a> should go
+      to the <a href="http://www.vim.org/maillist.php">maillist</a>.
+      Help Bram <a href="http://iccf-holland.org/">help Uganda</a>.
+      </small>
+	&nbsp;
+	&nbsp;
+
+	<!-- Start of StatCounter Code -->
+	<script type="text/javascript" language="javascript">
+	var sc_project=1417324; 
+	var sc_invisible=1; 
+	var sc_partition=11; 
+	var sc_security="d41633bc"; 
+	</script>
+
+	<script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script><noscript><a href="http://www.statcounter.com/" target="_blank"><img  src="http://c12.statcounter.com/counter.php?sc_project=1417324&java=0&security=d41633bc&invisible=0" alt="free tracking" border="0"></a> </noscript>
+	<!-- End of StatCounter Code -->
+          </td>
+
+    <td align="right" valign="top">
+      		<a href="http://sourceforge.net/projects/vim" rel="nofollow"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=8&type=1" width="88" height="31" border="0" alt="SourceForge.net Logo" /></a>
+    </td>
+
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+  </tr>
+
+    
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  
+  </tr>
+</table>
+
+</body>
+</html>
+

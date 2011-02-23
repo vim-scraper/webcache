@@ -1,0 +1,396 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+  <link rel="Stylesheet" type="text/css" href="/css/style.css" >
+  <title>shell.vim - Improved integration between Vim and its environment (fullscreen, open URL, etc) : vim online</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <meta name="KEYWORDS" content="Vim, Vi IMproved, text editor, home, documentation, tips, scripts, news">
+  <link rel="shortcut icon" type="image/x-icon" href="/images/vim_shortcut.ico">
+</head>
+
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff"> 
+
+<!-- HEADER, SPONSOR IMAGE, VIM IMAGE AND BOOK AD -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+  <td class="lightbg">&nbsp;&nbsp;&nbsp;</td>
+  <td class="lightbg" align="left"><a href="/sponsor/index.php"><img src="/images/sponsorvim.gif" alt="sponsor Vim development" border="0"></a></td>
+    <td class="lightbg" align="center"><a href="/index.php"><img src="/images/vim_header.gif" border="0" alt="Vim logo"></a></td>
+    <td class="lightbg" align="right"><a href="http://iccf-holland.org/click5.html"><img src="/images/buyhelplearn.gif" alt="Vim Book Ad" border="0"></a></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="darkbg"><img src="/images/spacer.gif" width="1" height="10" alt=""></td>
+  </tr>
+</table>
+<!-- THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+  <col width="180">
+  <col width="1">
+
+  <tr valign="top">
+    <td class="sidebar">
+      <table width="180" cellpadding="4" cellspacing="0" border="0">
+        <tr valign="top">
+          <td class="sidebar">
+
+<!-- INCLUDE THE PAGE NAVIGATION -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+    <tr>
+        <td><small>not logged in (<a href="/login.php">login</a>)</small></td>
+    </tr>
+    <tr><td>
+<small>&nbsp;</small>
+<form action="http://www.google.com/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-3005259998294962:bvyni59kjr1" />
+    <input type="hidden" name="ie" value="ISO-8859-1" />
+    <input type="text" name="q" size="20" />
+    <br>
+    <input type="submit" name="sa" value="Search" />
+  </div>
+</form>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+    </td></tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="1"></td>
+    </tr>
+    <tr>
+        <td class="darkbg"><img src="/images/spacer.gif" alt='' border="0" height="3"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="2"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/index.php">Home</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/search.php">Advanced search</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/about.php">About Vim</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/community.php">Community</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/news/news.php">News</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/sponsor/index.php">Sponsoring</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/trivia.php">Trivia</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/docs.php">Documentation</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/download.php">Download</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/scripts/index.php">Scripts</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/tips/index.php">Tips</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/account/index.php">My Account</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/huh.php">Site Help</a></td>
+        </tr>
+</table>
+
+            <table width="172" cellpadding="0" cellspacing="0" border="0">
+              <tr><td><img src="/images/spacer.gif" alt="" border="0" width="1" height="8"></td></tr>
+              <tr><td class="darkbg"><img src="/images/spacer.gif" width="1" height="3" alt=""></td></tr>
+            </table>
+            <br>
+
+<!-- INCLUDE THE PAGE SIDEBAR TEXT -->
+&nbsp;
+
+          </td>
+        </tr>
+      </table>
+    </td>
+
+    <td class="darkbg"><img src="/images/spacer.gif" width="1" height="1" border="0" alt=""><br></td>
+    <td>
+      <table width="100%" cellpadding="10" cellspacing="0" border="0" bordercolor="red">
+        <tr>
+          <td valign="top">
+
+<span class="txth1">shell.vim : Improved integration between Vim and its environment (fullscreen, open URL, etc)</span> 
+
+<br>
+<br>
+
+<!-- karma table -->
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
+  <td>
+    Rating <b>47/14</b>,
+    Downloaded by 727  </td>
+  <td class="lightbg">
+  <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
+  </td>
+  <td>
+    <a href="http://vim.wikia.com/wiki/Script:3123">Vim wiki</a>
+  </td>  
+</tr>
+</table>
+<p>
+
+<table cellspacing="0" cellpadding="0" border="0">
+<tr><td class="prompt">created by</td></tr>
+<tr><td><a href="/account/profile.php?user_id=14483">Peter Odding</a></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">script type</td></tr>
+<tr><td>utility</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">description</td></tr>
+<tr><td>This plug-in aims to improve the integration between Vim and its environment by providing functions to switch to full-screen (see the screenshots at <a target="_blank" href="http://peterodding.com/code/vim/shell/screenshots">http://peterodding.com/code/vim/shell/screenshots</A>), open URLs in the user's default web browser and execute external commands in the background without opening a command prompt window. A DLL is included to perform these things on Windows, while on UNIX external commands are used.<br><br>For more information about the plug-in please refer to its homepage or the project page on GitHub:<br><br> • <a target="_blank" href="http://peterodding.com/code/vim/shell/">http://peterodding.com/code/vim/shell/</A><br> • <a target="_blank" href="http://github.com/xolox/vim-shell">http://github.com/xolox/vim-shell</A><br><br>If you have questions, bug reports, suggestions, etc. the author can be contacted at peter@peterodding.com. If you like this plug-in please vote for it below!<br><br>ALTERNATIVES<br>After publishing this plug-in I found that <a href="/scripts/script.php?script_id=687">vimscript #687</a> and <a href="/scripts/script.php?script_id=2596">vimscript #2596</a> also implement full-screen on Windows using a similar approach. I prefer the effect of my plug-in because it seems to hide window decorations more effectively. Also note that my plug-in was developed independently of the other two.</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">install details</td></tr>
+<tr><td>Unzip the most recent ZIP archive file (see below) inside your Vim profile directory (usually this is &quot;~/.vim&quot; on UNIX and &quot;%USERPROFILE%\vimfiles&quot; on Windows), restart Vim and execute the command &quot;:helptags ~/.vim/doc&quot; (use &quot;:helptags ~\vimfiles\doc&quot; instead on Windows). Now try it out:<br><br> • Press &lt;F11&gt; or execute :Fullscreen to switch to full-screen mode and back;<br><br> • Press &lt;F6&gt; or execute :Open to open files, directories, URLs and e-mail addresses using their associated default programs. By default the filename/URL/etc. under the text cursor is used, but you can also give an argument to the :Open command, for example:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;:Open $VIMRUNTIME<br>&nbsp;&nbsp;&nbsp;&nbsp;:Open <a target="_blank" href="http://www.vim.org/scripts/script.php?script_id=3123">http://www.vim.org/scripts/script.php?script_id=3123</A></td></tr>
+<tr><td>&nbsp;</td></tr>
+</table>
+
+<!-- rating table -->
+<form name="rating">
+<input type="hidden" name="script_id" value="3123">
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>rate this script</b></td>
+  <td valign="middle">
+    <input type="radio" name="rating" value="life_changing">Life Changing
+    <input type="radio" name="rating" value="helpful">Helpful
+    <input type="radio" name="rating" value="unfulfilling">Unfulfilling&nbsp;
+    <input type="submit" value="rate">
+  </td>
+</tr>
+</table>
+</form>
+<span class="txth2">script versions</span> (<a href="add_script_version.php?script_id=3123">upload new version</a>)
+<p>
+Click on the package to download.
+<p>
+
+<table cellspacing="2" cellpadding="4" border="0" width="100%">
+<tr class='tableheader'>
+        <th valign="top">package</th>
+    <th valign="top">script version</th>
+    <th valign="top">date</th>
+    <th valign="top">Vim version</th>
+    <th valign="top">user</th>
+    <th valign="top">release notes</th>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=14954">shell.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.9.2</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2011-02-04</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=14483">Peter Odding</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Use Vim's &quot;shell&quot; and &quot;shellcmdflag&quot; options:<br><a target="_blank" href="https://github.com/xolox/vim-shell/commit/993f941c76e70f7f717c">https://github.com/xolox/vim-shell/commit/993f941c76e70f7f717c</A><br><br>Also the character encoding of the included help file was changed to ASCII to accommodate users that don't have Unicode support (enabled).</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=14560">shell.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.9.1</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-12-18</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=14483">Peter Odding</a></i></td>
+    <td class="roweven" valign="top" width="2000">Restore window position/size on leaving full-screen (this fixes issue #2 reported by dionysiac- on GitHub):<br><a target="_blank" href="https://github.com/xolox/vim-shell/commit/681404594304bfa6a052">https://github.com/xolox/vim-shell/commit/681404594304bfa6a052</A></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=14430">shell.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.9</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-12-04</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=14483">Peter Odding</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Support for Windows x64, improved error handling (thanks to Stan Angeloff for getting me to build an x64 DLL and helping me test the DLL and automatic bitness detection):<br><a target="_blank" href="https://github.com/xolox/vim-shell/commit/669a9f2d5cce67b34599">https://github.com/xolox/vim-shell/commit/669a9f2d5cce67b34599</A></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13866">shell.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.8.2</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-09-19</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=14483">Peter Odding</a></i></td>
+    <td class="roweven" valign="top" width="2000"> • Bug fix: %s/xolox#open#shell/xolox#open#file/:<br>&nbsp;&nbsp; <a target="_blank" href="http://github.com/xolox/vim-shell/commit/452e951e2fcc4c7afa5a">http://github.com/xolox/vim-shell/commit/452e951e2fcc4c7afa5a</A><br><br> • Truncate expand() result to one pathname:<br>&nbsp;&nbsp; <a target="_blank" href="http://github.com/xolox/vim-shell/commit/dc3448ec7f3a66b17199">http://github.com/xolox/vim-shell/commit/dc3448ec7f3a66b17199</A><br><br> • Bug fix: Open either file or directory, but never both!<br>&nbsp;&nbsp; <a target="_blank" href="http://github.com/xolox/vim-shell/commit/de1303de9b9317affe10">http://github.com/xolox/vim-shell/commit/de1303de9b9317affe10</A></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13853">shell.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.8</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-09-18</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=14483">Peter Odding</a></i></td>
+    <td class="rowodd" valign="top" width="2000"><a target="_blank" href="http://github.com/xolox/vim-shell/commit/4d2313b6508c26a1a843">http://github.com/xolox/vim-shell/commit/4d2313b6508c26a1a843</A>:<br> • Moved openurl() & open_with() to dedicated plug-in (included in ZIP archive)<br> • Simplified Mac OS X support<br> • Support command line web browsers in s:open_at_cursor()</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13721">shell.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.7.3</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-08-30</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=14483">Peter Odding</a></i></td>
+    <td class="roweven" valign="top" width="2000">Bug fix: Only toggle active window using `wmctrl' and report errors from libcall('fullscreen'): <br><a target="_blank" href="http://github.com/xolox/vim-shell/commit/ca43642589089a29dc24f18e00a7edd04820bc9e">http://github.com/xolox/vim-shell/commit/ca43642589089a29dc24f18e00a7edd04820bc9e</A></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13582">shell.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.7.2</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-08-15</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=14483">Peter Odding</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Bug fix for E33: No previous substitute regular expression:<br><a target="_blank" href="http://github.com/xolox/vim-shell/commit/8ab66c465f5f7e29cc7677b2d54012f0fe762576">http://github.com/xolox/vim-shell/commit/8ab66c465f5f7e29cc7677b2d54012f0fe762576</A><br><br>The packages for version 0.7 and 0.7.1 below should have included the &quot;shell.dll&quot; dynamic link library but I failed to include it. This has been fixed now. Sorry about that!</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13532">shell.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.7.1</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-08-10</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=14483">Peter Odding</a></i></td>
+    <td class="roweven" valign="top" width="2000">Enable passing stdin to xolox#shell#execute():<br><a target="_blank" href="http://github.com/xolox/vim-shell/commit/fc16d5c0e72d8ba4112d239f211cc0576640aaa3">http://github.com/xolox/vim-shell/commit/fc16d5c0e72d8ba4112d239f211cc0576640aaa3</A></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13529">shell.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.7</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-08-09</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=14483">Peter Odding</a></i></td>
+    <td class="rowodd" valign="top" width="2000">• Full-screen mode now hides Vim's menu/toolbar/tabline by default. This makes it useful even when the actual full-screen state of Vim's GUI window can't be changed because the DLL/wmctrl is unavailable.<br><br>• Full-screen mode should now work in most graphical terminal emulators like xterm and gnome-terminal (though &lt;F11&gt; won't work in the latter).<br><br>• Included user friendly :Open and :Fullscreen commands plus default key mappings so the plug-in is more useful out of the box.<br><br>• The xolox#shell#execute() function now returns the output of the shell command if it was executed in synchronous mode (this enables integration with my easytags.vim plug-in).<br><br>• I've merged my unreleased `hyperlink.vim' plug-in into `shell.vim' which improves the openurl() functionality and includes automatic highlighting for URLs and e-mail addresses in comments and strings.<br><br>All from <a target="_blank" href="http://github.com/xolox/vim-shell/commit/2f6414109fa52b20c1a86faff215fe1329ba6eb8">http://github.com/xolox/vim-shell/commit/2f6414109fa52b20c1a86faff215fe1329ba6eb8</A></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13183">shell.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.6.1</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-06-14</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=14483">Peter Odding</a></i></td>
+    <td class="roweven" valign="top" width="2000">Bug fix: Updated instructions to match new execute() implementation. Sorry about that!<br><a target="_blank" href="http://github.com/xolox/vim-shell/commit/2cc68db470c974acbc4c43ea001536c1106ae0e2">http://github.com/xolox/vim-shell/commit/2cc68db470c974acbc4c43ea001536c1106ae0e2</A></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13182">shell.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.6</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-06-14</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=14483">Peter Odding</a></i></td>
+    <td class="rowodd" valign="top" width="2000">* Improved test instructions for execute()<br>&nbsp;&nbsp;<a target="_blank" href="http://github.com/xolox/vim-shell/commit/50453066d1d211cfa6e426b78f3e503e3f46c82e">http://github.com/xolox/vim-shell/commit/50453066d1d211cfa6e426b78f3e503e3f46c82e</A><br><br>* Better DLL detection, synchronous command execution<br>&nbsp;&nbsp;<a target="_blank" href="http://github.com/xolox/vim-shell/commit/82f6cb0f013480f994438d44b6cf98ae136569c0">http://github.com/xolox/vim-shell/commit/82f6cb0f013480f994438d44b6cf98ae136569c0</A><br><br>* Improved README, added screenshots, fixed typo<br>&nbsp;&nbsp;<a target="_blank" href="http://github.com/xolox/vim-shell/commit/364ceee3040e77f0a3fb8b4b657aac612f6dbcc4">http://github.com/xolox/vim-shell/commit/364ceee3040e77f0a3fb8b4b657aac612f6dbcc4</A></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13179">shell.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.5.2</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-06-14</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=14483">Peter Odding</a></i></td>
+    <td class="roweven" valign="top" width="2000">Bug fix for execute() implementation in DLL<br><a target="_blank" href="http://github.com/xolox/vim-shell/commit/c46f8e522f53283528f1dc9ab58cc6eb0a9c5507">http://github.com/xolox/vim-shell/commit/c46f8e522f53283528f1dc9ab58cc6eb0a9c5507</A></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13176">shell.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.5.1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-06-13</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=14483">Peter Odding</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Fixed typo in NMAKE makefile and references to Vim scripts page.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13175">shell.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.5</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-06-13</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=14483">Peter Odding</a></i></td>
+    <td class="roweven" valign="top" width="2000">Initial upload</td>
+</tr>
+</table>
+<!-- finish off the framework -->
+          </td>
+        </tr>
+      </table>
+    </td>
+
+  </tr>
+</table>
+
+<!-- END OF THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr><td colspan="4" bgcolor="#000000"><img src="/images/spacer.gif" height="2" width="1" alt=""></td></tr>
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr>
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+
+    <td align="left" valign="top"><small>
+      If you have questions or remarks about this site, visit the
+      <a href="http://vimonline.sf.net">vimonline development</a> pages.
+      Please use this site responsibly.
+      <br> 
+      
+      Questions about <a href="http://www.vim.org/about.php">Vim</a> should go
+      to the <a href="http://www.vim.org/maillist.php">maillist</a>.
+      Help Bram <a href="http://iccf-holland.org/">help Uganda</a>.
+      </small>
+	&nbsp;
+	&nbsp;
+
+	<!-- Start of StatCounter Code -->
+	<script type="text/javascript" language="javascript">
+	var sc_project=1417324; 
+	var sc_invisible=1; 
+	var sc_partition=11; 
+	var sc_security="d41633bc"; 
+	</script>
+
+	<script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script><noscript><a href="http://www.statcounter.com/" target="_blank"><img  src="http://c12.statcounter.com/counter.php?sc_project=1417324&java=0&security=d41633bc&invisible=0" alt="free tracking" border="0"></a> </noscript>
+	<!-- End of StatCounter Code -->
+          </td>
+
+    <td align="right" valign="top">
+      		<a href="http://sourceforge.net/projects/vim" rel="nofollow"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=8&type=1" width="88" height="31" border="0" alt="SourceForge.net Logo" /></a>
+    </td>
+
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+  </tr>
+
+    
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  
+  </tr>
+</table>
+
+</body>
+</html>
+

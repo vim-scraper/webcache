@@ -1,0 +1,468 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+  <link rel="Stylesheet" type="text/css" href="/css/style.css" >
+  <title>Translit3 - Transliterate a string or your input : vim online</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <meta name="KEYWORDS" content="Vim, Vi IMproved, text editor, home, documentation, tips, scripts, news">
+  <link rel="shortcut icon" type="image/x-icon" href="/images/vim_shortcut.ico">
+</head>
+
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff"> 
+
+<!-- HEADER, SPONSOR IMAGE, VIM IMAGE AND BOOK AD -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+  <td class="lightbg">&nbsp;&nbsp;&nbsp;</td>
+  <td class="lightbg" align="left"><a href="/sponsor/index.php"><img src="/images/sponsorvim.gif" alt="sponsor Vim development" border="0"></a></td>
+    <td class="lightbg" align="center"><a href="/index.php"><img src="/images/vim_header.gif" border="0" alt="Vim logo"></a></td>
+    <td class="lightbg" align="right"><a href="http://iccf-holland.org/click5.html"><img src="/images/buyhelplearn.gif" alt="Vim Book Ad" border="0"></a></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="darkbg"><img src="/images/spacer.gif" width="1" height="10" alt=""></td>
+  </tr>
+</table>
+<!-- THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+  <col width="180">
+  <col width="1">
+
+  <tr valign="top">
+    <td class="sidebar">
+      <table width="180" cellpadding="4" cellspacing="0" border="0">
+        <tr valign="top">
+          <td class="sidebar">
+
+<!-- INCLUDE THE PAGE NAVIGATION -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+    <tr>
+        <td><small>not logged in (<a href="/login.php">login</a>)</small></td>
+    </tr>
+    <tr><td>
+<small>&nbsp;</small>
+<form action="http://www.google.com/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-3005259998294962:bvyni59kjr1" />
+    <input type="hidden" name="ie" value="ISO-8859-1" />
+    <input type="text" name="q" size="20" />
+    <br>
+    <input type="submit" name="sa" value="Search" />
+  </div>
+</form>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+    </td></tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="1"></td>
+    </tr>
+    <tr>
+        <td class="darkbg"><img src="/images/spacer.gif" alt='' border="0" height="3"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="2"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/index.php">Home</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/search.php">Advanced search</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/about.php">About Vim</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/community.php">Community</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/news/news.php">News</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/sponsor/index.php">Sponsoring</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/trivia.php">Trivia</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/docs.php">Documentation</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/download.php">Download</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/scripts/index.php">Scripts</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/tips/index.php">Tips</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/account/index.php">My Account</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/huh.php">Site Help</a></td>
+        </tr>
+</table>
+
+            <table width="172" cellpadding="0" cellspacing="0" border="0">
+              <tr><td><img src="/images/spacer.gif" alt="" border="0" width="1" height="8"></td></tr>
+              <tr><td class="darkbg"><img src="/images/spacer.gif" width="1" height="3" alt=""></td></tr>
+            </table>
+            <br>
+
+<!-- INCLUDE THE PAGE SIDEBAR TEXT -->
+&nbsp;
+
+          </td>
+        </tr>
+      </table>
+    </td>
+
+    <td class="darkbg"><img src="/images/spacer.gif" width="1" height="1" border="0" alt=""><br></td>
+    <td>
+      <table width="100%" cellpadding="10" cellspacing="0" border="0" bordercolor="red">
+        <tr>
+          <td valign="top">
+
+<span class="txth1">Translit3 : Transliterate a string or your input</span> 
+
+<br>
+<br>
+
+<!-- karma table -->
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
+  <td>
+    Rating <b>9/3</b>,
+    Downloaded by 254  </td>
+  <td class="lightbg">
+  <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
+  </td>
+  <td>
+    <a href="http://vim.wikia.com/wiki/Script:3056">Vim wiki</a>
+  </td>  
+</tr>
+</table>
+<p>
+
+<table cellspacing="0" cellpadding="0" border="0">
+<tr><td class="prompt">created by</td></tr>
+<tr><td><a href="/account/profile.php?user_id=18939">ZyX ZyX</a></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">script type</td></tr>
+<tr><td>utility</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">description</td></tr>
+<tr><td>This plugin provides the ability to transform one sequence of symbols into-<br>another. The typical use case is transliteration of latin symbols into russian-<br>symbols for systems without russian keyboard.<br><br>Features:<br>&nbsp;&nbsp;&nbsp;&nbsp;— transliteration of text, provided as function argument;<br>&nbsp;&nbsp;&nbsp;&nbsp;— transliteration of a selection or a line range;<br>&nbsp;&nbsp;&nbsp;&nbsp;— input transliteration;<br>&nbsp;&nbsp;&nbsp;&nbsp;— setting up the input transliteration in current buffer or in all opened<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;buffers;<br>&nbsp;&nbsp;&nbsp;&nbsp;— plugin system for transliteration function;<br>&nbsp;&nbsp;&nbsp;&nbsp;— plugin system for input transliteration;<br>&nbsp;&nbsp;&nbsp;&nbsp;— loading transliteration table from a file, a variable, a dictionary or<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a function;<br>&nbsp;&nbsp;&nbsp;&nbsp;— displaying the transliteration table on the screen.<br><br>This plugin also provides Russian documentation. Add «ru» to option «helplang» in order to use it.<br><br>Documentation: <a target="_blank" href="http://vimpluginloader.sourceforge.net/doc/translit3.txt.html">http://vimpluginloader.sourceforge.net/doc/translit3.txt.html</A><br>Russian documentation: <a target="_blank" href="http://vimpluginloader.sourceforge.net/doc/translit3.rux.html">http://vimpluginloader.sourceforge.net/doc/translit3.rux.html</A><br>Project page: <a target="_blank" href="http://sourceforge.net/projects/translit3">http://sourceforge.net/projects/translit3</A><br>Dependencies (you do not need to install them by yourself, see installation details):<br><a href="/scripts/script.php?script_id=3184">vimscript #3184</a>, <a target="_blank" href="http://sourceforge.net/projects/vimpluginloader">http://sourceforge.net/projects/vimpluginloader</A><br><a href="/scripts/script.php?script_id=3185">vimscript #3185</a>, <a target="_blank" href="http://sourceforge.net/projects/jsonvim">http://sourceforge.net/projects/jsonvim</A><br><a href="/scripts/script.php?script_id=3186">vimscript #3186</a>, <a target="_blank" href="http://sourceforge.net/projects/vimstuff">http://sourceforge.net/projects/vimstuff</A><br><a href="/scripts/script.php?script_id=3187">vimscript #3187</a>, <a target="_blank" href="http://sourceforge.net/projects/vimargumentchec">http://sourceforge.net/projects/vimargumentchec</A><br><a href="/scripts/script.php?script_id=3188">vimscript #3188</a>, <a target="_blank" href="http://sourceforge.net/projects/vimcompcrtr">http://sourceforge.net/projects/vimcompcrtr</A></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">install details</td></tr>
+<tr><td>You can install this plugin using scriptmanager (<a href="/scripts/script.php?script_id=2905">vimscript #2905</a>) plugin (install scriptmanager, call scriptmanager#Install([&quot;translit3&quot;]) and add ``call scriptmanager#Activate([&quot;translit3&quot;])'' to your .vimrc, then reload vim. Vim-addon-manager will install all dependencies for you). You can also use archives attached to this page, they contain plugin with all dependencies, so you do not need to fetch them yourself. First version present on this page needs no dependencies.<br><br>Gentoo users can use the following mercurial overlay: <a target="_blank" href="http://vimpluginloader.hg.sourceforge.net">http://vimpluginloader.hg.sourceforge.net</A>:8000/hgroot/vimpluginloader/pluginloader-overlay.</td></tr>
+<tr><td>&nbsp;</td></tr>
+</table>
+
+<!-- rating table -->
+<form name="rating">
+<input type="hidden" name="script_id" value="3056">
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>rate this script</b></td>
+  <td valign="middle">
+    <input type="radio" name="rating" value="life_changing">Life Changing
+    <input type="radio" name="rating" value="helpful">Helpful
+    <input type="radio" name="rating" value="unfulfilling">Unfulfilling&nbsp;
+    <input type="submit" value="rate">
+  </td>
+</tr>
+</table>
+</form>
+<span class="txth2">script versions</span> (<a href="add_script_version.php?script_id=3056">upload new version</a>)
+<p>
+Click on the package to download.
+<p>
+
+<table cellspacing="2" cellpadding="4" border="0" width="100%">
+<tr class='tableheader'>
+        <th valign="top">package</th>
+    <th valign="top">script version</th>
+    <th valign="top">date</th>
+    <th valign="top">Vim version</th>
+    <th valign="top">user</th>
+    <th valign="top">release notes</th>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=14885">translit3-2.2.15.tar.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.2.15</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2011-01-27</i></td>
+    <td class="rowodd" valign="top" nowrap>7.3</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=18939">ZyX ZyX</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Added `TransliterateMotion&#39; action<br>Added box drawing symbols<br>Improved handling of transliteration tables from buffer variables<br>Improved replace action<br>Some Tr3Command fixes</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=14756">translit3-2.2.14.tar.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.2.14</b></td>
+    <td class="roweven" valign="top" nowrap><i>2011-01-15</i></td>
+    <td class="roweven" valign="top" nowrap>7.3</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=18939">ZyX ZyX</a></i></td>
+    <td class="roweven" valign="top" width="2000">Made plugin use new vimpluginloader features, some fixes</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=14641">translit3-2.2.13.tar.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.2.13</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-12-28</i></td>
+    <td class="rowodd" valign="top" nowrap>9999</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=18939">ZyX ZyX</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Reposting bundle due to core plugins update</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=14639">translit3-2.2.13.tar.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.2.13</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-12-28</i></td>
+    <td class="roweven" valign="top" nowrap>7.3</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=18939">ZyX ZyX</a></i></td>
+    <td class="roweven" valign="top" width="2000">Fixed session support</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=14621">translit3-2.2.12.tar.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.2.12</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-12-26</i></td>
+    <td class="rowodd" valign="top" nowrap>7.3</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=18939">ZyX ZyX</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Added support for empty NoTransWord, EscSeq, BrkSeq and StopTrSymbs options</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=14599">translit3-2.2.11.tar.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.2.11</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-12-21</i></td>
+    <td class="roweven" valign="top" nowrap>7.3</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=18939">ZyX ZyX</a></i></td>
+    <td class="roweven" valign="top" width="2000">Added BreakFunc option<br>Made conque_w function use new documented conque API (note that it is incompatible with old versions of conque)<br>Some bug fixes</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=14566">translit3-2.2.10.tar.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.2.10</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-12-18</i></td>
+    <td class="rowodd" valign="top" nowrap>9999</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=18939">ZyX ZyX</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Reposting bundle due to core plugins update</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=14492">translit3-2.2.10.tar.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.2.10</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-12-12</i></td>
+    <td class="roweven" valign="top" nowrap>7.3</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=18939">ZyX ZyX</a></i></td>
+    <td class="roweven" valign="top" width="2000">Fixed conque write function</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=14362">translit3-2.2.6.tar.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.2.6</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-11-24</i></td>
+    <td class="rowodd" valign="top" nowrap>7.3</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=18939">ZyX ZyX</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Added support for multicharacter strings for \tr, \tt, \tT, \tf and \tF commands</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=14319">translit3-2.2.2.tar.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.2.2</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-11-20</i></td>
+    <td class="roweven" valign="top" nowrap>9999</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=18939">ZyX ZyX</a></i></td>
+    <td class="roweven" valign="top" width="2000">Reposting bundle due to core plugins update</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=14100">translit3-2.2.2.tar.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.2.2</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-10-22</i></td>
+    <td class="rowodd" valign="top" nowrap>7.2</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=18939">ZyX ZyX</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Removed &lt;Nop&gt; mappings detection for &lt;vim-7.3.32<br>Fixed esc consuming after inputting multiple characters transliteration sequences</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=14088">translit3-2.2.1.tar.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.2.1</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-10-20</i></td>
+    <td class="roweven" valign="top" nowrap>7.2</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=18939">ZyX ZyX</a></i></td>
+    <td class="roweven" valign="top" width="2000">Added support for vim-7.3.32 patch. Note that format of the `exmaps&#39; key of tof buffer dictionary changed</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13886">translit3-2.2.tar.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.2</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-09-22</i></td>
+    <td class="rowodd" valign="top" nowrap>7.2</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=18939">ZyX ZyX</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Added replacements for r, t, T, f and F normal mode commands: so now if you want to replace character under cursor with Ã‚Â«, you will need to type \tr&lt;&lt; in normal mode (works only for single character replacements).</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13836">translit3-2.1.1.tar.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.1.1</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-09-15</i></td>
+    <td class="roweven" valign="top" nowrap>7.2</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=18939">ZyX ZyX</a></i></td>
+    <td class="roweven" valign="top" width="2000">Fixed bug with multicharacter source strings (like Ã‚Â«ch Ã¢Â†Â’ Ã‘Â‡Ã‚Â»)</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13823">translit3-2.1.tar.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-09-14</i></td>
+    <td class="rowodd" valign="top" nowrap>7.2</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=18939">ZyX ZyX</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Added WriteFunc option (allows to override method used to send strings to buffer), added Conque Shell plugin support, fixed behavior when backspace option is not set</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13718">translit3-2.0.6.tar.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.0.6</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-08-29</i></td>
+    <td class="roweven" valign="top" nowrap>7.2</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=18939">ZyX ZyX</a></i></td>
+    <td class="roweven" valign="top" width="2000">Added ConfigDir option, added tests, some bug fixes</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13697">translit3-2.0.5.tar.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.0.5</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-08-27</i></td>
+    <td class="rowodd" valign="top" nowrap>7.2</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=18939">ZyX ZyX</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Made `Transliterate' mapping (it shows prompt and transliterates user input) use stuf/cinput function (so that this prompts now have their own history) and new completion</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13671">translit3-2.0.3.tar.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.0.3</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-08-25</i></td>
+    <td class="roweven" valign="top" nowrap>7.2</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=18939">ZyX ZyX</a></i></td>
+    <td class="roweven" valign="top" width="2000">Translated messages to Russian</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13652">translit3-2.0.2.tar.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.0.2</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-08-23</i></td>
+    <td class="rowodd" valign="top" nowrap>7.2</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=18939">ZyX ZyX</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Some fixes to tof/notransword plugin</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13639">translit3-2.0.1.tar.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.0.1</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-08-21</i></td>
+    <td class="roweven" valign="top" nowrap>7.2</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=18939">ZyX ZyX</a></i></td>
+    <td class="roweven" valign="top" width="2000">Updated russian documentation</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13542">translit3-2.0.tar.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.0</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-08-10</i></td>
+    <td class="rowodd" valign="top" nowrap>7.2</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=18939">ZyX ZyX</a></i></td>
+    <td class="rowodd" valign="top" width="2000">This is the first version published here that contains translit3 splitted into 6 plugins</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13482">translit3-2.0.tar.xz</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.0</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-08-04</i></td>
+    <td class="roweven" valign="top" nowrap>7.2</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=18939">ZyX ZyX</a></i></td>
+    <td class="roweven" valign="top" width="2000">This is the first version published here that contains translit3 splitted into 6 plugins</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=12824">translit3-0.tar.xz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-04-13</i></td>
+    <td class="rowodd" valign="top" nowrap>7.2</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=18939">ZyX ZyX</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Initial upload</td>
+</tr>
+</table>
+<!-- finish off the framework -->
+          </td>
+        </tr>
+      </table>
+    </td>
+
+  </tr>
+</table>
+
+<!-- END OF THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr><td colspan="4" bgcolor="#000000"><img src="/images/spacer.gif" height="2" width="1" alt=""></td></tr>
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr>
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+
+    <td align="left" valign="top"><small>
+      If you have questions or remarks about this site, visit the
+      <a href="http://vimonline.sf.net">vimonline development</a> pages.
+      Please use this site responsibly.
+      <br> 
+      
+      Questions about <a href="http://www.vim.org/about.php">Vim</a> should go
+      to the <a href="http://www.vim.org/maillist.php">maillist</a>.
+      Help Bram <a href="http://iccf-holland.org/">help Uganda</a>.
+      </small>
+	&nbsp;
+	&nbsp;
+
+	<!-- Start of StatCounter Code -->
+	<script type="text/javascript" language="javascript">
+	var sc_project=1417324; 
+	var sc_invisible=1; 
+	var sc_partition=11; 
+	var sc_security="d41633bc"; 
+	</script>
+
+	<script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script><noscript><a href="http://www.statcounter.com/" target="_blank"><img  src="http://c12.statcounter.com/counter.php?sc_project=1417324&java=0&security=d41633bc&invisible=0" alt="free tracking" border="0"></a> </noscript>
+	<!-- End of StatCounter Code -->
+          </td>
+
+    <td align="right" valign="top">
+      		<a href="http://sourceforge.net/projects/vim" rel="nofollow"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=8&type=1" width="88" height="31" border="0" alt="SourceForge.net Logo" /></a>
+    </td>
+
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+  </tr>
+
+    
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  
+  </tr>
+</table>
+
+</body>
+</html>
+

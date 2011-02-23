@@ -1,0 +1,332 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+  <link rel="Stylesheet" type="text/css" href="/css/style.css" >
+  <title>runVimTests - A testing framework for Vim.  : vim online</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <meta name="KEYWORDS" content="Vim, Vi IMproved, text editor, home, documentation, tips, scripts, news">
+  <link rel="shortcut icon" type="image/x-icon" href="/images/vim_shortcut.ico">
+</head>
+
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff"> 
+
+<!-- HEADER, SPONSOR IMAGE, VIM IMAGE AND BOOK AD -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+  <td class="lightbg">&nbsp;&nbsp;&nbsp;</td>
+  <td class="lightbg" align="left"><a href="/sponsor/index.php"><img src="/images/sponsorvim.gif" alt="sponsor Vim development" border="0"></a></td>
+    <td class="lightbg" align="center"><a href="/index.php"><img src="/images/vim_header.gif" border="0" alt="Vim logo"></a></td>
+    <td class="lightbg" align="right"><a href="http://iccf-holland.org/click5.html"><img src="/images/buyhelplearn.gif" alt="Vim Book Ad" border="0"></a></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="darkbg"><img src="/images/spacer.gif" width="1" height="10" alt=""></td>
+  </tr>
+</table>
+<!-- THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+  <col width="180">
+  <col width="1">
+
+  <tr valign="top">
+    <td class="sidebar">
+      <table width="180" cellpadding="4" cellspacing="0" border="0">
+        <tr valign="top">
+          <td class="sidebar">
+
+<!-- INCLUDE THE PAGE NAVIGATION -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+    <tr>
+        <td><small>not logged in (<a href="/login.php">login</a>)</small></td>
+    </tr>
+    <tr><td>
+<small>&nbsp;</small>
+<form action="http://www.google.com/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-3005259998294962:bvyni59kjr1" />
+    <input type="hidden" name="ie" value="ISO-8859-1" />
+    <input type="text" name="q" size="20" />
+    <br>
+    <input type="submit" name="sa" value="Search" />
+  </div>
+</form>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+    </td></tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="1"></td>
+    </tr>
+    <tr>
+        <td class="darkbg"><img src="/images/spacer.gif" alt='' border="0" height="3"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="2"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/index.php">Home</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/search.php">Advanced search</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/about.php">About Vim</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/community.php">Community</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/news/news.php">News</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/sponsor/index.php">Sponsoring</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/trivia.php">Trivia</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/docs.php">Documentation</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/download.php">Download</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/scripts/index.php">Scripts</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/tips/index.php">Tips</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/account/index.php">My Account</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/huh.php">Site Help</a></td>
+        </tr>
+</table>
+
+            <table width="172" cellpadding="0" cellspacing="0" border="0">
+              <tr><td><img src="/images/spacer.gif" alt="" border="0" width="1" height="8"></td></tr>
+              <tr><td class="darkbg"><img src="/images/spacer.gif" width="1" height="3" alt=""></td></tr>
+            </table>
+            <br>
+
+<!-- INCLUDE THE PAGE SIDEBAR TEXT -->
+&nbsp;
+
+          </td>
+        </tr>
+      </table>
+    </td>
+
+    <td class="darkbg"><img src="/images/spacer.gif" width="1" height="1" border="0" alt=""><br></td>
+    <td>
+      <table width="100%" cellpadding="10" cellspacing="0" border="0" bordercolor="red">
+        <tr>
+          <td valign="top">
+
+<span class="txth1">runVimTests : A testing framework for Vim. </span> 
+
+<br>
+<br>
+
+<!-- karma table -->
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
+  <td>
+    Rating <b>16/4</b>,
+    Downloaded by 488  </td>
+  <td class="lightbg">
+  <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
+  </td>
+  <td>
+    <a href="http://vim.wikia.com/wiki/Script:2565">Vim wiki</a>
+  </td>  
+</tr>
+</table>
+<p>
+
+<table cellspacing="0" cellpadding="0" border="0">
+<tr><td class="prompt">created by</td></tr>
+<tr><td><a href="/account/profile.php?user_id=9713">Ingo Karkat</a></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">script type</td></tr>
+<tr><td>utility</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">description</td></tr>
+<tr><td>Every script writer knows how tedious it is to update a published script. In<br>addition to the basic functionality, many corner cases (empty line, last line,<br>etc.) and failures (invalid filename, nomodifiable buffer) need to be tested,<br>and people use Vim on different platforms (Windows / Linux), UIs (Console /<br>GUI), with different sets of settings (.vimrc) and other loaded plugins.<br>There already exist multiple unit test plugins and assertion facilities [1],<br>which are good for checking invariants and verifying side effect-free<br>implementation functions, but it is still hard to verify the complete plugin<br>functionality because custom commands and mappings typically change the buffer<br>contents, open additional windows, or produce other side effects. <br><br>This work aims to show that Vim, together with a shell script driver built<br>around it, allows to write succinct, fully automated regression test suites<br>through a combination of these verification methods:<br>- Comparing buffer contents with a predefined nominal file. <br>- Matching actual Vim message output with a set of expected messages. <br>- Running unit tests or assertions inside Vim and evaluating the test results. <br><br>With this testing framework, Test-Driven Development can finally be practiced<br>for Vim plugins, too. If you have existing plugins, just add a couple of basic<br>test cases for a start. Soon, further updates and modifications can be done<br>much more rapidly with reduced testing effort, and you can finally tackle that<br>big refactoring that you've been wanting to do all the time, but were too<br>afraid of because of the testing effort. The author has been following both<br>approaches with great success. <br><br>[1]<br>- vimUnit (by Staale Flock), <a href="/scripts/script.php?script_id=1125">vimscript #1125</a><br>- tAssert (by Tom Link), <a href="/scripts/script.php?script_id=1730">vimscript #1730</a><br>- VimTAP (by Meikel Brandmeyer), <a href="/scripts/script.php?script_id=2213">vimscript #2213</a><br>- UT (by Luc Hermitte), <a target="_blank" href="http://code.google.com/p/lh-vim/wiki/UT">http://code.google.com/p/lh-vim/wiki/UT</A><br><br><br>EXAMPLE<br>Specify an expected output, e.g. in file 'test001.ok'<br>&nbsp;&nbsp;&nbsp;&nbsp;expected output<br>&nbsp;&nbsp;&nbsp;&nbsp;and more<br>&nbsp;&nbsp;&nbsp;&nbsp;expected output<br>and/or specify expected messages in file 'test001.msgok'<br>&nbsp;&nbsp;&nbsp;&nbsp;/\d\+ lines changed/<br>use an input file 'test001.in'<br>&nbsp;&nbsp;&nbsp;&nbsp;ExPeCteD OuTpUt<br>&nbsp;&nbsp;&nbsp;&nbsp;AND MORE<br>&nbsp;&nbsp;&nbsp;&nbsp;ExPeCteD OuTpUt<br>write a short test script 'test001.vim'<br>&nbsp;&nbsp;&nbsp;&nbsp;edit test001.in<br>&nbsp;&nbsp;&nbsp;&nbsp;normal! gg3gugu<br>&nbsp;&nbsp;&nbsp;&nbsp;write test001.out<br>&nbsp;&nbsp;&nbsp;&nbsp;quit!<br>call the test runner<br>&nbsp;&nbsp;&nbsp;&nbsp;$ runVimTests test001.vim<br>and the framework invokes the test(s) [suites], compares the actual with the<br>expected output, checks that the messages match, and prints any failures and a<br>test summary:<br>&nbsp;&nbsp;&nbsp;&nbsp;1 file with 2 tests; 0 skipped, 2 run: 2 OK, 0 failures, 0 errors.<br><br><br>DESCRIPTION<br><br>runVimTests implements a testing framework for Vim. <br><br>Similar to the tests that are part of Vim's source distribution, each test<br>consists of a testXXX.vim file which is executed in a a separate Vim instance.<br>The outcome of a test can be determined by a combination of the following<br>methods:<br><br>SAVED BUFFER OUTPUT<br>If a testXXX.ok file is provided, the testXXX.vim should save a testXXX.out<br>file at the end of its execution. The contents of the testXXX.out test file<br>must be identical to the provided testXXX.ok file for the test to succeed. The<br>test can either generate the test output itself, or start by editing a<br>testXXX.in (or similar) file and doing modifications to it. <br>Use this method to test commands or mappings that modify buffer contents. <br><br>CAPTURED MESSAGES<br>If a testXXX.msgok file is provided, the testXXX.vim file should generate Vim<br>messages (from built-in Vim commands, or via :echo[msg]), which are captured<br>during test execution in a testXXX.msgout file. The testXXX.msgok file<br>contains multiple message assertions (separated by empty lines), each of which<br>is compiled into a Vim regexp and then matched against the captured messages.<br>Each assertion can match exactly once, and all assertions must match in the<br>same order in the captured Vim messages. (But there can be additional Vim<br>messages before, after and in between matches, so that you can omit irrelevant<br>or platform-specific messages from the testXXX.msgok file.) <br>This method can verify that errors are reported correctly. Also use this<br>method to test commands or mappings that print informational messages. <br><br>TAP UNIT TESTS	<br>If a testXXX.tap file exists at the end of a test execution, it is assumed to<br>represent unit test output in the Test Anything Protocol [2], which is then<br>parsed and incorporated into the test run. This method allows detailed<br>verification of custom commands, mappings as well as internal functions; the<br>entire determination of the test result is done in Vim script. Each TAP unit<br>test counts as one test, even though all those test results are produced by a<br>single testXXX.vim file. If a plan announced more or less tests than what was<br>found in the test output, the test is assumed to be erroneous. <br>Use this method to test the internal implementation functions, or to verify<br>things that can be checked easily with Vim script. <br><br>[2]<br>web site: <a target="_blank" href="http://testanything.org">http://testanything.org</A>,<br>original implementation: <a target="_blank" href="http://search.cpan.org/~petdance/TAP-1.00/TAP.pm">http://search.cpan.org/~petdance/TAP-1.00/TAP.pm</A>,<br>TAP protocol for Vim: <a target="_blank" href="http://www.vim.org/scripts/script.php?script_id=2213">http://www.vim.org/scripts/script.php?script_id=2213</A><br><br><br>USAGE<br><br>A test run is started through the &quot;runVimTests.(sh|cmd)&quot; script: <br>&nbsp;&nbsp;&nbsp;&nbsp;$ runVimTests [{options}] test001.vim|testsuite.txt|path/to/testdir/ [...]<br><br>The tests are specified through these three methods, which can be combined: <br>- Directly specify the filespec of testXXX.vim test script file(s). <br>- Specify a directory; all *.vim files inside this directory (except for an<br>&nbsp;&nbsp;optional special _setup.vim file) will be used as test scripts. <br>- A test suite is a text file containing (relative or absolute) filespecs to<br>&nbsp;&nbsp;test scripts, directories or other test suites, one filespec per line.<br>&nbsp;&nbsp;(Commented lines start with #.) <br><br>After test execution, a summary is printed like this:<br>&nbsp;&nbsp;&nbsp;&nbsp;20 files with 33 tests; 2 skipped, 27 run: 16 OK, 11 failures, 6 errors.<br>&nbsp;&nbsp;&nbsp;&nbsp;Tests with skips: test006<br>&nbsp;&nbsp;&nbsp;&nbsp;Skipped tests: test007<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2 SKIP (tap): Need 'autochdir' option<br>&nbsp;&nbsp;&nbsp;&nbsp;Failed tests: test002, test012, test014, test022, test032, test033<br>&nbsp;&nbsp;&nbsp;&nbsp;Tests with errors: test003, test013, test023, test033</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">install details</td></tr>
+<tr><td>INSTALLATION<br>This framework is packaged as a ZIP archive. You can unpack it directly into<br>your runtime directory (~/.vim), but you can also install the script executables<br>somewhere else. <br><br>The script executables are in the bin/ subdirectory: <br>&nbsp;&nbsp;&nbsp;&nbsp;bin/runVimTests.cmd<br>&nbsp;&nbsp;&nbsp;&nbsp;bin/runVimTests.sh<br>&nbsp;&nbsp;&nbsp;&nbsp;bin/runVimMsgFilter.vim<br>They can be put anywhere (preferably somewhere in $PATH for easy invokation).<br>runVimMsgFilter.vim must be in the same directory as the shell script. <br><br>The doc/ subdirectory contains the documentation. Put the files into<br>~/.vim/doc and execute :helptags ~/.vim/doc to re-generate the help tags. <br><br>The autoload/ subdirectory contains optional convenience and helper functions.<br>Their use is not required, but they simplify the writing of tests. <br><br>The VimTAP plugin (<a href="/scripts/script.php?script_id=2213">vimscript #2213</a>) needs to be installed separately. <br><br>The test/ subdirectory contains example test suites and a self-test of the<br>test framework. For a simple sanity check, execute: <br>&nbsp;&nbsp;&nbsp;&nbsp;$ runVimTests test/runVimTests/successful.suite<br>which should print something like:<br>&nbsp;&nbsp;&nbsp;&nbsp;9 files with 19 tests; 0 skipped, 19 run: 19 OK, 0 failures, 0 errors.<br>If this is the case, you can start exploring the example tests (in the<br>test/example/ subdirectory) or just start writing your own<br>runVimTests-testscripts! <br><br>DEPENDENCIES<br>- Requires Vim 7.2 or higher as the default Vim found in $PATH (which is<br>&nbsp;&nbsp;always used for the matching of Vim message output against the captured<br>&nbsp;&nbsp;messages). You can use a different Vim version to execute the tests, but at<br>&nbsp;&nbsp;least Vim 7.0 is required to use captured messages (as this depends on the<br>&nbsp;&nbsp;'verbosefile' option) and TAP unit tests (vimtap.vim is an autoload script).<br><br>The Windows version requires (* = optional) these ported Unix tools:<br>- grep, sed, diff, sort(*), uniq(*)<br>Windows binaries can be downloaded from the GnuWin32 project: <br>&nbsp;&nbsp;&nbsp;&nbsp;<a target="_blank" href="http://gnuwin32.sourceforge.net/">http://gnuwin32.sourceforge.net/</A></td></tr>
+<tr><td>&nbsp;</td></tr>
+</table>
+
+<!-- rating table -->
+<form name="rating">
+<input type="hidden" name="script_id" value="2565">
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>rate this script</b></td>
+  <td valign="middle">
+    <input type="radio" name="rating" value="life_changing">Life Changing
+    <input type="radio" name="rating" value="helpful">Helpful
+    <input type="radio" name="rating" value="unfulfilling">Unfulfilling&nbsp;
+    <input type="submit" value="rate">
+  </td>
+</tr>
+</table>
+</form>
+<span class="txth2">script versions</span> (<a href="add_script_version.php?script_id=2565">upload new version</a>)
+<p>
+Click on the package to download.
+<p>
+
+<table cellspacing="2" cellpadding="4" border="0" width="100%">
+<tr class='tableheader'>
+        <th valign="top">package</th>
+    <th valign="top">script version</th>
+    <th valign="top">date</th>
+    <th valign="top">Vim version</th>
+    <th valign="top">user</th>
+    <th valign="top">release notes</th>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=10702">runVimTests.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.13</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-05-29</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=9713">Ingo Karkat</a></i></td>
+    <td class="rowodd" valign="top" width="2000">ENH: Now including SKIP reasons in the summary (identical reasons are<br>condensed and counted) when not running with verbose output. I always wanted<br>to know why certain tests were skipped. (This requires GNU sort and uniq on<br>Windows.) </td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=10208">runVimTests.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.12</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-03-14</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=9713">Ingo Karkat</a></i></td>
+    <td class="roweven" valign="top" width="2000">- Added quoting of regexp in runVimTests.sh, which is needed in bash 3.0 and 3.1. Thanks to Anders Thøgersen for the patch. <br>- Now checking bash version. <br>- Only exiting with exit code 1 in case of test failures; using code 2 for invocation errors (i.e. wrong command-line arguments) and code 3 for internal errors.&nbsp;&nbsp;</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=10190">runVimTests.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.11</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-03-12</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=9713">Ingo Karkat</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- TAP output is now parsed for SKIP and TODO directives, and the &quot;Bail out&quot; message. <br>- TODO TAP tests are included in the test output like failing tests. </td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=10177">runVimTests.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.10</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-03-11</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=9713">Ingo Karkat</a></i></td>
+    <td class="roweven" valign="top" width="2000">- runVimTests drivers now also count test files (*.vim). <br>- ENH: Message output is now parsed for signals to the test driver. Implemented signals: BAILOUT!, ERROR, SKIP, SKIP(out), SKIP(msgout), SKIP(tap). </td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=10094">runVimTests.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.01</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-03-03</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=9713">Ingo Karkat</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Added annotated example tests. </td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=10086">runVimTests.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.00</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-03-02</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=9713">Ingo Karkat</a></i></td>
+    <td class="roweven" valign="top" width="2000">Initial upload</td>
+</tr>
+</table>
+<!-- finish off the framework -->
+          </td>
+        </tr>
+      </table>
+    </td>
+
+  </tr>
+</table>
+
+<!-- END OF THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr><td colspan="4" bgcolor="#000000"><img src="/images/spacer.gif" height="2" width="1" alt=""></td></tr>
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr>
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+
+    <td align="left" valign="top"><small>
+      If you have questions or remarks about this site, visit the
+      <a href="http://vimonline.sf.net">vimonline development</a> pages.
+      Please use this site responsibly.
+      <br> 
+      
+      Questions about <a href="http://www.vim.org/about.php">Vim</a> should go
+      to the <a href="http://www.vim.org/maillist.php">maillist</a>.
+      Help Bram <a href="http://iccf-holland.org/">help Uganda</a>.
+      </small>
+	&nbsp;
+	&nbsp;
+
+	<!-- Start of StatCounter Code -->
+	<script type="text/javascript" language="javascript">
+	var sc_project=1417324; 
+	var sc_invisible=1; 
+	var sc_partition=11; 
+	var sc_security="d41633bc"; 
+	</script>
+
+	<script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script><noscript><a href="http://www.statcounter.com/" target="_blank"><img  src="http://c12.statcounter.com/counter.php?sc_project=1417324&java=0&security=d41633bc&invisible=0" alt="free tracking" border="0"></a> </noscript>
+	<!-- End of StatCounter Code -->
+          </td>
+
+    <td align="right" valign="top">
+      		<a href="http://sourceforge.net/projects/vim" rel="nofollow"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=8&type=1" width="88" height="31" border="0" alt="SourceForge.net Logo" /></a>
+    </td>
+
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+  </tr>
+
+    
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  
+  </tr>
+</table>
+
+</body>
+</html>
+

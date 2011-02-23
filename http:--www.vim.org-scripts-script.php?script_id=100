@@ -1,0 +1,444 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+  <link rel="Stylesheet" type="text/css" href="/css/style.css" >
+  <title>TagsBase.zip - Creates a menu of tags (functions, fields...) keep track of the current function : vim online</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <meta name="KEYWORDS" content="Vim, Vi IMproved, text editor, home, documentation, tips, scripts, news">
+  <link rel="shortcut icon" type="image/x-icon" href="/images/vim_shortcut.ico">
+</head>
+
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff"> 
+
+<!-- HEADER, SPONSOR IMAGE, VIM IMAGE AND BOOK AD -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+  <td class="lightbg">&nbsp;&nbsp;&nbsp;</td>
+  <td class="lightbg" align="left"><a href="/sponsor/index.php"><img src="/images/sponsorvim.gif" alt="sponsor Vim development" border="0"></a></td>
+    <td class="lightbg" align="center"><a href="/index.php"><img src="/images/vim_header.gif" border="0" alt="Vim logo"></a></td>
+    <td class="lightbg" align="right"><a href="http://iccf-holland.org/click5.html"><img src="/images/buyhelplearn.gif" alt="Vim Book Ad" border="0"></a></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="darkbg"><img src="/images/spacer.gif" width="1" height="10" alt=""></td>
+  </tr>
+</table>
+<!-- THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+  <col width="180">
+  <col width="1">
+
+  <tr valign="top">
+    <td class="sidebar">
+      <table width="180" cellpadding="4" cellspacing="0" border="0">
+        <tr valign="top">
+          <td class="sidebar">
+
+<!-- INCLUDE THE PAGE NAVIGATION -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+    <tr>
+        <td><small>not logged in (<a href="/login.php">login</a>)</small></td>
+    </tr>
+    <tr><td>
+<small>&nbsp;</small>
+<form action="http://www.google.com/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-3005259998294962:bvyni59kjr1" />
+    <input type="hidden" name="ie" value="ISO-8859-1" />
+    <input type="text" name="q" size="20" />
+    <br>
+    <input type="submit" name="sa" value="Search" />
+  </div>
+</form>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+    </td></tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="1"></td>
+    </tr>
+    <tr>
+        <td class="darkbg"><img src="/images/spacer.gif" alt='' border="0" height="3"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="2"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/index.php">Home</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/search.php">Advanced search</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/about.php">About Vim</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/community.php">Community</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/news/news.php">News</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/sponsor/index.php">Sponsoring</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/trivia.php">Trivia</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/docs.php">Documentation</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/download.php">Download</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/scripts/index.php">Scripts</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/tips/index.php">Tips</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/account/index.php">My Account</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/huh.php">Site Help</a></td>
+        </tr>
+</table>
+
+            <table width="172" cellpadding="0" cellspacing="0" border="0">
+              <tr><td><img src="/images/spacer.gif" alt="" border="0" width="1" height="8"></td></tr>
+              <tr><td class="darkbg"><img src="/images/spacer.gif" width="1" height="3" alt=""></td></tr>
+            </table>
+            <br>
+
+<!-- INCLUDE THE PAGE SIDEBAR TEXT -->
+&nbsp;
+
+          </td>
+        </tr>
+      </table>
+    </td>
+
+    <td class="darkbg"><img src="/images/spacer.gif" width="1" height="1" border="0" alt=""><br></td>
+    <td>
+      <table width="100%" cellpadding="10" cellspacing="0" border="0" bordercolor="red">
+        <tr>
+          <td valign="top">
+
+<span class="txth1">TagsBase.zip : Creates a menu of tags (functions, fields...) keep track of the current function</span> 
+
+<br>
+<br>
+
+<!-- karma table -->
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
+  <td>
+    Rating <b>74/38</b>,
+    Downloaded by 4315  </td>
+  <td class="lightbg">
+  <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
+  </td>
+  <td>
+    <a href="http://vim.wikia.com/wiki/Script:100">Vim wiki</a>
+  </td>  
+</tr>
+</table>
+<p>
+
+<table cellspacing="0" cellpadding="0" border="0">
+<tr><td class="prompt">created by</td></tr>
+<tr><td><a href="/account/profile.php?user_id=251">Benoit Cerrina</a></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">script type</td></tr>
+<tr><td>utility</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">description</td></tr>
+<tr><td>Tags Base started as the merge and enhancements of the scripts:<br> *TagsMenu (<a target="_blank" href="http://members.home.net/jayglanville/tagsmenu/TagsMenu.html">http://members.home.net/jayglanville/tagsmenu/TagsMenu.html</A>) script<br> 		&nbsp;&nbsp;&nbsp;&nbsp;Jay Dickon Glanville&nbsp;&nbsp;dickon@nortelnetworks.com<br><br> *ctags.vim (<a target="_blank" href="http://vim.sourceforge.net/scripts/script.php?script_id=12">http://vim.sourceforge.net/scripts/script.php?script_id=12</A>) script<br> 			Alexey Marinichev&nbsp;&nbsp; lyosha@lyosha.2y.net<br> see |TagsBase-Credits|<br>It now is a complete rewrite of those scripts plus additional functionality in embedded<br>perl as well as some of the original vim code which is used to provide the same functionality<br>when you are unlucky enough not to have access to the +perl or +perl/dyn feature in<br>your vim build.<br><br>Tags Base automatically uses |ctags| to generate a |tag| file for the currently<br>edited file, refreshes it if the file is newer than the tags file and uses it<br>to provide a set of advanced feature to vim.<br><br>Beware that this means that some tag files are left behind on your computer,<br>	they may end up in the same directory as your files or in a temporary<br>	directory depending on the rights of the file directory. You can specify the<br>	prefixe and suffix used to compute those temporary files.&nbsp;&nbsp;There is also<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;some options to cleanup those file, the default being of only cleaning up<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;the temp directory.<br><br>Right now the feature provided are:<br>&nbsp;&nbsp;&nbsp;&nbsp;*Detection of the currently edited tag and its type and presentation of this information in the<br>&nbsp;&nbsp;&nbsp;&nbsp; title bar. Most of the time when editing a C/C++/java... file this means you have on the <br>&nbsp;&nbsp;&nbsp;&nbsp; title bar the name of the current function.&nbsp;&nbsp;&nbsp;&nbsp; *Creation of a menu of tags in the file this <br>&nbsp;&nbsp;&nbsp;&nbsp; contains things such as method, function, class... the type of tags supported depends on <br>&nbsp;&nbsp;&nbsp;&nbsp; the current language and on the implementation of the |ctags| program<br><br>&nbsp;&nbsp;&nbsp;&nbsp;TagsBase manipulates all tags supported by |ctags|. (For the full list of<br>&nbsp;&nbsp;&nbsp;&nbsp;supported tags and attributes, see &quot;<a target="_blank" href="http://ctags.sourceforge.net/&quot">http://ctags.sourceforge.net/&quot</A>;<br><br><br>Additional description can be found in the included help file. This script requires a version 5.0 of ctags.<br><br>This script has also been used by me as a test bed for embedding perl in vim scripts specifically for<br>performance reasons since parsing a large set of tags can take a fair amount of time.<br>For this reason you'll find a couple fo files (TagsBase.pl and VIM.pm) which I use in the development<br>process, to find out about this see <a href="/tips/tip.php?tip_id=140">vimtip #140</a></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">install details</td></tr>
+<tr><td>download the zip file, uncompress it in your runtimepath and run :helptags DirectoryWhereYouUncompressed/doc</td></tr>
+<tr><td>&nbsp;</td></tr>
+</table>
+
+<!-- rating table -->
+<form name="rating">
+<input type="hidden" name="script_id" value="100">
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>rate this script</b></td>
+  <td valign="middle">
+    <input type="radio" name="rating" value="life_changing">Life Changing
+    <input type="radio" name="rating" value="helpful">Helpful
+    <input type="radio" name="rating" value="unfulfilling">Unfulfilling&nbsp;
+    <input type="submit" value="rate">
+  </td>
+</tr>
+</table>
+</form>
+<span class="txth2">script versions</span> (<a href="add_script_version.php?script_id=100">upload new version</a>)
+<p>
+Click on the package to download.
+<p>
+
+<table cellspacing="2" cellpadding="4" border="0" width="100%">
+<tr class='tableheader'>
+        <th valign="top">package</th>
+    <th valign="top">script version</th>
+    <th valign="top">date</th>
+    <th valign="top">Vim version</th>
+    <th valign="top">user</th>
+    <th valign="top">release notes</th>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=382">TagsBase.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.9.2</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2001-11-28</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=251">Benoit Cerrina</a></i></td>
+    <td class="rowodd" valign="top" width="2000">corrected several bugs when the file path contains some spaces<br>corrected a bug with the TagsWindow</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=340">TagsBase.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.9.1</b></td>
+    <td class="roweven" valign="top" nowrap><i>2001-11-12</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=251">Benoit Cerrina</a></i></td>
+    <td class="roweven" valign="top" width="2000">corrected a bug in the current tag lookup when perl is not available</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=336">TagsBase.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.9</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2001-11-11</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=251">Benoit Cerrina</a></i></td>
+    <td class="rowodd" valign="top" width="2000">added the TagsWindow command to visualize tags in a buffer. <br>added a menu entry to opent the Tags Buffer.<br>added a toc to the help.<br>corrected the NT ACL bug.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=305">TagsBase.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.8.3</b></td>
+    <td class="roweven" valign="top" nowrap><i>2001-10-25</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=251">Benoit Cerrina</a></i></td>
+    <td class="roweven" valign="top" width="2000">greatly enhanced the win32 cascading menus (when perl is available)</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=294">TagsBase.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.8.2</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2001-10-21</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=251">Benoit Cerrina</a></i></td>
+    <td class="rowodd" valign="top" width="2000">bugfix removed some stray timing statements from the perl scripts</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=293">TagsBase.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.8.1</b></td>
+    <td class="roweven" valign="top" nowrap><i>2001-10-20</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=251">Benoit Cerrina</a></i></td>
+    <td class="roweven" valign="top" width="2000">small correction for bug resulting in error message:<br>Uncaught exception from user code:<br>^ICan't call method &quot;Type&quot; on unblessed reference at perl/TagsBase.vim line 376.<br><br>^ITagsBase::GetTagType(391) called at (eval 14) line 1<br>^Ieval 'TagsBase::GetTagType 391<br>;' called at (eval 14) line 0<br>Uncaught exception from user code:<br>^ICan't call method &quot;Name&quot; on unblessed reference at perl/TagsBase.vim line 389.<br><br>^ITagsBase::GetTagName(391) called at (eval 15) line 1<br>^Ieval 'TagsBase::GetTagName 391<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=291">TagsBase.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.8</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2001-10-19</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=251">Benoit Cerrina</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Greatly improved the speed when perl is available.&nbsp;&nbsp;Now almost everything happens in<br>the perl interpreter.&nbsp;&nbsp; Speed improvement example: on a file with 5408 tags: <br>645 second --&gt; 72 second.&nbsp;&nbsp;Limited the number of menu items to<br>configurable size both for time reasons and because gtk doesn't like menus which are<br>longer than the screen.<br>Added the TagsBase.pl and VIM.pm file to the distribution, those are not needed for <br>running the scripts but are usefull for debuging the perl parts.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=258">TagsBase.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.7.1</b></td>
+    <td class="roweven" valign="top" nowrap><i>2001-10-09</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=251">Benoit Cerrina</a></i></td>
+    <td class="roweven" valign="top" width="2000"> &quot;Corrected some bugs regarding the situation when perl is not builtin.<br>&nbsp;&nbsp;Corrected a bug when there is only one tag in the file repeated tag generation would interpret it as being overloaded.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=255">TagsBase.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.7</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2001-10-09</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=251">Benoit Cerrina</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Corrected some bugs regarding paths with spaces. <br>replaced the script local function s:GetTagName by a global function TagsBase_GetTagName. <br>Modified the doc to suggest using this function for displaying the tag name someplace else than the title bar.<br>Corrected a bug regarding the cleanup code and editing read only files.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=242">TagsBase.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.6.1</b></td>
+    <td class="roweven" valign="top" nowrap><i>2001-10-05</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=251">Benoit Cerrina</a></i></td>
+    <td class="roweven" valign="top" width="2000">Uses the BufEnter autocmd to refresh the menu, this makes the menu work with split windows.<br>Keeps the menu generating command in a buffer variable to avoid the extra work of reparsing if it is not needed.&nbsp;&nbsp;<br>Uses the perl interpreter if available to speed up the tags parsing.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=228">TagsBase.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.6</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2001-10-02</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=251">Benoit Cerrina</a></i></td>
+    <td class="rowodd" valign="top" width="2000">avoids opening a buffer on the tags file, optionnally destroy the created tags files,&nbsp;&nbsp;<br>changed the name of the g:CatProg variable to g:TagsBase_CatProg.<br>See :help TagsBase for a descriptions of the new options<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=226">TagsBase.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.5.3</b></td>
+    <td class="roweven" valign="top" nowrap><i>2001-10-02</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=251">Benoit Cerrina</a></i></td>
+    <td class="roweven" valign="top" width="2000">added new options to select the name of the tags<br>files. Removed the html files. Changed the&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>license to public domain added the&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>|TagsBase-ChangeLog| and the |TagsBase-Credits| <br>section to the help. Added a warning about the&nbsp;&nbsp;<br>existence of the tags files&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=224">TagsBase.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.5.2</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2001-10-02</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=251">Benoit Cerrina</a></i></td>
+    <td class="rowodd" valign="top" width="2000">bug fixes in the sorting of the lines array</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=222">TagsBase.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.5.1</b></td>
+    <td class="roweven" valign="top" nowrap><i>2001-10-02</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=251">Benoit Cerrina</a></i></td>
+    <td class="roweven" valign="top" width="2000">bug correction<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=221">TagsBase.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.5</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2001-10-02</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=251">Benoit Cerrina</a></i></td>
+    <td class="rowodd" valign="top" width="2000">I'm having a problem with the vim online interface, the version 0.5 script is a zip file not a vim file.<br>Once you download it it should be renamed as TagsBase.zip and unpacked in your runtimepath.<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=220">TagsBase.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.5</b></td>
+    <td class="roweven" valign="top" nowrap><i>2001-10-02</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=251">Benoit Cerrina</a></i></td>
+    <td class="roweven" valign="top" width="2000">Added help, made customization easier, packaged into a zip file.<br>To install unpack in a directory in your runtimepath (see :help runtimepath) and run<br>:helptags $dirUnpacked/doc<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=217">TagsBase.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.4</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2001-10-01</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=251">Benoit Cerrina</a></i></td>
+    <td class="rowodd" valign="top" width="2000">reorganized and commented the script, support for the builtin tags stack, support for ordered tag file generation, some bugs corrected.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=210">TagsBase.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.3</b></td>
+    <td class="roweven" valign="top" nowrap><i>2001-10-01</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=251">Benoit Cerrina</a></i></td>
+    <td class="roweven" valign="top" width="2000">added a menu entry to toggle on and off the title string functionality</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=209">TagsBase.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.2</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2001-10-01</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=251">Benoit Cerrina</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Corrected dependency on a $TMP variable<br>corrected bug when on an ms system the shell used was a unix type shell, this generated problems due to the shell misinterpreting the '&#039 in a path.<br>If you find any other bugs, please report it by mail to me (benoit.cerrina@writeme.com</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=208">TagsBase.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.1</b></td>
+    <td class="roweven" valign="top" nowrap><i>2001-09-30</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=251">Benoit Cerrina</a></i></td>
+    <td class="roweven" valign="top" width="2000">Initial upload</td>
+</tr>
+</table>
+<!-- finish off the framework -->
+          </td>
+        </tr>
+      </table>
+    </td>
+
+  </tr>
+</table>
+
+<!-- END OF THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr><td colspan="4" bgcolor="#000000"><img src="/images/spacer.gif" height="2" width="1" alt=""></td></tr>
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr>
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+
+    <td align="left" valign="top"><small>
+      If you have questions or remarks about this site, visit the
+      <a href="http://vimonline.sf.net">vimonline development</a> pages.
+      Please use this site responsibly.
+      <br> 
+      
+      Questions about <a href="http://www.vim.org/about.php">Vim</a> should go
+      to the <a href="http://www.vim.org/maillist.php">maillist</a>.
+      Help Bram <a href="http://iccf-holland.org/">help Uganda</a>.
+      </small>
+	&nbsp;
+	&nbsp;
+
+	<!-- Start of StatCounter Code -->
+	<script type="text/javascript" language="javascript">
+	var sc_project=1417324; 
+	var sc_invisible=1; 
+	var sc_partition=11; 
+	var sc_security="d41633bc"; 
+	</script>
+
+	<script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script><noscript><a href="http://www.statcounter.com/" target="_blank"><img  src="http://c12.statcounter.com/counter.php?sc_project=1417324&java=0&security=d41633bc&invisible=0" alt="free tracking" border="0"></a> </noscript>
+	<!-- End of StatCounter Code -->
+          </td>
+
+    <td align="right" valign="top">
+      		<a href="http://sourceforge.net/projects/vim" rel="nofollow"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=8&type=1" width="88" height="31" border="0" alt="SourceForge.net Logo" /></a>
+    </td>
+
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+  </tr>
+
+    
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  
+  </tr>
+</table>
+
+</body>
+</html>
+

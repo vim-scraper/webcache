@@ -1,0 +1,516 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+  <link rel="Stylesheet" type="text/css" href="/css/style.css" >
+  <title>auctex.vim - macros for latex : vim online</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <meta name="KEYWORDS" content="Vim, Vi IMproved, text editor, home, documentation, tips, scripts, news">
+  <link rel="shortcut icon" type="image/x-icon" href="/images/vim_shortcut.ico">
+</head>
+
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff"> 
+
+<!-- HEADER, SPONSOR IMAGE, VIM IMAGE AND BOOK AD -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+  <td class="lightbg">&nbsp;&nbsp;&nbsp;</td>
+  <td class="lightbg" align="left"><a href="/sponsor/index.php"><img src="/images/sponsorvim.gif" alt="sponsor Vim development" border="0"></a></td>
+    <td class="lightbg" align="center"><a href="/index.php"><img src="/images/vim_header.gif" border="0" alt="Vim logo"></a></td>
+    <td class="lightbg" align="right"><a href="http://iccf-holland.org/click5.html"><img src="/images/buyhelplearn.gif" alt="Vim Book Ad" border="0"></a></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="darkbg"><img src="/images/spacer.gif" width="1" height="10" alt=""></td>
+  </tr>
+</table>
+<!-- THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+  <col width="180">
+  <col width="1">
+
+  <tr valign="top">
+    <td class="sidebar">
+      <table width="180" cellpadding="4" cellspacing="0" border="0">
+        <tr valign="top">
+          <td class="sidebar">
+
+<!-- INCLUDE THE PAGE NAVIGATION -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+    <tr>
+        <td><small>not logged in (<a href="/login.php">login</a>)</small></td>
+    </tr>
+    <tr><td>
+<small>&nbsp;</small>
+<form action="http://www.google.com/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-3005259998294962:bvyni59kjr1" />
+    <input type="hidden" name="ie" value="ISO-8859-1" />
+    <input type="text" name="q" size="20" />
+    <br>
+    <input type="submit" name="sa" value="Search" />
+  </div>
+</form>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+    </td></tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="1"></td>
+    </tr>
+    <tr>
+        <td class="darkbg"><img src="/images/spacer.gif" alt='' border="0" height="3"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="2"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/index.php">Home</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/search.php">Advanced search</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/about.php">About Vim</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/community.php">Community</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/news/news.php">News</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/sponsor/index.php">Sponsoring</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/trivia.php">Trivia</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/docs.php">Documentation</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/download.php">Download</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/scripts/index.php">Scripts</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/tips/index.php">Tips</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/account/index.php">My Account</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/huh.php">Site Help</a></td>
+        </tr>
+</table>
+
+            <table width="172" cellpadding="0" cellspacing="0" border="0">
+              <tr><td><img src="/images/spacer.gif" alt="" border="0" width="1" height="8"></td></tr>
+              <tr><td class="darkbg"><img src="/images/spacer.gif" width="1" height="3" alt=""></td></tr>
+            </table>
+            <br>
+
+<!-- INCLUDE THE PAGE SIDEBAR TEXT -->
+&nbsp;
+
+          </td>
+        </tr>
+      </table>
+    </td>
+
+    <td class="darkbg"><img src="/images/spacer.gif" width="1" height="1" border="0" alt=""><br></td>
+    <td>
+      <table width="100%" cellpadding="10" cellspacing="0" border="0" bordercolor="red">
+        <tr>
+          <td valign="top">
+
+<span class="txth1">auctex.vim : macros for latex</span> 
+
+<br>
+<br>
+
+<!-- karma table -->
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
+  <td>
+    Rating <b>444/131</b>,
+    Downloaded by 6587  </td>
+  <td class="lightbg">
+  <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
+  </td>
+  <td>
+    <a href="http://vim.wikia.com/wiki/Script:162">Vim wiki</a>
+  </td>  
+</tr>
+</table>
+<p>
+
+<table cellspacing="0" cellpadding="0" border="0">
+<tr><td class="prompt">created by</td></tr>
+<tr><td><a href="/account/profile.php?user_id=325">Carl Mueller</a></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">script type</td></tr>
+<tr><td>ftplugin</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">description</td></tr>
+<tr><td>This is a large collection of Latex macros, with inspiration<br>from the emacs package &quot;auctex&quot;, among other places.&nbsp;&nbsp;<br>Read the file for details;&nbsp;&nbsp;I have written many comments.&nbsp;&nbsp;<br><br>By popular demand, here is a more extensive description of<br>the key bindings:<br><a target="_blank" href="http://www.math.rochester.edu/people/faculty/cmlr/Latex/auctex-vim-keybindings">http://www.math.rochester.edu/people/faculty/cmlr/Latex/auctex-vim-keybindings</A><br><br>There is also Vim-LaTeX,<br><a target="_blank" href="http://vim-latex.sourceforge.net">http://vim-latex.sourceforge.net</A> <br>It is a more extensive package, developed by a group, and I have <br>contributed most of my ideas to this project.&nbsp;&nbsp;You might prefer <br>my script if you like something smaller, with parts that are (mostly) <br>independent and easy to modify.<br><br>Briefly,<br><br>In normal mode, F1 - F4 will insert latex templates, unless they are<br>already there in the file.&nbsp;&nbsp;You have to provide these templates yourself.<br><br>In insert mode, F1 - F5 will insert environments such as \begin{..} \end{..}.<br><br>S-F1 through S-F5 will alter existing environments.<br><br>(), $$, [], \[\], {}, \{\}, && are inserted in matching pairs.<br><br>Outside of a math environment, tab does word completion, <br>or gives a tab if the previous character is a space or <br>a line beginning.&nbsp;&nbsp;Within a math environment, <br>tab moves you between parentheses or to the end of the <br>environment.<br><br>Many Latex commands are bound to the ` key.&nbsp;&nbsp;(This comes from auctex).<br>For instance, \alpha is bound to `a, and \infty is bound to `8.<br>\frac{}{} is bound to `/&nbsp;&nbsp;.<br><br>Menu items allow you to change or delete matching pairs of brackets,<br>as well as insert \left..\right automatically.&nbsp;&nbsp;<br><br>Now pressing &lt;Insert&gt; twice will also allow modification of brackets, according <br>to a menu that appears at the bottom.<br><br>In normal mode, K runs latex, takes you to the position of the first error (if any),<br>and displays the error message with highlighting.<br><br>To get \mathbf{R}, type r&lt;Insert&gt;b.&nbsp;&nbsp;To get \mathcal{R}, type r&lt;Insert&gt;c. <br>&lt;Insert&gt;s produces \sqrt{}.<br><br>Some macros are polymorphic.&nbsp;&nbsp;For instance, when preceded by bracket, <br>&lt;Insert&gt;l will insert \left..\right around the brackets.&nbsp;&nbsp;Otherwise it <br>will insert \label{} and position the cursor in between the {}.<br>Likewise, &lt;Insert&gt;c will produce \cite{} when preceded by a blank or at <br>the beginning of the line;&nbsp;&nbsp;but, for example, b&lt;Insert&gt;b will produce \mathbf{B}.<br><br>There are &quot;smart quotes&quot;.&nbsp;&nbsp;That is, typing &quot; will produce a `` if there is<br>a space before the &quot;, and will produce '' otherwise.<br><br>You can embrace the visual region with () by typing `(.&nbsp;&nbsp;This works <br>for other kinds of parentheses, too, as well as $$ and &&.<br><br>Long lines are automatically split up to keep $..$ (math expressions)<br>on the same line.<br><br>There are several abbreviations, such as \b for \bigskip.<br><br>You can add your own macros, the macro key is ;<br><br>Inspired by LaTeX-Suite, the tab key has some new uses.&nbsp;&nbsp;Inside \ref{}, it opens <br>a subwindow with the reference keys.&nbsp;&nbsp;Pressing enter will insert that reference.&nbsp;&nbsp;<br>Ditto for \cite{}, the subwindow will show either your bibitem entries (if any) or <br>your bibtex file.&nbsp;&nbsp;Pressing enter within the bibtex reference will insert the proper <br>citation key.</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">install details</td></tr>
+<tr><td>Put the file in the directory ~/.Vim, and include the following line in your .vimrc file:<br><br>autocmd Filetype tex source ~/.Vim/auctex.vim</td></tr>
+<tr><td>&nbsp;</td></tr>
+</table>
+
+<!-- rating table -->
+<form name="rating">
+<input type="hidden" name="script_id" value="162">
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>rate this script</b></td>
+  <td valign="middle">
+    <input type="radio" name="rating" value="life_changing">Life Changing
+    <input type="radio" name="rating" value="helpful">Helpful
+    <input type="radio" name="rating" value="unfulfilling">Unfulfilling&nbsp;
+    <input type="submit" value="rate">
+  </td>
+</tr>
+</table>
+</form>
+<span class="txth2">script versions</span> (<a href="add_script_version.php?script_id=162">upload new version</a>)
+<p>
+Click on the package to download.
+<p>
+
+<table cellspacing="2" cellpadding="4" border="0" width="100%">
+<tr class='tableheader'>
+        <th valign="top">package</th>
+    <th valign="top">script version</th>
+    <th valign="top">date</th>
+    <th valign="top">Vim version</th>
+    <th valign="top">user</th>
+    <th valign="top">release notes</th>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13443">auctex.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.2.6</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-07-31</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=325">Carl Mueller</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Fixed bug for changing environments with &lt;S-F5&gt;.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13062">auctex.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.2.5</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-05-27</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=325">Carl Mueller</a></i></td>
+    <td class="roweven" valign="top" width="2000">Some further cleanup</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13058">auctex.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.2.4</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-05-26</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=325">Carl Mueller</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Slight improvement of the double insert macro of 2.2.3.&nbsp;&nbsp;Removed corresponding &lt;Tab&gt; key bindings.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13056">auctex.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.2.3</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-05-25</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=325">Carl Mueller</a></i></td>
+    <td class="roweven" valign="top" width="2000">Pressing &lt;Insert&gt; twice now changes brackets in various ways, according to a menu that appears at the bottom.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13021">auctex.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.2.2</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-05-17</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=325">Carl Mueller</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Fixed bug in changing environments (perhaps due to changes in vim scripting).</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=10437">auctex.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.2.1</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-04-22</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=325">Carl Mueller</a></i></td>
+    <td class="roweven" valign="top" width="2000">Fixed small bug when searching for &quot;bibliography&quot;.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=8380">auctex.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.2</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2008-03-02</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=325">Carl Mueller</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Some bug fixes, especially in breaking lines.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=8270">auctex.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.1.4</b></td>
+    <td class="roweven" valign="top" nowrap><i>2008-02-13</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=325">Carl Mueller</a></i></td>
+    <td class="roweven" valign="top" width="2000">Various features are faster and better.&nbsp;&nbsp;For example, ending the line in a period now splits the line if it is too long.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=8237">auctex.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.1.3</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2008-02-04</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=325">Carl Mueller</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Speeded up the macro where &quot;..&quot; results in &quot;\ldots&quot; or &quot;\cdots&quot;, or just &quot;\dots&quot;.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=8188">auctex.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.1.2</b></td>
+    <td class="roweven" valign="top" nowrap><i>2008-01-28</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=325">Carl Mueller</a></i></td>
+    <td class="roweven" valign="top" width="2000">Suppressed search highlighting that came on in one of the macros, and made another small fix.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=8106">auctex.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.1.1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2007-12-31</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=325">Carl Mueller</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Another improvement to \ref and \cite macros, in line with the Reftex emacs package.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=7944">auctex.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.1</b></td>
+    <td class="roweven" valign="top" nowrap><i>2007-11-14</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=325">Carl Mueller</a></i></td>
+    <td class="roweven" valign="top" width="2000">Improved citation lookup.&nbsp;&nbsp;Now pressing tab while in \cite{} will split the window and either view your bibitem entries (if any) or load your bibtex file.&nbsp;&nbsp;Then you can go to the entry you want, press Enter, and the citation will be copied into \cite{}.&nbsp;&nbsp;This was inspired by reftex, an emacs package.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=7795">auctex.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.0011</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2007-10-15</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=325">Carl Mueller</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Yet another small improvement in the tab map.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=7747">auctex.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.0010</b></td>
+    <td class="roweven" valign="top" nowrap><i>2007-10-04</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=325">Carl Mueller</a></i></td>
+    <td class="roweven" valign="top" width="2000">Made a small improvement in the tab key map.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=7627">auctex.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.0009</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2007-09-07</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=325">Carl Mueller</a></i></td>
+    <td class="rowodd" valign="top" width="2000">One small change.&nbsp;&nbsp;To change an environment, type S-F1 through S-F5.&nbsp;&nbsp;This replaces the control key, which is used for other things in KDE.&nbsp;&nbsp;Otherwise, there seems to be no reason to change the script, please send suggestions if you think otherwise.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=3291">auctex.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.0008</b></td>
+    <td class="roweven" valign="top" nowrap><i>2004-07-30</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=325">Carl Mueller</a></i></td>
+    <td class="roweven" valign="top" width="2000">Inspired by LaTeX-Suite, the tab key has some new uses.&nbsp;&nbsp;Inside \ref{}, it opens a subwindow with the reference keys.&nbsp;&nbsp;Pressing enter will insert that reference.<br>Ditto for \cite{}.&nbsp;&nbsp;Pressing enter within the bibtex reference will insert the proper <br>citation key.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=2843">auctex.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.0007</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2004-03-18</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=325">Carl Mueller</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Fixed a bug involving changes of environment.&nbsp;&nbsp;(Control-F5)</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=2141">auctex.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.0006</b></td>
+    <td class="roweven" valign="top" nowrap><i>2003-07-11</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=325">Carl Mueller</a></i></td>
+    <td class="roweven" valign="top" width="2000">The tab key now does word completion <br>outside of a math environment, or <br>produces a tab at the beginning of the <br>line or if the previous character is a <br>space.&nbsp;&nbsp;Within a math environment, it takes you to the next set of <br>parentheses, or to the end of the <br>environment.&nbsp;&nbsp;Other small fixes.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=1533">auctex.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.0005</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2002-12-06</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=325">Carl Mueller</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Fixed the last bug in this version<br>(I hope).</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=1522">auctex.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.0004</b></td>
+    <td class="roweven" valign="top" nowrap><i>2002-12-02</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=325">Carl Mueller</a></i></td>
+    <td class="roweven" valign="top" width="2000">Now running latex automatically<br>takes you to the error (if any).<br>Also, corrected a bug.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=1395">auctex.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.0003</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2002-11-11</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=325">Carl Mueller</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Fixed a bug in the automatic line<br>breaking.&nbsp;&nbsp;Also, the script is now<br>easier to read and customize.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=1342">auctex.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.0002</b></td>
+    <td class="roweven" valign="top" nowrap><i>2002-10-28</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=325">Carl Mueller</a></i></td>
+    <td class="roweven" valign="top" width="2000">Fixed a bug</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=1332">auctex.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.0001</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2002-10-23</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=325">Carl Mueller</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Used the &quot;mapleader&quot; variable to make<br>it easier to customize some macros.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=1279">auctex.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.0</b></td>
+    <td class="roweven" valign="top" nowrap><i>2002-10-04</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=325">Carl Mueller</a></i></td>
+    <td class="roweven" valign="top" width="2000">auctex.vim is now compatible with both<br>latex and amslatex.&nbsp;&nbsp;See the file for <br>details.&nbsp;&nbsp;This mostly affects the function keys, which are used to enter the most common environments.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=1183">auctex.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.6.1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2002-09-03</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=325">Carl Mueller</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Added support for the ampersand macro<br>in the tabular environment.&nbsp;&nbsp;Suggested<br>by Johannes Ranke.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=1052">auctex.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.6</b></td>
+    <td class="roweven" valign="top" nowrap><i>2002-07-26</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=325">Carl Mueller</a></i></td>
+    <td class="roweven" valign="top" width="2000">Extensive code clean-up, with many <br>suggestions by Peppe Guldberg.&nbsp;&nbsp;Various <br>improvements and fixes.&nbsp;&nbsp;Some emacs <br>bindings included for convenience.&nbsp;&nbsp;<br>Vi purists can delete these!</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=943">auctex.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.5</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2002-06-22</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=325">Carl Mueller</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Fixed the &lt;F5&gt; macro for the entering<br>environments (thanks to Peppe Guldberg and Torsten Wolf).&nbsp;&nbsp;Improved the macros<br>for modifying brackets.&nbsp;&nbsp;A few other <br>small changes, too.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=416">auctex.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.01</b></td>
+    <td class="roweven" valign="top" nowrap><i>2001-12-09</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=325">Carl Mueller</a></i></td>
+    <td class="roweven" valign="top" width="2000">Corrected a bug in the bracket macros.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=395">auctex.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.0</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2001-12-03</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=325">Carl Mueller</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Initial upload</td>
+</tr>
+</table>
+<!-- finish off the framework -->
+          </td>
+        </tr>
+      </table>
+    </td>
+
+  </tr>
+</table>
+
+<!-- END OF THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr><td colspan="4" bgcolor="#000000"><img src="/images/spacer.gif" height="2" width="1" alt=""></td></tr>
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr>
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+
+    <td align="left" valign="top"><small>
+      If you have questions or remarks about this site, visit the
+      <a href="http://vimonline.sf.net">vimonline development</a> pages.
+      Please use this site responsibly.
+      <br> 
+      
+      Questions about <a href="http://www.vim.org/about.php">Vim</a> should go
+      to the <a href="http://www.vim.org/maillist.php">maillist</a>.
+      Help Bram <a href="http://iccf-holland.org/">help Uganda</a>.
+      </small>
+	&nbsp;
+	&nbsp;
+
+	<!-- Start of StatCounter Code -->
+	<script type="text/javascript" language="javascript">
+	var sc_project=1417324; 
+	var sc_invisible=1; 
+	var sc_partition=11; 
+	var sc_security="d41633bc"; 
+	</script>
+
+	<script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script><noscript><a href="http://www.statcounter.com/" target="_blank"><img  src="http://c12.statcounter.com/counter.php?sc_project=1417324&java=0&security=d41633bc&invisible=0" alt="free tracking" border="0"></a> </noscript>
+	<!-- End of StatCounter Code -->
+          </td>
+
+    <td align="right" valign="top">
+      		<a href="http://sourceforge.net/projects/vim" rel="nofollow"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=8&type=1" width="88" height="31" border="0" alt="SourceForge.net Logo" /></a>
+    </td>
+
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+  </tr>
+
+    
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  
+  </tr>
+</table>
+
+</body>
+</html>
+

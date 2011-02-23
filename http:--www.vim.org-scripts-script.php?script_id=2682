@@ -1,0 +1,316 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+  <link rel="Stylesheet" type="text/css" href="/css/style.css" >
+  <title>colorsupport.vim - Use colorschemes written for gvim in color terminals. : vim online</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <meta name="KEYWORDS" content="Vim, Vi IMproved, text editor, home, documentation, tips, scripts, news">
+  <link rel="shortcut icon" type="image/x-icon" href="/images/vim_shortcut.ico">
+</head>
+
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff"> 
+
+<!-- HEADER, SPONSOR IMAGE, VIM IMAGE AND BOOK AD -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+  <td class="lightbg">&nbsp;&nbsp;&nbsp;</td>
+  <td class="lightbg" align="left"><a href="/sponsor/index.php"><img src="/images/sponsorvim.gif" alt="sponsor Vim development" border="0"></a></td>
+    <td class="lightbg" align="center"><a href="/index.php"><img src="/images/vim_header.gif" border="0" alt="Vim logo"></a></td>
+    <td class="lightbg" align="right"><a href="http://iccf-holland.org/click5.html"><img src="/images/buyhelplearn.gif" alt="Vim Book Ad" border="0"></a></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="darkbg"><img src="/images/spacer.gif" width="1" height="10" alt=""></td>
+  </tr>
+</table>
+<!-- THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+  <col width="180">
+  <col width="1">
+
+  <tr valign="top">
+    <td class="sidebar">
+      <table width="180" cellpadding="4" cellspacing="0" border="0">
+        <tr valign="top">
+          <td class="sidebar">
+
+<!-- INCLUDE THE PAGE NAVIGATION -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+    <tr>
+        <td><small>not logged in (<a href="/login.php">login</a>)</small></td>
+    </tr>
+    <tr><td>
+<small>&nbsp;</small>
+<form action="http://www.google.com/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-3005259998294962:bvyni59kjr1" />
+    <input type="hidden" name="ie" value="ISO-8859-1" />
+    <input type="text" name="q" size="20" />
+    <br>
+    <input type="submit" name="sa" value="Search" />
+  </div>
+</form>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+    </td></tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="1"></td>
+    </tr>
+    <tr>
+        <td class="darkbg"><img src="/images/spacer.gif" alt='' border="0" height="3"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="2"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/index.php">Home</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/search.php">Advanced search</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/about.php">About Vim</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/community.php">Community</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/news/news.php">News</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/sponsor/index.php">Sponsoring</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/trivia.php">Trivia</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/docs.php">Documentation</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/download.php">Download</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/scripts/index.php">Scripts</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/tips/index.php">Tips</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/account/index.php">My Account</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/huh.php">Site Help</a></td>
+        </tr>
+</table>
+
+            <table width="172" cellpadding="0" cellspacing="0" border="0">
+              <tr><td><img src="/images/spacer.gif" alt="" border="0" width="1" height="8"></td></tr>
+              <tr><td class="darkbg"><img src="/images/spacer.gif" width="1" height="3" alt=""></td></tr>
+            </table>
+            <br>
+
+<!-- INCLUDE THE PAGE SIDEBAR TEXT -->
+&nbsp;
+
+          </td>
+        </tr>
+      </table>
+    </td>
+
+    <td class="darkbg"><img src="/images/spacer.gif" width="1" height="1" border="0" alt=""><br></td>
+    <td>
+      <table width="100%" cellpadding="10" cellspacing="0" border="0" bordercolor="red">
+        <tr>
+          <td valign="top">
+
+<span class="txth1">colorsupport.vim : Use colorschemes written for gvim in color terminals.</span> 
+
+<br>
+<br>
+
+<!-- karma table -->
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
+  <td>
+    Rating <b>37/12</b>,
+    Downloaded by 730  </td>
+  <td class="lightbg">
+  <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
+  </td>
+  <td>
+    <a href="http://vim.wikia.com/wiki/Script:2682">Vim wiki</a>
+  </td>  
+</tr>
+</table>
+<p>
+
+<table cellspacing="0" cellpadding="0" border="0">
+<tr><td class="prompt">created by</td></tr>
+<tr><td><a href="/account/profile.php?user_id=17485">JiHwan Lee</a></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">script type</td></tr>
+<tr><td>utility</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">description</td></tr>
+<tr><td>colorsupport.vim<br>================<br>Use colorschemes written for gvim in color terminals.<br>Tested with many colorschemes including color sampler pack (<a href="/scripts/script.php?script_id=625">vimscript #625</a>)<br><br>To set up a 256-color terminal, see<br><br>- <a target="_blank" href="http://www.frexx.de/xterm-256-notes/">http://www.frexx.de/xterm-256-notes/</A><br>- <a target="_blank" href="http://www.nabble.com/screen">http://www.nabble.com/screen</A>%2C-256color-mode-and-ssh-td15098157.html<br>- <a target="_blank" href="http://push.cx/2008/256-color-xterms-in-ubuntu">http://push.cx/2008/256-color-xterms-in-ubuntu</A><br><br>And don't forget to rate ;^)<br><br>Simple usage<br>------------<br>- Drop 'colorsupport.vim' in '~/.vim/plugin'.<br><br>&nbsp;&nbsp;At next startup, colorscheme loaded by '.vimrc' will be reloaded with gui<br>&nbsp;&nbsp;colors mapped to terminal palette.&nbsp;&nbsp;That is, if you already have gvim<br>&nbsp;&nbsp;colorscheme set in '~/.vimrc', then it'll work as soon as you install the<br>&nbsp;&nbsp;'colorsupport.vim' script.<br><br>- Browse and preview colorschemes in your &runtimepath by<br>&nbsp;&nbsp;':ColorSchemeBrowse'.&nbsp;&nbsp;You can also manually try colorschemes using<br>&nbsp;&nbsp;':ColorScheme', just like ':colorscheme'.<br><br>- On slow systems, it can take long to convert colorscheme every time vim<br>&nbsp;&nbsp;starts up.&nbsp;&nbsp;For faster start-up, save last colorscheme by ':ColorSchemeSave'.<br><br>&nbsp;&nbsp;By default, this saves last colorscheme loaded by ':ColorScheme' in the first <br>&nbsp;&nbsp;&runtimepath (usually, ~/.vim/colors on Unix).<br><br>&nbsp;&nbsp;If last colorscheme is already from '~/.vim/colors', error will occur,&nbsp;&nbsp;and<br>&nbsp;&nbsp;you should use ':ColorSchemeSave &lt;new-colorscheme-name&gt;' instead.<br><br>Upgrade<br>-------<br>When upgrading colorsupport.vim, additional color groups can be set, <br>but color schemes saved by :ColorSchemeSave passes conversion by :ColorScheme.<br>Delete old (converted and saved) color schemes if you want re-convert.<br><br>Customization<br>-------------<br>- g:colorsupport_palette_name (one of &quot;tango&quot; (default), &quot;console&quot;, &quot;xterm&quot;, &quot;rxvt&quot;)<br>- g:colorsupport_palette (e.g., ['#000000',&nbsp;&nbsp;...]. (length better be =16))<br><br>- g:colorsupport_cube_name (one of &quot;xterm256&quot;, &quot;xterm88&quot;, &quot;konsole&quot;, &quot;eterm&quot;)<br>- g:colorsupport_cube (e.g. [0x00, 0x2A, 0x55, 0xAA, 0xD4])<br><br>- g:colorsupport_grey (e.g., range(0x1C, 0xFF, 30))<br><br>- g:colorsupport_rgbs (e.g., ['/usr/X11/share/X11'])<br><br>Keep {len(g:colorsupport_palette) + len(g:colorsupport_cube)^3 + len(g:colorsupport_grey) == &t_Co}<br><br>Commands<br>--------<br>- Highlight ... <br><br>&nbsp;&nbsp;Arguments are the same as :highlight<br>&nbsp;&nbsp;Set 'cterm', 'ctermfg', 'ctermbg' based on 'gui', 'guifg', 'guibg',<br>&nbsp;&nbsp;respectively.&nbsp;&nbsp;Note that given 'cterm.*' settings are ignored.<br><br>- ColorScheme &lt;path-or-name&gt;<br><br>&nbsp;&nbsp;Load a colorscheme using ':Highlight', instead of ':highlight'.<br>&nbsp;&nbsp;Unlike colorscheme, path is accepted as well as colorscheme name.<br><br>- ColorSchemeBrowse [&lt;path&gt;]<br><br>&nbsp;&nbsp;Browse colorschemes in &lt;path&gt; (or &runtimepath, if no arguments given)<br><br>- ColorSchemeSave [&lt;name&gt;]<br><br>&nbsp;&nbsp;Save last colorscheme loaded by ':ColorScheme' (or, equivalently, browsed by<br>&nbsp;&nbsp;':ColorSchemeViewer') in the first &runtimepath.&nbsp;&nbsp;If &lt;name&gt; is not given,<br>&nbsp;&nbsp;original name of last colorscheme is used.<br><br><br>Comparison<br>----------<br>At the time that I uploaded this script, I was unaware of other color conversion scripts.<br>And I've tried them later.<br><br><a href="/scripts/script.php?script_id=2390">vimscript #2390</a>. (Thank you marty)<br><br>Key difference is that <a href="/scripts/script.php?script_id=2390">vimscript #2390</a> practically requires gvim installed.<br>And major difficulty (and dirty tricks) of this script was to get gui <br>attributes from colorschemes, which are not obtainable from series of <br>synIDxxx() functions without +gui feature.&nbsp;&nbsp;<br><br><a href="/scripts/script.php?script_id=1809">vimscript #1809</a><br><br><a href="/scripts/script.php?script_id=1809">vimscript #1809</a> tries to extract hilight information by string match.<br>(I assume that this approach is what most conversion script have took)<br>By contrast, colorsupport.vim actually run the original color scheme <br>with highlight command substituted with Highlight command.<br>Later works better because many color schemes have highlights<br>in conditional block, which should not be extracted.<br><br>Furthermore, <a href="/scripts/script.php?script_id=1809">vimscript #1809</a> does not support color names.</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">install details</td></tr>
+<tr><td>mv colorsupport.vim ~/.vim/plugin</td></tr>
+<tr><td>&nbsp;</td></tr>
+</table>
+
+<!-- rating table -->
+<form name="rating">
+<input type="hidden" name="script_id" value="2682">
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>rate this script</b></td>
+  <td valign="middle">
+    <input type="radio" name="rating" value="life_changing">Life Changing
+    <input type="radio" name="rating" value="helpful">Helpful
+    <input type="radio" name="rating" value="unfulfilling">Unfulfilling&nbsp;
+    <input type="submit" value="rate">
+  </td>
+</tr>
+</table>
+</form>
+<span class="txth2">script versions</span> (<a href="add_script_version.php?script_id=2682">upload new version</a>)
+<p>
+Click on the package to download.
+<p>
+
+<table cellspacing="2" cellpadding="4" border="0" width="100%">
+<tr class='tableheader'>
+        <th valign="top">package</th>
+    <th valign="top">script version</th>
+    <th valign="top">date</th>
+    <th valign="top">Vim version</th>
+    <th valign="top">user</th>
+    <th valign="top">release notes</th>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=14828">colorsupport.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.0.3</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2011-01-22</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=17485">JiHwan Lee</a></i></td>
+    <td class="rowodd" valign="top" width="2000">minor improvements and bug fixes, including<br>- handles &quot;hilight&quot; with bang(!)<br>- fix a bug that g:colors_name goes wrong when &background set after g:colors_name<br>- lazy load script variables for faster start-up</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=10892">colorsupport.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.0.2</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-06-25</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=17485">JiHwan Lee</a></i></td>
+    <td class="roweven" valign="top" width="2000">Added hard-coded default color groups.<br>Map guisp to ctermbg.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=10863">colorsupport.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.0.1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-06-17</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=17485">JiHwan Lee</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Added konsole and eterm color cube.<br>Generalize user customization.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=10851">colorsupport.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.0</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-06-16</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=17485">JiHwan Lee</a></i></td>
+    <td class="roweven" valign="top" width="2000">Initial upload</td>
+</tr>
+</table>
+<!-- finish off the framework -->
+          </td>
+        </tr>
+      </table>
+    </td>
+
+  </tr>
+</table>
+
+<!-- END OF THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr><td colspan="4" bgcolor="#000000"><img src="/images/spacer.gif" height="2" width="1" alt=""></td></tr>
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr>
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+
+    <td align="left" valign="top"><small>
+      If you have questions or remarks about this site, visit the
+      <a href="http://vimonline.sf.net">vimonline development</a> pages.
+      Please use this site responsibly.
+      <br> 
+      
+      Questions about <a href="http://www.vim.org/about.php">Vim</a> should go
+      to the <a href="http://www.vim.org/maillist.php">maillist</a>.
+      Help Bram <a href="http://iccf-holland.org/">help Uganda</a>.
+      </small>
+	&nbsp;
+	&nbsp;
+
+	<!-- Start of StatCounter Code -->
+	<script type="text/javascript" language="javascript">
+	var sc_project=1417324; 
+	var sc_invisible=1; 
+	var sc_partition=11; 
+	var sc_security="d41633bc"; 
+	</script>
+
+	<script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script><noscript><a href="http://www.statcounter.com/" target="_blank"><img  src="http://c12.statcounter.com/counter.php?sc_project=1417324&java=0&security=d41633bc&invisible=0" alt="free tracking" border="0"></a> </noscript>
+	<!-- End of StatCounter Code -->
+          </td>
+
+    <td align="right" valign="top">
+      		<a href="http://sourceforge.net/projects/vim" rel="nofollow"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=8&type=1" width="88" height="31" border="0" alt="SourceForge.net Logo" /></a>
+    </td>
+
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+  </tr>
+
+    
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  
+  </tr>
+</table>
+
+</body>
+</html>
+

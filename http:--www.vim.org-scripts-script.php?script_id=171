@@ -1,0 +1,436 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+  <link rel="Stylesheet" type="text/css" href="/css/style.css" >
+  <title>multvals.vim - Array library that uses patterns as separators : vim online</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <meta name="KEYWORDS" content="Vim, Vi IMproved, text editor, home, documentation, tips, scripts, news">
+  <link rel="shortcut icon" type="image/x-icon" href="/images/vim_shortcut.ico">
+</head>
+
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff"> 
+
+<!-- HEADER, SPONSOR IMAGE, VIM IMAGE AND BOOK AD -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+  <td class="lightbg">&nbsp;&nbsp;&nbsp;</td>
+  <td class="lightbg" align="left"><a href="/sponsor/index.php"><img src="/images/sponsorvim.gif" alt="sponsor Vim development" border="0"></a></td>
+    <td class="lightbg" align="center"><a href="/index.php"><img src="/images/vim_header.gif" border="0" alt="Vim logo"></a></td>
+    <td class="lightbg" align="right"><a href="http://iccf-holland.org/click5.html"><img src="/images/buyhelplearn.gif" alt="Vim Book Ad" border="0"></a></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="darkbg"><img src="/images/spacer.gif" width="1" height="10" alt=""></td>
+  </tr>
+</table>
+<!-- THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+  <col width="180">
+  <col width="1">
+
+  <tr valign="top">
+    <td class="sidebar">
+      <table width="180" cellpadding="4" cellspacing="0" border="0">
+        <tr valign="top">
+          <td class="sidebar">
+
+<!-- INCLUDE THE PAGE NAVIGATION -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+    <tr>
+        <td><small>not logged in (<a href="/login.php">login</a>)</small></td>
+    </tr>
+    <tr><td>
+<small>&nbsp;</small>
+<form action="http://www.google.com/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-3005259998294962:bvyni59kjr1" />
+    <input type="hidden" name="ie" value="ISO-8859-1" />
+    <input type="text" name="q" size="20" />
+    <br>
+    <input type="submit" name="sa" value="Search" />
+  </div>
+</form>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+    </td></tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="1"></td>
+    </tr>
+    <tr>
+        <td class="darkbg"><img src="/images/spacer.gif" alt='' border="0" height="3"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="2"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/index.php">Home</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/search.php">Advanced search</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/about.php">About Vim</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/community.php">Community</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/news/news.php">News</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/sponsor/index.php">Sponsoring</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/trivia.php">Trivia</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/docs.php">Documentation</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/download.php">Download</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/scripts/index.php">Scripts</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/tips/index.php">Tips</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/account/index.php">My Account</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/huh.php">Site Help</a></td>
+        </tr>
+</table>
+
+            <table width="172" cellpadding="0" cellspacing="0" border="0">
+              <tr><td><img src="/images/spacer.gif" alt="" border="0" width="1" height="8"></td></tr>
+              <tr><td class="darkbg"><img src="/images/spacer.gif" width="1" height="3" alt=""></td></tr>
+            </table>
+            <br>
+
+<!-- INCLUDE THE PAGE SIDEBAR TEXT -->
+&nbsp;
+
+          </td>
+        </tr>
+      </table>
+    </td>
+
+    <td class="darkbg"><img src="/images/spacer.gif" width="1" height="1" border="0" alt=""><br></td>
+    <td>
+      <table width="100%" cellpadding="10" cellspacing="0" border="0" bordercolor="red">
+        <tr>
+          <td valign="top">
+
+<span class="txth1">multvals.vim : Array library that uses patterns as separators</span> 
+
+<br>
+<br>
+
+<!-- karma table -->
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
+  <td>
+    Rating <b>100/36</b>,
+    Downloaded by 16292  </td>
+  <td class="lightbg">
+  <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
+  </td>
+  <td>
+    <a href="http://vim.wikia.com/wiki/Script:171">Vim wiki</a>
+  </td>  
+</tr>
+</table>
+<p>
+
+<table cellspacing="0" cellpadding="0" border="0">
+<tr><td class="prompt">created by</td></tr>
+<tr><td><a href="/account/profile.php?user_id=292">Hari Krishna Dara</a></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">script type</td></tr>
+<tr><td>utility</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">description</td></tr>
+<tr><td>The new version requires Vim 6.3.<br><br>This is an array library useful for script developers.<br><br>I started off from the lightWeightArray.vim script as a basis and created this<br>more complete script to call it an array. You can now manipulate the Vim's<br>multi-valued variables or create your own using this script. This makes it easy<br>for you to support variables having multiple values and familiar for the users<br>of your script.<br><br>See file header for function prototypes.<br><br>- An array is nothing but a string of multiple values separated by a<br>&nbsp;&nbsp;pattern.&nbsp;&nbsp;The simplest example being Vim's multi-value variables such as<br>&nbsp;&nbsp;tags. You can use the MvAddElement() function to create an array.<br>&nbsp;&nbsp;However, there is nothing special about this function, you can as well<br>&nbsp;&nbsp;make up the string by simply concatinating elements with the chosen<br>&nbsp;&nbsp;pattern as a separator.<br>- The separator can be any regular expression (which means that if you<br>&nbsp;&nbsp;want to use regex metacharacters in a non-regex pattern, then you need<br>&nbsp;&nbsp;to protect the metacharacters with backslashes). However, if a regular<br>&nbsp;&nbsp;expression is used as a separtor, you need to pass in a second separator,<br>&nbsp;&nbsp;which is a plain string that guarantees to match the separator regular<br>&nbsp;&nbsp;expression, as an additional argument (which was not the case with<br>&nbsp;&nbsp;earlier versions). When the array needs to be modified (which is<br>&nbsp;&nbsp;internally done by some of the reader functions also) this sample<br>&nbsp;&nbsp;separator is used to preserve the integrity of the array.<br>- If you for example want to go over the words in a sentence, then an easy<br>&nbsp;&nbsp;way would be to treat the sentence as an array with '\s\+' as a<br>&nbsp;&nbsp;separator pattern. Be sure not to have zero-width expressions in the<br>&nbsp;&nbsp;pattern as these would otherwise confuse the plugin.<br>- Suggested usage to go over the elements is to use the iterater functions<br>&nbsp;&nbsp;as shows in the below example<br>&nbsp;&nbsp;Ex Usage:<br>&nbsp;&nbsp;&nbsp;&nbsp;&quot; The below pattern avoids protected comma's from getting treated as<br>&nbsp;&nbsp;&nbsp;&nbsp;&quot;&nbsp;&nbsp; separators.<br>&nbsp;&nbsp;&nbsp;&nbsp;call MvIterCreate(&tags, '\\\@&lt;!\(\\\\\)*\zs,', 'Tags', ',')<br>&nbsp;&nbsp;&nbsp;&nbsp;while MvIterHasNext('Tags')<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;call input('Next element: ' . MvIterNext('Tags'))<br>&nbsp;&nbsp;&nbsp;&nbsp;endwhile<br>&nbsp;&nbsp;&nbsp;&nbsp;call MvIterDestroy('Tags')<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>ALMOST ALL OPERATIONS TAKE THE ARRAY AND THE SEPARATOR AS THE FIRST TWO<br>&nbsp;&nbsp;ARGUMENTS.<br>All element-indexes start from 0 (like in C++ or Java).<br>All string-indexes start from 0 (as it is for Vim built-in functions).<br><br><br><br>Please let me know of any bugs and problems that you face.<br><br><br>Search_key_words: array arrays multvals sort multiple values multivals Hari Krishna Dara</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">install details</td></tr>
+<tr><td>Source it from your .vimrc or just drop it in your plugin directory. <br>Since version 2.1.1, you require Vim 6.0, for older versions you require Vim 5.6.<br><br>Sort functionality from version 2.4 requires genutils.vim: <a href="/scripts/script.php?script_id=197">vimscript #197</a></td></tr>
+<tr><td>&nbsp;</td></tr>
+</table>
+
+<!-- rating table -->
+<form name="rating">
+<input type="hidden" name="script_id" value="171">
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>rate this script</b></td>
+  <td valign="middle">
+    <input type="radio" name="rating" value="life_changing">Life Changing
+    <input type="radio" name="rating" value="helpful">Helpful
+    <input type="radio" name="rating" value="unfulfilling">Unfulfilling&nbsp;
+    <input type="submit" value="rate">
+  </td>
+</tr>
+</table>
+</form>
+<span class="txth2">script versions</span> (<a href="add_script_version.php?script_id=171">upload new version</a>)
+<p>
+Click on the package to download.
+<p>
+
+<table cellspacing="2" cellpadding="4" border="0" width="100%">
+<tr class='tableheader'>
+        <th valign="top">package</th>
+    <th valign="top">script version</th>
+    <th valign="top">date</th>
+    <th valign="top">Vim version</th>
+    <th valign="top">user</th>
+    <th valign="top">release notes</th>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=3582">multvals.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>3.10</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2004-10-28</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=292">Hari Krishna Dara</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- New MvBISortElements() that uses the faster BinInsertSort2() function<br>&nbsp;&nbsp;from genutils.vim plugin.<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=3566">multvals.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>3.9</b></td>
+    <td class="roweven" valign="top" nowrap><i>2004-10-20</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=292">Hari Krishna Dara</a></i></td>
+    <td class="roweven" valign="top" width="2000">- MvIterPeek made public. This was left private by accident.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=3482">multvals.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>3.8</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2004-09-24</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=292">Hari Krishna Dara</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Fixed bugs in the *StrIndex* functions, such that when the element is<br>not found, they always return the contracted -1 (instead of any -ve<br>value). This will fix problems with a number of other functions that<br>depend on them (such as MvPushToFront reported by Thomas Link).<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=3147">multvals.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>3.6</b></td>
+    <td class="roweven" valign="top" nowrap><i>2004-06-18</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=292">Hari Krishna Dara</a></i></td>
+    <td class="roweven" valign="top" width="2000">Maintenance release.<br>- Work-around for a bug in MvNumberOfElements().<br>- New utility function MvCrUnProtectedCharsPattern()<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=2852">multvals.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>3.5</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2004-03-22</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=292">Hari Krishna Dara</a></i></td>
+    <td class="rowodd" valign="top" width="2000">CAUTION: This version potentially introduces an incompatibility with that of<br>older versions because of the below change. If your plugin depended on this<br>undocumented behavior you will have to update your plugin immediately to work<br>with the new plugin. Even if you didn't know about behavior, it is still better<br>to check if your plugin accidentally depended on this. If you need further<br>clarifications, please email me with your questions and I will try to answer.<br><br>- Now the plugin ignores the 'ignorecase' and 'smartcase' settings, so the<br>&nbsp;&nbsp;results are more consistent. This I think is the right thing to do for a<br>&nbsp;&nbsp;library.<br>- Also added a new function MvIterPeek.<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=2607">multvals.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>3.4</b></td>
+    <td class="roweven" valign="top" nowrap><i>2003-12-17</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=292">Hari Krishna Dara</a></i></td>
+    <td class="roweven" valign="top" width="2000">- The plugin was not working correctly when there are *'s in the array.<br>- New function MvRemovePatternAll<br>- g:loaded_multvals now contains the version number for dependency cheking.<br>&nbsp;&nbsp;(see &quot;:help v:version&quot; for format)<br>- Added prototypes for the functions in the header as per the suggestion<br>&nbsp;&nbsp;of Naveen Chandra.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=2262">multvals.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>3.3</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2003-08-25</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=292">Hari Krishna Dara</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Minor changes, added a new function MvElementLike and improved MvPromptForElement by adding a new companion function MvGetSelectedIndex, to be used when the array can contain empty elements.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=2063">multvals.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>3.2</b></td>
+    <td class="roweven" valign="top" nowrap><i>2003-06-11</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=292">Hari Krishna Dara</a></i></td>
+    <td class="roweven" valign="top" width="2000">New function MvNumSearchNext. See the function header for details.<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=1873">multvals.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>3.1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2003-03-28</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=292">Hari Krishna Dara</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Minor changes. Now the MvCreateIter() also accepts sample separator as the last argument when a regular expression is used as a separator. This is consistent with the rest of the functions and makes it easy to iterate over settings like 'tags'.<br><br>call MvIterCreate(&tags, &quot;\\\@&lt;!\(\\\\\)*\zs,&quot;, &quot;Tags&quot;, ',')<br><br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=1582">multvals.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>3.0</b></td>
+    <td class="roweven" valign="top" nowrap><i>2002-12-26</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=292">Hari Krishna Dara</a></i></td>
+    <td class="roweven" valign="top" width="2000">- All functions can now be used with regular expressions as separators. Most of the functions now accept an optional extra argument as the last argument, which needs to be a plain separator as a sample that matches the regular expression of the separator. If the separator is not a regular expressions, this can be ignored, making it backwardly compatible change.<br>- Added new functions MvRemovePattern, MvStrIndexOfPattern, MvStrIndexAfterPattern, MvIndexOfPattern, MvContainsPattern.<br>- Fixed a bug in the new implementation of MvPromptForElement. This function now accepts only element index as selection. This makes it cleaner to implement and also makes it possible to have even numbers as values in the array.<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=1532">multvals.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.5</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2002-12-05</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=292">Hari Krishna Dara</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Just removed some debug echomsg which I forgot to remove. Sorry about it. I also added some more information on how to use MvQSortElements() method.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=1492">multvals.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.4</b></td>
+    <td class="roweven" valign="top" nowrap><i>2002-11-26</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=292">Hari Krishna Dara</a></i></td>
+    <td class="roweven" valign="top" width="2000">- New functions MvQSortElements() and MvSwapElementsAt(). Requires genutils.vim<br>&nbsp;&nbsp;for sorting support.<br>- Worked-around a bug in vim that effects MvElementAt() for last element in a<br>&nbsp;&nbsp;large array. <br>- A variant of MvPromptForElement to specify the number of columns that you<br>&nbsp;&nbsp;want the elements to be formatted in. The formatting is very nice now.<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=939">multvals.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.3</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2002-06-21</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=292">Hari Krishna Dara</a></i></td>
+    <td class="rowodd" valign="top" width="2000">GPL'ed it mainly for the use by Creme project (<a target="_blank" href="http://cream.sf.net">http://cream.sf.net</A>). Added MvRemoveElementAll and MvReplaceElementAt, contributed by Steve Hall &lt;digitect at mindspring.com&gt;</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=642">multvals.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.1.2</b></td>
+    <td class="roweven" valign="top" nowrap><i>2002-02-25</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=292">Hari Krishna Dara</a></i></td>
+    <td class="roweven" valign="top" width="2000">More robust iterator, now checks for maximum count. Reimplemented it to use the ElementAt() function and removed NextElement and NextIndex() functions that are not needed.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=575">multvals.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.1.1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2002-02-10</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=292">Hari Krishna Dara</a></i></td>
+    <td class="rowodd" valign="top" width="2000">New functions MvRotateLeftAt() and MvRotateRight() to be used by the PushPop.vim script.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=571">multvals.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.1.1</b></td>
+    <td class="roweven" valign="top" nowrap><i>2002-02-08</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=292">Hari Krishna Dara</a></i></td>
+    <td class="roweven" valign="top" width="2000">Enhanced the script to accept any regular expression as a separator pattern, but it works only for read-only operations. Now you can treat the following as an array:<br><br>axxbxxxxcxdxxxxxe<br><br>and access a, b, c, d and e as array elements.<br><br>Now the element is escaped before using in the matches, so you shouldn't have any problem using any random strings to store in to the array.<br><br>Also the script is now made as a plugin, so it works only 6.0</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=525">multvals.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.0.5</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2002-02-01</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=292">Hari Krishna Dara</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Fixed bugs in MvStrIndexOfElement(), MvIterHasNext() and MvCmpByPosition(). Now I have been using the script for quite some time and fixed all the bugs that I discovered. It should be quite robust and usable now. I have used the functions from here in selectbuf.vim for implementing MRU listing and also in the remcmd.vim for list selection, so check these scripts for a good usage. Also see the end of the script for test code that gives example usage of the script.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=467">multvals.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.0.4</b></td>
+    <td class="roweven" valign="top" nowrap><i>2002-01-11</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=292">Hari Krishna Dara</a></i></td>
+    <td class="roweven" valign="top" width="2000">Lots of new functions are added and they are documented well. Now the script has functions to access the elements by element index, just like a real array. Much more usable as an array than previously it was.<br><br> However, it is incompatible with the previous version for the following reasons:<br>&nbsp;&nbsp; - Prefixed all the global functions with &quot;Mv&quot; to avoid global name<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; conflicts.<br>&nbsp;&nbsp; - The order of arguments for MvIterCreate has been changed for the sake of<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; consistency.<br><br>Here is a list of all the functions:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MvAddElement<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MvInsertElementAt<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MvRemoveElement<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MvRemoveElementAt<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MvNumberOfElements<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MvStrIndexOfElement<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MvStrIndexOfElementAt<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MvIndexOfElement<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MvContainsElement<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MvElementAt<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MvLastElement<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MvPushToFront<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MvPushToFrontElementAt<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MvPullToBack<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MvPullToBackElementAt<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MvIterCreate<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MvIterDestroy<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MvIterHasNext<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MvIterNext<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MvCmpByPosition<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MvPromptForElement<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=443">multvals.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.0.2</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2002-01-02</i></td>
+    <td class="rowodd" valign="top" nowrap>5.7</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=292">Hari Krishna Dara</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Initial upload</td>
+</tr>
+</table>
+<!-- finish off the framework -->
+          </td>
+        </tr>
+      </table>
+    </td>
+
+  </tr>
+</table>
+
+<!-- END OF THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr><td colspan="4" bgcolor="#000000"><img src="/images/spacer.gif" height="2" width="1" alt=""></td></tr>
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr>
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+
+    <td align="left" valign="top"><small>
+      If you have questions or remarks about this site, visit the
+      <a href="http://vimonline.sf.net">vimonline development</a> pages.
+      Please use this site responsibly.
+      <br> 
+      
+      Questions about <a href="http://www.vim.org/about.php">Vim</a> should go
+      to the <a href="http://www.vim.org/maillist.php">maillist</a>.
+      Help Bram <a href="http://iccf-holland.org/">help Uganda</a>.
+      </small>
+	&nbsp;
+	&nbsp;
+
+	<!-- Start of StatCounter Code -->
+	<script type="text/javascript" language="javascript">
+	var sc_project=1417324; 
+	var sc_invisible=1; 
+	var sc_partition=11; 
+	var sc_security="d41633bc"; 
+	</script>
+
+	<script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script><noscript><a href="http://www.statcounter.com/" target="_blank"><img  src="http://c12.statcounter.com/counter.php?sc_project=1417324&java=0&security=d41633bc&invisible=0" alt="free tracking" border="0"></a> </noscript>
+	<!-- End of StatCounter Code -->
+          </td>
+
+    <td align="right" valign="top">
+      		<a href="http://sourceforge.net/projects/vim" rel="nofollow"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=8&type=1" width="88" height="31" border="0" alt="SourceForge.net Logo" /></a>
+    </td>
+
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+  </tr>
+
+    
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  
+  </tr>
+</table>
+
+</body>
+</html>
+

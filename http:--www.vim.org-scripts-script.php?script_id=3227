@@ -1,0 +1,332 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+  <link rel="Stylesheet" type="text/css" href="/css/style.css" >
+  <title>Simple Javascript Indenter - A simple javascript indent script, support OOP, jquery : vim online</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <meta name="KEYWORDS" content="Vim, Vi IMproved, text editor, home, documentation, tips, scripts, news">
+  <link rel="shortcut icon" type="image/x-icon" href="/images/vim_shortcut.ico">
+</head>
+
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff"> 
+
+<!-- HEADER, SPONSOR IMAGE, VIM IMAGE AND BOOK AD -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+  <td class="lightbg">&nbsp;&nbsp;&nbsp;</td>
+  <td class="lightbg" align="left"><a href="/sponsor/index.php"><img src="/images/sponsorvim.gif" alt="sponsor Vim development" border="0"></a></td>
+    <td class="lightbg" align="center"><a href="/index.php"><img src="/images/vim_header.gif" border="0" alt="Vim logo"></a></td>
+    <td class="lightbg" align="right"><a href="http://iccf-holland.org/click5.html"><img src="/images/buyhelplearn.gif" alt="Vim Book Ad" border="0"></a></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="darkbg"><img src="/images/spacer.gif" width="1" height="10" alt=""></td>
+  </tr>
+</table>
+<!-- THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+  <col width="180">
+  <col width="1">
+
+  <tr valign="top">
+    <td class="sidebar">
+      <table width="180" cellpadding="4" cellspacing="0" border="0">
+        <tr valign="top">
+          <td class="sidebar">
+
+<!-- INCLUDE THE PAGE NAVIGATION -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+    <tr>
+        <td><small>not logged in (<a href="/login.php">login</a>)</small></td>
+    </tr>
+    <tr><td>
+<small>&nbsp;</small>
+<form action="http://www.google.com/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-3005259998294962:bvyni59kjr1" />
+    <input type="hidden" name="ie" value="ISO-8859-1" />
+    <input type="text" name="q" size="20" />
+    <br>
+    <input type="submit" name="sa" value="Search" />
+  </div>
+</form>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+    </td></tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="1"></td>
+    </tr>
+    <tr>
+        <td class="darkbg"><img src="/images/spacer.gif" alt='' border="0" height="3"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="2"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/index.php">Home</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/search.php">Advanced search</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/about.php">About Vim</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/community.php">Community</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/news/news.php">News</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/sponsor/index.php">Sponsoring</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/trivia.php">Trivia</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/docs.php">Documentation</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/download.php">Download</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/scripts/index.php">Scripts</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/tips/index.php">Tips</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/account/index.php">My Account</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/huh.php">Site Help</a></td>
+        </tr>
+</table>
+
+            <table width="172" cellpadding="0" cellspacing="0" border="0">
+              <tr><td><img src="/images/spacer.gif" alt="" border="0" width="1" height="8"></td></tr>
+              <tr><td class="darkbg"><img src="/images/spacer.gif" width="1" height="3" alt=""></td></tr>
+            </table>
+            <br>
+
+<!-- INCLUDE THE PAGE SIDEBAR TEXT -->
+&nbsp;
+
+          </td>
+        </tr>
+      </table>
+    </td>
+
+    <td class="darkbg"><img src="/images/spacer.gif" width="1" height="1" border="0" alt=""><br></td>
+    <td>
+      <table width="100%" cellpadding="10" cellspacing="0" border="0" bordercolor="red">
+        <tr>
+          <td valign="top">
+
+<span class="txth1">Simple Javascript Indenter : A simple javascript indent script, support OOP, jquery</span> 
+
+<br>
+<br>
+
+<!-- karma table -->
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
+  <td>
+    Rating <b>20/5</b>,
+    Downloaded by 259  </td>
+  <td class="lightbg">
+  <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
+  </td>
+  <td>
+    <a href="http://vim.wikia.com/wiki/Script:3227">Vim wiki</a>
+  </td>  
+</tr>
+</table>
+<p>
+
+<table cellspacing="0" cellpadding="0" border="0">
+<tr><td class="prompt">created by</td></tr>
+<tr><td><a href="/account/profile.php?user_id=17938">Miao Jiang</a></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">script type</td></tr>
+<tr><td>indent</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">description</td></tr>
+<tr><td>A simple indent plugin for javascript<br><br>Repository: <a target="_blank" href="http://github.com/JiangMiao/simple-javascript-indenter">http://github.com/JiangMiao/simple-javascript-indenter</A><br>Screenshot: <a target="_blank" href="http://www.jiangmiao.org/blog/wp-content/uploads/2010/09/vim_simple_javascript_indenter_v1.2.0.png">http://www.jiangmiao.org/blog/wp-content/uploads/2010/09/vim_simple_javascript_indenter_v1.2.0.png</A><br><br>==Options==<br>g:SimpleJsIndenter_BriefMode (default 0)<br>&nbsp;&nbsp;set 1 to turn brief mode on.<br><br>===About Brief Mode===<br>Add 'let g:SimpleJsIndenter_BriefMode = 1' to ~/.vimrc to use brief mode.<br><br>In Brief Mode script will not indent more than one shiftwidth each line.<br>eg:<br>For a lot of people prefer set shiftwidth to 4, so in normal mode, it will indent looks like<br>each(function() {<br>........something(); // indent 2 shiftwidth<br>});<br>(((<br>............something(); // indent 3 shiftwidth<br>)));<br><br>In brief mode it will indent as<br>each(function() {<br>....something(); // indent 1 shiftwidth<br>});<br>(((<br>....something();<br>)))<br><br>===ATTENTION===<br>Be sure to always close the brackets with the same level as open, or the after code will not indent correctly.<br>eg:<br>function() {<br>....each(function() {<br>....} // should use }); instead of }<br>);&nbsp;&nbsp;&nbsp;&nbsp;// already indented..<br>something();<br>}<br><br><br>== Indent Effects&nbsp;&nbsp;==<br>/*<br>* Comment Test <br>* function() {<br>*/<br>{<br>&nbsp;&nbsp;/* a [{( */<br>&nbsp;&nbsp;// b [{(<br>&nbsp;&nbsp;comment('/* com', a /* [{( */); /* c */ // d<br>&nbsp;&nbsp;ok();<br>&nbsp;&nbsp;// Assign Test<br>&nbsp;&nbsp;var a, /* { */<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b, // [<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c = '{'<br>&nbsp;&nbsp;var a = &quot;Hello&quot; +<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;World&quot;<br>&nbsp;&nbsp;d = function() {<br>&nbsp;&nbsp;&nbsp;&nbsp;aoeu<br>&nbsp;&nbsp;}<br>&nbsp;&nbsp;var k = function() {<br>&nbsp;&nbsp;&nbsp;&nbsp;var k=3,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;m=4<br>&nbsp;&nbsp;}<br><br>&nbsp;&nbsp;var rurl = /{[('&quot;/,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;r20 = /%20/g,<br><br>&nbsp;&nbsp;a = 1,<br>&nbsp;&nbsp;b = 2<br>&nbsp;&nbsp;a = 1 +<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2 *<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3<br>}<br><br>// Function nested<br>;(function($) {<br>&nbsp;&nbsp;&nbsp;&nbsp;$(document).ready(function() {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$('#foo').click(function() {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$.post(url, {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a: 1, <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b: 2,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}, function() {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ok(); <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;});<br>&nbsp;&nbsp;&nbsp;&nbsp;});<br>})(jQuery);<br><br>// Array Object Test<br>string_test(&quot;('&quot;,'(&quot;',&quot;[&quot;,'{',&quot;\&quot;{&quot;,&quot;\&#039{&quot;); <br>{<br>&nbsp;&nbsp;array_object_test: [<br>&nbsp;&nbsp;&nbsp;&nbsp;1,<br>&nbsp;&nbsp;&nbsp;&nbsp;2,<br>&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a: [3,4],<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b: [<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;],<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c: string_test(&quot;('&quot;,'(&quot;',&quot;[&quot;,'{',&quot;\&quot;{&quot;,&quot;\&#039{&quot;),<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;function_test: function() {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return 0;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;one_line_function_test: function() { return [1] }<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;]<br>}<br><br>// One Line Test<br>{<br>&nbsp;&nbsp;if( a == b &&<br>&nbsp;&nbsp;&nbsp;&nbsp;c == d ||<br>&nbsp;&nbsp;&nbsp;&nbsp;e == f) <br>&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;ok();<br>&nbsp;&nbsp;}<br>&nbsp;&nbsp;if(a) {<br>&nbsp;&nbsp;&nbsp;&nbsp;b;<br>&nbsp;&nbsp;} else {<br>&nbsp;&nbsp;&nbsp;&nbsp;e;<br>&nbsp;&nbsp;}<br>&nbsp;&nbsp;if(a)<br>&nbsp;&nbsp;&nbsp;&nbsp;b;<br>&nbsp;&nbsp;else if(k) {<br>&nbsp;&nbsp;&nbsp;&nbsp;aeou<br>&nbsp;&nbsp;} else<br>&nbsp;&nbsp;&nbsp;&nbsp;c;<br>&nbsp;&nbsp;while(true)<br>&nbsp;&nbsp;&nbsp;&nbsp;foo += 1;<br>&nbsp;&nbsp;try<br>&nbsp;&nbsp;&nbsp;&nbsp;a;<br>&nbsp;&nbsp;catch<br>&nbsp;&nbsp;&nbsp;&nbsp;b;<br>&nbsp;&nbsp;finally<br>&nbsp;&nbsp;&nbsp;&nbsp;c;<br>&nbsp;&nbsp;ok();<br>}<br></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">install details</td></tr>
+<tr><td>copy indent/javascript.vim to ~/.vim/indent<br>Optional:<br>Add 'let g:SimpleJsIndenter_BriefMode = 1' to ~/.vimrc to use brief mode .</td></tr>
+<tr><td>&nbsp;</td></tr>
+</table>
+
+<!-- rating table -->
+<form name="rating">
+<input type="hidden" name="script_id" value="3227">
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>rate this script</b></td>
+  <td valign="middle">
+    <input type="radio" name="rating" value="life_changing">Life Changing
+    <input type="radio" name="rating" value="helpful">Helpful
+    <input type="radio" name="rating" value="unfulfilling">Unfulfilling&nbsp;
+    <input type="submit" value="rate">
+  </td>
+</tr>
+</table>
+</form>
+<span class="txth2">script versions</span> (<a href="add_script_version.php?script_id=3227">upload new version</a>)
+<p>
+Click on the package to download.
+<p>
+
+<table cellspacing="2" cellpadding="4" border="0" width="100%">
+<tr class='tableheader'>
+        <th valign="top">package</th>
+    <th valign="top">script version</th>
+    <th valign="top">date</th>
+    <th valign="top">Vim version</th>
+    <th valign="top">user</th>
+    <th valign="top">release notes</th>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=14705">simple-javascript-indenter-v1.3.3.tar.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.3.3</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2011-01-08</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=17938">Miao Jiang</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Fix Failed Indent for<br>		test(/*a'*/b,'c') {<br>			foo();<br>		}<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=14700">simple-javascript-indenter-v1.3.2.tar.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.3.2</b></td>
+    <td class="roweven" valign="top" nowrap><i>2011-01-07</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=17938">Miao Jiang</a></i></td>
+    <td class="roweven" valign="top" width="2000">	FIX: failed indent for<br>		function a() {<br>			$('&quot;', {'b'}, function() {<br>			});<br>		}</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=14341">simple-javascript-indenter-v1.3.1.tar.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.3.1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-11-21</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=17938">Miao Jiang</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Fix 3 format indent failed. </td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13777">simple-javascript-indenter-v1.2.1.tar.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.2.1</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-09-08</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=17938">Miao Jiang</a></i></td>
+    <td class="roweven" valign="top" width="2000">Support: indent for if, else, else if, while, try, catch, finally without brackets.<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13770">simple-javascript-indenter-v1.1.1.tar.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.1.1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-09-06</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=17938">Miao Jiang</a></i></td>
+    <td class="rowodd" valign="top" width="2000">FIX: indent error for code<br>if( A ||<br>	B &&<br>	C)<br>{<br>}<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13760">simple-javascript-indenter-v1.0.1.tar.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.0.1</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-09-05</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=17938">Miao Jiang</a></i></td>
+    <td class="roweven" valign="top" width="2000">Fix comment issue isn't solved after whole reindent if the first line is blank.</td>
+</tr>
+</table>
+<!-- finish off the framework -->
+          </td>
+        </tr>
+      </table>
+    </td>
+
+  </tr>
+</table>
+
+<!-- END OF THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr><td colspan="4" bgcolor="#000000"><img src="/images/spacer.gif" height="2" width="1" alt=""></td></tr>
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr>
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+
+    <td align="left" valign="top"><small>
+      If you have questions or remarks about this site, visit the
+      <a href="http://vimonline.sf.net">vimonline development</a> pages.
+      Please use this site responsibly.
+      <br> 
+      
+      Questions about <a href="http://www.vim.org/about.php">Vim</a> should go
+      to the <a href="http://www.vim.org/maillist.php">maillist</a>.
+      Help Bram <a href="http://iccf-holland.org/">help Uganda</a>.
+      </small>
+	&nbsp;
+	&nbsp;
+
+	<!-- Start of StatCounter Code -->
+	<script type="text/javascript" language="javascript">
+	var sc_project=1417324; 
+	var sc_invisible=1; 
+	var sc_partition=11; 
+	var sc_security="d41633bc"; 
+	</script>
+
+	<script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script><noscript><a href="http://www.statcounter.com/" target="_blank"><img  src="http://c12.statcounter.com/counter.php?sc_project=1417324&java=0&security=d41633bc&invisible=0" alt="free tracking" border="0"></a> </noscript>
+	<!-- End of StatCounter Code -->
+          </td>
+
+    <td align="right" valign="top">
+      		<a href="http://sourceforge.net/projects/vim" rel="nofollow"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=8&type=1" width="88" height="31" border="0" alt="SourceForge.net Logo" /></a>
+    </td>
+
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+  </tr>
+
+    
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  
+  </tr>
+</table>
+
+</body>
+</html>
+

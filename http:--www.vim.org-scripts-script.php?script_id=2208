@@ -1,0 +1,428 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+  <link rel="Stylesheet" type="text/css" href="/css/style.css" >
+  <title>Txtfmt (The Vim Highlighter) - "Rich text" highlighting in Vim! (colors, underline, bold, italic, etc...) : vim online</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <meta name="KEYWORDS" content="Vim, Vi IMproved, text editor, home, documentation, tips, scripts, news">
+  <link rel="shortcut icon" type="image/x-icon" href="/images/vim_shortcut.ico">
+</head>
+
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff"> 
+
+<!-- HEADER, SPONSOR IMAGE, VIM IMAGE AND BOOK AD -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+  <td class="lightbg">&nbsp;&nbsp;&nbsp;</td>
+  <td class="lightbg" align="left"><a href="/sponsor/index.php"><img src="/images/sponsorvim.gif" alt="sponsor Vim development" border="0"></a></td>
+    <td class="lightbg" align="center"><a href="/index.php"><img src="/images/vim_header.gif" border="0" alt="Vim logo"></a></td>
+    <td class="lightbg" align="right"><a href="http://iccf-holland.org/click5.html"><img src="/images/buyhelplearn.gif" alt="Vim Book Ad" border="0"></a></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="darkbg"><img src="/images/spacer.gif" width="1" height="10" alt=""></td>
+  </tr>
+</table>
+<!-- THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+  <col width="180">
+  <col width="1">
+
+  <tr valign="top">
+    <td class="sidebar">
+      <table width="180" cellpadding="4" cellspacing="0" border="0">
+        <tr valign="top">
+          <td class="sidebar">
+
+<!-- INCLUDE THE PAGE NAVIGATION -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+    <tr>
+        <td><small>not logged in (<a href="/login.php">login</a>)</small></td>
+    </tr>
+    <tr><td>
+<small>&nbsp;</small>
+<form action="http://www.google.com/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-3005259998294962:bvyni59kjr1" />
+    <input type="hidden" name="ie" value="ISO-8859-1" />
+    <input type="text" name="q" size="20" />
+    <br>
+    <input type="submit" name="sa" value="Search" />
+  </div>
+</form>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+    </td></tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="1"></td>
+    </tr>
+    <tr>
+        <td class="darkbg"><img src="/images/spacer.gif" alt='' border="0" height="3"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="2"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/index.php">Home</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/search.php">Advanced search</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/about.php">About Vim</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/community.php">Community</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/news/news.php">News</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/sponsor/index.php">Sponsoring</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/trivia.php">Trivia</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/docs.php">Documentation</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/download.php">Download</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/scripts/index.php">Scripts</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/tips/index.php">Tips</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/account/index.php">My Account</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/huh.php">Site Help</a></td>
+        </tr>
+</table>
+
+            <table width="172" cellpadding="0" cellspacing="0" border="0">
+              <tr><td><img src="/images/spacer.gif" alt="" border="0" width="1" height="8"></td></tr>
+              <tr><td class="darkbg"><img src="/images/spacer.gif" width="1" height="3" alt=""></td></tr>
+            </table>
+            <br>
+
+<!-- INCLUDE THE PAGE SIDEBAR TEXT -->
+&nbsp;
+
+          </td>
+        </tr>
+      </table>
+    </td>
+
+    <td class="darkbg"><img src="/images/spacer.gif" width="1" height="1" border="0" alt=""><br></td>
+    <td>
+      <table width="100%" cellpadding="10" cellspacing="0" border="0" bordercolor="red">
+        <tr>
+          <td valign="top">
+
+<span class="txth1">Txtfmt (The Vim Highlighter) : &quot;Rich text&quot; highlighting in Vim! (colors, underline, bold, italic, etc...)</span> 
+
+<br>
+<br>
+
+<!-- karma table -->
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
+  <td>
+    Rating <b>723/325</b>,
+    Downloaded by 2342  </td>
+  <td class="lightbg">
+  <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
+  </td>
+  <td>
+    <a href="http://vim.wikia.com/wiki/Script:2208">Vim wiki</a>
+  </td>  
+</tr>
+</table>
+<p>
+
+<table cellspacing="0" cellpadding="0" border="0">
+<tr><td class="prompt">created by</td></tr>
+<tr><td><a href="/account/profile.php?user_id=1084">Brett Stahlman</a></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">script type</td></tr>
+<tr><td>utility</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">description</td></tr>
+<tr><td>USER FEEDBACK NEEDED: I would greatly appreciate feedback email: <br>brettstahlman AT comcast DOT net<br><br>=== !!! IMPORTANT NOTE TO NEW USERS !!! ===<br>The Txtfmt help file is large; for a quick (and gentle) introduction, please see the &quot;QUICK-START TUTORIAL&quot; further down on this page...<br><br>=== SCREENSHOTS ===<br>Check out the following link for screenshots showing Txtfmt used...<br>&nbsp;&nbsp;&nbsp;&nbsp;-as a standalone filetype for journal entries, notes, documents, etc...<br>&nbsp;&nbsp;&nbsp;&nbsp;-in conjunction with the .otl filetype used by Ned Konz' TVO (The Vim<br>&nbsp;&nbsp;&nbsp;&nbsp; Outliner) plugin<br>&nbsp;&nbsp;&nbsp;&nbsp;-to spruce up a circuit diagram created with the aid of Dr. Charles<br>&nbsp;&nbsp;&nbsp;&nbsp; Campbell's drawit plugin<br>&nbsp;&nbsp;&nbsp;&nbsp;-to spruce up comments in various programming languages<br><br>&nbsp;&nbsp;&nbsp;&nbsp;<a target="_blank" href="http://www.txtfmt.webs.com">http://www.txtfmt.webs.com</A><br><br>=== MOTIVATION ===<br>Vim's syntax highlighting is very useful for editing files in a particular programming language such as C or Perl. But what if you are simply using Vim to edit text that doesn't fall into any particular language category: e.g., personal journal entries, miscellaneous notes or generic documents? In such cases, Vim's statically defined syntax regions are not very useful. What is really needed is a word processor's ability to apply highlighting to an arbitrary selection of text. <br><br>=== OVERVIEW ===<br>Txtfmt (The Vim Highlighter) is a combination syntax/filetype plugin that allows you to highlight plain text in Vim. The highlighting mechanism uses invisible tokens that are inserted into a Txtfmt buffer with the aid of easy to use mappings provided by the filetype plugin. Each token affects either the color or formatting of subsequent text. The plugin supports up to 8 configurable foreground colors, up to 8 configurable background colors, and all combinations of the following formatting attributes: bold, underline, italic, standout, reverse and undercurl.<br><br>Nearly everything in this plugin is configurable, with defaults that should work for most users &quot;right out of the box&quot;. The following is a *partial* list of things that can be configured:<br>&nbsp;&nbsp;&nbsp;&nbsp;mappings<br>&nbsp;&nbsp;&nbsp;&nbsp;colors<br>&nbsp;&nbsp;&nbsp;&nbsp;range of character codes used as highlighting tokens<br><br>Everything is documented in an extensive Vim help file. Additionally, there is a &quot;Quick-Start Tutorial&quot; at the bottom of this page, designed to help you get up and running quickly with Txtfmt.<br><br>=== USAGE EXAMPLE ===<br>Suppose you wish to enter some green text...<br>You execute one of Txtfmt's &quot;insert-token&quot; mappings and enter the following at the prompt:<br>&nbsp;&nbsp;&nbsp;&nbsp;cg<br>(mnemonic: color green)<br>Now, the text you type is green.<br><br>While typing green text, you wish to emphasize a phrase by making it bold-italic. You execute another mapping and enter &quot;fbi&quot; or &quot;fib&quot; at the prompt.<br>(mnemonic: format bold italic)<br>Now, the text you type is green bold-italic.<br>Note: Inserting the bold-italic token did not affect the text color, because the color and format regions are completely &quot;orthogonal&quot;.<br><br>Now you wish to switch to a blue background. Execute another mapping and enter &quot;kb&quot; at the prompt.<br>(mnemonic: bac_k_ground blue)<br>Now, the text you type is green bold-italic on a blue background. Notice that, as before, the preceding highight regions are unaffected by the start of the new one.<br><br>At some point, you may wish to return to default (unhighlighted) text. You can terminate the 3 active regions by executing the insert-token mapping one last time and entering the following at the prompt:<br>&nbsp;&nbsp;&nbsp;&nbsp;c-,f-,k-<br>(mnemonic: remove color, remove format, remove bac_k_ground color)<br>Now, the text you type should be plain, unhighlighted text. Notice how multiple format/color specifiers can be concatenated in a comma-separated list, thereby reducing the number of times you have to execute the mapping.<br><br>=== FEEDBACK ===<br>I would greatly appreciate your feedback on this plugin. Contact me either at...<br><br>brettstahlman AT comcast DOT net<br><br>...or by posting to the Vim list with Txtfmt somewhere in the subject or body. <br>Also, please rate this plugin!<br><br>=== SUGGESTED USES ===<br>The following applications represent a few of the many possible uses of the Txtfmt plugin:<br>&nbsp;&nbsp;&nbsp;&nbsp;-For taking notes<br>&nbsp;&nbsp;&nbsp;&nbsp; (e.g., notes taken while reviewing large programming projects)<br>&nbsp;&nbsp;&nbsp;&nbsp;-As part of a personal journaling system<br>&nbsp;&nbsp;&nbsp;&nbsp;-For highlighting .otl files created with Ned Konz' TVO (The Vim Outliner)<br>&nbsp;&nbsp;&nbsp;&nbsp; plugin<br>&nbsp;&nbsp;&nbsp;&nbsp;-For highlighting files created with 'Notes' (Hari Krishna Dara's<br>&nbsp;&nbsp;&nbsp;&nbsp; lightweight note management plugin)<br>&nbsp;&nbsp;&nbsp;&nbsp;-For highlighting text files created with Yongping Guo's TxtBrowser plugin<br>&nbsp;&nbsp;&nbsp;&nbsp;-For beautifying block diagrams created with Dr. Charles Campbell's drawit<br>&nbsp;&nbsp;&nbsp;&nbsp; plugin<br>&nbsp;&nbsp;&nbsp;&nbsp;-For sprucing up programming language comments<br>&nbsp;&nbsp;&nbsp;&nbsp; Don't laugh! You can embed Txtfmt formatting regions within other syntax<br>&nbsp;&nbsp;&nbsp;&nbsp; regions (e.g., C comments)<br>&nbsp;&nbsp;&nbsp;&nbsp; :help txtfmt-'nested'<br>&nbsp;&nbsp;&nbsp;&nbsp;-etc. etc...<br>Note: If you wish to make your formatted documents available to non-Vim users, simply use the :TOhtml command distributed with Vim to output an HTML version of the Txtfmt buffer.<br><br><br>====================<br>QUICK-START TUTORIAL<br>====================<br>After you have installed the plugin, you may wish to generate a &quot;test page&quot;, both to ensure that you have installed the plugin properly, and as a quick and easy way to create a Txtfmt buffer containing actual formatting regions that you can view and play around with. You may create a &quot;test page&quot; with default options by executing the MakeTestPage command at the command line:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;:MakeTestPage&lt;Enter&gt;<br><br>Be sure to scroll down and/or enlarge the window to view all sections. Although the primary purpose of the test page is to allow you to visualize the effects of a particular set of option values, the text of the page has been carefully chosen to give the new user an overview of some of the more important Txtfmt options. For information on how to use MakeTestPage to visualize different sets of options,<br><br>&nbsp;&nbsp;&nbsp;&nbsp;:help txtfmt-:MakeTestPage<br><br>After you have viewed formatting regions in a test page, you will probably want to try creating your own formatting regions. The simplest way to begin is as follows:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;:new&lt;Enter&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;:set ft=txtfmt&lt;Enter&gt;<br><br>Assuming you have installed the plugin properly, you now have access to all the Txtfmt mappings for working with the special Txtfmt tokens discussed earlier. There are a large number of mappings provided for inserting and jumping to Txtfmt tokens. Note that while intuitive key-sequences are used by default, Txtfmt provides a way for you to customize the {lhs} of any or all mappings.<br><br>For a detailed description of mapping customization,<br>&nbsp;&nbsp;&nbsp;&nbsp;:help txtfmt-map-config<br><br>For a detailed description of the token insertion mappings,<br>&nbsp;&nbsp;&nbsp;&nbsp;:help txtfmt-ins-tok-maps<br><br>For a detailed description of the jump-to-token mappings,<br>&nbsp;&nbsp;&nbsp;&nbsp;:help txtfmt-jump-to-tok<br><br>To keep this &quot;quick-start tutorial&quot; quick, I'll demonstrate the use of only a few of the available mappings...<br><br>In your newly-created Txtfmt buffer, execute the following normal mode command:<br>&nbsp;&nbsp;&nbsp;&nbsp;\i<br><br>Note: The remainder of the tutorial assumes that your &lt;LocalLeader&gt; is at the default value (i.e., backslash). If you have set &lt;LocalLeader&gt; to something other than the default, replace the backslash in the examples with the appropriate character.<br>&nbsp;&nbsp;&nbsp;&nbsp;:help &lt;LocalLeader&gt;<br><br>At this point, you will be presented with the following prompt:<br>&nbsp;&nbsp;&nbsp;&nbsp;Enter a fmt / clr string. (Enter to cancel):<br><br>At the prompt, type the following string and hit &lt;Enter&gt;:<br>&nbsp;&nbsp;&nbsp;&nbsp;fbui<br><br>Now, begin typing some text. The text should be highlighted with the bold, underline, and italic attributes. Note that the results would have been the same if you had typed fbiu, fibu, fubi, etc... As you have probably surmised, the letters 'b', 'u', and 'i' are flags indicating bold, underline, and italic, respectively. The leading 'f' indicates that the subsequent flags comprise a &quot;format specification&quot;.<br>&nbsp;&nbsp;&nbsp;&nbsp;:help txtfmt-fmt-spec<br><br>To terminate the underline, bold, italic region, execute the following keystroke sequence while still in insert mode:<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;CTRL-\&gt;&lt;CTRL-\&gt;<br><br>Hint: Hold the Control key down while hitting backslash twice in quick succession.<br><br>Once again, you should be presented with the prompt asking for a fmt / clr string. This time, enter the following:<br>&nbsp;&nbsp;&nbsp;&nbsp;f-<br><br>The dash character indicates &quot;no format&quot;; i.e., a return to the normal (unhighlighted) text. If you continue typing text, you will see that it no longer has any format attributes.<br><br>Now let's see what happens when we bring color into the mix... If you're still in insert mode, hit &lt;Esc&gt; to return to normal mode. Now execute the following normal mode command to insert a token on the line below:<br>&nbsp;&nbsp;&nbsp;&nbsp;\o<br><br>At the resulting prompt, enter the following:<br>&nbsp;&nbsp;&nbsp;&nbsp;cblue<br><br>The 'c' is analogous to the 'f' in the preceding &quot;format specifications&quot;; it<br>indicates that the following text is a &quot;color specification&quot;.<br>&nbsp;&nbsp;&nbsp;&nbsp;:help txtfmt-clr-spec<br><br>Since in this case the color specified is &quot;blue&quot;, the text you type after hitting &lt;Enter&gt; will be blue. Although I specified the color as &quot;blue&quot;, I could just as well have abbreviated it to &quot;b&quot;. As discussed in the Txtfmt help, color names are actually defined as regular expression patterns. The default patterns permit you to abbreviate color names to uniqueness. In practice, this means that for all colors but black, you needn't specify more than the first letter of the color name. (The single letter abbreviation for black is 'k', which permits it to be disambiguated with blue.) Txtfmt provides you with 8 distinct colors, each with its own default color name pattern and RGB value. You can view these definitions with the :ShowTokenMap command. Go ahead and try it now... After hitting &lt;Esc&gt; to return to normal mode, execute the following at the command line:<br>&nbsp;&nbsp;&nbsp;&nbsp;:ShowTokenMap&lt;Enter&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;<br>You may have to page down to see all of the output. The first section shows foreground color definitions, and the last section shows similar definitions for background colors. If you are not happy with either the color name or the RGB value of any of the 8 default colors, Txtfmt provides a very flexible mechanism for overriding the defaults with your own color preferences. The details may be found in the help, but if you're short on time, here's a quick example that shows how easy it is...<br>Note: You don't need to try this now.<br><br>Suppose the GUI's default red color (RGB: #FF0000) is too bright for your eyes. You wish to replace this color with a dark brown (RGB: #804000). You see from the output of :ShowTokenMap that red corresponds to index 5 in the default color array. Thus, you could make the desired change by overriding txtfmtColor{5} with the following line in your .vimrc:<br>&nbsp;&nbsp;&nbsp;&nbsp;:let txtfmtColor5='^br\\%[own]$,c:DarkRed,g:#804000'<br><br>With this definition, you could specify the new color with the abbreviation &quot;br&quot;. Of course, you would no longer be able to use the color red in the GUI, and any red highlighting in your existing file(s) would change to dark brown when viewed in the GUI. (Since the &quot;c:DarkRed&quot; is unchanged, color #5 will still be red in a color terminal.)<br>&nbsp;&nbsp;&nbsp;&nbsp;:help txtfmt-color-config<br>&nbsp;&nbsp;&nbsp;&nbsp;:help txtfmt-:ShowTokenMap<br><br>Now suppose you wish to continue typing blue text, but would like the text you are about to type to have the bold and italic attributes as well. Assuming you are in normal mode, hit \a to bring up the familiar prompt. (Note that \a differs from \i in that the former will insert the Txtfmt token(s) *after* the cursor location instead of before it.) Now enter the following at the prompt:<br>&nbsp;&nbsp;&nbsp;&nbsp;fbi<br><br>The text you type after hitting &lt;Enter&gt; will be blue, bold-italic. Notice that it wasn't necessary to do anything special to ensure that the bold-italic text would also be blue. It is blue because the effects of the &quot;blue&quot; foreground color token you entered earlier are not affected in any way by the introduction of a format token. This behavior is a direct consequence of the orthogonality of Txtfmt's various token types. A format token supercedes the preceding format token, but has no effect upon any preceding color regions. Similarly, a foreground color token supercedes the preceding foreground color token, but has no effect upon any preceding format or background color regions.<br><br>Important Note: The fact that format/color tokens &quot;supercede&quot; preceding tokens of the same type means that the &quot;no format&quot;/&quot;no color&quot; tokens are required only when you wish to turn off format or colors completely for subsequent text. To change from one format to another format, or from one color to another color, simply insert the token for the new region.<br><br>To verify that we can supercede the blue foreground color token entered earlier, let's enter a red foreground color token by hitting &lt;CTRL-\&gt;&lt;CTRL-\&gt; once more (still in insert mode) and entering the following at the prompt:<br>&nbsp;&nbsp;&nbsp;&nbsp;cr<br><br>Observe that the text you type after hitting &lt;Enter&gt; still possesses the bold-italic attribute, though its color is red.<br>Note: You may have noticed that I used the convenient single letter abbreviation for &quot;red&quot;. I will use such abbreviations exclusively for the remainder of the tutorial.<br><br>Up until now, you have been applying colors only to text; i.e., you have been working exclusively with foreground colors. Txtfmt 2.0 introduced support for background colors as well. For performance reasons, the default configuration enables only 4 background colors: red, green, blue and yellow. It is quite easy, however, to tailor the set of colors enabled via independent foreground and background color mask options.<br>&nbsp;&nbsp;&nbsp;&nbsp;:help txtfmt-'fgcolormask'<br>&nbsp;&nbsp;&nbsp;&nbsp;:help txtfmt-'bgcolormask'<br><br>You insert a background color token just as you would a foreground color token, except that the character introducing the color spec is 'k' instead of 'c' (since 'c' was already taken, and the word &quot;background&quot; contains a 'k'). You can try it out by hitting &lt;CTRL-\&gt;&lt;CTRL-\&gt; (still in insert mode) and entering the following at the prompt:<br>&nbsp;&nbsp;&nbsp;&nbsp;kb<br><br>Hit &lt;Enter&gt; and type some text. As you might expect, the text you type now is red bold-italic on a blue background.<br><br>To revert to default format and color, hit &lt;CTRL-\&gt;&lt;CTRL-\&gt; and enter the following at the prompt:<br>&nbsp;&nbsp;&nbsp;&nbsp;f-,c-,k-<br><br>You may recognize the &quot;f-&quot; as the special &quot;no format&quot; token we inserted earlier to end the first format region we created. Similarly, the &quot;c-&quot; and &quot;k-&quot; are the special &quot;no fg color&quot; and &quot;no bg color&quot; tokens, respectively . Note that it was not necessary to enter these three tokens with separate mappings and separate prompts. We simply concatenated the token specs together, separating them with a comma. This is an example of a format/color specification list.<br>&nbsp;&nbsp;&nbsp;&nbsp;:help txtfmt-fmt-clr-spec-list<br><br>Note that such lists may contain any number of format/color specifications. Ordinarily, the cursor will be left at the end of the sequence of tokens inserted via such a list. You can, however, specify a different cursor position by replacing one of the commas in the list with a single dot ('.'). This is actually a very useful feature. Recall that in our previous example, we inserted the &quot;no format&quot; and &quot;no color&quot; tokens used to terminate our format/color regions only after we had finished typing all the text within them. In the common case, however, you know when you begin a region that you will eventually want to end it. Thus, you can save yourself a mapping invocation by entering both the start and end tokens at the same prompt.<br><br>To see how it works, hit &lt;Esc&gt; to return to normal mode, then hit \o and enter the following at the prompt:<br>&nbsp;&nbsp;&nbsp;&nbsp;cr,fi.c-,f-<br><br>This format/color specification list comprises both the start and end tokens for a red, italic region. The advantage of using a dot to separate the &quot;italic&quot; format spec from the &quot;no color&quot; spec is that it allows you to begin typing red, italic text immediately after hitting &lt;Enter&gt;. (Go ahead and type a bit of text...) If a comma had been used instead, the cursor would have ended up after the &quot;no format&quot; token, which means you would have had to move the cursor back 2 character positions to get it inside the region before beginning to type the formatted text.<br><br>Now suppose after typing some red, italic text, you decide that green, underline would have been a better choice. The change is accomplished fairly easily, and will give us an opportunity to introduce the &quot;jump-to-token&quot; mappings...<br><br>After hitting &lt;Esc&gt; to return to normal mode, Execute the following &quot;jump-to-token&quot; command:<br>&nbsp;&nbsp;&nbsp;&nbsp;[c<br><br>This command positions the cursor on the previous color token (i.e., the red color token beginning the region). Note that there are many variations of the jump-to-token commands: the one to use depends upon desired search direction, the type of token sought, whether you wish to land &quot;on&quot; or &quot;next to&quot; the sought token, etc...<br>&nbsp;&nbsp;&nbsp;&nbsp;:help txtfmt-jump-to-tok<br><br>IMPORTANT NOTE: As of Vim 7.3, the default configuration causes tokens to disappear completely as soon as they are inserted. The &quot;jump-to-token&quot; maps provide the best way to locate hidden tokens (for example, when you wish to remove one). If you prefer that tokens remain visible as long as the cursor is in their line, you can add the `i' and `n' flags to the txtfmt-'concealcursor' option.<br>&nbsp;&nbsp;&nbsp;&nbsp;:help txtfmt-'concealcursor'<br><br>Now type the following (still in normal mode):<br>&nbsp;&nbsp;&nbsp;&nbsp;2\s<br><br>This is the &quot;substitute&quot; variant of the insert-token command. The numeric argument indicates that we wish to replace 2 characters at the cursor (i.e., the red color and italic format tokens) with the tokens we are about to specify at the prompt:<br>&nbsp;&nbsp;&nbsp;&nbsp;fu,cg<br><br>Upon hitting &lt;Enter&gt;, you should observe that the red, italic text has changed to green, underline.<br><br>You may have noticed a similarity between several of the normal mode insert-token mappings used above and the native Vim normal mode commands for entering insert mode. This similarity was not by chance, but by design. In addition to the \i, \a, \o, and \s commands that were demonstrated above, Txtfmt also provides the following:<br>&nbsp;&nbsp;&nbsp;&nbsp;\I, \O, \A<br><br>Although all these commands are described in the help, a regular Vim user can easily intuit where they will insert the Txtfmt tokens relative to the cursor, by analogy with the corresponding enter insert mode commands.<br><br>Also note that if you insert a 'v' between the backslash and the subsequent character (e.g., \vI), Txtfmt will exit insert mode after inserting the Txtfmt tokens. This is useful when you are simply highlighting existing text.<br><br>This concludes the tutorial. No attempt was made to discuss all of the many Txtfmt options. Detailed information on all options may be found in the Txtfmt help file.<br>&nbsp;&nbsp;&nbsp;&nbsp;:help txtfmt<br></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">install details</td></tr>
+<tr><td>=== DISTRIBUTED FILES ===<br><br>The Txtfmt distribution comprises the following 4 files:<br><br>doc/txtfmt.txt<br>&nbsp;&nbsp;&nbsp;&nbsp;Txtfmt help file<br>ftplugin/txtfmt.vim<br>&nbsp;&nbsp;&nbsp;&nbsp;Txtfmt filetype plugin (contains mappings for working with Txtfmt tokens)<br>syntax/txtfmt.vim<br>&nbsp;&nbsp;&nbsp;&nbsp;Txtfmt syntax file (defines the Txtfmt syntax highlighting)<br>plugin/txtfmt.vim<br>&nbsp;&nbsp;&nbsp;&nbsp;Txtfmt common configuration code (contains configuration script needed by<br>&nbsp;&nbsp;&nbsp;&nbsp;both the filetype and syntax plugins)<br>indent_patch.txt<br>&nbsp;&nbsp;&nbsp;&nbsp;(Not needed by most users)<br>&nbsp;&nbsp;&nbsp;&nbsp;Bram Moolenaar's patch to fix indent.vim's handling of dot-separated lists<br>&nbsp;&nbsp;&nbsp;&nbsp;in 'filetype' option values (required only if your version of Vim is older<br>&nbsp;&nbsp;&nbsp;&nbsp;than 7.2 and you plan to &quot;nest&quot; Txtfmt within other filetypes) For details,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:help txtfmt-combining.<br><br>All of the txtfmt files should be placed in their respective parent directories, somewhere in your 'runtimepath'. If you need the patch file, you may place it wherever you like (but if you're using a recent version of Vim, you won't need it).<br><br>The instructions for extracting the Txtfmt files vary, depending upon the package file format you have chosen to download. Follow the instructions that apply...<br><br>--- Vimball (.vba) ---<br><br>Extracting a Vimball is easy. Simply edit the file with Vim and execute the following at the Vim command line:<br>&nbsp;&nbsp;&nbsp;&nbsp;:so %<br>&nbsp;&nbsp;&nbsp;&nbsp;:q<br><br>That's it! If you haven't overridden any of the Vimball defaults, this will extract the plugin files under the first directory in your 'runtimepath'. Additionally, it will run :helptags to make the Txtfmt help topics searchable with Vim's help command. Note that it is necessary to restart Vim after installing the files before using the plugin.<br><br>Note: If you wish to extract the files somewhere other than the first directory in your 'runtimepath', you can override the default location by setting the g:vimball_home option.<br>&nbsp;&nbsp;&nbsp;&nbsp;:help g:vimball_home<br><br>--- Gzipped tarfile (.tar.gz) ---<br><br>Choose the location where you wish to install the plugin. If you are unsure what location to choose, consider using the first directory in your 'runtimepath' option. You can see what this is by executing `:set rtp'.<br><br>Typical values are...<br>&nbsp;&nbsp;&nbsp;&nbsp;~/.vim (Unix)<br>&nbsp;&nbsp;&nbsp;&nbsp;$HOME/vimfiles or $VIM/vimfiles (Windows)<br><br>Go to the selected installation directory and extract the gzipped tarfile with a command similar to the following (replacing &lt;path_to_tar_gz&gt; with the actual path to the downloaded file).<br>&nbsp;&nbsp;&nbsp;&nbsp;tar -xzvf &lt;path_to_tar_gz&gt;<br><br>To make Txtfmt help topics visible to Vim's :help command, you must now run :helptags, passing as argument the path to the doc folder where you unpacked txtfmt.txt: e.g.,<br>&nbsp;&nbsp;&nbsp;&nbsp;:helptags ~/.vim/doc<br><br>=== DETECTING OR SETTING TXTFMT FILETYPE ===<br><br>Once you have copied the Txtfmt files to the appropriate directories in 'runtimepath', you can always use the Txtfmt syntax and mappings by manually setting the 'filetype' option. (I am assuming, of course, that you have enabled syntax at some point, most likely in your .vimrc. If you are not sure about this, :help syntax-enable.) The 'filetype' option may be set on the command line: e.g.,<br>&nbsp;&nbsp;&nbsp;&nbsp;:set ft=txtfmt<br><br>A better approach for a file designed to be viewed with Txtfmt highlighting would be to set the filetype in a Vim modeline: e.g.<br>&nbsp;&nbsp;&nbsp;&nbsp;vim:ft=txtfmt<br><br>While the manual approach may be appropriate for some uses, if you find yourself always using Txtfmt with certain types of files, it probably makes sense to set up automatic detection via one of the methods discussed in the section &quot;new-filetype&quot; in the Vim help. The simplest approach is to create your own filetype.vim (assuming you haven't done so already) in a directory that comes before $VIMRUNTIME in 'runtimepath'. Within this script, you should define an autocommand that will :setfiletype to Txtfmt for any file with an appropriate extension.<br><br>Example:<br>&nbsp;&nbsp;&nbsp;&nbsp;&quot; Set up detection for Txtfmt files<br>&nbsp;&nbsp;&nbsp;&nbsp;au! filetypedetect BufRead,BufNewFile *.txt&nbsp;&nbsp;&nbsp;&nbsp;setfiletype txtfmt<br><br>IMPORTANT NOTE: More information on this topic, such as how to use Txtfmt in combination with other filetypes (e.g. to format C comments), may be found in the Txtfmt help file. <br></td></tr>
+<tr><td>&nbsp;</td></tr>
+</table>
+
+<!-- rating table -->
+<form name="rating">
+<input type="hidden" name="script_id" value="2208">
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>rate this script</b></td>
+  <td valign="middle">
+    <input type="radio" name="rating" value="life_changing">Life Changing
+    <input type="radio" name="rating" value="helpful">Helpful
+    <input type="radio" name="rating" value="unfulfilling">Unfulfilling&nbsp;
+    <input type="submit" value="rate">
+  </td>
+</tr>
+</table>
+</form>
+<span class="txth2">script versions</span> (<a href="add_script_version.php?script_id=2208">upload new version</a>)
+<p>
+Click on the package to download.
+<p>
+
+<table cellspacing="2" cellpadding="4" border="0" width="100%">
+<tr class='tableheader'>
+        <th valign="top">package</th>
+    <th valign="top">script version</th>
+    <th valign="top">date</th>
+    <th valign="top">Vim version</th>
+    <th valign="top">user</th>
+    <th valign="top">release notes</th>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13946">txtfmt_v24.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.4</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-09-28</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=1084">Brett Stahlman</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Version 2.4 repackaged in Vimball format<br>*** TOKENS NOW COMPLETELY CONCEALED (with Vim 7.3) ***<br>See original version 2.4 release notes for additional details</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13856">txtfmt_v2.4.tar.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.4</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-09-18</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=1084">Brett Stahlman</a></i></td>
+    <td class="roweven" valign="top" width="2000">*** TOKENS NOW COMPLETELY CONCEALED (with Vim 7.3) ***<br>-Makes using the &quot;conceal&quot; feature the default for Vim versions &gt;= 7.3.<br>Important Note: If you have legacy files for which you do not wish to use &quot;conceal&quot;, read the following:<br>	:help txtfmt-conceal-history<br>	:help txtfmt-viewing-old-files-without-conceal<br>-Provides more accurate definition of &quot;turquoise&quot; color in default color map: LightGreen changed to DarkCyan.<br>-Fixed handling of bad modeline options.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13144">txtfmt_v2.3.tar.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.3</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-06-08</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=1084">Brett Stahlman</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Prevents E21 in several scenarios: e.g.,<br>	-Txtfmt used within a Vim help buffer (e.g., ft=help.txtfmt)<br>	-Txtfmt loaded when 'nomodifiable' is set globally.<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=12389">txtfmt_v2.2.tar.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.2</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-02-16</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=1084">Brett Stahlman</a></i></td>
+    <td class="roweven" valign="top" width="2000">-Loading Txtfmt no longer makes all windows the same size when 'equalalways' is set<br>-Fixed several anomalies caused by Txtfmt load when 'winfixheight' is set:<br>	-&quot;test page&quot; displayed in 2 windows<br>	-chain of errors when initial window contains changes<br>	-Txtfmt buffer loaded in 2 windows<br>-Added logic that attempts to make &quot;test page&quot; at least 20 lines high<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=11802">txtfmt_v2.1.tar.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-11-26</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=1084">Brett Stahlman</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Minor fix in Define_syntax to ensure that 'containedin' clause does not refer to nonexistent &quot;inner escape&quot; region when there are no active foreground colors.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=11451">txtfmt_v2.0.tar.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.0</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-09-29</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=1084">Brett Stahlman</a></i></td>
+    <td class="roweven" valign="top" width="2000">!!!!! Formal Release of Version 2.0 (bg color and 'conceal' patch support) !!!!!<br>Incorporated perl script used to generate large portion of Define_syntax into syntax/txtfmt.vim, and provided Vim command line used to update the auto-generated script block.<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=11387">txtfmt_v2.0b.tar.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.0b</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-09-16</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=1084">Brett Stahlman</a></i></td>
+    <td class="rowodd" valign="top" width="2000">!!!!! Version 2.0 beta release (background colors and 'conceal' patch) !!!!!<br>Code cleanup (removed unused functions, streamlined color name lookup)<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=11250">txtfmt_v2.0a.tar.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.0a</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-08-25</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=1084">Brett Stahlman</a></i></td>
+    <td class="roweven" valign="top" width="2000">!!!!! MAJOR RELEASE !!!!!<br>-Added support for background colors!!!<br>-Added support for Vince Negri's 'conceal' patch, which can make Txtfmt tokens consume zero screen width<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=10118">txtfmt_v1.5.tar.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.5</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-03-05</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=1084">Brett Stahlman</a></i></td>
+    <td class="rowodd" valign="top" width="2000">-Removed (obsolete) multibyte syntax patch from distribution<br>-Updated help to reflect fact that several issues affecting Txtfmt have been eliminated in Vim 7.2</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=10013">txtfmt_v1.4.tar.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.4</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-02-23</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=1084">Brett Stahlman</a></i></td>
+    <td class="roweven" valign="top" width="2000">-Fixed several of the operator-pending &quot;jump to token&quot; maps<br>-Added more robust mechanism for hiding tokens, eliminating dependence upon &quot;Ignore&quot; group whenever possible<br>-Added help section &quot;Color terminal pitfalls&quot; containing...<br>&nbsp;&nbsp;&nbsp;&nbsp;-Description of &quot;Ignore&quot; group issue and recommended workarounds<br>&nbsp;&nbsp;&nbsp;&nbsp;-Description of gnome-terminal issue and recommended workarounds<br>-Fixed broken link in helpfile<br>-Minor cosmetic fix on test page<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=9681">txtfmt_v1.3.tar.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.3</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2008-12-16</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=1084">Brett Stahlman</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Fixed &quot;bold&quot; attribute display in color terminals. Prior to this fix, the default Txtfmt colors were unaffected by the bold attribute. With this fix, the bold attribute will cause dark colors to appear brighter (lighter) in a color terminal.<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=9139">txtfmt_v1.2.tar.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.2</b></td>
+    <td class="roweven" valign="top" nowrap><i>2008-08-17</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=1084">Brett Stahlman</a></i></td>
+    <td class="roweven" valign="top" width="2000">Added missing help tags for a number of options.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=8751">txtfmt_v1.1.tar.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2008-06-04</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=1084">Brett Stahlman</a></i></td>
+    <td class="rowodd" valign="top" width="2000">NOW WORKS WITH MULTIBYTE ENCODINGS!!! (no patch required)<br>-Added logic to determine whether the running Vim treats syntax match offsets as byte or character offsets. (This logic renders the multi-byte syntax patch obsolete.)<br>-Help file additions: added instructions for using Txtfmt with TVO (:help txtfmt-nesting-tvo-example), and outlined a strategy for achieving &quot;colorscheme independence&quot; by defining colors according to default highlighting groups (:help txtfmt-colorschemes)<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=8670">txtfmt_v1.0e.tar.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.0e</b></td>
+    <td class="roweven" valign="top" nowrap><i>2008-05-11</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=1084">Brett Stahlman</a></i></td>
+    <td class="roweven" valign="top" width="2000">-Fixed bug that prevented buf-local color definitions from being used.<br>-Added to the help file a description of a possible strategy for making txtfmt<br> color definitions dependent upon current colorscheme.<br>-Fixed bug that sometimes prevented txtfmt option changes from taking effect<br> when a txtfmt buffer was re-edited.<br>-Fixed bug that prevented insert-token mappings from working in Replace mode.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=8611">txtfmt_v1.0d.tar.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.0d</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2008-04-28</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=1084">Brett Stahlman</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Applied the &lt;silent&gt; attribute to prevent the jump-to-token<br>mappings from echoing to the command line</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=8580">txtfmt_v1.0c.tar.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.0c</b></td>
+    <td class="roweven" valign="top" nowrap><i>2008-04-19</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=1084">Brett Stahlman</a></i></td>
+    <td class="roweven" valign="top" width="2000">-Added buffer-local mapping (\ga) and command (:GetTokInfo) for obtaining<br>information about a specific character/token in a txtfmt buffer.<br>(Functionality is analogous to that of Vim's ga normal mode command.)<br>-Fixed documentation and reporting bug that caused a 0-based color index to be<br>displayed instead of the 1-based index specified in the help file. (Affected<br>:MakeTestPage, \ga, :GetTokInfo and documentation)</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=8544">txtfmt_v1.0b.tar.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.0b</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2008-04-10</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=1084">Brett Stahlman</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Fixed bug in ftplugin that caused sample &quot;user-maps&quot; (defined for testing) to override any user-defined ones.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=8526">txtfmt_v1.0a.tar.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.0a</b></td>
+    <td class="roweven" valign="top" nowrap><i>2008-04-06</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=1084">Brett Stahlman</a></i></td>
+    <td class="roweven" valign="top" width="2000">Initial upload</td>
+</tr>
+</table>
+<!-- finish off the framework -->
+          </td>
+        </tr>
+      </table>
+    </td>
+
+  </tr>
+</table>
+
+<!-- END OF THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr><td colspan="4" bgcolor="#000000"><img src="/images/spacer.gif" height="2" width="1" alt=""></td></tr>
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr>
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+
+    <td align="left" valign="top"><small>
+      If you have questions or remarks about this site, visit the
+      <a href="http://vimonline.sf.net">vimonline development</a> pages.
+      Please use this site responsibly.
+      <br> 
+      
+      Questions about <a href="http://www.vim.org/about.php">Vim</a> should go
+      to the <a href="http://www.vim.org/maillist.php">maillist</a>.
+      Help Bram <a href="http://iccf-holland.org/">help Uganda</a>.
+      </small>
+	&nbsp;
+	&nbsp;
+
+	<!-- Start of StatCounter Code -->
+	<script type="text/javascript" language="javascript">
+	var sc_project=1417324; 
+	var sc_invisible=1; 
+	var sc_partition=11; 
+	var sc_security="d41633bc"; 
+	</script>
+
+	<script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script><noscript><a href="http://www.statcounter.com/" target="_blank"><img  src="http://c12.statcounter.com/counter.php?sc_project=1417324&java=0&security=d41633bc&invisible=0" alt="free tracking" border="0"></a> </noscript>
+	<!-- End of StatCounter Code -->
+          </td>
+
+    <td align="right" valign="top">
+      		<a href="http://sourceforge.net/projects/vim" rel="nofollow"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=8&type=1" width="88" height="31" border="0" alt="SourceForge.net Logo" /></a>
+    </td>
+
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+  </tr>
+
+    
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  
+  </tr>
+</table>
+
+</body>
+</html>
+

@@ -1,0 +1,428 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+  <link rel="Stylesheet" type="text/css" href="/css/style.css" >
+  <title>JavaBrowser - Shows java file class, package in a tree as in IDEs. Java source browser. : vim online</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <meta name="KEYWORDS" content="Vim, Vi IMproved, text editor, home, documentation, tips, scripts, news">
+  <link rel="shortcut icon" type="image/x-icon" href="/images/vim_shortcut.ico">
+</head>
+
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff"> 
+
+<!-- HEADER, SPONSOR IMAGE, VIM IMAGE AND BOOK AD -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+  <td class="lightbg">&nbsp;&nbsp;&nbsp;</td>
+  <td class="lightbg" align="left"><a href="/sponsor/index.php"><img src="/images/sponsorvim.gif" alt="sponsor Vim development" border="0"></a></td>
+    <td class="lightbg" align="center"><a href="/index.php"><img src="/images/vim_header.gif" border="0" alt="Vim logo"></a></td>
+    <td class="lightbg" align="right"><a href="http://iccf-holland.org/click5.html"><img src="/images/buyhelplearn.gif" alt="Vim Book Ad" border="0"></a></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="darkbg"><img src="/images/spacer.gif" width="1" height="10" alt=""></td>
+  </tr>
+</table>
+<!-- THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+  <col width="180">
+  <col width="1">
+
+  <tr valign="top">
+    <td class="sidebar">
+      <table width="180" cellpadding="4" cellspacing="0" border="0">
+        <tr valign="top">
+          <td class="sidebar">
+
+<!-- INCLUDE THE PAGE NAVIGATION -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+    <tr>
+        <td><small>not logged in (<a href="/login.php">login</a>)</small></td>
+    </tr>
+    <tr><td>
+<small>&nbsp;</small>
+<form action="http://www.google.com/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-3005259998294962:bvyni59kjr1" />
+    <input type="hidden" name="ie" value="ISO-8859-1" />
+    <input type="text" name="q" size="20" />
+    <br>
+    <input type="submit" name="sa" value="Search" />
+  </div>
+</form>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+    </td></tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="1"></td>
+    </tr>
+    <tr>
+        <td class="darkbg"><img src="/images/spacer.gif" alt='' border="0" height="3"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="2"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/index.php">Home</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/search.php">Advanced search</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/about.php">About Vim</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/community.php">Community</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/news/news.php">News</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/sponsor/index.php">Sponsoring</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/trivia.php">Trivia</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/docs.php">Documentation</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/download.php">Download</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/scripts/index.php">Scripts</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/tips/index.php">Tips</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/account/index.php">My Account</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/huh.php">Site Help</a></td>
+        </tr>
+</table>
+
+            <table width="172" cellpadding="0" cellspacing="0" border="0">
+              <tr><td><img src="/images/spacer.gif" alt="" border="0" width="1" height="8"></td></tr>
+              <tr><td class="darkbg"><img src="/images/spacer.gif" width="1" height="3" alt=""></td></tr>
+            </table>
+            <br>
+
+<!-- INCLUDE THE PAGE SIDEBAR TEXT -->
+&nbsp;
+
+          </td>
+        </tr>
+      </table>
+    </td>
+
+    <td class="darkbg"><img src="/images/spacer.gif" width="1" height="1" border="0" alt=""><br></td>
+    <td>
+      <table width="100%" cellpadding="10" cellspacing="0" border="0" bordercolor="red">
+        <tr>
+          <td valign="top">
+
+<span class="txth1">JavaBrowser : Shows java file class, package in a tree as in IDEs. Java source browser.</span> 
+
+<br>
+<br>
+
+<!-- karma table -->
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
+  <td>
+    Rating <b>256/90</b>,
+    Downloaded by 6941  </td>
+  <td class="lightbg">
+  <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
+  </td>
+  <td>
+    <a href="http://vim.wikia.com/wiki/Script:588">Vim wiki</a>
+  </td>  
+</tr>
+</table>
+<p>
+
+<table cellspacing="0" cellpadding="0" border="0">
+<tr><td class="prompt">created by</td></tr>
+<tr><td><a href="/account/profile.php?user_id=98">Pradeep Unde</a></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">script type</td></tr>
+<tr><td>utility</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">description</td></tr>
+<tr><td>This script is modelled on TagList vim script. Thanks to Yegappan Lakshmanan for taglist.vim<br>However, this script is SPECIFICALLY tailored for Java language. So, it shows structure of the Java file<br>starting with classes defined within it and NOT in a general tag structure. I found it useful and hope you all<br>find it useful too. It also has a nice syntax to show the class members in UML format.<br><br>The &quot;Java Browser&quot; plugin provides the following features:<br>1. Opens details of Java file types (class, package etc) in a Tree structure in a separate vim window<br>e.g: + package<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;java.util<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; + class<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; +&nbsp;&nbsp; vector<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; +&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;field<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;....<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; +&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;method<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;....<br>2. The tree has syntax highlighting as follows:<br>&nbsp;&nbsp;&nbsp;&nbsp;A. public members in green, protected in orange, private in red<br>&nbsp;&nbsp;&nbsp;&nbsp;B. static members are underlined and abstracts are shown in italics as per UML specs in addition to above highlighting.<br>e.g:- If you have method that public static and abstract, it will shown in green color, in italic and underlined. You can think of all possible combinations.<br>3. When you double click (configurable for a single click) or hit enter key in the browser window when on a member, it will take you to the definition of that member in the Java file window.<br>4. It can show an arrow (=&gt;) or an icon (ONLY for signs enabled VIM) showing the current position of the cursor in the java file.<br>5. The browser window is updated automatically when you open any other Java file (or switch between buffers) in the Java file window. You can manually update browser window by typing 'u' in the browser window (when u change a class for example and you need that to be reflected).<br>6. When you put the cursor (not the mouse pointer) on a member, it shows the prototype of the member declaration in the command window (like baloon popup in IDEs!)<br>7. It understands the inner classes and are shown like HashMap.Iterator etc.<br>8. It understands the overridden methods.<br>9. Browser window opening can be configured for a vertically/horizontally split Vim window.<br>10. Groups the tags by their type and displays them in a foldable tree.<br>11. Automatically highlights the current tag name.<br>12. The browser window contents can be sorted either by name or by line number.<br>13. Runs in all the platforms where the exuberant ctags utility and Vim are<br>&nbsp;&nbsp;&nbsp;&nbsp; supported (this includes MS-Windows and Unix based systems).<br><br> TODO:<br> 1. To cache ctags output for a file to speed up displaying the taglist<br>&nbsp;&nbsp;&nbsp;&nbsp; window.<br> <br>This plugin relies on the exuberant ctags utility to generate the tag<br> listing. You can download the exuberant ctags utility from<br> <a target="_blank" href="http://ctags.sourceforge.net">http://ctags.sourceforge.net</A>. The exuberant ctags utility must be installed<br> in your system to use this plugin. You should use exuberant ctags version<br> 5.3 and above.&nbsp;&nbsp;There is no need for you to create a tags file to use this<br> plugin.<br><br> This script relies on the Vim &quot;filetype&quot; detection mechanism to determine<br> the type of the current file. To turn on filetype detection use<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :filetype on<br><br> This plugin will not work in 'compatible' mode.&nbsp;&nbsp;Make sure the 'compatible'<br> option is not set. This plugin will not work if you run Vim in the<br> restricted mode (using the -Z command-line argument). This plugin also<br> assumes that the system() Vim function is supported.</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">install details</td></tr>
+<tr><td>1. Unzip and untar javabrowser.tgz to get javabrowser.vim and tagindicator.xpm files.<br>2. Copy the javabrowser.vim script to the $HOME/.vim/plugin directory. Refer to<br>&nbsp;&nbsp;&nbsp;&nbsp;':help add-plugin', ':help add-global-plugin' and ':help runtimepath' for<br>&nbsp;&nbsp;&nbsp;&nbsp;more details about Vim plugins.<br>3. Copy tagindicator.xpm and tagindicator.bmp to $VIM/pixmaps directory. NOTE: This is optional.<br>4. Set the JavaBrowser_Ctags_Cmd variable to point to the exuberant ctags utility<br>&nbsp;&nbsp;&nbsp;&nbsp;path.<br>5. Set Javabrowser_Use_Icon = 1 in your .vimrc file if you want to use icon provided with the script. Note: VIM must be compiled with &quot;signs&quot; option for this. If it is not, it will automatically be disabled and normal search highlight will be used to highlight the current tag. You can also use Javabrowser_Use_Text_Icon = 1 if you like =&gt; to indicate your current tag. Even for this, VIM needs to be compiled with &quot;sign&quot; support. You can also set JavaBrowser_Use_Highlight_Tag = 1 in your .vimrc if you want the current tag to be highlighted along with the icon (text or tagindicator.xpm). By default, it is OFF.<br>6. If you are running a terminal/console version of Vim and the terminal<br>&nbsp;&nbsp;&nbsp;&nbsp;doesn't support changing the window width then set the JavaBrowser_Inc_Winwidth<br>&nbsp;&nbsp;&nbsp;&nbsp;variable to 0.<br>7. Restart Vim.<br>8. You can use the &quot;:JavaBrowser&quot; command to open/close the taglist window.<br>9. NOTE: This script has fileformat (ff) of DOS. UNIX users, please change it to unix before using it (Use set ff=unix and save it). Thanks to Deepak for pointing that out. That's what I do for any script I find in DOS fileformat! </td></tr>
+<tr><td>&nbsp;</td></tr>
+</table>
+
+<!-- rating table -->
+<form name="rating">
+<input type="hidden" name="script_id" value="588">
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>rate this script</b></td>
+  <td valign="middle">
+    <input type="radio" name="rating" value="life_changing">Life Changing
+    <input type="radio" name="rating" value="helpful">Helpful
+    <input type="radio" name="rating" value="unfulfilling">Unfulfilling&nbsp;
+    <input type="submit" value="rate">
+  </td>
+</tr>
+</table>
+</form>
+<span class="txth2">script versions</span> (<a href="add_script_version.php?script_id=588">upload new version</a>)
+<p>
+Click on the package to download.
+<p>
+
+<table cellspacing="2" cellpadding="4" border="0" width="100%">
+<tr class='tableheader'>
+        <th valign="top">package</th>
+    <th valign="top">script version</th>
+    <th valign="top">date</th>
+    <th valign="top">Vim version</th>
+    <th valign="top">user</th>
+    <th valign="top">release notes</th>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=6184">javabrowser.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.03</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2006-09-15</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=98">Pradeep Unde</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Two small bug fixes<br>1. When UML visibility indicators are enabled, they were also included in syntax highlighting<br>2. Sort by order not supported. But the window showed Sort by order at top. Changed that to Sort by name</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=6137">javabrowser.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.02</b></td>
+    <td class="roweven" valign="top" nowrap><i>2006-09-03</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=98">Pradeep Unde</a></i></td>
+    <td class="roweven" valign="top" width="2000">The zip file had lot of spurious files. Removed them.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=6131">javabrowser.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.02</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2006-09-01</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=98">Pradeep Unde</a></i></td>
+    <td class="rowodd" valign="top" width="2000">1. Added back the nice icons (tagindicator.xpm) and (tagindicator.bmp) with the script. When the zip file is unzipped in the $VIM directory (say c:\vim), it would put the images in the $VIM\pixmaps directory and the javabrowser.vim under $VIM\vimfiles\plugin directory. I like browsing the Java Tree with the image icon and I hope you would like that too.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=6123">javabrowser.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.02</b></td>
+    <td class="roweven" valign="top" nowrap><i>2006-08-31</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=98">Pradeep Unde</a></i></td>
+    <td class="roweven" valign="top" width="2000">Automatic tag highlighting supported now. Depending where the cursor is in the java file, corresponding tag is automatically hightlighed in the JavaBrowser window<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=6112">javabrowser.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.01</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2006-08-30</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=98">Pradeep Unde</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Following bog fixes and one improvement<br>1. Fixed error showing tooltip when mouse was over &quot;field&quot; or &quot;method&quot;<br>2. The cache was not getting set for the tooltip correctly<br>3. The tooltip was staring with the &lt;TAB&gt; character picked up from the ctags output. It has been removed now</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=6110">javabrowser.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.0</b></td>
+    <td class="roweven" valign="top" nowrap><i>2006-08-29</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=98">Pradeep Unde</a></i></td>
+    <td class="roweven" valign="top" width="2000">1. Overhauled the code for version 7.0 and is now faster<br>2. Does not give errors for version 7.0 now when browsing (or opening) the class tree<br>3. Added caching for ctags output, so, buffer switching is very fast for previously viewed buffers<br>NOTE: The sort by order and tag position auto refresh in the browser tree when navigating Java file still do not work.<br>Hopefully will make that work pretty soon :)<br>I have not tested it extensively. I would really appreciate it if you let me know about the bugs.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=5563">javabrowser.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.22</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2006-04-15</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=98">Pradeep Unde</a></i></td>
+    <td class="rowodd" valign="top" width="2000">1. Added function JavaBrowser_Set_Syntax_Highlighting().<br> 2. Now, the syntax highlighting for the Class tree would automatically be set<br> when a new window is opened or at the time of tag refersh. So, the user would<br> always see the syntax highlighting set for JavaBrowser syntax groups even if<br> the color scheme is changed in the middle of an editing session.<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=5474">javabrowser.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.21</b></td>
+    <td class="roweven" valign="top" nowrap><i>2006-03-21</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=98">Pradeep Unde</a></i></td>
+    <td class="roweven" valign="top" width="2000">Added option JavaBrowser_Show_UML_Visibility. If set, which is the default, JavaBrowser uses UML visibility indicators. + =&gt; public, - =&gt; private, # =&gt; protected in addition to the syntax highlighting.<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=5454">javabrowser.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.20</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2006-03-17</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=98">Pradeep Unde</a></i></td>
+    <td class="rowodd" valign="top" width="2000">1. Bugfix to correct the typo for balloon_eval<br>2. Now also checking if the version &gt; 700 before setting the bexpr option<br>The script now does show an error if the verison &lt; 7.0. However, to get the advantage of tooltip, verion &gt;= 7.0 is needed.<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=5425">javabrowser.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.19</b></td>
+    <td class="roweven" valign="top" nowrap><i>2006-03-13</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=98">Pradeep Unde</a></i></td>
+    <td class="roweven" valign="top" width="2000">Forgot to mention that the baloon_eval feature works for vim 7.0 onwards ONLY for any arbitrary tooltips. Sorry, if this caused any confusion. So, basically, to use this new feature, you need vim 7.0</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=5411">javabrowser.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.19</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2006-03-10</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=98">Pradeep Unde</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Added nice tool-tip when mouse is over a function/variable name in the tag list window. Uses the ballon_eval feature for this. If this feature is not there, the tool-tip would not be shown. Shows a nice prototype for each tag in the tool-tip. An update after a loooong time.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=2495">javabrowser.tar.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.18</b></td>
+    <td class="roweven" valign="top" nowrap><i>2003-11-18</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=98">Pradeep Unde</a></i></td>
+    <td class="roweven" valign="top" width="2000">Bug fix when sorted by name. Fixed the tag position. Now it shows the arrow at correct position.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=2340">javabrowser.tar.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.17</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2003-09-19</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=98">Pradeep Unde</a></i></td>
+    <td class="rowodd" valign="top" width="2000">1. Optimized so that when the cursor moves within a method/function, the tag<br> is not rehighlighted, reducing the flicker on the screen.<br>2. The sorting now works properly and correct tag is highlighted after the<br> sorting.<br>3. Set JavaBrowser_Expand_Tree_At_Startup = 1 so that the tree opens<br> completely at :JavaBrowser command<br>4. Bug fix: Now escaping the SPACES in $VIM so that sign will be read properly. If your $VIM looks like C:\Program Files\Vim, it will now work. Thanks to Doug McInns for feed back.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=2339">javabrowser.tar.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.16</b></td>
+    <td class="roweven" valign="top" nowrap><i>2003-09-17</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=98">Pradeep Unde</a></i></td>
+    <td class="roweven" valign="top" width="2000">Added tagindicator.bmp for windows. Vim on Windows does not understand the xpms. Arrgghhh! So, now Windows users can also have icon to show the current tag.<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=2311">javabrowser.tar.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.15</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2003-09-08</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=98">Pradeep Unde</a></i></td>
+    <td class="rowodd" valign="top" width="2000">1. Added various configurable ways to highlight current tag which include<br> A. an icon or B. an arrow(=&gt;) with highlight of Constant and/or C. normal<br> search highlight<br> 2. Added options to control all these. Added 'JavaBrowser_Use_Icon',<br> 'JavaBrowser_Use_Text_Icon' and 'JavaBrowser_Use_Highlight_Tag'<br> 3. All have default values</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=2296">javabrowser.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.14</b></td>
+    <td class="roweven" valign="top" nowrap><i>2003-09-04</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=98">Pradeep Unde</a></i></td>
+    <td class="roweven" valign="top" width="2000">Now automatically highlights the current tag.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=1918">javabrowser.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.12</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2003-04-15</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=98">Pradeep Unde</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Small bug fix to remove unwanted echo for visibility.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=1916">javabrowser.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.11</b></td>
+    <td class="roweven" valign="top" nowrap><i>2003-04-14</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=98">Pradeep Unde</a></i></td>
+    <td class="roweven" valign="top" width="2000">1. Now interface methods are highlighted as public, abstract. I missed&nbsp;&nbsp;the abstract part in&nbsp;&nbsp;the previous version.<br>2. The visibility modifier (public/protected/private) can now be anywhere in the method/field declaration and it will be highlighted correctly.</td>
+</tr>
+</table>
+<!-- finish off the framework -->
+          </td>
+        </tr>
+      </table>
+    </td>
+
+  </tr>
+</table>
+
+<!-- END OF THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr><td colspan="4" bgcolor="#000000"><img src="/images/spacer.gif" height="2" width="1" alt=""></td></tr>
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr>
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+
+    <td align="left" valign="top"><small>
+      If you have questions or remarks about this site, visit the
+      <a href="http://vimonline.sf.net">vimonline development</a> pages.
+      Please use this site responsibly.
+      <br> 
+      
+      Questions about <a href="http://www.vim.org/about.php">Vim</a> should go
+      to the <a href="http://www.vim.org/maillist.php">maillist</a>.
+      Help Bram <a href="http://iccf-holland.org/">help Uganda</a>.
+      </small>
+	&nbsp;
+	&nbsp;
+
+	<!-- Start of StatCounter Code -->
+	<script type="text/javascript" language="javascript">
+	var sc_project=1417324; 
+	var sc_invisible=1; 
+	var sc_partition=11; 
+	var sc_security="d41633bc"; 
+	</script>
+
+	<script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script><noscript><a href="http://www.statcounter.com/" target="_blank"><img  src="http://c12.statcounter.com/counter.php?sc_project=1417324&java=0&security=d41633bc&invisible=0" alt="free tracking" border="0"></a> </noscript>
+	<!-- End of StatCounter Code -->
+          </td>
+
+    <td align="right" valign="top">
+      		<a href="http://sourceforge.net/projects/vim" rel="nofollow"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=8&type=1" width="88" height="31" border="0" alt="SourceForge.net Logo" /></a>
+    </td>
+
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+  </tr>
+
+    
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  
+  </tr>
+</table>
+
+</body>
+</html>
+

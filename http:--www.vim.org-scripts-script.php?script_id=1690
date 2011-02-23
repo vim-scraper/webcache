@@ -1,0 +1,372 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+  <link rel="Stylesheet" type="text/css" href="/css/style.css" >
+  <title>IndentConsistencyCop - Is the buffer's indentation consistent and does it conform to tab settings? : vim online</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <meta name="KEYWORDS" content="Vim, Vi IMproved, text editor, home, documentation, tips, scripts, news">
+  <link rel="shortcut icon" type="image/x-icon" href="/images/vim_shortcut.ico">
+</head>
+
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff"> 
+
+<!-- HEADER, SPONSOR IMAGE, VIM IMAGE AND BOOK AD -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+  <td class="lightbg">&nbsp;&nbsp;&nbsp;</td>
+  <td class="lightbg" align="left"><a href="/sponsor/index.php"><img src="/images/sponsorvim.gif" alt="sponsor Vim development" border="0"></a></td>
+    <td class="lightbg" align="center"><a href="/index.php"><img src="/images/vim_header.gif" border="0" alt="Vim logo"></a></td>
+    <td class="lightbg" align="right"><a href="http://iccf-holland.org/click5.html"><img src="/images/buyhelplearn.gif" alt="Vim Book Ad" border="0"></a></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="darkbg"><img src="/images/spacer.gif" width="1" height="10" alt=""></td>
+  </tr>
+</table>
+<!-- THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+  <col width="180">
+  <col width="1">
+
+  <tr valign="top">
+    <td class="sidebar">
+      <table width="180" cellpadding="4" cellspacing="0" border="0">
+        <tr valign="top">
+          <td class="sidebar">
+
+<!-- INCLUDE THE PAGE NAVIGATION -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+    <tr>
+        <td><small>not logged in (<a href="/login.php">login</a>)</small></td>
+    </tr>
+    <tr><td>
+<small>&nbsp;</small>
+<form action="http://www.google.com/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-3005259998294962:bvyni59kjr1" />
+    <input type="hidden" name="ie" value="ISO-8859-1" />
+    <input type="text" name="q" size="20" />
+    <br>
+    <input type="submit" name="sa" value="Search" />
+  </div>
+</form>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+    </td></tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="1"></td>
+    </tr>
+    <tr>
+        <td class="darkbg"><img src="/images/spacer.gif" alt='' border="0" height="3"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="2"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/index.php">Home</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/search.php">Advanced search</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/about.php">About Vim</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/community.php">Community</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/news/news.php">News</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/sponsor/index.php">Sponsoring</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/trivia.php">Trivia</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/docs.php">Documentation</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/download.php">Download</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/scripts/index.php">Scripts</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/tips/index.php">Tips</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/account/index.php">My Account</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/huh.php">Site Help</a></td>
+        </tr>
+</table>
+
+            <table width="172" cellpadding="0" cellspacing="0" border="0">
+              <tr><td><img src="/images/spacer.gif" alt="" border="0" width="1" height="8"></td></tr>
+              <tr><td class="darkbg"><img src="/images/spacer.gif" width="1" height="3" alt=""></td></tr>
+            </table>
+            <br>
+
+<!-- INCLUDE THE PAGE SIDEBAR TEXT -->
+&nbsp;
+
+          </td>
+        </tr>
+      </table>
+    </td>
+
+    <td class="darkbg"><img src="/images/spacer.gif" width="1" height="1" border="0" alt=""><br></td>
+    <td>
+      <table width="100%" cellpadding="10" cellspacing="0" border="0" bordercolor="red">
+        <tr>
+          <td valign="top">
+
+<span class="txth1">IndentConsistencyCop : Is the buffer's indentation consistent and does it conform to tab settings?</span> 
+
+<br>
+<br>
+
+<!-- karma table -->
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
+  <td>
+    Rating <b>13/6</b>,
+    Downloaded by 1098  </td>
+  <td class="lightbg">
+  <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
+  </td>
+  <td>
+    <a href="http://vim.wikia.com/wiki/Script:1690">Vim wiki</a>
+  </td>  
+</tr>
+</table>
+<p>
+
+<table cellspacing="0" cellpadding="0" border="0">
+<tr><td class="prompt">created by</td></tr>
+<tr><td><a href="/account/profile.php?user_id=9713">Ingo Karkat</a></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">script type</td></tr>
+<tr><td>utility</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">description</td></tr>
+<tr><td>DESCRIPTION<br>In order to achieve consistent indentation, you need to agree on the<br>indentation width (e.g. 2, 4 or 8 spaces), and the indentation method (only<br>tabs, only spaces, or a mix of tabs and spaces that minimizes the number of<br>spaces and is called 'softtabstop' in Vim). Unfortunately, different people<br>use different editors and cannot agree on &quot;the right&quot; width and method.<br>Consistency is important, though, to make the text look the same in different<br>editors and on printouts. If any editor inadvertently converts tabs and<br>spaces, version control and diff'ing will be much harder to do. <br><br>The IndentConsistencyCop examines the indent of the buffer and analyzes the<br>used indent widths and methods. If there are conflicting ones or if bad<br>combinations of tabs and spaces are found, it alerts you and offers help in<br>locating the offenders - just like a friendly policeman: <br><br>&nbsp;&nbsp;&nbsp;&nbsp;:IndentConsistencyCop<br>&nbsp;&nbsp;&nbsp;&nbsp;Found inconsistent indentation in this buffer; generated from these <br>&nbsp;&nbsp;&nbsp;&nbsp;conflicting settings: <br>&nbsp;&nbsp;&nbsp;&nbsp;- tabstop (1838 of 3711 lines) &lt;- buffer setting <br>&nbsp;&nbsp;&nbsp;&nbsp;- 4 spaces (33 of 3711 lines) <br>&nbsp;&nbsp;&nbsp;&nbsp;- bad mix of spaces and tabs (4 of 3711 lines) <br>	[I]gnore, (H)ighlight wrong indents...: h <br>&nbsp;&nbsp;&nbsp;&nbsp;What kind of inconsistent indents do you want to highlight? <br>	Not [b]uffer settings (sts4), Not best (g)uess (tab), Not (c)hosen <br>	setting..., (I)llegal indents only: g <br>&nbsp;&nbsp;&nbsp;&nbsp;Marked 180 incorrect lines. <br><br>If the buffer contents are okay, the IndentConsistencyCop can evaluate whether<br>Vim's buffer settings are compatible with the indent used in the buffer. The<br>friendly cop offers to correct your buffer settings if you run the risk of<br>screwing up the indent consistency with your wrong buffer settings: <br><br>&nbsp;&nbsp;&nbsp;&nbsp;:IndentConsistencyCop<br>&nbsp;&nbsp;&nbsp;&nbsp;The buffer's indent settings are inconsistent with the used indent '8 <br>&nbsp;&nbsp;&nbsp;&nbsp;spaces'; these settings must be changed: <br>&nbsp;&nbsp;&nbsp;&nbsp;- expandtab from 0 to 1 <br>&nbsp;&nbsp;&nbsp;&nbsp;How do you want to deal with the inconsistency? <br>	[I]gnore, (C)hange: c <br>&nbsp;&nbsp;&nbsp;&nbsp;The buffer settings have been changed: tabstop=8 softtabstop=0 shiftwidth=8 <br>&nbsp;&nbsp;&nbsp;&nbsp;expandtab <br><br>The IndentConsistencyCop is only concerned with the amount of whitespace from<br>column 1 to the first visible character; it does not check the alignment of<br>tables, equals signs in variable assignments, etc. Neither does it know any<br>specifics about programming languages, or your personal preferred indentation<br>style. <br><br>RELATED WORKS<br>- IndentConsistencyCopAutoCmds (<a href="/scripts/script.php?script_id=1691">vimscript #1691</a>) complements this plugin. It<br>&nbsp;&nbsp;automatically triggers the IndentConsistencyCop for certain filetypes when<br>&nbsp;&nbsp;loading the buffer and optionally also on each write. <br>- Indent Finder (<a href="/scripts/script.php?script_id=513">vimscript #513</a>) is a Python script and Vim plugin that scans<br>&nbsp;&nbsp;any loaded buffer and configures the appropriate indent settings. <br><br>USAGE<br>Start the examination of the current buffer or range via: <br>&nbsp;&nbsp;&nbsp;&nbsp;:[range]IndentConsistencyCop<br>The triggering can be done automatically for configurable filetypes with the<br>autocmds defined in IndentConsistencyCopAutoCmds.vim (<a href="/scripts/script.php?script_id=1691">vimscript #1691</a>). <br><br>If you chose to highlight incorrect indents, either re-execute the<br>IndentConsistencyCop to update the highlighting, or execute <br>&nbsp;&nbsp;&nbsp;&nbsp;:IndentConsistencyCopOff<br>to remove the highlightings. <br><br>If you just want to check a read-only file, or do not intend to modify the<br>file, you don't care if Vim's buffer settings are compatible with the used<br>indent. In this case, you can use <br>&nbsp;&nbsp;&nbsp;&nbsp;:[range]IndentRangeConsistencyCop<br>instead of :IndentConsistencyCop. </td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">install details</td></tr>
+<tr><td>INSTALLATION<br>This script is packaged as a vimball. If you have the &quot;gunzip&quot; decompressor<br>in your PATH, simply edit the *.vba.gz package in Vim; otherwise, decompress<br>the archive first, e.g. using WinZip. Inside Vim, install by sourcing the<br>vimball or via the :UseVimball command. <br>&nbsp;&nbsp;&nbsp;&nbsp;vim IndentConsistencyCop.vba.gz<br>&nbsp;&nbsp;&nbsp;&nbsp;:so %<br>To uninstall, use the :RmVimball command. <br><br>DEPENDENCIES<br>- Requires Vim 7.0 or higher. <br><br>CONFIGURATION<br>For a permanent configuration, put the following commands into your vimrc: <br><br>You can select method(s) of highlighting incorrect lines via<br>g:indentconsistencycop_highlighting; the default fills the search pattern,<br>jumps to the first error, sets 'list', uses the 'Error' highlighting and folds<br>away the correct lines. <br>The variable defines the highlighting methods of incorrect lines, when this is<br>requested by the user. Multiple methods can be combined by concatenating the<br>values. The changes done for highlighting are undone when highlighting is<br>removed via :IndentConsistencyCopOff. <br>&nbsp;&nbsp;&nbsp;&nbsp;s - Fill search pattern with all incorrect lines, so that you navigate<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;through all incorrect lines with n/N. <br>&nbsp;&nbsp;&nbsp;&nbsp;g - Jump to the first error. <br>&nbsp;&nbsp;&nbsp;&nbsp;l - As a visualization aid, execute ':setlocal list' to see difference<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;between tabs and spaces. <br>&nbsp;&nbsp;&nbsp;&nbsp;m - Use :2match error highlighting to highlight the wrong indent via the<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'IndentConsistencyCop' highlight group. This is especially useful if<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;you don't use the search pattern in combination with 'set hlsearch'<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;to locate the incorrect lines. <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;You can customize this by defining / linking the<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'IndentConsistencyCop' highlight group before this script is<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sourced: <br>&nbsp;&nbsp;&nbsp;&nbsp;	highlight link IndentConsistencyCop Error<br>&nbsp;&nbsp;&nbsp;&nbsp;f:{n} (n = 0..9) - Fold correct lines with a context of {n} lines (like<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;in Vim diff mode). <br>&nbsp;&nbsp;&nbsp;&nbsp;TODO:<br>&nbsp;&nbsp;&nbsp;&nbsp;q - Populate quickfix list with all incorrect lines. Idea: Use :cgetexpr.<br><br>&nbsp;&nbsp;&nbsp;&nbsp;let g:indentconsistencycop_highlighting = 'sglmf:3'<br><br>Some comment styles use additional whitespace characters inside the comment<br>block to neatly left-align the comment block, e.g. this is often used in Java<br>and C/C++ programs: <br>&nbsp;&nbsp;&nbsp;&nbsp;/* This is a comment that spans multiple <br>&nbsp;&nbsp;&nbsp;&nbsp; * lines; neatly left-aligned with asterisks. <br>&nbsp;&nbsp;&nbsp;&nbsp; */<br>The IndentConsistencyCop would be confused by these special indents, so the<br>non-indent pattern defined in g:indentconsistencycop_non_indent_pattern<br>removes these additional whitespaces from the indent when evaluating lines. <br>&nbsp;&nbsp;&nbsp;&nbsp;let g:indentconsistencycop_non_indent_pattern = ' \*[*/ \t]'</td></tr>
+<tr><td>&nbsp;</td></tr>
+</table>
+
+<!-- rating table -->
+<form name="rating">
+<input type="hidden" name="script_id" value="1690">
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>rate this script</b></td>
+  <td valign="middle">
+    <input type="radio" name="rating" value="life_changing">Life Changing
+    <input type="radio" name="rating" value="helpful">Helpful
+    <input type="radio" name="rating" value="unfulfilling">Unfulfilling&nbsp;
+    <input type="submit" value="rate">
+  </td>
+</tr>
+</table>
+</form>
+<span class="txth2">script versions</span> (<a href="add_script_version.php?script_id=1690">upload new version</a>)
+<p>
+Click on the package to download.
+<p>
+
+<table cellspacing="2" cellpadding="4" border="0" width="100%">
+<tr class='tableheader'>
+        <th valign="top">package</th>
+    <th valign="top">script version</th>
+    <th valign="top">date</th>
+    <th valign="top">Vim version</th>
+    <th valign="top">user</th>
+    <th valign="top">release notes</th>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=14665">IndentConsistencyCop.vba.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.21</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-12-31</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=9713">Ingo Karkat</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- Added b:indentconsistencycop_result.isIgnore to allow the IndentConsistencyCopAutoCmds integration to suspend further invocations of the cop in the buffer. <br>- BUG: :IndentRangeConsistencyCop didn't report inconsistencies at all because of a bad conditional statement introduced in 1.20.014. <br>- Using separate autoload script to help speed up Vim startup. <br>- Added separate help file and packaging the plugin as a vimball. </td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=8995">IndentConsistencyCop.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.20.017</b></td>
+    <td class="roweven" valign="top" nowrap><i>2008-07-22</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=9713">Ingo Karkat</a></i></td>
+    <td class="roweven" valign="top" width="2000">BF: Undefined variable l:isEntireBuffer in IndentBufferConsistencyCop().&nbsp;&nbsp;</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=8982">IndentConsistencyCop.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.20.016</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2008-07-21</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=9713">Ingo Karkat</a></i></td>
+    <td class="rowodd" valign="top" width="2000">ENH: Added b:indentconsistencycop_result buffer-scoped dictionary containing the results of the check, which can be used by other integrations. <br>Also check consistency of buffer settings if the buffer/range does not contain indented text. Inconsistent indent settings can then be corrected with a queried setting. <br>BF: Clear previous highlighting if buffer/range now does not contain indented text. </td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=8841">IndentConsistencyCop.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.10.012</b></td>
+    <td class="roweven" valign="top" nowrap><i>2008-06-23</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=9713">Ingo Karkat</a></i></td>
+    <td class="roweven" valign="top" width="2000">Minor change: Added -bar to all commands that do not take any arguments, so that these can be chained together. </td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=8359">IndentConsistencyCop.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.10.011</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2008-02-28</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=9713">Ingo Karkat</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Improved the algorithm so that 'softtabstop' is recognized even when a file only has small indents with either (up to 7) spaces or tabs, but no tab + space combination. </td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=7898">IndentConsistencyCop.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.00.010</b></td>
+    <td class="roweven" valign="top" nowrap><i>2007-11-08</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=9713">Ingo Karkat</a></i></td>
+    <td class="roweven" valign="top" width="2000">BF: In an inconsistent and large buffer/range that has only one or a few small inconsistencies and one dominant (i.e. 99%) setting, the text &quot;Some minor / inconclusive potential settings have been omitted.&quot; is not printed. <br>ENH: Print &quot;noexpandtab/expandtab&quot; instead of &quot; expandtab to 0/1&quot;, as the user would :setlocal the setting. </td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=7199">IndentConsistencyCop.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.00.009</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2007-06-04</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=9713">Ingo Karkat</a></i></td>
+    <td class="rowodd" valign="top" width="2000">ENH: Improved detection accuracy for soft tabstops when the maximum indent is too small for a solid assessment. When the maximum indent of the buffer is not enough to be sure of the indent settings (i.e. differentiating between soft tabstops and spaces), an inconsistent indent was reported, even though it is much more likely that the indent is consistent with &quot;soft tabstop n&quot;, but that wasn't recognized because of the small indents used in the file. If allowed, the cop now examines the buffer settings to possibly turn around the verdict of &quot;inconsistent indent&quot;. </td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=6933">IndentConsistencyCop.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.00.008</b></td>
+    <td class="roweven" valign="top" nowrap><i>2007-04-02</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=9713">Ingo Karkat</a></i></td>
+    <td class="roweven" valign="top" width="2000">Allowing user to override wrongly found consistent setting (e.g. 'sts1' instead of 'tab') by choosing 'Wrong, choose correct setting...' in the IndentBufferConsistencyCop. </td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=6370">IndentConsistencyCop.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.07</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2006-11-02</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=9713">Ingo Karkat</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Corrected unreasonable assumption of a consistent small indent setting (of 1 or 2 spaces) when actually only some wrong spaces spoil the consistency. Now, a perfect consistent rating is only accepted if its absolute rating number is also the maximum rating. <br>BF: Avoiding runtime error in IndentBufferInconsistencyCop() if s:ratings is empty. <br>BF: Suppressing 'Not buffer setting' option if the buffer setting is inconsistent ('badset'), which threw an exception when selected. </td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=6353">IndentConsistencyCop.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.05</b></td>
+    <td class="roweven" valign="top" nowrap><i>2006-10-30</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=9713">Ingo Karkat</a></i></td>
+    <td class="roweven" valign="top" width="2000">Improved g:indentconsistencycop_non_indent_pattern to also allow ' *\t' and ' *****' comments. </td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=6329">IndentConsistencyCop.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.04</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2006-10-24</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=9713">Ingo Karkat</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Initial upload</td>
+</tr>
+</table>
+<!-- finish off the framework -->
+          </td>
+        </tr>
+      </table>
+    </td>
+
+  </tr>
+</table>
+
+<!-- END OF THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr><td colspan="4" bgcolor="#000000"><img src="/images/spacer.gif" height="2" width="1" alt=""></td></tr>
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr>
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+
+    <td align="left" valign="top"><small>
+      If you have questions or remarks about this site, visit the
+      <a href="http://vimonline.sf.net">vimonline development</a> pages.
+      Please use this site responsibly.
+      <br> 
+      
+      Questions about <a href="http://www.vim.org/about.php">Vim</a> should go
+      to the <a href="http://www.vim.org/maillist.php">maillist</a>.
+      Help Bram <a href="http://iccf-holland.org/">help Uganda</a>.
+      </small>
+	&nbsp;
+	&nbsp;
+
+	<!-- Start of StatCounter Code -->
+	<script type="text/javascript" language="javascript">
+	var sc_project=1417324; 
+	var sc_invisible=1; 
+	var sc_partition=11; 
+	var sc_security="d41633bc"; 
+	</script>
+
+	<script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script><noscript><a href="http://www.statcounter.com/" target="_blank"><img  src="http://c12.statcounter.com/counter.php?sc_project=1417324&java=0&security=d41633bc&invisible=0" alt="free tracking" border="0"></a> </noscript>
+	<!-- End of StatCounter Code -->
+          </td>
+
+    <td align="right" valign="top">
+      		<a href="http://sourceforge.net/projects/vim" rel="nofollow"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=8&type=1" width="88" height="31" border="0" alt="SourceForge.net Logo" /></a>
+    </td>
+
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+  </tr>
+
+    
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  
+  </tr>
+</table>
+
+</body>
+</html>
+

@@ -1,0 +1,316 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+  <link rel="Stylesheet" type="text/css" href="/css/style.css" >
+  <title>code2html - Generate HTML or XHTML+CSS from a Vim buffer using the syntax-hili colorscheme : vim online</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <meta name="KEYWORDS" content="Vim, Vi IMproved, text editor, home, documentation, tips, scripts, news">
+  <link rel="shortcut icon" type="image/x-icon" href="/images/vim_shortcut.ico">
+</head>
+
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff"> 
+
+<!-- HEADER, SPONSOR IMAGE, VIM IMAGE AND BOOK AD -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+  <td class="lightbg">&nbsp;&nbsp;&nbsp;</td>
+  <td class="lightbg" align="left"><a href="/sponsor/index.php"><img src="/images/sponsorvim.gif" alt="sponsor Vim development" border="0"></a></td>
+    <td class="lightbg" align="center"><a href="/index.php"><img src="/images/vim_header.gif" border="0" alt="Vim logo"></a></td>
+    <td class="lightbg" align="right"><a href="http://iccf-holland.org/click5.html"><img src="/images/buyhelplearn.gif" alt="Vim Book Ad" border="0"></a></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="darkbg"><img src="/images/spacer.gif" width="1" height="10" alt=""></td>
+  </tr>
+</table>
+<!-- THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+  <col width="180">
+  <col width="1">
+
+  <tr valign="top">
+    <td class="sidebar">
+      <table width="180" cellpadding="4" cellspacing="0" border="0">
+        <tr valign="top">
+          <td class="sidebar">
+
+<!-- INCLUDE THE PAGE NAVIGATION -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+    <tr>
+        <td><small>not logged in (<a href="/login.php">login</a>)</small></td>
+    </tr>
+    <tr><td>
+<small>&nbsp;</small>
+<form action="http://www.google.com/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-3005259998294962:bvyni59kjr1" />
+    <input type="hidden" name="ie" value="ISO-8859-1" />
+    <input type="text" name="q" size="20" />
+    <br>
+    <input type="submit" name="sa" value="Search" />
+  </div>
+</form>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+    </td></tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="1"></td>
+    </tr>
+    <tr>
+        <td class="darkbg"><img src="/images/spacer.gif" alt='' border="0" height="3"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="2"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/index.php">Home</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/search.php">Advanced search</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/about.php">About Vim</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/community.php">Community</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/news/news.php">News</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/sponsor/index.php">Sponsoring</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/trivia.php">Trivia</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/docs.php">Documentation</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/download.php">Download</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/scripts/index.php">Scripts</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/tips/index.php">Tips</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/account/index.php">My Account</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/huh.php">Site Help</a></td>
+        </tr>
+</table>
+
+            <table width="172" cellpadding="0" cellspacing="0" border="0">
+              <tr><td><img src="/images/spacer.gif" alt="" border="0" width="1" height="8"></td></tr>
+              <tr><td class="darkbg"><img src="/images/spacer.gif" width="1" height="3" alt=""></td></tr>
+            </table>
+            <br>
+
+<!-- INCLUDE THE PAGE SIDEBAR TEXT -->
+&nbsp;
+
+          </td>
+        </tr>
+      </table>
+    </td>
+
+    <td class="darkbg"><img src="/images/spacer.gif" width="1" height="1" border="0" alt=""><br></td>
+    <td>
+      <table width="100%" cellpadding="10" cellspacing="0" border="0" bordercolor="red">
+        <tr>
+          <td valign="top">
+
+<span class="txth1">code2html : Generate HTML or XHTML+CSS from a Vim buffer using the syntax-hili colorscheme</span> 
+
+<br>
+<br>
+
+<!-- karma table -->
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
+  <td>
+    Rating <b>28/10</b>,
+    Downloaded by 1605  </td>
+  <td class="lightbg">
+  <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
+  </td>
+  <td>
+    <a href="http://vim.wikia.com/wiki/Script:330">Vim wiki</a>
+  </td>  
+</tr>
+</table>
+<p>
+
+<table cellspacing="0" cellpadding="0" border="0">
+<tr><td class="prompt">created by</td></tr>
+<tr><td><a href="/account/profile.php?user_id=723">Sören Andersen</a></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">script type</td></tr>
+<tr><td>utility</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">description</td></tr>
+<tr><td>WHAT:<br>This is a substantially modified rewrite of the &quot;2html.vim&quot; script that's found in the Vim runtime &quot;syntax&quot; directory, and used exactly as that file is used (i.e.): <br><br>&nbsp;&nbsp;:so[urce] ~/scripts/code2html.vim<br><br>RECENT:<br>24 Sep 2008 - ATTENTION PLEASE! There will be no more revisions to this script under *this* name.&nbsp;&nbsp;Because there is a collision between the name &quot;code2html[.vim]&quot; and another F/LOSS software project by that name, I am renaming this script to &quot;buf2html[.vim]&quot;.&nbsp;&nbsp;THE NEW SCRIPT IS LOCATED AT <a target="_blank" href="http://www.vim.org/scripts/script.php?script_id=2384">http://www.vim.org/scripts/script.php?script_id=2384</A>.<br><br>WHO:<br>Based on work by Bram Moolenaar and David Ne&#269;as (&quot;Yeti&quot;), now maintained by Soren Andersen.&nbsp;&nbsp;Past contributions by Christian Hujer.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br><br>WHY:<br>The main thing this module changes is the automatic addition of some simple css code to specify the fixed-width (monospace) font you want the HTML-ized syntax-colored code to be rendered in -- IF any of those fonts are findable by the reader's WWW browser. This provides an HTML rendering in modern browsers that can surprisingly closely replicate the appearance in the GVIM editor.<br><br>INSTALL:<br>Save this vim file to a directory convenient for you. Do *not* place it in a runtime plugin directory; you do not want it to be evaluated when opening any file for editing.&nbsp;&nbsp;This is a script but not a plugin.&nbsp;&nbsp;The author tends to have a ~/scripts dir on his accounts, and places this file there, alongside awk, sed, perl and other such script/programs.<br><br>FEATURES:<br>The code will find out what &quot;guifont&quot; value the user is using, and convert that specification (usually set in &quot;.gvimrc&quot;) to a css font spec. There are also changes to output an up-to-date xml -type header (DTD) by Christian Hujer.<br><br>It will also create a &quot;&lt;DIV&gt;&quot; section containing the main &quot;&lt;PRE&gt;&quot; block. To understand why this is good, running a test example shows better than a thousand words. It allows specification of the font in css, as well as some other things, like padding of the contents of the &quot;&lt;PRE&gt;&quot; and some differing bgcolor for the document as a whole vs the &quot;code&quot; content. This is all primarily a matter of personal preference of course.<br><br>Examples of source highlighted with this script can be found at my home page at <a target="_blank" href="http://intrepid.perlmonk.org">http://intrepid.perlmonk.org</A><br><br>If you view the output of this script -- run on your GVIM on one of your own source code documents, and viewed in a competent css-supporting browser -- you may find that the document looks so identical to your GVIM display that you'll be tempted to start sending vim commands to your browser ;-). <br><br>UPDATE: 22 Oct 2002<br>In a little while a new version will be uploaded (presently I am having Christian check our merged changes before we commit to releasing this major update).<br>&nbsp;&nbsp;* Made output of DTD not dependant on whether user has html_use_css=1.<br>&nbsp;&nbsp;* Made significant changes to program flow, fixed a problem with output of the style definitions in the header STYLE block.<br>&nbsp;&nbsp;* Added several new variables that the user can set to change the behavior of the script.<br><br>All in all, the program is more robust, outputs more correct (according to latest W3C standards) HTML, script has more configurability, and the output is prettier (as source).<br><br>UPDATE: Aug 08 2002 20:32:28 EDT<br>Sorry -- did not have time right now to properly document ALL the changes in v1.1, but these include:<br>&nbsp;&nbsp;* fixed the stupid &quot;.main_code&quot; bug (should have written to the head style block &quot;#main-code&quot; instead of &quot;.main-code&quot;). aargh.<br>&nbsp;&nbsp;* added a new function to create the CSS font specifier, it is doing a much better job than the previous code<br>&nbsp;&nbsp;* the output is much more cosmetically proper.<br>Thank you very much to all the people who downloaded version 1.0. Please give the update a try -- it is much improved.<br></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">install details</td></tr>
+<tr><td>There is no name-clash at present with any syntax file shipped in the VIM distro, so it could be placed in $VIMRUNTIME/syntax. But I prefer and recommend that you place it in an easy-to-remember location such as ~/scripts/.<br><br>You will also most likely want to &quot;:let html_use_css = 1&quot; before :source'ing this module, or there will be little point in it at all, because most of the changes go into action in the doc head '&lt;STYLE ...' block.&nbsp;&nbsp;Set that in your ~/.vimrc, -or- do :let g:html_use_css=1 | source ~/scripts/code2html.vim<br><br>A few notes on system fixed-width fonts, ADDED 06 Jul 2002:<br>Well, about fonts, not much can be said that isn't prefaced with the acknowledgement that the bottom line is personal taste. I am sure that fonts have been discussed by VIMmers many times before.<br><br>Anyway I wanted to note that the choices I make in my &quot;_vimrc&quot; reflect my personal tastes and knowledge, YMMV. However as it may be helpful for some readers I want to show what my _vimrc contains now:<br><br>&nbsp;&nbsp;:set guifont=anonymous:h8,lucida_console:h9,andale_mono:h10,lucida_sans_typewriter:h9,<br>&nbsp;&nbsp;:set guifont+=onuava:h9,crystal:h9,monospace_821_bt:h9,courier_new:h9<br><br>The first entry, &quot;Anonymous&quot;, is a new discovery that I am excited about. It is a monospaced (fixed-width) font that looks very good and is unbelievably readable in my Win32-GVIM display at a 8-pixel height setting (&quot;:h8&quot;) whereas I dare not go lower than &quot;:h9&quot; with my second fav, Lucida Console (which is a very good font and slightly nudges out the popular &quot;Andale Mono&quot; at lowest point sizes, in my preference).<br><br>The Windows version of &quot;Anonymous&quot; is presently at<br> <a target="_blank" href="http://www.ms-studio.com/FontSales/Resources/AnonymousTT.zip">http://www.ms-studio.com/FontSales/Resources/AnonymousTT.zip</A><br> linked to from&nbsp;&nbsp;<a target="_blank" href="http://www.ms-studio.com/FontSales/anonymous.html">http://www.ms-studio.com/FontSales/anonymous.html</A><br><br>&quot;Anonymous&quot; is released as Copyrighted freeware (I didn't read any detailed licensing terms but the sense one gets from that terminology is that it's likely to be pretty much compatible with the intent of most Open Source software licensing philosophies). I can definitely recommend that readers give this font a try.<br><br>In any case, the point of setting as many possible alternates in _gvimrc (or wherever you find it convenient to do so) is to hit as many target systems as possible without having the browser default to it's unqualified default monospace font. Of course for *serious* Web users that setting may already be those users' strong personal preference, but this is likely to be true in only a small minority of cases (any anyway such users will also often be using WWW clients that can override our specification with a user setting, such as Opera, if they object to our choice).<br><br>Please read the comments in the script source code for a more detailed explanation of Usage.</td></tr>
+<tr><td>&nbsp;</td></tr>
+</table>
+
+<!-- rating table -->
+<form name="rating">
+<input type="hidden" name="script_id" value="330">
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>rate this script</b></td>
+  <td valign="middle">
+    <input type="radio" name="rating" value="life_changing">Life Changing
+    <input type="radio" name="rating" value="helpful">Helpful
+    <input type="radio" name="rating" value="unfulfilling">Unfulfilling&nbsp;
+    <input type="submit" value="rate">
+  </td>
+</tr>
+</table>
+</form>
+<span class="txth2">script versions</span> (<a href="add_script_version.php?script_id=330">upload new version</a>)
+<p>
+Click on the package to download.
+<p>
+
+<table cellspacing="2" cellpadding="4" border="0" width="100%">
+<tr class='tableheader'>
+        <th valign="top">package</th>
+    <th valign="top">script version</th>
+    <th valign="top">date</th>
+    <th valign="top">Vim version</th>
+    <th valign="top">user</th>
+    <th valign="top">release notes</th>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=2227">code2html-1_51_vim.tar</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.51</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2003-08-12</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=723">Sören Andersen</a></i></td>
+    <td class="rowodd" valign="top" width="2000">The .tar file contains code2html-1_51_vim.gz and code2html-1_51_vim.gz.asc (a PGP/GnuPG signature for verifying the gzipped-script). I jumped version numbers, sorry.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=1105">code2html_vim.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.2</b></td>
+    <td class="roweven" valign="top" nowrap><i>2002-08-09</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=723">Sören Andersen</a></i></td>
+    <td class="roweven" valign="top" width="2000">More small bug-stomping + now adds a little note at page bottom -- &quot;made with VIM&quot; sort of thing.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=1093">code2html_vim.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2002-08-08</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=723">Sören Andersen</a></i></td>
+    <td class="rowodd" valign="top" width="2000">many &quot;robustifications&quot; and bug fixes.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=987">code2html.vim.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.0</b></td>
+    <td class="roweven" valign="top" nowrap><i>2002-07-03</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=723">Sören Andersen</a></i></td>
+    <td class="roweven" valign="top" width="2000">Initial upload</td>
+</tr>
+</table>
+<!-- finish off the framework -->
+          </td>
+        </tr>
+      </table>
+    </td>
+
+  </tr>
+</table>
+
+<!-- END OF THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr><td colspan="4" bgcolor="#000000"><img src="/images/spacer.gif" height="2" width="1" alt=""></td></tr>
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr>
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+
+    <td align="left" valign="top"><small>
+      If you have questions or remarks about this site, visit the
+      <a href="http://vimonline.sf.net">vimonline development</a> pages.
+      Please use this site responsibly.
+      <br> 
+      
+      Questions about <a href="http://www.vim.org/about.php">Vim</a> should go
+      to the <a href="http://www.vim.org/maillist.php">maillist</a>.
+      Help Bram <a href="http://iccf-holland.org/">help Uganda</a>.
+      </small>
+	&nbsp;
+	&nbsp;
+
+	<!-- Start of StatCounter Code -->
+	<script type="text/javascript" language="javascript">
+	var sc_project=1417324; 
+	var sc_invisible=1; 
+	var sc_partition=11; 
+	var sc_security="d41633bc"; 
+	</script>
+
+	<script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script><noscript><a href="http://www.statcounter.com/" target="_blank"><img  src="http://c12.statcounter.com/counter.php?sc_project=1417324&java=0&security=d41633bc&invisible=0" alt="free tracking" border="0"></a> </noscript>
+	<!-- End of StatCounter Code -->
+          </td>
+
+    <td align="right" valign="top">
+      		<a href="http://sourceforge.net/projects/vim" rel="nofollow"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=8&type=1" width="88" height="31" border="0" alt="SourceForge.net Logo" /></a>
+    </td>
+
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+  </tr>
+
+    
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  
+  </tr>
+</table>
+
+</body>
+</html>
+

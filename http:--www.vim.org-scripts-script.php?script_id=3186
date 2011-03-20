@@ -167,7 +167,7 @@
   <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
   <td>
     Rating <b>3/2</b>,
-    Downloaded by 195  </td>
+    Downloaded by 211  </td>
   <td class="lightbg">
   <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
   </td>
@@ -189,7 +189,7 @@
 <tr><td>This plugin contains some functions that can be useful for plugin developers and one command that may be useful to all users:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;— :SE command (:e replacement with zsh-like completion and multiple file arguments support)<br>&nbsp;&nbsp;&nbsp;&nbsp;— Pure vimscript base64 decoder<br>&nbsp;&nbsp;&nbsp;&nbsp;— Bitwise OR and AND functions (slow and unsigned integer only)<br>&nbsp;&nbsp;&nbsp;&nbsp;— Some escaping and quoting functions<br>&nbsp;&nbsp;&nbsp;&nbsp;— Function that prints table with higlighted header<br>&nbsp;&nbsp;&nbsp;&nbsp;— Failsafe builtin `string()' replacement (for representation purposes only)<br>&nbsp;&nbsp;&nbsp;&nbsp;— ...<br><br>Project page: <a target="_blank" href="http://sourceforge.net/projects/vimstuff">http://sourceforge.net/projects/vimstuff</A><br>Dependencies (you do not need to install them by yourself, see installation details):<br><a href="/scripts/script.php?script_id=3184">vimscript #3184</a>, <a target="_blank" href="http://sourceforge.net/projects/vimpluginloader">http://sourceforge.net/projects/vimpluginloader</A></td></tr>
 <tr><td>&nbsp;</td></tr>
 <tr><td class="prompt">install details</td></tr>
-<tr><td>You can install this plugin using scriptmanager (<a href="/scripts/script.php?script_id=2905">vimscript #2905</a>) plugin (install scriptmanager, call scriptmanager#Install([&quot;vimstuff&quot;]) and add ``call scriptmanager#Activate([&quot;vimstuff&quot;])'' to your .vimrc, then reload vim. Vim-addon-manager will install all dependencies for you). You can also use archives attached to this page, they contain plugin with all dependencies, so you do not need to fetch them yourself.<br><br>Gentoo users can use the following mercurial overlay: <a target="_blank" href="http://vimpluginloader.hg.sourceforge.net">http://vimpluginloader.hg.sourceforge.net</A>:8000/hgroot/vimpluginloader/pluginloader-overlay.<br><br>Note for plugin developers: it is better to copy frequently used functions to your plugin as almost all functions define argument checker which is slow.</td></tr>
+<tr><td>You can install this plugin using scriptmanager (<a href="/scripts/script.php?script_id=2905">vimscript #2905</a>) plugin (install scriptmanager, run ``ActivateAddons vimpluginloader'' and add ``call vam#ActivateAddons([&quot;vimpluginloader&quot;])'' to your .vimrc. Vim-addon-manager will install all dependencies for you). You can also use archives attached to this page, they contain plugin with all dependencies, so you do not need to fetch them yourself.<br><br>Gentoo users can use the following mercurial overlay: <a target="_blank" href="http://vimpluginloader.hg.sourceforge.net">http://vimpluginloader.hg.sourceforge.net</A>:8000/hgroot/vimpluginloader/pluginloader-overlay.<br><br>Note for plugin developers: it is better to copy frequently used functions to your plugin as almost all functions define argument checker which is slow.</td></tr>
 <tr><td>&nbsp;</td></tr>
 </table>
 

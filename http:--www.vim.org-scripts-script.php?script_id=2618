@@ -167,7 +167,7 @@
   <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
   <td>
     Rating <b>4/7</b>,
-    Downloaded by 773  </td>
+    Downloaded by 780  </td>
   <td class="lightbg">
   <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
   </td>
@@ -223,132 +223,140 @@ Click on the package to download.
     <th valign="top">release notes</th>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=12207">ctk.vba</a></td>
-    <td class="rowodd" valign="top" nowrap><b>0.5</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2010-01-28</i></td>
-    <td class="rowodd" valign="top" nowrap>7.0</td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15260">ctk.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.6</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2011-03-20</i></td>
+    <td class="rowodd" valign="top" nowrap>7.2</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=15469">Wxyarv Wang</a></i></td>
-    <td class="rowodd" valign="top" width="2000">&nbsp;&nbsp;- support upcase letter placeholder<br>&nbsp;&nbsp;- remain placeholder will substitute environment variables. add a option ctk_envvarfmt to detect the variable formant.<br>&nbsp;&nbsp;- add RefreshCTK command, and auto refresh all buffer after EditCompilerInfo command.<br></td>
+    <td class="rowodd" valign="top" width="2000">fix bugs</td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=11554">ctk.vba</a></td>
-    <td class="roweven" valign="top" nowrap><b>0.4-bugfix</b></td>
-    <td class="roweven" valign="top" nowrap><i>2009-10-21</i></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=12207">ctk.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.5</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-01-28</i></td>
     <td class="roweven" valign="top" nowrap>7.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=15469">Wxyarv Wang</a></i></td>
-    <td class="roweven" valign="top" width="2000">NOTE: if you have you own .compiler_info file, please backup it and install new version, and you can diff two info file and decide how to merge them.<br><br>&nbsp;&nbsp;- add python support in .compiler_info file<br>&nbsp;&nbsp;- add a new &quot;#RUN_DIRECT&quot; syntax for support script file. see .compiler_info &quot;Python&quot; section and :h ctk-run-direct.<br>&nbsp;&nbsp;- fix the encoding conversion error in previous version</td>
+    <td class="roweven" valign="top" width="2000">&nbsp;&nbsp;- support upcase letter placeholder<br>&nbsp;&nbsp;- remain placeholder will substitute environment variables. add a option ctk_envvarfmt to detect the variable formant.<br>&nbsp;&nbsp;- add RefreshCTK command, and auto refresh all buffer after EditCompilerInfo command.<br></td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=11128">ctk.vba</a></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=11554">ctk.vba</a></td>
     <td class="rowodd" valign="top" nowrap><b>0.4-bugfix</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2009-08-04</i></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-10-21</i></td>
     <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=15469">Wxyarv Wang</a></i></td>
-    <td class="rowodd" valign="top" width="2000">&nbsp;&nbsp;- add option g:ctk_cmdenc<br>&nbsp;&nbsp;- add discribes of using :silent/:redir command in cmd or run in doc<br>&nbsp;&nbsp;- fix the bug when compile multi-times, the += operator in modeline acts incorrect.</td>
+    <td class="rowodd" valign="top" width="2000">NOTE: if you have you own .compiler_info file, please backup it and install new version, and you can diff two info file and decide how to merge them.<br><br>&nbsp;&nbsp;- add python support in .compiler_info file<br>&nbsp;&nbsp;- add a new &quot;#RUN_DIRECT&quot; syntax for support script file. see .compiler_info &quot;Python&quot; section and :h ctk-run-direct.<br>&nbsp;&nbsp;- fix the encoding conversion error in previous version</td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=11052">ctk.vba</a></td>
-    <td class="roweven" valign="top" nowrap><b>0.4</b></td>
-    <td class="roweven" valign="top" nowrap><i>2009-07-22</i></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=11128">ctk.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.4-bugfix</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-08-04</i></td>
     <td class="roweven" valign="top" nowrap>7.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=15469">Wxyarv Wang</a></i></td>
-    <td class="roweven" valign="top" width="2000">&nbsp;&nbsp;- fix the bug StopCTK doesn't stop ctk.<br>&nbsp;&nbsp;- change the usage of some command, see :h ctk-usage for details.<br>&nbsp;&nbsp;- add command &quot;:SetExtensionName&quot; command.<br>&nbsp;&nbsp;- modfiy the document.</td>
+    <td class="roweven" valign="top" width="2000">&nbsp;&nbsp;- add option g:ctk_cmdenc<br>&nbsp;&nbsp;- add discribes of using :silent/:redir command in cmd or run in doc<br>&nbsp;&nbsp;- fix the bug when compile multi-times, the += operator in modeline acts incorrect.</td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=10996">ctk.vba</a></td>
-    <td class="rowodd" valign="top" nowrap><b>0.3-bugfix</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2009-07-11</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=11052">ctk.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.4</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-07-22</i></td>
     <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=15469">Wxyarv Wang</a></i></td>
-    <td class="rowodd" valign="top" width="2000">-- fix the bug 'gc' and 'gC' use previous entry (it's quite sick!)<br>-- fix the bug when the program name is same as Unix standard program (e.g. test), the Unix program will be run instead of ours. </td>
+    <td class="rowodd" valign="top" width="2000">&nbsp;&nbsp;- fix the bug StopCTK doesn't stop ctk.<br>&nbsp;&nbsp;- change the usage of some command, see :h ctk-usage for details.<br>&nbsp;&nbsp;- add command &quot;:SetExtensionName&quot; command.<br>&nbsp;&nbsp;- modfiy the document.</td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=10988">ctk.vba</a></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=10996">ctk.vba</a></td>
     <td class="roweven" valign="top" nowrap><b>0.3-bugfix</b></td>
-    <td class="roweven" valign="top" nowrap><i>2009-07-10</i></td>
+    <td class="roweven" valign="top" nowrap><i>2009-07-11</i></td>
     <td class="roweven" valign="top" nowrap>7.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=15469">Wxyarv Wang</a></i></td>
-    <td class="roweven" valign="top" width="2000">-- fixed the syntax error in doc file :-) thanks to yiran.<br>-- fixed the issue that ctk raise error when :RUN asm.<br>-- add quoted place-holder's doc describe.<br></td>
+    <td class="roweven" valign="top" width="2000">-- fix the bug 'gc' and 'gC' use previous entry (it's quite sick!)<br>-- fix the bug when the program name is same as Unix standard program (e.g. test), the Unix program will be run instead of ours. </td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=10984">ctk.vba</a></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=10988">ctk.vba</a></td>
     <td class="rowodd" valign="top" nowrap><b>0.3-bugfix</b></td>
     <td class="rowodd" valign="top" nowrap><i>2009-07-10</i></td>
     <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=15469">Wxyarv Wang</a></i></td>
-    <td class="rowodd" valign="top" width="2000">-- fix the bug when you press &quot;gc&quot; and there isn't any window has b:compiler_info, ctk will raise a error.<br>-- remove the process of autocmd FuncUndefined<br>-- remove s:find_source() function, and just find b:compiler_info when needed.</td>
+    <td class="rowodd" valign="top" width="2000">-- fixed the syntax error in doc file :-) thanks to yiran.<br>-- fixed the issue that ctk raise error when :RUN asm.<br>-- add quoted place-holder's doc describe.<br></td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=10946">ctk.vba</a></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=10984">ctk.vba</a></td>
     <td class="roweven" valign="top" nowrap><b>0.3-bugfix</b></td>
-    <td class="roweven" valign="top" nowrap><i>2009-07-05</i></td>
+    <td class="roweven" valign="top" nowrap><i>2009-07-10</i></td>
     <td class="roweven" valign="top" nowrap>7.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=15469">Wxyarv Wang</a></i></td>
-    <td class="roweven" valign="top" width="2000">&nbsp;&nbsp;- thanks to lee, change a syntax error :-)<br>&nbsp;&nbsp;- correct all wrong marks in script.<br>&nbsp;&nbsp;- in linux console, the RUN can't stop after program runs, so didn't redraw in linux console.</td>
+    <td class="roweven" valign="top" width="2000">-- fix the bug when you press &quot;gc&quot; and there isn't any window has b:compiler_info, ctk will raise a error.<br>-- remove the process of autocmd FuncUndefined<br>-- remove s:find_source() function, and just find b:compiler_info when needed.</td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=10898">ctk.vba</a></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=10946">ctk.vba</a></td>
     <td class="rowodd" valign="top" nowrap><b>0.3-bugfix</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2009-06-26</i></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-07-05</i></td>
     <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=15469">Wxyarv Wang</a></i></td>
-    <td class="rowodd" valign="top" width="2000">just bugfix. and fix some issues in Windows.</td>
+    <td class="rowodd" valign="top" width="2000">&nbsp;&nbsp;- thanks to lee, change a syntax error :-)<br>&nbsp;&nbsp;- correct all wrong marks in script.<br>&nbsp;&nbsp;- in linux console, the RUN can't stop after program runs, so didn't redraw in linux console.</td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=10567">ctk.vba</a></td>
-    <td class="roweven" valign="top" nowrap><b>0.3</b></td>
-    <td class="roweven" valign="top" nowrap><i>2009-05-10</i></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=10898">ctk.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.3-bugfix</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-06-26</i></td>
     <td class="roweven" valign="top" nowrap>7.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=15469">Wxyarv Wang</a></i></td>
-    <td class="roweven" valign="top" width="2000">-- add a quoted tag support<br>-- changed document<br>-- make info line's syntax be the same as the modeline's<br>-- remove the '*' command-type. you can use :call foobar() to replace it.</td>
+    <td class="roweven" valign="top" width="2000">just bugfix. and fix some issues in Windows.</td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=10561">ctk.vba</a></td>
-    <td class="rowodd" valign="top" nowrap><b>0.2-bugfix</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2009-05-08</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=10567">ctk.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.3</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-05-10</i></td>
     <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=15469">Wxyarv Wang</a></i></td>
-    <td class="rowodd" valign="top" width="2000">bugfix: autonamed file didn't use default output name.</td>
+    <td class="rowodd" valign="top" width="2000">-- add a quoted tag support<br>-- changed document<br>-- make info line's syntax be the same as the modeline's<br>-- remove the '*' command-type. you can use :call foobar() to replace it.</td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=10483">ctk.vba</a></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=10561">ctk.vba</a></td>
     <td class="roweven" valign="top" nowrap><b>0.2-bugfix</b></td>
-    <td class="roweven" valign="top" nowrap><i>2009-04-29</i></td>
+    <td class="roweven" valign="top" nowrap><i>2009-05-08</i></td>
     <td class="roweven" valign="top" nowrap>7.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=15469">Wxyarv Wang</a></i></td>
-    <td class="roweven" valign="top" width="2000">-- fix the bug that quickfix window won't close when compiling success.</td>
+    <td class="roweven" valign="top" width="2000">bugfix: autonamed file didn't use default output name.</td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=10472">ctk.vba</a></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=10483">ctk.vba</a></td>
     <td class="rowodd" valign="top" nowrap><b>0.2-bugfix</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2009-04-28</i></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-04-29</i></td>
     <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=15469">Wxyarv Wang</a></i></td>
-    <td class="rowodd" valign="top" width="2000">-- change the way to calculate the index of temporary file.<br>-- change the way to rename file. the file has its name won't rename now (it's my mistake...)</td>
+    <td class="rowodd" valign="top" width="2000">-- fix the bug that quickfix window won't close when compiling success.</td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=10458">ctk.vba</a></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=10472">ctk.vba</a></td>
     <td class="roweven" valign="top" nowrap><b>0.2-bugfix</b></td>
-    <td class="roweven" valign="top" nowrap><i>2009-04-26</i></td>
+    <td class="roweven" valign="top" nowrap><i>2009-04-28</i></td>
     <td class="roweven" valign="top" nowrap>7.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=15469">Wxyarv Wang</a></i></td>
-    <td class="roweven" valign="top" width="2000">sorry for forgot to turn-off the debug message...</td>
+    <td class="roweven" valign="top" width="2000">-- change the way to calculate the index of temporary file.<br>-- change the way to rename file. the file has its name won't rename now (it's my mistake...)</td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=10456">ctk.vba</a></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=10458">ctk.vba</a></td>
     <td class="rowodd" valign="top" nowrap><b>0.2-bugfix</b></td>
     <td class="rowodd" valign="top" nowrap><i>2009-04-26</i></td>
     <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=15469">Wxyarv Wang</a></i></td>
-    <td class="rowodd" valign="top" width="2000">add some stuff in doc, and changed the behavior of :CC<br><br>if your compile command is &quot;:foobar&quot; (that is, a Vim command instead of a shell command), the output will disappear at command line. see :h :RUN</td>
+    <td class="rowodd" valign="top" width="2000">sorry for forgot to turn-off the debug message...</td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=10451">ctk.vba</a></td>
-    <td class="roweven" valign="top" nowrap><b>0.2</b></td>
-    <td class="roweven" valign="top" nowrap><i>2009-04-25</i></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=10456">ctk.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.2-bugfix</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-04-26</i></td>
     <td class="roweven" valign="top" nowrap>7.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=15469">Wxyarv Wang</a></i></td>
-    <td class="roweven" valign="top" width="2000">Initial upload</td>
+    <td class="roweven" valign="top" width="2000">add some stuff in doc, and changed the behavior of :CC<br><br>if your compile command is &quot;:foobar&quot; (that is, a Vim command instead of a shell command), the output will disappear at command line. see :h :RUN</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=10451">ctk.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.2</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-04-25</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=15469">Wxyarv Wang</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Initial upload</td>
 </tr>
 </table>
 <!-- finish off the framework -->

@@ -3,7 +3,7 @@
 
 <head>
   <link rel="Stylesheet" type="text/css" href="/css/style.css" >
-  <title>Lucius - Dark and light color scheme (GUI and 256 color terminal) : vim online</title>
+  <title>Lucius - Dark, light, and blue color schemes in one file (GUI and 256 color terminal). : vim online</title>
   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
   <meta name="KEYWORDS" content="Vim, Vi IMproved, text editor, home, documentation, tips, scripts, news">
   <link rel="shortcut icon" type="image/x-icon" href="/images/vim_shortcut.ico">
@@ -156,7 +156,7 @@
         <tr>
           <td valign="top">
 
-<span class="txth1">Lucius : Dark and light color scheme (GUI and 256 color terminal)</span> 
+<span class="txth1">Lucius : Dark, light, and blue color schemes in one file (GUI and 256 color terminal).</span> 
 
 <br>
 <br>
@@ -166,8 +166,8 @@
 <tr>
   <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
   <td>
-    Rating <b>309/105</b>,
-    Downloaded by 5919  </td>
+    Rating <b>317/107</b>,
+    Downloaded by 6361  </td>
   <td class="lightbg">
   <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
   </td>
@@ -186,10 +186,10 @@
 <tr><td>color scheme</td></tr>
 <tr><td>&nbsp;</td></tr>
 <tr><td class="prompt">description</td></tr>
-<tr><td>This started out by combining parts of several dark color schemes, including oceandeep (<a href="/scripts/script.php?script_id=368">vimscript #368</a>), peaksea (<a href="/scripts/script.php?script_id=760">vimscript #760</a>), wombat (<a href="/scripts/script.php?script_id=1778">vimscript #1778</a>), moria (<a href="/scripts/script.php?script_id=1464">vimscript #1464</a>), and zenburn (<a href="/scripts/script.php?script_id=415">vimscript #415</a>). Since then, it has been tweaked to what it is today and works well in both light and dark environments.<br><br>For the 256 color terminal support, guicolorscheme.vim (<a href="/scripts/script.php?script_id=1809">vimscript #1809</a>) was used. The settings were further modified to match the GUI version as best possible.<br><br>For v3.5, colorsupport.vim (<a href="/scripts/script.php?script_id=2682">vimscript #2682</a>) was applied to this color scheme. Some of the results from this were merged in with the other color choices from before to make the cterm version more like the gui.<br><br>A light color scheme was added in v4.0. The default is still to use the dark version, but users can choose which to use by setting the g:lucius_style variable to either &quot;light&quot; or &quot;dark&quot;.</td></tr>
+<tr><td>This file contains three color schemes that focus on using blues and greens.<br><br>The original dark color scheme started out by combining pieces of several<br>other color schemes and has evolved into what it is today. Those color<br>schemes are:<br><br>* oceandeep (<a href="/scripts/script.php?script_id=368">vimscript #368</a>)<br>* peaksea (<a href="/scripts/script.php?script_id=760">vimscript #760</a>)<br>* wombat (<a href="/scripts/script.php?script_id=1778">vimscript #1778</a>)<br>* moria (<a href="/scripts/script.php?script_id=1464">vimscript #1464</a>)<br>* zenburn (<a href="/scripts/script.php?script_id=415">vimscript #415</a>)<br><br>The default color scheme is the original, dark scheme. You can change this by<br>setting the g:lucius_style variable to &quot;light&quot;, &quot;dark&quot;, or &quot;blue&quot;. Once the<br>color scheme is loaded, you can use the commands &quot;LuciusLight&quot;, &quot;LuciusDark&quot;,<br>and &quot;LuciusBlue&quot; to change schemes quickly.<br><br>Screenshots of the different color schemes in a Windows 7 GUI:<br><br>* Dark: <a target="_blank" href="http://i.imgur.com/z0bDr.png">http://i.imgur.com/z0bDr.png</A><br>* Light: <a target="_blank" href="http://i.imgur.com/BXDiv.png">http://i.imgur.com/BXDiv.png</A><br>* Blue: <a target="_blank" href="http://i.imgur.com/Ea1Gq.png">http://i.imgur.com/Ea1Gq.png</A><br><br>colorsupport.vim (<a href="/scripts/script.php?script_id=2682">vimscript #2682</a>) is used to help with mapping the GUI<br>settings to the 256 terminal colors.<br></td></tr>
 <tr><td>&nbsp;</td></tr>
 <tr><td class="prompt">install details</td></tr>
-<tr><td>Copy the file to your vim colors directory and then :colorscheme lucius. You can choose to use the light or dark scheme by setting g:lucius_style to either &quot;light&quot; or &quot;dark&quot;. The default is to use the dark scheme.</td></tr>
+<tr><td>Copy the file to your vim colors directory and then do :colorscheme lucius.</td></tr>
 <tr><td>&nbsp;</td></tr>
 </table>
 
@@ -221,6 +221,22 @@ Click on the package to download.
     <th valign="top">Vim version</th>
     <th valign="top">user</th>
     <th valign="top">release notes</th>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15197">lucius.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>5.2</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2011-03-11</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=14963">Jonathan Filip</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Tried to port the blue scheme to 256 colors, however it mostly stayed similar to the dark one with some adjustments for the text highlighting (not enough choices in 256 colors to match the blues that are used). Changed a few more colors on the light scheme as well.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=15158">lucius.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>5.1</b></td>
+    <td class="roweven" valign="top" nowrap><i>2011-03-04</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=14963">Jonathan Filip</a></i></td>
+    <td class="roweven" valign="top" width="2000">Finished making changes to the light version. Also added a blue variant of the normal, dark scheme. Removed the non-primary highlight groups (Label, Operator, etc) to make the file a little smaller. Also added commands to change between the different schemes (LuciusLight, LuciusDark, LuciusBlue).</td>
 </tr>
 <tr>
         <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15100">lucius.vim</a></td>

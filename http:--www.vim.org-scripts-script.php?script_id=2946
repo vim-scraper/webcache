@@ -166,8 +166,8 @@
 <tr>
   <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
   <td>
-    Rating <b>25/9</b>,
-    Downloaded by 419  </td>
+    Rating <b>30/11</b>,
+    Downloaded by 455  </td>
   <td class="lightbg">
   <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
   </td>
@@ -186,10 +186,10 @@
 <tr><td>utility</td></tr>
 <tr><td>&nbsp;</td></tr>
 <tr><td class="prompt">description</td></tr>
-<tr><td>Tired of trying thousand of tools to organize my life, and inspired in the<br>idea of ONE BIG TEXT FILE from Danny O'Brien, I decided that the world needed<br>yet another GTD tool. The &quot;Almighty&quot; part is a reference to the idea of having<br>all type of notes about your tasks in one single file.<br><br>The whole idea of this GTD implementation relies in some custom notation<br>marks, the Folding capabilities of VIM and its power to work quickly with<br>text. I wanted something portable to collect, edit, search and structure<br>lightning fast my notes. This is the result so far:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;* Organize project tree with notes, links and tasks<br>&nbsp;&nbsp;&nbsp;&nbsp;* Move tasks from the project tree to the TODO list inserting project label<br>&nbsp;&nbsp;&nbsp;&nbsp;* Neatly collect and display all tasks related with a project<br>&nbsp;&nbsp;&nbsp;&nbsp;* Ease project tasks/notes finding<br>&nbsp;&nbsp;&nbsp;&nbsp;* Build a calendar with all the dates in the text file<br><br>I strongly recommend the UTL script as a side companion. It will enhance your<br>notes allowing you to open different links with just a short keystroke.<br><br>This script is my idea of how GTD should be done with VIM. Any comments, bug<br>reports, patches, fixes and suggestions are welcome.<br><br>If you like it, please, rate it in the Vim website to let me know that out<br>there there are people who find this useful. Otherwise I will consider this<br>just an scrapbook to learn Vim scripting. <br><br>Any comments in my webpage would be appreciated. There you can request wished features, report bugs or just tell me to go on and that you would like to see more versions:<br><a target="_blank" href="http://www.digital-lumberjack.com/tools/vim/agtd">http://www.digital-lumberjack.com/tools/vim/agtd</A><br></td></tr>
+<tr><td>Tired of trying thousand of tools to organize my life, and inspired in the<br>idea of ONE BIG TEXT FILE from Danny O'Brien, I decided that the world needed<br>yet another GTD tool. The &quot;Almighty&quot; part is a reference to the idea of having<br>all type of notes about your tasks in one single file.<br><br>The whole idea of this GTD implementation relies in some custom notation<br>marks, the Folding capabilities of VIM and its power to work quickly with<br>text. I wanted something portable to collect, edit, search and structure<br>lightning fast my notes.<br><br>You can get a longer description and one screenshot at:<br><br><a target="_blank" href="https://github.com/fgarcia/agtd">https://github.com/fgarcia/agtd</A><br></td></tr>
 <tr><td>&nbsp;</td></tr>
 <tr><td class="prompt">install details</td></tr>
-<tr><td>Install as usual. However notice that the file &quot;todo-example.txt&quot; is just an example to play with the script</td></tr>
+<tr><td>Open the file and install with<br>&nbsp;&nbsp;&nbsp;&nbsp; :so %<br><br>Make sure you have somewhere in your Vimrc file the filetype plugin enabled:<br>&nbsp;&nbsp;&nbsp;&nbsp; :filetype plugin on</td></tr>
 <tr><td>&nbsp;</td></tr>
 </table>
 
@@ -223,12 +223,20 @@ Click on the package to download.
     <th valign="top">release notes</th>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=12220">agtd-0.2.zip</a></td>
-    <td class="rowodd" valign="top" nowrap><b>0.2</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2010-01-28</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15259">agtd.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.3</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2011-03-20</i></td>
     <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=18898">Francisco Garcia</a></i></td>
-    <td class="rowodd" valign="top" width="2000">Bug fixing and clutter clean-up <br>Calendar displays colors <br>Variable naming matches better plug-in name <br>Task insertions works when there is an http:// address <br>Common environment values pushed into a ftplugin <br>UTL Schema prototype for ssh links </td>
+    <td class="rowodd" valign="top" width="2000">Improved online help<br>Improved folding rules<br>Other minor bugfixes</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=12220">agtd-0.2.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.2</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-01-28</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=18898">Francisco Garcia</a></i></td>
+    <td class="roweven" valign="top" width="2000">Bug fixing and clutter clean-up <br>Calendar displays colors <br>Variable naming matches better plug-in name <br>Task insertions works when there is an http:// address <br>Common environment values pushed into a ftplugin <br>UTL Schema prototype for ssh links </td>
 </tr>
 </table>
 <!-- finish off the framework -->

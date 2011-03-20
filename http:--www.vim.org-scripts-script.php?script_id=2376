@@ -167,7 +167,7 @@
   <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
   <td>
     Rating <b>2/2</b>,
-    Downloaded by 265  </td>
+    Downloaded by 302  </td>
   <td class="lightbg">
   <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
   </td>
@@ -186,7 +186,7 @@
 <tr><td>utility</td></tr>
 <tr><td>&nbsp;</td></tr>
 <tr><td class="prompt">description</td></tr>
-<tr><td>KISS implementation of SQL completion for Vim:<br><br>First you have to connect to a database. Examples:<br><br>&nbsp;&nbsp;MySQL:<br>&nbsp;&nbsp;call tovl#ft#sql#Connect('mysql',{'host':'127.0.0.1','database':'DATABASE', 'user':'USER', 'password' : 'PASSWORT'})<br><br>&nbsp;&nbsp;SQLITE:<br>&nbsp;&nbsp;call tovl#ft#sql#Connect('mysql',{'database':'filepath'})<br><br>&nbsp;&nbsp;Postgresql (see code)<br><br>A connection only initializes b:db_conn which is a Vim object providing<br>functions for querying the database.<br><br>Setup mappings by calling this function:<br>&nbsp;&nbsp;call vim_addon_sql#UI()<br><br>In non visual mode the query start / end is determined by either ; or empty lines.<br>In visual mode the selection will be executed<br><br>Execution is done by command line tools (psql, mysql, sqlite(3))<br>The result of those queries is parsed by Vim to fill alias aware completion.<br><br>Example:<br><br>1)<br>&nbsp;&nbsp;SELECT *, CURSOR FROM table1, table2<br>&nbsp;&nbsp;Now CURSOR will only contain fields found in either table1 or table2<br><br>2)<br>&nbsp;&nbsp;SELECT *, a.CURSOR FROM table1 as a, table2<br>&nbsp;&nbsp;Now the completion will only contain fields of table1<br><br>Expect some minor bugs - however this it works quite nicely in practise.<br><br>camel case like completion is also supported. eg d_u -&gt; db_users<br><br>If you have any questions contact me.<br></td></tr>
+<tr><td>KISS implementation of SQL completion for Vim:<br><br>First you have to connect to a database. Examples:<br><br>&nbsp;&nbsp;MySQL:<br>&nbsp;&nbsp;call vim_addon_sql#Connect('mysql',{'host':'127.0.0.1','database':'DATABASE', 'user':'USER', 'password' : 'PASSWORT'})<br><br>&nbsp;&nbsp;SQLITE:<br>&nbsp;&nbsp;call vim_addon_sql#Connect('mysql',{'database':'filepath'})<br><br>&nbsp;&nbsp;Postgresql (see code)<br><br>A connection only initializes b:db_conn which is a Vim object providing<br>functions for querying the database.<br><br>Setup mappings by calling this function:<br>&nbsp;&nbsp;call vim_addon_sql#UI()<br><br>In non visual mode the query start / end is determined by either ; or empty lines.<br>In visual mode the selection will be executed<br><br>Execution is done by command line tools (psql, mysql, sqlite(3))<br>The result of those queries is parsed by Vim to fill alias aware completion.<br><br>Example:<br><br>1)<br>&nbsp;&nbsp;SELECT *, CURSOR FROM table1, table2<br>&nbsp;&nbsp;Now CURSOR will only contain fields found in either table1 or table2<br><br>2)<br>&nbsp;&nbsp;SELECT *, a.CURSOR FROM table1 as a, table2<br>&nbsp;&nbsp;Now the completion will only contain fields of table1<br><br>Expect some minor bugs - however this it works quite nicely in practise.<br><br>camel case like completion is also supported. eg d_u -&gt; db_users<br><br>Also completes MySQL internal functions<br><br>If you have any questions contact me.</td></tr>
 <tr><td>&nbsp;</td></tr>
 <tr><td class="prompt">install details</td></tr>
 <tr><td>The *info* file in the top level directory contains all dependencies. I recommend using vim-addon-manager to install them all at once</td></tr>
@@ -223,36 +223,44 @@ Click on the package to download.
     <th valign="top">release notes</th>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=14957">vim-addon-sql-0.2.2.zip</a></td>
-    <td class="rowodd" valign="top" nowrap><b>0.2.2</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2011-02-05</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15225">vim-addon-sql-0.2.3.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.2.3</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2011-03-15</i></td>
     <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=10341">Marc Weber</a></i></td>
-    <td class="rowodd" valign="top" width="2000">fix CamelCase alias field completion. Allow _ in names. Close error buffer if no error occured</td>
+    <td class="rowodd" valign="top" width="2000">mysql: also complete function names</td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=14637">vim-addon-sql-0.2.1.zip</a></td>
-    <td class="roweven" valign="top" nowrap><b>0.2.1</b></td>
-    <td class="roweven" valign="top" nowrap><i>2010-12-28</i></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=14957">vim-addon-sql-0.2.2.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.2.2</b></td>
+    <td class="roweven" valign="top" nowrap><i>2011-02-05</i></td>
     <td class="roweven" valign="top" nowrap>7.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=10341">Marc Weber</a></i></td>
-    <td class="roweven" valign="top" width="2000">bugfix on aliases</td>
+    <td class="roweven" valign="top" width="2000">fix CamelCase alias field completion. Allow _ in names. Close error buffer if no error occured</td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13942">vim-addon-sql-0.2.zip</a></td>
-    <td class="rowodd" valign="top" nowrap><b>0.2</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2010-09-27</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=14637">vim-addon-sql-0.2.1.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.2.1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-12-28</i></td>
     <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=10341">Marc Weber</a></i></td>
-    <td class="rowodd" valign="top" width="2000">new release as vim-addon-sql. Sqlite and Postgres are supported. Code import from tovl</td>
+    <td class="rowodd" valign="top" width="2000">bugfix on aliases</td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=9251">vimlib_sql_installer_sourceme.zip</a></td>
-    <td class="roweven" valign="top" nowrap><b>0.0</b></td>
-    <td class="roweven" valign="top" nowrap><i>2008-09-14</i></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13942">vim-addon-sql-0.2.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.2</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-09-27</i></td>
     <td class="roweven" valign="top" nowrap>7.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=10341">Marc Weber</a></i></td>
-    <td class="roweven" valign="top" width="2000">fixed quoting of *, using stdin now to pass SQL command, vl#dev#sql#sql#ThisSQLCommand()<br> can be overridden now</td>
+    <td class="roweven" valign="top" width="2000">new release as vim-addon-sql. Sqlite and Postgres are supported. Code import from tovl</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=9251">vimlib_sql_installer_sourceme.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.0</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2008-09-14</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=10341">Marc Weber</a></i></td>
+    <td class="rowodd" valign="top" width="2000">fixed quoting of *, using stdin now to pass SQL command, vl#dev#sql#sql#ThisSQLCommand()<br> can be overridden now</td>
 </tr>
 </table>
 <!-- finish off the framework -->

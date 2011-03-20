@@ -167,7 +167,7 @@
   <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
   <td>
     Rating <b>-1/1</b>,
-    Downloaded by 86  </td>
+    Downloaded by 90  </td>
   <td class="lightbg">
   <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
   </td>
@@ -186,10 +186,10 @@
 <tr><td>utility</td></tr>
 <tr><td>&nbsp;</td></tr>
 <tr><td class="prompt">description</td></tr>
-<tr><td>Syntax, Folding function and clipboard yank with reformat function for my personal notes<br><br>No documentation! It is simple enough as to understand just by looking at the little code. <br> <br>An example of my notes:<br><br># Install<br>&nbsp;&nbsp;&nbsp;&nbsp;; Bootstrap if doing this not in NetBSD<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Check platform notes &lt;url:<a target="_blank" href="http://www.netbsd.org/docs/pkgsrc/platforms.html&gt">http://www.netbsd.org/docs/pkgsrc/platforms.html&gt</A>;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$ cd pkgsrc/bootstrap<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;; The parameters for OSX -&gt; case and non root user<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$ ./bootstrap --ignore-case-check --unprivileged<br></td></tr>
+<tr><td>This tiny script provides the syntax, folding function and other minor functionality that I need for my notes.<br><br>I try to keep al my notes in simple plain ASCII text files. However I admit that some formating and folding is nice. Hence I came up with a very simple syntax based on some markers and indentation rules, wrap all that together into this Vim script and Voilà! Now I can keep my text notes within a compressed style and smart folding along the power of Vim to ease the access to my notes.<br><br>You can get a longer description and one screenshot at: <br><br><a target="_blank" href="https://github.com/fgarcia/pnote">https://github.com/fgarcia/pnote</A><br></td></tr>
 <tr><td>&nbsp;</td></tr>
 <tr><td class="prompt">install details</td></tr>
-<tr><td>Install as usual<br>:so %<br></td></tr>
+<tr><td>Install as usual. Download the latest version, open with vim and...<br>&nbsp;&nbsp;&nbsp;&nbsp; :so %<br><br>Make sure you have somewhere in your Vimrc file the filetype plugin enabled: <br>&nbsp;&nbsp;&nbsp;&nbsp; :filetype plugin on</td></tr>
 <tr><td>&nbsp;</td></tr>
 </table>
 
@@ -223,12 +223,20 @@ Click on the package to download.
     <th valign="top">release notes</th>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13047">pnote.vba</a></td>
-    <td class="rowodd" valign="top" nowrap><b>0.1</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2010-05-23</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15258">pnote.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.2</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2011-03-20</i></td>
     <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=18898">Francisco Garcia</a></i></td>
-    <td class="rowodd" valign="top" width="2000">Initial upload</td>
+    <td class="rowodd" valign="top" width="2000">Syntax for bibliography nodes <br>Syntax for command line instructions <br>Easy copy to command line instructions to the system clipboard <br>Minor bugfixes</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13047">pnote.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.1</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-05-23</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=18898">Francisco Garcia</a></i></td>
+    <td class="roweven" valign="top" width="2000">Initial upload</td>
 </tr>
 </table>
 <!-- finish off the framework -->

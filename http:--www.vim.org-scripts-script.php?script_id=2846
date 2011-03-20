@@ -167,7 +167,7 @@
   <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
   <td>
     Rating <b>4/3</b>,
-    Downloaded by 208  </td>
+    Downloaded by 224  </td>
   <td class="lightbg">
   <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
   </td>
@@ -186,10 +186,10 @@
 <tr><td>ftplugin</td></tr>
 <tr><td>&nbsp;</td></tr>
 <tr><td class="prompt">description</td></tr>
-<tr><td>Nice folding for haskell (*.hs) files.<br><br></td></tr>
+<tr><td>Provide a better folding for haskell file. The folded lines are transformed<br>to display the type signature (if any) of the function, providing a great<br>overview of your file content.<br><br>You can see some screenshot at <a target="_blank" href="http://twinside.github.com/vim-haskellFold/">http://twinside.github.com/vim-haskellFold/</A> <br>GitHub repository : <a target="_blank" href="https://github.com/Twinside/vim-haskellFold">https://github.com/Twinside/vim-haskellFold</A><br></td></tr>
 <tr><td>&nbsp;</td></tr>
 <tr><td class="prompt">install details</td></tr>
-<tr><td>Drop the file in ~/.vim/plugin or ~/vimfiles/plugin for windows</td></tr>
+<tr><td>Drop the file in ~/.vim/plugin or ~/vimfiles/plugin folder, or if you<br>use pathogen into the ~/.vim/bundle/vim-haskellFold or<br>~/vimfiles/bundle/vim-haskellFold</td></tr>
 <tr><td>&nbsp;</td></tr>
 </table>
 
@@ -223,12 +223,20 @@ Click on the package to download.
     <th valign="top">release notes</th>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=14930">haskellFold.vim</a></td>
-    <td class="rowodd" valign="top" nowrap><b>1.1</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2011-01-31</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15114">haskellFold.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.2</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2011-02-24</i></td>
     <td class="rowodd" valign="top" nowrap>7.2</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=17242">Vincent B</a></i></td>
-    <td class="rowodd" valign="top" width="2000">Showing function signature in folded text</td>
+    <td class="rowodd" valign="top" width="2000">Reacting to file type instead of file extension </td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=14930">haskellFold.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.1</b></td>
+    <td class="roweven" valign="top" nowrap><i>2011-01-31</i></td>
+    <td class="roweven" valign="top" nowrap>7.2</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=17242">Vincent B</a></i></td>
+    <td class="roweven" valign="top" width="2000">Showing function signature in folded text</td>
 </tr>
 </table>
 <!-- finish off the framework -->

@@ -166,8 +166,8 @@
 <tr>
   <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
   <td>
-    Rating <b>60/25</b>,
-    Downloaded by 482  </td>
+    Rating <b>68/27</b>,
+    Downloaded by 584  </td>
   <td class="lightbg">
   <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
   </td>
@@ -186,7 +186,7 @@
 <tr><td>syntax</td></tr>
 <tr><td>&nbsp;</td></tr>
 <tr><td class="prompt">description</td></tr>
-<tr><td>Indent Guides is a plugin for visually displaying indent levels in Vim.<br><br>FEATURES:<br>- Can detect both tab and space indent styles.<br>- Automatically inspects your colorscheme and picks appropriate colors (gVim only).<br>- Will highlight indent levels with alternating colors.<br>- Full support for gVim and basic support for Terminal Vim.<br>- Seems to work on Windows gVim 7.3 (haven't done any extensive tests though).<br>- NEW: Customizable size for indent guides, eg. skinny guides (soft-tabs only).<br>- NEW: Customizable start indent level.<br><br>USAGE:<br>The default mapping to toggle the plugin is `&lt;Leader&gt;ig`<br><br>GVIM:<br>This plugin should work with gVim out of the box, no configuration needed. It will automatically inspect your colorscheme and pick appropriate colors.<br><br>SETTING CUSTOM INDENT COLORS:<br>Here's an example of how to define custom colors instead of using the ones the plugin automatically generates for you. Add this to your `.vimrc` file:<br>&gt;<br>&nbsp;&nbsp;let g:indent_guides_auto_colors = 0<br>&nbsp;&nbsp;autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd&nbsp;&nbsp;guibg=red&nbsp;&nbsp; ctermbg=3<br>&nbsp;&nbsp;autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=4<br>&lt;<br><br>TERMINAL VIM:<br>At the moment Terminal Vim only has basic support. This means is that colors won't be automatically calculated based on your colorscheme. Instead, some preset colors are used depending on whether `background` is set to `dark` or `light`.<br><br>When `set background=dark` is used, the following highlight colors will be defined:<br>&gt;<br>&nbsp;&nbsp;hi IndentGuidesEven ctermbg=darkgrey<br>&nbsp;&nbsp;hi IndentGuidesOdd&nbsp;&nbsp;ctermbg=black<br>&lt;<br><br>Alternatively, when `set background=light` is used, the following highlight colors will be defined:<br>&gt;<br>&nbsp;&nbsp;hi IndentGuidesEven ctermbg=lightgrey<br>&nbsp;&nbsp;hi IndentGuidesOdd&nbsp;&nbsp;ctermbg=white<br>&lt;<br><br>If for some reason it's incorrectly defining light highlight colors instead of dark ones or vice versa, the first thing you should check is that the `background` value is being set correctly for your colorscheme. Sometimes it's best to manually set the `background` value in your `.vimrc`, for example:<br>&gt;<br>&nbsp;&nbsp;colorscheme desert256<br>&nbsp;&nbsp;set background=dark<br>&lt;<br><br>Alternatively you can manually setup the highlight colors yourself, see `:help indent_guides_auto_colors` for an example.<br><br>GITHUB:<br><a target="_blank" href="https://github.com/nathanaelkane/vim-indent-guides">https://github.com/nathanaelkane/vim-indent-guides</A><br><br>SCREENSHOTS:<br><a target="_blank" href="http://nathanaelkane.imgur.com/indent_guides">http://nathanaelkane.imgur.com/indent_guides</A><br></td></tr>
+<tr><td>Indent Guides is a plugin for visually displaying indent levels in Vim.<br><br>FEATURES:<br>- Can detect both tab and space indent styles.<br>- Automatically inspects your colorscheme and picks appropriate colors (gVim only).<br>- Will highlight indent levels with alternating colors.<br>- Full support for gVim and basic support for Terminal Vim.<br>- Seems to work on Windows gVim 7.3 (haven't done any extensive tests though).<br>- Customizable size for indent guides, eg. skinny guides (soft-tabs only).<br>- Customizable start indent level.<br>- NEW: Highlight support for files with a mixture of tab and space indent styles.<br><br>USAGE:<br>The default mapping to toggle the plugin is `&lt;Leader&gt;ig`<br><br>GVIM:<br>This plugin should work with gVim out of the box, no configuration needed. It will automatically inspect your colorscheme and pick appropriate colors.<br><br>SETTING CUSTOM INDENT COLORS:<br>Here's an example of how to define custom colors instead of using the ones the plugin automatically generates for you. Add this to your `.vimrc` file:<br>&gt;<br>&nbsp;&nbsp;let g:indent_guides_auto_colors = 0<br>&nbsp;&nbsp;autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd&nbsp;&nbsp;guibg=red&nbsp;&nbsp; ctermbg=3<br>&nbsp;&nbsp;autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=4<br>&lt;<br><br>Alternatively you can add the following lines to your colorscheme file.<br>&gt;<br>&nbsp;&nbsp;hi IndentGuidesOdd&nbsp;&nbsp;guibg=red&nbsp;&nbsp; ctermbg=3<br>&nbsp;&nbsp;hi IndentGuidesEven guibg=green ctermbg=4<br>&lt;<br><br>TERMINAL VIM:<br>At the moment Terminal Vim only has basic support. This means is that colors won't be automatically calculated based on your colorscheme. Instead, some preset colors are used depending on whether `background` is set to `dark` or `light`.<br><br>When `set background=dark` is used, the following highlight colors will be defined:<br>&gt;<br>&nbsp;&nbsp;hi IndentGuidesEven ctermbg=darkgrey<br>&nbsp;&nbsp;hi IndentGuidesOdd&nbsp;&nbsp;ctermbg=black<br>&lt;<br><br>Alternatively, when `set background=light` is used, the following highlight colors will be defined:<br>&gt;<br>&nbsp;&nbsp;hi IndentGuidesEven ctermbg=lightgrey<br>&nbsp;&nbsp;hi IndentGuidesOdd&nbsp;&nbsp;ctermbg=white<br>&lt;<br><br>If for some reason it's incorrectly defining light highlight colors instead of dark ones or vice versa, the first thing you should check is that the `background` value is being set correctly for your colorscheme. Sometimes it's best to manually set the `background` value in your `.vimrc`, for example:<br>&gt;<br>&nbsp;&nbsp;colorscheme desert256<br>&nbsp;&nbsp;set background=dark<br>&lt;<br><br>Alternatively you can manually setup the highlight colors yourself, see `:help indent_guides_auto_colors` for an example.<br><br>GITHUB:<br><a target="_blank" href="https://github.com/nathanaelkane/vim-indent-guides">https://github.com/nathanaelkane/vim-indent-guides</A><br><br>SCREENSHOTS:<br><a target="_blank" href="http://nathanaelkane.imgur.com/indent_guides">http://nathanaelkane.imgur.com/indent_guides</A></td></tr>
 <tr><td>&nbsp;</td></tr>
 <tr><td class="prompt">install details</td></tr>
 <tr><td>To install the plugin just copy `autoload`, `plugin`, `doc` directories into your `.vim` directory.<br><br>Alternatively if you have Pathogen installed, just clone this repo into a subdirectory of your `.vim/bundle` directory like so:<br>cd ~/.vim/bundle<br>git clone <a target="_blank" href="git://github.com/nathanaelkane/vim-indent-guides.git">git://github.com/nathanaelkane/vim-indent-guides.git</A><br></td></tr>
@@ -223,44 +223,52 @@ Click on the package to download.
     <th valign="top">release notes</th>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=14963">indent-guides-1.4.tar.gz</a></td>
-    <td class="rowodd" valign="top" nowrap><b>1.4</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2011-02-06</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15208">indent-guides-1.5.tar.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.5</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2011-03-13</i></td>
     <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=23802">Nate Kane</a></i></td>
-    <td class="rowodd" valign="top" width="2000">- Added the new plugin option `g:indent_guides_enable_on_vim_startup`.<br>- Improved Windows support.<br></td>
+    <td class="rowodd" valign="top" width="2000">- Added highlight support for files with a mixture of tab and space indent styles (thanks graywh).<br>- Added -bar to all the :commands so they can chain with other :commands (thanks to graywh).<br>- No longer overriding pre-defined custom highlight colors (thanks graywh).<br>- Using str2float to work around a float bug in some versions of Vim 7.2 (thanks voidus).</td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=14769">indent-guides-1.3.tar.gz</a></td>
-    <td class="roweven" valign="top" nowrap><b>1.3</b></td>
-    <td class="roweven" valign="top" nowrap><i>2011-01-17</i></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=14963">indent-guides-1.4.tar.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.4</b></td>
+    <td class="roweven" valign="top" nowrap><i>2011-02-06</i></td>
     <td class="roweven" valign="top" nowrap>7.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=23802">Nate Kane</a></i></td>
-    <td class="roweven" valign="top" width="2000">- Changed the default value of g:indent_guides_color_change_percent to 10.<br>- Added support for gVim themes that don't specify a `hi Normal guibg` color.</td>
+    <td class="roweven" valign="top" width="2000">- Added the new plugin option `g:indent_guides_enable_on_vim_startup`.<br>- Improved Windows support.<br></td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=14721">indent-guides-1.2.tar.gz</a></td>
-    <td class="rowodd" valign="top" nowrap><b>1.2</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2011-01-10</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=14769">indent-guides-1.3.tar.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.3</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2011-01-17</i></td>
     <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=23802">Nate Kane</a></i></td>
-    <td class="rowodd" valign="top" width="2000">- Customizable size for indent guides, eg. skinny guides (soft-tabs only).<br>- Customizable start indent level.<br>- Refactored some internal logic.</td>
+    <td class="rowodd" valign="top" width="2000">- Changed the default value of g:indent_guides_color_change_percent to 10.<br>- Added support for gVim themes that don't specify a `hi Normal guibg` color.</td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=14649">indent-guides-1.1.tar.gz</a></td>
-    <td class="roweven" valign="top" nowrap><b>1.1</b></td>
-    <td class="roweven" valign="top" nowrap><i>2010-12-29</i></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=14721">indent-guides-1.2.tar.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.2</b></td>
+    <td class="roweven" valign="top" nowrap><i>2011-01-10</i></td>
     <td class="roweven" valign="top" nowrap>7.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=23802">Nate Kane</a></i></td>
-    <td class="roweven" valign="top" width="2000">- Added basic support for terminal vim. See `:help indent-guides-terminal-vim` for more information.<br>- Cut down on rgb to hex color conversions by adding a big dictionary of color names and hex codes.<br>- Various bug fixes.<br></td>
+    <td class="roweven" valign="top" width="2000">- Customizable size for indent guides, eg. skinny guides (soft-tabs only).<br>- Customizable start indent level.<br>- Refactored some internal logic.</td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=14477">indent-guides-1.0.tar.gz</a></td>
-    <td class="rowodd" valign="top" nowrap><b>1.0</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2010-12-12</i></td>
-    <td class="rowodd" valign="top" nowrap>7.2</td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=14649">indent-guides-1.1.tar.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-12-29</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=23802">Nate Kane</a></i></td>
-    <td class="rowodd" valign="top" width="2000">Initial upload</td>
+    <td class="rowodd" valign="top" width="2000">- Added basic support for terminal vim. See `:help indent-guides-terminal-vim` for more information.<br>- Cut down on rgb to hex color conversions by adding a big dictionary of color names and hex codes.<br>- Various bug fixes.<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=14477">indent-guides-1.0.tar.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.0</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-12-12</i></td>
+    <td class="roweven" valign="top" nowrap>7.2</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=23802">Nate Kane</a></i></td>
+    <td class="roweven" valign="top" width="2000">Initial upload</td>
 </tr>
 </table>
 <!-- finish off the framework -->

@@ -167,7 +167,7 @@
   <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
   <td>
     Rating <b>13/4</b>,
-    Downloaded by 125  </td>
+    Downloaded by 192  </td>
   <td class="lightbg">
   <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
   </td>
@@ -186,7 +186,7 @@
 <tr><td>utility</td></tr>
 <tr><td>&nbsp;</td></tr>
 <tr><td class="prompt">description</td></tr>
-<tr><td>Plugin provides simple and efficient tools for managing a plain-text file of nested lists.<br><br>Screenshot: <a target="_blank" href="http://lucasoman.com/images/listfile.png">http://lucasoman.com/images/listfile.png</A><br>Detailed documentation: <a target="_blank" href="http://lucasoman.blogspot.com/2010/12/list-file-plugin-for-vim.html">http://lucasoman.blogspot.com/2010/12/list-file-plugin-for-vim.html</A><br><br>NOTE: I greatly appreciate any feedback. Feature suggestions, bug reports and other comments are encouraged. I'm eager to improve this plugin!<br><br>Feature highlights:<br><br>- Prioritizing<br>- Sorting<br>- Searching<br>- Tagging<br>- Unlimited nesting<br>- Timestamping<br>- Flexibility without complexity<br>- Efficient and convenient mappings</td></tr>
+<tr><td>Plugin provides simple and efficient tools for managing a plain-text file of nested lists.<br><br>Screenshot: <a target="_blank" href="http://lucasoman.com/images/listfile.png">http://lucasoman.com/images/listfile.png</A><br>Detailed documentation: <a target="_blank" href="http://lucasoman.blogspot.com/2010/12/list-file-plugin-for-vim.html">http://lucasoman.blogspot.com/2010/12/list-file-plugin-for-vim.html</A><br><br>NOTE: I greatly appreciate any feedback. Feature suggestions, bug reports and other comments are encouraged. I'm eager to improve this plugin!<br><br>Feature highlights:<br><br>- Prioritizing<br>- Sorting<br>- Setting due dates<br>- Searching<br>- Tagging<br>- Unlimited nesting<br>- Timestamping<br>- Flexibility without complexity<br>- Efficient and convenient mappings</td></tr>
 <tr><td>&nbsp;</td></tr>
 <tr><td class="prompt">install details</td></tr>
 <tr><td>Untar in your .vim dir. Adds only two files: the plugin itself and a syntax file.</td></tr>
@@ -221,6 +221,22 @@ Click on the package to download.
     <th valign="top">Vim version</th>
     <th valign="top">user</th>
     <th valign="top">release notes</th>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15228">listfile-1.2.0.tar.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.2.0</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2011-03-16</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=15263">Lucas Oman</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Added the following:<br>Due Dates: set a due date for an item and search for items by due date. Date format is very flexible, allowing ranges of days or weeks. See docs.<br>Default mark: optionally configure the default mark for new items.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=15156">listfile-1.1.0.tar.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.1.0</b></td>
+    <td class="roweven" valign="top" nowrap><i>2011-03-04</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=15263">Lucas Oman</a></i></td>
+    <td class="roweven" valign="top" width="2000">Greatly improved the intelligence of new item creation. New items use the mark from the item above them. They also will be created below the sub-items of the item above them. Before, the sub-items would be &quot;adopted&quot; by the new item.</td>
 </tr>
 <tr>
         <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=14545">listfile-1.0.4.tar.gz</a></td>

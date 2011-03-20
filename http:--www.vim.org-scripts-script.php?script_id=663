@@ -3,7 +3,7 @@
 
 <head>
   <link rel="Stylesheet" type="text/css" href="/css/style.css" >
-  <title>VimDebug - Visual debugger for Perl, Ruby, and Python (updated 01/2011) : vim online</title>
+  <title>VimDebug - Visual debugger for Perl, Ruby, and Python (updated 03/2011) : vim online</title>
   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
   <meta name="KEYWORDS" content="Vim, Vi IMproved, text editor, home, documentation, tips, scripts, news">
   <link rel="shortcut icon" type="image/x-icon" href="/images/vim_shortcut.ico">
@@ -156,7 +156,7 @@
         <tr>
           <td valign="top">
 
-<span class="txth1">VimDebug : Visual debugger for Perl, Ruby, and Python (updated 01/2011)</span> 
+<span class="txth1">VimDebug : Visual debugger for Perl, Ruby, and Python (updated 03/2011)</span> 
 
 <br>
 <br>
@@ -166,8 +166,8 @@
 <tr>
   <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
   <td>
-    Rating <b>109/47</b>,
-    Downloaded by 5135  </td>
+    Rating <b>113/48</b>,
+    Downloaded by 5184  </td>
   <td class="lightbg">
   <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
   </td>
@@ -186,7 +186,7 @@
 <tr><td>utility</td></tr>
 <tr><td>&nbsp;</td></tr>
 <tr><td class="prompt">description</td></tr>
-<tr><td>VimDebug gives developers the ability to visually step through their code and set breakpoints.&nbsp;&nbsp;Currently supported debuggers are Perl, Ruby, and Python.&nbsp;&nbsp;<br><br>This plugin is still in beta.&nbsp;&nbsp;Bug reports are needed.&nbsp;&nbsp;Code is available on github: <a target="_blank" href="https://github.com/kablamo/VimDebug">https://github.com/kablamo/VimDebug</A><br><br><br>Requirements<br><br>Ubuntu/OSX/Unix<br>Perl<br>A small number of Perl modules<br>Vim with +signs compiled in.<br><br><br>Usage<br><br>Set/reset these in your .vimrc if you want:<br><br>&lt;F12&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Start the debugger<br>&lt;Leader&gt;s/ Start the debugger with command line arguments<br>&lt;F10&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Restart debugger.&nbsp;&nbsp;Break points are saved.<br>&lt;F11&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Exit the debugger<br><br>&lt;F2&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Show console<br>&lt;F6&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Next<br>&lt;F7&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Step<br>&lt;F8&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Continue<br><br>&lt;Leader&gt;b&nbsp;&nbsp;Set break point on the current line<br>&lt;Leader&gt;c&nbsp;&nbsp;Clear break point on the current line<br><br>&lt;Leader&gt;v&nbsp;&nbsp;Show the value of variable under the cursor<br>&lt;Leader&gt;v/ Show the value of any expression<br><br>&lt;Leader&gt;/&nbsp;&nbsp;Enter a command for the debugger to execute, and echo the result.<br><br>let g:DBGRconsoleHeight&nbsp;&nbsp; = 7<br>let g:DBGRlineNumbers&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= 1</td></tr>
+<tr><td>VimDebug gives developers the ability to visually step through their code and set breakpoints.&nbsp;&nbsp;Currently supported debuggers are Perl, Ruby, and Python.&nbsp;&nbsp;<br><br>This plugin is still in beta.&nbsp;&nbsp;Code is available on github: <br><a target="_blank" href="https://github.com/kablamo/VimDebug">https://github.com/kablamo/VimDebug</A><br><br>For help or to report a bug, please go here:<br><a target="_blank" href="https://github.com/kablamo/VimDebug/issues">https://github.com/kablamo/VimDebug/issues</A><br><br><br><br>Requirements<br><br>Ubuntu/OSX/Unix<br>Perl<br>2 Perl modules<br>Vim with +signs compiled in.<br><br><br>Usage<br><br>Set/reset these in your .vimrc if you want:<br><br>&lt;F12&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Start the debugger<br>&lt;Leader&gt;s/ Start the debugger with command line arguments<br>&lt;F10&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Restart debugger.&nbsp;&nbsp;Break points are saved.<br>&lt;F11&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Exit the debugger<br><br>&lt;F2&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Show console<br>&lt;F6&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Next<br>&lt;F7&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Step<br>&lt;F8&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Continue<br><br>&lt;Leader&gt;b&nbsp;&nbsp;Set break point on the current line<br>&lt;Leader&gt;c&nbsp;&nbsp;Clear break point on the current line<br><br>&lt;Leader&gt;v&nbsp;&nbsp;Show the value of variable under the cursor<br>&lt;Leader&gt;v/ Show the value of any expression<br><br>&lt;Leader&gt;/&nbsp;&nbsp;Enter a command for the debugger to execute, and echo the result.<br><br>let g:DBGRconsoleHeight&nbsp;&nbsp; = 7<br>let g:DBGRlineNumbers&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= 1</td></tr>
 <tr><td>&nbsp;</td></tr>
 <tr><td class="prompt">install details</td></tr>
 <tr><td>$ tar xvzf VimDebug*tar.gz<br>$ cd VimDebug*<br>$ perl Makefile.PL<br>$ make<br>$ sudo make install<br>$ cp -r vim/*vim $VIMHOME/</td></tr>

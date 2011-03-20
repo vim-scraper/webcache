@@ -167,7 +167,7 @@
   <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
   <td>
     Rating <b>8/2</b>,
-    Downloaded by 46  </td>
+    Downloaded by 53  </td>
   <td class="lightbg">
   <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
   </td>
@@ -186,7 +186,7 @@
 <tr><td>utility</td></tr>
 <tr><td>&nbsp;</td></tr>
 <tr><td class="prompt">description</td></tr>
-<tr><td>This script has been deprecated, have a look at: <a target="_blank" href="http://www.vim.org/scripts/script.php?script_id=1147">http://www.vim.org/scripts/script.php?script_id=1147</A><br><br>The script offers more functionality and does not require Ruby support.</td></tr>
+<tr><td>When editing multiple files oftentimes it would be nice to be able to go back<br>and forth between the last edited files, just like a web browser allows the<br>user to navigate web pages forward and backward in history. The standard<br>:bn(ext) and :bp(revious) Vim commands allow to switch between next and<br>previous buffers respectively, but they do no take the history of the last<br>used files into account. Instead, they use the order in which the files were<br>opened, which can cause confusion in case the user expects to navigate forward<br>and backwards in history.&nbsp;&nbsp;For example, in case the user opened the files A,<br>B, and C in the order:<br><br>A, B, C<br><br>and the navigation history would be<br><br>A, B, C, B<br><br>then :bp(revious) in the last buffer (B) would open up buffer A, where C is<br>preferable. This buffer supplies the user with the commands :BufSurfForward<br>and :BufSurfBack to navigate buffers forwards and backwards according to the<br>navigation history.<br><br>The latest version of this plugin is available at:<br><br>&nbsp;&nbsp;<a target="_blank" href="http://github.com/ton/vim-bufsurf">http://github.com/ton/vim-bufsurf</A><br><br>Bugs can be reported there as well.</td></tr>
 <tr><td>&nbsp;</td></tr>
 <tr><td class="prompt">install details</td></tr>
 <tr><td></td></tr>
@@ -223,12 +223,20 @@ Click on the package to download.
     <th valign="top">release notes</th>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13847">bufsurf.tar.gz</a></td>
-    <td class="rowodd" valign="top" nowrap><b>0.1</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2010-09-17</i></td>
-    <td class="rowodd" valign="top" nowrap>7.2</td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15252">bufsurf.tar.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.2</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2011-03-19</i></td>
+    <td class="rowodd" valign="top" nowrap>7.3</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=5382">Ton van den Heuvel</a></i></td>
-    <td class="rowodd" valign="top" width="2000">Initial upload</td>
+    <td class="rowodd" valign="top" width="2000">- Rewritten in vimscript (drop Ruby dependency).<br>- Allow ignoring specific buffer names from showing up in the navigation history.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13847">bufsurf.tar.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.1</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-09-17</i></td>
+    <td class="roweven" valign="top" nowrap>7.2</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=5382">Ton van den Heuvel</a></i></td>
+    <td class="roweven" valign="top" width="2000">Initial upload</td>
 </tr>
 </table>
 <!-- finish off the framework -->

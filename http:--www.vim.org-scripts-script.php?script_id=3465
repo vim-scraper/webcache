@@ -166,8 +166,8 @@
 <tr>
   <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
   <td>
-    Rating <b>10/4</b>,
-    Downloaded by 13  </td>
+    Rating <b>110/32</b>,
+    Downloaded by 276  </td>
   <td class="lightbg">
   <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
   </td>
@@ -223,12 +223,36 @@ Click on the package to download.
     <th valign="top">release notes</th>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15092">tagbar.vba</a></td>
-    <td class="rowodd" valign="top" nowrap><b>1.0</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2011-02-23</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15165">tagbar.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.5</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2011-03-06</i></td>
     <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=27049">Jan Larres</a></i></td>
-    <td class="rowodd" valign="top" width="2000">Initial upload</td>
+    <td class="rowodd" valign="top" width="2000">- Type definitions can now include a path to a file with the ctags definition. This is especially useful for ftplugins that can now ship with a complete ctags and Tagbar configuration without requiring user intervention. Thanks to Jan Christoph Ebersbach for the suggestion.<br><br>- Added autofocus setting by Taybin Rutkin. This will put the cursor in the Tagbar window when it is opened.<br><br>- The &quot;scopes&quot; field is no longer needed in type definitions, the information is already there in &quot;scope2kind&quot;. Existing definitions will be ignored.<br><br>- Some fixes and improvements related to redrawing and window switching.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=15133">tagbar.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.2</b></td>
+    <td class="roweven" valign="top" nowrap><i>2011-02-28</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=27049">Jan Larres</a></i></td>
+    <td class="roweven" valign="top" width="2000">- Fix typo in Ruby definition<br><br>Thanks to Mishail for reporting.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15121">tagbar.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2011-02-26</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=27049">Jan Larres</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- Don't lose syntax highlighting when ':syntax enable' is called<br><br>- Allow expanding the Vim window when Tagbar is opened<br><br>Thanks to Hansi for reporting.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=15092">tagbar.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.0</b></td>
+    <td class="roweven" valign="top" nowrap><i>2011-02-23</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=27049">Jan Larres</a></i></td>
+    <td class="roweven" valign="top" width="2000">Initial upload</td>
 </tr>
 </table>
 <!-- finish off the framework -->

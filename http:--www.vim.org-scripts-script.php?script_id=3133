@@ -166,8 +166,8 @@
 <tr>
   <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
   <td>
-    Rating <b>4/1</b>,
-    Downloaded by 135  </td>
+    Rating <b>12/3</b>,
+    Downloaded by 174  </td>
   <td class="lightbg">
   <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
   </td>
@@ -223,28 +223,36 @@ Click on the package to download.
     <th valign="top">release notes</th>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13256">openbrowser.zip</a></td>
-    <td class="rowodd" valign="top" nowrap><b>0.0.2</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2010-06-28</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15180">openbrowser.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.0.3</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2011-03-09</i></td>
     <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=16618">tyru  </a></i></td>
-    <td class="rowodd" valign="top" width="2000">- Rename |g:openbrowser_isfname| to |g:openbrowser_iskeyword|.<br>variable |g:openbrowser_isfname| is still available for<br>backward compatibility.<br>- Specialize |g:openbrowser_iskeyword| value to get URI in &lt;cword&gt;.<br>- More readable messages.</td>
+    <td class="rowodd" valign="top" width="2000">- Implement g:openbrowser_default_search.<br>- Implement g:openbrowser_search_engines.<br>- Implement g:openbrowser_open_filepath_in_vim.<br>- Implement g:openbrowser_open_vim_command.<br>- Separate plugin/openbrowser.vim to autoload/openbrowser.vim to save the memory.<br>- Bundle urilib.vim (autoload/urilib.vim)<br>- Fix bug: openbrowser should open URI which has no scheme<br>&nbsp;&nbsp;(e.g.: example.com)</td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13249">openbrowser.zip</a></td>
-    <td class="roweven" valign="top" nowrap><b>0.0.1</b></td>
-    <td class="roweven" valign="top" nowrap><i>2010-06-27</i></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13256">openbrowser.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.0.2</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-06-28</i></td>
     <td class="roweven" valign="top" nowrap>7.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=16618">tyru  </a></i></td>
-    <td class="roweven" valign="top" width="2000">- Support opening file path.<br>- Fix minor bugs.</td>
+    <td class="roweven" valign="top" width="2000">- Rename |g:openbrowser_isfname| to |g:openbrowser_iskeyword|.<br>variable |g:openbrowser_isfname| is still available for<br>backward compatibility.<br>- Specialize |g:openbrowser_iskeyword| value to get URI in &lt;cword&gt;.<br>- More readable messages.</td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13244">openbrowser.zip</a></td>
-    <td class="rowodd" valign="top" nowrap><b>0.0.0</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2010-06-26</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13249">openbrowser.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.0.1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-06-27</i></td>
     <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=16618">tyru  </a></i></td>
-    <td class="rowodd" valign="top" width="2000">Initial upload</td>
+    <td class="rowodd" valign="top" width="2000">- Support opening file path.<br>- Fix minor bugs.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13244">openbrowser.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.0.0</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-06-26</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=16618">tyru  </a></i></td>
+    <td class="roweven" valign="top" width="2000">Initial upload</td>
 </tr>
 </table>
 <!-- finish off the framework -->

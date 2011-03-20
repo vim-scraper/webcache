@@ -167,7 +167,7 @@
   <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
   <td>
     Rating <b>16/4</b>,
-    Downloaded by 488  </td>
+    Downloaded by 516  </td>
   <td class="lightbg">
   <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
   </td>
@@ -223,52 +223,60 @@ Click on the package to download.
     <th valign="top">release notes</th>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=10702">runVimTests.zip</a></td>
-    <td class="rowodd" valign="top" nowrap><b>1.13</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2009-05-29</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15135">runVimTests.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.16</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2011-02-28</i></td>
     <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=9713">Ingo Karkat</a></i></td>
-    <td class="rowodd" valign="top" width="2000">ENH: Now including SKIP reasons in the summary (identical reasons are<br>condensed and counted) when not running with verbose output. I always wanted<br>to know why certain tests were skipped. (This requires GNU sort and uniq on<br>Windows.) </td>
+    <td class="rowodd" valign="top" width="2000">- Minor bugfixes and tweaks to the self-test. <br>- Renamed directory that the tests reside in from &quot;test/&quot; to &quot;tests/&quot;. This is just a personal preference, you can still put the tests into whatever directory structure. <br>- ENH: Added vimtest#ErrorAndQuit() for convenience. <br>- bugfix and enhancement to the vimtest#System() function. </td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=10208">runVimTests.zip</a></td>
-    <td class="roweven" valign="top" nowrap><b>1.12</b></td>
-    <td class="roweven" valign="top" nowrap><i>2009-03-14</i></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=10702">runVimTests.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.13</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-05-29</i></td>
     <td class="roweven" valign="top" nowrap>7.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=9713">Ingo Karkat</a></i></td>
-    <td class="roweven" valign="top" width="2000">- Added quoting of regexp in runVimTests.sh, which is needed in bash 3.0 and 3.1. Thanks to Anders Thøgersen for the patch. <br>- Now checking bash version. <br>- Only exiting with exit code 1 in case of test failures; using code 2 for invocation errors (i.e. wrong command-line arguments) and code 3 for internal errors.&nbsp;&nbsp;</td>
+    <td class="roweven" valign="top" width="2000">ENH: Now including SKIP reasons in the summary (identical reasons are<br>condensed and counted) when not running with verbose output. I always wanted<br>to know why certain tests were skipped. (This requires GNU sort and uniq on<br>Windows.) </td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=10190">runVimTests.zip</a></td>
-    <td class="rowodd" valign="top" nowrap><b>1.11</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2009-03-12</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=10208">runVimTests.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.12</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-03-14</i></td>
     <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=9713">Ingo Karkat</a></i></td>
-    <td class="rowodd" valign="top" width="2000">- TAP output is now parsed for SKIP and TODO directives, and the &quot;Bail out&quot; message. <br>- TODO TAP tests are included in the test output like failing tests. </td>
+    <td class="rowodd" valign="top" width="2000">- Added quoting of regexp in runVimTests.sh, which is needed in bash 3.0 and 3.1. Thanks to Anders Thøgersen for the patch. <br>- Now checking bash version. <br>- Only exiting with exit code 1 in case of test failures; using code 2 for invocation errors (i.e. wrong command-line arguments) and code 3 for internal errors.&nbsp;&nbsp;</td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=10177">runVimTests.zip</a></td>
-    <td class="roweven" valign="top" nowrap><b>1.10</b></td>
-    <td class="roweven" valign="top" nowrap><i>2009-03-11</i></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=10190">runVimTests.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.11</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-03-12</i></td>
     <td class="roweven" valign="top" nowrap>7.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=9713">Ingo Karkat</a></i></td>
-    <td class="roweven" valign="top" width="2000">- runVimTests drivers now also count test files (*.vim). <br>- ENH: Message output is now parsed for signals to the test driver. Implemented signals: BAILOUT!, ERROR, SKIP, SKIP(out), SKIP(msgout), SKIP(tap). </td>
+    <td class="roweven" valign="top" width="2000">- TAP output is now parsed for SKIP and TODO directives, and the &quot;Bail out&quot; message. <br>- TODO TAP tests are included in the test output like failing tests. </td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=10094">runVimTests.zip</a></td>
-    <td class="rowodd" valign="top" nowrap><b>1.01</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2009-03-03</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=10177">runVimTests.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.10</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-03-11</i></td>
     <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=9713">Ingo Karkat</a></i></td>
-    <td class="rowodd" valign="top" width="2000">Added annotated example tests. </td>
+    <td class="rowodd" valign="top" width="2000">- runVimTests drivers now also count test files (*.vim). <br>- ENH: Message output is now parsed for signals to the test driver. Implemented signals: BAILOUT!, ERROR, SKIP, SKIP(out), SKIP(msgout), SKIP(tap). </td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=10086">runVimTests.zip</a></td>
-    <td class="roweven" valign="top" nowrap><b>1.00</b></td>
-    <td class="roweven" valign="top" nowrap><i>2009-03-02</i></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=10094">runVimTests.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.01</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-03-03</i></td>
     <td class="roweven" valign="top" nowrap>7.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=9713">Ingo Karkat</a></i></td>
-    <td class="roweven" valign="top" width="2000">Initial upload</td>
+    <td class="roweven" valign="top" width="2000">Added annotated example tests. </td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=10086">runVimTests.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.00</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-03-02</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=9713">Ingo Karkat</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Initial upload</td>
 </tr>
 </table>
 <!-- finish off the framework -->

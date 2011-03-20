@@ -3,7 +3,7 @@
 
 <head>
   <link rel="Stylesheet" type="text/css" href="/css/style.css" >
-  <title>Error : vim online</title>
+  <title>align - Align the right ends of statements together. : vim online</title>
   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
   <meta name="KEYWORDS" content="Vim, Vi IMproved, text editor, home, documentation, tips, scripts, news">
   <link rel="shortcut icon" type="image/x-icon" href="/images/vim_shortcut.ico">
@@ -156,117 +156,81 @@
         <tr>
           <td valign="top">
 
-<p class="errorheader">
-<b>Vim Online Error</b><br><br>
-</p>
-<p>
-script: I couldn't find the script you requested (script_id=3467), are you sure it exists?</p>
+<span class="txth1">align : Align the right ends of statements together.</span> 
+
+<br>
+<br>
+
+<!-- karma table -->
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
+  <td>
+    Rating <b>-2/2</b>,
+    Downloaded by 37  </td>
+  <td class="lightbg">
+  <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
+  </td>
+  <td>
+    <a href="http://vim.wikia.com/wiki/Script:3467">Vim wiki</a>
+  </td>  
+</tr>
+</table>
 <p>
 
-<!-- fill up with spaces to make the main field wide enough -->
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
+<table cellspacing="0" cellpadding="0" border="0">
+<tr><td class="prompt">created by</td></tr>
+<tr><td><a href="/account/profile.php?user_id=27211">Zohair Ahmad</a></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">script type</td></tr>
+<tr><td>utility</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">description</td></tr>
+<tr><td>I wrote this script to help write verilog files that were compatible with my <br>company's coding standard.<br><br>This script shifts the character under the cursor to a defined point. It can<br>thus be used to align the *right* side of code to beautify or to confirm to<br>coding standards.<br><br>Spaces are inserted before the current cursor position. The number of spaces<br>inserted aligns the text to the lines above it. For example, if you have the<br>following chunk of code.<br><br>reg [13:0] resultant&nbsp;&nbsp;;<br>reg&nbsp;&nbsp;[7:0] bytea;<br><br>If you load the script and press ';;' while on the semicolon on the second line,<br>the text will become like so.<br><br>reg [13:0] resultant&nbsp;&nbsp;;<br>reg&nbsp;&nbsp;[7:0] bytea&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;<br><br>NOTE: There has to be a previous aligned line for the script to make a match<br>from.<br><br>This can also be used as part of a recorded macro. For example, to align the<br>following lines of code, to the top line.<br><br>1&nbsp;&nbsp; PORT_00&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (port_00a&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ),// Comment 1<br>2&nbsp;&nbsp; PORT_01(port_01aa),// Comment 2<br>3&nbsp;&nbsp; PORT_02(port_02aaa),// Comment 3<br>4&nbsp;&nbsp; PORT_03(port_03aaaa),// Comment 4<br>5&nbsp;&nbsp; PORT_04(port_04a),// Comment 5<br>6<br>7&nbsp;&nbsp; PORT_T_00(port_t_00a),// Comment 6<br>8&nbsp;&nbsp; PORT_T_01(port_t_01aa),// Comment 7<br>9&nbsp;&nbsp; PORT_T_02(port_t_02aaa),// Comment 8<br>10&nbsp;&nbsp;PORT_T_03(port_t_03aaaa),// Comment 9<br><br>We can record a macro. Place your cursor on the first char of line 2 (the digit<br>2) and press 'qzf(;;j^q'<br>&nbsp;&nbsp;q&nbsp;&nbsp; - start recording<br>&nbsp;&nbsp;z&nbsp;&nbsp; - record in register z<br>&nbsp;&nbsp;f(&nbsp;&nbsp;- go to first occurrence of (<br>&nbsp;&nbsp;;;&nbsp;&nbsp;- align<br>&nbsp;&nbsp;j&nbsp;&nbsp; - move down<br>&nbsp;&nbsp;^&nbsp;&nbsp; - go to start of line<br>&nbsp;&nbsp;q&nbsp;&nbsp; - end recording.<br><br>Now pressing @z on the start of line 3 will cause it to align. And the same for<br>all the other lines. The same can be done for the closing brackets to get the<br>following.<br><br>1&nbsp;&nbsp; PORT_00&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (port_00a&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ), // Comment 1<br>2&nbsp;&nbsp; PORT_01&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (port_01aa&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;), // Comment 2<br>3&nbsp;&nbsp; PORT_02&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (port_02aaa&nbsp;&nbsp;&nbsp;&nbsp; ), // Comment 3<br>4&nbsp;&nbsp; PORT_03&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (port_03aaaa&nbsp;&nbsp;&nbsp;&nbsp;), // Comment 4<br>5&nbsp;&nbsp; PORT_04&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (port_04a&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ), // Comment 5<br>6<br>7&nbsp;&nbsp; PORT_T_00&nbsp;&nbsp;&nbsp;&nbsp; (port_t_00a&nbsp;&nbsp;&nbsp;&nbsp; ), // Comment 6<br>8&nbsp;&nbsp; PORT_T_01&nbsp;&nbsp;&nbsp;&nbsp; (port_t_01aa&nbsp;&nbsp;&nbsp;&nbsp;), // Comment 7<br>9&nbsp;&nbsp; PORT_T_02&nbsp;&nbsp;&nbsp;&nbsp; (port_t_02aaa&nbsp;&nbsp; ), // Comment 8<br>10&nbsp;&nbsp;PORT_T_03&nbsp;&nbsp;&nbsp;&nbsp; (port_t_03aaaa&nbsp;&nbsp;), // Comment 9<br></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">install details</td></tr>
+<tr><td>Put the script in some folder (lets say $ALIGN)<br>add this to your ~/.vimrc<br><br>source $ALIGN/align.vim<br></td></tr>
+<tr><td>&nbsp;</td></tr>
+</table>
+
+<!-- rating table -->
+<form name="rating">
+<input type="hidden" name="script_id" value="3467">
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>rate this script</b></td>
+  <td valign="middle">
+    <input type="radio" name="rating" value="life_changing">Life Changing
+    <input type="radio" name="rating" value="helpful">Helpful
+    <input type="radio" name="rating" value="unfulfilling">Unfulfilling&nbsp;
+    <input type="submit" value="rate">
+  </td>
+</tr>
+</table>
+</form>
+<span class="txth2">script versions</span> (<a href="add_script_version.php?script_id=3467">upload new version</a>)
+<p>
+Click on the package to download.
+<p>
+
+<table cellspacing="2" cellpadding="4" border="0" width="100%">
+<tr class='tableheader'>
+        <th valign="top">package</th>
+    <th valign="top">script version</th>
+    <th valign="top">date</th>
+    <th valign="top">Vim version</th>
+    <th valign="top">user</th>
+    <th valign="top">release notes</th>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15104">align.tar.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.0</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2011-02-24</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=27211">Zohair Ahmad</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Initial upload</td>
+</tr>
+</table>
 <!-- finish off the framework -->
           </td>
         </tr>

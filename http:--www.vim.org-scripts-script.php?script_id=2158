@@ -166,8 +166,8 @@
 <tr>
   <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
   <td>
-    Rating <b>65/26</b>,
-    Downloaded by 1343  </td>
+    Rating <b>73/28</b>,
+    Downloaded by 1438  </td>
   <td class="lightbg">
   <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
   </td>
@@ -186,10 +186,10 @@
 <tr><td>utility</td></tr>
 <tr><td>&nbsp;</td></tr>
 <tr><td class="prompt">description</td></tr>
-<tr><td>Show changes made to current buffer since the last save. This plugin is based from an example in the Hacking Vim book. The differences are that this functionality is in the form of a plugin, is a bit more robust, and can be toggled.<br><br>COMMANDS<br>DiffChangesDiffToggle -- toggles the side-by-side diff view<br>DiffChangesPatchToggle -- toggles the patch view<br><br>MAPPINGS (&lt;leader&gt; is set to '\&#039, by default)<br>&lt;leader&gt;dcd -- DiffChangesDiffToggle<br>&lt;leader&gt;dcp -- DiffChangesPatchToggle<br><br>You can override the default mappings by creating mappings like this:<br><br>nmap &lt;F6&gt; &lt;Plug&gt;DiffChangesDiffToggle<br>nmap &lt;F7&gt; &lt;Plug&gt;DiffChangesPatchToggle<br><br>OPTIONS<br>g:diffchanges_patch_cmd -- The command that's used to generate the patch (default: 'diff -u').</td></tr>
+<tr><td>Show changes made to current buffer since the last save. This plugin is based from an example in the Hacking Vim book. The differences are that this functionality is in the form of a plugin, is a bit more robust, and can be toggled.</td></tr>
 <tr><td>&nbsp;</td></tr>
 <tr><td class="prompt">install details</td></tr>
-<tr><td>Place script in ~/.vim/plugin and start vim.</td></tr>
+<tr><td>Extract to ~/.vim</td></tr>
 <tr><td>&nbsp;</td></tr>
 </table>
 
@@ -223,15 +223,15 @@ Click on the package to download.
     <th valign="top">release notes</th>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=11831">diffchanges.vim</a></td>
-    <td class="rowodd" valign="top" nowrap><b>0.2.6</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2009-11-30</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15175">jmcantrell-vim-diffchanges-3b047fc.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.3</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2011-03-08</i></td>
     <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=11888">Jeremy Cantrell</a></i></td>
-    <td class="rowodd" valign="top" width="2000">Fixed problem with diff mode where diff was not started on the first line.</td>
+    <td class="rowodd" valign="top" width="2000">Add docs, repackage</td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=11830">diffchanges.vim</a></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=11831">diffchanges.vim</a></td>
     <td class="roweven" valign="top" nowrap><b>0.2.6</b></td>
     <td class="roweven" valign="top" nowrap><i>2009-11-30</i></td>
     <td class="roweven" valign="top" nowrap>7.0</td>
@@ -239,60 +239,68 @@ Click on the package to download.
     <td class="roweven" valign="top" width="2000">Fixed problem with diff mode where diff was not started on the first line.</td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=8429">diffchanges.vim</a></td>
-    <td class="rowodd" valign="top" nowrap><b>0.2.5</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2008-03-09</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=11830">diffchanges.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.2.6</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-11-30</i></td>
     <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=11888">Jeremy Cantrell</a></i></td>
-    <td class="rowodd" valign="top" width="2000">Improved some of the error checking and fixed a few regressions from the previous upload.</td>
+    <td class="rowodd" valign="top" width="2000">Fixed problem with diff mode where diff was not started on the first line.</td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=8426">diffchanges.vim</a></td>
-    <td class="roweven" valign="top" nowrap><b>0.2.4</b></td>
-    <td class="roweven" valign="top" nowrap><i>2008-03-08</i></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=8429">diffchanges.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.2.5</b></td>
+    <td class="roweven" valign="top" nowrap><i>2008-03-09</i></td>
     <td class="roweven" valign="top" nowrap>7.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=11888">Jeremy Cantrell</a></i></td>
-    <td class="roweven" valign="top" width="2000">Added a check to make sure the script only loads in Vim 7 (Thanks to Scott Urban).</td>
+    <td class="roweven" valign="top" width="2000">Improved some of the error checking and fixed a few regressions from the previous upload.</td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=8371">diffchanges.vim</a></td>
-    <td class="rowodd" valign="top" nowrap><b>0.2.3</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2008-02-29</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=8426">diffchanges.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.2.4</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2008-03-08</i></td>
     <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=11888">Jeremy Cantrell</a></i></td>
-    <td class="rowodd" valign="top" width="2000">Made it easier to :source the plugin after it has already been loaded.</td>
+    <td class="rowodd" valign="top" width="2000">Added a check to make sure the script only loads in Vim 7 (Thanks to Scott Urban).</td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=8369">diffchanges.vim</a></td>
-    <td class="roweven" valign="top" nowrap><b>0.2.2</b></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=8371">diffchanges.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.2.3</b></td>
     <td class="roweven" valign="top" nowrap><i>2008-02-29</i></td>
     <td class="roweven" valign="top" nowrap>7.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=11888">Jeremy Cantrell</a></i></td>
-    <td class="roweven" valign="top" width="2000">Bug fixes and a few enhancements (Thanks to Ben Armston).</td>
+    <td class="roweven" valign="top" width="2000">Made it easier to :source the plugin after it has already been loaded.</td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=8337">diffchanges.vim</a></td>
-    <td class="rowodd" valign="top" nowrap><b>0.2.1</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2008-02-23</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=8369">diffchanges.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.2.2</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2008-02-29</i></td>
     <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=11888">Jeremy Cantrell</a></i></td>
-    <td class="rowodd" valign="top" width="2000">Added another mode for viewing a patch of the changes made since last save</td>
+    <td class="rowodd" valign="top" width="2000">Bug fixes and a few enhancements (Thanks to Ben Armston).</td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=8331">diffchanges.vim</a></td>
-    <td class="roweven" valign="top" nowrap><b>0.2</b></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=8337">diffchanges.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.2.1</b></td>
     <td class="roweven" valign="top" nowrap><i>2008-02-23</i></td>
     <td class="roweven" valign="top" nowrap>7.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=11888">Jeremy Cantrell</a></i></td>
-    <td class="roweven" valign="top" width="2000">Made functions, variables, and mappings &quot;script-friendly&quot;. Thanks #vim!</td>
+    <td class="roweven" valign="top" width="2000">Added another mode for viewing a patch of the changes made since last save</td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=8294">diffchanges.vim</a></td>
-    <td class="rowodd" valign="top" nowrap><b>0.1</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2008-02-18</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=8331">diffchanges.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.2</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2008-02-23</i></td>
     <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=11888">Jeremy Cantrell</a></i></td>
-    <td class="rowodd" valign="top" width="2000">Initial upload</td>
+    <td class="rowodd" valign="top" width="2000">Made functions, variables, and mappings &quot;script-friendly&quot;. Thanks #vim!</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=8294">diffchanges.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.1</b></td>
+    <td class="roweven" valign="top" nowrap><i>2008-02-18</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=11888">Jeremy Cantrell</a></i></td>
+    <td class="roweven" valign="top" width="2000">Initial upload</td>
 </tr>
 </table>
 <!-- finish off the framework -->

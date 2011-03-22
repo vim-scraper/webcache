@@ -167,7 +167,7 @@
   <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
   <td>
     Rating <b>4/3</b>,
-    Downloaded by 127  </td>
+    Downloaded by 131  </td>
   <td class="lightbg">
   <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
   </td>
@@ -186,7 +186,7 @@
 <tr><td>utility</td></tr>
 <tr><td>&nbsp;</td></tr>
 <tr><td class="prompt">description</td></tr>
-<tr><td>Preview plugin is a tool developed to help you to preview markup files such as *.markdown, *.rdoc, *.textile and *.html when you are editing them. It builds html files and opens them in your browser.<br><br>The plugin requires a builtin ruby interpreter. It means that your Vim should be compiled with '--enable-rubyinterp' option. To find out does you Vim have builtin ruby interpreter you can do the next:<br>&nbsp;&nbsp;&nbsp;&nbsp;:echo has('ruby')<br>If output is '1' the ruby interpreter is builtin. The second thing you should verify is that you have installed all necessary ruby gems. <br><br>Supported formats and dependecies:<br>&nbsp;&nbsp;&nbsp;&nbsp;* markdown(md, mkd, mkdn, mdown) - depends on 'bluecloth' ruby gem<br>&nbsp;&nbsp;&nbsp;&nbsp;* rdoc -&nbsp;&nbsp;depends on 'github-markup' ruby gem<br>&nbsp;&nbsp;&nbsp;&nbsp;* textile - depends on 'RedCloth' ruby gem<br>&nbsp;&nbsp;&nbsp;&nbsp;* html(htm) - no dependecies<br><br>Homepage: <a target="_blank" href="https://github.com/greyblake/vim-preview">https://github.com/greyblake/vim-preview</A><br><br>Credits:<br>&nbsp;&nbsp;&nbsp;&nbsp;Donald Ephraim Curtis (support for OSX, fixing bugs)<br><br><br></td></tr>
+<tr><td>Preview plugin is a tool developed to help you to preview markup files such as *.markdown, *.rdoc, *.textile and *.html when you are editing them. It builds html files and opens them in your browser.<br><br>The plugin requires a builtin ruby interpreter. It means that your Vim should be compiled with '--enable-rubyinterp' option. To find out does you Vim have builtin ruby interpreter you can do the next:<br>&nbsp;&nbsp;&nbsp;&nbsp;:echo has('ruby')<br>If output is '1' the ruby interpreter is builtin. The second thing you should verify is that you have installed all necessary ruby gems. <br><br>Supported formats and dependecies:<br>&nbsp;&nbsp;&nbsp;&nbsp;* markdown(md, mkd, mkdn, mdown) - depends on 'bluecloth' ruby gem<br>&nbsp;&nbsp;&nbsp;&nbsp;* rdoc -&nbsp;&nbsp;depends on 'github-markup' ruby gem<br>&nbsp;&nbsp;&nbsp;&nbsp;* textile - depends on 'RedCloth' ruby gem<br>&nbsp;&nbsp;&nbsp;&nbsp;* ronn&nbsp;&nbsp;-depends on 'ronn' ruby gem<br>&nbsp;&nbsp;&nbsp;&nbsp;* html(htm) - no dependecies<br><br><br>Homepage: <a target="_blank" href="https://github.com/greyblake/vim-preview">https://github.com/greyblake/vim-preview</A><br><br>Credits:<br>&nbsp;&nbsp;&nbsp;&nbsp;Donald Ephraim Curtis (support for OSX, fixing bugs)<br>&nbsp;&nbsp;&nbsp;&nbsp;Sung Pae (fixing bugs)<br>&nbsp;&nbsp;&nbsp;&nbsp;Rdark (support for ronn file format)<br><br><br></td></tr>
 <tr><td>&nbsp;</td></tr>
 <tr><td class="prompt">install details</td></tr>
 <tr><td>Unzip in ~/.vim (~\vimfiles on Windows). Use :helptags ~/.vim/doc to enable :help.</td></tr>
@@ -223,44 +223,52 @@ Click on the package to download.
     <th valign="top">release notes</th>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=14697">vim-preview-0.5.zip</a></td>
-    <td class="rowodd" valign="top" nowrap><b>0.5</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2011-01-07</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15274">vim-preview-0.6.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.6</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2011-03-22</i></td>
     <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=23420">Sergey Potapov</a></i></td>
-    <td class="rowodd" valign="top" width="2000">No more zombies</td>
+    <td class="rowodd" valign="top" width="2000">Added ronn format support.</td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=14680">vim-preview-0.4.zip</a></td>
-    <td class="roweven" valign="top" nowrap><b>0.4</b></td>
-    <td class="roweven" valign="top" nowrap><i>2011-01-04</i></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=14697">vim-preview-0.5.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.5</b></td>
+    <td class="roweven" valign="top" nowrap><i>2011-01-07</i></td>
     <td class="roweven" valign="top" nowrap>7.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=23420">Sergey Potapov</a></i></td>
-    <td class="roweven" valign="top" width="2000">Fixed bugs: Supporting filenames with spaces.</td>
+    <td class="roweven" valign="top" width="2000">No more zombies</td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=14671">vim-preview-0.3.zip</a></td>
-    <td class="rowodd" valign="top" nowrap><b>0.3</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2011-01-02</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=14680">vim-preview-0.4.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.4</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2011-01-04</i></td>
     <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=23420">Sergey Potapov</a></i></td>
-    <td class="rowodd" valign="top" width="2000">Fixed bugs with Safari. Extended CSS stiles.</td>
+    <td class="rowodd" valign="top" width="2000">Fixed bugs: Supporting filenames with spaces.</td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=14390">vim-preview.zip</a></td>
-    <td class="roweven" valign="top" nowrap><b>0.2</b></td>
-    <td class="roweven" valign="top" nowrap><i>2010-11-29</i></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=14671">vim-preview-0.3.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.3</b></td>
+    <td class="roweven" valign="top" nowrap><i>2011-01-02</i></td>
     <td class="roweven" valign="top" nowrap>7.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=23420">Sergey Potapov</a></i></td>
-    <td class="roweven" valign="top" width="2000">Added more options for customizing.<br>New commands are available for mapping.<br>Fixed a little bug.</td>
+    <td class="roweven" valign="top" width="2000">Fixed bugs with Safari. Extended CSS stiles.</td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=14389">vim-preview.zip</a></td>
-    <td class="rowodd" valign="top" nowrap><b>0.1</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2010-11-28</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=14390">vim-preview.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.2</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-11-29</i></td>
     <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=23420">Sergey Potapov</a></i></td>
-    <td class="rowodd" valign="top" width="2000">Initial upload</td>
+    <td class="rowodd" valign="top" width="2000">Added more options for customizing.<br>New commands are available for mapping.<br>Fixed a little bug.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=14389">vim-preview.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.1</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-11-28</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=23420">Sergey Potapov</a></i></td>
+    <td class="roweven" valign="top" width="2000">Initial upload</td>
 </tr>
 </table>
 <!-- finish off the framework -->

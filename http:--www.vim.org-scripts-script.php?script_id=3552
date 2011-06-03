@@ -1,0 +1,388 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+  <link rel="Stylesheet" type="text/css" href="/css/style.css" >
+  <title>Message Formatter - An plugin to ease typing of repetitive of code : vim online</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <meta name="KEYWORDS" content="Vim, Vi IMproved, text editor, home, documentation, tips, scripts, news">
+  <link rel="shortcut icon" type="image/x-icon" href="/images/vim_shortcut.ico">
+</head>
+
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff"> 
+
+<!-- HEADER, SPONSOR IMAGE, VIM IMAGE AND BOOK AD -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+  <td class="lightbg">&nbsp;&nbsp;&nbsp;</td>
+  <td class="lightbg" align="left"><a href="/sponsor/index.php"><img src="/images/sponsorvim.gif" alt="sponsor Vim development" border="0"></a></td>
+    <td class="lightbg" align="center"><a href="/index.php"><img src="/images/vim_header.gif" border="0" alt="Vim logo"></a></td>
+    <td class="lightbg" align="right"><a href="http://iccf-holland.org/click5.html"><img src="/images/buyhelplearn.gif" alt="Vim Book Ad" border="0"></a></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="darkbg"><img src="/images/spacer.gif" width="1" height="10" alt=""></td>
+  </tr>
+</table>
+<!-- THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+  <col width="180">
+  <col width="1">
+
+  <tr valign="top">
+    <td class="sidebar">
+      <table width="180" cellpadding="4" cellspacing="0" border="0">
+        <tr valign="top">
+          <td class="sidebar">
+
+<!-- INCLUDE THE PAGE NAVIGATION -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+    <tr>
+        <td><small>not logged in (<a href="/login.php">login</a>)</small></td>
+    </tr>
+    <tr><td>
+<small>&nbsp;</small>
+<form action="http://www.google.com/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-3005259998294962:bvyni59kjr1" />
+    <input type="hidden" name="ie" value="ISO-8859-1" />
+    <input type="text" name="q" size="20" />
+    <br>
+    <input type="submit" name="sa" value="Search" />
+  </div>
+</form>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+    </td></tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="1"></td>
+    </tr>
+    <tr>
+        <td class="darkbg"><img src="/images/spacer.gif" alt='' border="0" height="3"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="2"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/index.php">Home</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/search.php">Advanced search</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/about.php">About Vim</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/community.php">Community</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/news/news.php">News</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/sponsor/index.php">Sponsoring</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/trivia.php">Trivia</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/docs.php">Documentation</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/download.php">Download</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/scripts/index.php">Scripts</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/tips/index.php">Tips</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/account/index.php">My Account</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/huh.php">Site Help</a></td>
+        </tr>
+</table>
+
+            <table width="172" cellpadding="0" cellspacing="0" border="0">
+              <tr><td><img src="/images/spacer.gif" alt="" border="0" width="1" height="8"></td></tr>
+              <tr><td class="darkbg"><img src="/images/spacer.gif" width="1" height="3" alt=""></td></tr>
+            </table>
+            <br>
+
+<!-- INCLUDE THE PAGE SIDEBAR TEXT -->
+&nbsp;
+
+          </td>
+        </tr>
+      </table>
+    </td>
+
+    <td class="darkbg"><img src="/images/spacer.gif" width="1" height="1" border="0" alt=""><br></td>
+    <td>
+      <table width="100%" cellpadding="10" cellspacing="0" border="0" bordercolor="red">
+        <tr>
+          <td valign="top">
+
+<span class="txth1">Message Formatter : An plugin to ease typing of repetitive of code</span> 
+
+<br>
+<br>
+
+<!-- karma table -->
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
+  <td>
+    Rating <b>1/1</b>,
+    Downloaded by 112  </td>
+  <td class="lightbg">
+  <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
+  </td>
+  <td>
+    <a href="http://vim.wikia.com/wiki/Script:3552">Vim wiki</a>
+  </td>  
+</tr>
+</table>
+<p>
+
+<table cellspacing="0" cellpadding="0" border="0">
+<tr><td class="prompt">created by</td></tr>
+<tr><td><a href="/account/profile.php?user_id=64">Salman Halim</a></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">script type</td></tr>
+<tr><td>utility</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">description</td></tr>
+<tr><td>This plugin allows the simplification of repetitive code fragments, allowing<br>much faster entry; for example, this text<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;getset&nbsp;&nbsp;List&lt;String&gt;&nbsp;&nbsp;names<br><br>gets converted to<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public List&lt;String&gt; getNames()<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return m_names;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public void setNames( List&lt;String&gt; val )<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;m_names = val;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br><br>More importantly, it figures out when you're defining a boolean variable and<br>replaces the &quot;get&quot; with &quot;is&quot;; thus,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;getset&nbsp;&nbsp;boolean&nbsp;&nbsp;old enough<br><br>becomes<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public boolean isOldEnough()<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return m_oldEnough;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public void setOldEnough( boolean val )<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;m_oldEnough = val;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br><br>Observe how &quot;old enough&quot; was automatically camel-cased to &quot;oldEnough&quot;, and,<br>when used with &quot;get&quot; or &quot;is&quot;, was also capitalized. The same variable can be<br>used over and over again, each time with (if desired) different formatting<br>directives; for example, this template pattern<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;My name is {john::f_fName} and my full name is {{fName} smith::uq_fullName}.<br><br>gets expanded to<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;My name is John and my full name is &quot;JOHN SMITH&quot;.<br><br>Observe, also, how the &quot;fullName&quot; directive recursively contained and expanded<br>the fName directive.</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">install details</td></tr>
+<tr><td>Unzip into a directory in your &runtimepath.</td></tr>
+<tr><td>&nbsp;</td></tr>
+</table>
+
+<!-- rating table -->
+<form name="rating">
+<input type="hidden" name="script_id" value="3552">
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>rate this script</b></td>
+  <td valign="middle">
+    <input type="radio" name="rating" value="life_changing">Life Changing
+    <input type="radio" name="rating" value="helpful">Helpful
+    <input type="radio" name="rating" value="unfulfilling">Unfulfilling&nbsp;
+    <input type="submit" value="rate">
+  </td>
+</tr>
+</table>
+</form>
+<span class="txth2">script versions</span> (<a href="add_script_version.php?script_id=3552">upload new version</a>)
+<p>
+Click on the package to download.
+<p>
+
+<table cellspacing="2" cellpadding="4" border="0" width="100%">
+<tr class='tableheader'>
+        <th valign="top">package</th>
+    <th valign="top">script version</th>
+    <th valign="top">date</th>
+    <th valign="top">Vim version</th>
+    <th valign="top">user</th>
+    <th valign="top">release notes</th>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15612">MessageFormatter.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>7.0</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2011-05-09</i></td>
+    <td class="rowodd" valign="top" nowrap>7.3</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=64">Salman Halim</a></i></td>
+    <td class="rowodd" valign="top" width="2000">New option: g:MessageFormatter_moveArgumentsToStart; if 1 (the default), input arguments are moved to the front for easier expansion. See :help<br>g:MessageFormatter_moveArgumentsToStart for details.<br><br>More new options: g:MessageFormatter_highlightDirectives and g:MessageFormatter_highlightDirectivesLink; control the highlighting of directives in text to<br>make them stand out.<br><br>New command: Setcolordirectives: toggles the directive highlighting feature.<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=15600">MessageFormatter.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>6.5</b></td>
+    <td class="roweven" valign="top" nowrap><i>2011-05-07</i></td>
+    <td class="roweven" valign="top" nowrap>7.3</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=64">Salman Halim</a></i></td>
+    <td class="roweven" valign="top" width="2000">New modifier:<br><br>o: if the value is non-empty, prepends a &quot;, &quot; (a comma and a space); otherwise, leaves it empty<br>P: Just like 'p', but ignores empty strings<br>Q: Just like 'q', but ignores empty strings<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15589">MessageFormatter.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>6.0</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2011-05-05</i></td>
+    <td class="rowodd" valign="top" nowrap>7.3</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=64">Salman Halim</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Added an option: g:MessageFormatter_autoAddJumpToEnd; if this is 1 (the default) and if a parameter contains !jump! directives, another !jump! is added to the end to allow the user to quickly continue typing beyond the template. See :help g:MessageFormatter_autoAddJumpToEnd.<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=15581">MessageFormatter.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>5.5</b></td>
+    <td class="roweven" valign="top" nowrap><i>2011-05-04</i></td>
+    <td class="roweven" valign="top" nowrap>7.3</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=64">Salman Halim</a></i></td>
+    <td class="roweven" valign="top" width="2000">Fixed bug in default processing.<br><br>Improved help and added examples to help (:help MessageFormatter_Examples).<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15576">MessageFormatter.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>5.0</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2011-05-03</i></td>
+    <td class="rowodd" valign="top" nowrap>7.3</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=64">Salman Halim</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Added a default value mechanism: if a template variable is defined like this:<br><br>{def John::firstName}<br><br>then, during expansion, if an empty value is passed in for firstName, &quot;John&quot; will be used instead. This value can be recursive and may contain other<br>parameters, as before. (Including other &quot;def&quot; expansions.)<br><br>Also, parameters with default values may be left out to have their default value used; see :help MessageFormatter_def for more details.<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=15566">MessageFormatter.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>4.5</b></td>
+    <td class="roweven" valign="top" nowrap><i>2011-05-02</i></td>
+    <td class="roweven" valign="top" nowrap>7.3</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=64">Salman Halim</a></i></td>
+    <td class="roweven" valign="top" width="2000">Bug fixes, mostly, though added one more option:<br><br>g:MessageFormatter_formatCurrentLineAsFallback (default 1): if attempting to format a template via the &lt;Plug&gt;FormatCurrentTemplate mapping when not actually<br>in a template, will fall back to formatting just the current line as an ad-hoc template if this is 1. If 0, will give an error message instead.<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15548">MessageFormatter.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>4.0</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2011-04-30</i></td>
+    <td class="rowodd" valign="top" nowrap>7.3</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=64">Salman Halim</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Added a proper help file; no actual functionality changes.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=15543">MessageFormatter.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>4.0</b></td>
+    <td class="roweven" valign="top" nowrap><i>2011-04-29</i></td>
+    <td class="roweven" valign="top" nowrap>7.3</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=64">Salman Halim</a></i></td>
+    <td class="roweven" valign="top" width="2000">Templates can be expanded inline while typing, allowing for macro expansion.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15484">MessageFormatter.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>3.5</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2011-04-20</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=64">Salman Halim</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Added a command version of FormatContainedMessage called Formatcontainedmessage that passes everything on the command-line as-is to the function and echoes<br>the result.<br><br>Added a new default value type:<br><br>If the default value for for a parameter (passed to FormatContainedMessage) is &quot;ask&quot;, it defaults to asking the user (via an input). If the value is anything<br>followed by &quot;ask&quot;, it will use that as the default value for the input.<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=15481">MessageFormatter.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>3.0</b></td>
+    <td class="roweven" valign="top" nowrap><i>2011-04-19</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=64">Salman Halim</a></i></td>
+    <td class="roweven" valign="top" width="2000">Fairly big changes. RELIES UPON MY GetVar.vim (<a target="_blank" href="http://vim.sourceforge.net/scripts/script.php?script_id=353">http://vim.sourceforge.net/scripts/script.php?script_id=353</A>) script now.<br><br>New formatting parameter:<br><br>n: non-displayed value. The return value is suppressed--useful for adding a value to the cache to be used later.<br><br>New function:<br><br>FormatContainedMessage: Works like MessageFormatter#FormatMessage except that it's always recursive and that its original text string can contain default<br>values for the parameters (so the second parameter is optional); for example,<br><br>Some new commands, also.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15440">MessageFormatter.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.0</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2011-04-12</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=64">Salman Halim</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Added new formatting modifier:<br><br>e: Escapes out quotation marks (&quot;) and backslashes, leaving the value suitable for placing in quotes. For example, {e_fName} where fName is Jo\nhn results in<br>Jo\\nhn.<br><br>If an expansion parameter starts with &quot;eval &quot;, the rest of the value is evaluated and the return value used as the actual parameter value. If recursion is on,<br>that value may contain further parameters.<br><br>Example:<br><br>echo MessageFormatter#FormatMessage('public static final {type} {C_variable} = {value};', {'type':'eval input(&quot;Type for {variable}: &quot;, &quot;String&quot;)', 'variable':'eval input(&quot;Variable name: &quot;)', 'value':'eval input(&quot;Value: &quot;, &quot;\&quot;{C_variable}\&quot;&quot;)'}, 1)<br><br>Bear in mind that 'type' and 'value' both use the parameter 'variable'. If 'variable' were to refer to either of these, you'd have circular recursion. There<br>is no check in place for that; you'd just end up with a stack overflow.<br><br>Note, also, that the expression is evaluated only once. After that, its value is stored on the cache--this allows eval parameters to refer to other eval<br>parameters (only useful if recursion is on).<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=15430">MessageFormatter.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.5</b></td>
+    <td class="roweven" valign="top" nowrap><i>2011-04-11</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=64">Salman Halim</a></i></td>
+    <td class="roweven" valign="top" width="2000">Added a cache so repeated expansions of the same variable can be looked up rather than computed (potentially much faster, especially when recursion is on).</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15428">MessageFormatter.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.0</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2011-04-11</i></td>
+    <td class="rowodd" valign="top" nowrap>7.2</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=64">Salman Halim</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Initial upload</td>
+</tr>
+</table>
+<!-- finish off the framework -->
+          </td>
+        </tr>
+      </table>
+    </td>
+
+  </tr>
+</table>
+
+<!-- END OF THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr><td colspan="4" bgcolor="#000000"><img src="/images/spacer.gif" height="2" width="1" alt=""></td></tr>
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr>
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+
+    <td align="left" valign="top"><small>
+      If you have questions or remarks about this site, visit the
+      <a href="http://vimonline.sf.net">vimonline development</a> pages.
+      Please use this site responsibly.
+      <br> 
+      
+      Questions about <a href="http://www.vim.org/about.php">Vim</a> should go
+      to the <a href="http://www.vim.org/maillist.php">maillist</a>.
+      Help Bram <a href="http://iccf-holland.org/">help Uganda</a>.
+      </small>
+	&nbsp;
+	&nbsp;
+
+	<!-- Start of StatCounter Code -->
+	<script type="text/javascript" language="javascript">
+	var sc_project=1417324; 
+	var sc_invisible=1; 
+	var sc_partition=11; 
+	var sc_security="d41633bc"; 
+	</script>
+
+	<script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script><noscript><a href="http://www.statcounter.com/" target="_blank"><img  src="http://c12.statcounter.com/counter.php?sc_project=1417324&java=0&security=d41633bc&invisible=0" alt="free tracking" border="0"></a> </noscript>
+	<!-- End of StatCounter Code -->
+          </td>
+
+    <td align="right" valign="top">
+      		<a href="http://sourceforge.net/projects/vim" rel="nofollow"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=8&type=1" width="88" height="31" border="0" alt="SourceForge.net Logo" /></a>
+    </td>
+
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+  </tr>
+
+    
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  
+  </tr>
+</table>
+
+</body>
+</html>
+

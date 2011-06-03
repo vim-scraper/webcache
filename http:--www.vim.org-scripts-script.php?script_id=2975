@@ -166,8 +166,8 @@
 <tr>
   <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
   <td>
-    Rating <b>519/153</b>,
-    Downloaded by 2234  </td>
+    Rating <b>598/175</b>,
+    Downloaded by 2711  </td>
   <td class="lightbg">
   <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
   </td>
@@ -223,20 +223,28 @@ Click on the package to download.
     <th valign="top">release notes</th>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=12673">fugitive.zip</a></td>
-    <td class="rowodd" valign="top" nowrap><b>1.1</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2010-03-21</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15542">fugitive.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.2</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2011-04-29</i></td>
     <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=9012">Tim Pope</a></i></td>
-    <td class="rowodd" valign="top" width="2000">Much better windows support ('shellslash' no longer required).<br>Delete blame buffers when closed.<br>Pass :Gblame flags along to git-blame.<br>Fix duplicate &quot;Signed-off-by&quot; lines.<br>Finish pending commit even if exiting Vim.<br>Allow double quotes in :Git and :Ggrep arguments.<br>`D` in :Gstatus shows a diff.</td>
+    <td class="rowodd" valign="top" width="2000">Support :Gmove in a directory.<br>Provide :Gbrowse to open code on GitHub or in git-instaweb.<br>Provide :Gwq to :quit after :Gwrite.<br>Provide :Gsdiff to do a horizontal diff.<br>Map ds in :Gstatus to do a horizontal diff.<br>Map &lt;C-N&gt; and &lt;C-P&gt; in :Gstatus to cycle between files.<br>Map `-` on headings in :Gstatus.<br>Map dp in stage conflict to do the right thing.<br>Point 'tags' at .git/tags.<br>Windows fixes. [Michael Geddes]<br></td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=12387">fugitive.zip</a></td>
-    <td class="roweven" valign="top" nowrap><b>1.0</b></td>
-    <td class="roweven" valign="top" nowrap><i>2010-02-15</i></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=12673">fugitive.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.1</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-03-21</i></td>
     <td class="roweven" valign="top" nowrap>7.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=9012">Tim Pope</a></i></td>
-    <td class="roweven" valign="top" width="2000">Initial upload</td>
+    <td class="roweven" valign="top" width="2000">Much better windows support ('shellslash' no longer required).<br>Delete blame buffers when closed.<br>Pass :Gblame flags along to git-blame.<br>Fix duplicate &quot;Signed-off-by&quot; lines.<br>Finish pending commit even if exiting Vim.<br>Allow double quotes in :Git and :Ggrep arguments.<br>`D` in :Gstatus shows a diff.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=12387">fugitive.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.0</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-02-15</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=9012">Tim Pope</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Initial upload</td>
 </tr>
 </table>
 <!-- finish off the framework -->

@@ -3,7 +3,7 @@
 
 <head>
   <link rel="Stylesheet" type="text/css" href="/css/style.css" >
-  <title>PreciseJump - Precise jump - script to ease motion within a line. : vim online</title>
+  <title>PreciseJump - PreciseJump - script to ease on-screen motion. : vim online</title>
   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
   <meta name="KEYWORDS" content="Vim, Vi IMproved, text editor, home, documentation, tips, scripts, news">
   <link rel="shortcut icon" type="image/x-icon" href="/images/vim_shortcut.ico">
@@ -156,7 +156,7 @@
         <tr>
           <td valign="top">
 
-<span class="txth1">PreciseJump : Precise jump - script to ease motion within a line.</span> 
+<span class="txth1">PreciseJump : PreciseJump - script to ease on-screen motion.</span> 
 
 <br>
 <br>
@@ -166,8 +166,8 @@
 <tr>
   <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
   <td>
-    Rating <b>64/19</b>,
-    Downloaded by 128  </td>
+    Rating <b>95/29</b>,
+    Downloaded by 226  </td>
   <td class="lightbg">
   <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
   </td>
@@ -186,10 +186,10 @@
 <tr><td>utility</td></tr>
 <tr><td>&nbsp;</td></tr>
 <tr><td class="prompt">description</td></tr>
-<tr><td>PreciseJump aka '[count] motion' on drugs<br><br>I find<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;number&gt;line-motion<br>not very practical for bigger &lt;numbers&gt;.<br><br>I usually don't know exactly how many times I want the motion to be repeated - I just see place on the screen where I want to jump to.<br><br>This script is addressing this inconvenience.<br><br>When the motion key is pressed, possible jump targets are highlighted. You just have to type character that appeared on desired place.<br><br>i.e: If you press new '_fx' you get all 'x' characters in the line highlighted and changed to<br>some unique chars. Pressing the highlighted char will take the cursor to place you want.<br><br>For little demo you can see:<br><a target="_blank" href="http://i258.photobucket.com/albums/hh246/otokan/WATCH_ME.gif">http://i258.photobucket.com/albums/hh246/otokan/WATCH_ME.gif</A><br><br>Plugin definines following mapping:&nbsp;&nbsp;_f ,&nbsp;&nbsp;_w ,&nbsp;&nbsp;_e ,&nbsp;&nbsp;_t . <br><br>This script is usable right now, but keep in mind that it still is being developed. <br>I would appreciate any comments.<br></td></tr>
+<tr><td>PreciseJump - script to ease on-screen motion<br><br>I find<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;number&gt;motion<br>not very practical for bigger &lt;numbers&gt;.<br><br>I usually don't know exactly how many times I want the motion to be repeated - I just see place on the screen where I want to jump to.<br><br>This script is addressing this inconvenience.<br><br>When the motion key is pressed, possible jump targets are highlighted. You just have to type character that appeared on desired place.<br><br>i.e: If you press '_fx' you get all 'x' characters that are visible in current window highlighted and changed to some unique chars. Pressing the highlighted char will quickly take the cursor to place you want.<br><br>For little demo you can see:<br> <a target="_blank" href="http://i258.photobucket.com/albums/hh246/otokan/PJ_animation.gif">http://i258.photobucket.com/albums/hh246/otokan/PJ_animation.gif</A><br><br>Plugin definines following mappings:&nbsp;&nbsp;<br>_f - jump to given char in whole window&nbsp;&nbsp;<br>_F - jump to given char in a line<br><br>This script is usable right now, but keep in mind that it still is being developed. <br><br>If you have any comments, have found bugs, know how to make something better<br> - let me know.<br><br>Special thanks to: Filip, Adam, Sergey, John, Jim<br></td></tr>
 <tr><td>&nbsp;</td></tr>
 <tr><td class="prompt">install details</td></tr>
-<tr><td>Drop PreciseJump.vim to your plugin directory<br>You can edit some mappings at the bottom of the file.</td></tr>
+<tr><td>Unpack archive and copy PreciseJump.vim to your plugin directory and PreciseJump.txt to your documentation directory.</td></tr>
 <tr><td>&nbsp;</td></tr>
 </table>
 
@@ -223,12 +223,20 @@ Click on the package to download.
     <th valign="top">release notes</th>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=14939">PreciseJump.vim</a></td>
-    <td class="rowodd" valign="top" nowrap><b>0.1_SOA1</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2011-02-02</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15295">PreciseJump-0.49.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.49</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2011-03-26</i></td>
     <td class="rowodd" valign="top" nowrap>7.2</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=13874">Bartlomiej P.</a></i></td>
-    <td class="rowodd" valign="top" width="2000">Initial upload</td>
+    <td class="rowodd" valign="top" width="2000">Many fixes. PJ works now in 2D (whole visible window, not only current line).</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=14939">PreciseJump.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.1_SOA1</b></td>
+    <td class="roweven" valign="top" nowrap><i>2011-02-02</i></td>
+    <td class="roweven" valign="top" nowrap>7.2</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=13874">Bartlomiej P.</a></i></td>
+    <td class="roweven" valign="top" width="2000">Initial upload</td>
 </tr>
 </table>
 <!-- finish off the framework -->

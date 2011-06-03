@@ -166,8 +166,8 @@
 <tr>
   <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
   <td>
-    Rating <b>19/7</b>,
-    Downloaded by 547  </td>
+    Rating <b>23/8</b>,
+    Downloaded by 691  </td>
   <td class="lightbg">
   <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
   </td>
@@ -186,10 +186,10 @@
 <tr><td>utility</td></tr>
 <tr><td>&nbsp;</td></tr>
 <tr><td class="prompt">description</td></tr>
-<tr><td>This plugin integrates the LanguageTool grammar checker into Vim.<br>Current version of LanguageTool can check grammar in many languages: <br>en, de, pl, fr, es, it, nl, lt, uk, ru, sk, sl, sv, ro, is, gl, ca, da, ml, be.<br>See <a target="_blank" href="http://www.languagetool.org/">http://www.languagetool.org/</A> for more information about LanguageTool.<br><br>The script defines 2 commands:<br><br>* Use&nbsp;&nbsp;:LanguageToolCheck&nbsp;&nbsp;to check grammar in current buffer.<br>&nbsp;&nbsp;This will check for grammar mistakes in text of current buffer <br>&nbsp;&nbsp;and highlight the errors.&nbsp;&nbsp;It also opens a new scratch window with the<br>&nbsp;&nbsp;list of grammar mistakes with further explanations for each error.<br>&nbsp;&nbsp;Pressing &lt;Enter&gt; or clicking on an error in scratch buffer will jump<br>&nbsp;&nbsp;to that error.&nbsp;&nbsp;The location list for the buffer being checked<br>&nbsp;&nbsp;is also populated.&nbsp;&nbsp;So you can use location commands such as<br>&nbsp;&nbsp;:lopen to open the location list window, :lne to jump to the <br>&nbsp;&nbsp;next error, etc. The :LanguageToolCheck command accepts a<br>&nbsp;&nbsp;range. You can for example check grammar between lines<br>&nbsp;&nbsp;100 and 200 in buffer with :100,200LanguageToolCheck.<br><br>* Use&nbsp;&nbsp;:LanguageToolClear&nbsp;&nbsp;to remove highlighting of grammatical errors<br>&nbsp;&nbsp;and close the scratch window containing the list of errors.<br><br>See screenshots of grammar checking in English and French at:<br>&nbsp;&nbsp;<a target="_blank" href="http://dominique.pelle.free.fr/pic/LanguageToolVimPlugin_en.png">http://dominique.pelle.free.fr/pic/LanguageToolVimPlugin_en.png</A><br>&nbsp;&nbsp;<a target="_blank" href="http://dominique.pelle.free.fr/pic/LanguageToolVimPlugin_fr.png">http://dominique.pelle.free.fr/pic/LanguageToolVimPlugin_fr.png</A><br><br>You can customize this plugin by setting the following variables in <br>your ~/.vimrc (plugin already sets default values).<br><br>&nbsp;&nbsp;g:languagetool_jar&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This variable specifies the location of the LanguageTool java<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;grammar checker program.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Default is: $HOME/JLanguageTool/dist/LanguageTool.jar<br><br>&nbsp;&nbsp;g:languagetool_disable_rules<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This variable specifies checker rules which are disabled.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Each disabled rule must be comma separated<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Default is: WHITESPACE_RULE,EN_QUOTES<br><br>&nbsp;&nbsp;g:languagetool_win_height<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This variable specifies the height of the scratch window which <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;contains all grammatical mistakes with some explanations. You <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;can use a negative value to disable opening the scratch window.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Default is: 14<br><br>You can also customize the following syntax highlighting groups:<br>&nbsp;&nbsp;LanguageToolError<br>&nbsp;&nbsp;LanguageToolCmd<br>&nbsp;&nbsp;LanguageToolLabel<br>&nbsp;&nbsp;LanguageToolErrorCount<br><br>Language is selected automatically from the Vim 'spelllang' option.<br>Character encoding is selected automatically from the Vim 'fenc' option<br>or from 'enc' option if 'fenc' is empty.<br><br>Bugs:&nbsp;&nbsp;<br>&nbsp;&nbsp;Column number reported by LanguageTool indicating the location of the <br>&nbsp;&nbsp;error is sometimes incorrect. There is an opened ticket about this bug: <br>&nbsp;&nbsp;<a target="_blank" href="http://sourceforge.net/tracker/?func=detail&aid=3054895&group_id=110216&atid=655717">http://sourceforge.net/tracker/?func=detail&aid=3054895&group_id=110216&atid=655717</A> <br>&nbsp;&nbsp;The script currently works around it by doing pattern matching with&nbsp;&nbsp;<br>&nbsp;&nbsp;information context but it is not a perfect workaround: it can cause <br>&nbsp;&nbsp;spurious highlighting of errors in rare cases.<br><br>License:<br>&nbsp;&nbsp;The VIM LICENSE applies to LanguageTool.vim plugin<br>&nbsp;&nbsp;(see &quot;:help copyright&quot; except use &quot;LanguageTool.vim&quot; instead of Vim&quot;).</td></tr>
+<tr><td>This plugin integrates the LanguageTool grammar checker into Vim.<br>Current version of LanguageTool can check grammar in many languages:<br>en, eo, de, pl, fr, es, it, nl, lt, uk, ru, sk, sl, sv, ro, is, gl, ca,<br>da, ml, be. See <a target="_blank" href="http://www.languagetool.org/">http://www.languagetool.org/</A> for more information about<br>LanguageTool.<br><br>The script defines 2 commands:<br><br>* Use&nbsp;&nbsp;:LanguageToolCheck&nbsp;&nbsp;to check grammar in current buffer.<br>&nbsp;&nbsp;This will check for grammar mistakes in text of current buffer<br>&nbsp;&nbsp;and highlight the errors. It also opens a new scratch window with the<br>&nbsp;&nbsp;list of grammar errors with further explanations for each error.<br>&nbsp;&nbsp;Pressing &lt;Enter&gt; in scratch buffer will jump to that error. The<br>&nbsp;&nbsp;location list for the buffer being checked is also populated.<br>&nbsp;&nbsp;So you can use location commands such as :lopen to open the location<br>&nbsp;&nbsp;list window, :lne to jump to the next error, etc.<br><br>* Use&nbsp;&nbsp;:LanguageToolClear&nbsp;&nbsp;to remove highlighting of grammar mistakes,<br>&nbsp;&nbsp;close the scratch window containing the list of errors, clear and<br>&nbsp;&nbsp;close the location list.<br><br>See screenshots of grammar checking in English and French at:<br>&nbsp;&nbsp;<a target="_blank" href="http://dominique.pelle.free.fr/pic/LanguageToolVimPlugin_en.png">http://dominique.pelle.free.fr/pic/LanguageToolVimPlugin_en.png</A><br>&nbsp;&nbsp;<a target="_blank" href="http://dominique.pelle.free.fr/pic/LanguageToolVimPlugin_fr.png">http://dominique.pelle.free.fr/pic/LanguageToolVimPlugin_fr.png</A><br><br>See&nbsp;&nbsp;:help LanguageTool&nbsp;&nbsp;for more details<br><br>Bugs:&nbsp;&nbsp;<br>&nbsp;&nbsp;Column number reported by LanguageTool indicating the location of the <br>&nbsp;&nbsp;error is sometimes incorrect. There is an opened ticket about this bug: <br>&nbsp;&nbsp;<a target="_blank" href="http://sourceforge.net/tracker/?func=detail&aid=3054895&group_id=110216&atid=655717">http://sourceforge.net/tracker/?func=detail&aid=3054895&group_id=110216&atid=655717</A> <br>&nbsp;&nbsp;The script currently works around it by doing pattern matching with&nbsp;&nbsp;<br>&nbsp;&nbsp;information context but it is not a perfect workaround: it can cause <br>&nbsp;&nbsp;spurious highlighting of errors in rare cases.<br><br>License:<br>&nbsp;&nbsp;The VIM LICENSE applies to LanguageTool.vim plugin<br>&nbsp;&nbsp;(see &quot;:help copyright&quot; except use &quot;LanguageTool.vim&quot; instead of Vim&quot;).</td></tr>
 <tr><td>&nbsp;</td></tr>
 <tr><td class="prompt">install details</td></tr>
-<tr><td>Install the plugin with:<br><br>&nbsp;&nbsp; $ mkdir ~/.vim<br>&nbsp;&nbsp; $ cd ~/.vim<br>&nbsp;&nbsp; $ unzip /path-to/LanguageTool.zip<br>&nbsp;&nbsp; $ vim -c 'helptags ~/.vim/doc'<br><br>You also need to install the Java LanguageTool program in order to use<br>this plugin. There are 2 possibilities:<br><br>1/ Download the OpenOffice LanguageTool plugin file LanguageTool-*.oxt<br>&nbsp;&nbsp; from <a target="_blank" href="http://www.languagetool.org/">http://www.languagetool.org/</A> and unzip it:<br><br>&nbsp;&nbsp;$ wget <a target="_blank" href="http://www.languagetool.org/download/LanguageTool-1.0.0.oxt">http://www.languagetool.org/download/LanguageTool-1.0.0.oxt</A><br>&nbsp;&nbsp;$ unzip LanguageTool-1.0.0.oxt<br><br>&nbsp;&nbsp;You may also find&nbsp;&nbsp;newer snapshot versions in<br>&nbsp;&nbsp;<a target="_blank" href="http://www.languagetool.org/download/">http://www.languagetool.org/download/</A><br><br>2/ Alternatively, download the latest LanguageTool from CVS and build it.<br>&nbsp;&nbsp; This ensures that you get the latest version. On Ubuntu,<br>&nbsp;&nbsp; you need to install the ant, sun-java6-jdk and cvs packages as a<br>&nbsp;&nbsp; prerequisite:<br><br>&nbsp;&nbsp; $ sudo apt-get install sun-java6-jdk ant cvs<br><br>&nbsp;&nbsp; LanguageTool can then be downloaded and built as follows:<br><br>&nbsp;&nbsp; $ cvs -z3 \<br>&nbsp;&nbsp; -d:pserver:anonymous@languagetool.cvs.sourceforge.net:/cvsroot/languagetool \<br>&nbsp;&nbsp; co -P JLanguageTool<br>&nbsp;&nbsp; $ cd JLanguageTool<br>&nbsp;&nbsp; $ ant<br><br>This should build JLanguageTool/dist/LanguageTool.jar.<br><br>You then need to set up g:languagetool_jar in your ~/.vimrc with<br>the location of this LanguageTool.jar file. For example:<br><br>let g:languagetool_jar=$HOME . '/JLanguageTool/LanguageTool.jar'</td></tr>
+<tr><td>Install the plugin with:<br><br>&nbsp;&nbsp;$ mkdir ~/.vim<br>&nbsp;&nbsp;$ cd ~/.vim<br>&nbsp;&nbsp;$ unzip /path-to/LanguageTool.zip<br>&nbsp;&nbsp;$ vim -c 'helptags ~/.vim/doc'<br><br>You also need to install the Java LanguageTool program in order to use<br>this plugin. There are 2 possibilities:<br><br>1/ Download the OpenOffice LanguageTool plugin file LanguageTool-*.oxt<br>&nbsp;&nbsp; from <a target="_blank" href="http://www.languagetool.org/">http://www.languagetool.org/</A><br>&nbsp;&nbsp; Unzip it. This should extract LanguageTool.jar among several other files<br><br>2/ Alternatively, download the latest LanguageTool from subversion and build<br>&nbsp;&nbsp; it. This ensures that you get the latest version. On Ubuntu, you need<br>&nbsp;&nbsp; to install the ant, sun-java6-jdk and subversion packages as a<br>&nbsp;&nbsp; prerequisite:<br><br>&nbsp;&nbsp; $ sudo apt-get install sun-java6-jdk ant subversion<br><br>&nbsp;&nbsp; LanguageTool can then be downloaded and built as follows:<br><br>&nbsp;&nbsp; $ svn co <a target="_blank" href="https://languagetool.svn.sourceforge.net/svnroot/languagetool/trunk/JLanguageTool">https://languagetool.svn.sourceforge.net/svnroot/languagetool/trunk/JLanguageTool</A> languagetool<br>&nbsp;&nbsp; $ cd languagetool<br>&nbsp;&nbsp; $ ant<br><br>&nbsp;&nbsp; This should build languagetool/dist/LanguageTool.jar.<br><br>You then need to set up g:languagetool_jar in your ~/.vimrc with<br>the location of this LanguageTool.jar file. For example:<br><br>&nbsp;&nbsp;let g:languagetool_jar=$HOME . '/languagetool/LanguageTool.jar'</td></tr>
 <tr><td>&nbsp;</td></tr>
 </table>
 
@@ -223,132 +223,140 @@ Click on the package to download.
     <th valign="top">release notes</th>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13878">LanguageTool.zip</a></td>
-    <td class="rowodd" valign="top" nowrap><b>1.13</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2010-09-20</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15306">LanguageTool.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.14</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2011-03-27</i></td>
     <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=14105">Dominique Pellé</a></i></td>
-    <td class="rowodd" valign="top" width="2000">- cope with small changes in XML output of LanguageTool-1-1-beta.<br>- Plugin can still parse output of LanguageTool-1.0.</td>
+    <td class="rowodd" valign="top" width="2000">- display subid in XML output of LanguageTool (introduced in LanguageTool-1.1)<br>- updated doc now the LanguageTool project uses svn rather than cvs<br>- removed handling of mouse (it was more annoying than useful to grab the mouse)<br></td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13773">LanguageTool.zip</a></td>
-    <td class="roweven" valign="top" nowrap><b>1.12</b></td>
-    <td class="roweven" valign="top" nowrap><i>2010-09-07</i></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13878">LanguageTool.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.13</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-09-20</i></td>
     <td class="roweven" valign="top" nowrap>7.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=14105">Dominique Pellé</a></i></td>
-    <td class="roweven" valign="top" width="2000">- (bug) fixed incorrect handling of multibyte causing missing highlighting</td>
+    <td class="roweven" valign="top" width="2000">- cope with small changes in XML output of LanguageTool-1-1-beta.<br>- Plugin can still parse output of LanguageTool-1.0.</td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13759">LanguageTool.zip</a></td>
-    <td class="rowodd" valign="top" nowrap><b>1.11</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2010-09-04</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13773">LanguageTool.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.12</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-09-07</i></td>
     <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=14105">Dominique Pellé</a></i></td>
-    <td class="rowodd" valign="top" width="2000">- (bug) regex to parse rules from LanguageTool output did not accept rule with dash<br>- (improvement) don't waste a line displaying &quot;Correction:&quot; in scratch buffer when error has no suggested correction </td>
+    <td class="rowodd" valign="top" width="2000">- (bug) fixed incorrect handling of multibyte causing missing highlighting</td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13748">LanguageTool.zip</a></td>
-    <td class="roweven" valign="top" nowrap><b>1.10</b></td>
-    <td class="roweven" valign="top" nowrap><i>2010-09-03</i></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13759">LanguageTool.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.11</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-09-04</i></td>
     <td class="roweven" valign="top" nowrap>7.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=14105">Dominique Pellé</a></i></td>
-    <td class="roweven" valign="top" width="2000">- avoid spurious highlighting when text of error appears multiple times in line.</td>
+    <td class="roweven" valign="top" width="2000">- (bug) regex to parse rules from LanguageTool output did not accept rule with dash<br>- (improvement) don't waste a line displaying &quot;Correction:&quot; in scratch buffer when error has no suggested correction </td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13745">LanguageTool.zip</a></td>
-    <td class="rowodd" valign="top" nowrap><b>1.9</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2010-09-02</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13748">LanguageTool.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.10</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-09-03</i></td>
     <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=14105">Dominique Pellé</a></i></td>
-    <td class="rowodd" valign="top" width="2000">- improved handling of LeftMouse event (used when clicking on error to jump to its location)</td>
+    <td class="rowodd" valign="top" width="2000">- avoid spurious highlighting when text of error appears multiple times in line.</td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13730">LanguageTool.zip</a></td>
-    <td class="roweven" valign="top" nowrap><b>1.8</b></td>
-    <td class="roweven" valign="top" nowrap><i>2010-08-30</i></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13745">LanguageTool.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.9</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-09-02</i></td>
     <td class="roweven" valign="top" nowrap>7.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=14105">Dominique Pellé</a></i></td>
-    <td class="roweven" valign="top" width="2000">- (bug) fixed syntax error<br>- fixed broken links in help page</td>
+    <td class="roweven" valign="top" width="2000">- improved handling of LeftMouse event (used when clicking on error to jump to its location)</td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13729">LanguageTool.zip</a></td>
-    <td class="rowodd" valign="top" nowrap><b>1.7</b></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13730">LanguageTool.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.8</b></td>
     <td class="rowodd" valign="top" nowrap><i>2010-08-30</i></td>
     <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=14105">Dominique Pellé</a></i></td>
-    <td class="rowodd" valign="top" width="2000">- :LanguageToolCheck command now accepts a range <br>- (bug) more fixes to properly handle XML characters such as &amp; </td>
+    <td class="rowodd" valign="top" width="2000">- (bug) fixed syntax error<br>- fixed broken links in help page</td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13727">LanguageTool.zip</a></td>
-    <td class="roweven" valign="top" nowrap><b>1.6</b></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13729">LanguageTool.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.7</b></td>
     <td class="roweven" valign="top" nowrap><i>2010-08-30</i></td>
     <td class="roweven" valign="top" nowrap>7.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=14105">Dominique Pellé</a></i></td>
-    <td class="roweven" valign="top" width="2000">- created a Vim help page&nbsp;&nbsp;(:help LanguageTool)</td>
+    <td class="roweven" valign="top" width="2000">- :LanguageToolCheck command now accepts a range <br>- (bug) more fixes to properly handle XML characters such as &amp; </td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13726">LanguageTool.vim</a></td>
-    <td class="rowodd" valign="top" nowrap><b>1.5</b></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13727">LanguageTool.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.6</b></td>
     <td class="rowodd" valign="top" nowrap><i>2010-08-30</i></td>
     <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=14105">Dominique Pellé</a></i></td>
-    <td class="rowodd" valign="top" width="2000">- (bug) XML code such as &quot; &lt; (etc) had to be replaced in &quot; & (etc)<br>- (bug) escaping \ and ' in regex was not right<br>- improved comment explaining how to install LanguageTool<br></td>
+    <td class="rowodd" valign="top" width="2000">- created a Vim help page&nbsp;&nbsp;(:help LanguageTool)</td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13719">LanguageTool.vim</a></td>
-    <td class="roweven" valign="top" nowrap><b>1.4</b></td>
-    <td class="roweven" valign="top" nowrap><i>2010-08-29</i></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13726">LanguageTool.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.5</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-08-30</i></td>
     <td class="roweven" valign="top" nowrap>7.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=14105">Dominique Pellé</a></i></td>
-    <td class="roweven" valign="top" width="2000">- (bug) substitute things like &quote; into &quot; from input XML.</td>
+    <td class="roweven" valign="top" width="2000">- (bug) XML code such as &quot; &lt; (etc) had to be replaced in &quot; & (etc)<br>- (bug) escaping \ and ' in regex was not right<br>- improved comment explaining how to install LanguageTool<br></td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13717">LanguageTool.vim</a></td>
-    <td class="rowodd" valign="top" nowrap><b>1.3</b></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13719">LanguageTool.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.4</b></td>
     <td class="rowodd" valign="top" nowrap><i>2010-08-29</i></td>
     <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=14105">Dominique Pellé</a></i></td>
-    <td class="rowodd" valign="top" width="2000">- populate location list (can now use commands :lopen, :lne, ...)</td>
+    <td class="rowodd" valign="top" width="2000">- (bug) substitute things like &quote; into &quot; from input XML.</td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13716">LanguageTool.vim</a></td>
-    <td class="roweven" valign="top" nowrap><b>1.2</b></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13717">LanguageTool.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.3</b></td>
     <td class="roweven" valign="top" nowrap><i>2010-08-29</i></td>
     <td class="roweven" valign="top" nowrap>7.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=14105">Dominique Pellé</a></i></td>
-    <td class="roweven" valign="top" width="2000">- check whether running language tool succeeded + a few other fixes</td>
+    <td class="roweven" valign="top" width="2000">- populate location list (can now use commands :lopen, :lne, ...)</td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13714">LanguageTool.vim</a></td>
-    <td class="rowodd" valign="top" nowrap><b>1.1</b></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13716">LanguageTool.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.2</b></td>
     <td class="rowodd" valign="top" nowrap><i>2010-08-29</i></td>
     <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=14105">Dominique Pellé</a></i></td>
-    <td class="rowodd" valign="top" width="2000">- (bug) fall back to 'enc' encoding when 'fenc' is not set<br>- (new) can now click on error in scratch buffer to jump to them (if mouse is enabled)<br></td>
+    <td class="rowodd" valign="top" width="2000">- check whether running language tool succeeded + a few other fixes</td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13712">LanguageTool.vim</a></td>
-    <td class="roweven" valign="top" nowrap><b>1.0</b></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13714">LanguageTool.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.1</b></td>
     <td class="roweven" valign="top" nowrap><i>2010-08-29</i></td>
     <td class="roweven" valign="top" nowrap>7.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=14105">Dominique Pellé</a></i></td>
-    <td class="roweven" valign="top" width="2000">- added escape() and nomagic in a regex to avoid errors<br></td>
+    <td class="roweven" valign="top" width="2000">- (bug) fall back to 'enc' encoding when 'fenc' is not set<br>- (new) can now click on error in scratch buffer to jump to them (if mouse is enabled)<br></td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13709">LanguageTool.vim</a></td>
-    <td class="rowodd" valign="top" nowrap><b>0.9</b></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13712">LanguageTool.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.0</b></td>
     <td class="rowodd" valign="top" nowrap><i>2010-08-29</i></td>
     <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=14105">Dominique Pellé</a></i></td>
-    <td class="rowodd" valign="top" width="2000">- pressing &lt;Enter&gt; on an error in scratch buffer now jumps to that error</td>
+    <td class="rowodd" valign="top" width="2000">- added escape() and nomagic in a regex to avoid errors<br></td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13705">LanguageTool.vim</a></td>
-    <td class="roweven" valign="top" nowrap><b>0.8</b></td>
-    <td class="roweven" valign="top" nowrap><i>2010-08-28</i></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13709">LanguageTool.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.9</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-08-29</i></td>
     <td class="roweven" valign="top" nowrap>7.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=14105">Dominique Pellé</a></i></td>
-    <td class="roweven" valign="top" width="2000">Initial upload</td>
+    <td class="roweven" valign="top" width="2000">- pressing &lt;Enter&gt; on an error in scratch buffer now jumps to that error</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13705">LanguageTool.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.8</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-08-28</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=14105">Dominique Pellé</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Initial upload</td>
 </tr>
 </table>
 <!-- finish off the framework -->

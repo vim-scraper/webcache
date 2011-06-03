@@ -167,7 +167,7 @@
   <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
   <td>
     Rating <b>340/126</b>,
-    Downloaded by 9772  </td>
+    Downloaded by 9893  </td>
   <td class="lightbg">
   <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
   </td>
@@ -186,7 +186,7 @@
 <tr><td>utility</td></tr>
 <tr><td>&nbsp;</td></tr>
 <tr><td class="prompt">description</td></tr>
-<tr><td>This is a set of HTML/XHTML mappings and menus for Vim 7 or later. The mappings will be local to the buffer so they won't interfere if you edit other files in the same Vim session.<br><br>The macros are automatically insert a tag and position the cursor at the logical insert point.&nbsp;&nbsp;For example, in insert the mapping &quot;;ah&quot; inserts &lt;A HREF=&quot;&quot;&gt;&lt;/A&gt; and leaves the cursor between the double quotes.&nbsp;&nbsp;If you were to visually highlight some text then type &quot;;ah&quot; it would wrap the tag around the text.&nbsp;&nbsp;For example:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;some text<br>Becomes:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;A HREF=&quot;&quot;&gt;some text&lt;/A&gt;<br>With the cursor positioned between the double quotes in insert mode. Or if you used &quot;;aH&quot; instead:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;A HREF=&quot;some text&quot;&gt;&lt;/A&gt;<br>With the cursor positioned between the &gt; and the &lt; in insert mode.<br><br>There are many other features, such as a configurable template inserted with the &quot;;html&quot; normal mode macro, browser remote control mappings, etc.<br><br>See <a target="_blank" href="http://christianrobinson.name/vim/HTML/faq.shtml">http://christianrobinson.name/vim/HTML/faq.shtml</A> for frequently asked questions.<br><br>See <a target="_blank" href="http://christianrobinson.name/vim/HTML/HTML.html">http://christianrobinson.name/vim/HTML/HTML.html</A> to preview the help file.</td></tr>
+<tr><td>This is a set of HTML/XHTML mappings and menus for Vim 7 or later. The mappings will be local to the buffer so they won't interfere if you edit other files in the same Vim session.<br><br>The macros automatically insert a tag and position the cursor at the logical insert point.&nbsp;&nbsp;For example, in insert the mapping &quot;;ah&quot; inserts &lt;A HREF=&quot;&quot;&gt;&lt;/A&gt; and leaves the cursor between the double quotes.&nbsp;&nbsp;If you were to visually highlight some text then type &quot;;ah&quot; it would wrap the tag around the text.&nbsp;&nbsp;For example:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;some text<br>Becomes:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;A HREF=&quot;&quot;&gt;some text&lt;/A&gt;<br>With the cursor positioned between the double quotes in insert mode. Or if you used &quot;;aH&quot; instead:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;A HREF=&quot;some text&quot;&gt;&lt;/A&gt;<br>With the cursor positioned between the &gt; and the &lt; in insert mode.<br><br>There are many other features, such as a configurable template inserted with the &quot;;html&quot; normal mode macro, browser remote control mappings, etc.<br><br>See <a target="_blank" href="http://christianrobinson.name/vim/HTML/faq.shtml">http://christianrobinson.name/vim/HTML/faq.shtml</A> for frequently asked questions.<br><br>See <a target="_blank" href="http://christianrobinson.name/vim/HTML/HTML.html">http://christianrobinson.name/vim/HTML/HTML.html</A> to preview the help file.</td></tr>
 <tr><td>&nbsp;</td></tr>
 <tr><td class="prompt">install details</td></tr>
 <tr><td>Put &quot;:filetype plugin on&quot; in your vimrc, then extract HTML.zip in your runtime directory (~/.vim for Unix; see &quot;:help 'runtimepath'&quot;). Then run &quot;:helptags &lt;directory&gt;/doc&quot; within vim. <br><br>See <a target="_blank" href="http://christianrobinson.name/vim/HTML/">http://christianrobinson.name/vim/HTML/</A> for more information, other archive formats, newer versions, and extra files.</td></tr>
@@ -223,332 +223,340 @@ Click on the package to download.
     <th valign="top">release notes</th>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13517">HTML.zip</a></td>
-    <td class="rowodd" valign="top" nowrap><b>0.36.4</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2010-08-07</i></td>
-    <td class="rowodd" valign="top" nowrap>7.0</td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15498">HTML.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.37.1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2011-04-21</i></td>
+    <td class="rowodd" valign="top" nowrap>7.2</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=59">Christian J. Robinson</a></i></td>
-    <td class="rowodd" valign="top" width="2000">- More character entity mappings<br>- Minor changes</td>
+    <td class="rowodd" valign="top" width="2000">- Determining the Firefox remote command wasn't working properly (Fr. Robert Bower)<br>- Fr. Robert Bower added support for Google Chrome on Unix/Linux<br><br>(This script _might_ run okay on Vim 7.0/7.1, but it has not been tested -- 7.3 is preferred.)</td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13274">HTML.zip</a></td>
-    <td class="roweven" valign="top" nowrap><b>0.36.3</b></td>
-    <td class="roweven" valign="top" nowrap><i>2010-07-01</i></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13517">HTML.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.36.4</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-08-07</i></td>
     <td class="roweven" valign="top" nowrap>7.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=59">Christian J. Robinson</a></i></td>
-    <td class="roweven" valign="top" width="2000">- Various minor fixes</td>
+    <td class="roweven" valign="top" width="2000">- More character entity mappings<br>- Minor changes</td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=11606">HTML.zip</a></td>
-    <td class="rowodd" valign="top" nowrap><b>0.36.1</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2009-10-28</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13274">HTML.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.36.3</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-07-01</i></td>
     <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=59">Christian J. Robinson</a></i></td>
-    <td class="rowodd" valign="top" width="2000">- b:no_html_maps can be set like g:no_html_maps<br>- Israel Chauca Fuentes provided MacOS browser control code<br>- minor fixes and changes</td>
+    <td class="rowodd" valign="top" width="2000">- Various minor fixes</td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=8808">HTML.zip</a></td>
-    <td class="roweven" valign="top" nowrap><b>0.35.1</b></td>
-    <td class="roweven" valign="top" nowrap><i>2008-06-15</i></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=11606">HTML.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.36.1</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-10-28</i></td>
     <td class="roweven" valign="top" nowrap>7.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=59">Christian J. Robinson</a></i></td>
-    <td class="roweven" valign="top" width="2000">- Try to safely escape shell commands</td>
+    <td class="roweven" valign="top" width="2000">- b:no_html_maps can be set like g:no_html_maps<br>- Israel Chauca Fuentes provided MacOS browser control code<br>- minor fixes and changes</td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=8783">HTML.zip</a></td>
-    <td class="rowodd" valign="top" nowrap><b>0.35</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2008-06-10</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=8808">HTML.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.35.1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2008-06-15</i></td>
     <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=59">Christian J. Robinson</a></i></td>
-    <td class="rowodd" valign="top" width="2000">- Added:<br>&nbsp;&nbsp;+ The colors in the color menu can be displayed in a split window under the GUI, and colors can be selected from the display (;# mapping and :ColorSelect command)<br>&nbsp;&nbsp;+ g:no_html_map_override can be set to prevent the plugin from overriding already existing mappings, and now warning messages are printed when overriding takes place<br>&nbsp;&nbsp;+ g:no_html_maps can be set to a regular expression to tell the plugin not to define matching mappings<br>&nbsp;&nbsp;+ g:html_map_entity_leader can be used to define the character entity mapping leader--works like g:html_map_leader<br>&nbsp;&nbsp;+ MangleImageTag.vim (used by the ;mi mapping) no longer moves the cursor<br>&nbsp;&nbsp;+ Miscellaneous minor additions<br>- Miscellaneous fixes <br>- Significant refactoring to make maintaining the plugin easier</td>
+    <td class="rowodd" valign="top" width="2000">- Try to safely escape shell commands</td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=8654">HTML.zip</a></td>
-    <td class="roweven" valign="top" nowrap><b>0.34</b></td>
-    <td class="roweven" valign="top" nowrap><i>2008-05-07</i></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=8783">HTML.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.35</b></td>
+    <td class="roweven" valign="top" nowrap><i>2008-06-10</i></td>
     <td class="roweven" valign="top" nowrap>7.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=59">Christian J. Robinson</a></i></td>
-    <td class="roweven" valign="top" width="2000">- Removed code that was supporting Vim 6, thus:<br>&nbsp;&nbsp;+ MangleImageTag() used by ;mi mapping should now always compute correct size<br>&nbsp;&nbsp;+ Various code was simplified</td>
+    <td class="roweven" valign="top" width="2000">- Added:<br>&nbsp;&nbsp;+ The colors in the color menu can be displayed in a split window under the GUI, and colors can be selected from the display (;# mapping and :ColorSelect command)<br>&nbsp;&nbsp;+ g:no_html_map_override can be set to prevent the plugin from overriding already existing mappings, and now warning messages are printed when overriding takes place<br>&nbsp;&nbsp;+ g:no_html_maps can be set to a regular expression to tell the plugin not to define matching mappings<br>&nbsp;&nbsp;+ g:html_map_entity_leader can be used to define the character entity mapping leader--works like g:html_map_leader<br>&nbsp;&nbsp;+ MangleImageTag.vim (used by the ;mi mapping) no longer moves the cursor<br>&nbsp;&nbsp;+ Miscellaneous minor additions<br>- Miscellaneous fixes <br>- Significant refactoring to make maintaining the plugin easier</td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=8620">HTML.zip</a></td>
-    <td class="rowodd" valign="top" nowrap><b>0.33.1</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2008-04-29</i></td>
-    <td class="rowodd" valign="top" nowrap>6.0</td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=8654">HTML.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.34</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2008-05-07</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=59">Christian J. Robinson</a></i></td>
-    <td class="rowodd" valign="top" width="2000">- Character entities for arrows and the Greek alphabet added<br>- This is the last version that will support Vim 6</td>
+    <td class="rowodd" valign="top" width="2000">- Removed code that was supporting Vim 6, thus:<br>&nbsp;&nbsp;+ MangleImageTag() used by ;mi mapping should now always compute correct size<br>&nbsp;&nbsp;+ Various code was simplified</td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=8556">HTML.zip</a></td>
-    <td class="roweven" valign="top" nowrap><b>0.32.2</b></td>
-    <td class="roweven" valign="top" nowrap><i>2008-04-13</i></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=8620">HTML.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.33.1</b></td>
+    <td class="roweven" valign="top" nowrap><i>2008-04-29</i></td>
     <td class="roweven" valign="top" nowrap>6.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=59">Christian J. Robinson</a></i></td>
-    <td class="roweven" valign="top" width="2000">- Fixed:<br>&nbsp;&nbsp;+ Some of the &quot;boolean&quot; configuration variables weren't being tested right (Keith Lancaster)<br>&nbsp;&nbsp;+ Could get an error when (re-)initializing the menus<br>- Changed:<br>&nbsp;&nbsp;+ The ;& and ;% normal mode mappings now behave as operator (motion) mappings--use ;&l or ;%l to emulate the old behavior<br>- Added:<br>&nbsp;&nbsp;+ :HTMLmappings reload/html/xhtml can force reloading of the entire script, or switch the mappings into html/xhtml mode<br>- misc. minor fixes</td>
+    <td class="roweven" valign="top" width="2000">- Character entities for arrows and the Greek alphabet added<br>- This is the last version that will support Vim 6</td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=8422">HTML.zip</a></td>
-    <td class="rowodd" valign="top" nowrap><b>0.30</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2008-03-07</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=8556">HTML.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.32.2</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2008-04-13</i></td>
     <td class="rowodd" valign="top" nowrap>6.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=59">Christian J. Robinson</a></i></td>
-    <td class="rowodd" valign="top" width="2000">- Fixed:<br>&nbsp;&nbsp;+ Exclude leading indent from the start tag for visual mappings when in visual-line mode<br>- Added:<br>&nbsp;&nbsp;+ ;tH (&lt;THEAD&gt;), ;tf (&lt;TFOOT&gt;), and ;tb (&lt;TBODY&gt;) mappings added</td>
+    <td class="rowodd" valign="top" width="2000">- Fixed:<br>&nbsp;&nbsp;+ Some of the &quot;boolean&quot; configuration variables weren't being tested right (Keith Lancaster)<br>&nbsp;&nbsp;+ Could get an error when (re-)initializing the menus<br>- Changed:<br>&nbsp;&nbsp;+ The ;& and ;% normal mode mappings now behave as operator (motion) mappings--use ;&l or ;%l to emulate the old behavior<br>- Added:<br>&nbsp;&nbsp;+ :HTMLmappings reload/html/xhtml can force reloading of the entire script, or switch the mappings into html/xhtml mode<br>- misc. minor fixes</td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=7639">HTML.zip</a></td>
-    <td class="roweven" valign="top" nowrap><b>0.29.2</b></td>
-    <td class="roweven" valign="top" nowrap><i>2007-09-10</i></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=8422">HTML.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.30</b></td>
+    <td class="roweven" valign="top" nowrap><i>2008-03-07</i></td>
     <td class="roweven" valign="top" nowrap>6.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=59">Christian J. Robinson</a></i></td>
-    <td class="roweven" valign="top" width="2000">- Fixed:<br>&nbsp;&nbsp;+ Tab mapping wasn't positioning the cursor right when there were multiple spaces between a opening and closing tag<br>- Added:<br>&nbsp;&nbsp;+ Make the &lt;html&gt; tag include an xmlns attribute for XHTML</td>
+    <td class="roweven" valign="top" width="2000">- Fixed:<br>&nbsp;&nbsp;+ Exclude leading indent from the start tag for visual mappings when in visual-line mode<br>- Added:<br>&nbsp;&nbsp;+ ;tH (&lt;THEAD&gt;), ;tf (&lt;TFOOT&gt;), and ;tb (&lt;TBODY&gt;) mappings added</td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=7441">HTML.zip</a></td>
-    <td class="rowodd" valign="top" nowrap><b>0.29</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2007-08-02</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=7639">HTML.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.29.2</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2007-09-10</i></td>
     <td class="rowodd" valign="top" nowrap>6.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=59">Christian J. Robinson</a></i></td>
-    <td class="rowodd" valign="top" width="2000">- Added:<br>&nbsp;&nbsp;+ g:html_tag_case_autodetect configuration variable<br>- Fixed:<br>&nbsp;&nbsp;+ The HTMLnextInsertPoint() function was causing a press enter prompt<br>&nbsp;&nbsp;+ 'formatoptions' could make visual mappings behave wrong<br>- Other minor additions and fixes</td>
+    <td class="rowodd" valign="top" width="2000">- Fixed:<br>&nbsp;&nbsp;+ Tab mapping wasn't positioning the cursor right when there were multiple spaces between a opening and closing tag<br>- Added:<br>&nbsp;&nbsp;+ Make the &lt;html&gt; tag include an xmlns attribute for XHTML</td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=7310">HTML.zip</a></td>
-    <td class="roweven" valign="top" nowrap><b>0.28.2</b></td>
-    <td class="roweven" valign="top" nowrap><i>2007-06-29</i></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=7441">HTML.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.29</b></td>
+    <td class="roweven" valign="top" nowrap><i>2007-08-02</i></td>
     <td class="roweven" valign="top" nowrap>6.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=59">Christian J. Robinson</a></i></td>
-    <td class="roweven" valign="top" width="2000">- Fixed:<br>&nbsp;&nbsp;+ Defining the menus failed entirely if g:no_html_toolbar was set<br>- Changes:<br>&nbsp;&nbsp;+ Add &quot;Select Tag&quot; and &quot;Select Inner Tag&quot; to the PopUp menu<br>&nbsp;&nbsp;+ Minor tweaks</td>
+    <td class="roweven" valign="top" width="2000">- Added:<br>&nbsp;&nbsp;+ g:html_tag_case_autodetect configuration variable<br>- Fixed:<br>&nbsp;&nbsp;+ The HTMLnextInsertPoint() function was causing a press enter prompt<br>&nbsp;&nbsp;+ 'formatoptions' could make visual mappings behave wrong<br>- Other minor additions and fixes</td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=7297">HTML.zip</a></td>
-    <td class="rowodd" valign="top" nowrap><b>0.28</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2007-06-24</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=7310">HTML.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.28.2</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2007-06-29</i></td>
     <td class="rowodd" valign="top" nowrap>6.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=59">Christian J. Robinson</a></i></td>
-    <td class="rowodd" valign="top" width="2000">- Fixed:<br>&nbsp;&nbsp;+ Visual mode mappings weren't operating properly when 'selection' was set to &quot;exclusive&quot;<br>- Added:<br>&nbsp;&nbsp;+ ;db -- default browser mapping for Windows</td>
+    <td class="rowodd" valign="top" width="2000">- Fixed:<br>&nbsp;&nbsp;+ Defining the menus failed entirely if g:no_html_toolbar was set<br>- Changes:<br>&nbsp;&nbsp;+ Add &quot;Select Tag&quot; and &quot;Select Inner Tag&quot; to the PopUp menu<br>&nbsp;&nbsp;+ Minor tweaks</td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=7233">HTML.zip</a></td>
-    <td class="roweven" valign="top" nowrap><b>0.27.6</b></td>
-    <td class="roweven" valign="top" nowrap><i>2007-06-12</i></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=7297">HTML.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.28</b></td>
+    <td class="roweven" valign="top" nowrap><i>2007-06-24</i></td>
     <td class="roweven" valign="top" nowrap>6.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=59">Christian J. Robinson</a></i></td>
-    <td class="roweven" valign="top" width="2000">- Fixed:<br>&nbsp;&nbsp;+ Menus weren't getting disabled/enabled properly<br>- Changed:<br>&nbsp;&nbsp;+ &lt;DT&gt; and &lt;DD&gt; tags now have closing tags and visual mappings<br>&nbsp;&nbsp;+ ;;-style mapping for whatever g:html_map_leader is set to<br>&nbsp;&nbsp;+ Internal code changes</td>
+    <td class="roweven" valign="top" width="2000">- Fixed:<br>&nbsp;&nbsp;+ Visual mode mappings weren't operating properly when 'selection' was set to &quot;exclusive&quot;<br>- Added:<br>&nbsp;&nbsp;+ ;db -- default browser mapping for Windows</td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=7211">HTML.zip</a></td>
-    <td class="rowodd" valign="top" nowrap><b>0.27.4</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2007-06-06</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=7233">HTML.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.27.6</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2007-06-12</i></td>
     <td class="rowodd" valign="top" nowrap>6.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=59">Christian J. Robinson</a></i></td>
-    <td class="rowodd" valign="top" width="2000">- Added:<br>&nbsp;&nbsp;+ Smart handling of &lt;EM&gt;&lt;/EM&gt; tags<br>&nbsp;&nbsp;+ ;% mapping added -- like ;& but convert to %XX hex strings for URIs<br>- Changed:<br>&nbsp;&nbsp;+ Moved ;ns / ;nns mappings to ;ne / ;nne, and moved ;nj mappings to ;ns</td>
+    <td class="rowodd" valign="top" width="2000">- Fixed:<br>&nbsp;&nbsp;+ Menus weren't getting disabled/enabled properly<br>- Changed:<br>&nbsp;&nbsp;+ &lt;DT&gt; and &lt;DD&gt; tags now have closing tags and visual mappings<br>&nbsp;&nbsp;+ ;;-style mapping for whatever g:html_map_leader is set to<br>&nbsp;&nbsp;+ Internal code changes</td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=7184">HTML.zip</a></td>
-    <td class="roweven" valign="top" nowrap><b>0.27.1</b></td>
-    <td class="roweven" valign="top" nowrap><i>2007-05-31</i></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=7211">HTML.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.27.4</b></td>
+    <td class="roweven" valign="top" nowrap><i>2007-06-06</i></td>
     <td class="roweven" valign="top" nowrap>6.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=59">Christian J. Robinson</a></i></td>
-    <td class="roweven" valign="top" width="2000">- Added:<br>&nbsp;&nbsp;+ g:force_html_menu can be set to force the HTML menus to be defined in the console<br>&nbsp;&nbsp;+ g:no_html_menu can be set to stop the menu and toolbar items from being defined<br>&nbsp;&nbsp;+ w3m browser preview under *nix<br>- Minor changes and fixes</td>
+    <td class="roweven" valign="top" width="2000">- Added:<br>&nbsp;&nbsp;+ Smart handling of &lt;EM&gt;&lt;/EM&gt; tags<br>&nbsp;&nbsp;+ ;% mapping added -- like ;& but convert to %XX hex strings for URIs<br>- Changed:<br>&nbsp;&nbsp;+ Moved ;ns / ;nns mappings to ;ne / ;nne, and moved ;nj mappings to ;ns</td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=7143">HTML.zip</a></td>
-    <td class="rowodd" valign="top" nowrap><b>0.26.8</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2007-05-18</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=7184">HTML.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.27.1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2007-05-31</i></td>
     <td class="rowodd" valign="top" nowrap>6.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=59">Christian J. Robinson</a></i></td>
-    <td class="rowodd" valign="top" width="2000">- Fixed:<br>&nbsp;&nbsp;+ MangleImageTag() used by ;mi mapping was missing some quotes and computing the wrong sizes when 'encoding' was UTF8 or similar<br>&nbsp;&nbsp;+ Tab on the end of a line in insert mode moved the cursor a character left<br>&nbsp;&nbsp;+ Temporarily clear the 'comments' option for the ;js mapping so extraneous // comments weren't inserted<br>- Various minor changes</td>
+    <td class="rowodd" valign="top" width="2000">- Added:<br>&nbsp;&nbsp;+ g:force_html_menu can be set to force the HTML menus to be defined in the console<br>&nbsp;&nbsp;+ g:no_html_menu can be set to stop the menu and toolbar items from being defined<br>&nbsp;&nbsp;+ w3m browser preview under *nix<br>- Minor changes and fixes</td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=7019">HTML.zip</a></td>
-    <td class="roweven" valign="top" nowrap><b>0.26.5</b></td>
-    <td class="roweven" valign="top" nowrap><i>2007-04-23</i></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=7143">HTML.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.26.8</b></td>
+    <td class="roweven" valign="top" nowrap><i>2007-05-18</i></td>
     <td class="roweven" valign="top" nowrap>6.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=59">Christian J. Robinson</a></i></td>
-    <td class="roweven" valign="top" width="2000">- Fixed:<br>&nbsp;&nbsp;+ When 'filetype' was set in a modeline &quot;:HTMLmappings disable&quot; didn't work<br>&nbsp;&nbsp;+ Mappings defined with HTMLmap()/HTMLmapo() outside the script weren't redefined when :HTMLmappings disable then enable was run<br>- Added:<br>&nbsp;&nbsp;+ ;aH, ;aT, ;aN, etc. now work in insert mode -- they get data from the clipboard<br>&nbsp;&nbsp;+ ;nj mapping for &lt;NOSCRIPT&gt;&lt;CR&gt;&lt;/NOSCRIPT&gt; added<br>&nbsp;&nbsp;+ visual and normal mode mappings for ;ob<br>- Various minor changes and fixes</td>
+    <td class="roweven" valign="top" width="2000">- Fixed:<br>&nbsp;&nbsp;+ MangleImageTag() used by ;mi mapping was missing some quotes and computing the wrong sizes when 'encoding' was UTF8 or similar<br>&nbsp;&nbsp;+ Tab on the end of a line in insert mode moved the cursor a character left<br>&nbsp;&nbsp;+ Temporarily clear the 'comments' option for the ;js mapping so extraneous // comments weren't inserted<br>- Various minor changes</td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=6967">HTML.zip</a></td>
-    <td class="rowodd" valign="top" nowrap><b>0.26</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2007-04-10</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=7019">HTML.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.26.5</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2007-04-23</i></td>
     <td class="rowodd" valign="top" nowrap>6.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=59">Christian J. Robinson</a></i></td>
-    <td class="rowodd" valign="top" width="2000">- Added:<br>&nbsp;&nbsp;+ &quot;:HTMLmappings disable/enable&quot; command<br>&nbsp;&nbsp;+ %vimversion% template token<br>- Fixed:<br>&nbsp;&nbsp;+ Some recently added mappings weren't in the menu<br>&nbsp;&nbsp;+ Inserting the HTML template could trigger the &quot;Press ENTER&quot; prompt</td>
+    <td class="rowodd" valign="top" width="2000">- Fixed:<br>&nbsp;&nbsp;+ When 'filetype' was set in a modeline &quot;:HTMLmappings disable&quot; didn't work<br>&nbsp;&nbsp;+ Mappings defined with HTMLmap()/HTMLmapo() outside the script weren't redefined when :HTMLmappings disable then enable was run<br>- Added:<br>&nbsp;&nbsp;+ ;aH, ;aT, ;aN, etc. now work in insert mode -- they get data from the clipboard<br>&nbsp;&nbsp;+ ;nj mapping for &lt;NOSCRIPT&gt;&lt;CR&gt;&lt;/NOSCRIPT&gt; added<br>&nbsp;&nbsp;+ visual and normal mode mappings for ;ob<br>- Various minor changes and fixes</td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=6926">HTML.zip</a></td>
-    <td class="roweven" valign="top" nowrap><b>0.25.5</b></td>
-    <td class="roweven" valign="top" nowrap><i>2007-03-30</i></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=6967">HTML.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.26</b></td>
+    <td class="roweven" valign="top" nowrap><i>2007-04-10</i></td>
     <td class="roweven" valign="top" nowrap>6.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=59">Christian J. Robinson</a></i></td>
-    <td class="roweven" valign="top" width="2000">- New mappings:<br>&nbsp;&nbsp;+ ;sj mapping -- like ;js but for sourced JavaScript<br>&nbsp;&nbsp;+ ;^ mapping to decode &#...; encoded strings<br>&nbsp;&nbsp;+ ;& in insert mode inserts a literal &<br>- Minor changes</td>
+    <td class="roweven" valign="top" width="2000">- Added:<br>&nbsp;&nbsp;+ &quot;:HTMLmappings disable/enable&quot; command<br>&nbsp;&nbsp;+ %vimversion% template token<br>- Fixed:<br>&nbsp;&nbsp;+ Some recently added mappings weren't in the menu<br>&nbsp;&nbsp;+ Inserting the HTML template could trigger the &quot;Press ENTER&quot; prompt</td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=6857">HTML.zip</a></td>
-    <td class="rowodd" valign="top" nowrap><b>0.25.1</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2007-03-11</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=6926">HTML.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.25.5</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2007-03-30</i></td>
     <td class="rowodd" valign="top" nowrap>6.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=59">Christian J. Robinson</a></i></td>
-    <td class="rowodd" valign="top" width="2000">- Allow b:html_template to be set in addition to g:html_template<br>- HTMLnextInsertPoint() used by the &lt;tab&gt; mapping now handles comments, and no longer requires an argument<br>- ;s4 mapping added -- Same as ;4 only strict rather than transitional<br>- %time%, %time12%, and %time24% template tokens added, and %date% token is now customizable<br>- b:do_xhtml_mappings was being ignored</td>
+    <td class="rowodd" valign="top" width="2000">- New mappings:<br>&nbsp;&nbsp;+ ;sj mapping -- like ;js but for sourced JavaScript<br>&nbsp;&nbsp;+ ;^ mapping to decode &#...; encoded strings<br>&nbsp;&nbsp;+ ;& in insert mode inserts a literal &<br>- Minor changes</td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=6766">HTML.zip</a></td>
-    <td class="roweven" valign="top" nowrap><b>0.24</b></td>
-    <td class="roweven" valign="top" nowrap><i>2007-02-22</i></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=6857">HTML.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.25.1</b></td>
+    <td class="roweven" valign="top" nowrap><i>2007-03-11</i></td>
     <td class="roweven" valign="top" nowrap>6.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=59">Christian J. Robinson</a></i></td>
-    <td class="roweven" valign="top" width="2000">- In rare cases the script tried to re-enable the ToolBar buttons when they didn't exist<br>- g:no_html_tab_mapping can be defined to 'move' the &lt;tab&gt; mappings to ;&lt;tab&gt;<br>- misc. fixes and additions</td>
+    <td class="roweven" valign="top" width="2000">- Allow b:html_template to be set in addition to g:html_template<br>- HTMLnextInsertPoint() used by the &lt;tab&gt; mapping now handles comments, and no longer requires an argument<br>- ;s4 mapping added -- Same as ;4 only strict rather than transitional<br>- %time%, %time12%, and %time24% template tokens added, and %date% token is now customizable<br>- b:do_xhtml_mappings was being ignored</td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=6510">HTML.zip</a></td>
-    <td class="rowodd" valign="top" nowrap><b>0.23.2</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2006-12-12</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=6766">HTML.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.24</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2007-02-22</i></td>
     <td class="rowodd" valign="top" nowrap>6.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=59">Christian J. Robinson</a></i></td>
-    <td class="rowodd" valign="top" width="2000">- Bug when testing for g:html_charset<br>- Fix a couple of the forms mappings<br>- Documentation updates and fixes</td>
+    <td class="rowodd" valign="top" width="2000">- In rare cases the script tried to re-enable the ToolBar buttons when they didn't exist<br>- g:no_html_tab_mapping can be defined to 'move' the &lt;tab&gt; mappings to ;&lt;tab&gt;<br>- misc. fixes and additions</td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=6506">HTML.zip</a></td>
-    <td class="roweven" valign="top" nowrap><b>0.23.1</b></td>
-    <td class="roweven" valign="top" nowrap><i>2006-12-11</i></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=6510">HTML.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.23.2</b></td>
+    <td class="roweven" valign="top" nowrap><i>2006-12-12</i></td>
     <td class="roweven" valign="top" nowrap>6.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=59">Christian J. Robinson</a></i></td>
-    <td class="roweven" valign="top" width="2000">- Dynamic charset support for the template and the ;ct mapping, based on the 'fileencoding', and 'encoding' options (but the conversion table is limited, see &quot;:help html-author-notes&quot;)<br>- &lt;option&gt; tag wasn't properly closed</td>
+    <td class="roweven" valign="top" width="2000">- Bug when testing for g:html_charset<br>- Fix a couple of the forms mappings<br>- Documentation updates and fixes</td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=6497">HTML.zip</a></td>
-    <td class="rowodd" valign="top" nowrap><b>0.22.2</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2006-12-04</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=6506">HTML.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.23.1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2006-12-11</i></td>
     <td class="rowodd" valign="top" nowrap>6.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=59">Christian J. Robinson</a></i></td>
-    <td class="rowodd" valign="top" width="2000">- browser_launcher.vim: Bug in detecting the remote command<br>- ;me mapping wasn't properly positioning the cursor<br>- Minor documentation fixes</td>
+    <td class="rowodd" valign="top" width="2000">- Dynamic charset support for the template and the ;ct mapping, based on the 'fileencoding', and 'encoding' options (but the conversion table is limited, see &quot;:help html-author-notes&quot;)<br>- &lt;option&gt; tag wasn't properly closed</td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=6414">HTML.zip</a></td>
-    <td class="roweven" valign="top" nowrap><b>0.22.1</b></td>
-    <td class="roweven" valign="top" nowrap><i>2006-11-14</i></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=6497">HTML.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.22.2</b></td>
+    <td class="roweven" valign="top" nowrap><i>2006-12-04</i></td>
     <td class="roweven" valign="top" nowrap>6.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=59">Christian J. Robinson</a></i></td>
-    <td class="roweven" valign="top" width="2000">- Make the leader of the ;-mappings configurable with g:html_map_leader<br>- Fix error when g:no_html_toolbar is set</td>
+    <td class="roweven" valign="top" width="2000">- browser_launcher.vim: Bug in detecting the remote command<br>- ;me mapping wasn't properly positioning the cursor<br>- Minor documentation fixes</td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=6279">HTML.zip</a></td>
-    <td class="rowodd" valign="top" nowrap><b>0.21.2</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2006-10-13</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=6414">HTML.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.22.1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2006-11-14</i></td>
     <td class="rowodd" valign="top" nowrap>6.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=59">Christian J. Robinson</a></i></td>
-    <td class="rowodd" valign="top" width="2000">- ;im mapping wasn't properly positioning the cursor<br>- Minor improvement to the HTMLnextInsertPoint function used by the tab mapping</td>
+    <td class="rowodd" valign="top" width="2000">- Make the leader of the ;-mappings configurable with g:html_map_leader<br>- Fix error when g:no_html_toolbar is set</td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=6253">HTML.zip</a></td>
-    <td class="roweven" valign="top" nowrap><b>0.21</b></td>
-    <td class="roweven" valign="top" nowrap><i>2006-10-04</i></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=6279">HTML.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.21.2</b></td>
+    <td class="roweven" valign="top" nowrap><i>2006-10-13</i></td>
     <td class="roweven" valign="top" nowrap>6.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=59">Christian J. Robinson</a></i></td>
-    <td class="roweven" valign="top" width="2000">- Basic support for XHTML added--see &quot;:help g:do_xhtml_mappings&quot;<br>- Misc. minor fixes</td>
+    <td class="roweven" valign="top" width="2000">- ;im mapping wasn't properly positioning the cursor<br>- Minor improvement to the HTMLnextInsertPoint function used by the tab mapping</td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=5785">HTML.zip</a></td>
-    <td class="rowodd" valign="top" nowrap><b>0.20.4</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2006-05-28</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=6253">HTML.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.21</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2006-10-04</i></td>
     <td class="rowodd" valign="top" nowrap>6.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=59">Christian J. Robinson</a></i></td>
-    <td class="rowodd" valign="top" width="2000">- ;h1 - ;h6 and mappings no longer create center aligned tags, ;hr no longer has a default width. Use ;H1 - ;H6 / ;Hr if you still want the old default behavior.<br>- Don't display menu/toolbar entries for browsers that don't exist. (Unix only)<br>- Allow .-repeating of operator mappings to work properly.<br>- Code improvements and bug fixes.</td>
+    <td class="rowodd" valign="top" width="2000">- Basic support for XHTML added--see &quot;:help g:do_xhtml_mappings&quot;<br>- Misc. minor fixes</td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=4991">HTML.zip</a></td>
-    <td class="roweven" valign="top" nowrap><b>0.19</b></td>
-    <td class="roweven" valign="top" nowrap><i>2006-01-18</i></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=5785">HTML.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.20.4</b></td>
+    <td class="roweven" valign="top" nowrap><i>2006-05-28</i></td>
     <td class="roweven" valign="top" nowrap>6.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=59">Christian J. Robinson</a></i></td>
-    <td class="roweven" valign="top" width="2000">- Smart-handling of certain tags (bold, italic, underline, comments) if syntax highlighting is on.</td>
+    <td class="roweven" valign="top" width="2000">- ;h1 - ;h6 and mappings no longer create center aligned tags, ;hr no longer has a default width. Use ;H1 - ;H6 / ;Hr if you still want the old default behavior.<br>- Don't display menu/toolbar entries for browsers that don't exist. (Unix only)<br>- Allow .-repeating of operator mappings to work properly.<br>- Code improvements and bug fixes.</td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=4921">HTML.zip</a></td>
-    <td class="rowodd" valign="top" nowrap><b>0.18</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2005-12-26</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=4991">HTML.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.19</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2006-01-18</i></td>
     <td class="rowodd" valign="top" nowrap>6.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=59">Christian J. Robinson</a></i></td>
-    <td class="rowodd" valign="top" width="2000">- Implemented normal mode mappings that take an operator (motion) for Vim 7.</td>
+    <td class="rowodd" valign="top" width="2000">- Smart-handling of certain tags (bold, italic, underline, comments) if syntax highlighting is on.</td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=4694">HTML.zip</a></td>
-    <td class="roweven" valign="top" nowrap><b>0.17.1</b></td>
-    <td class="roweven" valign="top" nowrap><i>2005-10-22</i></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=4921">HTML.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.18</b></td>
+    <td class="roweven" valign="top" nowrap><i>2005-12-26</i></td>
     <td class="roweven" valign="top" nowrap>6.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=59">Christian J. Robinson</a></i></td>
-    <td class="roweven" valign="top" width="2000">- Some visual mappings had insert offset problems when 'indentexpr' was set.<br>- Author email in templates wasn't being encoded (bug since the template became configurable).</td>
+    <td class="roweven" valign="top" width="2000">- Implemented normal mode mappings that take an operator (motion) for Vim 7.</td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=4657">HTML.zip</a></td>
-    <td class="rowodd" valign="top" nowrap><b>0.16.2</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2005-10-08</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=4694">HTML.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.17.1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2005-10-22</i></td>
     <td class="rowodd" valign="top" nowrap>6.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=59">Christian J. Robinson</a></i></td>
-    <td class="rowodd" valign="top" width="2000">Some visual mappings didn't work with the extra code used to prevent a (visual)bell.</td>
+    <td class="rowodd" valign="top" width="2000">- Some visual mappings had insert offset problems when 'indentexpr' was set.<br>- Author email in templates wasn't being encoded (bug since the template became configurable).</td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=4427">HTML.zip</a></td>
-    <td class="roweven" valign="top" nowrap><b>0.16</b></td>
-    <td class="roweven" valign="top" nowrap><i>2005-07-13</i></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=4657">HTML.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.16.2</b></td>
+    <td class="roweven" valign="top" nowrap><i>2005-10-08</i></td>
     <td class="roweven" valign="top" nowrap>6.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=59">Christian J. Robinson</a></i></td>
-    <td class="roweven" valign="top" width="2000">- Fixed some of the forms visual mappings.<br>- Added code to prevent a (visual)bell with some of the visual mappings when 'showmatch' was enabled.</td>
+    <td class="roweven" valign="top" width="2000">Some visual mappings didn't work with the extra code used to prevent a (visual)bell.</td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=4299">HTML.zip</a></td>
-    <td class="rowodd" valign="top" nowrap><b>0.15.1</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2005-05-19</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=4427">HTML.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.16</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2005-07-13</i></td>
     <td class="rowodd" valign="top" nowrap>6.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=59">Christian J. Robinson</a></i></td>
-    <td class="rowodd" valign="top" width="2000">- MangleImageTag was getting the width and height of gifs reversed.<br>- Other minor bugs fixed.</td>
+    <td class="rowodd" valign="top" width="2000">- Fixed some of the forms visual mappings.<br>- Added code to prevent a (visual)bell with some of the visual mappings when 'showmatch' was enabled.</td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=3109">HTML.zip</a></td>
-    <td class="roweven" valign="top" nowrap><b>0.15</b></td>
-    <td class="roweven" valign="top" nowrap><i>2004-06-09</i></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=4299">HTML.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.15.1</b></td>
+    <td class="roweven" valign="top" nowrap><i>2005-05-19</i></td>
     <td class="roweven" valign="top" nowrap>6.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=59">Christian J. Robinson</a></i></td>
-    <td class="roweven" valign="top" width="2000">- A bug crept in that prevented the work-around for the GTK2 toolbar pixmap bug from working.</td>
+    <td class="roweven" valign="top" width="2000">- MangleImageTag was getting the width and height of gifs reversed.<br>- Other minor bugs fixed.</td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=2965">HTML.zip</a></td>
-    <td class="rowodd" valign="top" nowrap><b>0.14</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2004-04-22</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=3109">HTML.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.15</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2004-06-09</i></td>
     <td class="rowodd" valign="top" nowrap>6.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=59">Christian J. Robinson</a></i></td>
-    <td class="rowodd" valign="top" width="2000">- ;& mapping to change the visual selection or character under the cursor to its &#...; equivalent.<br>- ;mi mapping to automatically update the WIDTH/HEIGHT attributes in an IMG tag. (MangleImageTag.vim included. -- Experimental! See &quot;:help ;mi&quot;.)<br>- Misc. bug fixes and tweaks.</td>
+    <td class="rowodd" valign="top" width="2000">- A bug crept in that prevented the work-around for the GTK2 toolbar pixmap bug from working.</td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=2838">HTML.zip</a></td>
-    <td class="roweven" valign="top" nowrap><b>0.13</b></td>
-    <td class="roweven" valign="top" nowrap><i>2004-03-16</i></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=2965">HTML.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.14</b></td>
+    <td class="roweven" valign="top" nowrap><i>2004-04-22</i></td>
     <td class="roweven" valign="top" nowrap>6.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=59">Christian J. Robinson</a></i></td>
-    <td class="roweven" valign="top" width="2000">- The template used by ;html is now configurable.<br>- Colors menu changed from a cascading menu to an alphabetic menu.<br>- Misc. tweaks.</td>
+    <td class="roweven" valign="top" width="2000">- ;& mapping to change the visual selection or character under the cursor to its &#...; equivalent.<br>- ;mi mapping to automatically update the WIDTH/HEIGHT attributes in an IMG tag. (MangleImageTag.vim included. -- Experimental! See &quot;:help ;mi&quot;.)<br>- Misc. bug fixes and tweaks.</td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=2459">HTML.zip</a></td>
-    <td class="rowodd" valign="top" nowrap><b>0.12</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2003-11-04</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=2838">HTML.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.13</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2004-03-16</i></td>
     <td class="rowodd" valign="top" nowrap>6.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=59">Christian J. Robinson</a></i></td>
-    <td class="rowodd" valign="top" width="2000">- Insert mode mappings weren't buffer-local. (Error when removing Vim5 support.)</td>
+    <td class="rowodd" valign="top" width="2000">- The template used by ;html is now configurable.<br>- Colors menu changed from a cascading menu to an alphabetic menu.<br>- Misc. tweaks.</td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=2426">HTML.zip</a></td>
-    <td class="roweven" valign="top" nowrap><b>0.11</b></td>
-    <td class="roweven" valign="top" nowrap><i>2003-10-27</i></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=2459">HTML.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.12</b></td>
+    <td class="roweven" valign="top" nowrap><i>2003-11-04</i></td>
     <td class="roweven" valign="top" nowrap>6.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=59">Christian J. Robinson</a></i></td>
-    <td class="roweven" valign="top" width="2000">- HTML menu and ToolBar weren't being enabled sometimes when the script was loaded again.<br>- Abandoned support for vim versions prior to 6.<br>- More minor changes.</td>
+    <td class="roweven" valign="top" width="2000">- Insert mode mappings weren't buffer-local. (Error when removing Vim5 support.)</td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=2333">HTML.zip</a></td>
-    <td class="rowodd" valign="top" nowrap><b>0.10</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2003-09-13</i></td>
-    <td class="rowodd" valign="top" nowrap>5.7</td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=2426">HTML.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.11</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2003-10-27</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=59">Christian J. Robinson</a></i></td>
-    <td class="rowodd" valign="top" width="2000">- Mozilla mappings added.<br>- HTML encode author email (to prevent spam harvesters).<br>- Work-around for a bug in the Vim GTK2 toolbar interface that doesn't properly find icons.<br>- Other minor changes.</td>
+    <td class="rowodd" valign="top" width="2000">- HTML menu and ToolBar weren't being enabled sometimes when the script was loaded again.<br>- Abandoned support for vim versions prior to 6.<br>- More minor changes.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=2333">HTML.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.10</b></td>
+    <td class="roweven" valign="top" nowrap><i>2003-09-13</i></td>
+    <td class="roweven" valign="top" nowrap>5.7</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=59">Christian J. Robinson</a></i></td>
+    <td class="roweven" valign="top" width="2000">- Mozilla mappings added.<br>- HTML encode author email (to prevent spam harvesters).<br>- Work-around for a bug in the Vim GTK2 toolbar interface that doesn't properly find icons.<br>- Other minor changes.</td>
 </tr>
 </table>
 <!-- finish off the framework -->

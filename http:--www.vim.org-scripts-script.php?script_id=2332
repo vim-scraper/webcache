@@ -166,8 +166,8 @@
 <tr>
   <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
   <td>
-    Rating <b>1297/339</b>,
-    Downloaded by 7855  </td>
+    Rating <b>1424/377</b>,
+    Downloaded by 9764  </td>
   <td class="lightbg">
   <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
   </td>
@@ -186,10 +186,10 @@
 <tr><td>utility</td></tr>
 <tr><td>&nbsp;</td></tr>
 <tr><td class="prompt">description</td></tr>
-<tr><td>Pathogen is a simple library for manipulating comma delimited path options. Add this to your vimrc:<br><br>&nbsp;&nbsp;call pathogen#runtime_append_all_bundles()<br><br>After adding this, you can take any plugin, unzip/untar/svn-checkout/git-clone it to its own private directory in .vim/bundle, and it will be added to the runtime path.&nbsp;&nbsp;This makes it easy to remove or update each plugin individually.<br><br>The full list of functions includes:<br><br>pathogen#split: convert a comma delimited option to an array<br>pathogen#join: convert an array to a comma delimited option<br>pathogen#glob: wrapper around glob() that returns an array<br>pathogen#runtime_prepend_subdirectories: prepend all subdirectories of a path to the runtimepath and append all after subsubdirectories<br>pathogen#runtime_append_all_bundles: for each directory in the runtime path, look for a &quot;bundle&quot; entry and add the subdirectories of it to the path, as with runtime_prepend_subdirectories<br><br><a target="_blank" href="http://github.com/tpope/vim-pathogen">http://github.com/tpope/vim-pathogen</A></td></tr>
+<tr><td>Pathogen is a simple library for manipulating comma delimited path options. Add this to your vimrc (not gvimrc!):<br><br>&nbsp;&nbsp;call pathogen#runtime_append_all_bundles()<br><br>After adding this, you can take any plugin, unzip/untar/svn-checkout/git-clone it to its own private directory in .vim/bundle, and it will be added to the runtime path.&nbsp;&nbsp;This makes it easy to remove or update each plugin individually.<br><br>The full list of functions includes:<br><br>pathogen#split: convert a comma delimited option to an array<br>pathogen#join: convert an array to a comma delimited option<br>pathogen#glob: wrapper around glob() that returns an array<br>pathogen#runtime_prepend_subdirectories: prepend all subdirectories of a path to the runtimepath and append all after subsubdirectories<br>pathogen#runtime_append_all_bundles: for each directory in the runtime path, look for a &quot;bundle&quot; entry and add the subdirectories of it to the path, as with runtime_prepend_subdirectories<br><br><a target="_blank" href="http://github.com/tpope/vim-pathogen">http://github.com/tpope/vim-pathogen</A></td></tr>
 <tr><td>&nbsp;</td></tr>
 <tr><td class="prompt">install details</td></tr>
-<tr><td>Install in ~/.vim/autoload (~\vimfiles\autoload on Windows).&nbsp;&nbsp;The API is<br>documented inline.&nbsp;&nbsp;Use foldmethod=marker for maximum ease of reading.<br><br>Note that you need to invoke the pathogen functions before invoking &quot;filetype plugin indent on&quot; if you want it to load ftdetect files. On Debian (and probably other distros), the system vimrc does this early on, so you actually need to &quot;filetype off&quot; before &quot;filetype plugin indent on&quot; to force reloading.</td></tr>
+<tr><td>Install in ~/.vim/autoload (~\vimfiles\autoload on Windows).&nbsp;&nbsp;The API is<br>documented inline.&nbsp;&nbsp;Use foldmethod=marker for maximum ease of reading.<br><br>Note that you need to invoke the pathogen functions before invoking &quot;filetype plugin indent on&quot; if you want it to load ftdetect files. On Debian (and probably other distros), the system vimrc does this early on, so you actually need to &quot;filetype off&quot; before &quot;filetype plugin indent on&quot; to force reloading.<br><br>Tip: If you're using pathogen to load plugins that are submodules in some dot-files repo, and you're tired of it reporting on the untracked tags files all over the place, you can configure git to globally ignore them:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;git config --global core.excludesfile '~/.cvsignore'<br>&nbsp;&nbsp;&nbsp;&nbsp;echo tags &gt;&gt; ~/.cvsignore<br><br>(I used .cvsignore here because it's read by other tools like rsync, but feel free to choose any filename you like.)</td></tr>
 <tr><td>&nbsp;</td></tr>
 </table>
 

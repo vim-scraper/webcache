@@ -166,8 +166,8 @@
 <tr>
   <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
   <td>
-    Rating <b>14/8</b>,
-    Downloaded by 967  </td>
+    Rating <b>13/9</b>,
+    Downloaded by 1015  </td>
   <td class="lightbg">
   <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
   </td>
@@ -186,7 +186,7 @@
 <tr><td>utility</td></tr>
 <tr><td>&nbsp;</td></tr>
 <tr><td class="prompt">description</td></tr>
-<tr><td>Given a number of Java properties in a basic format, this will generate the getters and setters for them; for example, given:<br><br>String myString<br>int myInt<br><br>you will get:<br><br>protected String m_myString;<br>protected int m_myInt;<br><br>public void setMyString( String val )<br>{<br>&nbsp;&nbsp;m_myString = val;<br>}<br><br>public String getMyString()<br>{<br>&nbsp;&nbsp;return m_myString;<br>}<br><br>public void setMyInt( int val )<br>{<br>&nbsp;&nbsp;m_myInt = val;<br>}<br><br>public int getMyInt()<br>{<br>&nbsp;&nbsp;return m_myInt;<br>}<br><br></td></tr>
+<tr><td>Given a number of Java properties in a basic format, this will generate the getters and setters for them; for example, given:<br><br>String myString<br>int myInt<br><br>you will get:<br><br>protected String m_myString;<br>protected int m_myInt;<br><br>public void setMyString( String val )<br>{<br>&nbsp;&nbsp;m_myString = val;<br>}<br><br>public String getMyString()<br>{<br>&nbsp;&nbsp;return m_myString;<br>}<br><br>public void setMyInt( int val )<br>{<br>&nbsp;&nbsp;m_myInt = val;<br>}<br><br>public int getMyInt()<br>{<br>&nbsp;&nbsp;return m_myInt;<br>}<br><br>Version 2.0:<br><br>Added getters and setters for array variables; for example:<br><br>String[] names<br><br>results in:<br><br>protected String[] m_names;<br><br>public void setNames( String[] val )<br>{<br>&nbsp;&nbsp;&nbsp;&nbsp;m_names = val;<br>}<br><br>public String[] getNames()<br>{<br>&nbsp;&nbsp;&nbsp;&nbsp;return m_names;<br>}<br><br>public void setNames( String val, int index )<br>{<br>&nbsp;&nbsp;&nbsp;&nbsp;m_names[ index ] = val;<br>}<br><br>public String getNames( int index )<br>{<br>&nbsp;&nbsp;&nbsp;&nbsp;return m_names[ index ];<br>}<br><br>Version 2.5:<br><br>Added a new variable (g:javabean_generateArrayAccessors--defaults to 1) to control whether or not to generate array index-based getters and setters.<br><br>Allowed the specification of the three configuration variables in the Vimrc instead of having to modify this file; the variables and their default values, again, are:<br><br>g:javabean_scope = &quot;protected&quot;<br><br>g:javabean_beanPrefix = &quot;m_&quot;<br><br>g:javabean_generateArrayAccessors = 1<br></td></tr>
 <tr><td>&nbsp;</td></tr>
 <tr><td class="prompt">install details</td></tr>
 <tr><td>Just pop it into your plugin directory.&nbsp;&nbsp;Can set g:javabean_scope or b:javabean_scope if \\&#039protected\\&#039 isn\\&#039t what you use.</td></tr>
@@ -221,6 +221,22 @@ Click on the package to download.
     <th valign="top">Vim version</th>
     <th valign="top">user</th>
     <th valign="top">release notes</th>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15474">javabean.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.5</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2011-04-18</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=64">Salman Halim</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Added a new variable (g:javabean_generateArrayAccessors--defaults to 1) to control whether or not to generate array index-based getters and setters.<br><br>Allowed the specification of the three configuration variables in the Vimrc instead of having to modify this file.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=15460">javabean.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.0</b></td>
+    <td class="roweven" valign="top" nowrap><i>2011-04-16</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=64">Salman Halim</a></i></td>
+    <td class="roweven" valign="top" width="2000">Added support for array variables to get them by index.</td>
 </tr>
 <tr>
         <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=51">javabean.vim</a></td>

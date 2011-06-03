@@ -167,7 +167,7 @@
   <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
   <td>
     Rating <b>24/35</b>,
-    Downloaded by 2414  </td>
+    Downloaded by 2485  </td>
   <td class="lightbg">
   <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
   </td>
@@ -186,7 +186,7 @@
 <tr><td>color scheme</td></tr>
 <tr><td>&nbsp;</td></tr>
 <tr><td class="prompt">description</td></tr>
-<tr><td>Tested and works well with Java, Javascript, HTML, CSS, PHP, ActionScript (with 'actionscript.vim', available elsewhere in Vim.org), AutoIt and AutoHotKey.&nbsp;&nbsp;Gradually changes changing syntax colours over the hour.<br><br>Benefits:<br>+ reduces user 'freezing' symptoms<br>+ improves space/time-awareness<br>+ recruits right side of brain brain cells<br><br>Disadvantages:<br>- Under Windows GUI resources are wasted over time due to how VIM changes colors<br>- Off-putting flicker occurs when color changes<br><br>Only affects GVIM. Nothing happens in VIM.<br><br></td></tr>
+<tr><td>Tested and works well with Java, Javascript, HTML, CSS, PHP, ActionScript (with 'actionscript.vim', available elsewhere in Vim.org), AutoIt and AutoHotKey.&nbsp;&nbsp;Gradually changes changing syntax colours over the hour.<br><br>Benefits:<br>+ reduces user 'freezing' symptoms<br>+ improves space/time-awareness<br>+ recruits right side of brain<br>+ easy to install/uninstall<br><br>Disadvantages:<br>- Unfortunately some Windows GUI resources are wasted over time<br>- Some off-putting flicker<br><br>Affects only GVIM. Nothing happens in VIM.<br><br>Cursor may blink irregular but simply play with UPDATETIME to correct this.&nbsp;&nbsp;On my system, default 4000 looks horrible, but 3550 works ok.&nbsp;&nbsp;Just put set ut=3550 in your _vimrc file.</td></tr>
 <tr><td>&nbsp;</td></tr>
 <tr><td class="prompt">install details</td></tr>
 <tr><td>Open changingColor.vba in VIM, and type :so % and press RETURN.&nbsp;&nbsp;Re-start VIM.&nbsp;&nbsp;Chaging color will start working.&nbsp;&nbsp;Remove it: simply type :RmVimball changingColor.vba and press RETURN.</td></tr>
@@ -223,12 +223,36 @@ Click on the package to download.
     <th valign="top">release notes</th>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=14795">changingColor.vba</a></td>
-    <td class="rowodd" valign="top" nowrap><b>16.6</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2011-01-19</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15528">changingColor.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>16.9</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2011-04-26</i></td>
     <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=17391">Paul Contreras</a></i></td>
-    <td class="rowodd" valign="top" width="2000">Made Changing Color Script install as a VimBall, to save you copying and pasting lines into your _vimrc.&nbsp;&nbsp;See install instructions.</td>
+    <td class="rowodd" valign="top" width="2000">Brightened up Special an Identifier under low light</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=15519">changingColor.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>16.8</b></td>
+    <td class="roweven" valign="top" nowrap><i>2011-04-25</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=17391">Paul Contreras</a></i></td>
+    <td class="roweven" valign="top" width="2000">Unconfused mixup with fg and bg for Search and Visual, i got fg and bg wrong way.&nbsp;&nbsp;Fixed and seems ok now.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15515">changingColor.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>16.7</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2011-04-24</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=17391">Paul Contreras</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Collated temporary variables into one single variable and used this.&nbsp;&nbsp;Tweaked poor contrast of Search and Visual syntax elements.&nbsp;&nbsp;Made code formatting more normal.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=14795">changingColor.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>16.6</b></td>
+    <td class="roweven" valign="top" nowrap><i>2011-01-19</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=17391">Paul Contreras</a></i></td>
+    <td class="roweven" valign="top" width="2000">Made Changing Color Script install as a VimBall, to save you copying and pasting lines into your _vimrc.&nbsp;&nbsp;See install instructions.</td>
 </tr>
 </table>
 <!-- finish off the framework -->

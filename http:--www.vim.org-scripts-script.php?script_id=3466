@@ -166,8 +166,8 @@
 <tr>
   <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
   <td>
-    Rating <b>-3/3</b>,
-    Downloaded by 125  </td>
+    Rating <b>-4/4</b>,
+    Downloaded by 190  </td>
   <td class="lightbg">
   <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
   </td>
@@ -223,20 +223,28 @@ Click on the package to download.
     <th valign="top">release notes</th>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15212">vimake-1.17.tar.gz</a></td>
-    <td class="rowodd" valign="top" nowrap><b>1-17</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2011-03-13</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15502">vimake-1.18.tar.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1-18</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2011-04-22</i></td>
     <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=8430">michael lear</a></i></td>
-    <td class="rowodd" valign="top" width="2000">New features in this version is the IDE Vimake menu for Gvim. How to use the Gvim Gui with vimake.<br>NEW program to allow the Gui version to access different debuggers from the mouse.<br>Bug-Fix: Viclean had a window re-sizing error (TIOCGWINSZ) this is now fixed.<br><br>To install:&nbsp;&nbsp;&nbsp;&nbsp; cp vimake-1.17.tar.gz&nbsp;&nbsp;to your home directory.<br>Extract:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tar -zxvf vimake-1.17.tar.gz<br>Chdir:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cd ~/vimake-1.17/doc<br>Chdir:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cd ~/vimake-1.17<br>Configure:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;./configure<br>make:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; make install<br><br>Then change to the doc sub directory run Tutorial.html<br>This contains full Installation-Configuration and a Tutorial on using Vimake in Vim, Gvim and the Gui.<br></td>
+    <td class="rowodd" valign="top" width="2000">GTKMM has been added to the list of programs which vimake can build without the need<br>of a Makefile. This allows the gtkmm demonstration package to be built as separate<br>stand alone programs. The GUI IDE has now been re-written as a vim plug-in, using gtkmm<br>programs to display toggle key messages. The tutorial has been updated to include all of<br>the new features.<br><br>Copy the vimake-1.18.tar.gz package to your home directory.<br>Then use the following commands to build and install.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tar -zxvf vimake-1.18.tar.gz<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cd ~/vimake-1.18<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;./configure<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;make install<br><br>Then change to the doc sub directory and run Tutorial.html This contains full Installation-<br>Configuration and a Tutorial on using Vimake in Vim, Gvim and the GUI.<br></td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=15096">vimake-1.16.tar.gz</a></td>
-    <td class="roweven" valign="top" nowrap><b>1-16</b></td>
-    <td class="roweven" valign="top" nowrap><i>2011-02-23</i></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=15212">vimake-1.17.tar.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>1-17</b></td>
+    <td class="roweven" valign="top" nowrap><i>2011-03-13</i></td>
     <td class="roweven" valign="top" nowrap>7.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=8430">michael lear</a></i></td>
-    <td class="roweven" valign="top" width="2000">Initial upload</td>
+    <td class="roweven" valign="top" width="2000">New features in this version is the IDE Vimake menu for Gvim. How to use the Gvim Gui with vimake.<br>NEW program to allow the Gui version to access different debuggers from the mouse.<br>Bug-Fix: Viclean had a window re-sizing error (TIOCGWINSZ) this is now fixed.<br><br>To install:&nbsp;&nbsp;&nbsp;&nbsp; cp vimake-1.17.tar.gz&nbsp;&nbsp;to your home directory.<br>Extract:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tar -zxvf vimake-1.17.tar.gz<br>Chdir:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cd ~/vimake-1.17/doc<br>Chdir:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cd ~/vimake-1.17<br>Configure:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;./configure<br>make:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; make install<br><br>Then change to the doc sub directory run Tutorial.html<br>This contains full Installation-Configuration and a Tutorial on using Vimake in Vim, Gvim and the Gui.<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15096">vimake-1.16.tar.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1-16</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2011-02-23</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=8430">michael lear</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Initial upload</td>
 </tr>
 </table>
 <!-- finish off the framework -->

@@ -166,8 +166,8 @@
 <tr>
   <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
   <td>
-    Rating <b>1/4</b>,
-    Downloaded by 364  </td>
+    Rating <b>0/5</b>,
+    Downloaded by 404  </td>
   <td class="lightbg">
   <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
   </td>
@@ -223,28 +223,36 @@ Click on the package to download.
     <th valign="top">release notes</th>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=14290">vimake-1.15.tar.gz</a></td>
-    <td class="rowodd" valign="top" nowrap><b>1.15</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2010-11-17</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15501">vimake-1.18.tar.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1-18</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2011-04-22</i></td>
     <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=8430">michael lear</a></i></td>
-    <td class="rowodd" valign="top" width="2000">Fixed BUG where viclean removed any executable shell scripts from the project dir. This was because stat<br>returns true on all executable files. Added further test to skip all exectable shell scripts.<br>Replaced incorrect version of utils.cc with latest version.<br>A full installation guide&nbsp;&nbsp;and tutorial is included in the doc directory. To build this version copy the package to your home directory then run: tar zxvf vimake-1.15.tar.gz.<br></td>
+    <td class="rowodd" valign="top" width="2000">GTKMM has been added to the list of programs which vimake can build without the need<br>of a Makefile. This allows the gtkmm demonstration package to be built as separate<br>stand alone programs. The GUI IDE has now been re-written as a vim plug-in, using gtkmm<br>programs to display toggle key messages. The tutorial has been updated to include all of<br>the new features.<br><br>Copy the vimake-1.18.tar.gz package to your home directory.<br>Then use the following commands to build and install.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tar -zxvf vimake-1.18.tar.gz<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cd ~/vimake-1.18<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;./configure<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;make install<br><br>Then change to the doc sub directory and run Tutorial.html This contains full Installation-<br>Configuration and a Tutorial on using Vimake in Vim, Gvim and the GUI.<br></td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=14271">vimake-1.14.tar.gz</a></td>
-    <td class="roweven" valign="top" nowrap><b>1.14</b></td>
-    <td class="roweven" valign="top" nowrap><i>2010-11-15</i></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=14290">vimake-1.15.tar.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.15</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-11-17</i></td>
     <td class="roweven" valign="top" nowrap>7.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=8430">michael lear</a></i></td>
-    <td class="roweven" valign="top" width="2000">Vimake,&nbsp;&nbsp;&nbsp;&nbsp;compile-assemble-link-run-debug a file or files in a vim session with hot keys.<br>This version of vimake has many improvements over the earlier version. It now can load,build and run<br>in a vim session lua. It can automatically switch the ddd front end debugger to load the following<br>file types. Asm, C/CPP, Bash, Python and Perl. It can also run the ruby debugger and the other script languages&nbsp;&nbsp;in a vim shell. A full installation guide&nbsp;&nbsp;and tutorial is included in the doc directory. To build this version copy the package to your home directory then run: tar zxvf vimake-1.14.tar.gz.<br>Change directory to $HOME/vimake-1.14 and follow the README instructions.<br></td>
+    <td class="roweven" valign="top" width="2000">Fixed BUG where viclean removed any executable shell scripts from the project dir. This was because stat<br>returns true on all executable files. Added further test to skip all exectable shell scripts.<br>Replaced incorrect version of utils.cc with latest version.<br>A full installation guide&nbsp;&nbsp;and tutorial is included in the doc directory. To build this version copy the package to your home directory then run: tar zxvf vimake-1.15.tar.gz.<br></td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=12670">vimake-1.12.tar.gz</a></td>
-    <td class="rowodd" valign="top" nowrap><b>1-12</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2010-03-20</i></td>
-    <td class="rowodd" valign="top" nowrap>6.0</td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=14271">vimake-1.14.tar.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.14</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-11-15</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=8430">michael lear</a></i></td>
-    <td class="rowodd" valign="top" width="2000">Initial upload</td>
+    <td class="rowodd" valign="top" width="2000">Vimake,&nbsp;&nbsp;&nbsp;&nbsp;compile-assemble-link-run-debug a file or files in a vim session with hot keys.<br>This version of vimake has many improvements over the earlier version. It now can load,build and run<br>in a vim session lua. It can automatically switch the ddd front end debugger to load the following<br>file types. Asm, C/CPP, Bash, Python and Perl. It can also run the ruby debugger and the other script languages&nbsp;&nbsp;in a vim shell. A full installation guide&nbsp;&nbsp;and tutorial is included in the doc directory. To build this version copy the package to your home directory then run: tar zxvf vimake-1.14.tar.gz.<br>Change directory to $HOME/vimake-1.14 and follow the README instructions.<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=12670">vimake-1.12.tar.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>1-12</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-03-20</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=8430">michael lear</a></i></td>
+    <td class="roweven" valign="top" width="2000">Initial upload</td>
 </tr>
 </table>
 <!-- finish off the framework -->

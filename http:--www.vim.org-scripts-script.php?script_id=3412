@@ -166,8 +166,8 @@
 <tr>
   <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
   <td>
-    Rating <b>13/7</b>,
-    Downloaded by 182  </td>
+    Rating <b>14/8</b>,
+    Downloaded by 257  </td>
   <td class="lightbg">
   <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
   </td>
@@ -186,7 +186,7 @@
 <tr><td>utility</td></tr>
 <tr><td>&nbsp;</td></tr>
 <tr><td class="prompt">description</td></tr>
-<tr><td>GITHUB<br><br><a target="_blank" href="http://github.com/guns/xterm-color-table.vim">http://github.com/guns/xterm-color-table.vim</A><br><br><br>NOTES<br><br> * Provides command :XtermColorTable<br> * Xterm numbers on the left, equivalent RGB values embedded on the right<br> * Press `t` to toggle RGB text visibility<br> * Press `f` while on a color to set the RGB text to that color<br> * Buffer behavior similar to Scratch.vim<br><br><br>SCREENSHOTS<br><br><a target="_blank" href="http://guns.github.com/xterm-color-table.vim/images/xterm-color-table.png">http://guns.github.com/xterm-color-table.vim/images/xterm-color-table.png</A><br><a target="_blank" href="http://guns.github.com/xterm-color-table.vim/images/xterm-color-table-with-visible-rgb.png">http://guns.github.com/xterm-color-table.vim/images/xterm-color-table-with-visible-rgb.png</A><br><br><br>INSPIRED BY<br><br> * <a target="_blank" href="http://www.calmar.ws/vim/256-xterm-24bit-rgb-color-chart.html">http://www.calmar.ws/vim/256-xterm-24bit-rgb-color-chart.html</A><br> * <a target="_blank" href="http://vim.wikia.com/wiki/Xterm256_color_names_for_console_Vim">http://vim.wikia.com/wiki/Xterm256_color_names_for_console_Vim</A><br> * <a target="_blank" href="http://www.vim.org/scripts/script.php?script_id=664">http://www.vim.org/scripts/script.php?script_id=664</A><br></td></tr>
+<tr><td>GITHUB<br><br><a target="_blank" href="http://github.com/guns/xterm-color-table.vim">http://github.com/guns/xterm-color-table.vim</A><br><br><br>NOTES<br><br> * Provides command :XtermColorTable, as well as variants for different splits<br> * Xterm numbers on the left, equivalent RGB values on the right<br> * Press `#` to yank current color (shortcut for yiw)<br> * Press `t` to toggle RGB text visibility<br> * Press `f` to set RGB text to current color<br> * Buffer behavior similar to Scratch.vim<br><br><br>SCREENSHOTS<br><br><a target="_blank" href="http://guns.github.com/xterm-color-table.vim/images/xterm-color-table.png">http://guns.github.com/xterm-color-table.vim/images/xterm-color-table.png</A><br><a target="_blank" href="http://guns.github.com/xterm-color-table.vim/images/xterm-color-table-with-visible-rgb.png">http://guns.github.com/xterm-color-table.vim/images/xterm-color-table-with-visible-rgb.png</A><br><br><br>INSPIRED BY<br><br> * <a target="_blank" href="http://www.calmar.ws/vim/256-xterm-24bit-rgb-color-chart.html">http://www.calmar.ws/vim/256-xterm-24bit-rgb-color-chart.html</A><br> * <a target="_blank" href="http://vim.wikia.com/wiki/Xterm256_color_names_for_console_Vim">http://vim.wikia.com/wiki/Xterm256_color_names_for_console_Vim</A><br> * <a target="_blank" href="http://www.vim.org/scripts/script.php?script_id=664">http://www.vim.org/scripts/script.php?script_id=664</A><br></td></tr>
 <tr><td>&nbsp;</td></tr>
 <tr><td class="prompt">install details</td></tr>
 <tr><td></td></tr>
@@ -223,44 +223,52 @@ Click on the package to download.
     <th valign="top">release notes</th>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=14994">xterm-color-table.vim.tar.gz</a></td>
-    <td class="rowodd" valign="top" nowrap><b>1.4</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2011-02-10</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15556">xterm-color-table.vim.tar.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.6</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2011-05-01</i></td>
     <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=25524">Sung Pae</a></i></td>
-    <td class="rowodd" valign="top" width="2000">Fix regression: GUI Vims are picky about capitalization in `hi term=NONE'</td>
+    <td class="rowodd" valign="top" width="2000">New features:<br><br>* New alternate opening commands: VXtermColorTable for vsplit, TXtermColorTable for tabnew, etc<br>* Better handling of ColorScheme events (existing windows stay open and reapply buffer highlight rules)<br>* New convenience buffer mapping &lt;#&gt; (alias of yiw)</td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=14990">xterm-color-table.vim.tar.gz</a></td>
-    <td class="roweven" valign="top" nowrap><b>1.3</b></td>
-    <td class="roweven" valign="top" nowrap><i>2011-02-09</i></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=14994">xterm-color-table.vim.tar.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.4</b></td>
+    <td class="roweven" valign="top" nowrap><i>2011-02-10</i></td>
     <td class="roweven" valign="top" nowrap>7.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=25524">Sung Pae</a></i></td>
-    <td class="roweven" valign="top" width="2000">Add toggleable RGB visibility. Thanks to Alexey Radkov for the suggestion.</td>
+    <td class="roweven" valign="top" width="2000">Fix regression: GUI Vims are picky about capitalization in `hi term=NONE'</td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=14873">xterm-color-table.vim.tar.gz</a></td>
-    <td class="rowodd" valign="top" nowrap><b>1.2</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2011-01-26</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=14990">xterm-color-table.vim.tar.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.3</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2011-02-09</i></td>
     <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=25524">Sung Pae</a></i></td>
-    <td class="rowodd" valign="top" width="2000">Removed buffer mapping; much smarter buffer behavior, à la Scratch.vim</td>
+    <td class="rowodd" valign="top" width="2000">Add toggleable RGB visibility. Thanks to Alexey Radkov for the suggestion.</td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=14819">xterm-color-table.vim.tar.gz</a></td>
-    <td class="roweven" valign="top" nowrap><b>1.1</b></td>
-    <td class="roweven" valign="top" nowrap><i>2011-01-21</i></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=14873">xterm-color-table.vim.tar.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.2</b></td>
+    <td class="roweven" valign="top" nowrap><i>2011-01-26</i></td>
     <td class="roweven" valign="top" nowrap>7.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=25524">Sung Pae</a></i></td>
-    <td class="roweven" valign="top" width="2000">Remove `ownsyntax' statement, which is a 7.3+ feature. Thanks to Farhad Fouladi.</td>
+    <td class="roweven" valign="top" width="2000">Removed buffer mapping; much smarter buffer behavior, à la Scratch.vim</td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=14814">xterm-color-table.vim.tar.gz</a></td>
-    <td class="rowodd" valign="top" nowrap><b>1.0</b></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=14819">xterm-color-table.vim.tar.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.1</b></td>
     <td class="rowodd" valign="top" nowrap><i>2011-01-21</i></td>
     <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=25524">Sung Pae</a></i></td>
-    <td class="rowodd" valign="top" width="2000">Initial upload</td>
+    <td class="rowodd" valign="top" width="2000">Remove `ownsyntax' statement, which is a 7.3+ feature. Thanks to Farhad Fouladi.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=14814">xterm-color-table.vim.tar.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.0</b></td>
+    <td class="roweven" valign="top" nowrap><i>2011-01-21</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=25524">Sung Pae</a></i></td>
+    <td class="roweven" valign="top" width="2000">Initial upload</td>
 </tr>
 </table>
 <!-- finish off the framework -->

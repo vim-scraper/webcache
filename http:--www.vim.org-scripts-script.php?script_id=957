@@ -166,8 +166,8 @@
 <tr>
   <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
   <td>
-    Rating <b>16/4</b>,
-    Downloaded by 354  </td>
+    Rating <b>20/5</b>,
+    Downloaded by 367  </td>
   <td class="lightbg">
   <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
   </td>
@@ -186,7 +186,7 @@
 <tr><td>utility</td></tr>
 <tr><td>&nbsp;</td></tr>
 <tr><td class="prompt">description</td></tr>
-<tr><td>[OUTDATED: not been tested for vim 7... Updates are welcome !]<br><br>This script was designed in order to have a simple but reliable, comprehensive and reusable set of mappings, functions and syntax in order to improve the Mailing and Posting edition. It does 'clean' the quotes in the mail (removes empty quoted lines, condense quote signs and remove signature), it changes Microsoft Outlook Express quote header to a standard quote header and put the quote where it belongs, it can remove quoted or not quoted paragraphs and it can reformat your text into <br>a justified text inside margins.<br><br>There still are some minor Bugs which I'll get rid of one day, and some feature I shall add to it... But obviously, time is not extensible, and I don't know when I'll have enough to really make this script perfect... Anyway, I'm using this script every day when I edit E-Mails, and I really enjoy using it. :)<br><br>I'd also like to thanks Luc Hermitte who made a good critic of my script.<br><br>USAGE :<br>the default keybindings are :<br>&nbsp;&nbsp;&nbsp;&nbsp;tc : clean the mail (removes empty quoted lines, removes signature...)<br>&nbsp;&nbsp;&nbsp;&nbsp;tm : move a MS/OE signature to the top of the quotation, and change the quotation tag.<br>&nbsp;&nbsp;&nbsp;&nbsp;tt : takeout a paragraph (or a quoted paragraph)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; you will be prompt to enter a reason to put inside the square brackets (like [snip])<br>&nbsp;&nbsp;&nbsp;&nbsp;tr : reformat the current paragraph in order to have it belonging your formating rules<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(you can change them by editing the script, or changing global variables :<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;g:par_marginleft<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;g:par_marginright<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;g:par_textwidth<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;g:par_alinea<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; )<br>&nbsp;&nbsp;&nbsp;&nbsp;th : toggle highlighting of 72 and 80 columns limits <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(texts after 72 column will appear yellow, and after 80 will appear red).</td></tr>
+<tr><td>This script was designed in order to have a simple but reliable, comprehensive and reusable set of mappings, functions and syntax in order to improve the Mailing and Posting edition. It does 'clean' the quotes in the mail (removes empty quoted lines, condense quote signs and remove signature), it changes Microsoft Outlook Express quote header to a standard quote header and put the quote where it belongs, it can remove quoted or not quoted paragraphs and it can reformat your text into <br>a justified text inside margins.<br><br>There still are some minor Bugs which I'll get rid of one day, and some feature I shall add to it... But obviously, time is not extensible, and I don't know when I'll have enough to really make this script perfect... Anyway, I'm using this script every day when I edit E-Mails, and I really enjoy using it. :)<br><br>I'd also like to thanks Luc Hermitte who made a good critic of my script.<br><br>USAGE :<br>the default keybindings are :<br>&nbsp;&nbsp;&nbsp;&nbsp;tc : clean the mail (removes empty quoted lines, removes signature...)<br>&nbsp;&nbsp;&nbsp;&nbsp;tm : move a MS/OE signature to the top of the quotation, and change the quotation tag.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; note: since MS/OE has evolved, that feature may not work as well as in 2004.<br>&nbsp;&nbsp;&nbsp;&nbsp;tt : takeout a paragraph (or a quoted paragraph)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; you will be prompt to enter a reason to put inside the square brackets (like [snip])<br>&nbsp;&nbsp;&nbsp;&nbsp;tr : reformat the current paragraph in order to have it belonging your formating rules<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(you can change them by editing the script, or changing global variables :<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;g:par_marginleft<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;g:par_marginright<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;g:par_textwidth<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;g:par_alinea<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; )<br>&nbsp;&nbsp;&nbsp;&nbsp;th : toggle highlighting of 72 and 80 columns limits <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(texts after 72 column will appear yellow, and after 80 will appear red). <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;note: has to be deprecated to support new vim 7 features<br>&nbsp;&nbsp;&nbsp;&nbsp;tn : added 'cut here' lines into your mail (new in v0.2) :<br>-------8&lt;----------8&lt;--------<br>text<br>-------&gt;8----------&gt;8--------<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>NB:<br>This script offers a similar, yet different way to Justify a text than : <a target="_blank" href="http://www.vim.org/scripts/script.php?script_id=177">http://www.vim.org/scripts/script.php?script_id=177</A><br></td></tr>
 <tr><td>&nbsp;</td></tr>
 <tr><td class="prompt">install details</td></tr>
 <tr><td>You need to have perl v5.8.3 or compatible.<br>To install the script, copy it in ~/.vim/ and type ':call YAPConfPerl()' (or install Text::Format from CPAN).<br>Then, read the script's source in the documentation to configure the variables and the mappings</td></tr>
@@ -223,12 +223,20 @@ Click on the package to download.
     <th valign="top">release notes</th>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=2920">yaposting.vim</a></td>
-    <td class="rowodd" valign="top" nowrap><b>0.1</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2004-04-07</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15470">yaposting.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.2</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2011-04-18</i></td>
     <td class="rowodd" valign="top" nowrap>6.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=4881">Bernard PRATZ</a></i></td>
-    <td class="rowodd" valign="top" width="2000">Initial upload</td>
+    <td class="rowodd" valign="top" width="2000">* Added support for utf-8 encoded characters for the justify format feature<br>* Added '&lt;Lead&gt;n' shortcut to add &quot;cut here&quot; marks :<br>-----8&lt;-----8&lt;-----<br>-----&gt;8-----&gt;8-----<br>* Verified support for vim &gt;7 (verified with 7.1) but shall work with older vims.<br>TODO<br>* Need to be improved to be more vim script compliant (better use of &lt;Lead&gt;, of function declaration, use of range etc...)<br>* Need to have better support of typographic rules (don't add spaces around quotes for example when justifying the text)<br>* Need to improve OE quote fixing rules...</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=2920">yaposting.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.1</b></td>
+    <td class="roweven" valign="top" nowrap><i>2004-04-07</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=4881">Bernard PRATZ</a></i></td>
+    <td class="roweven" valign="top" width="2000">Initial upload</td>
 </tr>
 </table>
 <!-- finish off the framework -->

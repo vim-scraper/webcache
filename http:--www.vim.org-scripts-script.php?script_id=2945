@@ -166,8 +166,8 @@
 <tr>
   <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
   <td>
-    Rating <b>426/115</b>,
-    Downloaded by 1259  </td>
+    Rating <b>502/134</b>,
+    Downloaded by 1444  </td>
   <td class="lightbg">
   <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
   </td>
@@ -186,7 +186,7 @@
 <tr><td>ftplugin</td></tr>
 <tr><td>&nbsp;</td></tr>
 <tr><td class="prompt">description</td></tr>
-<tr><td>This is a BIG plugin with lots of tools to make editing of TeX/LaTeX file easier. It's main features include: background compilation, extended completion, AMSRef equry for bibliography references, font preview, support for projects with multiple tex files, and much more. For a detailed list of features see: <br><a target="_blank" href="https://sourceforge.net/apps/mediawiki/atp-vim/index.php?title=Main_Page">https://sourceforge.net/apps/mediawiki/atp-vim/index.php?title=Main_Page</A> <br>After looking there you can read the complete documentation in vim (:help automatic-tex-plugin.txt) <br><br>You can DONATE for this project&nbsp;&nbsp;(on the project web page: <a target="_blank" href="http://sourceforge.net/projects/atp-vim/">http://sourceforge.net/projects/atp-vim/</A>) <br>(see :h atp-donate). <br><br>The project is developed under GPL v3 or higher. <br><br>You can subscribe to the mailing list: <br><a target="_blank" href="https://lists.sourceforge.net/lists/listinfo/atp-vim-list">https://lists.sourceforge.net/lists/listinfo/atp-vim-list</A> <br>Its for all kind of purposes: help, bug reports, feature request, comments but also for ANNOUCES (of new releases!) so you can stay up to date. <br><br>Project News: <a target="_blank" href="https://sourceforge.net/news/?group_id=513143">https://sourceforge.net/news/?group_id=513143</A><br><br>This plugin includes: <a href="/scripts/script.php?script_id=3109">vimscript#3109</a>&nbsp;&nbsp;(LatexBox by David Munger). <br><br>BUG tracker: send a mail to the mailing list: <a target="_blank" href="https://lists.sourceforge.net/lists/listinfo/atp-vim-list">https://lists.sourceforge.net/lists/listinfo/atp-vim-list</A> <br>PROJECT site: <a target="_blank" href="http://sourceforge.net/projects/atp-vim/">http://sourceforge.net/projects/atp-vim/</A></td></tr>
+<tr><td><br>This is a complete plugin with lots of tools to make editing of TeX/LaTeX file more friendly. Its main features include: background compilation, forward and inverse search for both dvi and pdf (okular), extended completion, AMSRef query for bibliography references, font preview, support for projects with multiple tex files, and much much more. For a detailed list of features see: <br>&nbsp;&nbsp;&nbsp;&nbsp;<a target="_blank" href="https://sourceforge.net/apps/mediawiki/atp-vim/index.php?title=Main_Page">https://sourceforge.net/apps/mediawiki/atp-vim/index.php?title=Main_Page</A><br>After looking there you can read the complete documentation in vim (:help atp) <br><br>LATEST SNAPSHOTS<br>&nbsp;&nbsp;&nbsp;&nbsp;You can get the latest snapshots (stable/unstable releases) on <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a target="_blank" href="http://sourceforge.net/projects/atp-vim/files/snapshots/">http://sourceforge.net/projects/atp-vim/files/snapshots/</A> <br>&nbsp;&nbsp;&nbsp;&nbsp;or if you have ATP version 9.2 or higher using :UpdateATP command <br>&nbsp;&nbsp;&nbsp;&nbsp;inside vim (check out :help atp-:UpdateATP)<br><br>DONATE<br>&nbsp;&nbsp;&nbsp;&nbsp;You can SUPPORT this project using PayPal (see :help atp-donate)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a target="_blank" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=3NMU7FEEPVG7Q">https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=3NMU7FEEPVG7Q</A><br><br>LICENCE<br>&nbsp;&nbsp;&nbsp;&nbsp;The project is developed under GPL v3 or higher. <br><br>MAILING LIST<br>&nbsp;&nbsp;&nbsp;&nbsp;You can subscribe to the mailing list: <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a target="_blank" href="https://lists.sourceforge.net/lists/listinfo/atp-vim-list">https://lists.sourceforge.net/lists/listinfo/atp-vim-list</A> <br>&nbsp;&nbsp;&nbsp;&nbsp;Its for all kind of purposes: help, bug reports, feature request, comments.<br><br>PROJECT NEWS<br>&nbsp;&nbsp;&nbsp;&nbsp;You can follow the project on SourceForge to get project news <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a target="_blank" href="https://sourceforge.net/news/?group_id=513143">https://sourceforge.net/news/?group_id=513143</A><br>&nbsp;&nbsp;&nbsp;&nbsp;(using watch SourceForge feature, i.e. you need to have a SourceForge account) <br><br>LATEX BOX<br>&nbsp;&nbsp;&nbsp;&nbsp;This plugin includes: <a href="/scripts/script.php?script_id=3109">vimscript#3109</a>&nbsp;&nbsp;(LatexBox by David Munger). <br><br>BUGS <br>&nbsp;&nbsp;&nbsp;&nbsp;Send an email to the mailing list: <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a target="_blank" href="https://lists.sourceforge.net/lists/listinfo/atp-vim-list">https://lists.sourceforge.net/lists/listinfo/atp-vim-list</A><br><br>PROJECT SITE<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a target="_blank" href="http://sourceforge.net/projects/atp-vim/">http://sourceforge.net/projects/atp-vim/</A></td></tr>
 <tr><td>&nbsp;</td></tr>
 <tr><td class="prompt">install details</td></tr>
 <tr><td>To install open the vimball file and source it ':so %' or ':source %'. You can use $HOME/.atp.vim configuration file to set the atp variables, which is handy for local-buffer settings.</td></tr>
@@ -223,6 +223,70 @@ Click on the package to download.
     <th valign="top">release notes</th>
 </tr>
 <tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15619">AutomaticTexPlugin_9.4.3.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>9.4.3</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2011-05-10</i></td>
+    <td class="rowodd" valign="top" nowrap>7.3</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=18896">Marcin Szamotulski</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Patches for 9.4 release.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=15610">AutomaticTexPlugin_9.4.2.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>9.4.2</b></td>
+    <td class="roweven" valign="top" nowrap><i>2011-05-08</i></td>
+    <td class="roweven" valign="top" nowrap>7.3</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=18896">Marcin Szamotulski</a></i></td>
+    <td class="roweven" valign="top" width="2000">Fixes for 9.4 release.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15607">AutomaticTexPlugin_9.4.1.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>9.4.1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2011-05-08</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=18896">Marcin Szamotulski</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Small fixes for 9.4 release.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=15606">AutomaticTexPlugin_9.4.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>9.4</b></td>
+    <td class="roweven" valign="top" nowrap><i>2011-05-08</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=18896">Marcin Szamotulski</a></i></td>
+    <td class="roweven" valign="top" width="2000">See :help atp-news</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15503">AutomaticTexPlugin_9.3.5.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>9.3.5</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2011-04-22</i></td>
+    <td class="rowodd" valign="top" nowrap>7.3</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=18896">Marcin Szamotulski</a></i></td>
+    <td class="rowodd" valign="top" width="2000">see :help atp-news</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=15464">AutomaticTexPlugin_9.3.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>9.3</b></td>
+    <td class="roweven" valign="top" nowrap><i>2011-04-17</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=18896">Marcin Szamotulski</a></i></td>
+    <td class="roweven" valign="top" width="2000">see :help atp-news for changes.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15448">AutomaticTexPlugin_9.2.7.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>9.2.7</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2011-04-13</i></td>
+    <td class="rowodd" valign="top" nowrap>7.3</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=18896">Marcin Szamotulski</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- This update contains several small changes and one important fix (for those who do not use bibtex). See :help atp-news.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=15417">AutomaticTexPlugin_9.2.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>9.2</b></td>
+    <td class="roweven" valign="top" nowrap><i>2011-04-09</i></td>
+    <td class="roweven" valign="top" nowrap>7.3</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=18896">Marcin Szamotulski</a></i></td>
+    <td class="roweven" valign="top" width="2000">* This release is a major step forward ;) see long list of changes :help atp-news, thanks for Ivo Lopez for the help!<br>Major news:<br>- new compelation using python script<br>- progress bar for compelation<br>- UpdateATP[!]&nbsp;&nbsp;&nbsp;&nbsp;= to get new Stable/Unstable release directly from SourceForge project hosting site.</td>
+</tr>
+<tr>
         <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15269">AutomaticTexPlugin_9.1.1.vba</a></td>
     <td class="rowodd" valign="top" nowrap><b>9.1.1</b></td>
     <td class="rowodd" valign="top" nowrap><i>2011-03-21</i></td>
@@ -237,70 +301,6 @@ Click on the package to download.
     <td class="roweven" valign="top" nowrap>7.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=18896">Marcin Szamotulski</a></i></td>
     <td class="roweven" valign="top" width="2000">See :h atp-news for changes [ there are some NEW features :), and many fixes! ]<br></td>
-</tr>
-<tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15163">AutomaticTexPlugin_8.7.vba</a></td>
-    <td class="rowodd" valign="top" nowrap><b>8.7</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2011-03-05</i></td>
-    <td class="rowodd" valign="top" nowrap>7.0</td>
-    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=18896">Marcin Szamotulski</a></i></td>
-    <td class="rowodd" valign="top" width="2000">* for the changes see :h atp-news. Probably the most important is that completion supports beamer commands and environments.</td>
-</tr>
-<tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=14840">AutomaticTexPlugin_8.6.vba</a></td>
-    <td class="roweven" valign="top" nowrap><b>8.6</b></td>
-    <td class="roweven" valign="top" nowrap><i>2011-01-23</i></td>
-    <td class="roweven" valign="top" nowrap>7.0</td>
-    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=18896">Marcin Szamotulski</a></i></td>
-    <td class="roweven" valign="top" width="2000">See the help file for changes.</td>
-</tr>
-<tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=14503">AutomaticTexPlugin_8.5.vba</a></td>
-    <td class="rowodd" valign="top" nowrap><b>8.5</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2010-12-14</i></td>
-    <td class="rowodd" valign="top" nowrap>7.0</td>
-    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=18896">Marcin Szamotulski</a></i></td>
-    <td class="rowodd" valign="top" width="2000">* AMSRef : bang has opposite meaning now.<br>* Many small fixes. <br></td>
-</tr>
-<tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=14338">AutomaticTexPlugin_8.4.vba</a></td>
-    <td class="roweven" valign="top" nowrap><b>8.4</b></td>
-    <td class="roweven" valign="top" nowrap><i>2010-11-21</i></td>
-    <td class="roweven" valign="top" nowrap>7.0</td>
-    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=18896">Marcin Szamotulski</a></i></td>
-    <td class="roweven" valign="top" width="2000">* Small fixes.</td>
-</tr>
-<tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=14223">AutomaticTexPlugin_8.3.vba</a></td>
-    <td class="rowodd" valign="top" nowrap><b>8.3</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2010-11-10</i></td>
-    <td class="rowodd" valign="top" nowrap>7.0</td>
-    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=18896">Marcin Szamotulski</a></i></td>
-    <td class="rowodd" valign="top" width="2000">* Abbreviations (see :h atp-news) and fixes of vip.</td>
-</tr>
-<tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=14177">AutomaticTexPlugin_8.2.vba</a></td>
-    <td class="roweven" valign="top" nowrap><b>8.2</b></td>
-    <td class="roweven" valign="top" nowrap><i>2010-11-04</i></td>
-    <td class="roweven" valign="top" nowrap>7.0</td>
-    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=18896">Marcin Szamotulski</a></i></td>
-    <td class="roweven" valign="top" width="2000"> * Some fixes. As usual, check :h atp-news</td>
-</tr>
-<tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=14123">AutomaticTexPlugin_8.1.vba</a></td>
-    <td class="rowodd" valign="top" nowrap><b>8.1</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2010-10-26</i></td>
-    <td class="rowodd" valign="top" nowrap>7.0</td>
-    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=18896">Marcin Szamotulski</a></i></td>
-    <td class="rowodd" valign="top" width="2000">Some fixes in the new command AMSRef, completion for :GotoFile, :EditIntpuFile commands.</td>
-</tr>
-<tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=14107">AutomaticTexPlugin_8.vba</a></td>
-    <td class="roweven" valign="top" nowrap><b>8</b></td>
-    <td class="roweven" valign="top" nowrap><i>2010-10-24</i></td>
-    <td class="roweven" valign="top" nowrap>7.0</td>
-    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=18896">Marcin Szamotulski</a></i></td>
-    <td class="roweven" valign="top" width="2000">Filetype plugin for bib files added.<br>Command to obtain bib data from amsref web page interface (for both bib files and bibliography environments)<br>For lots of other new stuff read :h atp-news</td>
 </tr>
 </table>
 <!-- finish off the framework -->

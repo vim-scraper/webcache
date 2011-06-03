@@ -1,0 +1,404 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+  <link rel="Stylesheet" type="text/css" href="/css/style.css" >
+  <title>Tab Manager - Rearranges buffers into tabs : vim online</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <meta name="KEYWORDS" content="Vim, Vi IMproved, text editor, home, documentation, tips, scripts, news">
+  <link rel="shortcut icon" type="image/x-icon" href="/images/vim_shortcut.ico">
+</head>
+
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff"> 
+
+<!-- HEADER, SPONSOR IMAGE, VIM IMAGE AND BOOK AD -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+  <td class="lightbg">&nbsp;&nbsp;&nbsp;</td>
+  <td class="lightbg" align="left"><a href="/sponsor/index.php"><img src="/images/sponsorvim.gif" alt="sponsor Vim development" border="0"></a></td>
+    <td class="lightbg" align="center"><a href="/index.php"><img src="/images/vim_header.gif" border="0" alt="Vim logo"></a></td>
+    <td class="lightbg" align="right"><a href="http://iccf-holland.org/click5.html"><img src="/images/buyhelplearn.gif" alt="Vim Book Ad" border="0"></a></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="darkbg"><img src="/images/spacer.gif" width="1" height="10" alt=""></td>
+  </tr>
+</table>
+<!-- THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+  <col width="180">
+  <col width="1">
+
+  <tr valign="top">
+    <td class="sidebar">
+      <table width="180" cellpadding="4" cellspacing="0" border="0">
+        <tr valign="top">
+          <td class="sidebar">
+
+<!-- INCLUDE THE PAGE NAVIGATION -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+    <tr>
+        <td><small>not logged in (<a href="/login.php">login</a>)</small></td>
+    </tr>
+    <tr><td>
+<small>&nbsp;</small>
+<form action="http://www.google.com/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-3005259998294962:bvyni59kjr1" />
+    <input type="hidden" name="ie" value="ISO-8859-1" />
+    <input type="text" name="q" size="20" />
+    <br>
+    <input type="submit" name="sa" value="Search" />
+  </div>
+</form>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+    </td></tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="1"></td>
+    </tr>
+    <tr>
+        <td class="darkbg"><img src="/images/spacer.gif" alt='' border="0" height="3"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="2"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/index.php">Home</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/search.php">Advanced search</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/about.php">About Vim</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/community.php">Community</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/news/news.php">News</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/sponsor/index.php">Sponsoring</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/trivia.php">Trivia</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/docs.php">Documentation</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/download.php">Download</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/scripts/index.php">Scripts</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/tips/index.php">Tips</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/account/index.php">My Account</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/huh.php">Site Help</a></td>
+        </tr>
+</table>
+
+            <table width="172" cellpadding="0" cellspacing="0" border="0">
+              <tr><td><img src="/images/spacer.gif" alt="" border="0" width="1" height="8"></td></tr>
+              <tr><td class="darkbg"><img src="/images/spacer.gif" width="1" height="3" alt=""></td></tr>
+            </table>
+            <br>
+
+<!-- INCLUDE THE PAGE SIDEBAR TEXT -->
+&nbsp;
+
+          </td>
+        </tr>
+      </table>
+    </td>
+
+    <td class="darkbg"><img src="/images/spacer.gif" width="1" height="1" border="0" alt=""><br></td>
+    <td>
+      <table width="100%" cellpadding="10" cellspacing="0" border="0" bordercolor="red">
+        <tr>
+          <td valign="top">
+
+<span class="txth1">Tab Manager : Rearranges buffers into tabs</span> 
+
+<br>
+<br>
+
+<!-- karma table -->
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
+  <td>
+    Rating <b>11/7</b>,
+    Downloaded by 228  </td>
+  <td class="lightbg">
+  <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
+  </td>
+  <td>
+    <a href="http://vim.wikia.com/wiki/Script:3536">Vim wiki</a>
+  </td>  
+</tr>
+</table>
+<p>
+
+<table cellspacing="0" cellpadding="0" border="0">
+<tr><td class="prompt">created by</td></tr>
+<tr><td><a href="/account/profile.php?user_id=64">Salman Halim</a></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">script type</td></tr>
+<tr><td>utility</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">description</td></tr>
+<tr><td>Sorts and rearranges all open buffers across tabs based on built-in or user-specified criteria.<br><br>Configuration: The variable g:TabManager_maxFilesInTab (defaults to 5) is used to determine how many buffers to open in each tab.<br><br>General usage:<br><br>All of these commands optionally take a number which determines how many buffers to open per tab (new tabs get created as necessary); 0 means to lump all<br>buffers of any given typeinto one tab.<br><br>For the following examples, assume these buffers are open (doesn't matter how many tabs they currently take):<br><br>/progs/com/test/Abcd.java<br>/progs/com/test/ProgramRunner.java<br>/progs/com/abc/Test.java<br>/vim/plugin/TabManager.vim<br><br>Rearrangetabsbyfirstletter: Quick alphabetization of buffers where all buffers with the same starting letter are put together. Only the file name is<br>considered, not the path. So, at the end, you get three tabs:<br><br>Tab 1: Abcd.java<br>Tab 2: ProgramRunner.java<br>Tab 3: TabManager.vim and Test.java<br><br>(The tabs are sorted as are the results within each tab.)<br><br>Rearrangetabsbyextension: Arranges by extension (.java or .vim, for example):<br><br>Tab 1: Abcd.java, ProgramRunner.java and Test.java<br>Tab 2: TabManager.vim<br><br>Rearrangetabsbypath: Arranges by absolute file path (not taking filename into consideration):<br><br>Tab 1: /progs/com/abc: Test.java<br>Tab 2: /progs/com/test: Abcd.java and ProgramRunner.java<br>Tab 3: /vim/plugin: TabManager.vim<br><br>Tiletabs: Quick way to alphabetize the list of buffers (case sensitive) into regularly-sized (by number of buffers) tabs. Doesn't make sense to use this with<br>0 (all buffers in one tab), unless that's the effect you want.<br><br>Rearrangetabs: The workhorse. All other other commands are defined through this. Takes the actual pattern criteria against which to match each buffer.<br><br>Version 1.1:<br><br>Added two new commands:<br><br>Rearrangetabsbytype: If it's a Java file, returns the last word that's not a part of the extension. For example, CopyAction.java returns Action and<br>CopyForm.java returns Form. This should probably be reworked to allow the setting of the extension upon which to filter or to not look at extensions at all.<br><br>Rearrangetabsbyroot: Groups files with similarly named roots together. For example, CopyAction.java, CopyForm.java and CopyResults.jsp will end up together<br>because they all have &quot;Copy&quot; as the root.<br><br>Version 1.2:<br><br>New variable: g:TabManager_fileTypeExtension (defaults to &quot;java&quot;) to use when determining the Rearrangetabsbytype; can be passed to the command on the<br>command-line as an override.<br><br>Rearrangetabsbytype now takes an extension (other than the default &quot;java&quot; or g:TabManager_fileTypeExtension) to use when sorting the files. If only one<br>parameter is passed, it may be either a number or the extension. If both are specified, the number must be first.<br><br>Version 1.3:<br><br>Rearrangetabsbyfirstletter renamed to Rearrangetabsbyfirstletters: If called with no parameters, considers the first character of the file name, as before. If<br>called with one parameter, the specified number of characters is considered. For example, with no parameters, &quot;Test.java&quot; and &quot;Touring.java&quot; would be placed<br>together because both start with a T. With 2 as the parameter value, they would be separated (&quot;Te&quot; vs. &quot;To&quot;).<br><br>If called with 2 parameters, the first parameter is the number of windows to place in one tab, as always (0 meaning to throw them all together).<br><br>Version 1.35:<br><br>Takes 'ignorecase' into consideration for matching extensions, first letters and complete file paths (but not for matching roots and &quot;types&quot;).<br><br>Version 1.4:<br><br>Added new command:<br><br>Movetotab: moves the current file to the specified tab; understands absolute numbers (1 for the first tab, for example) as well as:<br><br>- n: next tab<br>- p: previous tab<br>- $: last tab<br><br>Version 1.45:<br><br>Added new command:<br><br>Copytotab: copies the current file to the specified tab (just like Movetotab except that the original tab also contains the file).<br><br>Version 1.5:<br><br>Added the ability to set custom &quot;keys&quot; to be used when rearranging files into tabs. For example, given the following list of files:<br><br>/progs/com/test/Abcd.java<br>/progs/com/test/ProgramRunner.java<br>/progs/com/abc/Test.java<br>/vim/plugin/TabManager.vim<br>/webFiles/root/test.html<br>/webFiles/root/css/styles.css<br><br>The default behaviour, when arranging by path, extension or first letters, is to always place test.html and styles.css in separate tabs. (Unless calling<br>Tiletabs, which just tiles all windows blindly.) However, if both these files have a manually set key of, say, &quot;web&quot;, then any other criteria will be ignored<br>and these two files will always be placed together because they have the same key. This allows grouping some windows by functionality while continuing to<br>group others by whatever rearrange command is actually called.<br><br>Of course, different sets of windows may have different keys and they will all be grouped together accordingly.<br><br>All of the standard Rearrange* commands now take an optional bang (!)--for example, Rearrangetabsbyextension!--that will, for just this rearrangement, IGNORE<br>any local keys and treat all windows as if there were no keys.<br><br>If you have multiple windows where you're editing the same buffer, they will almost always end up together after any rearrangement (unless they are split<br>across tabs that become full). You can avoid this by setting different window-level local keys for the buffers.<br><br>Added four new commands--the set and remove key commands can be combined with windo and tabdo to set or remove the same key for more than one window at a time:<br><br>Settabmanagerwindowkey &lt;key&gt;: Sets the window-level local key for the current window to &lt;key&gt;.<br><br>Settabmanagerbufferkey &lt;key&gt;: Sets the buffer-level local key for the current buffer to &lt;key&gt;.<br><br>Removetabmanagerkey: Removes the currently set key for the current window; will remove BOTH buffer and window level keys. (Doesn't take any arguments.)<br><br>Redorearrangetabs: Redoes the last tab rearrangement command (by extension, simple tiling, by first letters, etc.). Useful for incorporating new windows into<br>the currenty &quot;scheme&quot;. If local keys have changed, the layout may end up being different. If new windows have been added, the layout may be different, also,<br>but that may be what you want. By default, it obeys local keys (even if the last command was called with a bang and did not). Accepts a bang (!) to ignore<br>local keys.<br><br>If you call this before you've run any actual rearrangement commands, you will most likely (deservedly) get an error.<br><br>Version 1.55:<br><br>Rearrangetabsbypath now also takes a second parameter which determines how many components from the path to consider. For example, given the following set of<br>files:<br><br>/progs/com/test/Abcd.java<br>/progs/com/test/ProgramRunner.java<br>/progs/com/abc/Test.java<br><br>The default behaviour would be to create two tabs, one with Abcd.java and ProgramRunner.java; and the other with Test.java. However, if called with a<br>parameter of 2, it will only consider the first two path components (/progs/com) and put all the files in the same tab. A value of 0 (the default) means to<br>check the entire path, as before. New command format:<br><br>Rearrangetabsbypath [number of files per tab] [number of path components to consider]<br>Or<br>Rearrangetabsbypath [number of path components to consider]<br><br><br>Version 1.6<br><br>Added a new command:<br><br>Rearrangetabsbypackage: Works just like Rearrangetabsbypath, except uses the package the files are in. Only useful for files that specify a package in this format:<br><br>package some.package.name;<br><br>(The semicolon is optional.) Files that don't have a package will fall back to the entire file path (no path component specification; the ENTIRE path will be considered.)<br><br>Takes either one or two arguments:<br><br>Rearrangetabsbypackage [number of files per tab] [number of path components to consider]<br>Or<br>Rearrangetabsbypackage [number of path components to consider]<br></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">install details</td></tr>
+<tr><td>Drop into the plugin directory; creates a few commands, but no mappings.</td></tr>
+<tr><td>&nbsp;</td></tr>
+</table>
+
+<!-- rating table -->
+<form name="rating">
+<input type="hidden" name="script_id" value="3536">
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>rate this script</b></td>
+  <td valign="middle">
+    <input type="radio" name="rating" value="life_changing">Life Changing
+    <input type="radio" name="rating" value="helpful">Helpful
+    <input type="radio" name="rating" value="unfulfilling">Unfulfilling&nbsp;
+    <input type="submit" value="rate">
+  </td>
+</tr>
+</table>
+</form>
+<span class="txth2">script versions</span> (<a href="add_script_version.php?script_id=3536">upload new version</a>)
+<p>
+Click on the package to download.
+<p>
+
+<table cellspacing="2" cellpadding="4" border="0" width="100%">
+<tr class='tableheader'>
+        <th valign="top">package</th>
+    <th valign="top">script version</th>
+    <th valign="top">date</th>
+    <th valign="top">Vim version</th>
+    <th valign="top">user</th>
+    <th valign="top">release notes</th>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15601">TabManager.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.8</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2011-05-07</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=64">Salman Halim</a></i></td>
+    <td class="rowodd" valign="top" width="2000">No change in functionality. Just added a proper help file.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=15588">TabManager.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.7</b></td>
+    <td class="roweven" valign="top" nowrap><i>2011-05-05</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=64">Salman Halim</a></i></td>
+    <td class="roweven" valign="top" width="2000">No real change; has a dependency upon my GetVar autoload script which I had forgotten to mention before. Sorry if this caused problems.<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15471">TabManager.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.6</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2011-04-18</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=64">Salman Halim</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Added a new command: Rearrangetabsbypackage: Works just like Rearrangetabsbypath, except uses the package the files are in. Only useful for files that specify a package (falls back to the entire file path otherwise).</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=15456">TabManager.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.55</b></td>
+    <td class="roweven" valign="top" nowrap><i>2011-04-16</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=64">Salman Halim</a></i></td>
+    <td class="roweven" valign="top" width="2000">Rearrangetabsbypath now also takes a second parameter which determines how many components from the path to consider.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15447">TabManager.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.5</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2011-04-13</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=64">Salman Halim</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Added the ability to set custom &quot;keys&quot; to be used when rearranging files into tabs. For example, given the following list of files:<br><br>/progs/com/test/Abcd.java<br>/progs/com/test/ProgramRunner.java<br>/progs/com/abc/Test.java<br>/vim/plugin/TabManager.vim<br>/webFiles/root/test.html<br>/webFiles/root/css/styles.css<br><br>The default behaviour, when arranging by path, extension or first letters, is to always place test.html and styles.css in separate tabs. (Unless calling<br>Tiletabs, which just tiles all windows blindly.) However, if both these files have a manually set key of, say, &quot;web&quot;, then any other criteria will be ignored<br>and these two files will always be placed together because they have the same key. This allows grouping some windows by functionality while continuing to<br>group others by whatever rearrange command is actually called.<br><br>Of course, different sets of windows may have different keys and they will all be grouped together accordingly.<br><br>All of the standard Rearrange* commands now take an optional bang (!)--for example, Rearrangetabsbyextension!--that will, for just this rearrangement, IGNORE<br>any local keys and treat all windows as if there were no keys.<br><br>If you have multiple windows where you're editing the same buffer, they will almost always end up together after any rearrangement (unless they are split<br>across tabs that become full). You can avoid this by setting different window-level local keys for the buffers.<br><br>Added four new commands--the set and remove key commands can be combined with windo and tabdo to set or remove the same key for more than one window at a time:<br><br>Settabmanagerwindowkey &lt;key&gt;: Sets the window-level local key for the current window to &lt;key&gt;.<br><br>Settabmanagerbufferkey &lt;key&gt;: Sets the buffer-level local key for the current buffer to &lt;key&gt;.<br><br>Removetabmanagerkey: Removes the currently set key for the current window; will remove BOTH buffer and window level keys. (Doesn't take any arguments.)<br><br>Redorearrangetabs: Redoes the last tab rearrangement command (by extension, simple tiling, by first letters, etc.). Useful for incorporating new windows into<br>the currenty &quot;scheme&quot;. If local keys have changed, the layout may end up being different. If new windows have been added, the layout may be different, also,<br>but that may be what you want. By default, it obeys local keys (even if the last command was called with a bang and did not). Accepts a bang (!) to ignore<br>local keys.<br><br>If you call this before you've run any actual rearrangement commands, you will most likely (deservedly) get an error.<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=15410">TabManager.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.45</b></td>
+    <td class="roweven" valign="top" nowrap><i>2011-04-07</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=64">Salman Halim</a></i></td>
+    <td class="roweven" valign="top" width="2000">Added new command:<br><br>Copytotab: copies the current file to the specified tab (just like Movetotab except that the original tab also contains the file).<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15408">TabManager.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.4</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2011-04-07</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=64">Salman Halim</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Added new command:<br><br>Movetotab: moves the current file to the specified tab; understands absolute numbers (1 for the first tab, for example) as well as:<br><br>- n: next tab<br>- p: previous tab<br>- $: last tab<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=15389">TabManager.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.37</b></td>
+    <td class="roweven" valign="top" nowrap><i>2011-04-05</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=64">Salman Halim</a></i></td>
+    <td class="roweven" valign="top" width="2000">Fixed a problem where newly created tabs always had an empty window at the bottom. (Executes an :e the first time in a new tab instead of an :sp.)</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15387">TabManager.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.36</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2011-04-05</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=64">Salman Halim</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Fixed typo; thank you, Christophe.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=15382">TabManager.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.35</b></td>
+    <td class="roweven" valign="top" nowrap><i>2011-04-04</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=64">Salman Halim</a></i></td>
+    <td class="roweven" valign="top" width="2000">Version 1.35:<br><br>Takes 'ignorecase' into consideration for matching extensions, first letters and complete file paths (but not for matching roots and &quot;types&quot;).<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15380">TabManager.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.3</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2011-04-04</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=64">Salman Halim</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Version 1.3:<br><br>Rearrangetabsbyfirstletter renamed to Rearrangetabsbyfirstletters: If called with no parameters, considers the first character of the file name, as before. If<br>called with one parameter, the specified number of characters is considered. For example, with no parameters, &quot;Test.java&quot; and &quot;Touring.java&quot; would be placed<br>together because both start with a T. With 2 as the parameter value, they would be separated (&quot;Te&quot; vs. &quot;To&quot;).<br><br>If called with 2 parameters, the first parameter is the number of windows to place in one tab, as always (0 meaning to throw them all together).<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=15379">TabManager.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.25</b></td>
+    <td class="roweven" valign="top" nowrap><i>2011-04-04</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=64">Salman Halim</a></i></td>
+    <td class="roweven" valign="top" width="2000">Removed debug statements left in by mistake and fixed a conversion error.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15374">TabManager.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.2</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2011-04-04</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=64">Salman Halim</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Version 1.2:<br><br>New variable: g:TabManager_fileTypeExtension (defaults to &quot;java&quot;) to use when determining the Rearrangetabsbytype; can be passed to the command on the<br>command-line as an override.<br><br>Rearrangetabsbytype now takes an extension (other than the default &quot;java&quot; or g:TabManager_fileTypeExtension) to use when sorting the files.<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=15373">TabManager.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.1</b></td>
+    <td class="roweven" valign="top" nowrap><i>2011-04-03</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=64">Salman Halim</a></i></td>
+    <td class="roweven" valign="top" width="2000">Added two new commands:<br><br>Rearrangetabsbytype: If it's a Java file, returns the last word that's not a part of the extension. For example, CopyAction.java returns Action and<br>CopyForm.java returns Form. This should probably be reworked to allow the setting of the extension upon which to filter or to not look at extensions at all.<br><br>Rearrangetabsbyroot: Groups files with similarly named roots together. For example, CopyAction.java, CopyForm.java and CopyResults.jsp will end up together<br>because they all have &quot;Copy&quot; as the root.<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15363">TabManager.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.0</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2011-04-03</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=64">Salman Halim</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Initial upload</td>
+</tr>
+</table>
+<!-- finish off the framework -->
+          </td>
+        </tr>
+      </table>
+    </td>
+
+  </tr>
+</table>
+
+<!-- END OF THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr><td colspan="4" bgcolor="#000000"><img src="/images/spacer.gif" height="2" width="1" alt=""></td></tr>
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr>
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+
+    <td align="left" valign="top"><small>
+      If you have questions or remarks about this site, visit the
+      <a href="http://vimonline.sf.net">vimonline development</a> pages.
+      Please use this site responsibly.
+      <br> 
+      
+      Questions about <a href="http://www.vim.org/about.php">Vim</a> should go
+      to the <a href="http://www.vim.org/maillist.php">maillist</a>.
+      Help Bram <a href="http://iccf-holland.org/">help Uganda</a>.
+      </small>
+	&nbsp;
+	&nbsp;
+
+	<!-- Start of StatCounter Code -->
+	<script type="text/javascript" language="javascript">
+	var sc_project=1417324; 
+	var sc_invisible=1; 
+	var sc_partition=11; 
+	var sc_security="d41633bc"; 
+	</script>
+
+	<script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script><noscript><a href="http://www.statcounter.com/" target="_blank"><img  src="http://c12.statcounter.com/counter.php?sc_project=1417324&java=0&security=d41633bc&invisible=0" alt="free tracking" border="0"></a> </noscript>
+	<!-- End of StatCounter Code -->
+          </td>
+
+    <td align="right" valign="top">
+      		<a href="http://sourceforge.net/projects/vim" rel="nofollow"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=8&type=1" width="88" height="31" border="0" alt="SourceForge.net Logo" /></a>
+    </td>
+
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+  </tr>
+
+    
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  
+  </tr>
+</table>
+
+</body>
+</html>
+

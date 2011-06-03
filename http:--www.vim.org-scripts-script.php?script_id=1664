@@ -166,8 +166,8 @@
 <tr>
   <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
   <td>
-    Rating <b>273/89</b>,
-    Downloaded by 4133  </td>
+    Rating <b>295/96</b>,
+    Downloaded by 4393  </td>
   <td class="lightbg">
   <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
   </td>
@@ -186,7 +186,7 @@
 <tr><td>utility</td></tr>
 <tr><td>&nbsp;</td></tr>
 <tr><td class="prompt">description</td></tr>
-<tr><td>[Screeshot available at&nbsp;&nbsp;<a target="_blank" href="http://zevv.nl/play/code/vimscripts/">http://zevv.nl/play/code/vimscripts/</A>]<br><br><br>Introduction<br>------------<br>This is a simple script that shows a tabs-like list of buffers in the bottom<br>of the window. The biggest advantage of this script over various others is<br>that it does not take any lines away from your terminal, leaving more space<br>for the document you're editing. The tabs are only visible when you need<br>them - when you are switchin between buffers.<br><br>Usage<br>-----<br>This script draws buffer tabs on vim startup, when a new buffer is created<br>and when switching between buffers.<br><br>It might be handy to create a few maps for easy switching of buffers in your<br>.vimrc file. For example, using F1 and F2 keys:<br><br>&nbsp;&nbsp;noremap &lt;f1&gt; :bprev&lt;CR&gt; <br>&nbsp;&nbsp;noremap &lt;f2&gt; :bnext&lt;CR&gt;<br><br>or using control-left and control-right keys:<br><br>&nbsp;&nbsp;:noremap &lt;C-left&gt; :bprev&lt;CR&gt;<br>&nbsp;&nbsp;:noremap &lt;C-right&gt; :bnext&lt;CR&gt;<br><br><br>Some configuration options are available for styling and layout, check the top of the plugin file for instructions.<br></td></tr>
+<tr><td>[Screeshot available at&nbsp;&nbsp;<a target="_blank" href="http://zevv.nl/play/code/vimscripts/">http://zevv.nl/play/code/vimscripts/</A>]<br><br><br>Introduction<br>------------<br>This is a simple script that shows a tabs-like list of buffers in the bottom<br>of the window. The biggest advantage of this script over various others is<br>that it does not take any lines away from your terminal, leaving more space<br>for the document you're editing. The tabs are only visible when you need<br>them - when you are switching between buffers.<br><br>Usage<br>-----<br>This script draws buffer tabs on vim startup, when a new buffer is created<br>and when switching between buffers.<br><br>It might be handy to create a few maps for easy switching of buffers in your<br>.vimrc file. For example, using F1 and F2 keys:<br><br>&nbsp;&nbsp;noremap &lt;f1&gt; :bprev&lt;CR&gt; <br>&nbsp;&nbsp;noremap &lt;f2&gt; :bnext&lt;CR&gt;<br><br>or using control-left and control-right keys:<br><br>&nbsp;&nbsp;:noremap &lt;C-left&gt; :bprev&lt;CR&gt;<br>&nbsp;&nbsp;:noremap &lt;C-right&gt; :bnext&lt;CR&gt;<br><br><br>Some configuration options are available for styling and layout, check the top of the plugin file for instructions.<br></td></tr>
 <tr><td>&nbsp;</td></tr>
 <tr><td class="prompt">install details</td></tr>
 <tr><td>Copy the script into your plugin directory, and optionally define configuration items for styling the buftabs layout.</td></tr>
@@ -221,6 +221,22 @@ Click on the package to download.
     <th valign="top">Vim version</th>
     <th valign="top">user</th>
     <th valign="top">release notes</th>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15439">buftabs.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.18</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2011-04-12</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=10887">Ico -</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Added marker for denoting modified buffers, provide function for including buftabs into status line descriptor instead of buftabs having to edit the status line directly.<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=15426">buftabs.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.17</b></td>
+    <td class="roweven" valign="top" nowrap><i>2011-04-11</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=10887">Ico -</a></i></td>
+    <td class="roweven" valign="top" width="2000">Changed persistent echo function to restore 'updatetime', leading to better behaviour when showing buftabs in the status line.</td>
 </tr>
 <tr>
         <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=12520">buftabs.vim</a></td>

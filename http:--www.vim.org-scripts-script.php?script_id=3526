@@ -1,0 +1,332 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+  <link rel="Stylesheet" type="text/css" href="/css/style.css" >
+  <title>EasyMotion - Vim motions on speed! : vim online</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <meta name="KEYWORDS" content="Vim, Vi IMproved, text editor, home, documentation, tips, scripts, news">
+  <link rel="shortcut icon" type="image/x-icon" href="/images/vim_shortcut.ico">
+</head>
+
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff"> 
+
+<!-- HEADER, SPONSOR IMAGE, VIM IMAGE AND BOOK AD -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+  <td class="lightbg">&nbsp;&nbsp;&nbsp;</td>
+  <td class="lightbg" align="left"><a href="/sponsor/index.php"><img src="/images/sponsorvim.gif" alt="sponsor Vim development" border="0"></a></td>
+    <td class="lightbg" align="center"><a href="/index.php"><img src="/images/vim_header.gif" border="0" alt="Vim logo"></a></td>
+    <td class="lightbg" align="right"><a href="http://iccf-holland.org/click5.html"><img src="/images/buyhelplearn.gif" alt="Vim Book Ad" border="0"></a></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="darkbg"><img src="/images/spacer.gif" width="1" height="10" alt=""></td>
+  </tr>
+</table>
+<!-- THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+  <col width="180">
+  <col width="1">
+
+  <tr valign="top">
+    <td class="sidebar">
+      <table width="180" cellpadding="4" cellspacing="0" border="0">
+        <tr valign="top">
+          <td class="sidebar">
+
+<!-- INCLUDE THE PAGE NAVIGATION -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+    <tr>
+        <td><small>not logged in (<a href="/login.php">login</a>)</small></td>
+    </tr>
+    <tr><td>
+<small>&nbsp;</small>
+<form action="http://www.google.com/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-3005259998294962:bvyni59kjr1" />
+    <input type="hidden" name="ie" value="ISO-8859-1" />
+    <input type="text" name="q" size="20" />
+    <br>
+    <input type="submit" name="sa" value="Search" />
+  </div>
+</form>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+    </td></tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="1"></td>
+    </tr>
+    <tr>
+        <td class="darkbg"><img src="/images/spacer.gif" alt='' border="0" height="3"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="2"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/index.php">Home</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/search.php">Advanced search</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/about.php">About Vim</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/community.php">Community</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/news/news.php">News</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/sponsor/index.php">Sponsoring</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/trivia.php">Trivia</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/docs.php">Documentation</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/download.php">Download</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/scripts/index.php">Scripts</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/tips/index.php">Tips</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/account/index.php">My Account</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/huh.php">Site Help</a></td>
+        </tr>
+</table>
+
+            <table width="172" cellpadding="0" cellspacing="0" border="0">
+              <tr><td><img src="/images/spacer.gif" alt="" border="0" width="1" height="8"></td></tr>
+              <tr><td class="darkbg"><img src="/images/spacer.gif" width="1" height="3" alt=""></td></tr>
+            </table>
+            <br>
+
+<!-- INCLUDE THE PAGE SIDEBAR TEXT -->
+&nbsp;
+
+          </td>
+        </tr>
+      </table>
+    </td>
+
+    <td class="darkbg"><img src="/images/spacer.gif" width="1" height="1" border="0" alt=""><br></td>
+    <td>
+      <table width="100%" cellpadding="10" cellspacing="0" border="0" bordercolor="red">
+        <tr>
+          <td valign="top">
+
+<span class="txth1">EasyMotion : Vim motions on speed!</span> 
+
+<br>
+<br>
+
+<!-- karma table -->
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
+  <td>
+    Rating <b>134/43</b>,
+    Downloaded by 720  </td>
+  <td class="lightbg">
+  <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
+  </td>
+  <td>
+    <a href="http://vim.wikia.com/wiki/Script:3526">Vim wiki</a>
+  </td>  
+</tr>
+</table>
+<p>
+
+<table cellspacing="0" cellpadding="0" border="0">
+<tr><td class="prompt">created by</td></tr>
+<tr><td><a href="/account/profile.php?user_id=28835">Kim Silkebækken</a></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">script type</td></tr>
+<tr><td>utility</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">description</td></tr>
+<tr><td>EasyMotion provides a much simpler way to use some motions in vim. It takes the &lt;number&gt; out of &lt;number&gt;w or &lt;number&gt;f{char} by highlighting all possible choices and allowing you to press one key to jump directly to the target.<br><br>When one of the available motions is triggered, all visible text preceding or following the cursor is faded, and motion targets are highlighted.<br><br>* Animated demo: <a target="_blank" href="http://oi54.tinypic.com/2yysefm.jpg">http://oi54.tinypic.com/2yysefm.jpg</A><br>* Video tutorial on Nettuts+: <a target="_blank" href="http://net.tutsplus.com/tutorials/other/vim-essential-plugin-easymotion/">http://net.tutsplus.com/tutorials/other/vim-essential-plugin-easymotion/</A><br><br><br>USAGE EXAMPLE<br><br>Type &lt;Leader&gt;w to trigger the word motion &quot;w&quot;. When the motion is triggered, the text is updated (no braces are actually added, the text is highlighted in red by default):<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;cursor&gt;Lorem {a}psum {b}olor {c}it {d}met.<br><br>Press &quot;c&quot; to jump to the beginning of the word &quot;sit&quot;:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;Lorem ipsum dolor &lt;cursor&gt;sit amet.<br><br><br>IMPORTANT NOTES ABOUT THE DEFAULT BINDINGS<br><br>The default bindings may conflict with other plugins you have installed, e.g. Command-T. Please read the docs about the default bindings, it's easy to rebind the EasyMotion keys or rebind the leader key in order to &quot;namespace&quot; the plugin.<br><br>You can rebind the leader key in your vimrc:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;let g:EasyMotion_leader_key = '&lt;Leader&gt;m'<br><br>All the motions will now be triggered with &lt;Leader&gt;m first, e.g. &lt;Leader&gt;mt, &lt;Leader&gt;mgE. You can also remap single motions:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;let g:EasyMotion_mapping_t&nbsp;&nbsp;= '_t'<br>&nbsp;&nbsp;&nbsp;&nbsp;let g:EasyMotion_mapping_gE = '_gE'<br><br><br>* Check out the GitHub repo for the latest updates: <a target="_blank" href="https://github.com/Lokaltog/vim-easymotion">https://github.com/Lokaltog/vim-easymotion</A><br>* Please report any issues here: <a target="_blank" href="https://github.com/Lokaltog/vim-easymotion/issues">https://github.com/Lokaltog/vim-easymotion/issues</A></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">install details</td></tr>
+<tr><td>Extract and move contents to your .vim folder.<br><br>Pathogen users: Clone the GitHub repo to your bundle folder.</td></tr>
+<tr><td>&nbsp;</td></tr>
+</table>
+
+<!-- rating table -->
+<form name="rating">
+<input type="hidden" name="script_id" value="3526">
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>rate this script</b></td>
+  <td valign="middle">
+    <input type="radio" name="rating" value="life_changing">Life Changing
+    <input type="radio" name="rating" value="helpful">Helpful
+    <input type="radio" name="rating" value="unfulfilling">Unfulfilling&nbsp;
+    <input type="submit" value="rate">
+  </td>
+</tr>
+</table>
+</form>
+<span class="txth2">script versions</span> (<a href="add_script_version.php?script_id=3526">upload new version</a>)
+<p>
+Click on the package to download.
+<p>
+
+<table cellspacing="2" cellpadding="4" border="0" width="100%">
+<tr class='tableheader'>
+        <th valign="top">package</th>
+    <th valign="top">script version</th>
+    <th valign="top">date</th>
+    <th valign="top">Vim version</th>
+    <th valign="top">user</th>
+    <th valign="top">release notes</th>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15369">Lokaltog-vim-easymotion-1.2-0-gdfb8079.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.2</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2011-04-03</i></td>
+    <td class="rowodd" valign="top" nowrap>7.2</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=28835">Kim Silkebækken</a></i></td>
+    <td class="rowodd" valign="top" width="2000">WORD motions. Customizable key mappings. Configurable leader key. Improved default grouping algorithm. Easier to apply custom highlighting. No more jumping on j/k motions. Various bug fixes.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=15345">Lokaltog-vim-easymotion-1.1.0.1-0-g7c6cff7.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.1.0.1</b></td>
+    <td class="roweven" valign="top" nowrap><i>2011-03-31</i></td>
+    <td class="roweven" valign="top" nowrap>7.2</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=28835">Kim Silkebækken</a></i></td>
+    <td class="roweven" valign="top" width="2000">EasyMotion now works in operator-pending mode as well. Summary of features: Normal, visual and operator-pending mode mappings for the following motions: f - F - t - T - w - b - e - ge - j - k.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15343">Lokaltog-vim-easymotion-1.0.12.1-0-gce13b9a.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.0.12.1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2011-03-31</i></td>
+    <td class="rowodd" valign="top" nowrap>7.2</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=28835">Kim Silkebækken</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Updated docs. Fixed missing target/shade highlighting issue. Fixed GUI bugs.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=15341">Lokaltog-vim-easymotion-1.0.10-0-g5809794.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.0.10</b></td>
+    <td class="roweven" valign="top" nowrap><i>2011-03-30</i></td>
+    <td class="roweven" valign="top" nowrap>7.2</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=28835">Kim Silkebækken</a></i></td>
+    <td class="roweven" valign="top" width="2000">New motions: ge, j, k.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15339">Lokaltog-vim-easymotion-1.0.8-0-g24c9f6c.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.0.8</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2011-03-30</i></td>
+    <td class="rowodd" valign="top" nowrap>7.2</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=28835">Kim Silkebækken</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Various code improvements.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=15324">Lokaltog-vim-easymotion-1.0.6-0-gc58f0b7.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.0.6</b></td>
+    <td class="roweven" valign="top" nowrap><i>2011-03-29</i></td>
+    <td class="roweven" valign="top" nowrap>7.2</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=28835">Kim Silkebækken</a></i></td>
+    <td class="roweven" valign="top" width="2000">Code improvements. Various bug fixes. Updated source location.</td>
+</tr>
+</table>
+<!-- finish off the framework -->
+          </td>
+        </tr>
+      </table>
+    </td>
+
+  </tr>
+</table>
+
+<!-- END OF THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr><td colspan="4" bgcolor="#000000"><img src="/images/spacer.gif" height="2" width="1" alt=""></td></tr>
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr>
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+
+    <td align="left" valign="top"><small>
+      If you have questions or remarks about this site, visit the
+      <a href="http://vimonline.sf.net">vimonline development</a> pages.
+      Please use this site responsibly.
+      <br> 
+      
+      Questions about <a href="http://www.vim.org/about.php">Vim</a> should go
+      to the <a href="http://www.vim.org/maillist.php">maillist</a>.
+      Help Bram <a href="http://iccf-holland.org/">help Uganda</a>.
+      </small>
+	&nbsp;
+	&nbsp;
+
+	<!-- Start of StatCounter Code -->
+	<script type="text/javascript" language="javascript">
+	var sc_project=1417324; 
+	var sc_invisible=1; 
+	var sc_partition=11; 
+	var sc_security="d41633bc"; 
+	</script>
+
+	<script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script><noscript><a href="http://www.statcounter.com/" target="_blank"><img  src="http://c12.statcounter.com/counter.php?sc_project=1417324&java=0&security=d41633bc&invisible=0" alt="free tracking" border="0"></a> </noscript>
+	<!-- End of StatCounter Code -->
+          </td>
+
+    <td align="right" valign="top">
+      		<a href="http://sourceforge.net/projects/vim" rel="nofollow"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=8&type=1" width="88" height="31" border="0" alt="SourceForge.net Logo" /></a>
+    </td>
+
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+  </tr>
+
+    
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  
+  </tr>
+</table>
+
+</body>
+</html>
+

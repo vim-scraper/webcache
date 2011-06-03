@@ -166,8 +166,8 @@
 <tr>
   <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
   <td>
-    Rating <b>304/76</b>,
-    Downloaded by 173  </td>
+    Rating <b>352/88</b>,
+    Downloaded by 313  </td>
   <td class="lightbg">
   <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
   </td>
@@ -223,12 +223,20 @@ Click on the package to download.
     <th valign="top">release notes</th>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=14711">unite-1.0.vba</a></td>
-    <td class="rowodd" valign="top" nowrap><b>1.0</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2011-01-09</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15558">unite-2.0.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.0</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2011-05-01</i></td>
     <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=17200">Shougo Matsushita</a></i></td>
-    <td class="rowodd" valign="top" width="2000">Initial upload</td>
+    <td class="rowodd" valign="top" width="2000">- Add '..' directory in unite source.<br>- Add history in kind command.<br>- Added --no-start-insert option.<br>- Added -immediately option.<br>- Added -vertical, -horizontal, -direction options.<br>- Added &lt;Plug&gt;(unite_delete_backward_path) keymapping.<br>- Added &lt;Plug&gt;(unite_restart) keymapping.<br>- Added README.<br>- Added col and completion option.<br>- Added command source.<br>- Added completion kind.<br>- Added default matcher.<br>- Added edit action in command kind.<br>- Added filter help.<br>- Added from field in action.<br>- Added g:unite_cursor_line_highlight and g:unite_abbr_highlight options.<br>- Added g:unite_source_file_rec_ignore_pattern option.<br>- Added ignorecase and smartcase buffer_name options.<br>- Added is_async context flag.<br>- Added matcher_default, sorter_default, converter_default.<br>- Added no-current option in window and tab source.<br>- Added output source.<br>- Added post_filter hook.<br>- Added sorter_word.<br>- Added unite#set_buffer_name_option() help.<br>- Added unite#version().<br>- Added unite-source-attribute-source__ description.<br>- Caching file_rec source.<br>- Changed :UniteWithInputDirectory behavior.<br>- Changed available_xxx API names to get_xxx.<br>- Changed file_rec message format.<br>- Changed input_gather_candidates() to change_candidates().<br>- Changed on_close timing.<br>- Changed unite#loaded_source_names_with_args().<br>- Changed volatile source.<br>- Changed yank action.<br>- Chomp last /.<br>- Deleted :NeoComplCacheCachingBuffer.<br>- Deleted highlight off.<br>- Deleted unused tag.<br>- Don't save directory in file_mru.<br>- Fixed :NeoComplCacheCachingBuffer error.<br>- Fixed :UniteResume bug.<br>- Fixed auto preview bug.<br>- Fixed buffer source.<br>- Fixed choose action.<br>- Fixed choose_action documentation.<br>- Fixed completion kind.<br>- Fixed context bug.<br>- Fixed default action bug.<br>- Fixed escape jump_list.<br>- Fixed file_mru error.<br>- Fixed file_rec index.<br>- Fixed file_rec path problem.<br>- Fixed filtering bug.<br>- Fixed fnamemodify().<br>- Fixed get action table bug.<br>- Fixed help.<br>- Fixed highlight settings.<br>- Fixed highlight.<br>- Fixed hlsearch bug.<br>- Fixed is_insert error.<br>- Fixed is_redraw bug.<br>- Fixed jump_list escape.<br>- Fixed kind completion bug.<br>- Fixed narrowing action.<br>- Fixed narrowing bugs.<br>- Fixed priority sort bug.<br>- Fixed quick match bug.<br>- Fixed quick match error.<br>- Fixed redraw buffer source bug.<br>- Fixed redraw candidates bug.<br>- Fixed set search pattern.<br>- Fixed sidescrolloff problem.<br>- Fixed source file path problem.<br>- Fixed source register max width.<br>- Fixed substitute input.<br>- Fixed unite buffer name.<br>- Fixed unite source.<br>- Fixed unite#custom_filters() bug.<br>- Fixed unite#custom_filters() error.<br>- Fixed unite#get_default_action().<br>- Fixed unite-command.<br>- Fixed unite-register freeze bug.<br>- Fixed version number.<br>- Ignore invalid action.<br>- Implemented -auto-preview option.<br>- Implemented asynchronous get candidates.<br>- Implemented auto mkdir().<br>- Implemented buffer name filters.<br>- Implemented dummy candidates.<br>- Implemented filters.<br>- Implemented input_gather_candidates().<br>- Implemented mapping source.<br>- Implemented mkdir action.<br>- Implemented position restore.<br>- Implemented preview window check.<br>- Implemented sorter and matcher.<br>- Implemented source highlight.<br>- Implemented unite action source.<br>- Implemented unite#clear_message().<br>- Implemented unite#print_message().<br>- Implemented vimfiler and tabvimfiler actions.<br>- Improved args.<br>- Improved auto preview behavior.<br>- Improved auto preview.<br>- Improved buffer abbr.<br>- Improved command action.<br>- Improved command narrow action.<br>- Improved command source.<br>- Improved completion kind.<br>- Improved context.<br>- Improved default substitute pattern.<br>- Improved delete buffer action.<br>- Improved directory_mru source.<br>- Improved documentation.<br>- Improved file source.<br>- Improved file_mru source.<br>- Improved file_rec path.<br>- Improved file_rec source.<br>- Improved highlight off.<br>- Improved initialize sources.<br>- Improved initialize.<br>- Improved insert leave.<br>- Improved jump_list.<br>- Improved loop cursor down/up.<br>- Improved narrowing behavior.<br>- Improved normal mode redraw.<br>- Improved quick match message.<br>- Improved redraw.<br>- Improved rotate sources.<br>- Improved sort.<br>- Improved source arguments description.<br>- Improved source file dummy candidates.<br>- Improved source file.<br>- Improved syntax.<br>- Improved traverse message in file_rec source.<br>- Improved truncate.<br>- Improved unite action.<br>- Improved unite#print_error() and unite#print_message().<br>- Improved unite-command.<br>- Improved unite-output.<br>- Improved unite-register.<br>- Ommitable candidates source name.<br>- Optimized initialization.<br>- Refactored buffer name options.<br>- Renamed unite#custom_filter() to unite#custom_filters().<br>- Set cpoptions.<br>- Supported neocomplcache manual completion.<br>- Supported yanktmp in register source.<br>- Use strdisplaywidth().<br>- gather_candidates attribute is optional.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=14711">unite-1.0.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.0</b></td>
+    <td class="roweven" valign="top" nowrap><i>2011-01-09</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=17200">Shougo Matsushita</a></i></td>
+    <td class="roweven" valign="top" width="2000">Initial upload</td>
 </tr>
 </table>
 <!-- finish off the framework -->

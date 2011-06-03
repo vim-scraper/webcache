@@ -166,8 +166,8 @@
 <tr>
   <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
   <td>
-    Rating <b>0/0</b>,
-    Downloaded by 52  </td>
+    Rating <b>4/1</b>,
+    Downloaded by 66  </td>
   <td class="lightbg">
   <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
   </td>
@@ -186,10 +186,10 @@
 <tr><td>utility</td></tr>
 <tr><td>&nbsp;</td></tr>
 <tr><td class="prompt">description</td></tr>
-<tr><td>fork of the famous <a target="_blank" href="https://github.com/msanders/snipmate.vim">https://github.com/msanders/snipmate.vim</A>, <br><a target="_blank" href="http://www.vim.org/scripts/script.php?script_id=2540">http://www.vim.org/scripts/script.php?script_id=2540</A><br>plugin<br><br>my upstream: <a target="_blank" href="http://github.com/MarcWebre/snipmate.vim">http://github.com/MarcWebre/snipmate.vim</A><br><br>Changes:<br><br>- snippets are loaded lazily as needed and cached. Whenever a file changes they will be reloaded automatically based on timestamps. Thus never reload snippets<br><br>- :SnipMateOpenSnippetFiles command for opening snippet files fast.<br>&nbsp;&nbsp;All sane paths depending on your runtimepath are supported<br><br>- when writing .snippets files you can visuall select text and press &lt;cr&gt; which will replace space indentation by tabs in a smart way<br><br>- {VISUAL} support which means you can make snippets support surrounding some selected text. Example could be:<br><br>snippet fun<br>&nbsp;&nbsp;fun ${1:name}<br>&nbsp;&nbsp;{VISUAL}<br>&nbsp;&nbsp;endf<br><br>then you can visually select and press tab, then select the snippet and {VIUSAL} will be filled<br><br>- because there is a global function returning a list of snippets you can also create snippets on the fly. See example about how to create python function skeletons based on definitions in the current file<br><br>I'd like to merge - but I never got valuable feedback from the main author.<br>Don't miss the README file in the git repo which also clearly states that maybe XPTemplate is another option. So maybe I'll make XPTemplate read snippet files in the future.<br><br>Apart from those changes everything should be compatible<br><br>I was asked to put my fork here so that people find it.</td></tr>
+<tr><td>VAM's name: snipMate.<br><br>fork of the famous <a target="_blank" href="https://github.com/msanders/snipmate.vim">https://github.com/msanders/snipmate.vim</A>, <br><a target="_blank" href="http://www.vim.org/scripts/script.php?script_id=2540">http://www.vim.org/scripts/script.php?script_id=2540</A><br>plugin<br><br>my upstream: <a target="_blank" href="http://github.com/MarcWeber/snipmate.vim">http://github.com/MarcWeber/snipmate.vim</A><br><br>Changes:<br><br>- snippets are loaded lazily as needed and cached. Whenever a file changes they will be reloaded automatically based on timestamps. Thus never reload snippets<br><br>- :SnipMateOpenSnippetFiles command for opening snippet files fast.<br>&nbsp;&nbsp;All sane paths depending on your runtimepath are supported<br><br>- when writing .snippets files you can visuall select text and press &lt;cr&gt; which will replace space indentation by tabs in a smart way<br><br>- {VISUAL} support which means you can make snippets support surrounding some selected text. Example could be:<br><br>snippet fun<br>&nbsp;&nbsp;fun ${1:name}<br>&nbsp;&nbsp;{VISUAL}<br>&nbsp;&nbsp;endf<br><br>then you can visually select and press tab, then select the snippet and {VIUSAL} will be filled<br><br>- because there is a global function returning a list of snippets you can also create snippets on the fly. See example about how to create python function skeletons based on definitions in the current file<br><br>I'd like to merge - but I never got valuable feedback from the main author.<br>Don't miss the README file in the git repo which also clearly states that maybe XPTemplate is another option. So maybe I'll make XPTemplate read snippet files in the future.<br><br>Apart from those changes everything should be compatible<br><br>I was asked to put my fork here so that people find it.</td></tr>
 <tr><td>&nbsp;</td></tr>
 <tr><td class="prompt">install details</td></tr>
-<tr><td>This plugin is depending on other plugin (tlib and a utility library providing file caching) thus I recommend vim-addon-manager to install it.<br><br>Eg :ActivateAddon snipmate<br></td></tr>
+<tr><td>This plugin is depending on other plugin (tlib and a utility library providing file caching) thus I recommend vim-addon-manager to install it.<br><br>Eg :ActivateAddon snipMate<br></td></tr>
 <tr><td>&nbsp;</td></tr>
 </table>
 

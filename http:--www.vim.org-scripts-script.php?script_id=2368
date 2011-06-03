@@ -3,7 +3,7 @@
 
 <head>
   <link rel="Stylesheet" type="text/css" href="/css/style.css" >
-  <title>CCTree - C Call-Tree Explorer - Source-code browser, code flow analysis tool for C : vim online</title>
+  <title>CCTree - C Call-Tree Explorer - Cscope based source-code browser, code flow analysis tool : vim online</title>
   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
   <meta name="KEYWORDS" content="Vim, Vi IMproved, text editor, home, documentation, tips, scripts, news">
   <link rel="shortcut icon" type="image/x-icon" href="/images/vim_shortcut.ico">
@@ -156,7 +156,7 @@
         <tr>
           <td valign="top">
 
-<span class="txth1">CCTree : C Call-Tree Explorer - Source-code browser, code flow analysis tool for C</span> 
+<span class="txth1">CCTree : C Call-Tree Explorer - Cscope based source-code browser, code flow analysis tool</span> 
 
 <br>
 <br>
@@ -166,8 +166,8 @@
 <tr>
   <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
   <td>
-    Rating <b>136/49</b>,
-    Downloaded by 3498  </td>
+    Rating <b>154/57</b>,
+    Downloaded by 3953  </td>
   <td class="lightbg">
   <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
   </td>
@@ -186,7 +186,7 @@
 <tr><td>ftplugin</td></tr>
 <tr><td>&nbsp;</td></tr>
 <tr><td class="prompt">description</td></tr>
-<tr><td>Description:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Plugin generates call trees (aka function call dependencies) for any function or macro in real-time inside Vim using Cscope database. (Functionality similar to that of tools like CBrowser, Kscope, Source navigator, Eclipse, Source Insight). Currently supported language: C.<br><br>&nbsp;&nbsp;Requirements: 1) Cscope&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2) Vim 7.xx <br><br>Project details/Screenshots:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a target="_blank" href="http://sites.google.com/site/vimcctree/">http://sites.google.com/site/vimcctree/</A> <br> </td></tr>
+<tr><td>Description:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Plugin generates symbol dependency tree (aka call tree, call graph) in real-time inside Vim using a Cscope database. Basic support for functions and macros; global variables, enums, typedefs can be cross-reference with additional processing. Functionality similar to that of tools and IDE's like CBrowser, Kscope, Source navigator, Eclipse, Source Insight. <br><br>Currently supported language: C. <br>Requirements: Cscope, Vim 7.xx <br><br>Project details/Screenshots:&nbsp;&nbsp;<a target="_blank" href="http://sites.google.com/site/vimcctree/">http://sites.google.com/site/vimcctree/</A> <br><br>[NEW]: Check out&nbsp;&nbsp;<a target="_blank" href="http://sourceforge.net/projects/ccglue/">http://sourceforge.net/projects/ccglue/</A> for an external tool that can produce cross-reference files from cscope [and ctags] databases that CCTree can load directly from disk.<br><br> </td></tr>
 <tr><td>&nbsp;</td></tr>
 <tr><td class="prompt">install details</td></tr>
 <tr><td>Install details<br>&nbsp;&nbsp;Installation:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Copy this file to ~/.vim/plugins/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; or to /vimfiles/plugins/&nbsp;&nbsp;(on Win32 platforms)<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; It might also be possible to load it as a filetype plugin<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ~/.vim/ftplugin/c/<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Need to set :filetype plugin on<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br><br></td></tr>
@@ -223,148 +223,188 @@ Click on the package to download.
     <th valign="top">release notes</th>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15272">cctree.vim</a></td>
-    <td class="rowodd" valign="top" nowrap><b>1.21</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2011-03-21</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15625">cctree.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.50</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2011-05-11</i></td>
     <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=14692">Hari Rangarajan</a></i></td>
-    <td class="rowodd" valign="top" width="2000">1. Support serialization of loaded cscope databases (for faster loading)</td>
+    <td class="rowodd" valign="top" width="2000">Supports cross-referencing&nbsp;&nbsp;of global variables, enums, typedefs, and macros.</td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=15185">cctree.vim</a></td>
-    <td class="roweven" valign="top" nowrap><b>1.07</b></td>
-    <td class="roweven" valign="top" nowrap><i>2011-03-10</i></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=15507">cctree.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.40</b></td>
+    <td class="roweven" valign="top" nowrap><i>2011-04-23</i></td>
     <td class="roweven" valign="top" nowrap>7.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=14692">Hari Rangarajan</a></i></td>
-    <td class="roweven" valign="top" width="2000"> 1. Fix new keymaps incorrectly applied to buffer<br> 2. CCTreeOptsToggle command for toggling options<br></td>
+    <td class="roweven" valign="top" width="2000">Maintain order of function calls during forward traces.</td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15170">cctree.vim</a></td>
-    <td class="rowodd" valign="top" nowrap><b>1.04</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2011-03-07</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15489">cctree.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.39</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2011-04-20</i></td>
     <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=14692">Hari Rangarajan</a></i></td>
-    <td class="rowodd" valign="top" width="2000">1. Customization for key mappings<br>2. Dynamic configuration of UI variables<br>3. Folding long call-trees to show current path dynamically</td>
+    <td class="rowodd" valign="top" width="2000">Add support for (+conceal) feature. <br><br></td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=15155">cctree.vim</a></td>
-    <td class="roweven" valign="top" nowrap><b>1.00</b></td>
-    <td class="roweven" valign="top" nowrap><i>2011-03-04</i></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=15404">cctree.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.33</b></td>
+    <td class="roweven" valign="top" nowrap><i>2011-04-06</i></td>
     <td class="roweven" valign="top" nowrap>7.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=14692">Hari Rangarajan</a></i></td>
-    <td class="roweven" valign="top" width="2000">1. Staging release for upcoming features<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Complete refactoring of code to take advantage of VimScript's OO features<br>2. Faster decompression of symbols<br>3. Display related changes<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Use of unicode symbols for tree<br>4. Bugfixes related to multi-database loading</td>
+    <td class="roweven" valign="top" width="2000">1. Load and trace CCTree native XRefDb directly from disk ( :CCTreeLoadXRefDBFromDisk )<br>(Note: Earlier saved xref db's had an issue with tabs in the tag file; its probably better to&nbsp;&nbsp;use xref db's generated by version 1.33).<br>2. Fix AppendDB command when 'ignorecase' is set.<br></td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15043">cctree.vim</a></td>
-    <td class="rowodd" valign="top" nowrap><b>0.90</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2011-02-19</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15329">cctree.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.26</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2011-03-29</i></td>
     <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=14692">Hari Rangarajan</a></i></td>
-    <td class="rowodd" valign="top" width="2000">1. Support for large database files using external split utility or in-built perl interpreter interface</td>
+    <td class="rowodd" valign="top" width="2000">1. Fix macro cross-referencing limitation<br>2. Correct native xref file format<br></td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=15005">cctree.vim</a></td>
-    <td class="roweven" valign="top" nowrap><b>0.85</b></td>
-    <td class="roweven" valign="top" nowrap><i>2011-02-14</i></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=15272">cctree.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.21</b></td>
+    <td class="roweven" valign="top" nowrap><i>2011-03-21</i></td>
     <td class="roweven" valign="top" nowrap>7.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=14692">Hari Rangarajan</a></i></td>
-    <td class="roweven" valign="top" width="2000">Major increase in database loading/decompression speeds</td>
+    <td class="roweven" valign="top" width="2000">1. Support serialization of loaded cscope databases (for faster loading)</td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=14966">cctree.vim</a></td>
-    <td class="rowodd" valign="top" nowrap><b>0.80</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2011-02-07</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15185">cctree.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.07</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2011-03-10</i></td>
     <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=14692">Hari Rangarajan</a></i></td>
-    <td class="rowodd" valign="top" width="2000">Reduce memory usage by removing unused xref symbols<br>Minor bug fixes</td>
+    <td class="rowodd" valign="top" width="2000"> 1. Fix new keymaps incorrectly applied to buffer<br> 2. CCTreeOptsToggle command for toggling options<br></td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13250">cctree.vim</a></td>
-    <td class="roweven" valign="top" nowrap><b>0.75</b></td>
-    <td class="roweven" valign="top" nowrap><i>2010-06-27</i></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=15170">cctree.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.04</b></td>
+    <td class="roweven" valign="top" nowrap><i>2011-03-07</i></td>
     <td class="roweven" valign="top" nowrap>7.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=14692">Hari Rangarajan</a></i></td>
-    <td class="roweven" valign="top" width="2000">Allow CCTree windows to be &quot;saved&quot;.<br>Multiple instances of CCTree preview windows can now exist.<br>Use &quot;&lt;Ctrl-\&gt;y&quot; or &quot;:CCTreeWindowSaveCopy&quot; to save the current view.</td>
+    <td class="roweven" valign="top" width="2000">1. Customization for key mappings<br>2. Dynamic configuration of UI variables<br>3. Folding long call-trees to show current path dynamically</td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=12989">cctree.vim</a></td>
-    <td class="rowodd" valign="top" nowrap><b>0.71</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2010-05-11</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15155">cctree.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.00</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2011-03-04</i></td>
     <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=14692">Hari Rangarajan</a></i></td>
-    <td class="rowodd" valign="top" width="2000">Obsoletes 0.70 which had a script bug.<br>Added support for multiple cscope databases.</td>
+    <td class="rowodd" valign="top" width="2000">1. Staging release for upcoming features<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Complete refactoring of code to take advantage of VimScript's OO features<br>2. Faster decompression of symbols<br>3. Display related changes<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Use of unicode symbols for tree<br>4. Bugfixes related to multi-database loading</td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=11005">cctree.vim</a></td>
-    <td class="roweven" valign="top" nowrap><b>0.65</b></td>
-    <td class="roweven" valign="top" nowrap><i>2009-07-13</i></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=15043">cctree.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.90</b></td>
+    <td class="roweven" valign="top" nowrap><i>2011-02-19</i></td>
     <td class="roweven" valign="top" nowrap>7.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=14692">Hari Rangarajan</a></i></td>
-    <td class="roweven" valign="top" width="2000">Added CCTree preview window toggle function (shortcut: &lt;C-\&gt;w )<br></td>
+    <td class="roweven" valign="top" width="2000">1. Support for large database files using external split utility or in-built perl interpreter interface</td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=9730">cctree.vim</a></td>
-    <td class="rowodd" valign="top" nowrap><b>.61</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2008-12-29</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15005">cctree.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.85</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2011-02-14</i></td>
     <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=14692">Hari Rangarajan</a></i></td>
-    <td class="rowodd" valign="top" width="2000">Bug fix release</td>
+    <td class="rowodd" valign="top" width="2000">Major increase in database loading/decompression speeds</td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=9583">cctree.vim</a></td>
-    <td class="roweven" valign="top" nowrap><b>0.60</b></td>
-    <td class="roweven" valign="top" nowrap><i>2008-11-28</i></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=14966">cctree.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.80</b></td>
+    <td class="roweven" valign="top" nowrap><i>2011-02-07</i></td>
     <td class="roweven" valign="top" nowrap>7.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=14692">Hari Rangarajan</a></i></td>
-    <td class="roweven" valign="top" width="2000">Added support for source-file dependency tree</td>
+    <td class="roweven" valign="top" width="2000">Reduce memory usage by removing unused xref symbols<br>Minor bug fixes</td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=9371">cctree.vim</a></td>
-    <td class="rowodd" valign="top" nowrap><b>0.50</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2008-10-19</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13250">cctree.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.75</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-06-27</i></td>
     <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=14692">Hari Rangarajan</a></i></td>
-    <td class="rowodd" valign="top" width="2000">Optimizations for compact memory foot-print and improved compressed-database load speeds</td>
+    <td class="rowodd" valign="top" width="2000">Allow CCTree windows to be &quot;saved&quot;.<br>Multiple instances of CCTree preview windows can now exist.<br>Use &quot;&lt;Ctrl-\&gt;y&quot; or &quot;:CCTreeWindowSaveCopy&quot; to save the current view.</td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=9317">cctree.vim</a></td>
-    <td class="roweven" valign="top" nowrap><b>0.41</b></td>
-    <td class="roweven" valign="top" nowrap><i>2008-10-07</i></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=12989">cctree.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.71</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-05-11</i></td>
     <td class="roweven" valign="top" nowrap>7.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=14692">Hari Rangarajan</a></i></td>
-    <td class="roweven" valign="top" width="2000">(Minor fix) Compressed cscope databases will load incorrectly if encoding is not 8-bit</td>
+    <td class="roweven" valign="top" width="2000">Obsoletes 0.70 which had a script bug.<br>Added support for multiple cscope databases.</td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=9307">cctree.vim</a></td>
-    <td class="rowodd" valign="top" nowrap><b>0.4</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2008-10-04</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=11005">cctree.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.65</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-07-13</i></td>
     <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=14692">Hari Rangarajan</a></i></td>
-    <td class="rowodd" valign="top" width="2000">1. Rewrite of &quot;tree-display&quot; code<br>2. New syntax hightlighting<br>3. Dynamic highlighting for call-trees<br>4. Support for new window modes (vertical, horizontal)&nbsp;&nbsp;<br>5. New display format option for compact or wide call-trees<br></td>
+    <td class="rowodd" valign="top" width="2000">Added CCTree preview window toggle function (shortcut: &lt;C-\&gt;w )<br></td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=9273">cctree.vim</a></td>
-    <td class="roweven" valign="top" nowrap><b>0.3</b></td>
-    <td class="roweven" valign="top" nowrap><i>2008-09-23</i></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=9730">cctree.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>.61</b></td>
+    <td class="roweven" valign="top" nowrap><i>2008-12-29</i></td>
     <td class="roweven" valign="top" nowrap>7.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=14692">Hari Rangarajan</a></i></td>
-    <td class="roweven" valign="top" width="2000">1. Support compressed cscope databases<br>2. Display window related bugs fixed<br>3. More intuitive display and folding capabilities</td>
+    <td class="roweven" valign="top" width="2000">Bug fix release</td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=9245">cctree.vim</a></td>
-    <td class="rowodd" valign="top" nowrap><b>0.2</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2008-09-12</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=9583">cctree.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.60</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2008-11-28</i></td>
     <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=14692">Hari Rangarajan</a></i></td>
-    <td class="rowodd" valign="top" width="2000">Patch from Yegappan Lakshmanan<br>1. Support for using the plugin in Vi-compatible mode.<br>2. Filtering out unwanted lines before processing the db.<br>3. Command-line completion for the commands.<br>4. Using the cscope db from any directory.<br><br>(Disables perl interface; native VIM database loads are very fast, thanks to<br>fix #2)<br><br></td>
+    <td class="rowodd" valign="top" width="2000">Added support for source-file dependency tree</td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=9216">cctree.vim</a></td>
-    <td class="roweven" valign="top" nowrap><b>0.1</b></td>
-    <td class="roweven" valign="top" nowrap><i>2008-09-02</i></td>
-    <td class="roweven" valign="top" nowrap>6.0</td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=9371">cctree.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.50</b></td>
+    <td class="roweven" valign="top" nowrap><i>2008-10-19</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=14692">Hari Rangarajan</a></i></td>
-    <td class="roweven" valign="top" width="2000">Initial upload</td>
+    <td class="roweven" valign="top" width="2000">Optimizations for compact memory foot-print and improved compressed-database load speeds</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=9317">cctree.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.41</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2008-10-07</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=14692">Hari Rangarajan</a></i></td>
+    <td class="rowodd" valign="top" width="2000">(Minor fix) Compressed cscope databases will load incorrectly if encoding is not 8-bit</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=9307">cctree.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.4</b></td>
+    <td class="roweven" valign="top" nowrap><i>2008-10-04</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=14692">Hari Rangarajan</a></i></td>
+    <td class="roweven" valign="top" width="2000">1. Rewrite of &quot;tree-display&quot; code<br>2. New syntax hightlighting<br>3. Dynamic highlighting for call-trees<br>4. Support for new window modes (vertical, horizontal)&nbsp;&nbsp;<br>5. New display format option for compact or wide call-trees<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=9273">cctree.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.3</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2008-09-23</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=14692">Hari Rangarajan</a></i></td>
+    <td class="rowodd" valign="top" width="2000">1. Support compressed cscope databases<br>2. Display window related bugs fixed<br>3. More intuitive display and folding capabilities</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=9245">cctree.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.2</b></td>
+    <td class="roweven" valign="top" nowrap><i>2008-09-12</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=14692">Hari Rangarajan</a></i></td>
+    <td class="roweven" valign="top" width="2000">Patch from Yegappan Lakshmanan<br>1. Support for using the plugin in Vi-compatible mode.<br>2. Filtering out unwanted lines before processing the db.<br>3. Command-line completion for the commands.<br>4. Using the cscope db from any directory.<br><br>(Disables perl interface; native VIM database loads are very fast, thanks to<br>fix #2)<br><br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=9216">cctree.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2008-09-02</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=14692">Hari Rangarajan</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Initial upload</td>
 </tr>
 </table>
 <!-- finish off the framework -->

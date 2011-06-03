@@ -166,8 +166,8 @@
 <tr>
   <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
   <td>
-    Rating <b>261/114</b>,
-    Downloaded by 3457  </td>
+    Rating <b>289/124</b>,
+    Downloaded by 3696  </td>
   <td class="lightbg">
   <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
   </td>
@@ -186,10 +186,10 @@
 <tr><td>utility</td></tr>
 <tr><td>&nbsp;</td></tr>
 <tr><td class="prompt">description</td></tr>
-<tr><td>A slightly more sophisticated replacement for less.sh that also supports being set as the PAGER environment variable.<br>Displays man pages, perldocs and python documentation properly.<br>Definitely works on Linux, Solaris, OSX and Cygwin. Should work in most other places, if it detects your &quot;ps&quot; correctly.<br><br>On github:<br><a target="_blank" href="http://github.com/rkitover/vimpager">http://github.com/rkitover/vimpager</A></td></tr>
+<tr><td>A slightly more sophisticated replacement for less.sh that also supports being set as the PAGER environment variable.<br>Displays man pages, perldocs and python documentation properly.<br>Works on Linux, Solaris, FreeBSD, OSX, Cygwin and msys. Should work on most other systems as well.<br><br>On github:<br><a target="_blank" href="http://github.com/rkitover/vimpager">http://github.com/rkitover/vimpager</A></td></tr>
 <tr><td>&nbsp;</td></tr>
 <tr><td class="prompt">install details</td></tr>
-<tr><td>mkdir ~/bin<br>cp vimpager ~/bin<br>chmod +x ~/bin/vimpager<br><br># put these in your ~/.bashrc or ~/.zshrc<br>export PAGER=~/bin/vimpager<br>alias less=$PAGER<br><br>Put the following into your ~/.vimrc if you want to use gvim as your pager window:<br><br>let vimpager_use_gvim = 1</td></tr>
+<tr><td>mkdir ~/bin<br>cp vimpager ~/bin<br>chmod +x ~/bin/vimpager<br><br># put these in your ~/.bashrc or ~/.zshrc<br>export PAGER=~/bin/vimpager<br>alias less=$PAGER<br>alias zless=$PAGER<br><br>Put the following into your ~/.vimrc if you want to use gvim/MacVim as your pager window:<br><br>let vimpager_use_gvim = 1<br><br>Cygwin notes:<br><br>The Cygwin gvim is very buggy, vimpager works correctly with the native<br>Windows gvim, just put it in your PATH.</td></tr>
 <tr><td>&nbsp;</td></tr>
 </table>
 
@@ -221,6 +221,54 @@ Click on the package to download.
     <th valign="top">Vim version</th>
     <th valign="top">user</th>
     <th valign="top">release notes</th>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15602">vimpager</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.5.0</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2011-05-07</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=11267">Rafael Kitover</a></i></td>
+    <td class="rowodd" valign="top" width="2000">* set scrolloff-5</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=15564">vimpager</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.4.9</b></td>
+    <td class="roweven" valign="top" nowrap><i>2011-05-01</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=11267">Rafael Kitover</a></i></td>
+    <td class="roweven" valign="top" width="2000">* trap more signals for temp file removal<br>* clear terminal on OSX only for terminal vim</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15504">vimpager</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.4.8</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2011-04-22</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=11267">Rafael Kitover</a></i></td>
+    <td class="rowodd" valign="top" width="2000">* fix compatibility with Cygwin<br>* fix compatibility with Windows gvim in Cygwin and msys<br>* detect ssh session on OSX and Cygwin<br>* remove &quot;Input not from a terminal&quot; warning entirely<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=15453">vimpager</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.4.7</b></td>
+    <td class="roweven" valign="top" nowrap><i>2011-04-15</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=11267">Rafael Kitover</a></i></td>
+    <td class="roweven" valign="top" width="2000">* fix some &quot;input not from terminal&quot; warnings<br>* fix for invocations on files not in current directory</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15429">vimpager</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.4.6</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2011-04-11</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=11267">Rafael Kitover</a></i></td>
+    <td class="rowodd" valign="top" width="2000">* MacVim support<br>* override GUI colors from .gvimrc<br>* fix syntax highlighting for files opened directly<br>* reset terminal on completion</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=15413">vimpager</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.4.5</b></td>
+    <td class="roweven" valign="top" nowrap><i>2011-04-08</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=11267">Rafael Kitover</a></i></td>
+    <td class="roweven" valign="top" width="2000">* fixes for Mac OSX<br>* -X option to speed up startup (jdevera)</td>
 </tr>
 <tr>
         <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15268">vimpager</a></td>

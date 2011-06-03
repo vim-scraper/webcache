@@ -3,7 +3,7 @@
 
 <head>
   <link rel="Stylesheet" type="text/css" href="/css/style.css" >
-  <title>lua_omni - preliminary omni completion for Lua plus few extras : vim online</title>
+  <title>lua_omni - omni completion for Lua plus few extras : vim online</title>
   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
   <meta name="KEYWORDS" content="Vim, Vi IMproved, text editor, home, documentation, tips, scripts, news">
   <link rel="shortcut icon" type="image/x-icon" href="/images/vim_shortcut.ico">
@@ -156,7 +156,7 @@
         <tr>
           <td valign="top">
 
-<span class="txth1">lua_omni : preliminary omni completion for Lua plus few extras</span> 
+<span class="txth1">lua_omni : omni completion for Lua plus few extras</span> 
 
 <br>
 <br>
@@ -166,8 +166,8 @@
 <tr>
   <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
   <td>
-    Rating <b>5/2</b>,
-    Downloaded by 79  </td>
+    Rating <b>23/8</b>,
+    Downloaded by 186  </td>
   <td class="lightbg">
   <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
   </td>
@@ -186,10 +186,10 @@
 <tr><td>ftplugin</td></tr>
 <tr><td>&nbsp;</td></tr>
 <tr><td class="prompt">description</td></tr>
-<tr><td>This is preliminary version of my omni completion plugin for Lua. It works by<br>scanning _G for names and parsing Vim buffers. There are some abbreviations<br>and Lua function list option added too.<br>Nested tables are supported so you can type:<br>:lua foobar = {numbers = {one = 1, two = 2, three = 3}}<br><br><br>Then inserting in lua file &quot;foo&quot; will be completed by CTRL-X CTRL-O. Adding<br>&quot;.&quot; and using CTRL-X CTRL-O will result in &quot;numbers&quot;. Adding another &quot;.&quot;<br>and repeating completion will show list of &quot;one, two, three&quot; numbers'<br>members.<br><br>Some other functions are supported like listing defined Lua functions in<br>current buffer.<br>There are common Lua abbreviation defined in lua_omni.vim too.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>Mappings:<br><br>CTRL-X CTRL-O<br>	Calling the omni completion function.<br><br>&lt;Leader&gt;fl	or	&lt;Plug&gt;PrintFunctionList<br>	Prints list of defined Lua functions in current buffer. They are listed in<br>	ascending line numbers order. Luadoc titles (if defined) are showed too.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>&lt;Leader&gt;lf	or	&lt;Plug&gt;WriteAndLuaFile<br>	Just a shortcut to call:<br>		:w<br>:luafile %<br><br><br>&lt;Leader&gt;sli or	&lt;Plug&gt;SetLuaIabbrevs<br>	Sets few common and useful insert mode abbreviations.<br><br>&lt;Leader&gt;cli or	&lt;Plug&gt;ClearLuaIabbrevs<br>	Clear any insert mode abbreviations set by previous shortcut.<br></td></tr>
+<tr><td>This is my omni completion plugin for Lua. It works by scanning _G and parsing<br>Vim buffers. It's also possible to specify external text files with Lua names<br>paths (delimited with new line). It's a very useful feature when a module can<br>not be loaded or doesn't have iterable table exposed.<br><br>Nested tables are supported so you can type:<br>:lua foobar = {numbers = {one = 1, two = 2, three = 3}}<br><br>Then typing CTRL-X CTRL-O list of possible matches will open:<br>&nbsp;&nbsp;foobar.numbers.one<br>&nbsp;&nbsp;foobar.numbers.two<br>&nbsp;&nbsp;foobar.numbers.three<br><br>Actually you can use globbing &quot;*&quot; and &quot;?&quot; characters to speed up typing like:<br>&nbsp;&nbsp;f*tw CTRL-X CTRL-O<br>will output immediately:<br>&nbsp;&nbsp;foobar.numbers.two<br><br>Single word can be used as well:<br>three CTRL-X CTRL-O<br>will give:<br>&nbsp;&nbsp;foobar.numbers.three<br>Or even just &quot;thr&quot; will work too.<br><br>Another way use completion is without any asterisks like:<br>p.l.m CTRL-X CTRL-O<br>to get:<br>&nbsp;&nbsp;package.loaded.math<br><br><br>That is the new way of doing omni from this version. I've found it to be quicker<br>and more convenient than multiple hitting CTR-X CTRL-O.<br>Local variables completion works as before.<br><br><br>Some other functions are supported like listing defined Lua functions in<br>current buffer.<br>There are common Lua abbreviation defined in lua_omni.vim too.<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>Mappings:<br><br>CTRL-X CTRL-O<br>&nbsp;&nbsp;&nbsp;&nbsp;Calling the omni completion function.<br><br>&lt;Leader&gt;fl&nbsp;&nbsp;or&nbsp;&nbsp;&lt;Plug&gt;PrintFunctionList<br>&nbsp;&nbsp;&nbsp;&nbsp;Prints list of defined Lua functions in current buffer. They are listed in<br>&nbsp;&nbsp;&nbsp;&nbsp;ascending line numbers order. Luadoc titles (if defined) are showed too.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>&lt;Leader&gt;lf&nbsp;&nbsp;or&nbsp;&nbsp;&lt;Plug&gt;WriteAndLuaFile<br>&nbsp;&nbsp;&nbsp;&nbsp;Just a shortcut to call:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:w:luafile %<br><br>&lt;Leader&gt;sli or&nbsp;&nbsp;&lt;Plug&gt;SetLuaIabbrevs<br>&nbsp;&nbsp;&nbsp;&nbsp;Sets few common and useful insert mode abbreviations.<br><br>&lt;Leader&gt;cli or&nbsp;&nbsp;&lt;Plug&gt;ClearLuaIabbrevs<br>&nbsp;&nbsp;&nbsp;&nbsp;Clear any insert mode abbreviations set by previous shortcut.<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>From 0.16 version there is support for external files with completion paths.<br>They can be specified via shell LUA_OMNI variable. Each file path should be<br>delimited by comma or semicolon. Additionally the same can done using Vim<br>b:lua_omni and g:lua_omni variables. The b: if exists will override g: however<br>shell LUA_OMNI will be read and used in all cases.<br><br>Format of completions files is very simple. Each line contains single Lua<br>path like:<br><br>foomodule.barPart<br>foomodule.barPart.spam<br>foomodule.barPart.spam.not<br>foomodule.barPart.spam.twice<br>foomodule.barPart.spam.multiply<br>foomodule.__inner<br>foomodule.__inner.foo<br>math2mod<br>math2mod.exp<br>math2mod.div<br>...<br>(and so on)<br><br>Order of lines is meaningless as results are sorted anyway.<br></td></tr>
 <tr><td>&nbsp;</td></tr>
 <tr><td class="prompt">install details</td></tr>
-<tr><td>Just extract and copy files from lua_omni.zip into local .vim/ftplugin and<br>.vim/doc directories. Then execute in Vim:<br>	:helptags ~/.vim/doc<br><br>To get a help type:<br>	:help lua_omni<br><br>Beware! Vim 7.3 is needed with enabled Lua support.</td></tr>
+<tr><td>Just extract and copy files from lua_omni.zip into local .vim/ftplugin and<br>.vim/doc directories. Then execute in Vim:<br>	:helptags ~/.vim/doc<br><br>Alternatively you may download it from github at:<br>git@github.com:rkowal/Lua-Omni-Vim-Completion.git<br><br>To get a help type:<br>	:help lua_omni<br><br>Beware! Vim 7.3 is needed with enabled Lua support.</td></tr>
 <tr><td>&nbsp;</td></tr>
 </table>
 
@@ -223,28 +223,100 @@ Click on the package to download.
     <th valign="top">release notes</th>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=14392">lua_omni_012.zip</a></td>
-    <td class="rowodd" valign="top" nowrap><b>0.12</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2010-11-29</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15565">lua_omni_v0.165.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.165</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2011-05-01</i></td>
     <td class="rowodd" valign="top" nowrap>7.3</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=22992">Radek Kowalski</a></i></td>
-    <td class="rowodd" valign="top" width="2000">+ improved Lua search_assignments1 function to search variable names in &quot;for in&quot; and function statements<br></td>
+    <td class="rowodd" valign="top" width="2000">+ variables defined in for loops should complete now<br>+ changed find_assigments function<br>+ added the lapg.lua script for auto generating Lua completion list names<br>&nbsp;&nbsp;from documentation (html or text files)<br>+ changed licence to MIT</td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=14333">lua_omni_011.zip</a></td>
-    <td class="roweven" valign="top" nowrap><b>0.11</b></td>
-    <td class="roweven" valign="top" nowrap><i>2010-11-20</i></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=15534">lua_omni_v0.163.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.163</b></td>
+    <td class="roweven" valign="top" nowrap><i>2011-04-27</i></td>
     <td class="roweven" valign="top" nowrap>7.3</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=22992">Radek Kowalski</a></i></td>
-    <td class="roweven" valign="top" width="2000">---------------------------------------------------------------------------------------<br>&nbsp;&nbsp;RELEASE NOTES FOR VERSION 0.11<br>---------------------------------------------------------------------------------------<br>	+ fixed error in abbreviations <br>	+ added abbreviation for string.len<br>	+ expanded omnifunc functionality to scan local function variables (works<br>	&nbsp;&nbsp;for the most part)</td>
+    <td class="roweven" valign="top" width="2000">+ new variable completion now can see variables names in function<br>&nbsp;&nbsp;definitions too</td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=14285">lua_omni.zip</a></td>
-    <td class="rowodd" valign="top" nowrap><b>0.1</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2010-11-17</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15533">lua_omni_v0.162.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.162</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2011-04-26</i></td>
     <td class="rowodd" valign="top" nowrap>7.3</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=22992">Radek Kowalski</a></i></td>
-    <td class="rowodd" valign="top" width="2000">Initial upload</td>
+    <td class="rowodd" valign="top" width="2000">+ fixed bug in print_function_list when a buffer doesn&#039t have any<br>&nbsp;&nbsp;functions<br>+ added better variable assignments completion</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=15527">lua_omni_v0.16.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.16</b></td>
+    <td class="roweven" valign="top" nowrap><i>2011-04-26</i></td>
+    <td class="roweven" valign="top" nowrap>7.3</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=22992">Radek Kowalski</a></i></td>
+    <td class="roweven" valign="top" width="2000">+ user can specify files with Lua completions using shell LUA_OMNI and Vim<br>&nbsp;&nbsp;b:lua_omni, g:lua_omni variables<br>&nbsp;&nbsp;(useful when _G context can not have everything loaded)</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15487">lua_omni_v0.151.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.151</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2011-04-20</i></td>
+    <td class="rowodd" valign="top" nowrap>7.3</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=22992">Radek Kowalski</a></i></td>
+    <td class="rowodd" valign="top" width="2000">+ fixed small (thought irritating) bug in completion_findstart function<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=15393">lua_omni_rev0.15.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.15</b></td>
+    <td class="roweven" valign="top" nowrap><i>2011-04-05</i></td>
+    <td class="roweven" valign="top" nowrap>7.3</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=22992">Radek Kowalski</a></i></td>
+    <td class="roweven" valign="top" width="2000">+ More convenient completion where single words or asterisk less shortcuts<br>&nbsp;&nbsp;will work too.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15331">lua_omni_rev0.141.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.141</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2011-03-29</i></td>
+    <td class="rowodd" valign="top" nowrap>7.3</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=22992">Radek Kowalski</a></i></td>
+    <td class="rowodd" valign="top" width="2000">+ Minor fix in completing function where was a chance to concat table with<br>&nbsp;&nbsp;string.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=15318">lua_omni_rev0.14.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.14</b></td>
+    <td class="roweven" valign="top" nowrap><i>2011-03-28</i></td>
+    <td class="roweven" valign="top" nowrap>7.3</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=22992">Radek Kowalski</a></i></td>
+    <td class="roweven" valign="top" width="2000">+ Fixed bug in new completing function so root level names in _G table are<br>&nbsp;&nbsp;actually showed.<br>+ Fixed previously introduced bugs in Vim mappings.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15289">lua_omni_rev0.13.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.13</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2011-03-25</i></td>
+    <td class="rowodd" valign="top" nowrap>7.3</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=22992">Radek Kowalski</a></i></td>
+    <td class="rowodd" valign="top" width="2000">&nbsp;&nbsp;&nbsp;&nbsp;+ Changed scanning of _G table to more elaborate way. Now a &quot;globbing&quot; &quot;*&quot;<br>	&nbsp;&nbsp;and &quot;?&quot; characters may be used when typing.<br>&nbsp;&nbsp;&nbsp;&nbsp;+ Few additions to abbreviations.<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=14392">lua_omni_012.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.12</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-11-29</i></td>
+    <td class="roweven" valign="top" nowrap>7.3</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=22992">Radek Kowalski</a></i></td>
+    <td class="roweven" valign="top" width="2000">+ improved Lua search_assignments1 function to search variable names in &quot;for in&quot; and function statements<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=14333">lua_omni_011.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.11</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-11-20</i></td>
+    <td class="rowodd" valign="top" nowrap>7.3</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=22992">Radek Kowalski</a></i></td>
+    <td class="rowodd" valign="top" width="2000">---------------------------------------------------------------------------------------<br>&nbsp;&nbsp;RELEASE NOTES FOR VERSION 0.11<br>---------------------------------------------------------------------------------------<br>	+ fixed error in abbreviations <br>	+ added abbreviation for string.len<br>	+ expanded omnifunc functionality to scan local function variables (works<br>	&nbsp;&nbsp;for the most part)</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=14285">lua_omni.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.1</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-11-17</i></td>
+    <td class="roweven" valign="top" nowrap>7.3</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=22992">Radek Kowalski</a></i></td>
+    <td class="roweven" valign="top" width="2000">Initial upload</td>
 </tr>
 </table>
 <!-- finish off the framework -->

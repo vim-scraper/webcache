@@ -1,0 +1,300 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+  <link rel="Stylesheet" type="text/css" href="/css/style.css" >
+  <title>Table Helper - Utility to help in the creation of tables of data : vim online</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <meta name="KEYWORDS" content="Vim, Vi IMproved, text editor, home, documentation, tips, scripts, news">
+  <link rel="shortcut icon" type="image/x-icon" href="/images/vim_shortcut.ico">
+</head>
+
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff"> 
+
+<!-- HEADER, SPONSOR IMAGE, VIM IMAGE AND BOOK AD -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+  <td class="lightbg">&nbsp;&nbsp;&nbsp;</td>
+  <td class="lightbg" align="left"><a href="/sponsor/index.php"><img src="/images/sponsorvim.gif" alt="sponsor Vim development" border="0"></a></td>
+    <td class="lightbg" align="center"><a href="/index.php"><img src="/images/vim_header.gif" border="0" alt="Vim logo"></a></td>
+    <td class="lightbg" align="right"><a href="http://iccf-holland.org/click5.html"><img src="/images/buyhelplearn.gif" alt="Vim Book Ad" border="0"></a></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  </tr>
+  <tr>
+    <td colspan="4" class="darkbg"><img src="/images/spacer.gif" width="1" height="10" alt=""></td>
+  </tr>
+</table>
+<!-- THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+  <col width="180">
+  <col width="1">
+
+  <tr valign="top">
+    <td class="sidebar">
+      <table width="180" cellpadding="4" cellspacing="0" border="0">
+        <tr valign="top">
+          <td class="sidebar">
+
+<!-- INCLUDE THE PAGE NAVIGATION -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+    <tr>
+        <td><small>not logged in (<a href="/login.php">login</a>)</small></td>
+    </tr>
+    <tr><td>
+<small>&nbsp;</small>
+<form action="http://www.google.com/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-3005259998294962:bvyni59kjr1" />
+    <input type="hidden" name="ie" value="ISO-8859-1" />
+    <input type="text" name="q" size="20" />
+    <br>
+    <input type="submit" name="sa" value="Search" />
+  </div>
+</form>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+    </td></tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="1"></td>
+    </tr>
+    <tr>
+        <td class="darkbg"><img src="/images/spacer.gif" alt='' border="0" height="3"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="2"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/index.php">Home</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/search.php">Advanced search</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/about.php">About Vim</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/community.php">Community</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/news/news.php">News</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/sponsor/index.php">Sponsoring</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/trivia.php">Trivia</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/docs.php">Documentation</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/download.php">Download</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/scripts/index.php">Scripts</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/tips/index.php">Tips</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/account/index.php">My Account</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="/huh.php">Site Help</a></td>
+        </tr>
+</table>
+
+            <table width="172" cellpadding="0" cellspacing="0" border="0">
+              <tr><td><img src="/images/spacer.gif" alt="" border="0" width="1" height="8"></td></tr>
+              <tr><td class="darkbg"><img src="/images/spacer.gif" width="1" height="3" alt=""></td></tr>
+            </table>
+            <br>
+
+<!-- INCLUDE THE PAGE SIDEBAR TEXT -->
+&nbsp;
+
+          </td>
+        </tr>
+      </table>
+    </td>
+
+    <td class="darkbg"><img src="/images/spacer.gif" width="1" height="1" border="0" alt=""><br></td>
+    <td>
+      <table width="100%" cellpadding="10" cellspacing="0" border="0" bordercolor="red">
+        <tr>
+          <td valign="top">
+
+<span class="txth1">Table Helper : Utility to help in the creation of tables of data</span> 
+
+<br>
+<br>
+
+<!-- karma table -->
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
+  <td>
+    Rating <b>3/3</b>,
+    Downloaded by 45  </td>
+  <td class="lightbg">
+  <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
+  </td>
+  <td>
+    <a href="http://vim.wikia.com/wiki/Script:3561">Vim wiki</a>
+  </td>  
+</tr>
+</table>
+<p>
+
+<table cellspacing="0" cellpadding="0" border="0">
+<tr><td class="prompt">created by</td></tr>
+<tr><td><a href="/account/profile.php?user_id=64">Salman Halim</a></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">script type</td></tr>
+<tr><td>utility</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">description</td></tr>
+<tr><td>Version 1.0:<br><br>Initial version.<br><br>This plugin helps with aligning text in columns, making the creation of tables easier. The process is simple:<br><br>1. Manually lay out one line of the table (the header, for example) and execute the command Gettabstopsfromcurrentline (there is a hotkey, in case you do this<br>often) to have it parse the line and save the column definitions (per buffer).<br><br>2. Go to any other lines that are supposed to be in the table and either hit the hotkey on them one by one or visually select a range and hit the hotkey and<br>they will all get realigned to match the header row.<br><br>Caveat: these example may look horribly aligned if viewed with a proportional font.<br><br>For example, given these three rows of text:<br><br>First name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Last name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Age<br>------&nbsp;&nbsp;-----&nbsp;&nbsp;-----<br>John&nbsp;&nbsp; Smith&nbsp;&nbsp; 28<br>Jane&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Doe&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;32<br><br>If the first line is the one parsed for the columns, hitting the hotkey on the remaining lines yields:<br><br>First name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Last name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Age<br>------&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-----&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -----<br>John&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Smith&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 28<br>Jane&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Doe&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 32<br><br>If you parse the last line instead you get this:<br><br>First name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Last name&nbsp;&nbsp;&nbsp;&nbsp;Age<br>------&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -----&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-----<br>John&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Smith&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;28<br>Jane&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Doe&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;32<br><br>If you have the repeat.vim autoload plugin installed, the reformatting is repeatable on other lines.<br><br>Requirements: the column text has to be separated by at least 2 spaces, both for the header line and for each line that is to be reformatted. For example:<br><br>First name&nbsp;&nbsp;Last name&nbsp;&nbsp;Age<br><br>Defines three columns, as does:<br><br>First name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Last name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Age<br><br>Options:<br><br>g:TableHelper_truncateLongEntries (default 0): occasionally, you might have an entry in a table that is too long (say, you allocated 10 spaces for a column in<br>the header but the text is actually 12 characters). This option determines how that is handled:<br><br>- If 1, the entry gets truncated to fit. You will lose data, but the table will still line up (small price to pay!)<br><br>- If 0, the entry is put in as is and allowed to comprise as many columns as needed. The rest of the text is simply aligned to the next column. You will<br>&nbsp;&nbsp;retain all your data, but will lose formatting.<br><br>In practice, you should probably leave this value at 0. If you see misalignments, adjust your header row, recalculate the column stops, visually select your<br>table and hit the hotkey and the whole thing will be realigned. If you start truncating fields, your only recourse will be the undo (u) key. (I only put this<br>option in at all because it was fairly easy to implement the truncation!)<br><br>g:TableHelper_columnMargin (default 2): how much space must there be between the end of one column's text and the start of the next before it's considered too<br>long a column. Typically, you have to have some space between adjacent columns (or else, how can you tell where one column ends and the next begins). For<br>example, if your header row and first row of data look like this:<br><br>FName&nbsp;&nbsp;&nbsp;&nbsp;LName&nbsp;&nbsp;Age<br>Jonathan&nbsp;&nbsp;Smythe&nbsp;&nbsp;28<br><br>During reformat, the first column will be considered too long because there wouldn't be 2 spaces between Jonathan and Smythe (assuming<br>g:TableHelper_columnMargin is set to 2--you can set it higher to get more space between columns). Thus, if you have truncation enabled<br>(g:TableHelper_truncateLongEntries is 1), you'll get this:<br><br>FName&nbsp;&nbsp;&nbsp;&nbsp;LName&nbsp;&nbsp;Age<br>Jonatha&nbsp;&nbsp;Smyth&nbsp;&nbsp;28<br><br>As it happens, the last name was too long, also. If you don't have truncation enabled, you get this:<br><br>FName&nbsp;&nbsp;&nbsp;&nbsp;LName&nbsp;&nbsp;Age<br>Jonathan&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Smythe&nbsp;&nbsp;28<br><br>&quot;Smythe&quot; simply gets pushed under the next available column and then, since the number of header columns runs out, subsequent columns of text are simply<br>placed as is, separated by g:TableHelper_columnMargin spaces.<br><br>This plugin requires at least two spaces between columns to be able to recognize them as distinct columns, so a value less than 2, while supported, will<br>seriously jeopardize any attempts to reformat the table as all the text will run together (try setting it to 0...). If someone complains, I can force 2 as the<br>minimum.<br><br>If you have my getVar.vim, then you can set these options on a per window, buffer or tab basis, also. (otherwise, only on a global basis).<br><br>Commands:<br><br>Gettabstopsfromcurrentline: parses the current line for columns; probably best to call this from your header line, though you could also call it from the<br>longest line in your table (and then use the alignment hotkey to have the header conform to this, also).<br><br>Retabline: Reformats the specified lines (visually selected or the current line) so they conform the previously specified header line.<br><br>Showtabstops: Displays the list of tab stops currently defined, if any.<br><br>Mappings:<br><br>&lt;Plug&gt;TableHelper_Gettabstopsfromcurrentline: executes Gettabstopsfromcurrentline (defaults to &lt;leader&gt;&lt;c-t&gt;)<br><br>&lt;Plug&gt;TableHelper_Retabline: executes Retabline (defaults to &lt;c-t&gt;). May be called again after changing the truncation or column margin options to change the<br>alignment of already formatted lines.<br><br>The default hotkeys may be overridden in your vimrc.<br><br>Tip: if you call Gettabstopsfromcurrentline on an empty line, you get no column definitions; then, when you try to reformat a line, it just ends up having the<br>columns of text displayed in their entirety, separated by g:TableHelper_columnMargin spaces. For example, if g:TableHelper_columnMargin is 5, this line<br><br>Jonathan&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Smythe&nbsp;&nbsp;28<br><br>becomes<br><br>Jonathan&nbsp;&nbsp;&nbsp;&nbsp; Smythe&nbsp;&nbsp;&nbsp;&nbsp; 28<br><br>This might be useful for first laying out the longest line in the table, calling Gettabstopsfromcurrentline on it and then reformatting the entire table based<br>on those column markers:<br><br>FName&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LName&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Age<br>-----&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-----&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;---<br>Jonathan&nbsp;&nbsp;&nbsp;&nbsp; Smythe&nbsp;&nbsp;&nbsp;&nbsp; 28<br>Jon&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Smith&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;32<br><br>Version 2.0:<br><br>When calling Gettabstopsfromcurrentline, the last column size is set to the larger of the value of g:TableHelper_lastColumnSize or the length of the text in<br>the last column being measured. The very last column of text isn't truncated (unless lines with more columns than measured show up), but this value is used<br>when generating separator lines.<br><br>Added some commands:<br><br>Aligntable: given a range of lines (visually selected, for example), will automatically figure out the optimum layout. Takes optional arguments: the column<br>alignments (see Setcolumnalignments) and the amount by which the table should be indented. (If not specified, all alignments take the defaults as specified<br>for Setcolumnalignments and the indent becomes the indentation of the first line in the range).<br><br>To specify just an indent, pass in 'l' for the first argument (that's the default and all values get left-aligned anyway).<br><br>As an example, the following table<br><br>First name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Last name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Age<br>------&nbsp;&nbsp;-----&nbsp;&nbsp;-----<br>John&nbsp;&nbsp; Smith&nbsp;&nbsp; 28<br>Jane&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Doe&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;32<br><br>can be selected visually and Aligntable executed to get (with a default column margin value of 2):<br><br>First name&nbsp;&nbsp;Last name&nbsp;&nbsp;Age<br>------&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-----&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-----<br>John&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Smith&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;28<br>Jane&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Doe&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;32<br><br>Executing with a column margin of 10, on the other hand, gives:<br><br>First name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Last name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Age<br>------&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-----&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-----<br>John&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Smith&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;28<br>Jane&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Doe&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;32<br><br>The column positions used are stored (clobbering any previous calls to Gettabstopsfromcurrentline) so new lines may be added to this table and reformatted<br>quickly using the standard reformatting hotkey.<br><br>Addseparatorline: adds a separator line just below the current cursor line. If the tab stops are from this line<br><br>First name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Last name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Age<br><br>then executing &quot;Addseparatorline&quot; with the cursor on the line itself gives<br><br>Addseparatorline<br>------------------&nbsp;&nbsp;-----------------&nbsp;&nbsp;----------<br><br>The space between separators is determined by g:TableHelper_columnMargin.<br><br>The command takes these arguments, all optional (with default values):<br><br>Addseparatorline [continuous=0] [separator characters=g:TableHelper_separatorCharacters]<br><br>The first argument is whether to generate a continuous line (defaults to 0) or one with breaks at the column margins:<br><br>Addseparatorline 0 -=<br>-=-=-=-=-=-=-=-=-=&nbsp;&nbsp;-=-=-=-=-=-=-=-=-&nbsp;&nbsp;-=-=-=-=-=<br><br>Addseparatorline 1 -=+<br>-=+-=+-=+-=+-=+-=+-=+-=+-=+-=+-=+-=+-=+-=+-=+-=+-<br><br>And the second determines the separators to use for this line.<br><br>Addseparatorline 1 :-<br>:-:-:-:-:-:-:-:-:-:-:-:-:-:-:-:-:-:-:-:-:-:-:-:-:<br><br>Setcolumnalignments: Takes a string consisting of an arbitrary number of 'l' (left), 'c' (center) and 'r' (right); for example, 'llrlc'. When reformatting a<br>line or calling Aligntable, this value is taken into consideration for how to align the value in a particular column. Thus, 'llrlc' means that the first<br>two columns will be left-aligned, the third will be right-aligned, and then left and, finally, the last column will be centered in the allocated space.<br><br>If the table contains more columns than specified in the alignment, the remaining columns are all left-aligned ('l'). Column values that are too long (doesn't<br>happen when Aligntable is called unless the lines are added after the fact) end up being left-aligned (or truncated, in which case they fill up the entire<br>column and alignment doesn't enter into it).<br><br>The alignments are stored on a per-buffer basis (just like the table column stops).<br><br>New options:<br><br>g:TableHelper_lastColumnSize (default 10): used for adding separator lines; specifies the minimum length for the last column<br><br>g:TableHelper_separatorCharacters (default '-'): the character string that the separator comprises; gets repeated and truncated as necessary and starts over<br>every time there is a column break (repeats continuously if no break is chosen)<br></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">install details</td></tr>
+<tr><td>Pop it into your plugin directory and set up the mappings and options if the defaults don't work for you.</td></tr>
+<tr><td>&nbsp;</td></tr>
+</table>
+
+<!-- rating table -->
+<form name="rating">
+<input type="hidden" name="script_id" value="3561">
+<table cellpadding="4" cellspacing="0" border="1" bordercolor="#000066">
+<tr>
+  <td class="lightbg"><b>rate this script</b></td>
+  <td valign="middle">
+    <input type="radio" name="rating" value="life_changing">Life Changing
+    <input type="radio" name="rating" value="helpful">Helpful
+    <input type="radio" name="rating" value="unfulfilling">Unfulfilling&nbsp;
+    <input type="submit" value="rate">
+  </td>
+</tr>
+</table>
+</form>
+<span class="txth2">script versions</span> (<a href="add_script_version.php?script_id=3561">upload new version</a>)
+<p>
+Click on the package to download.
+<p>
+
+<table cellspacing="2" cellpadding="4" border="0" width="100%">
+<tr class='tableheader'>
+        <th valign="top">package</th>
+    <th valign="top">script version</th>
+    <th valign="top">date</th>
+    <th valign="top">Vim version</th>
+    <th valign="top">user</th>
+    <th valign="top">release notes</th>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15521">TableHelper.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.0</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2011-04-25</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=64">Salman Halim</a></i></td>
+    <td class="rowodd" valign="top" width="2000">New commands: Aligntable, Addseparatorline and Setcolumnalignments</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=15513">TableHelper.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.0</b></td>
+    <td class="roweven" valign="top" nowrap><i>2011-04-24</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=64">Salman Halim</a></i></td>
+    <td class="roweven" valign="top" width="2000">Initial upload</td>
+</tr>
+</table>
+<!-- finish off the framework -->
+          </td>
+        </tr>
+      </table>
+    </td>
+
+  </tr>
+</table>
+
+<!-- END OF THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr><td colspan="4" bgcolor="#000000"><img src="/images/spacer.gif" height="2" width="1" alt=""></td></tr>
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr>
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+
+    <td align="left" valign="top"><small>
+      If you have questions or remarks about this site, visit the
+      <a href="http://vimonline.sf.net">vimonline development</a> pages.
+      Please use this site responsibly.
+      <br> 
+      
+      Questions about <a href="http://www.vim.org/about.php">Vim</a> should go
+      to the <a href="http://www.vim.org/maillist.php">maillist</a>.
+      Help Bram <a href="http://iccf-holland.org/">help Uganda</a>.
+      </small>
+	&nbsp;
+	&nbsp;
+
+	<!-- Start of StatCounter Code -->
+	<script type="text/javascript" language="javascript">
+	var sc_project=1417324; 
+	var sc_invisible=1; 
+	var sc_partition=11; 
+	var sc_security="d41633bc"; 
+	</script>
+
+	<script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script><noscript><a href="http://www.statcounter.com/" target="_blank"><img  src="http://c12.statcounter.com/counter.php?sc_project=1417324&java=0&security=d41633bc&invisible=0" alt="free tracking" border="0"></a> </noscript>
+	<!-- End of StatCounter Code -->
+          </td>
+
+    <td align="right" valign="top">
+      		<a href="http://sourceforge.net/projects/vim" rel="nofollow"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=8&type=1" width="88" height="31" border="0" alt="SourceForge.net Logo" /></a>
+    </td>
+
+    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
+  </tr>
+
+    
+  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
+  
+  </tr>
+</table>
+
+</body>
+</html>
+

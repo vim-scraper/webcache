@@ -166,8 +166,8 @@
 <tr>
   <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
   <td>
-    Rating <b>702/232</b>,
-    Downloaded by 13053  </td>
+    Rating <b>716/237</b>,
+    Downloaded by 13411  </td>
   <td class="lightbg">
   <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
   </td>
@@ -223,308 +223,316 @@ Click on the package to download.
     <th valign="top">release notes</th>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=11979">netrw.vba.gz</a></td>
-    <td class="rowodd" valign="top" nowrap><b>136</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2009-12-29</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15352">netrw.vba.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>141</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2011-04-01</i></td>
+    <td class="rowodd" valign="top" nowrap>7.3</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=96">Charles Campbell</a></i></td>
+    <td class="rowodd" valign="top" width="2000">included -s:... support for Windows ftp<br>restored 2-leftmouse for :Rex-like return<br>added balloon help for items in banner<br>g:netrw_cursor (g:netrw_cursorcolumn is deprecated) supports additional argument values for cursorline and cursorcolumn control in netrw directory listings.<br>:Texplore starts from netrw's idea of the current directory rather than pwd's<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=11979">netrw.vba.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>136</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-12-29</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=96">Charles Campbell</a></i></td>
+    <td class="roweven" valign="top" width="2000">This one is mostly a bugfix release.&nbsp;&nbsp;There's also<br>T:&nbsp;&nbsp;(a new map)&nbsp;&nbsp;puts the file or directory into a background tab<br>elinks now uses -source instead of -dump<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=9816">netrw.vba.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>135</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-01-14</i></td>
     <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=96">Charles Campbell</a></i></td>
-    <td class="rowodd" valign="top" width="2000">This one is mostly a bugfix release.&nbsp;&nbsp;There's also<br>T:&nbsp;&nbsp;(a new map)&nbsp;&nbsp;puts the file or directory into a background tab<br>elinks now uses -source instead of -dump<br></td>
+    <td class="rowodd" valign="top" width="2000">A bugfix release -- see&nbsp;&nbsp;:he netrw-history&nbsp;&nbsp;-- </td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=9816">netrw.vba.gz</a></td>
-    <td class="roweven" valign="top" nowrap><b>135</b></td>
-    <td class="roweven" valign="top" nowrap><i>2009-01-14</i></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=9389">netrw.vba.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>134</b></td>
+    <td class="roweven" valign="top" nowrap><i>2008-10-23</i></td>
     <td class="roweven" valign="top" nowrap>7.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=96">Charles Campbell</a></i></td>
-    <td class="roweven" valign="top" width="2000">A bugfix release -- see&nbsp;&nbsp;:he netrw-history&nbsp;&nbsp;-- </td>
+    <td class="roweven" valign="top" width="2000">* dav: will use curl if cadaver isn't available<br>* [N] added to various Explore commands<br>* bookmarks should now reliably be retained<br>* various bugfixes (x for remote jpgs, for example)<br></td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=9389">netrw.vba.gz</a></td>
-    <td class="rowodd" valign="top" nowrap><b>134</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2008-10-23</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=9221">netrw.vba.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>133</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2008-09-03</i></td>
     <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=96">Charles Campbell</a></i></td>
-    <td class="rowodd" valign="top" width="2000">* dav: will use curl if cadaver isn't available<br>* [N] added to various Explore commands<br>* bookmarks should now reliably be retained<br>* various bugfixes (x for remote jpgs, for example)<br></td>
+    <td class="rowodd" valign="top" width="2000">[*] security improvements (you'll need vim 7.2 for this version)<br>[*] uses cursorline for thin/long/tree listing styles<br>[*] currently trying elinks for http -- comments, please!&nbsp;&nbsp;I have one dislike so far, so it may be changed back in the future.<br>[*] various bug fixes<br></td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=9221">netrw.vba.gz</a></td>
-    <td class="roweven" valign="top" nowrap><b>133</b></td>
-    <td class="roweven" valign="top" nowrap><i>2008-09-03</i></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=9048">netrw.vba.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>v128</b></td>
+    <td class="roweven" valign="top" nowrap><i>2008-07-30</i></td>
     <td class="roweven" valign="top" nowrap>7.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=96">Charles Campbell</a></i></td>
-    <td class="roweven" valign="top" width="2000">[*] security improvements (you'll need vim 7.2 for this version)<br>[*] uses cursorline for thin/long/tree listing styles<br>[*] currently trying elinks for http -- comments, please!&nbsp;&nbsp;I have one dislike so far, so it may be changed back in the future.<br>[*] various bug fixes<br></td>
+    <td class="roweven" valign="top" width="2000">Needs fnameescape() and shellescape(), so you'll need an up-to-date vim with this one: vim v7.2b or later.<br></td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=9048">netrw.vba.gz</a></td>
-    <td class="rowodd" valign="top" nowrap><b>v128</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2008-07-30</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=8501">netrw.vba.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>123</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2008-03-28</i></td>
     <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=96">Charles Campbell</a></i></td>
-    <td class="rowodd" valign="top" width="2000">Needs fnameescape() and shellescape(), so you'll need an up-to-date vim with this one: vim v7.2b or later.<br></td>
+    <td class="rowodd" valign="top" width="2000">Marked files now keeps a &quot;global&quot; marked file list.&nbsp;&nbsp;The global marked file list is used to support tag processing and vimdiff'ing.<br>Several bugs fixed and security enhancements.<br></td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=8501">netrw.vba.gz</a></td>
-    <td class="roweven" valign="top" nowrap><b>123</b></td>
-    <td class="roweven" valign="top" nowrap><i>2008-03-28</i></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=8351">netrw.vba.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>122</b></td>
+    <td class="roweven" valign="top" nowrap><i>2008-02-26</i></td>
     <td class="roweven" valign="top" nowrap>7.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=96">Charles Campbell</a></i></td>
-    <td class="roweven" valign="top" width="2000">Marked files now keeps a &quot;global&quot; marked file list.&nbsp;&nbsp;The global marked file list is used to support tag processing and vimdiff'ing.<br>Several bugs fixed and security enhancements.<br></td>
+    <td class="roweven" valign="top" width="2000">Mainly a bugfix release (sorting sequence improvements).</td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=8351">netrw.vba.gz</a></td>
-    <td class="rowodd" valign="top" nowrap><b>122</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2008-02-26</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=8262">netrw.vba.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>121</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2008-02-12</i></td>
     <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=96">Charles Campbell</a></i></td>
-    <td class="rowodd" valign="top" width="2000">Mainly a bugfix release (sorting sequence improvements).</td>
+    <td class="rowodd" valign="top" width="2000">Bugfixes: netrw attempts to retain the alternate file.&nbsp;&nbsp;v120 broke an explicit :Explore dirname ; fixed.<br></td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=8262">netrw.vba.gz</a></td>
-    <td class="roweven" valign="top" nowrap><b>121</b></td>
-    <td class="roweven" valign="top" nowrap><i>2008-02-12</i></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=8248">netrw.vba.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>120</b></td>
+    <td class="roweven" valign="top" nowrap><i>2008-02-09</i></td>
     <td class="roweven" valign="top" nowrap>7.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=96">Charles Campbell</a></i></td>
-    <td class="roweven" valign="top" width="2000">Bugfixes: netrw attempts to retain the alternate file.&nbsp;&nbsp;v120 broke an explicit :Explore dirname ; fixed.<br></td>
+    <td class="roweven" valign="top" width="2000">Marked file system extended (mt, mh, mu, ms) and bugs removed.&nbsp;&nbsp;One may now have multiple tree listings.&nbsp;&nbsp;Bugfix: P works with trees.&nbsp;&nbsp;Changed q -&gt; qb for query-bookmarks, qf added to provide information about file under cursor.&nbsp;&nbsp;Explore now has four special listing modes: */filepat, *//filepat, **/pattern, and **//pattern.&nbsp;&nbsp;gh is now a shortcut for toggling hiding of files and directories which begin with a dot.&nbsp;&nbsp;The menu now includes entries for Explore.<br></td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=8248">netrw.vba.gz</a></td>
-    <td class="rowodd" valign="top" nowrap><b>120</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2008-02-09</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=8133">netrw.vba.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>118</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2008-01-07</i></td>
     <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=96">Charles Campbell</a></i></td>
-    <td class="rowodd" valign="top" width="2000">Marked file system extended (mt, mh, mu, ms) and bugs removed.&nbsp;&nbsp;One may now have multiple tree listings.&nbsp;&nbsp;Bugfix: P works with trees.&nbsp;&nbsp;Changed q -&gt; qb for query-bookmarks, qf added to provide information about file under cursor.&nbsp;&nbsp;Explore now has four special listing modes: */filepat, *//filepat, **/pattern, and **//pattern.&nbsp;&nbsp;gh is now a shortcut for toggling hiding of files and directories which begin with a dot.&nbsp;&nbsp;The menu now includes entries for Explore.<br></td>
+    <td class="rowodd" valign="top" width="2000">Netrw has some bug fixes: with :Explore c:/path/, spaces in directory names with s:NetrwOptionRestore(), and with P<br></td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=8133">netrw.vba.gz</a></td>
-    <td class="roweven" valign="top" nowrap><b>118</b></td>
-    <td class="roweven" valign="top" nowrap><i>2008-01-07</i></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=8042">netrw.vba.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>116</b></td>
+    <td class="roweven" valign="top" nowrap><i>2007-12-12</i></td>
     <td class="roweven" valign="top" nowrap>7.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=96">Charles Campbell</a></i></td>
-    <td class="roweven" valign="top" width="2000">Netrw has some bug fixes: with :Explore c:/path/, spaces in directory names with s:NetrwOptionRestore(), and with P<br></td>
+    <td class="roweven" valign="top" width="2000">bug fixes -- removed some unnecessary directory refreshes, and this version does a better job of retaining user options when editing files under the aegis of netrw's browser</td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=8042">netrw.vba.gz</a></td>
-    <td class="rowodd" valign="top" nowrap><b>116</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2007-12-12</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=7901">netrw.vba.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>115</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2007-11-08</i></td>
     <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=96">Charles Campbell</a></i></td>
-    <td class="rowodd" valign="top" width="2000">bug fixes -- removed some unnecessary directory refreshes, and this version does a better job of retaining user options when editing files under the aegis of netrw's browser</td>
+    <td class="rowodd" valign="top" width="2000">* New: :Explore handles path/**/filename<br>* Bugfixes: (shellslash use improved, remote editing of *.tar.gz and *.tar.bz2, sourcing remote files via ftp, etc)<br></td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=7901">netrw.vba.gz</a></td>
-    <td class="roweven" valign="top" nowrap><b>115</b></td>
-    <td class="roweven" valign="top" nowrap><i>2007-11-08</i></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=7738">netrw.vba.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>114</b></td>
+    <td class="roweven" valign="top" nowrap><i>2007-10-02</i></td>
     <td class="roweven" valign="top" nowrap>7.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=96">Charles Campbell</a></i></td>
-    <td class="roweven" valign="top" width="2000">* New: :Explore handles path/**/filename<br>* Bugfixes: (shellslash use improved, remote editing of *.tar.gz and *.tar.bz2, sourcing remote files via ftp, etc)<br></td>
+    <td class="roweven" valign="top" width="2000">mT now supports generating tags files for remote marked files<br>Netrw's menus are New&Improved!</td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=7738">netrw.vba.gz</a></td>
-    <td class="rowodd" valign="top" nowrap><b>114</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2007-10-02</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=7725">netrw.vba.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>113</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2007-09-27</i></td>
     <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=96">Charles Campbell</a></i></td>
-    <td class="rowodd" valign="top" width="2000">mT now supports generating tags files for remote marked files<br>Netrw's menus are New&Improved!</td>
+    <td class="rowodd" valign="top" width="2000">New: the &quot;x&quot; command has been extended to use Mac OS/X's open facility<br><br>Bugfix: cursor position restored after deleting or renaming files<br>Bugfix: ftplugins, autocmds, etc can change settings after netrw opens a file<br>Bugfix: strlen() -&gt; s:Strlen(), which handles utf-8 characters better<br></td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=7725">netrw.vba.gz</a></td>
-    <td class="roweven" valign="top" nowrap><b>113</b></td>
-    <td class="roweven" valign="top" nowrap><i>2007-09-27</i></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=7617">netrw.vba.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>112</b></td>
+    <td class="roweven" valign="top" nowrap><i>2007-09-04</i></td>
     <td class="roweven" valign="top" nowrap>7.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=96">Charles Campbell</a></i></td>
-    <td class="roweven" valign="top" width="2000">New: the &quot;x&quot; command has been extended to use Mac OS/X's open facility<br><br>Bugfix: cursor position restored after deleting or renaming files<br>Bugfix: ftplugins, autocmds, etc can change settings after netrw opens a file<br>Bugfix: strlen() -&gt; s:Strlen(), which handles utf-8 characters better<br></td>
+    <td class="roweven" valign="top" width="2000">Added mx (|netrw-mx|) for executing arbitrary commands on marked files<br>Added the :NetrwClean[!] command<br>Bugfix: More option save/restore work for s:NetrwBrowseChgDir(); s:NetrwOptionSave() and s:NetrwOptionRestore() now take a parameter specifying the type of variables to be used for saving and restoring (either &quot;w:&quot; or &quot;s:&quot;).&nbsp;&nbsp;The formatoptions, for example, is saved & restored.<br></td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=7617">netrw.vba.gz</a></td>
-    <td class="rowodd" valign="top" nowrap><b>112</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2007-09-04</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=7503">netrw.vba.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>111</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2007-08-15</i></td>
     <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=96">Charles Campbell</a></i></td>
-    <td class="rowodd" valign="top" width="2000">Added mx (|netrw-mx|) for executing arbitrary commands on marked files<br>Added the :NetrwClean[!] command<br>Bugfix: More option save/restore work for s:NetrwBrowseChgDir(); s:NetrwOptionSave() and s:NetrwOptionRestore() now take a parameter specifying the type of variables to be used for saving and restoring (either &quot;w:&quot; or &quot;s:&quot;).&nbsp;&nbsp;The formatoptions, for example, is saved & restored.<br></td>
+    <td class="rowodd" valign="top" width="2000">Included a &quot;marked file&quot; system: one may mark files (with mf or shift-leftmouse); one may then rename, delete, obtain, compress/decompress, and create tags with the marked files.<br><br>A double-clicked leftmouse (in gvim) will return one from a file to the netrw browser buffer used to edit it.<br><br>And, some bug fixes!<br></td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=7503">netrw.vba.gz</a></td>
-    <td class="roweven" valign="top" nowrap><b>111</b></td>
-    <td class="roweven" valign="top" nowrap><i>2007-08-15</i></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=7273">netrw.vba.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>110</b></td>
+    <td class="roweven" valign="top" nowrap><i>2007-06-20</i></td>
     <td class="roweven" valign="top" nowrap>7.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=96">Charles Campbell</a></i></td>
-    <td class="roweven" valign="top" width="2000">Included a &quot;marked file&quot; system: one may mark files (with mf or shift-leftmouse); one may then rename, delete, obtain, compress/decompress, and create tags with the marked files.<br><br>A double-clicked leftmouse (in gvim) will return one from a file to the netrw browser buffer used to edit it.<br><br>And, some bug fixes!<br></td>
+    <td class="roweven" valign="top" width="2000">New Features:<br>* added [ and ] maps to NetrwTreeListing (bounce across open directories)<br>* preview window may be shown vertically as well as the default horizontally<br><br>Bug Fixes:<br>* g:netrw_shq more consistently used to support &quot;x&quot; for special file browsing<br>* more [Scratch] buffers are now named properly<br>* c mapping now works when directory names have spaces<br>* options retained in original buffers after a split + :Explore<br>* Fixed remote file deletion/renaming (again)<br>* Using &lt;leftmouse to a non-netrw window was causing an error message<br></td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=7273">netrw.vba.gz</a></td>
-    <td class="rowodd" valign="top" nowrap><b>110</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2007-06-20</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=7079">netrw.vba.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>109</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2007-05-08</i></td>
     <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=96">Charles Campbell</a></i></td>
-    <td class="rowodd" valign="top" width="2000">New Features:<br>* added [ and ] maps to NetrwTreeListing (bounce across open directories)<br>* preview window may be shown vertically as well as the default horizontally<br><br>Bug Fixes:<br>* g:netrw_shq more consistently used to support &quot;x&quot; for special file browsing<br>* more [Scratch] buffers are now named properly<br>* c mapping now works when directory names have spaces<br>* options retained in original buffers after a split + :Explore<br>* Fixed remote file deletion/renaming (again)<br>* Using &lt;leftmouse to a non-netrw window was causing an error message<br></td>
+    <td class="rowodd" valign="top" width="2000">One may select an error/message window vs echoerr messages<br>Various bug fixes (scp -P and ssh -p for ports, Explore attempts to expand $name)<br></td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=7079">netrw.vba.gz</a></td>
-    <td class="roweven" valign="top" nowrap><b>109</b></td>
-    <td class="roweven" valign="top" nowrap><i>2007-05-08</i></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=6895">netrw.vba.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>108</b></td>
+    <td class="roweven" valign="top" nowrap><i>2007-03-21</i></td>
     <td class="roweven" valign="top" nowrap>7.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=96">Charles Campbell</a></i></td>
-    <td class="roweven" valign="top" width="2000">One may select an error/message window vs echoerr messages<br>Various bug fixes (scp -P and ssh -p for ports, Explore attempts to expand $name)<br></td>
+    <td class="roweven" valign="top" width="2000">Netrw now supports sourcing remote files and supports preview (with a &quot;p&quot;).&nbsp;&nbsp;Numerous bug fixes.&nbsp;&nbsp;Works with Microsoft-based ftp servers.</td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=6895">netrw.vba.gz</a></td>
-    <td class="rowodd" valign="top" nowrap><b>108</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2007-03-21</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=6577">netrw.vba.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>107</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2007-01-03</i></td>
     <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=96">Charles Campbell</a></i></td>
-    <td class="rowodd" valign="top" width="2000">Netrw now supports sourcing remote files and supports preview (with a &quot;p&quot;).&nbsp;&nbsp;Numerous bug fixes.&nbsp;&nbsp;Works with Microsoft-based ftp servers.</td>
+    <td class="rowodd" valign="top" width="2000">(browser) tree display mode<br>(browser) amiga supported<br>numerous bug fixes</td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=6577">netrw.vba.gz</a></td>
-    <td class="roweven" valign="top" nowrap><b>107</b></td>
-    <td class="roweven" valign="top" nowrap><i>2007-01-03</i></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=6180">netrw.vba.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>104</b></td>
+    <td class="roweven" valign="top" nowrap><i>2006-09-14</i></td>
     <td class="roweven" valign="top" nowrap>7.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=96">Charles Campbell</a></i></td>
-    <td class="roweven" valign="top" width="2000">(browser) tree display mode<br>(browser) amiga supported<br>numerous bug fixes</td>
+    <td class="roweven" valign="top" width="2000">* NEW: netrw now has a tree listing style (see :help g:netrw_liststyle)<br>* MOD: as suggested by Rodolfo Borges, :Explore and variants will position the cursor on the file that had just been edited<br>* MOD: changed default g:netrw_sort_sequence order<br>* MOD: changed b, Nb to simply mb&nbsp;&nbsp;(make bookmark)<br>* MOD: changed B, NB to simply gb&nbsp;&nbsp;(goto bookmark)<br>* MOD: attempts to retain the alternate file<br></td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=6180">netrw.vba.gz</a></td>
-    <td class="rowodd" valign="top" nowrap><b>104</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2006-09-14</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=6119">netrw.vba.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>103</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2006-08-31</i></td>
     <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=96">Charles Campbell</a></i></td>
-    <td class="rowodd" valign="top" width="2000">* NEW: netrw now has a tree listing style (see :help g:netrw_liststyle)<br>* MOD: as suggested by Rodolfo Borges, :Explore and variants will position the cursor on the file that had just been edited<br>* MOD: changed default g:netrw_sort_sequence order<br>* MOD: changed b, Nb to simply mb&nbsp;&nbsp;(make bookmark)<br>* MOD: changed B, NB to simply gb&nbsp;&nbsp;(goto bookmark)<br>* MOD: attempts to retain the alternate file<br></td>
+    <td class="rowodd" valign="top" width="2000">&quot;t&quot; now opens tabbed windows for the file under the cursor, plus numerous bug fixes!<br></td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=6119">netrw.vba.gz</a></td>
-    <td class="roweven" valign="top" nowrap><b>103</b></td>
-    <td class="roweven" valign="top" nowrap><i>2006-08-31</i></td>
-    <td class="roweven" valign="top" nowrap>7.0</td>
-    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=96">Charles Campbell</a></i></td>
-    <td class="roweven" valign="top" width="2000">&quot;t&quot; now opens tabbed windows for the file under the cursor, plus numerous bug fixes!<br></td>
-</tr>
-<tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=5982">netrw.vba.gz</a></td>
-    <td class="rowodd" valign="top" nowrap><b>102</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2006-07-24</i></td>
-    <td class="rowodd" valign="top" nowrap>6.0</td>
-    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=96">Charles Campbell</a></i></td>
-    <td class="rowodd" valign="top" width="2000">new stuff: g:netrw_menu support included; :Texplore command implemented; &lt;leftmouse&gt; acts as a &lt;cr&gt; for selecting a file; &lt;rightmouse&gt; acts as a &lt;del&gt; for deleting a file<br>bugfixes : g:netrw_keepdir==0 had stopped working; NetOptionSave/Restore now saves/restores the unnamed register; NetSplit and (Local,Net)BrowseChgDir() were both splitting windows.&nbsp;&nbsp;This affected o, v, and g:netrw_browse_split; works around wildignore setting<br></td>
-</tr>
-<tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=5814">netrw.vba.gz</a></td>
-    <td class="roweven" valign="top" nowrap><b>100</b></td>
-    <td class="roweven" valign="top" nowrap><i>2006-06-08</i></td>
-    <td class="roweven" valign="top" nowrap>7.0</td>
-    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=96">Charles Campbell</a></i></td>
-    <td class="roweven" valign="top" width="2000">- numerous bug fixes addressing problems with Windows lacking cygwin<br>- user NFH_*() functions were being unused inadvertently<br>- [NP]Explore */pat and **//pat now wrap<br>- Bookmarks and History added to menu<br>- g:netrw_shq has a better default, and is tunable by the user<br>- bugfix: hiding pattern candidate separators included some characters it shouldn't have (tnx to Osei Poku)<br></td>
-</tr>
-<tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=5682">netrw.vba.gz</a></td>
-    <td class="rowodd" valign="top" nowrap><b>99</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2006-05-12</i></td>
-    <td class="rowodd" valign="top" nowrap>7.0</td>
-    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=96">Charles Campbell</a></i></td>
-    <td class="rowodd" valign="top" width="2000">Since the vim 7.0 release:<br>&nbsp;&nbsp;g:netrw_browse_split=3 for opening files in new tabs implemented.<br>&nbsp;&nbsp;deletes temporary file at end of NetRead()<br>&nbsp;&nbsp;visual mode based Obtain implemented for remote systems.<br> added -complete=dir to the various Explore commands<br><br>&nbsp;&nbsp;<br>&nbsp;&nbsp;<br>&nbsp;&nbsp;<br></td>
-</tr>
-<tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=5607">netrw.vba.gz</a></td>
-    <td class="roweven" valign="top" nowrap><b>93</b></td>
-    <td class="roweven" valign="top" nowrap><i>2006-04-25</i></td>
-    <td class="roweven" valign="top" nowrap>7.0</td>
-    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=96">Charles Campbell</a></i></td>
-    <td class="roweven" valign="top" width="2000">:Explore */pattern implemented - search for files containing a pattern in the current directory<br>:Explore **//pattern implemented - search for files containing a pattern in the directory and subdirectories<br>Moved DrChip.Netrw menu to a top-level Netrw menu, with priority 80<br>bugfix - :Nexplore or :Pexplore, issued without first having done an Explore now gives an appropriate error message<br>bugfix - removed FocusGained event from causing a slow-browser refresh for Windows<br>bugfix - now handles spaces in filenames and directory names when using ftp-based browsing<br></td>
-</tr>
-<tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=5439">netrw.tar.gz</a></td>
-    <td class="rowodd" valign="top" nowrap><b>81</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2006-03-15</i></td>
-    <td class="rowodd" valign="top" nowrap>6.0</td>
-    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=96">Charles Campbell</a></i></td>
-    <td class="rowodd" valign="top" width="2000">ShellCmdPost and FocusGained used to refresh local browser directory listings when g:netrw_fastmode &lt;= 1.<br></td>
-</tr>
-<tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=5395">netrw.tar.gz</a></td>
-    <td class="roweven" valign="top" nowrap><b>79</b></td>
-    <td class="roweven" valign="top" nowrap><i>2006-03-09</i></td>
-    <td class="roweven" valign="top" nowrap>7.0</td>
-    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=96">Charles Campbell</a></i></td>
-    <td class="roweven" valign="top" width="2000">* directories now displayed with nowrap<br>* g:netrw_fastbrowse introduced, allows for control of speed vs always-obtain directory listing<br>* bugfix with wide listing, column width &lt; largest filename hangup<br>* semi-colons should now work with temporary files<br></td>
-</tr>
-<tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=5004">netrw.tar.gz</a></td>
-    <td class="rowodd" valign="top" nowrap><b>77</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2006-01-26</i></td>
-    <td class="rowodd" valign="top" nowrap>6.0</td>
-    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=96">Charles Campbell</a></i></td>
-    <td class="rowodd" valign="top" width="2000">New stuff!<br>g:netrw_browsex_viewer implemented.&nbsp;&nbsp;NetBrowseX does better at figuring out whether KDE or gnome is actually being used.<br>Use the &quot;P&quot; map to edit a file/directory in the previously used window (like Explorer's O)<br>Use g:netrw_browse_split to specify horizontal/vertical splitting of the window when editing a file from a browser window<br>Some bugfixes, too!<br></td>
-</tr>
-<tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=4683">netrw.tar.gz</a></td>
-    <td class="roweven" valign="top" nowrap><b>74</b></td>
-    <td class="roweven" valign="top" nowrap><i>2005-10-19</i></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=5982">netrw.vba.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>102</b></td>
+    <td class="roweven" valign="top" nowrap><i>2006-07-24</i></td>
     <td class="roweven" valign="top" nowrap>6.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=96">Charles Campbell</a></i></td>
-    <td class="roweven" valign="top" width="2000">(vim v7.0 req'd)<br>* Reads remote zip&tar files.<br>* netrwSettings now uses autoloading<br>* Many bugfixes (ctrl-L, ch==1 Hit-Enter, W95's E121, etc).<br>* And more! (see :help netrw-history)<br></td>
+    <td class="roweven" valign="top" width="2000">new stuff: g:netrw_menu support included; :Texplore command implemented; &lt;leftmouse&gt; acts as a &lt;cr&gt; for selecting a file; &lt;rightmouse&gt; acts as a &lt;del&gt; for deleting a file<br>bugfixes : g:netrw_keepdir==0 had stopped working; NetOptionSave/Restore now saves/restores the unnamed register; NetSplit and (Local,Net)BrowseChgDir() were both splitting windows.&nbsp;&nbsp;This affected o, v, and g:netrw_browse_split; works around wildignore setting<br></td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=4545">netrw.tar.gz</a></td>
-    <td class="rowodd" valign="top" nowrap><b>68</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2005-09-01</i></td>
-    <td class="rowodd" valign="top" nowrap>6.0</td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=5814">netrw.vba.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>100</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2006-06-08</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=96">Charles Campbell</a></i></td>
-    <td class="rowodd" valign="top" width="2000">Netrw now takes advantage of autoload (and requires 7.0).<br>&quot;i&quot; now cycles between thin, long, and wide listing styles.<br>&quot;O&quot; now obtains a file: remote browsing file -&gt; local copy.<br>Double-click-leftmouse selects word under mouse.<br>Netrw now works around the report setting.<br>Passwords which contain blanks will now be surrounded by double-quotes automatically.<br>Netrw now seems to work with a few more Windows situations.<br></td>
+    <td class="rowodd" valign="top" width="2000">- numerous bug fixes addressing problems with Windows lacking cygwin<br>- user NFH_*() functions were being unused inadvertently<br>- [NP]Explore */pat and **//pat now wrap<br>- Bookmarks and History added to menu<br>- g:netrw_shq has a better default, and is tunable by the user<br>- bugfix: hiding pattern candidate separators included some characters it shouldn't have (tnx to Osei Poku)<br></td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=4495">netrw.tar.gz</a></td>
-    <td class="roweven" valign="top" nowrap><b>62</b></td>
-    <td class="roweven" valign="top" nowrap><i>2005-08-15</i></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=5682">netrw.vba.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>99</b></td>
+    <td class="roweven" valign="top" nowrap><i>2006-05-12</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=96">Charles Campbell</a></i></td>
+    <td class="roweven" valign="top" width="2000">Since the vim 7.0 release:<br>&nbsp;&nbsp;g:netrw_browse_split=3 for opening files in new tabs implemented.<br>&nbsp;&nbsp;deletes temporary file at end of NetRead()<br>&nbsp;&nbsp;visual mode based Obtain implemented for remote systems.<br> added -complete=dir to the various Explore commands<br><br>&nbsp;&nbsp;<br>&nbsp;&nbsp;<br>&nbsp;&nbsp;<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=5607">netrw.vba.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>93</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2006-04-25</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=96">Charles Campbell</a></i></td>
+    <td class="rowodd" valign="top" width="2000">:Explore */pattern implemented - search for files containing a pattern in the current directory<br>:Explore **//pattern implemented - search for files containing a pattern in the directory and subdirectories<br>Moved DrChip.Netrw menu to a top-level Netrw menu, with priority 80<br>bugfix - :Nexplore or :Pexplore, issued without first having done an Explore now gives an appropriate error message<br>bugfix - removed FocusGained event from causing a slow-browser refresh for Windows<br>bugfix - now handles spaces in filenames and directory names when using ftp-based browsing<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=5439">netrw.tar.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>81</b></td>
+    <td class="roweven" valign="top" nowrap><i>2006-03-15</i></td>
     <td class="roweven" valign="top" nowrap>6.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=96">Charles Campbell</a></i></td>
-    <td class="roweven" valign="top" width="2000">Document upgrade - :NetrwSettings command allows easy editing and review of all netrw variable settings<br>Bugfix - Concurrent Explore **/pattern searches allowed<br><br>Last vim 6.3 release (unless a major problem appears); future ones will be 7.0 only</td>
+    <td class="roweven" valign="top" width="2000">ShellCmdPost and FocusGained used to refresh local browser directory listings when g:netrw_fastmode &lt;= 1.<br></td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=4486">netrw.tar.gz</a></td>
-    <td class="rowodd" valign="top" nowrap><b>60</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2005-08-11</i></td>
-    <td class="rowodd" valign="top" nowrap>6.0</td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=5395">netrw.tar.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>79</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2006-03-09</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=96">Charles Campbell</a></i></td>
-    <td class="rowodd" valign="top" width="2000">Vim 7.0 only:<br>* &quot;Match # of #&quot; indicator for Explore **/*.c<br>* :Explore **/*.c&nbsp;&nbsp;will now work from a non-netrw-browser window<br>* :Explore **/patterns can now be run in separate browser windows<br><br>Vim6.3 and Vim7.0:<br>* active banner (hitting &lt;cr&gt; in banner region will cause various things to happen)<br>* bugfixes<br></td>
+    <td class="rowodd" valign="top" width="2000">* directories now displayed with nowrap<br>* g:netrw_fastbrowse introduced, allows for control of speed vs always-obtain directory listing<br>* bugfix with wide listing, column width &lt; largest filename hangup<br>* semi-colons should now work with temporary files<br></td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=4461">netrw.tar.gz</a></td>
-    <td class="roweven" valign="top" nowrap><b>58</b></td>
-    <td class="roweven" valign="top" nowrap><i>2005-08-05</i></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=5004">netrw.tar.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>77</b></td>
+    <td class="roweven" valign="top" nowrap><i>2006-01-26</i></td>
     <td class="roweven" valign="top" nowrap>6.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=96">Charles Campbell</a></i></td>
-    <td class="roweven" valign="top" width="2000">* Explore and relatives can now handle **/pattern (v7)<br>* Nexplore and Pexplore introduced (v7)<br>* Various bugfixes<br></td>
+    <td class="roweven" valign="top" width="2000">New stuff!<br>g:netrw_browsex_viewer implemented.&nbsp;&nbsp;NetBrowseX does better at figuring out whether KDE or gnome is actually being used.<br>Use the &quot;P&quot; map to edit a file/directory in the previously used window (like Explorer's O)<br>Use g:netrw_browse_split to specify horizontal/vertical splitting of the window when editing a file from a browser window<br>Some bugfixes, too!<br></td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=4453">netrw.tar.gz</a></td>
-    <td class="rowodd" valign="top" nowrap><b>56</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2005-08-01</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=4683">netrw.tar.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>74</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2005-10-19</i></td>
     <td class="rowodd" valign="top" nowrap>6.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=96">Charles Campbell</a></i></td>
-    <td class="rowodd" valign="top" width="2000">Netrw now avoids changing directory when g:netrw_keepdir is false<br>Netrw's LocalBrowse() now bypasses the autochdir option<br>Netrw now uses vim's rename() instead of system + local_rename variable<br>-bar used with :Explore :Sexplore etc to allow multiple commands to be separated by bars<br>browser listings now use the &quot;nowrap&quot; option<br>browser: some unuseful error messages now suppressed<br><br>If you're using vim7, you need to have an up-to-date one supporting the sort command.</td>
+    <td class="rowodd" valign="top" width="2000">(vim v7.0 req'd)<br>* Reads remote zip&tar files.<br>* netrwSettings now uses autoloading<br>* Many bugfixes (ctrl-L, ch==1 Hit-Enter, W95's E121, etc).<br>* And more! (see :help netrw-history)<br></td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=3986">netrw.tar.gz</a></td>
-    <td class="roweven" valign="top" nowrap><b>54</b></td>
-    <td class="roweven" valign="top" nowrap><i>2005-03-09</i></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=4545">netrw.tar.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>68</b></td>
+    <td class="roweven" valign="top" nowrap><i>2005-09-01</i></td>
     <td class="roweven" valign="top" nowrap>6.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=96">Charles Campbell</a></i></td>
-    <td class="roweven" valign="top" width="2000">* &lt;amatch&gt; used instead of &lt;afile&gt; in the transparency support (BufReadCmd, FileReadCmd, FileWriteCmd)<br>* For backwards compatibility, Explore and Sexplore have been implemented.&nbsp;&nbsp;In addition, Hexplore and Vexplore commands are available, too.<br>* ***netrw*** prepended to various error messages netrw may emit<br>* g:netrw_port used instead of b:netrw_port for scp<br>* any leading [:#] is removed from port numbers<br>* backslashes as well as slashes placed in various patterns (ex. g:netrw_sort_sequence) to better support Windows<br></td>
+    <td class="roweven" valign="top" width="2000">Netrw now takes advantage of autoload (and requires 7.0).<br>&quot;i&quot; now cycles between thin, long, and wide listing styles.<br>&quot;O&quot; now obtains a file: remote browsing file -&gt; local copy.<br>Double-click-leftmouse selects word under mouse.<br>Netrw now works around the report setting.<br>Passwords which contain blanks will now be surrounded by double-quotes automatically.<br>Netrw now seems to work with a few more Windows situations.<br></td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=3533">netrw.tar.gz</a></td>
-    <td class="rowodd" valign="top" nowrap><b>51</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2004-10-08</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=4495">netrw.tar.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>62</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2005-08-15</i></td>
     <td class="rowodd" valign="top" nowrap>6.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=96">Charles Campbell</a></i></td>
-    <td class="rowodd" valign="top" width="2000">FileWriteCmd event used (supports :[range]w url) supports directory history stack, automatic cygwin use detected (windows), error messages remain visible, bug fixes<br></td>
+    <td class="rowodd" valign="top" width="2000">Document upgrade - :NetrwSettings command allows easy editing and review of all netrw variable settings<br>Bugfix - Concurrent Explore **/pattern searches allowed<br><br>Last vim 6.3 release (unless a major problem appears); future ones will be 7.0 only</td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=3440">netrw.tar.gz</a></td>
-    <td class="roweven" valign="top" nowrap><b>48</b></td>
-    <td class="roweven" valign="top" nowrap><i>2004-09-10</i></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=4486">netrw.tar.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>60</b></td>
+    <td class="roweven" valign="top" nowrap><i>2005-08-11</i></td>
     <td class="roweven" valign="top" nowrap>6.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=96">Charles Campbell</a></i></td>
-    <td class="roweven" valign="top" width="2000">Many things (see :help netrw-history), including:<br>remote browsing with ftp, bookmarks, nrml/hide/show, improved x, bugfixes, alt-o/v, preview<br></td>
+    <td class="roweven" valign="top" width="2000">Vim 7.0 only:<br>* &quot;Match # of #&quot; indicator for Explore **/*.c<br>* :Explore **/*.c&nbsp;&nbsp;will now work from a non-netrw-browser window<br>* :Explore **/patterns can now be run in separate browser windows<br><br>Vim6.3 and Vim7.0:<br>* active banner (hitting &lt;cr&gt; in banner region will cause various things to happen)<br>* bugfixes<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=4461">netrw.tar.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>58</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2005-08-05</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=96">Charles Campbell</a></i></td>
+    <td class="rowodd" valign="top" width="2000">* Explore and relatives can now handle **/pattern (v7)<br>* Nexplore and Pexplore introduced (v7)<br>* Various bugfixes<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=4453">netrw.tar.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>56</b></td>
+    <td class="roweven" valign="top" nowrap><i>2005-08-01</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=96">Charles Campbell</a></i></td>
+    <td class="roweven" valign="top" width="2000">Netrw now avoids changing directory when g:netrw_keepdir is false<br>Netrw's LocalBrowse() now bypasses the autochdir option<br>Netrw now uses vim's rename() instead of system + local_rename variable<br>-bar used with :Explore :Sexplore etc to allow multiple commands to be separated by bars<br>browser listings now use the &quot;nowrap&quot; option<br>browser: some unuseful error messages now suppressed<br><br>If you're using vim7, you need to have an up-to-date one supporting the sort command.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=3986">netrw.tar.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>54</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2005-03-09</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=96">Charles Campbell</a></i></td>
+    <td class="rowodd" valign="top" width="2000">* &lt;amatch&gt; used instead of &lt;afile&gt; in the transparency support (BufReadCmd, FileReadCmd, FileWriteCmd)<br>* For backwards compatibility, Explore and Sexplore have been implemented.&nbsp;&nbsp;In addition, Hexplore and Vexplore commands are available, too.<br>* ***netrw*** prepended to various error messages netrw may emit<br>* g:netrw_port used instead of b:netrw_port for scp<br>* any leading [:#] is removed from port numbers<br>* backslashes as well as slashes placed in various patterns (ex. g:netrw_sort_sequence) to better support Windows<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=3533">netrw.tar.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>51</b></td>
+    <td class="roweven" valign="top" nowrap><i>2004-10-08</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=96">Charles Campbell</a></i></td>
+    <td class="roweven" valign="top" width="2000">FileWriteCmd event used (supports :[range]w url) supports directory history stack, automatic cygwin use detected (windows), error messages remain visible, bug fixes<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=3440">netrw.tar.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>48</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2004-09-10</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=96">Charles Campbell</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Many things (see :help netrw-history), including:<br>remote browsing with ftp, bookmarks, nrml/hide/show, improved x, bugfixes, alt-o/v, preview<br></td>
 </tr>
 </table>
 <!-- finish off the framework -->

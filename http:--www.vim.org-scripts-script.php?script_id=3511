@@ -166,8 +166,8 @@
 <tr>
   <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
   <td>
-    Rating <b>0/0</b>,
-    Downloaded by 25  </td>
+    Rating <b>1/1</b>,
+    Downloaded by 80  </td>
   <td class="lightbg">
   <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
   </td>
@@ -186,7 +186,7 @@
 <tr><td>utility</td></tr>
 <tr><td>&nbsp;</td></tr>
 <tr><td class="prompt">description</td></tr>
-<tr><td>This simple script create text object for left and right of a statement. e.g<br><br>stri|ng = &quot;Hello World&quot;<br><br><br>| is where your cursor is, in command mode<br>type ciL (change inner and L for the right hand sided)<br><br>the line will become<br><br>string = |<br><br>similarily<br><br>ciH, diH, yiH etc will change, delete, yank the left hand side of the statement<br><br>this also works for ==, =&gt; as well<br></td></tr>
+<tr><td>This simple script create text object for left and right of a statement. e.g<br><br>stri|ng = &quot;Hello World&quot;<br><br><br>| is where your cursor is, in command mode<br>type ciL (change inner and L for the right hand sided)<br><br>the line will become<br><br>string = |<br><br>similarily<br><br>ciH, diH, yiH etc will change, delete, yank the left hand side of the statement<br><br>this also works for ==, =&gt; as well<br><br>Note if the line end with ',' or ';' it will be the boundary of the right hand side<br>If there is a space before the separator (=, ==, =&gt;) or after, they are so the the boundary<br></td></tr>
 <tr><td>&nbsp;</td></tr>
 <tr><td class="prompt">install details</td></tr>
 <tr><td></td></tr>
@@ -223,12 +223,20 @@ Click on the package to download.
     <th valign="top">release notes</th>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15244">left_right_text_object.vim</a></td>
-    <td class="rowodd" valign="top" nowrap><b>1.0</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2011-03-18</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15328">left_right_text_object.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.2</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2011-03-29</i></td>
     <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=21776">Vinh Tran</a></i></td>
-    <td class="rowodd" valign="top" width="2000">Initial upload</td>
+    <td class="rowodd" valign="top" width="2000">Previous version contain a use of one of my other plugin. This remove that part</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=15244">left_right_text_object.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.0</b></td>
+    <td class="roweven" valign="top" nowrap><i>2011-03-18</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=21776">Vinh Tran</a></i></td>
+    <td class="roweven" valign="top" width="2000">Initial upload</td>
 </tr>
 </table>
 <!-- finish off the framework -->

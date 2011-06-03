@@ -3,7 +3,7 @@
 
 <head>
   <link rel="Stylesheet" type="text/css" href="/css/style.css" >
-  <title>indexer.tar.gz  - index all files in project(s) with ctags (can work as add-on for project.tar.gz) : vim online</title>
+  <title>indexer.tar.gz  - Auto-generate tags for all files of project(s) and keep tags up-to-date : vim online</title>
   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
   <meta name="KEYWORDS" content="Vim, Vi IMproved, text editor, home, documentation, tips, scripts, news">
   <link rel="shortcut icon" type="image/x-icon" href="/images/vim_shortcut.ico">
@@ -156,7 +156,7 @@
         <tr>
           <td valign="top">
 
-<span class="txth1">indexer.tar.gz  : index all files in project(s) with ctags (can work as add-on for project.tar.gz)</span> 
+<span class="txth1">indexer.tar.gz  : Auto-generate tags for all files of project(s) and keep tags up-to-date</span> 
 
 <br>
 <br>
@@ -166,8 +166,8 @@
 <tr>
   <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
   <td>
-    Rating <b>27/9</b>,
-    Downloaded by 648  </td>
+    Rating <b>35/11</b>,
+    Downloaded by 839  </td>
   <td class="lightbg">
   <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
   </td>
@@ -186,7 +186,7 @@
 <tr><td>utility</td></tr>
 <tr><td>&nbsp;</td></tr>
 <tr><td class="prompt">description</td></tr>
-<tr><td>IMPORTANT! You need patched version of ctags (5.8.1) to make this plugin work correctly (starting from Indexer version 2.0), because of bug in ctags 5.8. You can read detailed info about this bug and download pat&#1089;hed version here: <a target="_blank" href="http://dfrank.ru/ctags581/en.html">http://dfrank.ru/ctags581/en.html</A><br><br>--------------------------------------------------------------<br><br>This plugin automatically indexes your project files using ctags and keeps tags up-to-date (at every save of file from project tags will be updated). This can be very useful when it's used together with plugins omnicppcomplete (for c, c++ development), code_complete.vim and other plugins that using tags.&nbsp;&nbsp;You also will be able to jump from function call to its definition just by pressing Ctrl-] or g]<br><br>This plugin can work as add-on for project.tar.gz plugin ( <a target="_blank" href="http://www.vim.org/scripts/script.php?script_id=69">http://www.vim.org/scripts/script.php?script_id=69</A> ). Indexer reads project file, parses it and builds tags for all files in project. But it also works fine without project.tar.gz.<br><br><br>Actually, if you are using project.tar.gz plugin and your projects file is default (~/.vimprojects), then setting Indexer up is very easily: you can just copy indexer.vim to your plugins directory, start Vim and open any file from your project.&nbsp;&nbsp;The indexer plugin will detect that opened file is a file from project and automatically start ctags for each file in this project.&nbsp;&nbsp;It also set &path and &tags options for Vim.<br><br>If you are using project.tar.gz, but you have another projects file, you should set option g:indexer_projectsSettingsFilename in your vimrc.<br><br>If you don't use project.tar.gz then you can use &quot;.indexer_files&quot; to define projects and files to index.&nbsp;&nbsp;Default location of this file is &quot;~/.indexer_files&quot;. You can change it by modifying variable g:indexer_indexerListFilename<br><br>Syntax of this file is simple, propably the best way to explain it is to show an example:<br>--------------------- example ~/.indexer_files -----------------------<br>[CoolProject] <br> <br>/home/user/myproject/src/*.c <br>/home/user/myproject/src/*.h <br>/home/user/myproject/inc/*.h <br> <br>[AnotherProject] <br> <br>/home/user/myproject2**/*.c <br>/home/user/myproject2**/*.h <br>-------------------------------------------------------------------------------<br><br>If you have many projects and you are lazy to put every project in<br>this file, you can put in your ~/.indexer_files something like this:<br><br>--------------------- example ~/.indexer_files -----------------------<br>[PROJECTS_PARENT filter=&quot;*.c *.h *.cpp&quot;]<br>~/workspace<br>-------------------------------------------------------------------------------<br><br>The keyword is PROJECTS_PARENT.<br>In this way, every directory in ~/workspace will be interpreted as separate<br>project, and you can open any file from any project in ~/workspace, and the <br>whole proper project will be indexed.<br><br><br>And, finally, it can autodetect project root. So, you can move your project to another place in filesystem, and all files will be indexed anyway.&nbsp;&nbsp;More detailed help see in options, variable &quot;g:indexer_lookForProjectDir&quot;.<br><br>Indexer 3.0 and later supports open several files from several projects. For example, a little story.<br><br>You have two projects: &quot;project1&quot; and &quot;project2&quot;, and you use &quot;~/.indexer_files&quot;.<br><br>1) you open file1 from project1. <br>&nbsp;&nbsp; Indexer generates tags for all files from project1 and set &tags:<br>&nbsp;&nbsp; ~/.indexer_files_tags/project1<br>2) you open file2 from the same project1.<br>&nbsp;&nbsp; Indexer just notes that file2 is file from project1. <br>&nbsp;&nbsp; &tags does not change.<br>3) you open file3 from project2.<br>&nbsp;&nbsp; Indexer generates tags for all files from project2 and set &tags:<br>&nbsp;&nbsp; ~/.indexer_files_tags/project2.<br>4) you switch to buffer with file1.<br>&nbsp;&nbsp; Indexer does not generate any tags, it will just change &tags to<br>&nbsp;&nbsp; ~/.indexer_files_tags/project1<br>5) you switch to buffer with file3.<br>&nbsp;&nbsp; Indexer changes &tags back to ~/.indexer_files_tags/project2 .<br><br>So, you should not care about your projects. It just works. If you have some projects with subprojects, i recommend you use .vimprj directory with specific settings for your project, in which you can set any options such as &tags, &tabstop, etc. More detailed: read about option g:indexer_lookForProjectDir .<br><br>Actually, Indexer sets &path for needed project when you swith to new buffer, not only &tags.<br><br>----<br><br>You need PATCHED ctags to be installed to make this plugin work correctly. <a target="_blank" href="http://dfrank.ru/ctags581/en.html">http://dfrank.ru/ctags581/en.html</A><br><br>I have tested it both on Linux and Windows, in Vim 7.3<br>If you have any troubles using this plugin, feel free to email me.<br><br>-------------------------<br><br>Mercurial repos:<br>Stable branch: <a target="_blank" href="http://tinyurl.com/vim-indexer-stable">http://tinyurl.com/vim-indexer-stable</A><br>Development branch: <a target="_blank" href="http://tinyurl.com/vim-indexer-development">http://tinyurl.com/vim-indexer-development</A></td></tr>
+<tr><td>If you are russian, you might want to read article in russian about this plugin: <a target="_blank" href="http://habrahabr.ru/blogs/vim/102954/">http://habrahabr.ru/blogs/vim/102954/</A><br>-----------------------------------<br><br>This plugin can work in two ways:<br>1) independently<br>2) as add-on for project.tar.gz (<a href="/scripts/script.php?script_id=69">vimscript #69</a>)<br><br>In both ways, it provides painless automatic tags generation for whole project(s) and keeps tags up-to-date.<br><br>IMPORTANT: you need patched version of ctags (5.8.1) to make this plugin work correctly with C/C++ files, because of bug in ctags 5.8. You can read detailed info about this bug and download pat&#1089;hed version here: <a target="_blank" href="http://dfrank.ru/ctags581/en.html">http://dfrank.ru/ctags581/en.html</A><br><br>This plugin can be very useful when it's used together with plugins omnicppcomplete (for c, c++ development), code_complete.vim and other plugins that use tags.&nbsp;&nbsp;You also will be able to jump from function call to its definition just by pressing Ctrl-] or g]<br><br>As i said, Indexer can work as add-on for project.tar.gz plugin ( <a href="/scripts/script.php?script_id=69">vimscript #69</a> ). Indexer reads project file, parses it and builds tags for all files in project. But it also works fine without project.tar.gz.<br><br>Actually, if you are using project.tar.gz plugin and your projects file is default (~/.vimprojects), then setting Indexer up is very easily: you can just copy indexer.vim to your plugins directory, start Vim and open any file from your project.&nbsp;&nbsp;The indexer plugin will detect that opened file is a file from project and automatically start ctags for each file in this project.&nbsp;&nbsp;It also set &path and &tags options for Vim.<br><br>If you use project.tar.gz, but you have another projects file, you should set option g:indexer_projectsSettingsFilename in your vimrc.<br><br>If you don't use project.tar.gz then you can use &quot;.indexer_files&quot; to define projects and files to index.&nbsp;&nbsp;Default location of this file is &quot;~/.indexer_files&quot;. You can change it by modifying variable g:indexer_indexerListFilename<br><br>Syntax of this file is simple, probably the best way to explain it is to show an example:<br>--------------------- example ~/.indexer_files -----------------------<br>[CoolProject] <br> <br>/home/user/myproject/src/*.c <br>/home/user/myproject/src/*.h <br>/home/user/myproject/inc/*.h <br> <br>[AnotherProject] <br> <br>/home/user/myproject2**/*.c <br>/home/user/myproject2**/*.h <br>-------------------------------------------------------------------------------<br><br>If you have many projects and you are lazy to put every project in<br>this file, you can put in your ~/.indexer_files something like this:<br><br>--------------------- example ~/.indexer_files -----------------------<br>[PROJECTS_PARENT filter=&quot;*.c *.h *.cpp&quot;]<br>~/workspace<br>-------------------------------------------------------------------------------<br><br>The keyword is PROJECTS_PARENT.<br>In this way, every directory in ~/workspace will be interpreted as separate<br>project, and you can open any file from any project in ~/workspace, and the <br>whole proper project will be indexed.<br><br><br>And, finally, it can autodetect project root. So, you can move your project to another place in filesystem, and all files will be indexed anyway.&nbsp;&nbsp;More detailed help see in options, variable &quot;g:indexer_lookForProjectDir&quot;.<br><br>Indexer 3.0 and later supports open several files from several projects. For example, a little story.<br><br>You have two projects: &quot;project1&quot; and &quot;project2&quot;, and you use &quot;~/.indexer_files&quot;.<br><br>1) you open file1 from project1. <br>&nbsp;&nbsp; Indexer generates tags for all files from project1 and set &tags:<br>&nbsp;&nbsp; ~/.indexer_files_tags/project1<br>2) you open file2 from the same project1.<br>&nbsp;&nbsp; Indexer just notes that file2 is file from project1. <br>&nbsp;&nbsp; &tags does not change.<br>3) you open file3 from project2.<br>&nbsp;&nbsp; Indexer generates tags for all files from project2 and set &tags:<br>&nbsp;&nbsp; ~/.indexer_files_tags/project2.<br>4) you switch to buffer with file1.<br>&nbsp;&nbsp; Indexer does not generate any tags, it just changes &tags to<br>&nbsp;&nbsp; ~/.indexer_files_tags/project1<br>5) you switch to buffer with file3.<br>&nbsp;&nbsp; Indexer changes &tags back to ~/.indexer_files_tags/project2 .<br><br>So, you should not care about your projects. It just works. If you have some projects with subprojects, i recommend you use .vimprj directory with specific settings for your project, in which you can set any options such as &tags, &tabstop, etc. More detailed: read about option g:indexer_lookForProjectDir .<br><br>Actually, Indexer sets &path for needed project when you swith to new buffer, not only &tags.<br><br>----<br><br>You need PATCHED ctags to be installed to make this plugin work correctly with C/C++ files. <a target="_blank" href="http://dfrank.ru/ctags581/en.html">http://dfrank.ru/ctags581/en.html</A><br><br>I have tested it both on Linux and Windows, in Vim 7.3<br>If you have any troubles using this plugin, feel free to email me.<br><br>-------------------------<br><br>Mercurial repos:<br>Stable branch: <a target="_blank" href="http://tinyurl.com/vim-indexer-stable">http://tinyurl.com/vim-indexer-stable</A><br>Development branch: <a target="_blank" href="http://tinyurl.com/vim-indexer-development">http://tinyurl.com/vim-indexer-development</A></td></tr>
 <tr><td>&nbsp;</td></tr>
 <tr><td class="prompt">install details</td></tr>
 <tr><td>Decompress and untar in your ~/.vim directory (or <br>equivalent).&nbsp;&nbsp;Inside Vim, enter this: <br>&nbsp;&nbsp; :helptags ~/.vim/doc <br>(or equivalent directory) <br>(Enter &quot;:help add-global-plugin&quot; to determine the directory to <br>untar it into.) <br><br>Then enter <br>&nbsp;&nbsp;:help indexer <br>for information</td></tr>
@@ -223,92 +223,116 @@ Click on the package to download.
     <th valign="top">release notes</th>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15271">indexer-3.1.tar.gz</a></td>
-    <td class="rowodd" valign="top" nowrap><b>3.1</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2011-03-21</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15524">indexer-3.14.tar.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>3.14</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2011-04-26</i></td>
     <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=20962">Dmitry Frank</a></i></td>
-    <td class="rowodd" valign="top" width="2000">* Bugfixes<br>* When no servername is present, tags generate in Vim thread, not in background. (because i don't know how to execute remote command in Vim without servername. If anyone know, please contact me)</td>
+    <td class="rowodd" valign="top" width="2000">* Bugfix: $INDEXER_PROJECT_ROOT wasn't work in .vimprojects file. Thanks to Alexander Pazdnikov for bugreport.</td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=15235">indexer-3.0.tar.gz</a></td>
-    <td class="roweven" valign="top" nowrap><b>3.0</b></td>
-    <td class="roweven" valign="top" nowrap><i>2011-03-17</i></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=15298">indexer-3.12.tar.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>3.12</b></td>
+    <td class="roweven" valign="top" nowrap><i>2011-03-26</i></td>
     <td class="roweven" valign="top" nowrap>7.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=20962">Dmitry Frank</a></i></td>
-    <td class="roweven" valign="top" width="2000">* Multiple projects supported. For example, you open file1 from one project, and then you open file2 from second project. Then, when you switch to file1, &tags will be set to tags file for first project, and when you switch to file2, then &tags will be set back for second project. You should not care about it.<br>* Background tags generation (thanks to Thiago Bellini for pointing me at needed script). You have not to wait every time while ctags is working.<br>* By default, on Windows tags generates always for whole project, because of bugs in all Windows versions of Sed i have. Actually, now this isn't problem, because of tags generates in background.<br>* Tags file is sorted now. In Indexer 2.x it was unsorted because of bugs in Sed, and to make tags unsorted was workaround. As i already said, in Linux Sed works fine, and on Windows Sed doesn't uses by default, so, tags file can be sorted.</td>
+    <td class="roweven" valign="top" width="2000">Some improvements in error reporting: <br>* error if no ctags is available in the PATH, <br>* warning when ctags returns error.</td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=14270">indexer-2.01.tar.gz</a></td>
-    <td class="rowodd" valign="top" nowrap><b>2.01</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2010-11-15</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15282">indexer-3.11.tar.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>3.11</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2011-03-24</i></td>
     <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=20962">Dmitry Frank</a></i></td>
-    <td class="rowodd" valign="top" width="2000">The only thing changed is that maximum command length on Windows systems decreased from 8186 to 8000, because of on some systems 8186 is too large, i don't know, why. I hope 8000 will work at all Windows systems (XP or later).<br>Thanks to Dan Price again.</td>
+    <td class="rowodd" valign="top" width="2000">* Bugfix: if &quot;noswapfile&quot; option is set, then tags wasn't generated. Thanks to Thiago Bellini for help and persistence =)<br>* Bugfix: :IndexerFiles command didn't work.</td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=14234">indexer-2.0.tar.gz</a></td>
-    <td class="roweven" valign="top" nowrap><b>2.0</b></td>
-    <td class="roweven" valign="top" nowrap><i>2010-11-11</i></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=15271">indexer-3.1.tar.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>3.1</b></td>
+    <td class="roweven" valign="top" nowrap><i>2011-03-21</i></td>
     <td class="roweven" valign="top" nowrap>7.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=20962">Dmitry Frank</a></i></td>
-    <td class="roweven" valign="top" width="2000">IMPORTANT! You need patched version of ctags (5.8.1) to make this version of plugin work correctly, because of bug in ctags 5.8. You can read detailed info about this bug and download pathed version here: <a target="_blank" href="http://dfrank.ru/ctags581/en.html">http://dfrank.ru/ctags581/en.html</A> <br><br>* Solved trouble with large projects: if there's very many files in your project and command to ctags is too long, then ctags calling several times with &quot;-a&quot; key. (Again: to make this work you need patched version of ctags); <br>* option &quot;DontSpecifyFilesIfPossible&quot; working with .vimprojects file too now <br>* when using append at filesave, old tags removing from tags file by SED. (this is needed to exclude garbage in tags file)<br>Thanks to Dan Price for ideas and inspiration :)</td>
+    <td class="roweven" valign="top" width="2000">* Bugfixes<br>* When no servername is present, tags generate in Vim thread, not in background. (because i don't know how to execute remote command in Vim without servername. If anyone know, please contact me)</td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13919">indexer-1.8.tar.gz</a></td>
-    <td class="rowodd" valign="top" nowrap><b>1.8</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2010-09-26</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15235">indexer-3.0.tar.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>3.0</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2011-03-17</i></td>
     <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=20962">Dmitry Frank</a></i></td>
-    <td class="rowodd" valign="top" width="2000">* Fixed some bugs (thanks to Julian Kooij)</td>
+    <td class="rowodd" valign="top" width="2000">* Multiple projects supported. For example, you open file1 from one project, and then you open file2 from second project. Then, when you switch to file1, &tags will be set to tags file for first project, and when you switch to file2, then &tags will be set back for second project. You should not care about it.<br>* Background tags generation (thanks to Thiago Bellini for pointing me at needed script). You have not to wait every time while ctags is working.<br>* By default, on Windows tags generates always for whole project, because of bugs in all Windows versions of Sed i have. Actually, now this isn't problem, because of tags generates in background.<br>* Tags file is sorted now. In Indexer 2.x it was unsorted because of bugs in Sed, and to make tags unsorted was workaround. As i already said, in Linux Sed works fine, and on Windows Sed doesn't uses by default, so, tags file can be sorted.</td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13803">indexer-1.7.tar.gz</a></td>
-    <td class="roweven" valign="top" nowrap><b>1.7</b></td>
-    <td class="roweven" valign="top" nowrap><i>2010-09-10</i></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=14270">indexer-2.01.tar.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.01</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-11-15</i></td>
     <td class="roweven" valign="top" nowrap>7.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=20962">Dmitry Frank</a></i></td>
-    <td class="roweven" valign="top" width="2000">* Fixed bug that caused not all comments in .vimprojects was parsed correctly (thanks to Alexander Q).<br>* Fixed some little bugs.</td>
+    <td class="roweven" valign="top" width="2000">The only thing changed is that maximum command length on Windows systems decreased from 8186 to 8000, because of on some systems 8186 is too large, i don't know, why. I hope 8000 will work at all Windows systems (XP or later).<br>Thanks to Dan Price again.</td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13741">indexer-1.6.tar.gz</a></td>
-    <td class="rowodd" valign="top" nowrap><b>1.6</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2010-09-01</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=14234">indexer-2.0.tar.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.0</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-11-11</i></td>
     <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=20962">Dmitry Frank</a></i></td>
-    <td class="rowodd" valign="top" width="2000">* For every projects creating unique tags file to avoid conflicts (thanks to Torkve)</td>
+    <td class="rowodd" valign="top" width="2000">IMPORTANT! You need patched version of ctags (5.8.1) to make this version of plugin work correctly, because of bug in ctags 5.8. You can read detailed info about this bug and download pathed version here: <a target="_blank" href="http://dfrank.ru/ctags581/en.html">http://dfrank.ru/ctags581/en.html</A> <br><br>* Solved trouble with large projects: if there's very many files in your project and command to ctags is too long, then ctags calling several times with &quot;-a&quot; key. (Again: to make this work you need patched version of ctags); <br>* option &quot;DontSpecifyFilesIfPossible&quot; working with .vimprojects file too now <br>* when using append at filesave, old tags removing from tags file by SED. (this is needed to exclude garbage in tags file)<br>Thanks to Dan Price for ideas and inspiration :)</td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13738">indexer-1.5.tar.gz</a></td>
-    <td class="roweven" valign="top" nowrap><b>1.5</b></td>
-    <td class="roweven" valign="top" nowrap><i>2010-08-31</i></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13919">indexer-1.8.tar.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.8</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-09-26</i></td>
     <td class="roweven" valign="top" nowrap>7.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=20962">Dmitry Frank</a></i></td>
-    <td class="roweven" valign="top" width="2000">* Fixed bug that caused paths with spaces wasn't parsed correctly. <br>* Added PROJECTS_PARENT .indexer_files feature (possibility to define directory with many projects inside).</td>
+    <td class="roweven" valign="top" width="2000">* Fixed some bugs (thanks to Julian Kooij)</td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13731">indexer-1.4.tar.gz</a></td>
-    <td class="rowodd" valign="top" nowrap><b>1.4</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2010-08-30</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13803">indexer-1.7.tar.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.7</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-09-10</i></td>
     <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=20962">Dmitry Frank</a></i></td>
-    <td class="rowodd" valign="top" width="2000">Fixed bug that caused paths with &quot;~&quot; wasn't parsed correctly (thanks Makoto Nokata)</td>
+    <td class="rowodd" valign="top" width="2000">* Fixed bug that caused not all comments in .vimprojects was parsed correctly (thanks to Alexander Q).<br>* Fixed some little bugs.</td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13724">indexer-1.3.tar.gz</a></td>
-    <td class="roweven" valign="top" nowrap><b>1.3</b></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13741">indexer-1.6.tar.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.6</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-09-01</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=20962">Dmitry Frank</a></i></td>
+    <td class="roweven" valign="top" width="2000">* For every projects creating unique tags file to avoid conflicts (thanks to Torkve)</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13738">indexer-1.5.tar.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.5</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-08-31</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=20962">Dmitry Frank</a></i></td>
+    <td class="rowodd" valign="top" width="2000">* Fixed bug that caused paths with spaces wasn't parsed correctly. <br>* Added PROJECTS_PARENT .indexer_files feature (possibility to define directory with many projects inside).</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13731">indexer-1.4.tar.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.4</b></td>
     <td class="roweven" valign="top" nowrap><i>2010-08-30</i></td>
     <td class="roweven" valign="top" nowrap>7.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=20962">Dmitry Frank</a></i></td>
-    <td class="roweven" valign="top" width="2000">* Fixed some bugs<br>* Default name of project settings directory has been changed from &quot;.vim&quot; to &quot;.vimprj&quot; to avoid conflicts with standard ~/.vim directory. If you are using this feature and your project settings dir is &quot;.vim&quot;, please rename it.</td>
+    <td class="roweven" valign="top" width="2000">Fixed bug that caused paths with &quot;~&quot; wasn't parsed correctly (thanks Makoto Nokata)</td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13685">indexer-1.2.tar.gz</a></td>
-    <td class="rowodd" valign="top" nowrap><b>1.2</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2010-08-26</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13724">indexer-1.3.tar.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.3</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-08-30</i></td>
     <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=20962">Dmitry Frank</a></i></td>
-    <td class="rowodd" valign="top" width="2000">Initial upload</td>
+    <td class="rowodd" valign="top" width="2000">* Fixed some bugs<br>* Default name of project settings directory has been changed from &quot;.vim&quot; to &quot;.vimprj&quot; to avoid conflicts with standard ~/.vim directory. If you are using this feature and your project settings dir is &quot;.vim&quot;, please rename it.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13685">indexer-1.2.tar.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.2</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-08-26</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=20962">Dmitry Frank</a></i></td>
+    <td class="roweven" valign="top" width="2000">Initial upload</td>
 </tr>
 </table>
 <!-- finish off the framework -->

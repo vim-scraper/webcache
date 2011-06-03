@@ -167,7 +167,7 @@
   <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
   <td>
     Rating <b>13/7</b>,
-    Downloaded by 1158  </td>
+    Downloaded by 1199  </td>
   <td class="lightbg">
   <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
   </td>
@@ -186,7 +186,7 @@
 <tr><td>utility</td></tr>
 <tr><td>&nbsp;</td></tr>
 <tr><td class="prompt">description</td></tr>
-<tr><td>This script lets you choose multiple non-consecutive ranges and then execute commands on them all at the same time.&nbsp;&nbsp;Just visually select a range of lines and hit the mapping sequence.&nbsp;&nbsp;Repeat until all the ranges have been selected (they will be highlighted).&nbsp;&nbsp;Then, execute the script-defined command Rangecommand with the actual command (and arguments) as arguments to Rangecommand and it'll do it.&nbsp;&nbsp;The ranges will remain selected until you execute the reset mapping allowing you to execute more commands on the ranges.<br><br>NOTE:&nbsp;&nbsp;VERSION 1.2 AND ABOVE DEPEND ON MY getVar.vim <a href="/scripts/script.php?script_id=353">vimscript#353</a> AND variableSort.vim <a href="/scripts/script.php?script_id=354">vimscript#354</a>.&nbsp;&nbsp;Sorry I neglected to mention that before.</td></tr>
+<tr><td>This script lets you choose multiple non-consecutive ranges and then execute commands on them all at the same time.&nbsp;&nbsp;Just visually select a range of lines and hit the mapping sequence.&nbsp;&nbsp;Repeat until all the ranges have been selected (they will be highlighted).&nbsp;&nbsp;Then, execute the script-defined command Rangecommand with the actual command (and arguments) as arguments to Rangecommand and it'll do it.&nbsp;&nbsp;The ranges will remain selected until you execute the reset mapping allowing you to execute more commands on the ranges.<br><br>NOTE:&nbsp;&nbsp;VERSION 1.2 AND ABOVE DEPEND ON MY getVar.vim <a href="/scripts/script.php?script_id=353">vimscript#353</a> AND variableSort.vim <a href="/scripts/script.php?script_id=354">vimscript#354</a>.&nbsp;&nbsp;Sorry I neglected to mention that before.<br><br>Version 1.8: No new functionality; brought the plugin up to Vim version 7.2, using Lists and removing the dependence on variableSort.vim (getVar.vim is still required).</td></tr>
 <tr><td>&nbsp;</td></tr>
 <tr><td class="prompt">install details</td></tr>
 <tr><td>Pop it into the plugin directory.&nbsp;&nbsp;Read the usage comments in the plugin for, well, usage directions.</td></tr>
@@ -223,60 +223,68 @@ Click on the package to download.
     <th valign="top">release notes</th>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=1150">multipleRanges.vim</a></td>
-    <td class="rowodd" valign="top" nowrap><b>1.7</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2002-08-20</i></td>
-    <td class="rowodd" valign="top" nowrap>6.0</td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15431">multipleRanges.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.8</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2011-04-11</i></td>
+    <td class="rowodd" valign="top" nowrap>7.2</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=64">Salman Halim</a></i></td>
-    <td class="rowodd" valign="top" width="2000">Added a new command (Rangecommandnormal) which allows for a normal-mode command to be executed on the ranges. Also added mappings to quickly enter the Rangecommand and Rangecommandnormal command-lines. Added error-checking in case there are no ranges currently selected when the commands are executed.</td>
+    <td class="rowodd" valign="top" width="2000">No new functionality; brought the plugin up to version 7.2, using Lists and removing the dependence on variableSort.vim (getVar.vim is still required).</td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=1058">multipleRanges.vim</a></td>
-    <td class="roweven" valign="top" nowrap><b>1.65</b></td>
-    <td class="roweven" valign="top" nowrap><i>2002-07-27</i></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=1150">multipleRanges.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.7</b></td>
+    <td class="roweven" valign="top" nowrap><i>2002-08-20</i></td>
     <td class="roweven" valign="top" nowrap>6.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=64">Salman Halim</a></i></td>
-    <td class="roweven" valign="top" width="2000">Removed the unique keyword from the internal script mappings as Vikas Agnihotri pointed out that this was causing a problem with potential reloading of the script while not adding anything to the ease of use.</td>
+    <td class="roweven" valign="top" width="2000">Added a new command (Rangecommandnormal) which allows for a normal-mode command to be executed on the ranges. Also added mappings to quickly enter the Rangecommand and Rangecommandnormal command-lines. Added error-checking in case there are no ranges currently selected when the commands are executed.</td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=1055">multipleRanges.vim</a></td>
-    <td class="rowodd" valign="top" nowrap><b>1.6</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2002-07-26</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=1058">multipleRanges.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.65</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2002-07-27</i></td>
     <td class="rowodd" valign="top" nowrap>6.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=64">Salman Halim</a></i></td>
-    <td class="rowodd" valign="top" width="2000">Added&nbsp;&nbsp;support for&nbsp;&nbsp;user-defined highlights for&nbsp;&nbsp;the ranges&nbsp;&nbsp;(GUI only; will do cterm if asked).</td>
+    <td class="rowodd" valign="top" width="2000">Removed the unique keyword from the internal script mappings as Vikas Agnihotri pointed out that this was causing a problem with potential reloading of the script while not adding anything to the ease of use.</td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=1051">multipleRanges.vim</a></td>
-    <td class="roweven" valign="top" nowrap><b>1.5</b></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=1055">multipleRanges.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.6</b></td>
     <td class="roweven" valign="top" nowrap><i>2002-07-26</i></td>
     <td class="roweven" valign="top" nowrap>6.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=64">Salman Halim</a></i></td>
-    <td class="roweven" valign="top" width="2000">Depends on getVar.vim vimscript 353 and variableSort.vim vimscript 354.&nbsp;&nbsp;Added the ability to invert range.&nbsp;&nbsp;Ranges are now on a per-buffer basis instead of a per-window (was causing problems where a new buffer in the same window would act up).</td>
+    <td class="roweven" valign="top" width="2000">Added&nbsp;&nbsp;support for&nbsp;&nbsp;user-defined highlights for&nbsp;&nbsp;the ranges&nbsp;&nbsp;(GUI only; will do cterm if asked).</td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=1048">multipleRanges.vim</a></td>
-    <td class="rowodd" valign="top" nowrap><b>1.2</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2002-07-25</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=1051">multipleRanges.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.5</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2002-07-26</i></td>
     <td class="rowodd" valign="top" nowrap>6.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=64">Salman Halim</a></i></td>
-    <td class="rowodd" valign="top" width="2000">Cleans&nbsp;&nbsp;up better once&nbsp;&nbsp;a set of ranges&nbsp;&nbsp;is cleared (the&nbsp;&nbsp;variables are unlet).<br>Added&nbsp;&nbsp;an&nbsp;&nbsp;option (buffer&nbsp;&nbsp;or&nbsp;&nbsp;global&nbsp;&nbsp;variable called&nbsp;&nbsp;'consolidateRanges') which,&nbsp;&nbsp;if&nbsp;&nbsp;set&nbsp;&nbsp;to 1,&nbsp;&nbsp;will&nbsp;&nbsp;cause&nbsp;&nbsp;Rangecommand&nbsp;&nbsp;to&nbsp;&nbsp;first sort&nbsp;&nbsp;and&nbsp;&nbsp;then consolidate&nbsp;&nbsp;overlapping ranges&nbsp;&nbsp;into a&nbsp;&nbsp;single range&nbsp;&nbsp;before executing&nbsp;&nbsp;the command. The ranges will remain consolidated once the command is done.</td>
+    <td class="rowodd" valign="top" width="2000">Depends on getVar.vim vimscript 353 and variableSort.vim vimscript 354.&nbsp;&nbsp;Added the ability to invert range.&nbsp;&nbsp;Ranges are now on a per-buffer basis instead of a per-window (was causing problems where a new buffer in the same window would act up).</td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=1047">multipleRanges.vim</a></td>
-    <td class="roweven" valign="top" nowrap><b>1.1</b></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=1048">multipleRanges.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.2</b></td>
     <td class="roweven" valign="top" nowrap><i>2002-07-25</i></td>
     <td class="roweven" valign="top" nowrap>6.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=64">Salman Halim</a></i></td>
-    <td class="roweven" valign="top" width="2000">Added a new command to show the current list of ranges (ugly output), made the script more plugin-like and updated usage comments slightly.</td>
+    <td class="roweven" valign="top" width="2000">Cleans&nbsp;&nbsp;up better once&nbsp;&nbsp;a set of ranges&nbsp;&nbsp;is cleared (the&nbsp;&nbsp;variables are unlet).<br>Added&nbsp;&nbsp;an&nbsp;&nbsp;option (buffer&nbsp;&nbsp;or&nbsp;&nbsp;global&nbsp;&nbsp;variable called&nbsp;&nbsp;'consolidateRanges') which,&nbsp;&nbsp;if&nbsp;&nbsp;set&nbsp;&nbsp;to 1,&nbsp;&nbsp;will&nbsp;&nbsp;cause&nbsp;&nbsp;Rangecommand&nbsp;&nbsp;to&nbsp;&nbsp;first sort&nbsp;&nbsp;and&nbsp;&nbsp;then consolidate&nbsp;&nbsp;overlapping ranges&nbsp;&nbsp;into a&nbsp;&nbsp;single range&nbsp;&nbsp;before executing&nbsp;&nbsp;the command. The ranges will remain consolidated once the command is done.</td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=1046">multipleRanges.vim</a></td>
-    <td class="rowodd" valign="top" nowrap><b>1.0</b></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=1047">multipleRanges.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.1</b></td>
     <td class="rowodd" valign="top" nowrap><i>2002-07-25</i></td>
     <td class="rowodd" valign="top" nowrap>6.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=64">Salman Halim</a></i></td>
-    <td class="rowodd" valign="top" width="2000">Initial upload</td>
+    <td class="rowodd" valign="top" width="2000">Added a new command to show the current list of ranges (ugly output), made the script more plugin-like and updated usage comments slightly.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=1046">multipleRanges.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.0</b></td>
+    <td class="roweven" valign="top" nowrap><i>2002-07-25</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=64">Salman Halim</a></i></td>
+    <td class="roweven" valign="top" width="2000">Initial upload</td>
 </tr>
 </table>
 <!-- finish off the framework -->

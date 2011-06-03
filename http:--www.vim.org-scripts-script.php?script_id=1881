@@ -166,8 +166,8 @@
 <tr>
   <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
   <td>
-    Rating <b>77/25</b>,
-    Downloaded by 1859  </td>
+    Rating <b>89/28</b>,
+    Downloaded by 1954  </td>
   <td class="lightbg">
   <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
   </td>
@@ -186,7 +186,7 @@
 <tr><td>utility</td></tr>
 <tr><td>&nbsp;</td></tr>
 <tr><td class="prompt">description</td></tr>
-<tr><td>Screenshot available at <a target="_blank" href="http://zevv.nl/play/code/vimscripts/">http://zevv.nl/play/code/vimscripts/</A><br><br>Introduction<br>------------<br><br>NOTE: This plugin is unix-only!<br><br>An small vim 7.0 plugin for showing RCS diff information in a file while<br>editing. The following RCS types are supported:<br><br> * CVS<br> * Subversion (SVN)<br> * Git<br> * Mercurial<br> <br>This plugin runs a diff between the current buffer and the original<br>file from svn or git, and shows coloured signs indicating where the buffer<br>differs from the original file from the repository. The original<br>text is not shown, only signs are used to indicate where changes were made.<br><br>The plugin can be used for files managed with subversion or GIT. The type of<br>RCS will be detected when first issuing a svndiff command on the file.<br><br>The following symbols and syntax highlight groups are used for the signs:<br><br>&nbsp;&nbsp;&gt; DiffAdd:&nbsp;&nbsp;&nbsp;&nbsp;Newly added lines. (default=blue)<br><br>&nbsp;&nbsp;! DiffChange: Lines which are changed from the original. (default=cyan)<br><br>&nbsp;&nbsp;&lt; DiffDel:&nbsp;&nbsp;&nbsp;&nbsp;Applied to the lines directly above and below a deleted block<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(default=magenta)<br>Usage<br>-----<br><br>The plugin defines one function: Svndiff(). This function figures out the<br>difference between the current buffer and it's svn/git original, and adds<br>the signs at the places where the buffer differs from the original file from<br>svn or git. You'll need to call this function after making changes to update<br>the highlighting.<br><br>The function takes one argument specifying an additional action to perform:<br><br>&nbsp;&nbsp;&quot;prev&quot;&nbsp;&nbsp;: jump to the previous different block<br>&nbsp;&nbsp;&quot;next&quot;&nbsp;&nbsp;: jump to the next different block<br>&nbsp;&nbsp;&quot;clear&quot; : clean up all signs<br><br>You might want to map some keys to run the Svndiff function. For<br>example, add to your .vimrc:<br><br>&nbsp;&nbsp;noremap &lt;F3&gt; :call Svndiff(&quot;prev&quot;)&lt;CR&gt;<br>&nbsp;&nbsp;noremap &lt;F4&gt; :call Svndiff(&quot;next&quot;)&lt;CR&gt;<br>&nbsp;&nbsp;noremap &lt;F5&gt; :call Svndiff(&quot;clear&quot;)&lt;CR&gt;<br><br>Configuration<br>-------------<br><br>The following configuration variables are availabe:<br><br>* g:svndiff_autoupdate<br><br>&nbsp;&nbsp;If this variable is defined, svndiff will automatically update the signs<br>&nbsp;&nbsp;when the user stops typing for a short while, and when leaving insert<br>&nbsp;&nbsp;mode. This might slow things down on large files, so use with caution.<br>&nbsp;&nbsp;The vim variable 'updatetime' can be used to set the auto-update intervar,<br>&nbsp;&nbsp;but not that changing this variable other effects as well. (refer to the<br>&nbsp;&nbsp;vim docs for more info)<br>&nbsp;&nbsp;To use, add to your .vimrc:<br><br>&nbsp;&nbsp;let g:svndiff_autoupdate = 1<br><br>* g:svndiff_one_sign_delete<br><br>&nbsp;&nbsp;Normally, two 'delete' signs are placed around the location where<br>&nbsp;&nbsp;text was deleted. When this variable is defined, only one sign is<br>&nbsp;&nbsp;placed, above the location of the deleted text.<br>&nbsp;&nbsp;To use, add to your .vimrc:<br><br>&nbsp;&nbsp;let g:svndiff_one_sign_delete = 1<br><br>Colors<br>------<br><br>Personally, I find the following colours more intuitive for diff colours:<br>red=deleted, green=added, yellow=changed. If you want to use these colours,<br>try adding the following lines to your .vimrc<br><br>hi DiffAdd&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ctermfg=0 ctermbg=2 guibg='green'<br>hi DiffDelete&nbsp;&nbsp; ctermfg=0 ctermbg=1 guibg='red'<br>hi DiffChange&nbsp;&nbsp; ctermfg=0 ctermbg=3 guibg='yellow'<br><br>Changelog<br>---------<br><br>1.0 2007-04-02&nbsp;&nbsp;Initial version<br><br>1.1 2007-04-02&nbsp;&nbsp;Added goto prev/next diffblock commands<br><br>1.2 2007-06-14&nbsp;&nbsp;Updated diff arguments from -u0 (obsolete) to -U0<br><br>2.0 2007-08-16&nbsp;&nbsp;Changed from syntax highlighting to using signs, thanks<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;to Noah Spurrier for the idea. NOTE: the name of the<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;function changed from Svndiff_show() to Svndiff(), so<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;you might need to update your .vimrc mappings!<br><br>3.0 2008-02-02&nbsp;&nbsp;Redesign with some ideas from Jan Bezdekovsky. The<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;diff is only updated when the buffer actually changes,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cleanup of signs is now done properly and some info<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;about each diff block is printed in the status line.<br><br>3.1 2008-02-04&nbsp;&nbsp;Fixed bug that broke plugin in non-english locales, thanks<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;to Bernhard Walle for the patch<br><br>3.2 2008-02-27&nbsp;&nbsp;The latest rewrite broke vim 6 compatiblity. The plugin<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;is now simply disabled for older vim versions to avoid<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a lot of warnings when loading.<br><br>4.0 2008-11-24&nbsp;&nbsp;Added GIT support. The RCS type is now detected (svn/git)<br><br>4.1 2008-11-25&nbsp;&nbsp;Added CVS support<br><br>4.3 2010-05-08&nbsp;&nbsp;Added support for Mercurial, fixed git support (thanks <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Frankovskyi Bogdan)<br><br></td></tr>
+<tr><td>Screenshot available at <a target="_blank" href="http://zevv.nl/play/code/vimscripts/">http://zevv.nl/play/code/vimscripts/</A><br><br>Introduction<br>------------<br><br>NOTE: This plugin is unix-only!<br><br>An small vim 7.0 plugin for showing RCS diff information in a file while<br>editing. This plugin runs a diff between the current buffer and the original<br>file from the version control system, and shows coloured signs indicating<br>where the buffer differs from the original file from the repository. The<br>original text is not shown, only signs are used to indicate where changes were<br>made. With proper key bindings configured, fast navigation between changed<br>blocks is also provided.<br><br>Despite the name 'svndiff' this plugin supports the folling RCS systems:<br><br>- Subversion<br>- Git<br>- Mercurial<br>- Perforce / p4<br>- CVS<br><br>The type of RCS will be detected when first issuing a svndiff command on<br>the file.<br><br>The following symbols and syntax highlight groups are used for the signs:<br><br>&nbsp;&nbsp;&gt; DiffAdd:&nbsp;&nbsp;&nbsp;&nbsp;Newly added lines. (default=blue)<br><br>&nbsp;&nbsp;! DiffChange: Lines which are changed from the original. (default=cyan)<br><br>&nbsp;&nbsp;&lt; DiffDel:&nbsp;&nbsp;&nbsp;&nbsp;Applied to the lines directly above and below a deleted block<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(default=magenta)<br><br>Usage<br>-----<br><br>The plugin defines one function: Svndiff(). This function figures out the<br>difference between the current buffer and it's RCS original, and adds the<br>signs at the places where the buffer differs from the original file from svn<br>or git. You'll need to call this function after making changes to update the<br>highlighting.<br><br>The function takes one argument specifying an additional action to perform:<br><br>&nbsp;&nbsp;&quot;prev&quot;&nbsp;&nbsp;: jump to the previous different block<br>&nbsp;&nbsp;&quot;next&quot;&nbsp;&nbsp;: jump to the next different block<br>&nbsp;&nbsp;&quot;clear&quot; : clean up all signs<br><br>You might want to map some keys to run the Svndiff function. For<br>example, add to your .vimrc:<br><br>&nbsp;&nbsp;noremap &lt;F3&gt; :call Svndiff(&quot;prev&quot;)&lt;CR&gt;<br>&nbsp;&nbsp;noremap &lt;F4&gt; :call Svndiff(&quot;next&quot;)&lt;CR&gt;<br>&nbsp;&nbsp;noremap &lt;F5&gt; :call Svndiff(&quot;clear&quot;)&lt;CR&gt;<br><br><br>Configuration<br>-------------<br><br>The following configuration variables are availabe:<br><br>* g:svndiff_autoupdate<br><br>&nbsp;&nbsp;If this variable is defined, svndiff will automatically update the signs<br>&nbsp;&nbsp;when the user stops typing for a short while, and when leaving insert<br>&nbsp;&nbsp;mode. This might slow things down on large files, so use with caution.<br>&nbsp;&nbsp;The vim variable 'updatetime' can be used to set the auto-update interval,<br>&nbsp;&nbsp;but not that changing this variable other effects as well. (refer to the<br>&nbsp;&nbsp;vim docs for more info)<br>&nbsp;&nbsp;To use, add to your .vimrc:<br><br>&nbsp;&nbsp;let g:svndiff_autoupdate = 1<br><br>* g:svndiff_one_sign_delete<br><br>&nbsp;&nbsp;Normally, two 'delete' signs are placed around the location where<br>&nbsp;&nbsp;text was deleted. When this variable is defined, only one sign is<br>&nbsp;&nbsp;placed, above the location of the deleted text.<br>&nbsp;&nbsp;To use, add to your .vimrc:<br><br>&nbsp;&nbsp;let g:svndiff_one_sign_delete = 1<br><br>Colors<br>------<br><br>Personally, I find the following colours more intuitive for diff colours:<br>red=deleted, green=added, yellow=changed. If you want to use these colours,<br>try adding the following lines to your .vimrc<br><br>hi DiffAdd&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ctermfg=0 ctermbg=2 guibg='green'<br>hi DiffDelete&nbsp;&nbsp; ctermfg=0 ctermbg=1 guibg='red'<br>hi DiffChange&nbsp;&nbsp; ctermfg=0 ctermbg=3 guibg='yellow'<br><br>Changelog<br>---------<br><br>1.0 2007-04-02&nbsp;&nbsp;Initial version<br><br>1.1 2007-04-02&nbsp;&nbsp;Added goto prev/next diffblock commands<br><br>1.2 2007-06-14&nbsp;&nbsp;Updated diff arguments from -u0 (obsolete) to -U0<br><br>2.0 2007-08-16&nbsp;&nbsp;Changed from syntax highlighting to using signs, thanks<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;to Noah Spurrier for the idea. NOTE: the name of the<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;function changed from Svndiff_show() to Svndiff(), so<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;you might need to update your .vimrc mappings!<br><br>3.0 2008-02-02&nbsp;&nbsp;Redesign with some ideas from Jan Bezdekovsky. The<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;diff is only updated when the buffer actually changes,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cleanup of signs is now done properly and some info<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;about each diff block is printed in the status line.<br><br>3.1 2008-02-04&nbsp;&nbsp;Fixed bug that broke plugin in non-english locales, thanks<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;to Bernhard Walle for the patch<br><br>3.2 2008-02-27&nbsp;&nbsp;The latest rewrite broke vim 6 compatiblity. The plugin<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;is now simply disabled for older vim versions to avoid<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a lot of warnings when loading.<br><br>4.0 2008-11-24&nbsp;&nbsp;Added GIT support. The RCS type is now detected (svn/git)<br><br>4.1 2008-11-25&nbsp;&nbsp;Added CVS support.<br><br>4.2 2009-07-31&nbsp;&nbsp;Added support for proper handling of non-unix file formats<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;which use different newline conventions (dos, mac)<br><br>4.3 2010-05-08&nbsp;&nbsp;Added support for Mercurial, fixed git support (thanks<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Frankovskyi Bogdan)<br><br>4.4 2011-03-30&nbsp;&nbsp;Added support for perforce/p4 (thanks, Timandahaf)<br></td></tr>
 <tr><td>&nbsp;</td></tr>
 <tr><td class="prompt">install details</td></tr>
 <tr><td>Copy the file into your ~/.vim/plugin directory, and optionally create a keymap as described above.</td></tr>
@@ -223,76 +223,84 @@ Click on the package to download.
     <th valign="top">release notes</th>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=12972">svndiff.vim</a></td>
-    <td class="rowodd" valign="top" nowrap><b>4.3</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2010-05-08</i></td>
-    <td class="rowodd" valign="top" nowrap>6.0</td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15335">svndiff.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>4.4</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2011-03-30</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=10887">Ico -</a></i></td>
-    <td class="rowodd" valign="top" width="2000">Added support for Mercurial, fixed Git support</td>
+    <td class="rowodd" valign="top" width="2000">Added support for perforce/p4.<br><br>Supported RCS software is now subversion, git, mercurial, cvs and perforce!<br></td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=9564">svndiff.vim</a></td>
-    <td class="roweven" valign="top" nowrap><b>4.1</b></td>
-    <td class="roweven" valign="top" nowrap><i>2008-11-25</i></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=12972">svndiff.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>4.3</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-05-08</i></td>
     <td class="roweven" valign="top" nowrap>6.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=10887">Ico -</a></i></td>
-    <td class="roweven" valign="top" width="2000">Added CVS support. svndiff now works with subversion, GIT and CVS. </td>
+    <td class="roweven" valign="top" width="2000">Added support for Mercurial, fixed Git support</td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=9558">svndiff.vim</a></td>
-    <td class="rowodd" valign="top" nowrap><b>4.0</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2008-11-24</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=9564">svndiff.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>4.1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2008-11-25</i></td>
     <td class="rowodd" valign="top" nowrap>6.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=10887">Ico -</a></i></td>
-    <td class="rowodd" valign="top" width="2000">Added support for GIT, repository type is detected at runtime (subversion / git)</td>
+    <td class="rowodd" valign="top" width="2000">Added CVS support. svndiff now works with subversion, GIT and CVS. </td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=8355">svndiff.vim</a></td>
-    <td class="roweven" valign="top" nowrap><b>3.2</b></td>
-    <td class="roweven" valign="top" nowrap><i>2008-02-27</i></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=9558">svndiff.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>4.0</b></td>
+    <td class="roweven" valign="top" nowrap><i>2008-11-24</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=10887">Ico -</a></i></td>
+    <td class="roweven" valign="top" width="2000">Added support for GIT, repository type is detected at runtime (subversion / git)</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=8355">svndiff.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>3.2</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2008-02-27</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=10887">Ico -</a></i></td>
+    <td class="rowodd" valign="top" width="2000">The latest rewrite broke vim 6 compatiblity. The plugin is now simply disabled for older vim versions to avoid a lot of warnings when loading.<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=8234">svndiff.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>3.1</b></td>
+    <td class="roweven" valign="top" nowrap><i>2008-02-04</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=10887">Ico -</a></i></td>
+    <td class="roweven" valign="top" width="2000">Fixed script behaviour for non-english locales.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=8231">svndiff.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>3.0</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2008-02-03</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=10887">Ico -</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Major redesign of the plugin:<br><br>* auto-update feature highlights svn diff signs while editing<br>* signs from other sources (debugger, etc) are no longer effected<br>* better performance, diff is only executed when code is actually modified</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=7505">svndiff.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.0</b></td>
+    <td class="roweven" valign="top" nowrap><i>2007-08-16</i></td>
     <td class="roweven" valign="top" nowrap>7.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=10887">Ico -</a></i></td>
-    <td class="roweven" valign="top" width="2000">The latest rewrite broke vim 6 compatiblity. The plugin is now simply disabled for older vim versions to avoid a lot of warnings when loading.<br></td>
+    <td class="roweven" valign="top" width="2000">svndiff now uses tags to indicated the difference between the buffer and the original file, so it leaves intact the original syntax highlighting.</td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=8234">svndiff.vim</a></td>
-    <td class="rowodd" valign="top" nowrap><b>3.1</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2008-02-04</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=7244">svndiff.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.2</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2007-06-14</i></td>
     <td class="rowodd" valign="top" nowrap>6.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=10887">Ico -</a></i></td>
-    <td class="rowodd" valign="top" width="2000">Fixed script behaviour for non-english locales.</td>
+    <td class="rowodd" valign="top" width="2000">updated to work with recent version of diff (-u0 option was obsolete, changed to -U0)</td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=8231">svndiff.vim</a></td>
-    <td class="roweven" valign="top" nowrap><b>3.0</b></td>
-    <td class="roweven" valign="top" nowrap><i>2008-02-03</i></td>
-    <td class="roweven" valign="top" nowrap>6.0</td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=7057">svndiff.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.1</b></td>
+    <td class="roweven" valign="top" nowrap><i>2007-05-02</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=10887">Ico -</a></i></td>
-    <td class="roweven" valign="top" width="2000">Major redesign of the plugin:<br><br>* auto-update feature highlights svn diff signs while editing<br>* signs from other sources (debugger, etc) are no longer effected<br>* better performance, diff is only executed when code is actually modified</td>
-</tr>
-<tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=7505">svndiff.vim</a></td>
-    <td class="rowodd" valign="top" nowrap><b>2.0</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2007-08-16</i></td>
-    <td class="rowodd" valign="top" nowrap>7.0</td>
-    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=10887">Ico -</a></i></td>
-    <td class="rowodd" valign="top" width="2000">svndiff now uses tags to indicated the difference between the buffer and the original file, so it leaves intact the original syntax highlighting.</td>
-</tr>
-<tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=7244">svndiff.vim</a></td>
-    <td class="roweven" valign="top" nowrap><b>1.2</b></td>
-    <td class="roweven" valign="top" nowrap><i>2007-06-14</i></td>
-    <td class="roweven" valign="top" nowrap>6.0</td>
-    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=10887">Ico -</a></i></td>
-    <td class="roweven" valign="top" width="2000">updated to work with recent version of diff (-u0 option was obsolete, changed to -U0)</td>
-</tr>
-<tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=7057">svndiff.vim</a></td>
-    <td class="rowodd" valign="top" nowrap><b>1.1</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2007-05-02</i></td>
-    <td class="rowodd" valign="top" nowrap>7.0</td>
-    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=10887">Ico -</a></i></td>
-    <td class="rowodd" valign="top" width="2000">Added jump-to-prev/next </td>
+    <td class="roweven" valign="top" width="2000">Added jump-to-prev/next </td>
 </tr>
 </table>
 <!-- finish off the framework -->

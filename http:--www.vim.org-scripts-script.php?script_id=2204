@@ -166,8 +166,8 @@
 <tr>
   <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
   <td>
-    Rating <b>471/229</b>,
-    Downloaded by 5974  </td>
+    Rating <b>486/235</b>,
+    Downloaded by 6361  </td>
   <td class="lightbg">
   <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
   </td>
@@ -223,412 +223,420 @@ Click on the package to download.
     <th valign="top">release notes</th>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=14690">twitvim-0.6.1.vba</a></td>
-    <td class="rowodd" valign="top" nowrap><b>0.6.1</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2011-01-06</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15353">twitvim-0.6.2.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.6.2</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2011-04-01</i></td>
     <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=8120">Po Shan Cheah</a></i></td>
-    <td class="rowodd" valign="top" width="2000">* Fix for buffer stack bug if user closes a window manually.<br>* Use https OAuth endpoints if user has set up https API root.<br>* Match a URL even if prefix is in mixed case.<br></td>
+    <td class="rowodd" valign="top" width="2000">* Added more user relationship info to :ProfileTwitter.<br>* Added :EnableRetweetsTwitter and :DisableRetweetsTwitter.<br>* Switch to new (documented) goo.gl API.<br>* Added :ListInfoTwitter. <br></td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=14136">twitvim-0.6.0.vba</a></td>
-    <td class="roweven" valign="top" nowrap><b>0.6.0</b></td>
-    <td class="roweven" valign="top" nowrap><i>2010-10-27</i></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=14690">twitvim-0.6.1.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.6.1</b></td>
+    <td class="roweven" valign="top" nowrap><i>2011-01-06</i></td>
     <td class="roweven" valign="top" nowrap>7.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=8120">Po Shan Cheah</a></i></td>
-    <td class="roweven" valign="top" width="2000">* Added :FollowingTwitter, :FollowersTwitter.<br>* Added :MembersOfListTwitter, :SubsOfListTwitter, :OwnedListsTwitter, :MemberListsTwitter, :SubsListsTwitter, :FollowListTwitter, :UnfollowListTwitter.<br>* Added support for goo.gl :Googl and Rga.la. :Rgala<br>* Extended TwitVim-Leader-g to support Name: lines in user profile and following/followers lists.<br>* Added history stack for info buffer.<br>* Added :BackInfoTwitter, :ForwardInfoTwitter, :RefreshInfoTwitter, :NextInfoTwitter, :PreviousInfoTwitter for the info buffer. Also added support for TwitVim-C-PageDown and TwitVim-C-PageUp in info buffer.<br>* Added twitvim filetype for user customization via autocommands.<br>* Changed display of retweets to show the full version instead of the truncated version when the retweeted status is near the character limit.<br>* :ProfileTwitter with no argument now shows info on logged-in user.<br>* Made TwitVim-Leader-@ work on new-style retweets by showing the retweeted status as the parent.<br></td>
+    <td class="roweven" valign="top" width="2000">* Fix for buffer stack bug if user closes a window manually.<br>* Use https OAuth endpoints if user has set up https API root.<br>* Match a URL even if prefix is in mixed case.<br></td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13924">twitvim-0.5.6.vba</a></td>
-    <td class="rowodd" valign="top" nowrap><b>0.5.6</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2010-09-26</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=14136">twitvim-0.6.0.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.6.0</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-10-27</i></td>
     <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=8120">Po Shan Cheah</a></i></td>
-    <td class="rowodd" valign="top" width="2000">* Exception handling for Python net interface.<br>* Added converter functions for non-UTF8 encoding by @mattn_jp.<br>* Convert entities in profile name, bio, and location. (Suggested by code933k)<br>* Fix for posting foreign chars when encoding is not UTF8 and net method is not Curl.<br>* Support twitvim_count in :DMTwitter and :DMSentTwitter.<br>* Added :FavTwitter and mappings to favorite and unfavorite tweets.<br></td>
+    <td class="rowodd" valign="top" width="2000">* Added :FollowingTwitter, :FollowersTwitter.<br>* Added :MembersOfListTwitter, :SubsOfListTwitter, :OwnedListsTwitter, :MemberListsTwitter, :SubsListsTwitter, :FollowListTwitter, :UnfollowListTwitter.<br>* Added support for goo.gl :Googl and Rga.la. :Rgala<br>* Extended TwitVim-Leader-g to support Name: lines in user profile and following/followers lists.<br>* Added history stack for info buffer.<br>* Added :BackInfoTwitter, :ForwardInfoTwitter, :RefreshInfoTwitter, :NextInfoTwitter, :PreviousInfoTwitter for the info buffer. Also added support for TwitVim-C-PageDown and TwitVim-C-PageUp in info buffer.<br>* Added twitvim filetype for user customization via autocommands.<br>* Changed display of retweets to show the full version instead of the truncated version when the retweeted status is near the character limit.<br>* :ProfileTwitter with no argument now shows info on logged-in user.<br>* Made TwitVim-Leader-@ work on new-style retweets by showing the retweeted status as the parent.<br></td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13653">twitvim-0.5.5.vba</a></td>
-    <td class="roweven" valign="top" nowrap><b>0.5.5</b></td>
-    <td class="roweven" valign="top" nowrap><i>2010-08-23</i></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13924">twitvim-0.5.6.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.5.6</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-09-26</i></td>
     <td class="roweven" valign="top" nowrap>7.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=8120">Po Shan Cheah</a></i></td>
-    <td class="roweven" valign="top" width="2000">Added a way to compute HMAC-SHA1 digests using openssl command line utility.<br></td>
+    <td class="roweven" valign="top" width="2000">* Exception handling for Python net interface.<br>* Added converter functions for non-UTF8 encoding by @mattn_jp.<br>* Convert entities in profile name, bio, and location. (Suggested by code933k)<br>* Fix for posting foreign chars when encoding is not UTF8 and net method is not Curl.<br>* Support twitvim_count in :DMTwitter and :DMSentTwitter.<br>* Added :FavTwitter and mappings to favorite and unfavorite tweets.<br></td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13563">twitvim-0.5.4.vba</a></td>
-    <td class="rowodd" valign="top" nowrap><b>0.5.4</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2010-08-14</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13653">twitvim-0.5.5.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.5.5</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-08-23</i></td>
     <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=8120">Po Shan Cheah</a></i></td>
-    <td class="rowodd" valign="top" width="2000">* Added Ruby and Tcl versions of HMAC-SHA1 digest code.<br>* Improved error messages for cURL users.<br>* Code fix to keep 'nomodifiable' setting from leaking out into other buffers.<br>* Support Twitter SSL via Tcl interface.<br></td>
+    <td class="rowodd" valign="top" width="2000">Added a way to compute HMAC-SHA1 digests using openssl command line utility.<br></td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13280">twitvim-0.5.3.vba</a></td>
-    <td class="roweven" valign="top" nowrap><b>0.5.3</b></td>
-    <td class="roweven" valign="top" nowrap><i>2010-07-03</i></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13563">twitvim-0.5.4.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.5.4</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-08-14</i></td>
     <td class="roweven" valign="top" nowrap>7.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=8120">Po Shan Cheah</a></i></td>
-    <td class="roweven" valign="top" width="2000">* Improved error messages for most commands if using Perl, Python, Ruby, or Tcl interfaces.<br>* Added :FollowTwitter, :UnfollowTwitter, :BlockTwitter, :UnblockTwitter, :ReportSpamTwitter, :AddToListTwitter, :RemoveFromListTwitter.<br><br></td>
+    <td class="roweven" valign="top" width="2000">* Added Ruby and Tcl versions of HMAC-SHA1 digest code.<br>* Improved error messages for cURL users.<br>* Code fix to keep 'nomodifiable' setting from leaking out into other buffers.<br>* Support Twitter SSL via Tcl interface.<br></td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13232">twitvim-0.5.2.vba</a></td>
-    <td class="rowodd" valign="top" nowrap><b>0.5.2</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2010-06-22</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13280">twitvim-0.5.3.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.5.3</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-07-03</i></td>
     <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=8120">Po Shan Cheah</a></i></td>
-    <td class="rowodd" valign="top" width="2000">More fixes for Twitter OAuth.</td>
+    <td class="rowodd" valign="top" width="2000">* Improved error messages for most commands if using Perl, Python, Ruby, or Tcl interfaces.<br>* Added :FollowTwitter, :UnfollowTwitter, :BlockTwitter, :UnblockTwitter, :ReportSpamTwitter, :AddToListTwitter, :RemoveFromListTwitter.<br><br></td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13218">twitvim-0.5.1.vba</a></td>
-    <td class="roweven" valign="top" nowrap><b>0.5.1</b></td>
-    <td class="roweven" valign="top" nowrap><i>2010-06-19</i></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13232">twitvim-0.5.2.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.5.2</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-06-22</i></td>
     <td class="roweven" valign="top" nowrap>7.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=8120">Po Shan Cheah</a></i></td>
-    <td class="roweven" valign="top" width="2000">* Shorten auth URL with is.gd/Bitly if we need to ask the user to visit it manually.<br>* Fixed the :PublicTwitter invalid request error.<br>* Include new-style retweets in user timeline.<br></td>
+    <td class="roweven" valign="top" width="2000">More fixes for Twitter OAuth.</td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13204">twitvim-0.5.0.vba</a></td>
-    <td class="rowodd" valign="top" nowrap><b>0.5.0</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2010-06-17</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13218">twitvim-0.5.1.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.5.1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-06-19</i></td>
     <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=8120">Po Shan Cheah</a></i></td>
-    <td class="rowodd" valign="top" width="2000">Switched to OAuth for user authentication on Twitter.<br>Added more information to :ProfileTwitter output.<br></td>
+    <td class="rowodd" valign="top" width="2000">* Shorten auth URL with is.gd/Bitly if we need to ask the user to visit it manually.<br>* Fixed the :PublicTwitter invalid request error.<br>* Include new-style retweets in user timeline.<br></td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=12626">twitvim-0.4.7.vba</a></td>
-    <td class="roweven" valign="top" nowrap><b>0.4.7</b></td>
-    <td class="roweven" valign="top" nowrap><i>2010-03-13</i></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13204">twitvim-0.5.0.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.5.0</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-06-17</i></td>
     <td class="roweven" valign="top" nowrap>7.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=8120">Po Shan Cheah</a></i></td>
-    <td class="roweven" valign="top" width="2000">* Added :MentionsTwitter as an alias for :RepliesTwitter.<br>* Support twitvim_count in :MentionsTwitter.<br>* Fixed twitvim_count bug in :ListTwitter.<br>* Fixed Ruby interface problem with Vim patch 7.2.374.<br>* Fixed :BackTwitter behavior when timeline window is hidden by user.<br>* Handle SocketError exception in Ruby code.<br></td>
+    <td class="roweven" valign="top" width="2000">Switched to OAuth for user authentication on Twitter.<br>Added more information to :ProfileTwitter output.<br></td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=12383">twitvim-0.4.6.vba</a></td>
-    <td class="rowodd" valign="top" nowrap><b>0.4.6</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2010-02-14</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=12626">twitvim-0.4.7.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.4.7</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-03-13</i></td>
     <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=8120">Po Shan Cheah</a></i></td>
-    <td class="rowodd" valign="top" width="2000">Added twitvim_show_header config to allow user to hide the timeline header.<br>Minor fix to normal commands to avoid inadvertently triggering user mappings.<br></td>
+    <td class="rowodd" valign="top" width="2000">* Added :MentionsTwitter as an alias for :RepliesTwitter.<br>* Support twitvim_count in :MentionsTwitter.<br>* Fixed twitvim_count bug in :ListTwitter.<br>* Fixed Ruby interface problem with Vim patch 7.2.374.<br>* Fixed :BackTwitter behavior when timeline window is hidden by user.<br>* Handle SocketError exception in Ruby code.<br></td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=11990">twitvim-0.4.5.vba</a></td>
-    <td class="roweven" valign="top" nowrap><b>0.4.5</b></td>
-    <td class="roweven" valign="top" nowrap><i>2009-12-31</i></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=12383">twitvim-0.4.6.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.4.6</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-02-14</i></td>
     <td class="roweven" valign="top" nowrap>7.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=8120">Po Shan Cheah</a></i></td>
-    <td class="roweven" valign="top" width="2000">Prompt user for Twitter login if not configured in vimrc. Reintroduced old-style retweets via user option.</td>
+    <td class="roweven" valign="top" width="2000">Added twitvim_show_header config to allow user to hide the timeline header.<br>Minor fix to normal commands to avoid inadvertently triggering user mappings.<br></td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=11915">twitvim-0.4.4.vba</a></td>
-    <td class="rowodd" valign="top" nowrap><b>0.4.4</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2009-12-17</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=11990">twitvim-0.4.5.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.4.5</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-12-31</i></td>
     <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=8120">Po Shan Cheah</a></i></td>
-    <td class="rowodd" valign="top" width="2000">Added some support for Retweet API.<br>Fixed :BackTwitter behavior with lists.<br>Upgraded bit.ly API support to version 2.0.1.<br>Added support for Zi.ma URL shortener.<br></td>
+    <td class="rowodd" valign="top" width="2000">Prompt user for Twitter login if not configured in vimrc. Reintroduced old-style retweets via user option.</td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=11820">twitvim-0.4.3.vba</a></td>
-    <td class="roweven" valign="top" nowrap><b>0.4.3</b></td>
-    <td class="roweven" valign="top" nowrap><i>2009-11-27</i></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=11915">twitvim-0.4.4.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.4.4</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-12-17</i></td>
     <td class="roweven" valign="top" nowrap>7.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=8120">Po Shan Cheah</a></i></td>
-    <td class="roweven" valign="top" width="2000">* Added |:ListTwitter|<br>* Fixed some minor breakage in LongURL support.<br>* Omit author's name from the list when doing a reply to all.<br></td>
+    <td class="roweven" valign="top" width="2000">Added some support for Retweet API.<br>Fixed :BackTwitter behavior with lists.<br>Upgraded bit.ly API support to version 2.0.1.<br>Added support for Zi.ma URL shortener.<br></td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=10989">twitvim-0.4.2.vba</a></td>
-    <td class="rowodd" valign="top" nowrap><b>0.4.2</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2009-07-10</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=11820">twitvim-0.4.3.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.4.3</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-11-27</i></td>
     <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=8120">Po Shan Cheah</a></i></td>
-    <td class="rowodd" valign="top" width="2000">* Bugfix: Reset syntax items in Twitter window.<br>* Bugfix: Show progress message before querying for in-reply-to tweet.<br>* Added reply to all feature.<br></td>
+    <td class="rowodd" valign="top" width="2000">* Added |:ListTwitter|<br>* Fixed some minor breakage in LongURL support.<br>* Omit author's name from the list when doing a reply to all.<br></td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=10325">twitvim-0.4.1.vba</a></td>
-    <td class="roweven" valign="top" nowrap><b>0.4.1</b></td>
-    <td class="roweven" valign="top" nowrap><i>2009-03-30</i></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=10989">twitvim-0.4.2.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.4.2</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-07-10</i></td>
     <td class="roweven" valign="top" nowrap>7.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=8120">Po Shan Cheah</a></i></td>
-    <td class="roweven" valign="top" width="2000">Fixed a problem with usernames and search terms that begin with digits.<br></td>
+    <td class="roweven" valign="top" width="2000">* Bugfix: Reset syntax items in Twitter window.<br>* Bugfix: Show progress message before querying for in-reply-to tweet.<br>* Added reply to all feature.<br></td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=10154">twitvim-0.4.0.vba</a></td>
-    <td class="rowodd" valign="top" nowrap><b>0.4.0</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2009-03-09</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=10325">twitvim-0.4.1.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.4.1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-03-30</i></td>
     <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=8120">Po Shan Cheah</a></i></td>
-    <td class="rowodd" valign="top" width="2000">Many changes. See release notes at <a target="_blank" href="http://mortonfox.livejournal.com/654033.html">http://mortonfox.livejournal.com/654033.html</A><br></td>
+    <td class="rowodd" valign="top" width="2000">Fixed a problem with usernames and search terms that begin with digits.<br></td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=9913">twitvim-0.3.5.vba</a></td>
-    <td class="roweven" valign="top" nowrap><b>0.3.5</b></td>
-    <td class="roweven" valign="top" nowrap><i>2009-02-04</i></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=10154">twitvim-0.4.0.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.4.0</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-03-09</i></td>
     <td class="roweven" valign="top" nowrap>7.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=8120">Po Shan Cheah</a></i></td>
-    <td class="roweven" valign="top" width="2000">* Added support for pagination and page length to :SearchTwitter.<br>* Shortened default retweet prefix to &quot;RT&quot;.<br></td>
+    <td class="roweven" valign="top" width="2000">Many changes. See release notes at <a target="_blank" href="http://mortonfox.livejournal.com/654033.html">http://mortonfox.livejournal.com/654033.html</A><br></td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=9501">twitvim-0.3.4.vba</a></td>
-    <td class="rowodd" valign="top" nowrap><b>0.3.4</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2008-11-14</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=9913">twitvim-0.3.5.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.3.5</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-02-04</i></td>
     <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=8120">Po Shan Cheah</a></i></td>
-    <td class="rowodd" valign="top" width="2000">Added twitvim_count option to allow user to configure the number of tweets returned by :FriendsTwitter and :UserTwitter.<br></td>
+    <td class="rowodd" valign="top" width="2000">* Added support for pagination and page length to :SearchTwitter.<br>* Shortened default retweet prefix to &quot;RT&quot;.<br></td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=9325">twitvim-0.3.3.vba</a></td>
-    <td class="roweven" valign="top" nowrap><b>0.3.3</b></td>
-    <td class="roweven" valign="top" nowrap><i>2008-10-09</i></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=9501">twitvim-0.3.4.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.3.4</b></td>
+    <td class="roweven" valign="top" nowrap><i>2008-11-14</i></td>
     <td class="roweven" valign="top" nowrap>7.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=8120">Po Shan Cheah</a></i></td>
-    <td class="roweven" valign="top" width="2000">* Added support for Cligs. |:Cligs|<br>* Fixed a problem with not being able to unset the proxy if using Tcl http.<br></td>
+    <td class="roweven" valign="top" width="2000">Added twitvim_count option to allow user to configure the number of tweets returned by :FriendsTwitter and :UserTwitter.<br></td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=9298">twitvim-0.3.2.vba</a></td>
-    <td class="rowodd" valign="top" nowrap><b>0.3.2</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2008-10-01</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=9325">twitvim-0.3.3.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.3.3</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2008-10-09</i></td>
     <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=8120">Po Shan Cheah</a></i></td>
-    <td class="rowodd" valign="top" width="2000">* Added command to display rate limit info.<br>* Improved error reporting for :UserTwitter.<br>* Added command and mapping to display user profile information.<br>* Added command for updating location.<br>* Added support for tr.im.<br>* Error reporting fix for Tcl http code.<br></td>
+    <td class="rowodd" valign="top" width="2000">* Added support for Cligs. |:Cligs|<br>* Fixed a problem with not being able to unset the proxy if using Tcl http.<br></td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=9269">twitvim-0.3.1.vba</a></td>
-    <td class="roweven" valign="top" nowrap><b>0.3.1</b></td>
-    <td class="roweven" valign="top" nowrap><i>2008-09-22</i></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=9298">twitvim-0.3.2.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.3.2</b></td>
+    <td class="roweven" valign="top" nowrap><i>2008-10-01</i></td>
     <td class="roweven" valign="top" nowrap>7.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=8120">Po Shan Cheah</a></i></td>
-    <td class="roweven" valign="top" width="2000">* Added support for http networking through the Vim Perl, Python, Ruby, and Tcl interfaces, as alternatives to cURL. See :help TwitVim-non-cURL for setup details.<br>* Removed UrlTea support.<br>* Added support for posting Unicode tweets.<br>* Added support for LongURL.<br>* Remove newlines from tweets before retweeting.<br><br></td>
+    <td class="roweven" valign="top" width="2000">* Added command to display rate limit info.<br>* Improved error reporting for :UserTwitter.<br>* Added command and mapping to display user profile information.<br>* Added command for updating location.<br>* Added support for tr.im.<br>* Error reporting fix for Tcl http code.<br></td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=9195">twitvim-0.2.24.vba</a></td>
-    <td class="rowodd" valign="top" nowrap><b>0.2.24</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2008-08-29</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=9269">twitvim-0.3.1.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.3.1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2008-09-22</i></td>
     <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=8120">Po Shan Cheah</a></i></td>
-    <td class="rowodd" valign="top" width="2000">Added retweet feature.</td>
+    <td class="rowodd" valign="top" width="2000">* Added support for http networking through the Vim Perl, Python, Ruby, and Tcl interfaces, as alternatives to cURL. See :help TwitVim-non-cURL for setup details.<br>* Removed UrlTea support.<br>* Added support for posting Unicode tweets.<br>* Added support for LongURL.<br>* Remove newlines from tweets before retweeting.<br><br></td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=9174">twitvim-0.2.23.vba</a></td>
-    <td class="roweven" valign="top" nowrap><b>0.2.23</b></td>
-    <td class="roweven" valign="top" nowrap><i>2008-08-26</i></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=9195">twitvim-0.2.24.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.2.24</b></td>
+    <td class="roweven" valign="top" nowrap><i>2008-08-29</i></td>
     <td class="roweven" valign="top" nowrap>7.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=8120">Po Shan Cheah</a></i></td>
-    <td class="roweven" valign="top" width="2000">* Support in_reply_to_status_id parameter.<br>* Added tip on line length in statusline.<br>* Report browser launch errors.<br>* Set syntax highlighting on every timeline refresh.<br></td>
+    <td class="roweven" valign="top" width="2000">Added retweet feature.</td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=9122">twitvim-0.2.22.vba</a></td>
-    <td class="rowodd" valign="top" nowrap><b>0.2.22</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2008-08-13</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=9174">twitvim-0.2.23.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.2.23</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2008-08-26</i></td>
     <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=8120">Po Shan Cheah</a></i></td>
-    <td class="rowodd" valign="top" width="2000">Rewrote date/time formatting code in pure Vim script so it should now work on almost any Vim installation without requiring if_perl or if_python.</td>
+    <td class="rowodd" valign="top" width="2000">* Support in_reply_to_status_id parameter.<br>* Added tip on line length in statusline.<br>* Report browser launch errors.<br>* Set syntax highlighting on every timeline refresh.<br></td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=9117">twitvim-0.2.21.vba</a></td>
-    <td class="roweven" valign="top" nowrap><b>0.2.21</b></td>
-    <td class="roweven" valign="top" nowrap><i>2008-08-12</i></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=9122">twitvim-0.2.22.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.2.22</b></td>
+    <td class="roweven" valign="top" nowrap><i>2008-08-13</i></td>
     <td class="roweven" valign="top" nowrap>7.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=8120">Po Shan Cheah</a></i></td>
-    <td class="roweven" valign="top" width="2000">* Added tips section to documentation.<br>* Use create_or_reuse instead of create in UrlBorg API so that it will always generate the same short URL for the same long URL.<br>* Added support for highlighting #hashtags and jumping to Twitter Searches for #hashtags.<br>* Added Python code to convert Twitter timestamps to local time and simplify them.<br></td>
+    <td class="roweven" valign="top" width="2000">Rewrote date/time formatting code in pure Vim script so it should now work on almost any Vim installation without requiring if_perl or if_python.</td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=9020">twitvim-0.2.20.vba</a></td>
-    <td class="rowodd" valign="top" nowrap><b>0.2.20</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2008-07-24</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=9117">twitvim-0.2.21.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.2.21</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2008-08-12</i></td>
     <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=8120">Po Shan Cheah</a></i></td>
-    <td class="rowodd" valign="top" width="2000">Switched from Summize to Twitter Search.</td>
+    <td class="rowodd" valign="top" width="2000">* Added tips section to documentation.<br>* Use create_or_reuse instead of create in UrlBorg API so that it will always generate the same short URL for the same long URL.<br>* Added support for highlighting #hashtags and jumping to Twitter Searches for #hashtags.<br>* Added Python code to convert Twitter timestamps to local time and simplify them.<br></td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=9011">twitvim-0.2.19.vba</a></td>
-    <td class="roweven" valign="top" nowrap><b>0.2.19</b></td>
-    <td class="roweven" valign="top" nowrap><i>2008-07-23</i></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=9020">twitvim-0.2.20.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.2.20</b></td>
+    <td class="roweven" valign="top" nowrap><i>2008-07-24</i></td>
     <td class="roweven" valign="top" nowrap>7.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=8120">Po Shan Cheah</a></i></td>
-    <td class="roweven" valign="top" width="2000">Added support for non-Twitter servers implementing the Twitter API. This is for identi.ca support.<br></td>
+    <td class="roweven" valign="top" width="2000">Switched from Summize to Twitter Search.</td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=8953">twitvim-0.2.18.vba</a></td>
-    <td class="rowodd" valign="top" nowrap><b>0.2.18</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2008-07-14</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=9011">twitvim-0.2.19.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.2.19</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2008-07-23</i></td>
     <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=8120">Po Shan Cheah</a></i></td>
-    <td class="rowodd" valign="top" width="2000">Added support for urlBorg API.<br></td>
+    <td class="rowodd" valign="top" width="2000">Added support for non-Twitter servers implementing the Twitter API. This is for identi.ca support.<br></td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=8928">twitvim-0.2.17.vba</a></td>
-    <td class="roweven" valign="top" nowrap><b>0.2.17</b></td>
-    <td class="roweven" valign="top" nowrap><i>2008-07-11</i></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=8953">twitvim-0.2.18.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.2.18</b></td>
+    <td class="roweven" valign="top" nowrap><i>2008-07-14</i></td>
     <td class="roweven" valign="top" nowrap>7.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=8120">Po Shan Cheah</a></i></td>
-    <td class="roweven" valign="top" width="2000">* Added command to show DM Sent Timeline.<br>* Added support for pagination in Friends, User, Replies, DM, and DM Sent timelines.<br>* Added support for bit.ly API and is.gd API.<br></td>
+    <td class="roweven" valign="top" width="2000">Added support for urlBorg API.<br></td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=8694">twitvim-0.2.16a.vba</a></td>
-    <td class="rowodd" valign="top" nowrap><b>0.2.16a</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2008-05-15</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=8928">twitvim-0.2.17.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.2.17</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2008-07-11</i></td>
     <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=8120">Po Shan Cheah</a></i></td>
-    <td class="rowodd" valign="top" width="2000">Escape ! character in browser launch URL.</td>
+    <td class="rowodd" valign="top" width="2000">* Added command to show DM Sent Timeline.<br>* Added support for pagination in Friends, User, Replies, DM, and DM Sent timelines.<br>* Added support for bit.ly API and is.gd API.<br></td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=8693">twitvim-0.2.16.vba</a></td>
-    <td class="roweven" valign="top" nowrap><b>0.2.16</b></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=8694">twitvim-0.2.16a.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.2.16a</b></td>
     <td class="roweven" valign="top" nowrap><i>2008-05-15</i></td>
     <td class="roweven" valign="top" nowrap>7.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=8120">Po Shan Cheah</a></i></td>
-    <td class="roweven" valign="top" width="2000">Removed quotes around browser launch URL. There was a problem with TwitPic.</td>
+    <td class="roweven" valign="top" width="2000">Escape ! character in browser launch URL.</td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=8686">twitvim-0.2.15.vba</a></td>
-    <td class="rowodd" valign="top" nowrap><b>0.2.15</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2008-05-13</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=8693">twitvim-0.2.16.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.2.16</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2008-05-15</i></td>
     <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=8120">Po Shan Cheah</a></i></td>
-    <td class="rowodd" valign="top" width="2000">* Extend :UserTwitter and :FriendsTwitter to show another user's timeline if argument supplied.<br>* Extend Alt-G mapping to jump to another user's timeline if invoked over @user or user:<br>* Escape special Vim shell characters in URL when launching web browser.<br></td>
+    <td class="rowodd" valign="top" width="2000">Removed quotes around browser launch URL. There was a problem with TwitPic.</td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=8684">twitvim-0.2.14.vba</a></td>
-    <td class="roweven" valign="top" nowrap><b>0.2.14</b></td>
-    <td class="roweven" valign="top" nowrap><i>2008-05-12</i></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=8686">twitvim-0.2.15.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.2.15</b></td>
+    <td class="roweven" valign="top" nowrap><i>2008-05-13</i></td>
     <td class="roweven" valign="top" nowrap>7.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=8120">Po Shan Cheah</a></i></td>
-    <td class="roweven" valign="top" width="2000">Added support for Summize search API.</td>
+    <td class="roweven" valign="top" width="2000">* Extend :UserTwitter and :FriendsTwitter to show another user's timeline if argument supplied.<br>* Extend Alt-G mapping to jump to another user's timeline if invoked over @user or user:<br>* Escape special Vim shell characters in URL when launching web browser.<br></td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=8659">twitvim-0.2.13.vba</a></td>
-    <td class="rowodd" valign="top" nowrap><b>0.2.13</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2008-05-07</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=8684">twitvim-0.2.14.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.2.14</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2008-05-12</i></td>
     <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=8120">Po Shan Cheah</a></i></td>
-    <td class="rowodd" valign="top" width="2000">Added mappings to launch web browser on URLs in timeline.<br></td>
+    <td class="rowodd" valign="top" width="2000">Added support for Summize search API.</td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=8648">twitvim-0.2.12.vba</a></td>
-    <td class="roweven" valign="top" nowrap><b>0.2.12</b></td>
-    <td class="roweven" valign="top" nowrap><i>2008-05-05</i></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=8659">twitvim-0.2.13.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.2.13</b></td>
+    <td class="roweven" valign="top" nowrap><i>2008-05-07</i></td>
     <td class="roweven" valign="top" nowrap>7.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=8120">Po Shan Cheah</a></i></td>
-    <td class="roweven" valign="top" width="2000">Allow user to specify Twitter login info and proxy login info preencoded in base64.</td>
+    <td class="roweven" valign="top" width="2000">Added mappings to launch web browser on URLs in timeline.<br></td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=8636">twitvim-0.2.11.vba</a></td>
-    <td class="rowodd" valign="top" nowrap><b>0.2.11</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2008-05-02</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=8648">twitvim-0.2.12.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.2.12</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2008-05-05</i></td>
     <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=8120">Po Shan Cheah</a></i></td>
-    <td class="rowodd" valign="top" width="2000">* Scroll to top in timeline window after adding an update line.<br>* Add &lt;Leader&gt;r and &lt;Leader&gt;d mappings as alternative to Alt-R and Alt-D.<br></td>
+    <td class="rowodd" valign="top" width="2000">Allow user to specify Twitter login info and proxy login info preencoded in base64.</td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=8606">twitvim-0.2.10.vba</a></td>
-    <td class="roweven" valign="top" nowrap><b>0.2.10</b></td>
-    <td class="roweven" valign="top" nowrap><i>2008-04-25</i></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=8636">twitvim-0.2.11.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.2.11</b></td>
+    <td class="roweven" valign="top" nowrap><i>2008-05-02</i></td>
     <td class="roweven" valign="top" nowrap>7.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=8120">Po Shan Cheah</a></i></td>
-    <td class="roweven" valign="top" width="2000">* Shortened snipurl.com to snipr.com<br>* Added support for proxy authentication.<br>* Handle Perl module load failure. Not that I expect those modules to ever be missing.<br></td>
+    <td class="roweven" valign="top" width="2000">* Scroll to top in timeline window after adding an update line.<br>* Add &lt;Leader&gt;r and &lt;Leader&gt;d mappings as alternative to Alt-R and Alt-D.<br></td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=8592">twitvim-0.2.9.vba</a></td>
-    <td class="rowodd" valign="top" nowrap><b>0.2.9</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2008-04-22</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=8606">twitvim-0.2.10.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.2.10</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2008-04-25</i></td>
     <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=8120">Po Shan Cheah</a></i></td>
-    <td class="rowodd" valign="top" width="2000">* Added some status messages.<br>* Added menu items under Plugin menu.<br>* Allow Ctrl-T as an alternative to Alt-T to avoid conflict with the menu bar.<br>* Added support for UrlTea API.<br>* Generalize URL encoding to all non-alpha chars.<br></td>
+    <td class="rowodd" valign="top" width="2000">* Shortened snipurl.com to snipr.com<br>* Added support for proxy authentication.<br>* Handle Perl module load failure. Not that I expect those modules to ever be missing.<br></td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=8590">twitvim-0.2.8.vba</a></td>
-    <td class="roweven" valign="top" nowrap><b>0.2.8</b></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=8592">twitvim-0.2.9.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.2.9</b></td>
     <td class="roweven" valign="top" nowrap><i>2008-04-22</i></td>
     <td class="roweven" valign="top" nowrap>7.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=8120">Po Shan Cheah</a></i></td>
-    <td class="roweven" valign="top" width="2000">* Encode URLs sent to URL-shortening services.<br></td>
+    <td class="roweven" valign="top" width="2000">* Added some status messages.<br>* Added menu items under Plugin menu.<br>* Allow Ctrl-T as an alternative to Alt-T to avoid conflict with the menu bar.<br>* Added support for UrlTea API.<br>* Generalize URL encoding to all non-alpha chars.<br></td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=8588">twitvim-0.2.7.vba</a></td>
-    <td class="rowodd" valign="top" nowrap><b>0.2.7</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2008-04-21</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=8590">twitvim-0.2.8.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.2.8</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2008-04-22</i></td>
     <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=8120">Po Shan Cheah</a></i></td>
-    <td class="rowodd" valign="top" width="2000">* Add support for TinyURL API.<br>* Add quick direct message feature.<br></td>
+    <td class="rowodd" valign="top" width="2000">* Encode URLs sent to URL-shortening services.<br></td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=8565">twitvim-0.2.6.vba</a></td>
-    <td class="roweven" valign="top" nowrap><b>0.2.6</b></td>
-    <td class="roweven" valign="top" nowrap><i>2008-04-15</i></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=8588">twitvim-0.2.7.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.2.7</b></td>
+    <td class="roweven" valign="top" nowrap><i>2008-04-21</i></td>
     <td class="roweven" valign="top" nowrap>7.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=8120">Po Shan Cheah</a></i></td>
-    <td class="roweven" valign="top" width="2000">* Delete Twitter buffer to the blackhole register to avoid stepping on registers unnecessarily.<br>* Quote login and proxy arguments before sending to cURL.<br>* Added support for SnipURL API and Metamark API.<br></td>
+    <td class="roweven" valign="top" width="2000">* Add support for TinyURL API.<br>* Add quick direct message feature.<br></td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=8562">twitvim-0.2.5.vba</a></td>
-    <td class="rowodd" valign="top" nowrap><b>0.2.5</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2008-04-14</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=8565">twitvim-0.2.6.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.2.6</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2008-04-15</i></td>
     <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=8120">Po Shan Cheah</a></i></td>
-    <td class="rowodd" valign="top" width="2000">* Escape the &quot;+&quot; character in sent tweets.<br>* Added Perl code to convert Twitter timestamps to local time and simplify them.<br>* Fix for timestamp highlight when the &quot;|&quot; character appears in a tweet.<br></td>
+    <td class="rowodd" valign="top" width="2000">* Delete Twitter buffer to the blackhole register to avoid stepping on registers unnecessarily.<br>* Quote login and proxy arguments before sending to cURL.<br>* Added support for SnipURL API and Metamark API.<br></td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=8553">twitvim-0.2.4.vba</a></td>
-    <td class="roweven" valign="top" nowrap><b>0.2.4</b></td>
-    <td class="roweven" valign="top" nowrap><i>2008-04-13</i></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=8562">twitvim-0.2.5.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.2.5</b></td>
+    <td class="roweven" valign="top" nowrap><i>2008-04-14</i></td>
     <td class="roweven" valign="top" nowrap>7.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=8120">Po Shan Cheah</a></i></td>
-    <td class="roweven" valign="top" width="2000">* Use &lt;q-args&gt; in Tweetburner commands.<br>* Improve XML parsing so that order of elements does not matter.<br>* Changed T mapping to Alt-T to avoid overriding the |T| command.<br></td>
+    <td class="roweven" valign="top" width="2000">* Escape the &quot;+&quot; character in sent tweets.<br>* Added Perl code to convert Twitter timestamps to local time and simplify them.<br>* Fix for timestamp highlight when the &quot;|&quot; character appears in a tweet.<br></td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=8547">twitvim-0.2.3.vba</a></td>
-    <td class="rowodd" valign="top" nowrap><b>0.2.3</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2008-04-11</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=8553">twitvim-0.2.4.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.2.4</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2008-04-13</i></td>
     <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=8120">Po Shan Cheah</a></i></td>
-    <td class="rowodd" valign="top" width="2000">Added more Tweetburner commands.</td>
+    <td class="rowodd" valign="top" width="2000">* Use &lt;q-args&gt; in Tweetburner commands.<br>* Improve XML parsing so that order of elements does not matter.<br>* Changed T mapping to Alt-T to avoid overriding the |T| command.<br></td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=8545">twitvim-0.2.2.vba</a></td>
-    <td class="roweven" valign="top" nowrap><b>0.2.2</b></td>
-    <td class="roweven" valign="top" nowrap><i>2008-04-10</i></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=8547">twitvim-0.2.3.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.2.3</b></td>
+    <td class="roweven" valign="top" nowrap><i>2008-04-11</i></td>
     <td class="roweven" valign="top" nowrap>7.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=8120">Po Shan Cheah</a></i></td>
-    <td class="roweven" valign="top" width="2000">* Added quick reply feature.<br>			&nbsp;&nbsp; * Added Tweetburner support.<br>			&nbsp;&nbsp; * Changed client ident to &quot;from twitvim&quot;.</td>
+    <td class="roweven" valign="top" width="2000">Added more Tweetburner commands.</td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=8540">twitvim-0.2.1.vba</a></td>
-    <td class="rowodd" valign="top" nowrap><b>0.2.1</b></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=8545">twitvim-0.2.2.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.2.2</b></td>
     <td class="rowodd" valign="top" nowrap><i>2008-04-10</i></td>
     <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=8120">Po Shan Cheah</a></i></td>
-    <td class="rowodd" valign="top" width="2000">Bug fix for Chinese characters in timeline.<br>Scroll up to newest tweet after refreshing timeline.<br>Changed Twitter window name to avoid unsafe special characters and clashes with file names.</td>
+    <td class="rowodd" valign="top" width="2000">* Added quick reply feature.<br>			&nbsp;&nbsp; * Added Tweetburner support.<br>			&nbsp;&nbsp; * Changed client ident to &quot;from twitvim&quot;.</td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=8539">twitvim-0.2.0.vba</a></td>
-    <td class="roweven" valign="top" nowrap><b>0.2.0</b></td>
-    <td class="roweven" valign="top" nowrap><i>2008-04-09</i></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=8540">twitvim-0.2.1.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.2.1</b></td>
+    <td class="roweven" valign="top" nowrap><i>2008-04-10</i></td>
     <td class="roweven" valign="top" nowrap>7.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=8120">Po Shan Cheah</a></i></td>
-    <td class="roweven" valign="top" width="2000">Added views for public, friends, user timelines, replies, and direct messages. Automatically insert user's posts into public, friends, or user timeline, if visible. Added syntax highlighting for timeline view.</td>
+    <td class="roweven" valign="top" width="2000">Bug fix for Chinese characters in timeline.<br>Scroll up to newest tweet after refreshing timeline.<br>Changed Twitter window name to avoid unsafe special characters and clashes with file names.</td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=8519">twitvim.vba</a></td>
-    <td class="rowodd" valign="top" nowrap><b>0.1.2</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2008-04-03</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=8539">twitvim-0.2.0.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.2.0</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2008-04-09</i></td>
     <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=8120">Po Shan Cheah</a></i></td>
-    <td class="rowodd" valign="top" width="2000">Added help documentation. Made plugin code conform to guidelines in :help write-plugin. Repackaged as Vimball archive.</td>
+    <td class="rowodd" valign="top" width="2000">Added views for public, friends, user timelines, replies, and direct messages. Automatically insert user's posts into public, friends, or user timeline, if visible. Added syntax highlighting for timeline view.</td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=8516">twitvim.vim</a></td>
-    <td class="roweven" valign="top" nowrap><b>0.1.1</b></td>
-    <td class="roweven" valign="top" nowrap><i>2008-04-01</i></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=8519">twitvim.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.1.2</b></td>
+    <td class="roweven" valign="top" nowrap><i>2008-04-03</i></td>
     <td class="roweven" valign="top" nowrap>7.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=8120">Po Shan Cheah</a></i></td>
-    <td class="roweven" valign="top" width="2000">Report errors from or problems with cURL.</td>
+    <td class="roweven" valign="top" width="2000">Added help documentation. Made plugin code conform to guidelines in :help write-plugin. Repackaged as Vimball archive.</td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=8504">twitvim.vim</a></td>
-    <td class="rowodd" valign="top" nowrap><b>0.1</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2008-03-28</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=8516">twitvim.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.1.1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2008-04-01</i></td>
     <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=8120">Po Shan Cheah</a></i></td>
-    <td class="rowodd" valign="top" width="2000">Initial version.</td>
+    <td class="rowodd" valign="top" width="2000">Report errors from or problems with cURL.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=8504">twitvim.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.1</b></td>
+    <td class="roweven" valign="top" nowrap><i>2008-03-28</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=8120">Po Shan Cheah</a></i></td>
+    <td class="roweven" valign="top" width="2000">Initial version.</td>
 </tr>
 </table>
 <!-- finish off the framework -->

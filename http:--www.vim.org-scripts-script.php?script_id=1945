@@ -166,8 +166,8 @@
 <tr>
   <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
   <td>
-    Rating <b>56/35</b>,
-    Downloaded by 3143  </td>
+    Rating <b>60/40</b>,
+    Downloaded by 3520  </td>
   <td class="lightbg">
   <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
   </td>
@@ -189,7 +189,7 @@
 <tr><td>A simple highlighting file for JSON constructs.</td></tr>
 <tr><td>&nbsp;</td></tr>
 <tr><td class="prompt">install details</td></tr>
-<tr><td>To your filetype.vim just add something like:<br><br>au! BufRead,BufNewFile *.json setfiletype json<br><br>It should also be possible to embed the json highlighting in other syntax files, but I have not tested that yet.<br><br>Feedback is welcomed.</td></tr>
+<tr><td>To your filetype.vim just add something like:<br><br>au! BufRead,BufNewFile *.json set filetype=json foldmethod=syntax<br><br>It should also be possible to embed the json highlighting in other syntax files, but I have not tested that yet.<br><br>Feedback is welcomed.</td></tr>
 <tr><td>&nbsp;</td></tr>
 </table>
 

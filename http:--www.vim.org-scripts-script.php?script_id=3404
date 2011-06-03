@@ -166,8 +166,8 @@
 <tr>
   <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
   <td>
-    Rating <b>12/12</b>,
-    Downloaded by 119  </td>
+    Rating <b>13/13</b>,
+    Downloaded by 206  </td>
   <td class="lightbg">
   <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
   </td>
@@ -186,10 +186,10 @@
 <tr><td>utility</td></tr>
 <tr><td>&nbsp;</td></tr>
 <tr><td class="prompt">description</td></tr>
-<tr><td>This plugin uses Ajax Google Translator (&quot;<a target="_blank" href="http://ajax.googleapis.com/&quot">http://ajax.googleapis.com/&quot</A>;)<br><br>Description:<br>This plugin allows you to translate text using the google online translator.<br>You can translate as single words and whole blocks using visual-mode.<br><br>Note: <br>With a large number of text program can take some time<br><br>Depending:<br>1) Ruby&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Ubuntu: sudo apt-get install ruby)<br>2) Ruby gem json (Ubuntu: sudo gem install json)<br><br>Use:<br>:Translate Hello World<br></td></tr>
+<tr><td>This plugin uses Ajax Google Translator (&quot;<a target="_blank" href="http://ajax.googleapis.com/&quot">http://ajax.googleapis.com/&quot</A>;)<br><br>Description:<br>This plugin allows you to translate text using the google online translator.<br>You can translate as single words and whole blocks using visual-mode.<br><br>Note: <br>With a large number of text program can take some time<br><br>Depending:<br>1) Ruby&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Ubuntu: sudo apt-get install ruby)<br>2) Ruby gem json (Ubuntu: sudo gem install json)<br><br>Use:<br>:Translate Hello World<br><br>You can use plugin fork <a target="_blank" href="http://www.vim.org/scripts/script.php?script_id=3545">http://www.vim.org/scripts/script.php?script_id=3545</A><br>he uses gem google-translate</td></tr>
 <tr><td>&nbsp;</td></tr>
 <tr><td class="prompt">install details</td></tr>
-<tr><td>Put file in Vim plugin directory (.vim/plugin)<br>Add your .vimrc file string [ let g:langpair=&quot;en|ru&quot; ] whre &quot;en&quot; &lt;-&nbsp;&nbsp;form English,&nbsp;&nbsp;to Russian -&gt;&quot;ru&quot;<br><br>To use the translation selected text in visual-mode. You must define in your .vimrc&nbsp;&nbsp;'g:vtranslate'.<br>example: $&gt;let g:vtranslate=&quot;T&quot; note: where &quot;T&quot; is shortcut key in visual-mode <br><br>You can change the color of the translated text using the command&nbsp;&nbsp;:echohl<br><br>language code iso 639-1</td></tr>
+<tr><td>Put file in Vim plugin directory (.vim/plugin)<br>Add your .vimrc file string [ let g:langpair=&quot;en|ru&quot; ] where &quot;en&quot; &lt;-&nbsp;&nbsp;form English,&nbsp;&nbsp;to Russian -&gt;&quot;ru&quot;<br><br>To use the translation selected text in visual-mode. You must define in your .vimrc&nbsp;&nbsp;'g:vtranslate'.<br>example: $&gt;let g:vtranslate=&quot;T&quot; note: where &quot;T&quot; is shortcut key in visual-mode <br><br>You can change the color of the translated text using the command&nbsp;&nbsp;:echohl<br><br>language code iso 639-1</td></tr>
 <tr><td>&nbsp;</td></tr>
 </table>
 
@@ -221,6 +221,22 @@ Click on the package to download.
     <th valign="top">Vim version</th>
     <th valign="top">user</th>
     <th valign="top">release notes</th>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15571">gtranslate.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.2.6</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2011-05-02</i></td>
+    <td class="rowodd" valign="top" nowrap>7.2</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=25325">Maksim Ryzhikov</a></i></td>
+    <td class="rowodd" valign="top" width="2000">fixed: translate of large text</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=15415">gtranslate.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.2.4</b></td>
+    <td class="roweven" valign="top" nowrap><i>2011-04-08</i></td>
+    <td class="roweven" valign="top" nowrap>7.2</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=25325">Maksim Ryzhikov</a></i></td>
+    <td class="roweven" valign="top" width="2000">small fix (bug with gsub)</td>
 </tr>
 <tr>
         <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=14841">gtranslate.vim</a></td>

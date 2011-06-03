@@ -166,8 +166,8 @@
 <tr>
   <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
   <td>
-    Rating <b>73/37</b>,
-    Downloaded by 1256  </td>
+    Rating <b>74/38</b>,
+    Downloaded by 1380  </td>
   <td class="lightbg">
   <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
   </td>
@@ -186,7 +186,7 @@
 <tr><td>utility</td></tr>
 <tr><td>&nbsp;</td></tr>
 <tr><td class="prompt">description</td></tr>
-<tr><td>&nbsp;&nbsp; Line mode<br>&nbsp;&nbsp;&nbsp;&nbsp; &lt;C-h&gt;&lt;C-h&gt;&nbsp;&nbsp; Highlight current line <br>&nbsp;&nbsp;&nbsp;&nbsp; &lt;C-h&gt;&lt;C-a&gt;&nbsp;&nbsp; Advance color for next line highlight<br>&nbsp;&nbsp;&nbsp;&nbsp; &lt;C-h&gt;&lt;C-r&gt;&nbsp;&nbsp; Clear last line highlight<br><br>&nbsp;&nbsp; Pattern mode<br>&nbsp;&nbsp;&nbsp;&nbsp; &lt;C-h&gt;&lt;C-w&gt;&nbsp;&nbsp; Highlight word under cursor (whole word match)<br>&nbsp;&nbsp;&nbsp;&nbsp; &lt;C-h&gt;&lt;C-l&gt;&nbsp;&nbsp; Highlight all lines having word under cursor (whole word match)<br>&nbsp;&nbsp;&nbsp;&nbsp; &lt;C-h&gt;&lt;C-f&gt;&nbsp;&nbsp; Highlight word under cursor (partial word match)<br>&nbsp;&nbsp;&nbsp;&nbsp; &lt;C-h&gt;&lt;C-k&gt;&nbsp;&nbsp; Highlight all lines having word under cursor (partial word match)<br>&nbsp;&nbsp;&nbsp;&nbsp; &lt;C-h&gt;&lt;C-s&gt;&nbsp;&nbsp; Highlight last search pattern<br>&nbsp;&nbsp;&nbsp;&nbsp; &lt;C-h&gt;&lt;C-d&gt;&nbsp;&nbsp; Clear last pattern highlight <br><br>&nbsp;&nbsp;&nbsp;&nbsp; &lt;C-h&gt;&lt;C-n&gt;&nbsp;&nbsp; Clear all highlights<br><br>&nbsp;&nbsp; All above commands work in both normal & insert modes.<br>&nbsp;&nbsp; &lt;C-h&gt;&lt;C-h&gt; also works in visual mode. (Select desired lines & hit &lt;C-h&gt;&lt;C-h&gt;)<br><br></td></tr>
+<tr><td>&nbsp;&nbsp; Line mode<br>&nbsp;&nbsp;&nbsp;&nbsp; &lt;C-h&gt;&lt;C-h&gt;&nbsp;&nbsp; Highlight current line <br>&nbsp;&nbsp;&nbsp;&nbsp; &lt;C-h&gt;&lt;C-a&gt;&nbsp;&nbsp; Advance color for next line highlight<br>&nbsp;&nbsp;&nbsp;&nbsp; &lt;C-h&gt;&lt;C-r&gt;&nbsp;&nbsp; Clear last line highlight<br><br>&nbsp;&nbsp; Pattern mode<br>&nbsp;&nbsp;&nbsp;&nbsp; &lt;C-h&gt;&lt;C-w&gt;&nbsp;&nbsp; Highlight word under cursor (whole word match)<br>&nbsp;&nbsp;&nbsp;&nbsp; &lt;C-h&gt;&lt;C-l&gt;&nbsp;&nbsp;&nbsp;&nbsp;Highlight all lines having word under cursor (whole word match)<br>&nbsp;&nbsp;&nbsp;&nbsp; &lt;C-h&gt;&lt;C-f&gt;&nbsp;&nbsp;&nbsp;&nbsp;Highlight word under cursor (partial word match)<br>&nbsp;&nbsp;&nbsp;&nbsp; &lt;C-h&gt;&lt;C-k&gt;&nbsp;&nbsp; Highlight all lines having word under cursor (partial word match)<br>&nbsp;&nbsp;&nbsp;&nbsp; &lt;C-h&gt;&lt;C-s&gt;&nbsp;&nbsp; Highlight last search pattern<br>&nbsp;&nbsp;&nbsp;&nbsp; &lt;C-h&gt;&lt;C-j&gt;&nbsp;&nbsp;&nbsp;&nbsp;Highlight all lines having last search pattern<br>&nbsp;&nbsp;&nbsp;&nbsp; &lt;C-h&gt;&lt;C-d&gt;&nbsp;&nbsp; Clear last pattern highlight <br><br>&nbsp;&nbsp;&nbsp;&nbsp; &lt;C-h&gt;&lt;C-n&gt;&nbsp;&nbsp; Clear all highlights<br><br>&nbsp;&nbsp; All above commands work in both normal & insert modes.<br>&nbsp;&nbsp; &lt;C-h&gt;&lt;C-h&gt; also works in visual mode. (Select desired lines & hit &lt;C-h&gt;&lt;C-h&gt;)<br><br></td></tr>
 <tr><td>&nbsp;</td></tr>
 <tr><td class="prompt">install details</td></tr>
 <tr><td>Copy highlight.vim to your .vim/plugin directory<br></td></tr>
@@ -223,36 +223,44 @@ Click on the package to download.
     <th valign="top">release notes</th>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13794">highlight.vim</a></td>
-    <td class="rowodd" valign="top" nowrap><b>1.5</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2010-09-09</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15438">highlight.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.6</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2011-04-12</i></td>
     <td class="rowodd" valign="top" nowrap>6.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=10357">Amit Sethi</a></i></td>
-    <td class="rowodd" valign="top" width="2000">Added new hightlight mode: <br><br>&quot;&nbsp;&nbsp;&nbsp;&nbsp; &lt;C-h&gt;&lt;C-j&gt;&nbsp;&nbsp; Highlight all lines having last search pattern </td>
+    <td class="rowodd" valign="top" width="2000">Changes to make it work with Console Vim (contributed by Min Kyu Jeong (mkjeong@gmail.com))</td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=11761">highlight.vim</a></td>
-    <td class="roweven" valign="top" nowrap><b>1.4</b></td>
-    <td class="roweven" valign="top" nowrap><i>2009-11-19</i></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13794">highlight.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.5</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-09-09</i></td>
     <td class="roweven" valign="top" nowrap>6.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=10357">Amit Sethi</a></i></td>
-    <td class="roweven" valign="top" width="2000">Changed Pattern modes. These are now as follows - <br><br>&quot;&nbsp;&nbsp; Pattern mode<br>&quot;&nbsp;&nbsp;&nbsp;&nbsp; &lt;C-h&gt;&lt;C-w&gt;&nbsp;&nbsp; Highlight word under cursor (whole word match)<br>&quot;&nbsp;&nbsp;&nbsp;&nbsp; &lt;C-h&gt;&lt;C-l&gt;&nbsp;&nbsp; Highlight all lines having word under cursor (whole word match)<br>&quot;&nbsp;&nbsp;&nbsp;&nbsp; &lt;C-h&gt;&lt;C-f&gt;&nbsp;&nbsp; Highlight word under cursor (partial word match)<br>&quot;&nbsp;&nbsp;&nbsp;&nbsp; &lt;C-h&gt;&lt;C-k&gt;&nbsp;&nbsp; Highlight all lines having word under cursor (partial word match)<br>&quot;&nbsp;&nbsp;&nbsp;&nbsp; &lt;C-h&gt;&lt;C-s&gt;&nbsp;&nbsp; Highlight last search pattern<br>&quot;&nbsp;&nbsp;&nbsp;&nbsp; &lt;C-h&gt;&lt;C-d&gt;&nbsp;&nbsp; Clear last pattern highlight<br>&quot;<br></td>
+    <td class="roweven" valign="top" width="2000">Added new hightlight mode: <br><br>&quot;&nbsp;&nbsp;&nbsp;&nbsp; &lt;C-h&gt;&lt;C-j&gt;&nbsp;&nbsp; Highlight all lines having last search pattern </td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=5997">highlight.vim</a></td>
-    <td class="rowodd" valign="top" nowrap><b>1.1</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2006-07-28</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=11761">highlight.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.4</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-11-19</i></td>
     <td class="rowodd" valign="top" nowrap>6.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=10357">Amit Sethi</a></i></td>
-    <td class="rowodd" valign="top" width="2000">Modified implementation of word highlight to override comments, etc.</td>
+    <td class="rowodd" valign="top" width="2000">Changed Pattern modes. These are now as follows - <br><br>&quot;&nbsp;&nbsp; Pattern mode<br>&quot;&nbsp;&nbsp;&nbsp;&nbsp; &lt;C-h&gt;&lt;C-w&gt;&nbsp;&nbsp; Highlight word under cursor (whole word match)<br>&quot;&nbsp;&nbsp;&nbsp;&nbsp; &lt;C-h&gt;&lt;C-l&gt;&nbsp;&nbsp; Highlight all lines having word under cursor (whole word match)<br>&quot;&nbsp;&nbsp;&nbsp;&nbsp; &lt;C-h&gt;&lt;C-f&gt;&nbsp;&nbsp; Highlight word under cursor (partial word match)<br>&quot;&nbsp;&nbsp;&nbsp;&nbsp; &lt;C-h&gt;&lt;C-k&gt;&nbsp;&nbsp; Highlight all lines having word under cursor (partial word match)<br>&quot;&nbsp;&nbsp;&nbsp;&nbsp; &lt;C-h&gt;&lt;C-s&gt;&nbsp;&nbsp; Highlight last search pattern<br>&quot;&nbsp;&nbsp;&nbsp;&nbsp; &lt;C-h&gt;&lt;C-d&gt;&nbsp;&nbsp; Clear last pattern highlight<br>&quot;<br></td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=5918">highlight.vim</a></td>
-    <td class="roweven" valign="top" nowrap><b>1.0</b></td>
-    <td class="roweven" valign="top" nowrap><i>2006-07-05</i></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=5997">highlight.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.1</b></td>
+    <td class="roweven" valign="top" nowrap><i>2006-07-28</i></td>
     <td class="roweven" valign="top" nowrap>6.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=10357">Amit Sethi</a></i></td>
-    <td class="roweven" valign="top" width="2000">Initial upload</td>
+    <td class="roweven" valign="top" width="2000">Modified implementation of word highlight to override comments, etc.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=5918">highlight.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.0</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2006-07-05</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=10357">Amit Sethi</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Initial upload</td>
 </tr>
 </table>
 <!-- finish off the framework -->

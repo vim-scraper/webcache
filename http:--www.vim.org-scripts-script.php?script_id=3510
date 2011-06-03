@@ -167,7 +167,7 @@
   <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
   <td>
     Rating <b>8/4</b>,
-    Downloaded by 110  </td>
+    Downloaded by 145  </td>
   <td class="lightbg">
   <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
   </td>
@@ -186,10 +186,10 @@
 <tr><td>utility</td></tr>
 <tr><td>&nbsp;</td></tr>
 <tr><td class="prompt">description</td></tr>
-<tr><td>VimRepress is a plugin for managing wordpress blog from Vim,&nbsp;&nbsp;a rewritten&nbsp;&nbsp;of <a href="/scripts/script.php?script_id=1953">vimscript #1953</a> , which is broken for years.<br><br>Usage is simple, add commands listed:<br><br> :BlogList [&lt;count&gt;]<br> :BlogNew<br> :BlogOpen &lt;id&gt;<br> :BlogSave &lt;draft|publish&gt;<br> :BlogPreview &lt;draft|publish&gt;<br> :BlogUpload &lt;file&gt;<br> :BlogCode [&lt;code type&gt;]<br> :MarkdownPreview<br> :MarkdownNewPost<br><br>More detailed about this commands, type :help vimpress while you have vimrepress installed.<br><br>Release Note:&nbsp;&nbsp;<a target="_blank" href="http://apt-blog.net/manage-multiple-wordpresses-with-new-vimpress">http://apt-blog.net/manage-multiple-wordpresses-with-new-vimpress</A><br>SVN Version:&nbsp;&nbsp;svn checkout <a target="_blank" href="http://ptcoding.googlecode.com/svn/trunk/vimpress">http://ptcoding.googlecode.com/svn/trunk/vimpress</A><br><br></td></tr>
+<tr><td>VimRepress is a plugin for managing wordpress blog from Vim,&nbsp;&nbsp;a rewritten&nbsp;&nbsp;of <a href="/scripts/script.php?script_id=1953">vimscript #1953</a> , which is broken for years. <br><br>Now VimRepress lives with more powerful again. <br><br>*REQUIREMENT* <br><br>- Vim 7.3+ with python 2.6/2.7 support <br>- Python Environment matched wtih Vim's support <br>- python-markdown/python-markdown2 lib installed <br><br><br><br>COMMAND EXAMPLES <br><br>Some commands list above contain special usage, example below may clearify them for you. <br><br><br>&nbsp;&nbsp;&nbsp;&nbsp;:BlogList&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -&nbsp;&nbsp;List 30 recent posts. <br>&nbsp;&nbsp;&nbsp;&nbsp;:BlogList page&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;List 30 recent pages. <br>&nbsp;&nbsp;&nbsp;&nbsp;:BlogList post 100&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;List 100 recent posts. <br><br>&nbsp;&nbsp;&nbsp;&nbsp;:BlogNew post&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -&nbsp;&nbsp;Write an new post. <br>&nbsp;&nbsp;&nbsp;&nbsp;:BlogNew page&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -&nbsp;&nbsp;Write an new page. <br><br>&nbsp;&nbsp;&nbsp;&nbsp;:BlogSave&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -&nbsp;&nbsp;Save (defautely published.) <br>&nbsp;&nbsp;&nbsp;&nbsp;:BlogSave draft&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -&nbsp;&nbsp;Save as draft. <br><br>&nbsp;&nbsp;&nbsp;&nbsp;:BlogPreview local&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;Preview page/post locally in your browser. <br>&nbsp;&nbsp;&nbsp;&nbsp;:BlogPreview publish&nbsp;&nbsp;-&nbsp;&nbsp;Same as `:BlogSave publish' with brower opened. <br><br>&nbsp;&nbsp;&nbsp;&nbsp;:BlogOpen 679 <br>&nbsp;&nbsp;&nbsp;&nbsp;:BlogOpen <a target="_blank" href="http://your-first-blog.com/archives/679">http://your-first-blog.com/archives/679</A> <br>&nbsp;&nbsp;&nbsp;&nbsp;:BlogOpen <a target="_blank" href="http://your-second-blog.com/?p=679">http://your-second-blog.com/?p=679</A> <br>&nbsp;&nbsp;&nbsp;&nbsp;:BlogOpen <a target="_blank" href="http://your-third-blog.com/with-your-custom-permalink">http://your-third-blog.com/with-your-custom-permalink</A> <br><br>More detailed about this commands, type :help vimpress while you have vimrepress installed. <br><br>Developing Repository:&nbsp;&nbsp;<a target="_blank" href="https://bitbucket.org/pentie/vimrepress">https://bitbucket.org/pentie/vimrepress</A></td></tr>
 <tr><td>&nbsp;</td></tr>
 <tr><td class="prompt">install details</td></tr>
-<tr><td>*INSTALL*<br><br>Download vimpress-1.x.x.zip, extract it in your .vim directory:<br><br>&nbsp;&nbsp;cd ~/.vim<br>&nbsp;&nbsp;unzip /where/you/downlaod/vimpress-1.x.x.zip<br><br>*CONFIGURE*<br><br>Edit ~/.vimrc , add a variable name VIMPRESS. Multiple blogs Config are supported, written as array list.<br><br>let VIMPRESS=[{'username':'user',<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; \&#039password':'pass',<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; \&#039blog_url':'<a target="_blank" href="http://your-first-blog.com/">http://your-first-blog.com/</A>'<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; \},<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; \{'username':'user',<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; \&#039password':'pass',<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; \&#039blog_url':'<a target="_blank" href="http://your-second-blog.com/">http://your-second-blog.com/</A>'<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; \}]<br><br>Then save and quit, reopen a vim, you may use commands list in |USING|.<br></td></tr>
+<tr><td>*INSTALL* <br><br>Download vimpress_2.x.x.zip, extract it in your .vim directory: <br><br>&nbsp;&nbsp;cd ~/.vim <br>&nbsp;&nbsp;unzip /path/to/vimpress_2.x.x.zip <br><br>*CONFIGURE* <br><br>Edit ~/.vimrc , add a variable named VIMPRESS. Multiple blog configurations are supported. <br><br>Example: <br><br>let VIMPRESS = [{'username':'user', <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'password':'pass', <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'blog_url':'<a target="_blank" href="http://your-first-blog.com/">http://your-first-blog.com/</A>' <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\}, <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\{'username':'user', <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'blog_url':'<a target="_blank" href="http://your-second-blog.com/">http://your-second-blog.com/</A>' <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\}] <br><br>Hardcoding the password is optional. If a password is not provided the plugin <br>will prompt for one the first time it's needed. <br><br>If you need Markdown support, simply run `sudo apt-get install python-markdown' in Ubuntu. <br><br>If you use other distributions (or OSs), refer to your package manager or the python-markdown <br>project page: <a target="_blank" href="http://www.freewisdom.org/projects/python-markdown/Installation">http://www.freewisdom.org/projects/python-markdown/Installation</A> <br></td></tr>
 <tr><td>&nbsp;</td></tr>
 </table>
 
@@ -223,20 +223,20 @@ Click on the package to download.
     <th valign="top">release notes</th>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15311">vimpress-1.3.0_r68.zip</a></td>
-    <td class="rowodd" valign="top" nowrap><b>1.3.0</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2011-03-28</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15764">vimpress_2.1.0_r41_355e2b15f571.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.1.0</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2011-05-30</i></td>
     <td class="rowodd" valign="top" nowrap>7.3</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=20352">Preston Masion</a></i></td>
-    <td class="rowodd" valign="top" width="2000">Add markdown support.</td>
+    <td class="rowodd" valign="top" width="2000">Fully Markdown Support;<br>Use wordpress attachment to store raw markdown text;</td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=15241">vimpress_1.2.5-r55.zip</a></td>
-    <td class="roweven" valign="top" nowrap><b>1.2.5</b></td>
-    <td class="roweven" valign="top" nowrap><i>2011-03-18</i></td>
-    <td class="roweven" valign="top" nowrap>7.0</td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=15311">vimpress-1.3.0_r68.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.3.0</b></td>
+    <td class="roweven" valign="top" nowrap><i>2011-03-28</i></td>
+    <td class="roweven" valign="top" nowrap>7.3</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=20352">Preston Masion</a></i></td>
-    <td class="roweven" valign="top" width="2000">Initial upload</td>
+    <td class="roweven" valign="top" width="2000">Add markdown support.</td>
 </tr>
 </table>
 <!-- finish off the framework -->

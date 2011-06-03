@@ -3,7 +3,7 @@
 
 <head>
   <link rel="Stylesheet" type="text/css" href="/css/style.css" >
-  <title>PairTools - Auto close pairs and more : vim online</title>
+  <title>PairTools - Auto close pairs and tags : vim online</title>
   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
   <meta name="KEYWORDS" content="Vim, Vi IMproved, text editor, home, documentation, tips, scripts, news">
   <link rel="shortcut icon" type="image/x-icon" href="/images/vim_shortcut.ico">
@@ -156,7 +156,7 @@
         <tr>
           <td valign="top">
 
-<span class="txth1">PairTools : Auto close pairs and more</span> 
+<span class="txth1">PairTools : Auto close pairs and tags</span> 
 
 <br>
 <br>
@@ -167,7 +167,7 @@
   <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
   <td>
     Rating <b>17/5</b>,
-    Downloaded by 65  </td>
+    Downloaded by 125  </td>
   <td class="lightbg">
   <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
   </td>
@@ -186,10 +186,10 @@
 <tr><td>utility</td></tr>
 <tr><td>&nbsp;</td></tr>
 <tr><td class="prompt">description</td></tr>
-<tr><td>This is yet another auto-closing pair tools. All configurations are handled per filetype using a 'filetype'.vim file inside the user ftplugin directory.<br><br>See the accompanying help file for more details and examples.</td></tr>
+<tr><td>The PairTools plugin can be seen as a &quot;bundle&quot; of tools to handle various<br>&quot;pair&quot; operations. It also offers a flexible way to set pairs and options per<br>filetypes. Therefore, it is possible to have pairs and options set for editing <br>C++ files while also editing XML files with other pairs and options inside the<br>same window.<br><br>The plugin is modular, i.e. related features are grouped inside a module, and <br>other related features inside others groups. In the current version, there are <br>three modules: pairclamp.vim, tagwrench.vim and jigsaw.vim.<br><br>The PairClamp module works with single characters pairs such as (,). The<br>TagWrench module works with angle brackets &lt;,&gt; and tags &lt;tagname&gt;. The Jigsaw<br>module coordinates some key maps between PairClamp and TagWrench, such as when<br>pressing backspace and calling the right hook function. The pairtools.vim file <br>defines autocmds, mappings and options to make all the modules work.<br><br>See details at: <a target="_blank" href="https://github.com/MartinLafreniere/vim-PairTools">https://github.com/MartinLafreniere/vim-PairTools</A><br></td></tr>
 <tr><td>&nbsp;</td></tr>
 <tr><td class="prompt">install details</td></tr>
-<tr><td>Simply drop pairtools.vim inside the user plugin directory and pairtools.txt into the user doc directory. Then use helptags to install pairtools as a help file.</td></tr>
+<tr><td>Use the vimball: vim pairtools.vba followed by :so % and :quit.</td></tr>
 <tr><td>&nbsp;</td></tr>
 </table>
 
@@ -223,12 +223,36 @@ Click on the package to download.
     <th valign="top">release notes</th>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15511">pairtools.zip</a></td>
-    <td class="rowodd" valign="top" nowrap><b>1.0</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2011-04-23</i></td>
-    <td class="rowodd" valign="top" nowrap>7.3</td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15756">pairtools.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.5.2</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2011-05-29</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=29856">Martin Lafreniere</a></i></td>
-    <td class="rowodd" valign="top" width="2000">Initial upload</td>
+    <td class="rowodd" valign="top" width="2000">Added TagWrench support for namespace and to use the hyphen inside a tag name<br>Fix various minor bugs.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=15687">pairtools.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.5.1</b></td>
+    <td class="roweven" valign="top" nowrap><i>2011-05-20</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=29856">Martin Lafreniere</a></i></td>
+    <td class="roweven" valign="top" width="2000">Fixed case sensitiveness with autoload function call for case sensitive filesystem such as linux ext*.<br>A few minor bug fixes.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15672">pairtools.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.5</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2011-05-18</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=29856">Martin Lafreniere</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Major plugin rework, see accompanying help file.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=15511">pairtools.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.0</b></td>
+    <td class="roweven" valign="top" nowrap><i>2011-04-23</i></td>
+    <td class="roweven" valign="top" nowrap>7.3</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=29856">Martin Lafreniere</a></i></td>
+    <td class="roweven" valign="top" width="2000">Initial upload</td>
 </tr>
 </table>
 <!-- finish off the framework -->

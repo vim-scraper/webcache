@@ -166,8 +166,8 @@
 <tr>
   <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
   <td>
-    Rating <b>267/69</b>,
-    Downloaded by 850  </td>
+    Rating <b>295/76</b>,
+    Downloaded by 914  </td>
   <td class="lightbg">
   <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
   </td>
@@ -186,10 +186,10 @@
 <tr><td>ftplugin</td></tr>
 <tr><td>&nbsp;</td></tr>
 <tr><td class="prompt">description</td></tr>
-<tr><td>WOIM is a methodology to describe anything - any state, item(s), pattern, action, process, transition, program, instruction set etc. So, you can use it as an outliner, a ToDo list handler, a process design tool, a data modeler, or any other way you want to describe something.<br><br>This plugin does both highlighting and various automatic handling of WOIM lists, like collapsing lists or parts of lists in a sophisticated way.<br><br>For information on WOIM, read the WOIM description in full:<br><br> <a target="_blank" href="http://isene.com/woim.pdf">http://isene.com/woim.pdf</A><br><br>INSTRUCTIONS<br><br>Use tabs/shifts or * for indentations<br><br>Use &lt;SPACE&gt; to toggle one fold<br>Use \0 to \9, \a, \b, \c, \d, \e, \f to show up to 15 levels expanded<br><br>Use &lt;leader&gt;s to remove underlining of States (prefixed with S:)<br>Use &lt;leader&gt;S to add underlining of States (prefixed with S:)<br>Use &lt;leader&gt;t to remove underlining of Transitions (prefixed with T:)<br>Use &lt;leader&gt;T to add underlining of Transitions (prefixed with T:)<br><br>Use &lt;leader&gt;&lt;SPACE&gt; to go to the next open template element<br>(A template element is a WOIM item ending in an equal sign)<br><br>Syntax updated at start and every time you leave Insert mode<br></td></tr>
+<tr><td>It's an Outliner, a TODO-list solution, a project management tool, a Business Process Management aid, a data modeler, a Use Case facilitator, a way to describe the human DNA or the history of the universe ;)<br><br>WOIM is a methodology to describe anything - any state, item(s), pattern, action, process, transition, program, instruction set etc.<br><br>This plugin does both highlighting and various automatic handling of WOIM lists, like collapsing lists or parts of lists in a sophisticated way.<br><br>For information on WOIM, read the WOIM description in full:<br><br> <a target="_blank" href="http://isene.com/woim.pdf">http://isene.com/woim.pdf</A><br><br>INSTRUCTIONS<br><br>Use tabs/shifts or * for indentations<br><br>Use &lt;SPACE&gt; to toggle one fold<br>Use \0 to \9, \a, \b, \c, \d, \e, \f to show up to 15 levels expanded<br><br>Use &lt;leader&gt;s to remove underlining of States (prefixed with S:)<br>Use &lt;leader&gt;S to add underlining of States (prefixed with S:)<br>Use &lt;leader&gt;t to remove underlining of Transitions (prefixed with T:)<br>Use &lt;leader&gt;T to add underlining of Transitions (prefixed with T:)<br><br>Use &lt;leader&gt;v to add a checkbox at start of item or to toggle a checkbox<br>Use &lt;leader&gt;V to add/toggle a checkbox with a date stamp for completion<br><br>Use &quot;gr&quot; (without the quotation marks, signifies &quot;Goto Ref&quot;) while the cursor is on a WOIM reference to jump to that destination in a WOIM list. Use &quot;n&quot; after a &quot;gr&quot; to verify that the reference destination is unique.<br><br>Use &lt;leader&gt;&lt;SPACE&gt; to go to the next open template element<br>(A template element is a WOIM item ending in an equal sign)<br><br>Syntax updated at start and every time you leave Insert mode<br></td></tr>
 <tr><td>&nbsp;</td></tr>
 <tr><td class="prompt">install details</td></tr>
-<tr><td>Drop the file in the syntax directory. Add the following to your .vimrc file or create a file named woim.vim with the following and drop that file in the ftdetect directory:<br><br>au BufRead,BufNewFile *.woim set filetype=woim</td></tr>
+<tr><td>Download woim.vba. Then do:<br><br>vim woim.vba<br>:so %<br>:q<br><br>Then read the file README_WOIM that appears in your .vim directory.</td></tr>
 <tr><td>&nbsp;</td></tr>
 </table>
 
@@ -221,6 +221,54 @@ Click on the package to download.
     <th valign="top">Vim version</th>
     <th valign="top">user</th>
     <th valign="top">release notes</th>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15796">woim.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.4.7</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2011-06-02</i></td>
+    <td class="rowodd" valign="top" nowrap>7.3</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=8378">Geir Isene</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Changes:<br> Modified the GotoRef function (fixed a bug and included feed back)<br> Better syntax highlighting for folding in gvim<br> Updating the README_WOIM and documentation files + other cosmetic changes<br> Added the possibility of disabling/overriding the WOIM plugin key mapping<br> Added an ftdetect file into woim.vba<br> (Thanks to Sergey Khorev for the last two improvements)</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=15787">woim.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>1,4,6</b></td>
+    <td class="roweven" valign="top" nowrap><i>2011-05-31</i></td>
+    <td class="roweven" valign="top" nowrap>7.3</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=8378">Geir Isene</a></i></td>
+    <td class="roweven" valign="top" width="2000">Perfection:&nbsp;&nbsp; Minor fixes due to a bout of perfectionism.<br><br>At this point I have nothing on the todo list - no fixes to be done and no features I want to implement.<br>So, I am looking for your input as inspiration to take this even further :)</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15768">woim.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.4.5</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2011-05-30</i></td>
+    <td class="rowodd" valign="top" nowrap>7.3</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=8378">Geir Isene</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Major Update; <br><br>Overhaul:<br><br>Created the documentation, includin the whole WOIM definition to make it<br>easily accessible within VIM.&nbsp;&nbsp;Added the INSTALL and README files.<br><br>Created a Vimball file (&quot;woim.vba&quot;) for easy install. Simply do:<br><br>vim woim.vba<br>:so %<br>:q</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=15758">woim.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.4.2</b></td>
+    <td class="roweven" valign="top" nowrap><i>2011-05-29</i></td>
+    <td class="roweven" valign="top" nowrap>5.7</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=8378">Geir Isene</a></i></td>
+    <td class="roweven" valign="top" width="2000">Fixes in 1.4.2:<br><br>Fixed &quot;gr&quot; (Goto Ref) for references with single quotes ('')<br><br>Added the search pattern from &quot;gr&quot; to the search register (&quot;/) so that &quot;n&quot; can successively be used to test if the referenced destination is unique (which it should be). </td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15743">woim.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.4.1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2011-05-27</i></td>
+    <td class="rowodd" valign="top" nowrap>5.7</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=8378">Geir Isene</a></i></td>
+    <td class="rowodd" valign="top" width="2000">New feature: <br><br>Goto Reference: With the cursor at a WOIM reference, press &quot;gr&quot; to jump to that reference in the WOIM list.<br><br>Now you can navigate more easily in WOIM lists.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=15699">woim.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.4</b></td>
+    <td class="roweven" valign="top" nowrap><i>2011-05-23</i></td>
+    <td class="roweven" valign="top" nowrap>5.7</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=8378">Geir Isene</a></i></td>
+    <td class="roweven" valign="top" width="2000">This could have been the long awaited version 1.0 - but instead I decided to synchronize the version numbering of this VIM plugin and the WOIM description itself. From now on the releases will be synchronized, with minor fixes in the VIM plugin released as minor releases (i.e. a fix to 1.4 would be 1.4.1 and would still be on par with the WOIM definition version 1.4). The version 1.4 of the WOIM definition adds time repetition as well as &quot;checking&quot; of todo-list items.<br><br>This release:<br><br>New feature: Added the option of checkboxes for items (Thanks to Christopher Truett (VIM script #3584). You can now easily add a checkbox in front of any item by &lt;leader&gt;v and subsequently toggle that checkbox via the same (&lt;leader&gt;v) or &lt;leader&gt;V if you want to add a time stamp to a box that you &quot;check&quot; (this also toggles the timestamp if you &quot;uncheck&quot; the item).<br><br>Fixes: Some minor cleanup.</td>
 </tr>
 <tr>
         <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15465">woim.vim</a></td>

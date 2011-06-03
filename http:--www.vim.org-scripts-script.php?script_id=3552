@@ -167,7 +167,7 @@
   <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
   <td>
     Rating <b>1/1</b>,
-    Downloaded by 112  </td>
+    Downloaded by 150  </td>
   <td class="lightbg">
   <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
   </td>
@@ -186,10 +186,10 @@
 <tr><td>utility</td></tr>
 <tr><td>&nbsp;</td></tr>
 <tr><td class="prompt">description</td></tr>
-<tr><td>This plugin allows the simplification of repetitive code fragments, allowing<br>much faster entry; for example, this text<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;getset&nbsp;&nbsp;List&lt;String&gt;&nbsp;&nbsp;names<br><br>gets converted to<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public List&lt;String&gt; getNames()<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return m_names;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public void setNames( List&lt;String&gt; val )<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;m_names = val;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br><br>More importantly, it figures out when you're defining a boolean variable and<br>replaces the &quot;get&quot; with &quot;is&quot;; thus,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;getset&nbsp;&nbsp;boolean&nbsp;&nbsp;old enough<br><br>becomes<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public boolean isOldEnough()<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return m_oldEnough;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public void setOldEnough( boolean val )<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;m_oldEnough = val;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br><br>Observe how &quot;old enough&quot; was automatically camel-cased to &quot;oldEnough&quot;, and,<br>when used with &quot;get&quot; or &quot;is&quot;, was also capitalized. The same variable can be<br>used over and over again, each time with (if desired) different formatting<br>directives; for example, this template pattern<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;My name is {john::f_fName} and my full name is {{fName} smith::uq_fullName}.<br><br>gets expanded to<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;My name is John and my full name is &quot;JOHN SMITH&quot;.<br><br>Observe, also, how the &quot;fullName&quot; directive recursively contained and expanded<br>the fName directive.</td></tr>
+<tr><td>This plugin allows the simplification of repetitive code fragments, allowing<br>much faster entry; for example, this text<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;getset&nbsp;&nbsp;List&lt;String&gt;&nbsp;&nbsp;names<br><br>gets converted to<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public List&lt;String&gt; getNames()<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return m_names;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public void setNames( List&lt;String&gt; val )<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;m_names = val;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br><br>More importantly, it figures out when you're defining a boolean variable and<br>replaces the &quot;get&quot; with &quot;is&quot;; thus,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;getset&nbsp;&nbsp;boolean&nbsp;&nbsp;old enough<br><br>becomes<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public boolean isOldEnough()<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return m_oldEnough;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public void setOldEnough( boolean val )<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;m_oldEnough = val;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br><br>Observe how &quot;old enough&quot; was automatically camel-cased to &quot;oldEnough&quot;, and,<br>when used with &quot;get&quot; or &quot;is&quot;, was also capitalized. The same variable can be<br>used over and over again, each time with (if desired) different formatting<br>directives; for example, this template pattern<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;My name is {john::f_fName} and my full name is {{fName} smith::uq_fullName}.<br><br>gets expanded to<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;My name is John and my full name is &quot;JOHN SMITH&quot;.<br><br>Observe, also, how the &quot;fullName&quot; directive recursively contained and expanded<br>the fName directive.<br><br>In the &quot;getset&quot; example, the &quot;get&quot; is defined as:<br><br>Addlocaltemplate get public {::type} {eval '{type}' ==? 'boolean' ? 'is' : 'get'::get}{::cf_property}()\n{\nreturn m_{c_property};\n}<br><br>The &quot;set&quot; is defined as:<br><br>Addlocaltemplate set public void set{::cf_property}( {::type} val )\n{\nm_{c_property} = val;\n}<br><br>And the &quot;getset&quot; is defined simply as:<br><br>Addlocaltemplate getset {tem get::getTem}\n\n{tem set::setTem}<br><br>This allows &quot;get&quot; and &quot;set&quot; to be used independently (for read-only or write-only properties, for example) and doesn't require duplication of code to define a separate &quot;getset&quot;.</td></tr>
 <tr><td>&nbsp;</td></tr>
 <tr><td class="prompt">install details</td></tr>
-<tr><td>Unzip into a directory in your &runtimepath.</td></tr>
+<tr><td>Source the Vimball archive.</td></tr>
 <tr><td>&nbsp;</td></tr>
 </table>
 
@@ -223,108 +223,116 @@ Click on the package to download.
     <th valign="top">release notes</th>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15612">MessageFormatter.vba</a></td>
-    <td class="rowodd" valign="top" nowrap><b>7.0</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2011-05-09</i></td>
-    <td class="rowodd" valign="top" nowrap>7.3</td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15627">MessageFormatter.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>7.5</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2011-05-12</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=64">Salman Halim</a></i></td>
-    <td class="rowodd" valign="top" width="2000">New option: g:MessageFormatter_moveArgumentsToStart; if 1 (the default), input arguments are moved to the front for easier expansion. See :help<br>g:MessageFormatter_moveArgumentsToStart for details.<br><br>More new options: g:MessageFormatter_highlightDirectives and g:MessageFormatter_highlightDirectivesLink; control the highlighting of directives in text to<br>make them stand out.<br><br>New command: Setcolordirectives: toggles the directive highlighting feature.<br></td>
+    <td class="rowodd" valign="top" width="2000">New special value: &quot;tem&quot; to include other template definitions inline; see :help MessageFormatter_tem.<br></td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=15600">MessageFormatter.vba</a></td>
-    <td class="roweven" valign="top" nowrap><b>6.5</b></td>
-    <td class="roweven" valign="top" nowrap><i>2011-05-07</i></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=15612">MessageFormatter.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>7.0</b></td>
+    <td class="roweven" valign="top" nowrap><i>2011-05-09</i></td>
     <td class="roweven" valign="top" nowrap>7.3</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=64">Salman Halim</a></i></td>
-    <td class="roweven" valign="top" width="2000">New modifier:<br><br>o: if the value is non-empty, prepends a &quot;, &quot; (a comma and a space); otherwise, leaves it empty<br>P: Just like 'p', but ignores empty strings<br>Q: Just like 'q', but ignores empty strings<br></td>
+    <td class="roweven" valign="top" width="2000">New option: g:MessageFormatter_moveArgumentsToStart; if 1 (the default), input arguments are moved to the front for easier expansion. See :help<br>g:MessageFormatter_moveArgumentsToStart for details.<br><br>More new options: g:MessageFormatter_highlightDirectives and g:MessageFormatter_highlightDirectivesLink; control the highlighting of directives in text to<br>make them stand out.<br><br>New command: Setcolordirectives: toggles the directive highlighting feature.<br></td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15589">MessageFormatter.vba</a></td>
-    <td class="rowodd" valign="top" nowrap><b>6.0</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2011-05-05</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15600">MessageFormatter.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>6.5</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2011-05-07</i></td>
     <td class="rowodd" valign="top" nowrap>7.3</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=64">Salman Halim</a></i></td>
-    <td class="rowodd" valign="top" width="2000">Added an option: g:MessageFormatter_autoAddJumpToEnd; if this is 1 (the default) and if a parameter contains !jump! directives, another !jump! is added to the end to allow the user to quickly continue typing beyond the template. See :help g:MessageFormatter_autoAddJumpToEnd.<br></td>
+    <td class="rowodd" valign="top" width="2000">New modifier:<br><br>o: if the value is non-empty, prepends a &quot;, &quot; (a comma and a space); otherwise, leaves it empty<br>P: Just like 'p', but ignores empty strings<br>Q: Just like 'q', but ignores empty strings<br></td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=15581">MessageFormatter.vba</a></td>
-    <td class="roweven" valign="top" nowrap><b>5.5</b></td>
-    <td class="roweven" valign="top" nowrap><i>2011-05-04</i></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=15589">MessageFormatter.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>6.0</b></td>
+    <td class="roweven" valign="top" nowrap><i>2011-05-05</i></td>
     <td class="roweven" valign="top" nowrap>7.3</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=64">Salman Halim</a></i></td>
-    <td class="roweven" valign="top" width="2000">Fixed bug in default processing.<br><br>Improved help and added examples to help (:help MessageFormatter_Examples).<br></td>
+    <td class="roweven" valign="top" width="2000">Added an option: g:MessageFormatter_autoAddJumpToEnd; if this is 1 (the default) and if a parameter contains !jump! directives, another !jump! is added to the end to allow the user to quickly continue typing beyond the template. See :help g:MessageFormatter_autoAddJumpToEnd.<br></td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15576">MessageFormatter.vba</a></td>
-    <td class="rowodd" valign="top" nowrap><b>5.0</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2011-05-03</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15581">MessageFormatter.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>5.5</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2011-05-04</i></td>
     <td class="rowodd" valign="top" nowrap>7.3</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=64">Salman Halim</a></i></td>
-    <td class="rowodd" valign="top" width="2000">Added a default value mechanism: if a template variable is defined like this:<br><br>{def John::firstName}<br><br>then, during expansion, if an empty value is passed in for firstName, &quot;John&quot; will be used instead. This value can be recursive and may contain other<br>parameters, as before. (Including other &quot;def&quot; expansions.)<br><br>Also, parameters with default values may be left out to have their default value used; see :help MessageFormatter_def for more details.<br></td>
+    <td class="rowodd" valign="top" width="2000">Fixed bug in default processing.<br><br>Improved help and added examples to help (:help MessageFormatter_Examples).<br></td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=15566">MessageFormatter.vba</a></td>
-    <td class="roweven" valign="top" nowrap><b>4.5</b></td>
-    <td class="roweven" valign="top" nowrap><i>2011-05-02</i></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=15576">MessageFormatter.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>5.0</b></td>
+    <td class="roweven" valign="top" nowrap><i>2011-05-03</i></td>
     <td class="roweven" valign="top" nowrap>7.3</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=64">Salman Halim</a></i></td>
-    <td class="roweven" valign="top" width="2000">Bug fixes, mostly, though added one more option:<br><br>g:MessageFormatter_formatCurrentLineAsFallback (default 1): if attempting to format a template via the &lt;Plug&gt;FormatCurrentTemplate mapping when not actually<br>in a template, will fall back to formatting just the current line as an ad-hoc template if this is 1. If 0, will give an error message instead.<br></td>
+    <td class="roweven" valign="top" width="2000">Added a default value mechanism: if a template variable is defined like this:<br><br>{def John::firstName}<br><br>then, during expansion, if an empty value is passed in for firstName, &quot;John&quot; will be used instead. This value can be recursive and may contain other<br>parameters, as before. (Including other &quot;def&quot; expansions.)<br><br>Also, parameters with default values may be left out to have their default value used; see :help MessageFormatter_def for more details.<br></td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15548">MessageFormatter.vba</a></td>
-    <td class="rowodd" valign="top" nowrap><b>4.0</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2011-04-30</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15566">MessageFormatter.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>4.5</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2011-05-02</i></td>
     <td class="rowodd" valign="top" nowrap>7.3</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=64">Salman Halim</a></i></td>
-    <td class="rowodd" valign="top" width="2000">Added a proper help file; no actual functionality changes.</td>
+    <td class="rowodd" valign="top" width="2000">Bug fixes, mostly, though added one more option:<br><br>g:MessageFormatter_formatCurrentLineAsFallback (default 1): if attempting to format a template via the &lt;Plug&gt;FormatCurrentTemplate mapping when not actually<br>in a template, will fall back to formatting just the current line as an ad-hoc template if this is 1. If 0, will give an error message instead.<br></td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=15543">MessageFormatter.vba</a></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=15548">MessageFormatter.vba</a></td>
     <td class="roweven" valign="top" nowrap><b>4.0</b></td>
-    <td class="roweven" valign="top" nowrap><i>2011-04-29</i></td>
+    <td class="roweven" valign="top" nowrap><i>2011-04-30</i></td>
     <td class="roweven" valign="top" nowrap>7.3</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=64">Salman Halim</a></i></td>
-    <td class="roweven" valign="top" width="2000">Templates can be expanded inline while typing, allowing for macro expansion.</td>
+    <td class="roweven" valign="top" width="2000">Added a proper help file; no actual functionality changes.</td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15484">MessageFormatter.zip</a></td>
-    <td class="rowodd" valign="top" nowrap><b>3.5</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2011-04-20</i></td>
-    <td class="rowodd" valign="top" nowrap>7.0</td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15543">MessageFormatter.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>4.0</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2011-04-29</i></td>
+    <td class="rowodd" valign="top" nowrap>7.3</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=64">Salman Halim</a></i></td>
-    <td class="rowodd" valign="top" width="2000">Added a command version of FormatContainedMessage called Formatcontainedmessage that passes everything on the command-line as-is to the function and echoes<br>the result.<br><br>Added a new default value type:<br><br>If the default value for for a parameter (passed to FormatContainedMessage) is &quot;ask&quot;, it defaults to asking the user (via an input). If the value is anything<br>followed by &quot;ask&quot;, it will use that as the default value for the input.<br></td>
+    <td class="rowodd" valign="top" width="2000">Templates can be expanded inline while typing, allowing for macro expansion.</td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=15481">MessageFormatter.zip</a></td>
-    <td class="roweven" valign="top" nowrap><b>3.0</b></td>
-    <td class="roweven" valign="top" nowrap><i>2011-04-19</i></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=15484">MessageFormatter.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>3.5</b></td>
+    <td class="roweven" valign="top" nowrap><i>2011-04-20</i></td>
     <td class="roweven" valign="top" nowrap>7.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=64">Salman Halim</a></i></td>
-    <td class="roweven" valign="top" width="2000">Fairly big changes. RELIES UPON MY GetVar.vim (<a target="_blank" href="http://vim.sourceforge.net/scripts/script.php?script_id=353">http://vim.sourceforge.net/scripts/script.php?script_id=353</A>) script now.<br><br>New formatting parameter:<br><br>n: non-displayed value. The return value is suppressed--useful for adding a value to the cache to be used later.<br><br>New function:<br><br>FormatContainedMessage: Works like MessageFormatter#FormatMessage except that it's always recursive and that its original text string can contain default<br>values for the parameters (so the second parameter is optional); for example,<br><br>Some new commands, also.</td>
+    <td class="roweven" valign="top" width="2000">Added a command version of FormatContainedMessage called Formatcontainedmessage that passes everything on the command-line as-is to the function and echoes<br>the result.<br><br>Added a new default value type:<br><br>If the default value for for a parameter (passed to FormatContainedMessage) is &quot;ask&quot;, it defaults to asking the user (via an input). If the value is anything<br>followed by &quot;ask&quot;, it will use that as the default value for the input.<br></td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15440">MessageFormatter.vim</a></td>
-    <td class="rowodd" valign="top" nowrap><b>2.0</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2011-04-12</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15481">MessageFormatter.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>3.0</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2011-04-19</i></td>
     <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=64">Salman Halim</a></i></td>
-    <td class="rowodd" valign="top" width="2000">Added new formatting modifier:<br><br>e: Escapes out quotation marks (&quot;) and backslashes, leaving the value suitable for placing in quotes. For example, {e_fName} where fName is Jo\nhn results in<br>Jo\\nhn.<br><br>If an expansion parameter starts with &quot;eval &quot;, the rest of the value is evaluated and the return value used as the actual parameter value. If recursion is on,<br>that value may contain further parameters.<br><br>Example:<br><br>echo MessageFormatter#FormatMessage('public static final {type} {C_variable} = {value};', {'type':'eval input(&quot;Type for {variable}: &quot;, &quot;String&quot;)', 'variable':'eval input(&quot;Variable name: &quot;)', 'value':'eval input(&quot;Value: &quot;, &quot;\&quot;{C_variable}\&quot;&quot;)'}, 1)<br><br>Bear in mind that 'type' and 'value' both use the parameter 'variable'. If 'variable' were to refer to either of these, you'd have circular recursion. There<br>is no check in place for that; you'd just end up with a stack overflow.<br><br>Note, also, that the expression is evaluated only once. After that, its value is stored on the cache--this allows eval parameters to refer to other eval<br>parameters (only useful if recursion is on).<br></td>
+    <td class="rowodd" valign="top" width="2000">Fairly big changes. RELIES UPON MY GetVar.vim (<a target="_blank" href="http://vim.sourceforge.net/scripts/script.php?script_id=353">http://vim.sourceforge.net/scripts/script.php?script_id=353</A>) script now.<br><br>New formatting parameter:<br><br>n: non-displayed value. The return value is suppressed--useful for adding a value to the cache to be used later.<br><br>New function:<br><br>FormatContainedMessage: Works like MessageFormatter#FormatMessage except that it's always recursive and that its original text string can contain default<br>values for the parameters (so the second parameter is optional); for example,<br><br>Some new commands, also.</td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=15430">MessageFormatter.vim</a></td>
-    <td class="roweven" valign="top" nowrap><b>1.5</b></td>
-    <td class="roweven" valign="top" nowrap><i>2011-04-11</i></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=15440">MessageFormatter.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.0</b></td>
+    <td class="roweven" valign="top" nowrap><i>2011-04-12</i></td>
     <td class="roweven" valign="top" nowrap>7.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=64">Salman Halim</a></i></td>
-    <td class="roweven" valign="top" width="2000">Added a cache so repeated expansions of the same variable can be looked up rather than computed (potentially much faster, especially when recursion is on).</td>
+    <td class="roweven" valign="top" width="2000">Added new formatting modifier:<br><br>e: Escapes out quotation marks (&quot;) and backslashes, leaving the value suitable for placing in quotes. For example, {e_fName} where fName is Jo\nhn results in<br>Jo\\nhn.<br><br>If an expansion parameter starts with &quot;eval &quot;, the rest of the value is evaluated and the return value used as the actual parameter value. If recursion is on,<br>that value may contain further parameters.<br><br>Example:<br><br>echo MessageFormatter#FormatMessage('public static final {type} {C_variable} = {value};', {'type':'eval input(&quot;Type for {variable}: &quot;, &quot;String&quot;)', 'variable':'eval input(&quot;Variable name: &quot;)', 'value':'eval input(&quot;Value: &quot;, &quot;\&quot;{C_variable}\&quot;&quot;)'}, 1)<br><br>Bear in mind that 'type' and 'value' both use the parameter 'variable'. If 'variable' were to refer to either of these, you'd have circular recursion. There<br>is no check in place for that; you'd just end up with a stack overflow.<br><br>Note, also, that the expression is evaluated only once. After that, its value is stored on the cache--this allows eval parameters to refer to other eval<br>parameters (only useful if recursion is on).<br></td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15428">MessageFormatter.vim</a></td>
-    <td class="rowodd" valign="top" nowrap><b>1.0</b></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15430">MessageFormatter.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.5</b></td>
     <td class="rowodd" valign="top" nowrap><i>2011-04-11</i></td>
-    <td class="rowodd" valign="top" nowrap>7.2</td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=64">Salman Halim</a></i></td>
-    <td class="rowodd" valign="top" width="2000">Initial upload</td>
+    <td class="rowodd" valign="top" width="2000">Added a cache so repeated expansions of the same variable can be looked up rather than computed (potentially much faster, especially when recursion is on).</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=15428">MessageFormatter.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.0</b></td>
+    <td class="roweven" valign="top" nowrap><i>2011-04-11</i></td>
+    <td class="roweven" valign="top" nowrap>7.2</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=64">Salman Halim</a></i></td>
+    <td class="roweven" valign="top" width="2000">Initial upload</td>
 </tr>
 </table>
 <!-- finish off the framework -->

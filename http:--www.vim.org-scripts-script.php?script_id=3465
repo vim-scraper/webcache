@@ -166,8 +166,8 @@
 <tr>
   <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
   <td>
-    Rating <b>211/58</b>,
-    Downloaded by 669  </td>
+    Rating <b>231/63</b>,
+    Downloaded by 857  </td>
   <td class="lightbg">
   <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
   </td>
@@ -223,52 +223,60 @@ Click on the package to download.
     <th valign="top">release notes</th>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15532">tagbar.vba</a></td>
-    <td class="rowodd" valign="top" nowrap><b>2.0.1</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2011-04-26</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15751">tagbar.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2011-05-29</i></td>
     <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=27049">Jan Larres</a></i></td>
-    <td class="rowodd" valign="top" width="2000">- Fixed sorting bug when 'ignorecase' is set</td>
+    <td class="rowodd" valign="top" width="2000">This is mostly a bug-fix release.<br><br>- Make Tagbar work in (hopefully) all cases under Windows<br><br>- Handle cases where 'encoding' is different from system encoding, for example on a Chinese Windows with 'encoding' set to &quot;utf-8&quot; (see manual for details in case it doesn't work out-of-the-box)<br><br>- Fixed a bug with the handling of subtypes like &quot;python.django&quot;<br><br>- If a session got saved with Tagbar open it now gets restored properly<br><br>- Locally reset foldmethod/foldexpr in case foldexpr got set to something expensive globally<br><br>- Tagbar now tries hard to go to the correct window when jumping to a tag<br><br>- Explain some possible issues with the current jsctags version in the manual<br><br>- Explicitly check for some possible configuration problems to be able to give better feedback<br><br>- A few other small fixes</td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=15529">tagbar.vba</a></td>
-    <td class="roweven" valign="top" nowrap><b>2.0</b></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=15532">tagbar.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.0.1</b></td>
     <td class="roweven" valign="top" nowrap><i>2011-04-26</i></td>
     <td class="roweven" valign="top" nowrap>7.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=27049">Jan Larres</a></i></td>
-    <td class="roweven" valign="top" width="2000">- Folding now works correctly. Folds will be preserved when leaving the Tagbar window and when switching between files. Also tag types can be configured to be folded by default, which is useful for things like includes and imports.<br><br>- DoctorJS/jsctags and other compatible programs are now supported.<br><br>- All of the highlight groups can now be overridden.<br><br>- Added keybinding to quickly jump to next/previous top-level tag.<br><br>- Added Taglist's &quot;p&quot; keybinding for jumping to a tag without leaving the Tagbar window.<br><br>- Several bugfixes and other small improvements.</td>
+    <td class="roweven" valign="top" width="2000">- Fixed sorting bug when 'ignorecase' is set</td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15165">tagbar.vba</a></td>
-    <td class="rowodd" valign="top" nowrap><b>1.5</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2011-03-06</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15529">tagbar.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.0</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2011-04-26</i></td>
     <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=27049">Jan Larres</a></i></td>
-    <td class="rowodd" valign="top" width="2000">- Type definitions can now include a path to a file with the ctags definition. This is especially useful for ftplugins that can now ship with a complete ctags and Tagbar configuration without requiring user intervention. Thanks to Jan Christoph Ebersbach for the suggestion.<br><br>- Added autofocus setting by Taybin Rutkin. This will put the cursor in the Tagbar window when it is opened.<br><br>- The &quot;scopes&quot; field is no longer needed in type definitions, the information is already there in &quot;scope2kind&quot;. Existing definitions will be ignored.<br><br>- Some fixes and improvements related to redrawing and window switching.</td>
+    <td class="rowodd" valign="top" width="2000">- Folding now works correctly. Folds will be preserved when leaving the Tagbar window and when switching between files. Also tag types can be configured to be folded by default, which is useful for things like includes and imports.<br><br>- DoctorJS/jsctags and other compatible programs are now supported.<br><br>- All of the highlight groups can now be overridden.<br><br>- Added keybinding to quickly jump to next/previous top-level tag.<br><br>- Added Taglist's &quot;p&quot; keybinding for jumping to a tag without leaving the Tagbar window.<br><br>- Several bugfixes and other small improvements.</td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=15133">tagbar.vba</a></td>
-    <td class="roweven" valign="top" nowrap><b>1.2</b></td>
-    <td class="roweven" valign="top" nowrap><i>2011-02-28</i></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=15165">tagbar.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.5</b></td>
+    <td class="roweven" valign="top" nowrap><i>2011-03-06</i></td>
     <td class="roweven" valign="top" nowrap>7.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=27049">Jan Larres</a></i></td>
-    <td class="roweven" valign="top" width="2000">- Fix typo in Ruby definition<br><br>Thanks to Mishail for reporting.</td>
+    <td class="roweven" valign="top" width="2000">- Type definitions can now include a path to a file with the ctags definition. This is especially useful for ftplugins that can now ship with a complete ctags and Tagbar configuration without requiring user intervention. Thanks to Jan Christoph Ebersbach for the suggestion.<br><br>- Added autofocus setting by Taybin Rutkin. This will put the cursor in the Tagbar window when it is opened.<br><br>- The &quot;scopes&quot; field is no longer needed in type definitions, the information is already there in &quot;scope2kind&quot;. Existing definitions will be ignored.<br><br>- Some fixes and improvements related to redrawing and window switching.</td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15121">tagbar.vba</a></td>
-    <td class="rowodd" valign="top" nowrap><b>1.1</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2011-02-26</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15133">tagbar.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.2</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2011-02-28</i></td>
     <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=27049">Jan Larres</a></i></td>
-    <td class="rowodd" valign="top" width="2000">- Don't lose syntax highlighting when ':syntax enable' is called<br><br>- Allow expanding the Vim window when Tagbar is opened<br><br>Thanks to Hansi for reporting.</td>
+    <td class="rowodd" valign="top" width="2000">- Fix typo in Ruby definition<br><br>Thanks to Mishail for reporting.</td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=15092">tagbar.vba</a></td>
-    <td class="roweven" valign="top" nowrap><b>1.0</b></td>
-    <td class="roweven" valign="top" nowrap><i>2011-02-23</i></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=15121">tagbar.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.1</b></td>
+    <td class="roweven" valign="top" nowrap><i>2011-02-26</i></td>
     <td class="roweven" valign="top" nowrap>7.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=27049">Jan Larres</a></i></td>
-    <td class="roweven" valign="top" width="2000">Initial upload</td>
+    <td class="roweven" valign="top" width="2000">- Don't lose syntax highlighting when ':syntax enable' is called<br><br>- Allow expanding the Vim window when Tagbar is opened<br><br>Thanks to Hansi for reporting.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15092">tagbar.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.0</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2011-02-23</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=27049">Jan Larres</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Initial upload</td>
 </tr>
 </table>
 <!-- finish off the framework -->

@@ -166,8 +166,8 @@
 <tr>
   <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
   <td>
-    Rating <b>0/0</b>,
-    Downloaded by 100  </td>
+    Rating <b>4/1</b>,
+    Downloaded by 142  </td>
   <td class="lightbg">
   <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
   </td>
@@ -186,7 +186,7 @@
 <tr><td>utility</td></tr>
 <tr><td>&nbsp;</td></tr>
 <tr><td class="prompt">description</td></tr>
-<tr><td>The biggest difference between UltraBlog.vim and other Vim blogging scripts is that UltraBlog.vim supplies two modes: the first one is editor mode, in which users can manage posts and pages in their blogs, just like other Vim blogging scripts; the second is client mode, in which posts and pages are stored in a local SQLite database, in this way, it does not only OPERATE on posts/pages in blogs but also MANAGE them locally. So UltraBlog.vim is an integrated blogging client more than just a blog editor.<br><br>You will find UltraBlog.vim very useful when you write posts in some light weight markup languages, such as Markdown, LaTeX, reStructuredText and Textile. With posts/pages stored locally, you can edit them in any light weight markup language at any time even after a long time when they were published, and update the online copies in HTML syntax. <br><br>This is the exact original intention for which I wrote UltraBlog.vim. After years of blogging, I've formed the habbit that writing posts in Markdown syntax to save time, and I think it is good to always keep my posts updated, rather than post it and forget it. But I found it hard to update the posted copies after modifying the local Markdown source files with other Vim blogging plugins. <br><br>Though it is packaged as a vimball and with a filename as UltraBlog.vba, I prefer UltraBlog.vim as the plugin’s name for that ‘.vim’ looks very hacker.<br><br>Here is a post written in Chinese describing the motion for which I wrote UltraBlog.vim:<br><br><a target="_blank" href="http://sinolog.it/?p=1976">http://sinolog.it/?p=1976</A><br><br>Refer to the plugin's page for detail information:<br><br><a target="_blank" href="http://sinolog.it/?p=1894">http://sinolog.it/?p=1894</A><br><br>*Commands:*<br><br>:UBList [local|remote]<br>:UBNew [markdown|html|rst|textile|latex]<br>:UBOpen [local|remote] [id]<br>:UBSave<br>:UBSend [draft|publish|private|pending]<br>:UBPageList [local|remote]<br>:UBPageNew [markdown|html|rst|textile|latex]<br>:UBPageOpen {id} [local|remote]<br>:UBPageSave<br>:UBPageSend [draft|publish|private|pending]<br>:UBUpload {file_path}<br>:UBDel {id} [local|remote]<br>:UBPreview<br>:UBThis [markdown|html|rst|textile|latex]<br>:UBPageThis [markdown|html|rst|textile|latex]<br>:UBConv {to_syntax} [from_syntax]</td></tr>
+<tr><td>The biggest difference between UltraBlog.vim and other Vim blogging scripts is that UltraBlog.vim supplies two modes: the first one is editor mode, in which users can manage posts and pages in their blogs, just like other Vim blogging scripts; the second is client mode, in which posts and pages are stored in a local SQLite database, in this way, it does not only OPERATE on posts/pages in blogs but also MANAGE them locally. So UltraBlog.vim is an integrated blogging client more than just a blog editor.<br><br>You will find UltraBlog.vim very useful when you write posts in some light weight markup languages, such as Markdown, LaTeX, reStructuredText and Textile. With posts/pages stored locally, you can edit them in any light weight markup language at any time even after a long time when they were published, and update the online copies in HTML syntax. <br><br>This is the exact original intention for which I wrote UltraBlog.vim. After years of blogging, I've formed the habbit that writing posts in Markdown syntax to save time, and I think it is good to always keep my posts updated, rather than post it and forget it. But I found it hard to update the posted copies after modifying the local Markdown source files with other Vim blogging plugins. <br><br>Though it is packaged as a vimball and with a filename as UltraBlog.vba, I prefer UltraBlog.vim as the plugin’s name for that ‘.vim’ looks very hacker.<br><br>Here is a post written in Chinese describing the motion for which I wrote UltraBlog.vim:<br><br><a target="_blank" href="http://sinolog.it/?p=1976">http://sinolog.it/?p=1976</A><br><br>Refer to the plugin's page for detail information:<br><br><a target="_blank" href="http://sinolog.it/?p=1894">http://sinolog.it/?p=1894</A><br><br>*Commands:*<br><br>:UBList [local|remote]<br>:UBNew [markdown|html|rst|textile|latex]<br>:UBOpen [local|remote] [id]<br>:UBSave<br>:UBSend [draft|publish|private|pending]<br>:UBPageList [local|remote]<br>:UBPageNew [markdown|html|rst|textile|latex]<br>:UBPageOpen {id} [local|remote]<br>:UBUpload {file_path}<br>:UBDel {id} [local|remote]<br>:UBPreview<br>:UBThis [markdown|html|rst|textile|latex]<br>:UBPageThis [markdown|html|rst|textile|latex]<br>:UBConv {to_syntax} [from_syntax]</td></tr>
 <tr><td>&nbsp;</td></tr>
 <tr><td class="prompt">install details</td></tr>
 <tr><td>1. Make sure your Vim has support for Python.<br>2. Install sqlalchemy, pandoc, python-markdown or python-markdown2 for python<br>3. Add the following configurations to your vimrc:<br><br>let ub_blog = {'login_name':'admin',<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#039password':'pass2011',<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#039xmlrpc':'<a target="_blank" href="http://www.sample.com/xmlrpc.php">http://www.sample.com/xmlrpc.php</A>',<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#039db':'$VIM/UltraBlog.db'<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\}</td></tr>
@@ -223,92 +223,116 @@ Click on the package to download.
     <th valign="top">release notes</th>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15457">UltraBlog.vba</a></td>
-    <td class="rowodd" valign="top" nowrap><b>2.0</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2011-04-16</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15767">UltraBlog.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.2.0</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2011-05-30</i></td>
     <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=28991">lenin lee</a></i></td>
-    <td class="rowodd" valign="top" width="2000">&nbsp;&nbsp;* Feature: Add editor mode.<br>&nbsp;&nbsp;* Feature: Add more syntaxes: LaTeX, reStructuredText and Textile.<br>&nbsp;&nbsp;* Feature: Add command *:UBConv* to convert a post/page from one syntax to another.<br>&nbsp;&nbsp;* Feature: Add options *ub_converter_command*, *ub_converter_options*, *ub_converter_option_from*, *ub_converter_option_to* to specify a custom extenal command in place of pandoc as the converter.<br>&nbsp;&nbsp;* Feature: Add option *ub_save_after_opened* to control whether to save posts/pages to database right after they are fetched from blogs.<br>&nbsp;&nbsp;* Feature: Add option *ub_save_after_sent* to control whether to save posts/pages to database right after they are sent to blogs.<br></td>
+    <td class="rowodd" valign="top" width="2000">* Change: Merge :UBSave and :UBPageSave to :UBSave, merge :UBSend and :UBPageSend to :UBSend.<br>* Feature: Add an option ub_tmpl_img_url to customize a link template string for the image uploaded by :UBUpload.</td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=15435">UltraBlog.vba</a></td>
-    <td class="roweven" valign="top" nowrap><b>1.4</b></td>
-    <td class="roweven" valign="top" nowrap><i>2011-04-12</i></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=15747">UltraBlog.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.1.0</b></td>
+    <td class="roweven" valign="top" nowrap><i>2011-05-28</i></td>
     <td class="roweven" valign="top" nowrap>7.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=28991">lenin lee</a></i></td>
-    <td class="roweven" valign="top" width="2000">Feature: Add commands :UBThis and :UBPageThis to create a new post or page with content in the current buffer.</td>
+    <td class="roweven" valign="top" width="2000">* Change: Increase the requirement to SQLAlchemy to version 0.7 or newer.<br>* Feature: Now posts/pages can be opened in a new tab or splitted window.<br>* Feature: Add options to let users customize hotkeys:<br>&nbsp;&nbsp;&nbsp;&nbsp;* ub_hotkey_open_item_in_current_view<br>&nbsp;&nbsp;&nbsp;&nbsp;* ub_hotkey_open_item_in_splitted_view<br>&nbsp;&nbsp;&nbsp;&nbsp;* ub_hotkey_open_item_in_tabbed_view<br>&nbsp;&nbsp;&nbsp;&nbsp;* ub_hotkey_delete_item</td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15419">UltraBlog.vba</a></td>
-    <td class="rowodd" valign="top" nowrap><b>1.3</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2011-04-09</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15628">UltraBlog.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.0.1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2011-05-12</i></td>
     <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=28991">lenin lee</a></i></td>
-    <td class="rowodd" valign="top" width="2000">* Feature: Record post statuses, post them in their recorded statuses when omit parameters for :UBSend and :UBPageSend. <br>* Feature: Display post/page status in post/page list, add an option ub_list_col3_width to set its width. <br>* Feature: Extend statuses to support private, pending and draft. <br>* Feature: Change the status 'public' to 'publish'. <br>* Feature: Check prerequesites in every top level functions. <br>* Bugfix: Do not raise an error on startup when sqlalchemy is not installed.</td>
+    <td class="rowodd" valign="top" width="2000">* Bugfix:&nbsp;&nbsp;Uploading media files may fail on Windows.<br>* Bugfix:&nbsp;&nbsp;An exception may be raised when Vim starts with no proper configuration for UltraBlog.vim or some prerequisites are not met.</td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=15409">UltraBlog.vba</a></td>
-    <td class="roweven" valign="top" nowrap><b>1.2</b></td>
-    <td class="roweven" valign="top" nowrap><i>2011-04-07</i></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=15457">UltraBlog.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.0</b></td>
+    <td class="roweven" valign="top" nowrap><i>2011-04-16</i></td>
     <td class="roweven" valign="top" nowrap>7.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=28991">lenin lee</a></i></td>
-    <td class="roweven" valign="top" width="2000">* Feature: Column widths can be set to custom values, which keep post or page lists tidy. Two options added: ub_list_col1_width and ub_list_col2_width.</td>
+    <td class="roweven" valign="top" width="2000">&nbsp;&nbsp;* Feature: Add editor mode.<br>&nbsp;&nbsp;* Feature: Add more syntaxes: LaTeX, reStructuredText and Textile.<br>&nbsp;&nbsp;* Feature: Add command *:UBConv* to convert a post/page from one syntax to another.<br>&nbsp;&nbsp;* Feature: Add options *ub_converter_command*, *ub_converter_options*, *ub_converter_option_from*, *ub_converter_option_to* to specify a custom extenal command in place of pandoc as the converter.<br>&nbsp;&nbsp;* Feature: Add option *ub_save_after_opened* to control whether to save posts/pages to database right after they are fetched from blogs.<br>&nbsp;&nbsp;* Feature: Add option *ub_save_after_sent* to control whether to save posts/pages to database right after they are sent to blogs.<br></td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15383">UltraBlog.vba</a></td>
-    <td class="rowodd" valign="top" nowrap><b>1.1</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2011-04-05</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15435">UltraBlog.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.4</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2011-04-12</i></td>
     <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=28991">lenin lee</a></i></td>
-    <td class="rowodd" valign="top" width="2000">* Feature: Page management.<br>* Feature: Add option ub_append_promotion_link to control whether to append a promotion link of UltraBlog.vim.<br>* Bugfix: Wrong order for parameters of commands :UBOpen and :UBDel in documentation.</td>
+    <td class="rowodd" valign="top" width="2000">Feature: Add commands :UBThis and :UBPageThis to create a new post or page with content in the current buffer.</td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=15377">UltraBlog.vba</a></td>
-    <td class="roweven" valign="top" nowrap><b>1.0.5</b></td>
-    <td class="roweven" valign="top" nowrap><i>2011-04-04</i></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=15419">UltraBlog.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.3</b></td>
+    <td class="roweven" valign="top" nowrap><i>2011-04-09</i></td>
     <td class="roweven" valign="top" nowrap>7.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=28991">lenin lee</a></i></td>
-    <td class="roweven" valign="top" width="2000">* Feature: Add documentation.<br>* Feature: Use Vimball as the default distribution format.<br>* Feature: Add two options - |ub_local_pagesize| and |ub_remote_pagesize|.</td>
+    <td class="roweven" valign="top" width="2000">* Feature: Record post statuses, post them in their recorded statuses when omit parameters for :UBSend and :UBPageSend. <br>* Feature: Display post/page status in post/page list, add an option ub_list_col3_width to set its width. <br>* Feature: Extend statuses to support private, pending and draft. <br>* Feature: Change the status 'public' to 'publish'. <br>* Feature: Check prerequesites in every top level functions. <br>* Bugfix: Do not raise an error on startup when sqlalchemy is not installed.</td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15368">UltraBlog.vim</a></td>
-    <td class="rowodd" valign="top" nowrap><b>1.0.4</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2011-04-03</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15409">UltraBlog.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.2</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2011-04-07</i></td>
     <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=28991">lenin lee</a></i></td>
-    <td class="rowodd" valign="top" width="2000">* Fix the problem that an unexpected type exception is raised when UBList is given some numbers as parameters.</td>
+    <td class="rowodd" valign="top" width="2000">* Feature: Column widths can be set to custom values, which keep post or page lists tidy. Two options added: ub_list_col1_width and ub_list_col2_width.</td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=15358">UltraBlog.vim</a></td>
-    <td class="roweven" valign="top" nowrap><b>1.0.3</b></td>
-    <td class="roweven" valign="top" nowrap><i>2011-04-02</i></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=15383">UltraBlog.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.1</b></td>
+    <td class="roweven" valign="top" nowrap><i>2011-04-05</i></td>
     <td class="roweven" valign="top" nowrap>7.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=28991">lenin lee</a></i></td>
-    <td class="roweven" valign="top" width="2000">* Add a column in remote post list the same as the one in local post list, which is used to display ids of local copies of corresponding posts.<br>* Fix the problem that buffers can be reverted to what the previous views contain throught the undo action.<br>* Fix the minor problem that text won't wrap automatically in views opened by the command :UBNew.</td>
+    <td class="roweven" valign="top" width="2000">* Feature: Page management.<br>* Feature: Add option ub_append_promotion_link to control whether to append a promotion link of UltraBlog.vim.<br>* Bugfix: Wrong order for parameters of commands :UBOpen and :UBDel in documentation.</td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15356">UltraBlog.vim</a></td>
-    <td class="rowodd" valign="top" nowrap><b>1.0.2</b></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15377">UltraBlog.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.0.5</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2011-04-04</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=28991">lenin lee</a></i></td>
+    <td class="rowodd" valign="top" width="2000">* Feature: Add documentation.<br>* Feature: Use Vimball as the default distribution format.<br>* Feature: Add two options - |ub_local_pagesize| and |ub_remote_pagesize|.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=15368">UltraBlog.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.0.4</b></td>
+    <td class="roweven" valign="top" nowrap><i>2011-04-03</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=28991">lenin lee</a></i></td>
+    <td class="roweven" valign="top" width="2000">* Fix the problem that an unexpected type exception is raised when UBList is given some numbers as parameters.</td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15358">UltraBlog.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.0.3</b></td>
     <td class="rowodd" valign="top" nowrap><i>2011-04-02</i></td>
     <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=28991">lenin lee</a></i></td>
-    <td class="rowodd" valign="top" width="2000">* Fix the problem that Post.post_id won't be updated in database after a new post is sent to blog.<br>* Fix the problem that it prompts for confirmation to delete the remote copy when deleting a post whose post_id is 0 from local post list.</td>
+    <td class="rowodd" valign="top" width="2000">* Add a column in remote post list the same as the one in local post list, which is used to display ids of local copies of corresponding posts.<br>* Fix the problem that buffers can be reverted to what the previous views contain throught the undo action.<br>* Fix the minor problem that text won't wrap automatically in views opened by the command :UBNew.</td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=15351">UltraBlog.vim</a></td>
-    <td class="roweven" valign="top" nowrap><b>1.0.1</b></td>
-    <td class="roweven" valign="top" nowrap><i>2011-04-01</i></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=15356">UltraBlog.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.0.2</b></td>
+    <td class="roweven" valign="top" nowrap><i>2011-04-02</i></td>
     <td class="roweven" valign="top" nowrap>7.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=28991">lenin lee</a></i></td>
-    <td class="roweven" valign="top" width="2000">Do not pop up an exception alert for the first time when Vim starts with UltraBlog.vim installed and no configurations added to the vimrc file.</td>
+    <td class="roweven" valign="top" width="2000">* Fix the problem that Post.post_id won't be updated in database after a new post is sent to blog.<br>* Fix the problem that it prompts for confirmation to delete the remote copy when deleting a post whose post_id is 0 from local post list.</td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15349">UltraBlog.vim</a></td>
-    <td class="rowodd" valign="top" nowrap><b>1.0</b></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15351">UltraBlog.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.0.1</b></td>
     <td class="rowodd" valign="top" nowrap><i>2011-04-01</i></td>
     <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=28991">lenin lee</a></i></td>
-    <td class="rowodd" valign="top" width="2000">Initial upload</td>
+    <td class="rowodd" valign="top" width="2000">Do not pop up an exception alert for the first time when Vim starts with UltraBlog.vim installed and no configurations added to the vimrc file.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=15349">UltraBlog.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.0</b></td>
+    <td class="roweven" valign="top" nowrap><i>2011-04-01</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=28991">lenin lee</a></i></td>
+    <td class="roweven" valign="top" width="2000">Initial upload</td>
 </tr>
 </table>
 <!-- finish off the framework -->

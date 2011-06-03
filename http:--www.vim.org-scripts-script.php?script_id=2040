@@ -167,7 +167,7 @@
   <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
   <td>
     Rating <b>4/1</b>,
-    Downloaded by 1458  </td>
+    Downloaded by 1473  </td>
   <td class="lightbg">
   <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
   </td>
@@ -223,92 +223,100 @@ Click on the package to download.
     <th valign="top">release notes</th>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=8028">tcalc.zip</a></td>
-    <td class="rowodd" valign="top" nowrap><b>0.11</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2007-12-05</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15730">tcalc.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.13</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2011-05-26</i></td>
     <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
-    <td class="rowodd" valign="top" width="2000">- New words: all?, any?, array_*, and, or, !=<br>- Curses frontend: Show possible completions; map 127 to backspace, F1 <br>to 'ls'; improved handling of cursor keys etc.<br>- Debugger (sort of)<br>- FIX: Nested blocks & more<br></td>
+    <td class="rowodd" valign="top" width="2000">- help command (not really useful yet)<br>- help (not really useful yet)<br>- ruby 1.8 compatibility<br>- FIX: help command<br>- Interpret .[0-9]+ as float (suggested by John Orr)<br>- .gitignore<br>MD5 checksum: b2f2bf21e1fe9cb0bdc612a7cb973621</td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=8009">tcalc.zip</a></td>
-    <td class="roweven" valign="top" nowrap><b>0.10</b></td>
-    <td class="roweven" valign="top" nowrap><i>2007-11-30</i></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=8028">tcalc.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.11</b></td>
+    <td class="roweven" valign="top" nowrap><i>2007-12-05</i></td>
     <td class="roweven" valign="top" nowrap>7.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
-    <td class="roweven" valign="top" width="2000">- rm,* ... Remove all words<br>- If g:tcalc_lines &lt; 0, use fixed window height.<br>- VIM: use the tcalc window to display plots, lists etc.<br>- FIX: Nested words and some more<br></td>
+    <td class="roweven" valign="top" width="2000">- New words: all?, any?, array_*, and, or, !=<br>- Curses frontend: Show possible completions; map 127 to backspace, F1 <br>to 'ls'; improved handling of cursor keys etc.<br>- Debugger (sort of)<br>- FIX: Nested blocks & more<br></td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=8000">tcalc.zip</a></td>
-    <td class="rowodd" valign="top" nowrap><b>0.9</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2007-11-28</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=8009">tcalc.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.10</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2007-11-30</i></td>
     <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
-    <td class="rowodd" valign="top" width="2000">- FIX: Curses frontend: Display error messages properly<br>- FIX: readline support.<br>- FIX: sort words on completion<br>- Distribute as zip<br></td>
+    <td class="rowodd" valign="top" width="2000">- rm,* ... Remove all words<br>- If g:tcalc_lines &lt; 0, use fixed window height.<br>- VIM: use the tcalc window to display plots, lists etc.<br>- FIX: Nested words and some more<br></td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=7995">tcalc.vba.gz</a></td>
-    <td class="roweven" valign="top" nowrap><b>0.8</b></td>
-    <td class="roweven" valign="top" nowrap><i>2007-11-27</i></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=8000">tcalc.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.9</b></td>
+    <td class="roweven" valign="top" nowrap><i>2007-11-28</i></td>
     <td class="roweven" valign="top" nowrap>7.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
-    <td class="roweven" valign="top" width="2000">- Named arguments: args is a synonym for assert but provides for named <br>arguments.<br>- New words: Sequence/seq, map, mmap, plot (a simple ASCII function <br>plotter), stack_size, stack_empty?, iqueue_size, iqueue_empty?<br>- Syntactic sugar for assignments: VALUE -&gt; VAR<br>- Defined &quot;Array&quot; as a synonym for &quot;group&quot;<br>- &quot;define&quot; command as alternative to the forth-like syntax for defining <br>words<br>- Dynamic binding of words/variables (the words &quot;begin ... end&quot; <br>establish a new scope)<br>- The stack, the input queue, and the dictionary are accessible like <br>words (__STACK__, __IQUEUE__, __WORDS__)<br>- TCalc and tcalc#Calculator take initial tokens as argument.<br>- TCalc! with [!] will reset the stack & input queue.<br>- Completion of partial commands<br>- Readline-support for CLI mode (--no-curses).<br>- Simple key handling for the curses-based frontend<br>- Non-VIM-versons save the history in ~/.tcalc/history.txt<br>- #VAR,METHOD has slightly changed.<br>- TCalc syntax file.<br>- FIX: Command line completion<br></td>
+    <td class="roweven" valign="top" width="2000">- FIX: Curses frontend: Display error messages properly<br>- FIX: readline support.<br>- FIX: sort words on completion<br>- Distribute as zip<br></td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=7844">tcalc.vba.gz</a></td>
-    <td class="rowodd" valign="top" nowrap><b>0.7</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2007-10-29</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=7995">tcalc.vba.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.8</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2007-11-27</i></td>
     <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
-    <td class="rowodd" valign="top" width="2000">- Comments: /* ... */<br>- New words:<br>&nbsp;&nbsp;&nbsp;&nbsp;- assert: Display an error message if the stack doesn't match the <br>&nbsp;&nbsp;&nbsp;&nbsp;assertion.<br>&nbsp;&nbsp;&nbsp;&nbsp;- validate: Like assert but push a boolean (the result of the check) <br>&nbsp;&nbsp;&nbsp;&nbsp;on the stack.<br>&nbsp;&nbsp;&nbsp;&nbsp;- do: synonym for recapture.<br>&nbsp;&nbsp;&nbsp;&nbsp;- source: load a file (see also g:tcalc_dir)<br>&nbsp;&nbsp;&nbsp;&nbsp;- require: load a ruby library<br>&nbsp;&nbsp;&nbsp;&nbsp;- p: print an object (doesn't do much, but prettyprint seems <br>&nbsp;&nbsp;&nbsp;&nbsp;to have problems)<br>&nbsp;&nbsp;&nbsp;&nbsp;- history (useful when using tcalc as stand-alone calculator)<br>- tcalc.rb can now be used as stand-alone program (a simple <br>curses-based frontend).<br></td>
+    <td class="rowodd" valign="top" width="2000">- Named arguments: args is a synonym for assert but provides for named <br>arguments.<br>- New words: Sequence/seq, map, mmap, plot (a simple ASCII function <br>plotter), stack_size, stack_empty?, iqueue_size, iqueue_empty?<br>- Syntactic sugar for assignments: VALUE -&gt; VAR<br>- Defined &quot;Array&quot; as a synonym for &quot;group&quot;<br>- &quot;define&quot; command as alternative to the forth-like syntax for defining <br>words<br>- Dynamic binding of words/variables (the words &quot;begin ... end&quot; <br>establish a new scope)<br>- The stack, the input queue, and the dictionary are accessible like <br>words (__STACK__, __IQUEUE__, __WORDS__)<br>- TCalc and tcalc#Calculator take initial tokens as argument.<br>- TCalc! with [!] will reset the stack & input queue.<br>- Completion of partial commands<br>- Readline-support for CLI mode (--no-curses).<br>- Simple key handling for the curses-based frontend<br>- Non-VIM-versons save the history in ~/.tcalc/history.txt<br>- #VAR,METHOD has slightly changed.<br>- TCalc syntax file.<br>- FIX: Command line completion<br></td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=7832">tcalc.vba.gz</a></td>
-    <td class="roweven" valign="top" nowrap><b>0.6</b></td>
-    <td class="roweven" valign="top" nowrap><i>2007-10-26</i></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=7844">tcalc.vba.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.7</b></td>
+    <td class="roweven" valign="top" nowrap><i>2007-10-29</i></td>
     <td class="roweven" valign="top" nowrap>7.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
-    <td class="roweven" valign="top" width="2000">- Included support for rational and complex numbers<br>- Included matrix support <br>- Syntax for pushing arrays [ a b c ... ]<br>- New &quot;at&quot; method to select an item from array-like objects<br>- Removed shortcut variables.<br></td>
+    <td class="roweven" valign="top" width="2000">- Comments: /* ... */<br>- New words:<br>&nbsp;&nbsp;&nbsp;&nbsp;- assert: Display an error message if the stack doesn't match the <br>&nbsp;&nbsp;&nbsp;&nbsp;assertion.<br>&nbsp;&nbsp;&nbsp;&nbsp;- validate: Like assert but push a boolean (the result of the check) <br>&nbsp;&nbsp;&nbsp;&nbsp;on the stack.<br>&nbsp;&nbsp;&nbsp;&nbsp;- do: synonym for recapture.<br>&nbsp;&nbsp;&nbsp;&nbsp;- source: load a file (see also g:tcalc_dir)<br>&nbsp;&nbsp;&nbsp;&nbsp;- require: load a ruby library<br>&nbsp;&nbsp;&nbsp;&nbsp;- p: print an object (doesn't do much, but prettyprint seems <br>&nbsp;&nbsp;&nbsp;&nbsp;to have problems)<br>&nbsp;&nbsp;&nbsp;&nbsp;- history (useful when using tcalc as stand-alone calculator)<br>- tcalc.rb can now be used as stand-alone program (a simple <br>curses-based frontend).<br></td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=7789">tcalc.vba.gz</a></td>
-    <td class="rowodd" valign="top" nowrap><b>0.5</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2007-10-12</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=7832">tcalc.vba.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.6</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2007-10-26</i></td>
     <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
-    <td class="rowodd" valign="top" width="2000">- Minor fix: command regexp<br></td>
+    <td class="rowodd" valign="top" width="2000">- Included support for rational and complex numbers<br>- Included matrix support <br>- Syntax for pushing arrays [ a b c ... ]<br>- New &quot;at&quot; method to select an item from array-like objects<br>- Removed shortcut variables.<br></td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=7765">tcalc.vba.gz</a></td>
-    <td class="roweven" valign="top" nowrap><b>0.4</b></td>
-    <td class="roweven" valign="top" nowrap><i>2007-10-08</i></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=7789">tcalc.vba.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.5</b></td>
+    <td class="roweven" valign="top" nowrap><i>2007-10-12</i></td>
     <td class="roweven" valign="top" nowrap>7.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
-    <td class="roweven" valign="top" width="2000">- COUNT can be &quot;#&quot;, in which case the top number on the stack will be <br>used (e.g. &quot;3 dup3&quot; is the same as &quot;3 3 dup#&quot;)<br>- Disabled vars, (, ) commands<br>- Variables are words<br>- New words can be defined in a forth-like manner &quot;:NAME ... ;&quot;<br>- Built-in commands get evaluated before any methods.<br>- Messages can be sent to objects on the stack by &quot;#N,METHOD&quot;, e.g. &quot;1 2 <br>g2 3 #1,&lt;&lt;&quot; yields &quot;[1,2,3]&quot;<br>- The copyN, cN command now means: push a copy of element N.<br>- ( ... ) push unprocessed tokens as array<br>- recapture command (feed an array of unprocessed tokens to the input <br>queue)<br>- if, ifelse commands<br>- delN, deleteN commands<br>- Can push strings (&quot;foo bar&quot;)<br>- &quot;Symbols&quot; à la 'foo (actually a string)<br></td>
+    <td class="roweven" valign="top" width="2000">- Minor fix: command regexp<br></td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=7764">tcalc.vba.gz</a></td>
-    <td class="rowodd" valign="top" nowrap><b>0.3</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2007-10-07</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=7765">tcalc.vba.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.4</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2007-10-08</i></td>
     <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
-    <td class="rowodd" valign="top" width="2000">- The swap count argument is increased by one (for conformance with the <br>rot command).<br>- Shortcuts are now RPN expression (elements at the stack can be <br>referred to by # (= top element) or #N).<br>- Removed g:tcalc_reverse_display<br>- Positions on the stack can be referred to by #N.<br>- rot works the other way round<br>- d, dup command<br>- clear command<br>- print, hex, HEX, oct, dec, bin, float, format commands<br>- Removed dependency on tlib<br>- Variables; ls, vars, let, =, rm commands<br>- Command line completion for variables and commands<br></td>
+    <td class="rowodd" valign="top" width="2000">- COUNT can be &quot;#&quot;, in which case the top number on the stack will be <br>used (e.g. &quot;3 dup3&quot; is the same as &quot;3 3 dup#&quot;)<br>- Disabled vars, (, ) commands<br>- Variables are words<br>- New words can be defined in a forth-like manner &quot;:NAME ... ;&quot;<br>- Built-in commands get evaluated before any methods.<br>- Messages can be sent to objects on the stack by &quot;#N,METHOD&quot;, e.g. &quot;1 2 <br>g2 3 #1,&lt;&lt;&quot; yields &quot;[1,2,3]&quot;<br>- The copyN, cN command now means: push a copy of element N.<br>- ( ... ) push unprocessed tokens as array<br>- recapture command (feed an array of unprocessed tokens to the input <br>queue)<br>- if, ifelse commands<br>- delN, deleteN commands<br>- Can push strings (&quot;foo bar&quot;)<br>- &quot;Symbols&quot; à la 'foo (actually a string)<br></td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=7763">tcalc.vba.gz</a></td>
-    <td class="roweven" valign="top" nowrap><b>0.2</b></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=7764">tcalc.vba.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.3</b></td>
     <td class="roweven" valign="top" nowrap><i>2007-10-07</i></td>
     <td class="roweven" valign="top" nowrap>7.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
-    <td class="roweven" valign="top" width="2000">- Arguments were (not properly) reverted: 12 4 / now yields 3.<br>- The input will be split into tokens, i.e. you can input &quot;1 2 + &lt;cr&gt;&quot; <br>or &quot;1&lt;cr&gt;2&lt;cr&gt;+&lt;cr&gt;&quot;. (Command-line completions doesn't work properly <br>though.)<br>- The syntax has slightly changed: &quot;CmdCount,Arg&quot;, eg, &quot;y3,a&quot;<br></td>
+    <td class="roweven" valign="top" width="2000">- The swap count argument is increased by one (for conformance with the <br>rot command).<br>- Shortcuts are now RPN expression (elements at the stack can be <br>referred to by # (= top element) or #N).<br>- Removed g:tcalc_reverse_display<br>- Positions on the stack can be referred to by #N.<br>- rot works the other way round<br>- d, dup command<br>- clear command<br>- print, hex, HEX, oct, dec, bin, float, format commands<br>- Removed dependency on tlib<br>- Variables; ls, vars, let, =, rm commands<br>- Command line completion for variables and commands<br></td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=7761">tcalc.vba.gz</a></td>
-    <td class="rowodd" valign="top" nowrap><b>0.1</b></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=7763">tcalc.vba.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.2</b></td>
     <td class="rowodd" valign="top" nowrap><i>2007-10-07</i></td>
     <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
-    <td class="rowodd" valign="top" width="2000">Initial upload</td>
+    <td class="rowodd" valign="top" width="2000">- Arguments were (not properly) reverted: 12 4 / now yields 3.<br>- The input will be split into tokens, i.e. you can input &quot;1 2 + &lt;cr&gt;&quot; <br>or &quot;1&lt;cr&gt;2&lt;cr&gt;+&lt;cr&gt;&quot;. (Command-line completions doesn't work properly <br>though.)<br>- The syntax has slightly changed: &quot;CmdCount,Arg&quot;, eg, &quot;y3,a&quot;<br></td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=7761">tcalc.vba.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.1</b></td>
+    <td class="roweven" valign="top" nowrap><i>2007-10-07</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
+    <td class="roweven" valign="top" width="2000">Initial upload</td>
 </tr>
 </table>
 <!-- finish off the framework -->

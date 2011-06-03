@@ -3,7 +3,7 @@
 
 <head>
   <link rel="Stylesheet" type="text/css" href="/css/style.css" >
-  <title>qnamebuf - QuickNameBuf: A quick buffer manager : vim online</title>
+  <title>qnamebuf - QuickNameBuf: A quick general manager : vim online</title>
   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
   <meta name="KEYWORDS" content="Vim, Vi IMproved, text editor, home, documentation, tips, scripts, news">
   <link rel="shortcut icon" type="image/x-icon" href="/images/vim_shortcut.ico">
@@ -156,7 +156,7 @@
         <tr>
           <td valign="top">
 
-<span class="txth1">qnamebuf : QuickNameBuf: A quick buffer manager</span> 
+<span class="txth1">qnamebuf : QuickNameBuf: A quick general manager</span> 
 
 <br>
 <br>
@@ -167,7 +167,7 @@
   <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
   <td>
     Rating <b>36/11</b>,
-    Downloaded by 188  </td>
+    Downloaded by 213  </td>
   <td class="lightbg">
   <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
   </td>
@@ -186,7 +186,7 @@
 <tr><td>utility</td></tr>
 <tr><td>&nbsp;</td></tr>
 <tr><td class="prompt">description</td></tr>
-<tr><td>I really like qname (<a href="/scripts/script.php?script_id=2317">vimscript #2317</a>) and qbuf (<a href="/scripts/script.php?script_id=1910">vimscript #1910</a>) and decided that it would be nice to combine them.&nbsp;&nbsp;The author recommended I upload under my name.<br><br>Usage:<br>&lt;F4&gt; opens a list of the current buffers, and typing a string filters the list (by default ala lustyexplorer <a href="/scripts/script.php?script_id=1890">vimscript #1890</a>).&nbsp;&nbsp;All filtering is case insensitive (even if using Regular Expressions).&nbsp;&nbsp;If there are many files open goes to a simplified view (just relative buffer number, and the filename with path), when filtered enough shows more information:<br>&nbsp;&nbsp;&nbsp;&nbsp;1) Relative Buffer Number<br>&nbsp;&nbsp;&nbsp;&nbsp;2) Current Buffer (%), Alternative Buffer (#), or if it is open in a visible split (=)<br>&nbsp;&nbsp;&nbsp;&nbsp;3) File name<br>&nbsp;&nbsp;&nbsp;&nbsp;4) Buffer number<br>&nbsp;&nbsp;&nbsp;&nbsp;5) Relative file path<br><br>When Open:<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;BS&gt; Delete last char entered<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;C-U&gt; Delete all entered chars<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;M-L&gt; Toggle between listed and unlisted buffers<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;M-D&gt; bdelete the selected buffer, the explorer stays open and retains cursor position<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;M-C&gt; Close the window containing the buffer<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;ESC&gt; or &lt;F4&gt; close the explorer<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;CR&gt; Open the selected file in the current window<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;M-S&gt; Open the selected file in a split window<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;M-V&gt; Open the selected file in a vert split window<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;M-T&gt; Open the selected file in a new tab<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;UP&gt; &lt;DOWN&gt; &lt;LEFT&gt; &lt;RIGHT&gt; navigates the selection<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;HOME&gt; &lt;END&gt; move to the first/last item<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;M-1&gt;, ..., &lt;M-0&gt; open the first, ..., tenth file in the list<br><br>Note, I wanted these to be &lt;C-...&gt; but &lt;C-1&gt;...&lt;C-0&gt; are not real key sequences.<br><br>Customization:<br>&nbsp;&nbsp;&nbsp;&nbsp;g:qnamebuf_hotkey&nbsp;&nbsp;Set the default key to toggle qnamebuf (defaults to &lt;F4&gt;)<br>&nbsp;&nbsp;&nbsp;&nbsp;nmap &lt;KEY&gt; :call QNameBufInit(REGEXP, [SIZE], [FILE_NAME_ONLY], [ALLOW_LEADER])&lt;cr&gt;:~<br>If REGEXP is true use regular expressions instead of the lusty filter.<br>SIZE controls the size of the popup. Defaults to 1/2 of the visible lines (|&lines|/2).<br>If FILE_NAME_ONLY is false then use the path and filename otherwise just use the filename.&nbsp;&nbsp;Defaults to true.<br>If ALLOW_LEADER is true then &lt;LEADER&gt;X can be used as a synonym of &lt;M-X&gt; in the list above.&nbsp;&nbsp;Defaults to false.<br><br>Hints:<br>I find the following mappings very useful (jump to the ith file):<br>&nbsp;&nbsp;&nbsp;&nbsp;nmap &lt;silent&gt; &lt;M-1&gt; :brewind&lt;CR&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;nmap &lt;silent&gt; &lt;M-2&gt; :brewind \| 1bn&lt;CR&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;nmap &lt;silent&gt; &lt;M-3&gt; :brewind \| 2bn&lt;CR&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;nmap &lt;silent&gt; &lt;M-4&gt; :brewind \| 3bn&lt;CR&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;nmap &lt;silent&gt; &lt;M-5&gt; :brewind \| 4bn&lt;CR&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;nmap &lt;silent&gt; &lt;M-6&gt; :brewind \| 5bn&lt;CR&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;nmap &lt;silent&gt; &lt;M-7&gt; :brewind \| 6bn&lt;CR&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;nmap &lt;silent&gt; &lt;M-8&gt; :brewind \| 7bn&lt;CR&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;nmap &lt;silent&gt; &lt;M-9&gt; :brewind \| 8bn&lt;CR&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;nmap &lt;silent&gt; &lt;M-0&gt; :brewind \| 9bn&lt;CR&gt;<br>When starting qnamebuf the numbers are displayed and this allows consistant access.</td></tr>
+<tr><td>I really like qname (<a href="/scripts/script.php?script_id=2317">vimscript #2317</a>) and qbuf (<a href="/scripts/script.php?script_id=1910">vimscript #1910</a>) and decided that it would be nice to combine them.&nbsp;&nbsp;The author recommended I upload under my name.<br><br>Version 0.07 introduced a redesign, there are three files:<br>1) qnamepicker: A core that provides a generic function other scripts can call to allow the user to select an item from a list in the command prompt (in a lusty fashion).<br>2) qnamefile: Like command-t but in mostly pure vim (there is a requirement on the find utility).<br>3) qnamebuf: The classic buffer selector as before.<br>and there was a significant speedup by replacing a custom matcher function with a regular expression.<br><br>Also in the documentation for qnamepicker I show how one can utilize the script for the project (<a href="/scripts/script.php?script_id=69">vimscript #69</a>) to provide a lusty selector for the files in the project (complete with the shortcuts below!).&nbsp;&nbsp;I have found this to be a life-changing combination ;-).<br><br>qnamebuf Usage:<br>&lt;F4&gt; opens a list of the current buffers, and typing a string filters the list (by default ala lustyexplorer <a href="/scripts/script.php?script_id=1890">vimscript #1890</a>).&nbsp;&nbsp;All filtering is case insensitive (even if using Regular Expressions).&nbsp;&nbsp;If there are many files open goes to a simplified view (just relative buffer number, and the filename with path), when filtered enough shows more information:<br>&nbsp;&nbsp;&nbsp;&nbsp;1) Relative Buffer Number<br>&nbsp;&nbsp;&nbsp;&nbsp;2) Current Buffer (%), Alternative Buffer (#), or if it is open in a visible split (=)<br>&nbsp;&nbsp;&nbsp;&nbsp;3) File name<br>&nbsp;&nbsp;&nbsp;&nbsp;4) Buffer number<br>&nbsp;&nbsp;&nbsp;&nbsp;5) Relative file path<br><br>In addition to the common commands below, qnamebuf accepts:<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;M-L&gt; Toggle between listed and unlisted buffers<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;M-D&gt; bdelete the selected buffer, the explorer stays open and retains cursor position<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;M-C&gt; Close the window containing the buffer<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;F4&gt;&nbsp;&nbsp;&nbsp;&nbsp;Close the qnamebuf explorer<br><br>qnamefile Usage:<br>&lt;S-F4&gt; opens an explorer from the current working directory showing all files which are not in a hidden directory (one that starts with '.').&nbsp;&nbsp;This script relies on the external find utility.<br><br>Common shortcuts to qnamefile and qnamebuf:<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;BS&gt; Delete last char entered<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;C-U&gt; Delete all entered chars<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;ESC&gt; or &lt;C-G&gt; close the explorer<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;CR&gt; Open the selected file in the current window<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;M-S&gt; Open the selected file in a split window<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;M-V&gt; Open the selected file in a vert split window<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;M-T&gt; Open the selected file in a new tab<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;UP&gt; &lt;DOWN&gt; &lt;LEFT&gt; &lt;RIGHT&gt; navigates the selection<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;HOME&gt; &lt;END&gt; move to the first/last item<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;M-1&gt;, ..., &lt;M-0&gt; open the first, ..., tenth file in the list<br><br>Note, I wanted these to be &lt;C-...&gt; but &lt;C-1&gt;...&lt;C-0&gt; are not real key sequences.<br><br>qnamepicker Usage:<br>See the documentation for a detailed description of how to call the function, and examples.&nbsp;&nbsp;Essentially provides a function:<br>&nbsp;&nbsp;&nbsp;&nbsp;QNamePickerStart(list, dict)<br>where a:list is the set of items, and a:dict provides a mechanism to customize various parts (e.g. rendering, extra keys for various actions, etcetera).<br><br>Customization:<br>qnamebuf and qnamefile can be customized (in slightly different manners).&nbsp;&nbsp;See the documentation for details on these.<br><br>Hints:<br>I find the following mappings very useful (jump to the ith file):<br>&nbsp;&nbsp;&nbsp;&nbsp;nmap &lt;silent&gt; &lt;M-1&gt; :brewind&lt;CR&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;nmap &lt;silent&gt; &lt;M-2&gt; :brewind \| 1bn&lt;CR&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;nmap &lt;silent&gt; &lt;M-3&gt; :brewind \| 2bn&lt;CR&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;nmap &lt;silent&gt; &lt;M-4&gt; :brewind \| 3bn&lt;CR&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;nmap &lt;silent&gt; &lt;M-5&gt; :brewind \| 4bn&lt;CR&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;nmap &lt;silent&gt; &lt;M-6&gt; :brewind \| 5bn&lt;CR&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;nmap &lt;silent&gt; &lt;M-7&gt; :brewind \| 6bn&lt;CR&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;nmap &lt;silent&gt; &lt;M-8&gt; :brewind \| 7bn&lt;CR&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;nmap &lt;silent&gt; &lt;M-9&gt; :brewind \| 8bn&lt;CR&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;nmap &lt;silent&gt; &lt;M-0&gt; :brewind \| 9bn&lt;CR&gt;<br>When starting qnamebuf the numbers are displayed and this allows consistent access.<br><br>Also be sure to check the hints section of qnamepicker's documentation for some code to add to .vimproject_mappings to provide a lusty picker for the files in a project (it is slightly too long to be useful here)!</td></tr>
 <tr><td>&nbsp;</td></tr>
 <tr><td class="prompt">install details</td></tr>
 <tr><td>Extract $HOME/.vim/</td></tr>
@@ -223,44 +223,52 @@ Click on the package to download.
     <th valign="top">release notes</th>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=14921">qnamebuf.zip</a></td>
-    <td class="rowodd" valign="top" nowrap><b>0.05</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2011-01-31</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15680">qnamebuf.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.07</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2011-05-20</i></td>
     <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=17524">Matt Spear</a></i></td>
-    <td class="rowodd" valign="top" width="2000">Fixed a bug which would cause operations to fail on a filtered list.</td>
+    <td class="rowodd" valign="top" width="2000">Complete redesign, now has a flexible core that scripts can plug into to get a lusty picker.</td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=14554">qnamebuf.zip</a></td>
-    <td class="roweven" valign="top" nowrap><b>0.04</b></td>
-    <td class="roweven" valign="top" nowrap><i>2010-12-18</i></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=14921">qnamebuf.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.05</b></td>
+    <td class="roweven" valign="top" nowrap><i>2011-01-31</i></td>
     <td class="roweven" valign="top" nowrap>7.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=17524">Matt Spear</a></i></td>
-    <td class="roweven" valign="top" width="2000">Fixed overwriting the @y register.&nbsp;&nbsp;Made the cmap silent.&nbsp;&nbsp;Thanks to Peter for the patch!</td>
+    <td class="roweven" valign="top" width="2000">Fixed a bug which would cause operations to fail on a filtered list.</td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=14542">qnamebuf.zip</a></td>
-    <td class="rowodd" valign="top" nowrap><b>0.03</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2010-12-17</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=14554">qnamebuf.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.04</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-12-18</i></td>
     <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=17524">Matt Spear</a></i></td>
-    <td class="rowodd" valign="top" width="2000">Made a mistake to always define the mapping for QNameBufInit even if a mapping to it existed.</td>
+    <td class="rowodd" valign="top" width="2000">Fixed overwriting the @y register.&nbsp;&nbsp;Made the cmap silent.&nbsp;&nbsp;Thanks to Peter for the patch!</td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=14541">qnamebuf.zip</a></td>
-    <td class="roweven" valign="top" nowrap><b>0.02</b></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=14542">qnamebuf.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.03</b></td>
     <td class="roweven" valign="top" nowrap><i>2010-12-17</i></td>
     <td class="roweven" valign="top" nowrap>7.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=17524">Matt Spear</a></i></td>
-    <td class="roweven" valign="top" width="2000">Added support for &lt;LEADER&gt;X being a synonym for &lt;M-X&gt;.&nbsp;&nbsp;Some minor code cleanup.</td>
+    <td class="roweven" valign="top" width="2000">Made a mistake to always define the mapping for QNameBufInit even if a mapping to it existed.</td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13659">qnamebuf.vim</a></td>
-    <td class="rowodd" valign="top" nowrap><b>0.01</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2010-08-24</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=14541">qnamebuf.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.02</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-12-17</i></td>
     <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=17524">Matt Spear</a></i></td>
-    <td class="rowodd" valign="top" width="2000">Initial upload</td>
+    <td class="rowodd" valign="top" width="2000">Added support for &lt;LEADER&gt;X being a synonym for &lt;M-X&gt;.&nbsp;&nbsp;Some minor code cleanup.</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13659">qnamebuf.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.01</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-08-24</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=17524">Matt Spear</a></i></td>
+    <td class="roweven" valign="top" width="2000">Initial upload</td>
 </tr>
 </table>
 <!-- finish off the framework -->

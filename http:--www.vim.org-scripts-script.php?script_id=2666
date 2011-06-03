@@ -166,8 +166,8 @@
 <tr>
   <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
   <td>
-    Rating <b>171/48</b>,
-    Downloaded by 1720  </td>
+    Rating <b>172/49</b>,
+    Downloaded by 1859  </td>
   <td class="lightbg">
   <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
   </td>
@@ -223,108 +223,116 @@ Click on the package to download.
     <th valign="top">release notes</th>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15603">mark.vba.gz</a></td>
-    <td class="rowodd" valign="top" nowrap><b>2.5.0</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2011-05-07</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15663">mark.vba.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.5.1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2011-05-17</i></td>
     <td class="rowodd" valign="top" nowrap>7.2</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=9713">Ingo Karkat</a></i></td>
-    <td class="rowodd" valign="top" width="2000">- ENH: Add explicit mark persistence via :MarkLoad and :MarkSave commands and automatic persistence via the g:mwAutoLoadMarks and g:mwAutoSaveMarks configuration flags. (Request from Mun Johl, 16-Apr-2010) <br>- Expose toggling of mark display (keeping the mark patterns) via new &lt;Plug&gt;MarkToggle mapping. Offer :MarkClear command as a replacement for the old argumentless :Mark command, which now just disables, but not clears all marks. </td>
+    <td class="rowodd" valign="top" width="2000">- FIX: == comparison in s:DoMark() leads to wrong regexp (\A vs. \a) being cleared when 'ignorecase' is set. Use case-sensitive comparison ==# instead. <br>- Refine :MarkLoad messages <br>- Add whitespace-indifferent visual mark configuration example. Thanks to Greg Klein for the suggestion. </td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=15477">mark.vba.gz</a></td>
-    <td class="roweven" valign="top" nowrap><b>2.4.4</b></td>
-    <td class="roweven" valign="top" nowrap><i>2011-04-19</i></td>
-    <td class="roweven" valign="top" nowrap>7.0</td>
-    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=9713">Ingo Karkat</a></i></td>
-    <td class="roweven" valign="top" width="2000">- BUG: Include trailing newline character in check for current mark, so that a mark that matches the entire line (e.g. created by V&lt;Leader&gt;m) can be cleared via &lt;Leader&gt;n. Thanks to ping for reporting this. <br>- FIX: On overlapping marks, mark#CurrentMark() returned the lowest, not the highest visible mark. So on overlapping marks, the one that was not visible at the cursor position was removed; very confusing! Use reverse iteration order.&nbsp;&nbsp;<br>- FIX: To avoid an arbitrary ordering of highlightings when the highlighting group names roll over, and to avoid order inconsistencies across different windows and tabs, we assign a different priority based on the highlighting group. </td>
-</tr>
-<tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15459">mark.vba.gz</a></td>
-    <td class="rowodd" valign="top" nowrap><b>2.4.3</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2011-04-16</i></td>
-    <td class="rowodd" valign="top" nowrap>7.0</td>
-    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=9713">Ingo Karkat</a></i></td>
-    <td class="rowodd" valign="top" width="2000">- Avoid losing the mark highlightings on :syn on or :colorscheme commands. Thanks to Zhou YiChao for alerting me to this issue and suggesting a fix. <br>- Made the script more robust when somehow no highlightings have been defined or when the window-local reckoning of match IDs got lost. I had very occasionally encountered such script errors in the past. <br>- Made global housekeeping variables script-local, only g:mwHistAdd is used for configuration. <br>- FIX: Capturing the visual selection could still clobber the blockwise yank mode of the unnamed register. </td>
-</tr>
-<tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=14741">mark.vba.gz</a></td>
-    <td class="roweven" valign="top" nowrap><b>2.4.1</b></td>
-    <td class="roweven" valign="top" nowrap><i>2011-01-13</i></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=15603">mark.vba.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.5.0</b></td>
+    <td class="roweven" valign="top" nowrap><i>2011-05-07</i></td>
     <td class="roweven" valign="top" nowrap>7.2</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=9713">Ingo Karkat</a></i></td>
-    <td class="roweven" valign="top" width="2000">- FIX: Using a named register for capturing the visual selection on {Visual}&lt;Leader&gt;m and {Visual}&lt;Leader&gt;r clobbered the unnamed register. Now using the unnamed register. </td>
+    <td class="roweven" valign="top" width="2000">- ENH: Add explicit mark persistence via :MarkLoad and :MarkSave commands and automatic persistence via the g:mwAutoLoadMarks and g:mwAutoSaveMarks configuration flags. (Request from Mun Johl, 16-Apr-2010) <br>- Expose toggling of mark display (keeping the mark patterns) via new &lt;Plug&gt;MarkToggle mapping. Offer :MarkClear command as a replacement for the old argumentless :Mark command, which now just disables, but not clears all marks. </td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13424">mark.vba.gz</a></td>
-    <td class="rowodd" valign="top" nowrap><b>2.4.0</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2010-07-29</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15477">mark.vba.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.4.4</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2011-04-19</i></td>
     <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=9713">Ingo Karkat</a></i></td>
-    <td class="rowodd" valign="top" width="2000">ENH: The MarkSearch mappings (&lt;Leader&gt;[*#/?]) add the original cursor position to the jump list, like the built-in [/?*#nN] commands. This allows to use the regular jump commands for mark matches, like with regular search matches. </td>
+    <td class="rowodd" valign="top" width="2000">- BUG: Include trailing newline character in check for current mark, so that a mark that matches the entire line (e.g. created by V&lt;Leader&gt;m) can be cleared via &lt;Leader&gt;n. Thanks to ping for reporting this. <br>- FIX: On overlapping marks, mark#CurrentMark() returned the lowest, not the highest visible mark. So on overlapping marks, the one that was not visible at the cursor position was removed; very confusing! Use reverse iteration order.&nbsp;&nbsp;<br>- FIX: To avoid an arbitrary ordering of highlightings when the highlighting group names roll over, and to avoid order inconsistencies across different windows and tabs, we assign a different priority based on the highlighting group. </td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=12423">mark.vba.gz</a></td>
-    <td class="roweven" valign="top" nowrap><b>2.3.3</b></td>
-    <td class="roweven" valign="top" nowrap><i>2010-02-19</i></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=15459">mark.vba.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.4.3</b></td>
+    <td class="roweven" valign="top" nowrap><i>2011-04-16</i></td>
     <td class="roweven" valign="top" nowrap>7.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=9713">Ingo Karkat</a></i></td>
-    <td class="roweven" valign="top" width="2000">- BUG: Clearing of an accidental zero-width match (e.g. via :Mark \zs) results in endless loop. Thanks to Andy Wokula for the patch. </td>
+    <td class="roweven" valign="top" width="2000">- Avoid losing the mark highlightings on :syn on or :colorscheme commands. Thanks to Zhou YiChao for alerting me to this issue and suggesting a fix. <br>- Made the script more robust when somehow no highlightings have been defined or when the window-local reckoning of match IDs got lost. I had very occasionally encountered such script errors in the past. <br>- Made global housekeeping variables script-local, only g:mwHistAdd is used for configuration. <br>- FIX: Capturing the visual selection could still clobber the blockwise yank mode of the unnamed register. </td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=11744">mark.vba.gz</a></td>
-    <td class="rowodd" valign="top" nowrap><b>2.3.2</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2009-11-17</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=14741">mark.vba.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.4.1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2011-01-13</i></td>
+    <td class="rowodd" valign="top" nowrap>7.2</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=9713">Ingo Karkat</a></i></td>
+    <td class="rowodd" valign="top" width="2000">- FIX: Using a named register for capturing the visual selection on {Visual}&lt;Leader&gt;m and {Visual}&lt;Leader&gt;r clobbered the unnamed register. Now using the unnamed register. </td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13424">mark.vba.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.4.0</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-07-29</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=9713">Ingo Karkat</a></i></td>
+    <td class="roweven" valign="top" width="2000">ENH: The MarkSearch mappings (&lt;Leader&gt;[*#/?]) add the original cursor position to the jump list, like the built-in [/?*#nN] commands. This allows to use the regular jump commands for mark matches, like with regular search matches. </td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=12423">mark.vba.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.3.3</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-02-19</i></td>
     <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=9713">Ingo Karkat</a></i></td>
-    <td class="rowodd" valign="top" width="2000">BUG: Creation of literal pattern via '\V' in {Visual}&lt;Leader&gt;m mapping collided with individual escaping done in &lt;Leader&gt;m mapping so that an escaped '\*' would be interpreted as a multi item when both modes are used for marking. Thanks to Andy Wokula for the patch. </td>
+    <td class="rowodd" valign="top" width="2000">- BUG: Clearing of an accidental zero-width match (e.g. via :Mark \zs) results in endless loop. Thanks to Andy Wokula for the patch. </td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=11122">mark.vba.gz</a></td>
-    <td class="roweven" valign="top" nowrap><b>2.3.1</b></td>
-    <td class="roweven" valign="top" nowrap><i>2009-08-03</i></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=11744">mark.vba.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.3.2</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-11-17</i></td>
     <td class="roweven" valign="top" nowrap>7.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=9713">Ingo Karkat</a></i></td>
-    <td class="roweven" valign="top" width="2000">- Now working correctly when 'smartcase' is set. All mappings and the :Mark command use 'ignorecase', but not 'smartcase'. </td>
+    <td class="roweven" valign="top" width="2000">BUG: Creation of literal pattern via '\V' in {Visual}&lt;Leader&gt;m mapping collided with individual escaping done in &lt;Leader&gt;m mapping so that an escaped '\*' would be interpreted as a multi item when both modes are used for marking. Thanks to Andy Wokula for the patch. </td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=10956">mark.vba.gz</a></td>
-    <td class="rowodd" valign="top" nowrap><b>2.3.0</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2009-07-06</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=11122">mark.vba.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.3.1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-08-03</i></td>
     <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=9713">Ingo Karkat</a></i></td>
-    <td class="rowodd" valign="top" width="2000">- All jump commands now take an optional [count], so you can quickly skip over some marks, as with the built-in */# and n/N commands. For this, the entire core search algorithm has been rewritten. The script's logic has been simplified through the use of Vim 7 features like Lists. <br>- Now also printing a Vim-alike search error message when 'nowrapscan' is set. </td>
+    <td class="rowodd" valign="top" width="2000">- Now working correctly when 'smartcase' is set. All mappings and the :Mark command use 'ignorecase', but not 'smartcase'. </td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=10947">mark.vba.gz</a></td>
-    <td class="roweven" valign="top" nowrap><b>2.2.0</b></td>
-    <td class="roweven" valign="top" nowrap><i>2009-07-05</i></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=10956">mark.vba.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.3.0</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-07-06</i></td>
     <td class="roweven" valign="top" nowrap>7.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=9713">Ingo Karkat</a></i></td>
-    <td class="roweven" valign="top" width="2000">- Split off functions into autoload script. <br>- Initialization of global variables and autocommands is now done lazily on<br>&nbsp;&nbsp;the first use, not during loading of the plugin. This reduces Vim startup<br>&nbsp;&nbsp;time and footprint as long as the functionality isn't yet used. <br>- Split off documentation into separate help file. Now packaging as VimBall.</td>
+    <td class="roweven" valign="top" width="2000">- All jump commands now take an optional [count], so you can quickly skip over some marks, as with the built-in */# and n/N commands. For this, the entire core search algorithm has been rewritten. The script's logic has been simplified through the use of Vim 7 features like Lists. <br>- Now also printing a Vim-alike search error message when 'nowrapscan' is set. </td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=10928">mark.vim</a></td>
-    <td class="rowodd" valign="top" nowrap><b>2.1.0</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2009-07-02</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=10947">mark.vba.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.2.0</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-07-05</i></td>
     <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=9713">Ingo Karkat</a></i></td>
-    <td class="rowodd" valign="top" width="2000">THIS VERSION REQUIRES VIM 7.2 / 7.1 with patches, BUT IT'S WORTH UPDATING! <br>- Replaced highlighting via :syntax with matchadd() / matchdelete(). This<br>&nbsp;&nbsp;requires Vim 7.2 / 7.1 with patches. This method is faster, there are no<br>&nbsp;&nbsp;more clashes with syntax highlighting (:match always has preference), and<br>&nbsp;&nbsp;the background highlighting does not disappear under 'cursorline'. <br>- Using winrestcmd() to fix effects of :windo: By entering a window, its<br>&nbsp;&nbsp;height is potentially increased from 0 to 1. <br>- Handling multiple tabs by calling s:UpdateScope() on the TabEnter event. </td>
+    <td class="rowodd" valign="top" width="2000">- Split off functions into autoload script. <br>- Initialization of global variables and autocommands is now done lazily on<br>&nbsp;&nbsp;the first use, not during loading of the plugin. This reduces Vim startup<br>&nbsp;&nbsp;time and footprint as long as the functionality isn't yet used. <br>- Split off documentation into separate help file. Now packaging as VimBall.</td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=10774">mark.vim</a></td>
-    <td class="roweven" valign="top" nowrap><b>2.0.0</b></td>
-    <td class="roweven" valign="top" nowrap><i>2009-06-08</i></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=10928">mark.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.1.0</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-07-02</i></td>
     <td class="roweven" valign="top" nowrap>7.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=9713">Ingo Karkat</a></i></td>
-    <td class="roweven" valign="top" width="2000">THIS VERSION REQUIRES VIM 7.0! <br>- Now using Vim List for g:mwWord and thus requiring Vim 7. g:mwCycle is now zero-based, but the syntax groups &quot;MarkWordx&quot; are still one-based. <br>- Factored :syntax operations out of s:DoMark() and s:UpdateMark() so that they can all be done in a single :windo. <br>- Normal mode &lt;Plug&gt;MarkSet now has the same semantics as its visual mode cousin: If the cursor is on an existing mark, the mark is removed. Beforehand, one could only remove a visually selected mark via again selecting it. Now, one simply can invoke the mapping when on such a mark. </td>
+    <td class="roweven" valign="top" width="2000">THIS VERSION REQUIRES VIM 7.2 / 7.1 with patches, BUT IT'S WORTH UPDATING! <br>- Replaced highlighting via :syntax with matchadd() / matchdelete(). This<br>&nbsp;&nbsp;requires Vim 7.2 / 7.1 with patches. This method is faster, there are no<br>&nbsp;&nbsp;more clashes with syntax highlighting (:match always has preference), and<br>&nbsp;&nbsp;the background highlighting does not disappear under 'cursorline'. <br>- Using winrestcmd() to fix effects of :windo: By entering a window, its<br>&nbsp;&nbsp;height is potentially increased from 0 to 1. <br>- Handling multiple tabs by calling s:UpdateScope() on the TabEnter event. </td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=10766">mark.vim</a></td>
-    <td class="rowodd" valign="top" nowrap><b>1.6.1</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2009-06-07</i></td>
-    <td class="rowodd" valign="top" nowrap>6.0</td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=10774">mark.vim</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.0.0</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2009-06-08</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=9713">Ingo Karkat</a></i></td>
-    <td class="rowodd" valign="top" width="2000">Initial upload</td>
+    <td class="rowodd" valign="top" width="2000">THIS VERSION REQUIRES VIM 7.0! <br>- Now using Vim List for g:mwWord and thus requiring Vim 7. g:mwCycle is now zero-based, but the syntax groups &quot;MarkWordx&quot; are still one-based. <br>- Factored :syntax operations out of s:DoMark() and s:UpdateMark() so that they can all be done in a single :windo. <br>- Normal mode &lt;Plug&gt;MarkSet now has the same semantics as its visual mode cousin: If the cursor is on an existing mark, the mark is removed. Beforehand, one could only remove a visually selected mark via again selecting it. Now, one simply can invoke the mapping when on such a mark. </td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=10766">mark.vim</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.6.1</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-06-07</i></td>
+    <td class="roweven" valign="top" nowrap>6.0</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=9713">Ingo Karkat</a></i></td>
+    <td class="roweven" valign="top" width="2000">Initial upload</td>
 </tr>
 </table>
 <!-- finish off the framework -->

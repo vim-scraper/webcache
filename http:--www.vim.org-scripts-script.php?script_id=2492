@@ -167,7 +167,7 @@
   <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
   <td>
     Rating <b>11/5</b>,
-    Downloaded by 409  </td>
+    Downloaded by 412  </td>
   <td class="lightbg">
   <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
   </td>
@@ -186,7 +186,7 @@
 <tr><td>game</td></tr>
 <tr><td>&nbsp;</td></tr>
 <tr><td class="prompt">description</td></tr>
-<tr><td>Read and write to Blip! (polish microblogging service) with ViBlip!<br>After installing, run vim, and type:<br>:Blip some blip status<br>or:<br>:Blip &gt;recipient: some message<br><br>to create new status. If you want to read 20 last statuses from your dashboard, just type:<br>:DBlip<br>If you rather want to read your friend statuses:<br>:DBlip friend_name<br>You can specify how many statuses from dashboard want to download. From your dashboard:<br>:DBlip 5<br>From friend's dashboard:<br>DBlip friend_name/5<br><br>To read private messages:<br>:PBlip<br>:PBlip 10<br>Default PBlip read 5 last Private Messages, second line will download 10 messages.<br><br>To read single status:<br>:MBlip id<br>Where id is single status id. You can also specify what type of status want to read:<br>:MBlip id/st<br>:MBlip id/dm<br>:MBlip id/pm<br><br>First line read normal statuses, second - directed messages, and third - private messages.<br><br>Sometimes you may have some problems with network connection, and connection to Blip is lost - in this case you can now reconnect:<br>:RBlip</td></tr>
+<tr><td>Read and write to Blip! (polish microblogging service) with ViBlip!<br>Home@GitHub: <a target="_blank" href="https://github.com/mysz/viblip">https://github.com/mysz/viblip</A><br>After installing, run vim, and type:<br>:Blip some blip status<br>or:<br>:Blip &gt;recipient: some message<br><br>to create new status. If you want to read 20 last statuses from your dashboard, just type:<br>:DBlip<br>If you rather want to read your friend statuses:<br>:DBlip friend_name<br>You can specify how many statuses from dashboard want to download. From your dashboard:<br>:DBlip 5<br>From friend's dashboard:<br>DBlip friend_name/5<br><br>To read private messages:<br>:PBlip<br>:PBlip 10<br>Default PBlip read 5 last Private Messages, second line will download 10 messages.<br><br>To read single status:<br>:MBlip id<br>Where id is single status id. You can also specify what type of status want to read:<br>:MBlip id/st<br>:MBlip id/dm<br>:MBlip id/pm<br><br>First line read normal statuses, second - directed messages, and third - private messages.<br><br>Sometimes you may have some problems with network connection, and connection to Blip is lost - in this case you can now reconnect:<br>:RBlip</td></tr>
 <tr><td>&nbsp;</td></tr>
 <tr><td class="prompt">install details</td></tr>
 <tr><td>Put blip.vim into ~/.vim/plugin and create ~/.vibliprc with content:<br>blip_login<br>blip_password</td></tr>

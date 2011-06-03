@@ -167,7 +167,7 @@
   <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
   <td>
     Rating <b>20/22</b>,
-    Downloaded by 426  </td>
+    Downloaded by 428  </td>
   <td class="lightbg">
   <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
   </td>
@@ -186,10 +186,10 @@
 <tr><td>utility</td></tr>
 <tr><td>&nbsp;</td></tr>
 <tr><td class="prompt">description</td></tr>
-<tr><td>Demonstration video : <a target="_blank" href="http://www.youtube.com/watch?v=vQqeAk__vvE">http://www.youtube.com/watch?v=vQqeAk__vvE</A><br><br>/!\ /!\<br>This plugin is tested on vim 7.2 with patches up to 264,<br>it may not work with previous versions!<br>up-to-date compiled vim versions for windows can be found here :<br><a target="_blank" href="http://sourceforge.net/projects/cream/files/Vim">http://sourceforge.net/projects/cream/files/Vim</A><br>/!\ /!\<br><br>To use this plugin, you must :<br>- Be running on Windows with .net Framework &gt;= 3.0<br>- use gVim version &gt;= 7.2 (possibly with some patches)<br>then launch gvim and type the following commands to start the plugin :<br>:ShowCodeOverview<br>:CodeOverviewAuto <br>:SnapshotFile<br><br>By default the automatic overview generation is deactivated to avoid<br>hurting performances. If you always want CodeOverview, put the first two<br>commands in your .vimrc. The last command is just to force refresh for<br>your current file.<br><br>Usage :<br>======<br>:ShowCodeOverview <br>&nbsp;&nbsp;&nbsp;&nbsp;Start the overview panel.<br><br>:HideCodeOverview <br>&nbsp;&nbsp;&nbsp;&nbsp;Hide the overview panel<br>&nbsp;&nbsp;&nbsp;&nbsp;Also stop automatic overview generation.<br><br>:CodeOverviewNoAuto <br>&nbsp;&nbsp;&nbsp;&nbsp;Disable automatic overview generation.<br><br>:CodeOverviewAuto <br>&nbsp;&nbsp;&nbsp;&nbsp;Setup automatic overview generation.<br><br>:SnapshotFile <br>&nbsp;&nbsp;&nbsp;&nbsp;Refresh your current overview.<br><br>As some requested, Here's the code source of binary parts, it's a little messy, sorry :<br><a target="_blank" href="http://github.com/Twinside/CodeOverview">http://github.com/Twinside/CodeOverview</A><br><br>Known problems :<br>==============<br>- View doesn't really track vim scrolling<br>It's the current trade-off between performance and functionality.</td></tr>
+<tr><td>Demonstration video : <a target="_blank" href="http://www.youtube.com/watch?v=vQqeAk__vvE">http://www.youtube.com/watch?v=vQqeAk__vvE</A><br><br>GitHub for the script : <a target="_blank" href="https://github.com/Twinside/vim-codeoverview">https://github.com/Twinside/vim-codeoverview</A><br><br>To use this plugin, you must :<br>- Be running on Windows with .net Framework &gt;= 3.0<br>- use gVim version &gt;= 7.2 (possibly with some patches)<br>then launch gvim and type the following commands to start the plugin :<br>:ShowCodeOverview<br>:CodeOverviewAuto <br>:SnapshotFile<br><br>By default the automatic overview generation is deactivated to avoid<br>hurting performances. If you always want CodeOverview, put the first two<br>commands in your .vimrc. The last command is just to force refresh for<br>your current file.<br><br>Usage :<br>======<br>:ShowCodeOverview <br>&nbsp;&nbsp;&nbsp;&nbsp;Start the overview panel.<br><br>:HideCodeOverview <br>&nbsp;&nbsp;&nbsp;&nbsp;Hide the overview panel<br>&nbsp;&nbsp;&nbsp;&nbsp;Also stop automatic overview generation.<br><br>:CodeOverviewNoAuto <br>&nbsp;&nbsp;&nbsp;&nbsp;Disable automatic overview generation.<br><br>:CodeOverviewAuto <br>&nbsp;&nbsp;&nbsp;&nbsp;Setup automatic overview generation.<br><br>:SnapshotFile <br>&nbsp;&nbsp;&nbsp;&nbsp;Refresh your current overview.<br><br>As some requested, Here's the code source of binary parts, it's a little messy, sorry :<br><a target="_blank" href="http://github.com/Twinside/CodeOverview">http://github.com/Twinside/CodeOverview</A><br><br>Known problems :<br>==============<br>- View doesn't really track vim scrolling<br>It's the current trade-off between performance and functionality.</td></tr>
 <tr><td>&nbsp;</td></tr>
 <tr><td class="prompt">install details</td></tr>
-<tr><td>uncompress the archive and put in your ~/vimfiles/plugin folder.</td></tr>
+<tr><td>uncompress the archive and put in your ~/vimfiles/plugin folder. or put it in ~/.vim/bundle/vim-codeoverview</td></tr>
 <tr><td>&nbsp;</td></tr>
 </table>
 
@@ -229,14 +229,6 @@ Click on the package to download.
     <td class="rowodd" valign="top" nowrap>7.2</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=17242">Vincent B</a></i></td>
     <td class="rowodd" valign="top" width="2000">Added variable to control auto-start of script.</td>
-</tr>
-<tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=11944">CodeOverview.zip</a></td>
-    <td class="roweven" valign="top" nowrap><b>1.6</b></td>
-    <td class="roweven" valign="top" nowrap><i>2009-12-23</i></td>
-    <td class="roweven" valign="top" nowrap>7.0</td>
-    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=17242">Vincent B</a></i></td>
-    <td class="roweven" valign="top" width="2000">Added handling of huuuuuuges file.</td>
 </tr>
 </table>
 <!-- finish off the framework -->

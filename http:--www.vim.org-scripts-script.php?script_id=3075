@@ -166,8 +166,8 @@
 <tr>
   <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
   <td>
-    Rating <b>64/27</b>,
-    Downloaded by 475  </td>
+    Rating <b>69/29</b>,
+    Downloaded by 511  </td>
   <td class="lightbg">
   <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
   </td>
@@ -223,124 +223,132 @@ Click on the package to download.
     <th valign="top">release notes</th>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=14474">NrrwRgn-0.18.vba</a></td>
-    <td class="rowodd" valign="top" nowrap><b>18</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2010-12-11</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15695">NrrwRgn-0.19.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>19</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2011-05-22</i></td>
     <td class="rowodd" valign="top" nowrap>7.3</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=17599">Christian Brabandt</a></i></td>
-    <td class="rowodd" valign="top" width="2000">Experimental version:<br>- experimental feature: Allow to Narrow several different regions at once using :g/pattern/NRP and afterwards calling :NRM (This only works linewise. Should that be made possible for any reagion?)<br>- disable folds, before writing changes back, otherwise chances are, you'll lose more data then wanted<br>- code cleanup<br>(automatically uploaded)</td>
+    <td class="rowodd" valign="top" width="2000">fix issue 2 from github <a target="_blank" href="https://github.com/chrisbra/NrrwRgn/issues/2">https://github.com/chrisbra/NrrwRgn/issues/2</A><br>(Widening does not work, if the narrowed windows have been moved to a new tabspace). Reported by vanschelven, thanks! <br>(automatically uploaded)</td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=14408">NrrwRgn-0.17.vba</a></td>
-    <td class="roweven" valign="top" nowrap><b>17</b></td>
-    <td class="roweven" valign="top" nowrap><i>2010-11-30</i></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=14474">NrrwRgn-0.18.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>18</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-12-11</i></td>
     <td class="roweven" valign="top" nowrap>7.3</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=17599">Christian Brabandt</a></i></td>
-    <td class="roweven" valign="top" width="2000">- cache the options, that will be set (instead of parsing<br>&nbsp;&nbsp;$VIMRUNTIME/doc/options.txt everytime) in the Narrowed Window<br>- getting the options didn't work, when using an autocommand like this:<br>&nbsp;&nbsp;autocmd BufEnter * cd %:p:h<br>&nbsp;&nbsp;(reported by Hong Xu, Thanks!)<br>- :q didn't clean up the Narrowed Buffer correctly. Fix this<br>- some code cleanup <br>(automatically uploaded)</td>
+    <td class="roweven" valign="top" width="2000">Experimental version:<br>- experimental feature: Allow to Narrow several different regions at once using :g/pattern/NRP and afterwards calling :NRM (This only works linewise. Should that be made possible for any reagion?)<br>- disable folds, before writing changes back, otherwise chances are, you'll lose more data then wanted<br>- code cleanup<br>(automatically uploaded)</td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=14289">NrrwRgn-0.16.vba</a></td>
-    <td class="rowodd" valign="top" nowrap><b>16</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2010-11-17</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=14408">NrrwRgn-0.17.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>17</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-11-30</i></td>
     <td class="rowodd" valign="top" nowrap>7.3</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=17599">Christian Brabandt</a></i></td>
-    <td class="rowodd" valign="top" width="2000">- Bugfix: copy all local options to the narrowed window (reported by Xu Hong, Thanks)<br>- Make :q quit the narrowed window correctly<br>(automatically uploaded)</td>
+    <td class="rowodd" valign="top" width="2000">- cache the options, that will be set (instead of parsing<br>&nbsp;&nbsp;$VIMRUNTIME/doc/options.txt everytime) in the Narrowed Window<br>- getting the options didn't work, when using an autocommand like this:<br>&nbsp;&nbsp;autocmd BufEnter * cd %:p:h<br>&nbsp;&nbsp;(reported by Hong Xu, Thanks!)<br>- :q didn't clean up the Narrowed Buffer correctly. Fix this<br>- some code cleanup <br>(automatically uploaded)</td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13683">NrrwRgn-0.15.vba</a></td>
-    <td class="roweven" valign="top" nowrap><b>0.15</b></td>
-    <td class="roweven" valign="top" nowrap><i>2010-08-26</i></td>
-    <td class="roweven" valign="top" nowrap>7.2</td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=14289">NrrwRgn-0.16.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>16</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-11-17</i></td>
+    <td class="roweven" valign="top" nowrap>7.3</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=17599">Christian Brabandt</a></i></td>
-    <td class="roweven" valign="top" width="2000">-minor documentation update (reported by Hong Xu, Thanks!)</td>
+    <td class="roweven" valign="top" width="2000">- Bugfix: copy all local options to the narrowed window (reported by Xu Hong, Thanks)<br>- Make :q quit the narrowed window correctly<br>(automatically uploaded)</td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13678">NrrwRgn-0.14.vba</a></td>
-    <td class="rowodd" valign="top" nowrap><b>0.14</b></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13683">NrrwRgn-0.15.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.15</b></td>
     <td class="rowodd" valign="top" nowrap><i>2010-08-26</i></td>
     <td class="rowodd" valign="top" nowrap>7.2</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=17599">Christian Brabandt</a></i></td>
-    <td class="rowodd" valign="top" width="2000">- Bugfix: :only in the original buffer resulted in errors (reported by Adam<br>&nbsp;&nbsp;Monsen)</td>
+    <td class="rowodd" valign="top" width="2000">-minor documentation update (reported by Hong Xu, Thanks!)</td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13644">NrrwRgn-0.13.vba</a></td>
-    <td class="roweven" valign="top" nowrap><b>0.13</b></td>
-    <td class="roweven" valign="top" nowrap><i>2010-08-22</i></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13678">NrrwRgn-0.14.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.14</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-08-26</i></td>
     <td class="roweven" valign="top" nowrap>7.2</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=17599">Christian Brabandt</a></i></td>
-    <td class="roweven" valign="top" width="2000">This adds the experimental feature of using the command :NUD to view a chunk of a unified diff in diff-mode</td>
+    <td class="roweven" valign="top" width="2000">- Bugfix: :only in the original buffer resulted in errors (reported by Adam<br>&nbsp;&nbsp;Monsen)</td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13422">NrrwRgn-0.12.vba</a></td>
-    <td class="rowodd" valign="top" nowrap><b>0.12</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2010-07-28</i></td>
-    <td class="rowodd" valign="top" nowrap>7.0</td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13644">NrrwRgn-0.13.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.13</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-08-22</i></td>
+    <td class="rowodd" valign="top" nowrap>7.2</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=17599">Christian Brabandt</a></i></td>
-    <td class="rowodd" valign="top" width="2000">The Vimball for Version 0.11 contained some garbage that causes various errors.. So this Version is a new packaged version and should work now. Not sure how that happened.<br>(Thanks Dennis Hostetler!)</td>
+    <td class="rowodd" valign="top" width="2000">This adds the experimental feature of using the command :NUD to view a chunk of a unified diff in diff-mode</td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13420">NrrwRgn-0.11.vba</a></td>
-    <td class="roweven" valign="top" nowrap><b>0.11</b></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13422">NrrwRgn-0.12.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.12</b></td>
     <td class="roweven" valign="top" nowrap><i>2010-07-28</i></td>
     <td class="roweven" valign="top" nowrap>7.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=17599">Christian Brabandt</a></i></td>
-    <td class="roweven" valign="top" width="2000">Don't set 'winfixwidth' and 'winfixheight'</td>
+    <td class="roweven" valign="top" width="2000">The Vimball for Version 0.11 contained some garbage that causes various errors.. So this Version is a new packaged version and should work now. Not sure how that happened.<br>(Thanks Dennis Hostetler!)</td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13038">NrrwRgn-0.10.vba</a></td>
-    <td class="rowodd" valign="top" nowrap><b>0.10</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2010-05-20</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13420">NrrwRgn-0.11.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.11</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-07-28</i></td>
     <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=17599">Christian Brabandt</a></i></td>
-    <td class="rowodd" valign="top" width="2000">- Restore Cursorposition using winrestview() and winsaveview()<br>- fix a bug, that prevented the use of visual narrowing<br>- Make sure when closing the narrowed buffer, the content will be written to<br>&nbsp;&nbsp;the right original region<br>- use topleft for opening the Narrowed window<br>- check, that the original buffer is still available<br>- If you Narrow the complete buffer using :NRV and write the changes back, an<br>&nbsp;&nbsp;additional trailing line is inserted. Remove that line.<br>- When writing the changes back, update the highlighting.</td>
+    <td class="rowodd" valign="top" width="2000">Don't set 'winfixwidth' and 'winfixheight'</td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13029">NrrwRgn-0.9.vba</a></td>
-    <td class="roweven" valign="top" nowrap><b>0.9</b></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13038">NrrwRgn-0.10.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.10</b></td>
     <td class="roweven" valign="top" nowrap><i>2010-05-20</i></td>
     <td class="roweven" valign="top" nowrap>7.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=17599">Christian Brabandt</a></i></td>
-    <td class="roweven" valign="top" width="2000">- It is now possible to Narrow a window recursively. This allows to have<br>&nbsp;&nbsp;several narrowed windows, and allows for example to only diff certain<br>&nbsp;&nbsp;regions (as was suggested in a recent thread at the vim_use mailinglist:<br>&nbsp;&nbsp;<a target="_blank" href="http://groups.google.com/group/vim_use/msg/05d7fd9bd1556f0e">http://groups.google.com/group/vim_use/msg/05d7fd9bd1556f0e</A>) therefore, the<br>&nbsp;&nbsp;use for the g:nrrw_rgn_sepwin variable isn't necessary anymore.<br>- Small documentation updates</td>
+    <td class="roweven" valign="top" width="2000">- Restore Cursorposition using winrestview() and winsaveview()<br>- fix a bug, that prevented the use of visual narrowing<br>- Make sure when closing the narrowed buffer, the content will be written to<br>&nbsp;&nbsp;the right original region<br>- use topleft for opening the Narrowed window<br>- check, that the original buffer is still available<br>- If you Narrow the complete buffer using :NRV and write the changes back, an<br>&nbsp;&nbsp;additional trailing line is inserted. Remove that line.<br>- When writing the changes back, update the highlighting.</td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13025">NrrwRgn-0.8.vba</a></td>
-    <td class="rowodd" valign="top" nowrap><b>0.8</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2010-05-18</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13029">NrrwRgn-0.9.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.9</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-05-20</i></td>
     <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=17599">Christian Brabandt</a></i></td>
-    <td class="rowodd" valign="top" width="2000">- the g:nrrw_rgn_sepwin variable can be used to force seperate Narrowed Windows, so you could easily diff those windows.<br>- make the separating of several windows a little bit safer (look at the bufnr(), so it should work without problems for several buffers)<br>- switch from script local variables to buffer local variables, so narrowing for several buffers should work.<br>- set 'winfixheight' for narrowed window <br>- Added command :NRV (suggested by Charles Campbell, thanks!)<br>- added error handling, in case :NRV is called, without a selected region<br>- take care of beeps, when calling :NRV<br>- output WarningMsg</td>
+    <td class="rowodd" valign="top" width="2000">- It is now possible to Narrow a window recursively. This allows to have<br>&nbsp;&nbsp;several narrowed windows, and allows for example to only diff certain<br>&nbsp;&nbsp;regions (as was suggested in a recent thread at the vim_use mailinglist:<br>&nbsp;&nbsp;<a target="_blank" href="http://groups.google.com/group/vim_use/msg/05d7fd9bd1556f0e">http://groups.google.com/group/vim_use/msg/05d7fd9bd1556f0e</A>) therefore, the<br>&nbsp;&nbsp;use for the g:nrrw_rgn_sepwin variable isn't necessary anymore.<br>- Small documentation updates</td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13023">NrrwRgn-0.7.vba</a></td>
-    <td class="roweven" valign="top" nowrap><b>0.7</b></td>
-    <td class="roweven" valign="top" nowrap><i>2010-05-17</i></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13025">NrrwRgn-0.8.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.8</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-05-18</i></td>
     <td class="roweven" valign="top" nowrap>7.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=17599">Christian Brabandt</a></i></td>
-    <td class="roweven" valign="top" width="2000">- really use the black hole register for deleting the old buffer contents in the narrowed buffer (suggestion by esquifit in <a target="_blank" href="http://groups.google.com/group/comp.editors/msg/3eb3e3a7c68597db">http://groups.google.com/group/comp.editors/msg/3eb3e3a7c68597db</A>)<br>- make autocommand nesting, so the highlighting will be removed when writing the buffer contents.<br>- Use g:nrrw_rgn_nohl variable to disable highlighting (as this can be disturbing).</td>
+    <td class="roweven" valign="top" width="2000">- the g:nrrw_rgn_sepwin variable can be used to force seperate Narrowed Windows, so you could easily diff those windows.<br>- make the separating of several windows a little bit safer (look at the bufnr(), so it should work without problems for several buffers)<br>- switch from script local variables to buffer local variables, so narrowing for several buffers should work.<br>- set 'winfixheight' for narrowed window <br>- Added command :NRV (suggested by Charles Campbell, thanks!)<br>- added error handling, in case :NRV is called, without a selected region<br>- take care of beeps, when calling :NRV<br>- output WarningMsg</td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=12938">NrrwRgn-0.6.vba</a></td>
-    <td class="rowodd" valign="top" nowrap><b>0.6</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2010-05-04</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13023">NrrwRgn-0.7.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.7</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-05-17</i></td>
     <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=17599">Christian Brabandt</a></i></td>
-    <td class="rowodd" valign="top" width="2000">Version 0.6:<br>- the previous version had problems restoring the orig buffer, this version fixes it (highlighting and setl ma did not work correctly)<br>Version 0.5 (unreleased): <br>- The mapping that allows for narrowing a visually selected range, did not work.&nbsp;&nbsp;(Fixed!)<br>- Make :WidenRegion work as expected (close the widened window)</td>
+    <td class="rowodd" valign="top" width="2000">- really use the black hole register for deleting the old buffer contents in the narrowed buffer (suggestion by esquifit in <a target="_blank" href="http://groups.google.com/group/comp.editors/msg/3eb3e3a7c68597db">http://groups.google.com/group/comp.editors/msg/3eb3e3a7c68597db</A>)<br>- make autocommand nesting, so the highlighting will be removed when writing the buffer contents.<br>- Use g:nrrw_rgn_nohl variable to disable highlighting (as this can be disturbing).</td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=12912">NrrwRgn-0.4.vba</a></td>
-    <td class="roweven" valign="top" nowrap><b>0.4</b></td>
-    <td class="roweven" valign="top" nowrap><i>2010-04-28</i></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=12938">NrrwRgn-0.6.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.6</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-05-04</i></td>
     <td class="roweven" valign="top" nowrap>7.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=17599">Christian Brabandt</a></i></td>
-    <td class="roweven" valign="top" width="2000">- Highlight narrowed region in the original buffer<br>- Save and Restore search-register<br>- Provide shortcut commands |:NR|<br>- Provide command |:NW| and |:NarrowWindow|<br>- Make plugin autoloadable<br>- Enable GLVS (see |:GLVS|)<br>- Provide Documenation (:h NarrowRegion)<br>- Distribute Plugin as vimball |pi_vimball.txt|</td>
+    <td class="roweven" valign="top" width="2000">Version 0.6:<br>- the previous version had problems restoring the orig buffer, this version fixes it (highlighting and setl ma did not work correctly)<br>Version 0.5 (unreleased): <br>- The mapping that allows for narrowing a visually selected range, did not work.&nbsp;&nbsp;(Fixed!)<br>- Make :WidenRegion work as expected (close the widened window)</td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=12911">NrrwRgn.vba</a></td>
-    <td class="rowodd" valign="top" nowrap><b>0.3</b></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=12912">NrrwRgn-0.4.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.4</b></td>
     <td class="rowodd" valign="top" nowrap><i>2010-04-28</i></td>
-    <td class="rowodd" valign="top" nowrap>7.2</td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=17599">Christian Brabandt</a></i></td>
-    <td class="rowodd" valign="top" width="2000">Initial upload</td>
+    <td class="rowodd" valign="top" width="2000">- Highlight narrowed region in the original buffer<br>- Save and Restore search-register<br>- Provide shortcut commands |:NR|<br>- Provide command |:NW| and |:NarrowWindow|<br>- Make plugin autoloadable<br>- Enable GLVS (see |:GLVS|)<br>- Provide Documenation (:h NarrowRegion)<br>- Distribute Plugin as vimball |pi_vimball.txt|</td>
+</tr>
+<tr>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=12911">NrrwRgn.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.3</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-04-28</i></td>
+    <td class="roweven" valign="top" nowrap>7.2</td>
+    <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=17599">Christian Brabandt</a></i></td>
+    <td class="roweven" valign="top" width="2000">Initial upload</td>
 </tr>
 </table>
 <!-- finish off the framework -->

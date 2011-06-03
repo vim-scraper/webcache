@@ -166,8 +166,8 @@
 <tr>
   <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
   <td>
-    Rating <b>246/65</b>,
-    Downloaded by 1557  </td>
+    Rating <b>271/72</b>,
+    Downloaded by 1669  </td>
   <td class="lightbg">
   <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
   </td>
@@ -189,7 +189,7 @@
 <tr><td>This plug-in automatically creates a global tags file and keeps it up-to-date as you edit files in Vim. The tags are also used to perform dynamic syntax highlighting of user-defined functions and types. For more information about the plug-in please refer to its homepage or the project page on GitHub:<br><br> • <a target="_blank" href="http://peterodding.com/code/vim/easytags/">http://peterodding.com/code/vim/easytags/</A><br> • <a target="_blank" href="http://github.com/xolox/vim-easytags">http://github.com/xolox/vim-easytags</A><br><br>If you have questions, bug reports, suggestions, etc. the author can be contacted at peter@peterodding.com. If you like this plug-in please vote for it below!</td></tr>
 <tr><td>&nbsp;</td></tr>
 <tr><td class="prompt">install details</td></tr>
-<tr><td>Unzip the most recent ZIP archive file (see below) inside your Vim profile directory (usually this is &quot;~/.vim&quot; on UNIX and &quot;%USERPROFILE%\vimfiles&quot; on Windows), restart Vim and execute the command &quot;:helptags ~/.vim/doc&quot; (use &quot;:helptags ~\vimfiles\doc&quot; instead on Windows). Now try it out: Edit any file type supported by Exuberant Ctags and within ten seconds the plug-in should create/update your tags file (&quot;~/.vimtags&quot; on UNIX, &quot;~/_vimtags&quot; on Windows) with the tags defined in the file you just edited! This means that whatever file you're editing in Vim (as long as its on the local file system), tags will always be available by the time you need them!<br><br>Additionally if the file you just opened is a C, C++, Objective-C, Java, Lua, Python, PHP or Vim source file you should also notice that the function and type names defined in the file have been syntax highlighted.<br><br>If the plug-in warns you that ctags isn't installed you can download it from its homepage <a target="_blank" href="http://ctags.sourceforge.net/">http://ctags.sourceforge.net/</A> or if you're running Debian/Ubuntu you can install it by executing the following shell command:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;sudo apt-get install exuberant-ctags<br><br>Note that on Windows a command prompt window pops up whenever Exuberant Ctags is run as an external process. If this bothers you then you can install my shell.vim plug-in (see <a href="/scripts/script.php?script_id=3123">vimscript #3123</a>) which includes a DLL that works around this issue. Once you’ve installed both plug-ins it should work out of the box!</td></tr>
+<tr><td>Unzip the most recent ZIP archive file (see below) inside your Vim profile directory (usually this is &quot;~/.vim&quot; on UNIX and &quot;%USERPROFILE%\vimfiles&quot; on Windows), restart Vim and execute the command &quot;:helptags ~/.vim/doc&quot; (use &quot;:helptags ~\vimfiles\doc&quot; instead on Windows). Now try it out: Edit any file type supported by Exuberant Ctags and within ten seconds the plug-in should create/update your tags file (&quot;~/.vimtags&quot; on UNIX, &quot;~/_vimtags&quot; on Windows) with the tags defined in the file you just edited! This means that whatever file you're editing in Vim (as long as its on the local file system), tags will always be available by the time you need them!<br><br>Additionally if the file you just opened is a C, C++, Objective-C, Java, Lua, Python, PHP, Ruby or Vim source file you should also notice that the function and type names defined in the file have been syntax highlighted.<br><br>If the plug-in warns you that ctags isn't installed you can download it from its homepage <a target="_blank" href="http://ctags.sourceforge.net/">http://ctags.sourceforge.net/</A> or if you're running Debian/Ubuntu you can install it by executing the following shell command:<br><br>&nbsp;&nbsp;&nbsp;&nbsp;sudo apt-get install exuberant-ctags<br><br>Note that on Windows a command prompt window pops up whenever Exuberant Ctags is run as an external process. If this bothers you then you can install my shell.vim plug-in (see <a href="/scripts/script.php?script_id=3123">vimscript #3123</a>) which includes a DLL that works around this issue. Once you’ve installed both plug-ins it should work out of the box!</td></tr>
 <tr><td>&nbsp;</td></tr>
 </table>
 
@@ -223,180 +223,188 @@ Click on the package to download.
     <th valign="top">release notes</th>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15110">easytags.zip</a></td>
-    <td class="rowodd" valign="top" nowrap><b>2.2</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2011-02-24</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15700">easytags.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.2.9</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2011-05-23</i></td>
     <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=14483">Peter Odding</a></i></td>
-    <td class="rowodd" valign="top" width="2000"> • Bug fix for alias handling:<br>&nbsp;&nbsp; <a target="_blank" href="https://github.com/xolox/vim-easytags/commit/3b4db424731f952050b9">https://github.com/xolox/vim-easytags/commit/3b4db424731f952050b9</A><br><br> • Don't highlight PHP functions not followed by `(':<br>&nbsp;&nbsp; <a target="_blank" href="https://github.com/xolox/vim-easytags/commit/d8a8c5ef9d2d9c48767b">https://github.com/xolox/vim-easytags/commit/d8a8c5ef9d2d9c48767b</A><br><br> • Highlight C# classes, structs and methods (thanks to feedback from Aleksey Baibarin):<br>&nbsp;&nbsp; <a target="_blank" href="https://github.com/xolox/vim-easytags/commit/98780b1904c066a510ba">https://github.com/xolox/vim-easytags/commit/98780b1904c066a510ba</A><br><br> • Added caveat about Cygwin (thanks to feedback from Alex Zuroff!), updated to-do list:<br>&nbsp;&nbsp; <a target="_blank" href="https://github.com/xolox/vim-easytags/commit/d8a8c5ef9d2d9c48767b">https://github.com/xolox/vim-easytags/commit/d8a8c5ef9d2d9c48767b</A></td>
+    <td class="rowodd" valign="top" width="2000"> • Added caveat about Cygwin, updated to-do list:<br>&nbsp;&nbsp; <a target="_blank" href="https://github.com/xolox/vim-easytags/commit/ea6efd6">https://github.com/xolox/vim-easytags/commit/ea6efd6</A><br><br> • Document the highlighting groups used by the plug-in:<br>&nbsp;&nbsp; <a target="_blank" href="https://github.com/xolox/vim-easytags/commit/2a2cba0">https://github.com/xolox/vim-easytags/commit/2a2cba0</A><br><br> • Add g:easytags_suppress_ctags_warning option:<br>&nbsp;&nbsp; <a target="_blank" href="https://github.com/xolox/vim-easytags/commit/6e279a3">https://github.com/xolox/vim-easytags/commit/6e279a3</A><br><br> • Accept 'Development' as valid version:<br>&nbsp;&nbsp; <a target="_blank" href="https://github.com/xolox/vim-easytags/commit/0a49b11">https://github.com/xolox/vim-easytags/commit/0a49b11</A><br><br> • Add documentation in vimdoc format:<br>&nbsp;&nbsp; <a target="_blank" href="https://github.com/xolox/vim-easytags/commit/6de3e06">https://github.com/xolox/vim-easytags/commit/6de3e06</A><br><br> • Enable deferring tags file registration (VimEnter):<br>&nbsp;&nbsp; <a target="_blank" href="https://github.com/xolox/vim-easytags/commit/3466f61">https://github.com/xolox/vim-easytags/commit/3466f61</A><br>&nbsp;&nbsp; <a target="_blank" href="https://github.com/xolox/vim-easytags/commit/c1635d6">https://github.com/xolox/vim-easytags/commit/c1635d6</A><br><br> • Don't use feedkeys() hack for Vim &gt;= 7.3:<br>&nbsp;&nbsp; <a target="_blank" href="https://github.com/xolox/vim-easytags/commit/1ee5eff">https://github.com/xolox/vim-easytags/commit/1ee5eff</A><br><br> • Enable updating of project specific tags files:<br>&nbsp;&nbsp; <a target="_blank" href="https://github.com/xolox/vim-easytags/commit/670910e">https://github.com/xolox/vim-easytags/commit/670910e</A><br><br> • Check that the xolox#misc submodule is available:<br>&nbsp;&nbsp; <a target="_blank" href="https://github.com/xolox/vim-easytags/commit/6ddd431">https://github.com/xolox/vim-easytags/commit/6ddd431</A><br><br> • Added Python script to manually cleanup tags files:<br>&nbsp;&nbsp; <a target="_blank" href="https://github.com/xolox/vim-easytags/commit/18ad44c">https://github.com/xolox/vim-easytags/commit/18ad44c</A><br><br> • Added Python script to analyze tags file size:<br>&nbsp;&nbsp; <a target="_blank" href="https://github.com/xolox/vim-easytags/commit/f980d5d">https://github.com/xolox/vim-easytags/commit/f980d5d</A><br><br> • Dynamic highlighting for Ruby source code (issue #9):<br>&nbsp;&nbsp; <a target="_blank" href="https://github.com/xolox/vim-easytags/commit/45e97ff">https://github.com/xolox/vim-easytags/commit/45e97ff</A><br><br> • Bug fix for highlighting of C# classes:<br>&nbsp;&nbsp; <a target="_blank" href="https://github.com/xolox/vim-easytags/commit/6cf2a35">https://github.com/xolox/vim-easytags/commit/6cf2a35</A></td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=14437">easytags.zip</a></td>
-    <td class="roweven" valign="top" nowrap><b>2.1.9</b></td>
-    <td class="roweven" valign="top" nowrap><i>2010-12-04</i></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=15110">easytags.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.2</b></td>
+    <td class="roweven" valign="top" nowrap><i>2011-02-24</i></td>
     <td class="roweven" valign="top" nowrap>7.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=14483">Peter Odding</a></i></td>
-    <td class="roweven" valign="top" width="2000"> • Don't highlight tags inside #include &lt;...&gt;:<br>&nbsp;&nbsp; <a target="_blank" href="https://github.com/xolox/vim-easytags/commit/ae3eb31b705401d21f9f">https://github.com/xolox/vim-easytags/commit/ae3eb31b705401d21f9f</A><br><br> • Highlighting for Python class names:<br>&nbsp;&nbsp; <a target="_blank" href="https://github.com/xolox/vim-easytags/commit/d3551a3fa2315874ae52">https://github.com/xolox/vim-easytags/commit/d3551a3fa2315874ae52</A></td>
+    <td class="roweven" valign="top" width="2000"> • Bug fix for alias handling:<br>&nbsp;&nbsp; <a target="_blank" href="https://github.com/xolox/vim-easytags/commit/3b4db424731f952050b9">https://github.com/xolox/vim-easytags/commit/3b4db424731f952050b9</A><br><br> • Don't highlight PHP functions not followed by `(':<br>&nbsp;&nbsp; <a target="_blank" href="https://github.com/xolox/vim-easytags/commit/d8a8c5ef9d2d9c48767b">https://github.com/xolox/vim-easytags/commit/d8a8c5ef9d2d9c48767b</A><br><br> • Highlight C# classes, structs and methods (thanks to feedback from Aleksey Baibarin):<br>&nbsp;&nbsp; <a target="_blank" href="https://github.com/xolox/vim-easytags/commit/98780b1904c066a510ba">https://github.com/xolox/vim-easytags/commit/98780b1904c066a510ba</A><br><br> • Added caveat about Cygwin (thanks to feedback from Alex Zuroff!), updated to-do list:<br>&nbsp;&nbsp; <a target="_blank" href="https://github.com/xolox/vim-easytags/commit/d8a8c5ef9d2d9c48767b">https://github.com/xolox/vim-easytags/commit/d8a8c5ef9d2d9c48767b</A></td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13915">easytags.zip</a></td>
-    <td class="rowodd" valign="top" nowrap><b>2.1.7.2</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2010-09-25</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=14437">easytags.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.1.9</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-12-04</i></td>
     <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=14483">Peter Odding</a></i></td>
-    <td class="rowodd" valign="top" width="2000">Bug fix for duplicate help tag in ‘easytags.txt’ (no associated commit because ‘easytags.txt’ is generated from ‘README.md’ — I just fixed the conversion script and regenerated ‘easytags.txt’)</td>
+    <td class="rowodd" valign="top" width="2000"> • Don't highlight tags inside #include &lt;...&gt;:<br>&nbsp;&nbsp; <a target="_blank" href="https://github.com/xolox/vim-easytags/commit/ae3eb31b705401d21f9f">https://github.com/xolox/vim-easytags/commit/ae3eb31b705401d21f9f</A><br><br> • Highlighting for Python class names:<br>&nbsp;&nbsp; <a target="_blank" href="https://github.com/xolox/vim-easytags/commit/d3551a3fa2315874ae52">https://github.com/xolox/vim-easytags/commit/d3551a3fa2315874ae52</A></td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13763">easytags.zip</a></td>
-    <td class="roweven" valign="top" nowrap><b>2.1.7</b></td>
-    <td class="roweven" valign="top" nowrap><i>2010-09-05</i></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13915">easytags.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.1.7.2</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-09-25</i></td>
     <td class="roweven" valign="top" nowrap>7.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=14483">Peter Odding</a></i></td>
-    <td class="roweven" valign="top" width="2000"> • Documented :HighlightTags tags file format requirements:<br>&nbsp;&nbsp; <a target="_blank" href="http://github.com/xolox/vim-easytags/commit/738d7508181423e1633e4d5d6014e8ad2acb4595">http://github.com/xolox/vim-easytags/commit/738d7508181423e1633e4d5d6014e8ad2acb4595</A><br><br> • Remove no longer needed PublishPre automatic command:<br>&nbsp;&nbsp; <a target="_blank" href="http://github.com/xolox/vim-easytags/commit/3735a5c31b94cb575d6821e697d867fe475d73cf">http://github.com/xolox/vim-easytags/commit/3735a5c31b94cb575d6821e697d867fe475d73cf</A><br><br> • Fixed easytags#update() to overcome argument limit:<br>&nbsp;&nbsp; <a target="_blank" href="http://github.com/xolox/vim-easytags/commit/0d0fac667e38114324d1a90f848f49a5af71f859">http://github.com/xolox/vim-easytags/commit/0d0fac667e38114324d1a90f848f49a5af71f859</A><br><br> • Bug fix: Canonicalize arguments to :UpdateTags:<br>&nbsp;&nbsp; <a target="_blank" href="http://github.com/xolox/vim-easytags/commit/5efb2c7ee0d6926aaa0ad3080a53857ec910d4d3">http://github.com/xolox/vim-easytags/commit/5efb2c7ee0d6926aaa0ad3080a53857ec910d4d3</A></td>
+    <td class="roweven" valign="top" width="2000">Bug fix for duplicate help tag in ‘easytags.txt’ (no associated commit because ‘easytags.txt’ is generated from ‘README.md’ — I just fixed the conversion script and regenerated ‘easytags.txt’)</td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13551">easytags.zip</a></td>
-    <td class="rowodd" valign="top" nowrap><b>2.1.4</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2010-08-11</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13763">easytags.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.1.7</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-09-05</i></td>
     <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=14483">Peter Odding</a></i></td>
-    <td class="rowodd" valign="top" width="2000">Fix automatic ctags detection on FreeBSD (reported by Derek Tattersall):<br><a target="_blank" href="http://github.com/xolox/vim-easytags/commit/eea8f41b9e04b8b533d1670a1090b16255f9b5f2">http://github.com/xolox/vim-easytags/commit/eea8f41b9e04b8b533d1670a1090b16255f9b5f2</A></td>
+    <td class="rowodd" valign="top" width="2000"> • Documented :HighlightTags tags file format requirements:<br>&nbsp;&nbsp; <a target="_blank" href="http://github.com/xolox/vim-easytags/commit/738d7508181423e1633e4d5d6014e8ad2acb4595">http://github.com/xolox/vim-easytags/commit/738d7508181423e1633e4d5d6014e8ad2acb4595</A><br><br> • Remove no longer needed PublishPre automatic command:<br>&nbsp;&nbsp; <a target="_blank" href="http://github.com/xolox/vim-easytags/commit/3735a5c31b94cb575d6821e697d867fe475d73cf">http://github.com/xolox/vim-easytags/commit/3735a5c31b94cb575d6821e697d867fe475d73cf</A><br><br> • Fixed easytags#update() to overcome argument limit:<br>&nbsp;&nbsp; <a target="_blank" href="http://github.com/xolox/vim-easytags/commit/0d0fac667e38114324d1a90f848f49a5af71f859">http://github.com/xolox/vim-easytags/commit/0d0fac667e38114324d1a90f848f49a5af71f859</A><br><br> • Bug fix: Canonicalize arguments to :UpdateTags:<br>&nbsp;&nbsp; <a target="_blank" href="http://github.com/xolox/vim-easytags/commit/5efb2c7ee0d6926aaa0ad3080a53857ec910d4d3">http://github.com/xolox/vim-easytags/commit/5efb2c7ee0d6926aaa0ad3080a53857ec910d4d3</A></td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13547">easytags.zip</a></td>
-    <td class="roweven" valign="top" nowrap><b>2.1.3</b></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13551">easytags.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.1.4</b></td>
     <td class="roweven" valign="top" nowrap><i>2010-08-11</i></td>
     <td class="roweven" valign="top" nowrap>7.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=14483">Peter Odding</a></i></td>
-    <td class="roweven" valign="top" width="2000"> • Support scanning & highlighting of struct/class members in C/C++ sources:<br>&nbsp;&nbsp; <a target="_blank" href="http://github.com/xolox/vim-easytags/commit/2f73c57c857fc0a4f3bed718a90f0296890778a3">http://github.com/xolox/vim-easytags/commit/2f73c57c857fc0a4f3bed718a90f0296890778a3</A><br><br> • Always scan C/C++ sources for function prototypes:<br>&nbsp;&nbsp; <a target="_blank" href="http://github.com/xolox/vim-easytags/commit/7b041bd0ae8c65e80c84d20727b1eafaf04327bd">http://github.com/xolox/vim-easytags/commit/7b041bd0ae8c65e80c84d20727b1eafaf04327bd</A></td>
+    <td class="roweven" valign="top" width="2000">Fix automatic ctags detection on FreeBSD (reported by Derek Tattersall):<br><a target="_blank" href="http://github.com/xolox/vim-easytags/commit/eea8f41b9e04b8b533d1670a1090b16255f9b5f2">http://github.com/xolox/vim-easytags/commit/eea8f41b9e04b8b533d1670a1090b16255f9b5f2</A></td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13545">easytags.zip</a></td>
-    <td class="rowodd" valign="top" nowrap><b>2.1</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2010-08-10</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13547">easytags.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.1.3</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-08-11</i></td>
     <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=14483">Peter Odding</a></i></td>
-    <td class="rowodd" valign="top" width="2000"> • Support for automatic recursion using ctags -R:<br>&nbsp;&nbsp; <a target="_blank" href="http://github.com/xolox/vim-easytags/commit/0d9567900f23e8ca243db16df80004aa7c658623">http://github.com/xolox/vim-easytags/commit/0d9567900f23e8ca243db16df80004aa7c658623</A><br><br> • Bug fix for broken alias support (reported by zhang xinli):<br>&nbsp;&nbsp; <a target="_blank" href="http://github.com/xolox/vim-easytags/commit/80847259b7c3dd5781384f31914a7d7465ed0069">http://github.com/xolox/vim-easytags/commit/80847259b7c3dd5781384f31914a7d7465ed0069</A></td>
+    <td class="rowodd" valign="top" width="2000"> • Support scanning & highlighting of struct/class members in C/C++ sources:<br>&nbsp;&nbsp; <a target="_blank" href="http://github.com/xolox/vim-easytags/commit/2f73c57c857fc0a4f3bed718a90f0296890778a3">http://github.com/xolox/vim-easytags/commit/2f73c57c857fc0a4f3bed718a90f0296890778a3</A><br><br> • Always scan C/C++ sources for function prototypes:<br>&nbsp;&nbsp; <a target="_blank" href="http://github.com/xolox/vim-easytags/commit/7b041bd0ae8c65e80c84d20727b1eafaf04327bd">http://github.com/xolox/vim-easytags/commit/7b041bd0ae8c65e80c84d20727b1eafaf04327bd</A></td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13531">easytags.zip</a></td>
-    <td class="roweven" valign="top" nowrap><b>2.0</b></td>
-    <td class="roweven" valign="top" nowrap><i>2010-08-09</i></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13545">easytags.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>2.1</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-08-10</i></td>
     <td class="roweven" valign="top" nowrap>7.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=14483">Peter Odding</a></i></td>
-    <td class="roweven" valign="top" width="2000"><a target="_blank" href="http://github.com/xolox/vim-easytags/commit/89f9205ff840329aa75166249a99b1d0f227d661">http://github.com/xolox/vim-easytags/commit/89f9205ff840329aa75166249a99b1d0f227d661</A>:<br> • Enable commands like :UpdateTags -R ~/.vim/.<br> • Fixed a rare problem where tags sort before the !_TAG_FILE_SORTED header causing E432.<br> • Finally documented the :UpdateTags and :HighlightTags commands.<br> • Dynamic highlighting can now be disabled for individual buffers, which can come in handy when the highlighting conflicts with another plug-in: Just set the 'b:easytags_nohl' variable to any value.<br><br><a target="_blank" href="http://github.com/xolox/vim-easytags/commit/7e8533fceefb4358444997bf3deda8c1812069c7">http://github.com/xolox/vim-easytags/commit/7e8533fceefb4358444997bf3deda8c1812069c7</A>:<br> • Automatic/optional integration with shell.vim</td>
+    <td class="roweven" valign="top" width="2000"> • Support for automatic recursion using ctags -R:<br>&nbsp;&nbsp; <a target="_blank" href="http://github.com/xolox/vim-easytags/commit/0d9567900f23e8ca243db16df80004aa7c658623">http://github.com/xolox/vim-easytags/commit/0d9567900f23e8ca243db16df80004aa7c658623</A><br><br> • Bug fix for broken alias support (reported by zhang xinli):<br>&nbsp;&nbsp; <a target="_blank" href="http://github.com/xolox/vim-easytags/commit/80847259b7c3dd5781384f31914a7d7465ed0069">http://github.com/xolox/vim-easytags/commit/80847259b7c3dd5781384f31914a7d7465ed0069</A></td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13358">easytags.zip</a></td>
-    <td class="rowodd" valign="top" nowrap><b>1.9.7</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2010-07-20</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13531">easytags.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>2.0</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-08-09</i></td>
     <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=14483">Peter Odding</a></i></td>
-    <td class="rowodd" valign="top" width="2000"> • Create case folded tags files when &ignorecase is on:<br>&nbsp;&nbsp; <a target="_blank" href="http://github.com/xolox/vim-easytags/commit/ff64be5fe506a9a15dce28bac5b5585d4430f4a6">http://github.com/xolox/vim-easytags/commit/ff64be5fe506a9a15dce28bac5b5585d4430f4a6</A><br><br> • The plug-in now finally registers the global tags file automatically on both Windows and UNIX:<br>&nbsp;&nbsp; <a target="_blank" href="http://github.com/xolox/vim-easytags/commit/3b934f6e0d0d4a44875024713dd0aeefdcdd206b">http://github.com/xolox/vim-easytags/commit/3b934f6e0d0d4a44875024713dd0aeefdcdd206b</A></td>
+    <td class="rowodd" valign="top" width="2000"><a target="_blank" href="http://github.com/xolox/vim-easytags/commit/89f9205ff840329aa75166249a99b1d0f227d661">http://github.com/xolox/vim-easytags/commit/89f9205ff840329aa75166249a99b1d0f227d661</A>:<br> • Enable commands like :UpdateTags -R ~/.vim/.<br> • Fixed a rare problem where tags sort before the !_TAG_FILE_SORTED header causing E432.<br> • Finally documented the :UpdateTags and :HighlightTags commands.<br> • Dynamic highlighting can now be disabled for individual buffers, which can come in handy when the highlighting conflicts with another plug-in: Just set the 'b:easytags_nohl' variable to any value.<br><br><a target="_blank" href="http://github.com/xolox/vim-easytags/commit/7e8533fceefb4358444997bf3deda8c1812069c7">http://github.com/xolox/vim-easytags/commit/7e8533fceefb4358444997bf3deda8c1812069c7</A>:<br> • Automatic/optional integration with shell.vim</td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13316">easytags.zip</a></td>
-    <td class="roweven" valign="top" nowrap><b>1.9.6</b></td>
-    <td class="roweven" valign="top" nowrap><i>2010-07-10</i></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13358">easytags.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.9.7</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-07-20</i></td>
     <td class="roweven" valign="top" nowrap>7.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=14483">Peter Odding</a></i></td>
-    <td class="roweven" valign="top" width="2000">* Improved README, added references to Vim documentation<br>&nbsp;&nbsp;<a target="_blank" href="http://github.com/xolox/vim-easytags/commit/726c08bf946ba3cdabab23a63bb8892c19408a04">http://github.com/xolox/vim-easytags/commit/726c08bf946ba3cdabab23a63bb8892c19408a04</A><br><br>* Handle patterns that are too large for Vim to evaluate<br>&nbsp;&nbsp;<a target="_blank" href="http://github.com/xolox/vim-easytags/commit/92cd87df83b24e1c45b946bc9eadbe4482de12ba">http://github.com/xolox/vim-easytags/commit/92cd87df83b24e1c45b946bc9eadbe4482de12ba</A><br><br>* Bug fix for strange &quot;E433: No tags file&quot; problem<br>&nbsp;&nbsp;<a target="_blank" href="http://github.com/xolox/vim-easytags/commit/4fef0c17749e687d670b2e9e4e429022ec4c1055">http://github.com/xolox/vim-easytags/commit/4fef0c17749e687d670b2e9e4e429022ec4c1055</A></td>
+    <td class="roweven" valign="top" width="2000"> • Create case folded tags files when &ignorecase is on:<br>&nbsp;&nbsp; <a target="_blank" href="http://github.com/xolox/vim-easytags/commit/ff64be5fe506a9a15dce28bac5b5585d4430f4a6">http://github.com/xolox/vim-easytags/commit/ff64be5fe506a9a15dce28bac5b5585d4430f4a6</A><br><br> • The plug-in now finally registers the global tags file automatically on both Windows and UNIX:<br>&nbsp;&nbsp; <a target="_blank" href="http://github.com/xolox/vim-easytags/commit/3b934f6e0d0d4a44875024713dd0aeefdcdd206b">http://github.com/xolox/vim-easytags/commit/3b934f6e0d0d4a44875024713dd0aeefdcdd206b</A></td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13198">easytags.zip</a></td>
-    <td class="rowodd" valign="top" nowrap><b>1.9.5</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2010-06-16</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13316">easytags.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.9.6</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-07-10</i></td>
     <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=14483">Peter Odding</a></i></td>
-    <td class="rowodd" valign="top" width="2000">Proper handling of unnamed buffers<br><a target="_blank" href="http://github.com/xolox/vim-easytags/commit/24cd42357f25f0cf182c83b3b82a3b60e6e6e9f0">http://github.com/xolox/vim-easytags/commit/24cd42357f25f0cf182c83b3b82a3b60e6e6e9f0</A></td>
+    <td class="rowodd" valign="top" width="2000">* Improved README, added references to Vim documentation<br>&nbsp;&nbsp;<a target="_blank" href="http://github.com/xolox/vim-easytags/commit/726c08bf946ba3cdabab23a63bb8892c19408a04">http://github.com/xolox/vim-easytags/commit/726c08bf946ba3cdabab23a63bb8892c19408a04</A><br><br>* Handle patterns that are too large for Vim to evaluate<br>&nbsp;&nbsp;<a target="_blank" href="http://github.com/xolox/vim-easytags/commit/92cd87df83b24e1c45b946bc9eadbe4482de12ba">http://github.com/xolox/vim-easytags/commit/92cd87df83b24e1c45b946bc9eadbe4482de12ba</A><br><br>* Bug fix for strange &quot;E433: No tags file&quot; problem<br>&nbsp;&nbsp;<a target="_blank" href="http://github.com/xolox/vim-easytags/commit/4fef0c17749e687d670b2e9e4e429022ec4c1055">http://github.com/xolox/vim-easytags/commit/4fef0c17749e687d670b2e9e4e429022ec4c1055</A></td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13197">easytags.zip</a></td>
-    <td class="roweven" valign="top" nowrap><b>1.9.4</b></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13198">easytags.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.9.5</b></td>
     <td class="roweven" valign="top" nowrap><i>2010-06-16</i></td>
     <td class="roweven" valign="top" nowrap>7.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=14483">Peter Odding</a></i></td>
-    <td class="roweven" valign="top" width="2000">Bug fix for E713: Cannot use empty key for Dictionary<br><a target="_blank" href="http://github.com/xolox/vim-easytags/commit/f31333832adf37467ff70218f889f00e77e57027">http://github.com/xolox/vim-easytags/commit/f31333832adf37467ff70218f889f00e77e57027</A></td>
+    <td class="roweven" valign="top" width="2000">Proper handling of unnamed buffers<br><a target="_blank" href="http://github.com/xolox/vim-easytags/commit/24cd42357f25f0cf182c83b3b82a3b60e6e6e9f0">http://github.com/xolox/vim-easytags/commit/24cd42357f25f0cf182c83b3b82a3b60e6e6e9f0</A></td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13185">easytags.zip</a></td>
-    <td class="rowodd" valign="top" nowrap><b>1.9.3</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2010-06-15</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13197">easytags.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.9.4</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-06-16</i></td>
     <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=14483">Peter Odding</a></i></td>
-    <td class="rowodd" valign="top" width="2000">Version detection of Exuberant Ctags, better error handling, bug fix for dynamic highlighting<br><a target="_blank" href="http://github.com/xolox/vim-easytags/commit/5cb775c9a8e8ea07abbb39f09f72c818c2ad518b">http://github.com/xolox/vim-easytags/commit/5cb775c9a8e8ea07abbb39f09f72c818c2ad518b</A></td>
+    <td class="rowodd" valign="top" width="2000">Bug fix for E713: Cannot use empty key for Dictionary<br><a target="_blank" href="http://github.com/xolox/vim-easytags/commit/f31333832adf37467ff70218f889f00e77e57027">http://github.com/xolox/vim-easytags/commit/f31333832adf37467ff70218f889f00e77e57027</A></td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13184">easytags.zip</a></td>
-    <td class="roweven" valign="top" nowrap><b>1.9.2</b></td>
-    <td class="roweven" valign="top" nowrap><i>2010-06-14</i></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13185">easytags.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.9.3</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-06-15</i></td>
     <td class="roweven" valign="top" nowrap>7.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=14483">Peter Odding</a></i></td>
-    <td class="roweven" valign="top" width="2000">Bug fix: Accidentally included local changes from project directory in previous release, sorry!</td>
+    <td class="roweven" valign="top" width="2000">Version detection of Exuberant Ctags, better error handling, bug fix for dynamic highlighting<br><a target="_blank" href="http://github.com/xolox/vim-easytags/commit/5cb775c9a8e8ea07abbb39f09f72c818c2ad518b">http://github.com/xolox/vim-easytags/commit/5cb775c9a8e8ea07abbb39f09f72c818c2ad518b</A></td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13178">easytags.zip</a></td>
-    <td class="rowodd" valign="top" nowrap><b>1.9.1</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2010-06-13</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13184">easytags.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.9.2</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-06-14</i></td>
     <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=14483">Peter Odding</a></i></td>
-    <td class="rowodd" valign="top" width="2000">Bug fix: Ignore missing tags file when caching tagged files<br><a target="_blank" href="http://github.com/xolox/vim-easytags/commit/d064e0639f488b975af12aad01040493e265804c">http://github.com/xolox/vim-easytags/commit/d064e0639f488b975af12aad01040493e265804c</A></td>
+    <td class="rowodd" valign="top" width="2000">Bug fix: Accidentally included local changes from project directory in previous release, sorry!</td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13172">easytags.zip</a></td>
-    <td class="roweven" valign="top" nowrap><b>1.9</b></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13178">easytags.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.9.1</b></td>
     <td class="roweven" valign="top" nowrap><i>2010-06-13</i></td>
     <td class="roweven" valign="top" nowrap>7.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=14483">Peter Odding</a></i></td>
-    <td class="roweven" valign="top" width="2000">Fixed tags file corruption on Windows!<br><a target="_blank" href="http://github.com/xolox/vim-easytags/commit/ad3bd15a76acaeb8bd5c92e104ab95a7b55f6fee">http://github.com/xolox/vim-easytags/commit/ad3bd15a76acaeb8bd5c92e104ab95a7b55f6fee</A><br><br> * Fixed tags file corruption on Windows: It turns out that the function readfile() accepts CR+NL line endings and just strips CR characters, however the writefile() function doesn't write CR+NL but just NL. Manually adding the CR characters to the end of each line before writing the tags file solves the corruption bug.<br><br> * The headers and entries in tags files are now properly separated from each other while rewriting the tags file to filter expired entries.<br><br> * Don't bother trying to filter expired tags when the tags file doesn't reference the current filename at all (improves performance a bit).<br><br> * Fixed a buggy easytags#file_has_tags() call in easytags#autoload() that made the plug-in always scan each edited file at least once.<br><br> * Changed folds to provide basic outline of function categories.<br><br> * Restructured definitions for default configuration of dynamic syntax highlighting support so definitions don't all have to be indented.<br><br>Sorry about the large diff, this version took a few days of experimentation to build which means lots of little changes.</td>
+    <td class="roweven" valign="top" width="2000">Bug fix: Ignore missing tags file when caching tagged files<br><a target="_blank" href="http://github.com/xolox/vim-easytags/commit/d064e0639f488b975af12aad01040493e265804c">http://github.com/xolox/vim-easytags/commit/d064e0639f488b975af12aad01040493e265804c</A></td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13162">easytags.zip</a></td>
-    <td class="rowodd" valign="top" nowrap><b>1.8.2</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2010-06-10</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13172">easytags.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.9</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-06-13</i></td>
     <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=14483">Peter Odding</a></i></td>
-    <td class="rowodd" valign="top" width="2000"> * Moved &tags option parsing to autoload script<br>&nbsp;&nbsp;<a target="_blank" href="http://github.com/xolox/vim-easytags/commit/1c8733ee23d792bf5f7c325f6e5babec14f798f2">http://github.com/xolox/vim-easytags/commit/1c8733ee23d792bf5f7c325f6e5babec14f798f2</A><br><br>* Bug fix: Expand ~ to $HOME manually on Win32 <br>&nbsp;&nbsp;<a target="_blank" href="http://github.com/xolox/vim-easytags/commit/71cc2ef765f18ab150bf834993c0e90a68797629">http://github.com/xolox/vim-easytags/commit/71cc2ef765f18ab150bf834993c0e90a68797629</A></td>
+    <td class="rowodd" valign="top" width="2000">Fixed tags file corruption on Windows!<br><a target="_blank" href="http://github.com/xolox/vim-easytags/commit/ad3bd15a76acaeb8bd5c92e104ab95a7b55f6fee">http://github.com/xolox/vim-easytags/commit/ad3bd15a76acaeb8bd5c92e104ab95a7b55f6fee</A><br><br> * Fixed tags file corruption on Windows: It turns out that the function readfile() accepts CR+NL line endings and just strips CR characters, however the writefile() function doesn't write CR+NL but just NL. Manually adding the CR characters to the end of each line before writing the tags file solves the corruption bug.<br><br> * The headers and entries in tags files are now properly separated from each other while rewriting the tags file to filter expired entries.<br><br> * Don't bother trying to filter expired tags when the tags file doesn't reference the current filename at all (improves performance a bit).<br><br> * Fixed a buggy easytags#file_has_tags() call in easytags#autoload() that made the plug-in always scan each edited file at least once.<br><br> * Changed folds to provide basic outline of function categories.<br><br> * Restructured definitions for default configuration of dynamic syntax highlighting support so definitions don't all have to be indented.<br><br>Sorry about the large diff, this version took a few days of experimentation to build which means lots of little changes.</td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13161">easytags.zip</a></td>
-    <td class="roweven" valign="top" nowrap><b>1.8.1</b></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13162">easytags.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.8.2</b></td>
     <td class="roweven" valign="top" nowrap><i>2010-06-10</i></td>
     <td class="roweven" valign="top" nowrap>7.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=14483">Peter Odding</a></i></td>
-    <td class="roweven" valign="top" width="2000">* Dynamic highlighting for Java identifiers<br>&nbsp;&nbsp;<a target="_blank" href="http://github.com/xolox/vim-easytags/commit/3f762e26ab7b9730ec0757257a9bd924d1f6f05e">http://github.com/xolox/vim-easytags/commit/3f762e26ab7b9730ec0757257a9bd924d1f6f05e</A></td>
+    <td class="roweven" valign="top" width="2000"> * Moved &tags option parsing to autoload script<br>&nbsp;&nbsp;<a target="_blank" href="http://github.com/xolox/vim-easytags/commit/1c8733ee23d792bf5f7c325f6e5babec14f798f2">http://github.com/xolox/vim-easytags/commit/1c8733ee23d792bf5f7c325f6e5babec14f798f2</A><br><br>* Bug fix: Expand ~ to $HOME manually on Win32 <br>&nbsp;&nbsp;<a target="_blank" href="http://github.com/xolox/vim-easytags/commit/71cc2ef765f18ab150bf834993c0e90a68797629">http://github.com/xolox/vim-easytags/commit/71cc2ef765f18ab150bf834993c0e90a68797629</A></td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13160">easytags.zip</a></td>
-    <td class="rowodd" valign="top" nowrap><b>1.8</b></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13161">easytags.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.8.1</b></td>
     <td class="rowodd" valign="top" nowrap><i>2010-06-10</i></td>
     <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=14483">Peter Odding</a></i></td>
-    <td class="rowodd" valign="top" width="2000">The plug-in now more-or-less supports Microsoft Windows, the only remaining problems are the flashing command prompt (which I know how to fix) and the fact that CursorHold seems to fire repeatedly (which I don't, yet).<br><br>* Make sure there's something to highlight before doing so<br>&nbsp;&nbsp;<a target="_blank" href="http://github.com/xolox/vim-easytags/commit/d227685a4110e5f3f11cd1b49118172f528a52d7">http://github.com/xolox/vim-easytags/commit/d227685a4110e5f3f11cd1b49118172f528a52d7</A><br><br>* Scan files not contained in tags file on 1st :edit<br>&nbsp;&nbsp;<a target="_blank" href="http://github.com/xolox/vim-easytags/commit/ac315a019ea96302d3ac7166d7f5febb34ee38ca">http://github.com/xolox/vim-easytags/commit/ac315a019ea96302d3ac7166d7f5febb34ee38ca</A><br><br>* Bug fix: Make sure tags include &quot;language&quot; field<br>&nbsp;&nbsp;<a target="_blank" href="http://github.com/xolox/vim-easytags/commit/d319117aa8392b2605d9bab64d1153827fd29488">http://github.com/xolox/vim-easytags/commit/d319117aa8392b2605d9bab64d1153827fd29488</A><br><br>* Bug fix: Add easytags_file to &tags option <br>&nbsp;&nbsp;<a target="_blank" href="http://github.com/xolox/vim-easytags/commit/62cbd2a750a40dd520b6a7f1a92463c92f37baca">http://github.com/xolox/vim-easytags/commit/62cbd2a750a40dd520b6a7f1a92463c92f37baca</A></td>
+    <td class="rowodd" valign="top" width="2000">* Dynamic highlighting for Java identifiers<br>&nbsp;&nbsp;<a target="_blank" href="http://github.com/xolox/vim-easytags/commit/3f762e26ab7b9730ec0757257a9bd924d1f6f05e">http://github.com/xolox/vim-easytags/commit/3f762e26ab7b9730ec0757257a9bd924d1f6f05e</A></td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13148">easytags.zip</a></td>
-    <td class="roweven" valign="top" nowrap><b>1.7</b></td>
-    <td class="roweven" valign="top" nowrap><i>2010-06-09</i></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13160">easytags.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.8</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-06-10</i></td>
     <td class="roweven" valign="top" nowrap>7.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=14483">Peter Odding</a></i></td>
-    <td class="roweven" valign="top" width="2000">* Added &quot;easytags_ignored_filetypes&quot; option<br>&nbsp;&nbsp;<a target="_blank" href="http://github.com/xolox/vim-easytags/commit/6dd0b7a882d8102f5cff1b2acc927b91cc03e514">http://github.com/xolox/vim-easytags/commit/6dd0b7a882d8102f5cff1b2acc927b91cc03e514</A><br><br>* Updated latest zip link in README<br>&nbsp;&nbsp;<a target="_blank" href="http://github.com/xolox/vim-easytags/commit/cfeac5a045f38799edf3076211eb791e39a5dee6">http://github.com/xolox/vim-easytags/commit/cfeac5a045f38799edf3076211eb791e39a5dee6</A><br><br>* Alias support & defaults for C/C++/Obj-C/Obj-C++<br>&nbsp;&nbsp;<a target="_blank" href="http://github.com/xolox/vim-easytags/commit/61b99f078557d65331e72de60d145e16b8bbb88e">http://github.com/xolox/vim-easytags/commit/61b99f078557d65331e72de60d145e16b8bbb88e</A></td>
+    <td class="roweven" valign="top" width="2000">The plug-in now more-or-less supports Microsoft Windows, the only remaining problems are the flashing command prompt (which I know how to fix) and the fact that CursorHold seems to fire repeatedly (which I don't, yet).<br><br>* Make sure there's something to highlight before doing so<br>&nbsp;&nbsp;<a target="_blank" href="http://github.com/xolox/vim-easytags/commit/d227685a4110e5f3f11cd1b49118172f528a52d7">http://github.com/xolox/vim-easytags/commit/d227685a4110e5f3f11cd1b49118172f528a52d7</A><br><br>* Scan files not contained in tags file on 1st :edit<br>&nbsp;&nbsp;<a target="_blank" href="http://github.com/xolox/vim-easytags/commit/ac315a019ea96302d3ac7166d7f5febb34ee38ca">http://github.com/xolox/vim-easytags/commit/ac315a019ea96302d3ac7166d7f5febb34ee38ca</A><br><br>* Bug fix: Make sure tags include &quot;language&quot; field<br>&nbsp;&nbsp;<a target="_blank" href="http://github.com/xolox/vim-easytags/commit/d319117aa8392b2605d9bab64d1153827fd29488">http://github.com/xolox/vim-easytags/commit/d319117aa8392b2605d9bab64d1153827fd29488</A><br><br>* Bug fix: Add easytags_file to &tags option <br>&nbsp;&nbsp;<a target="_blank" href="http://github.com/xolox/vim-easytags/commit/62cbd2a750a40dd520b6a7f1a92463c92f37baca">http://github.com/xolox/vim-easytags/commit/62cbd2a750a40dd520b6a7f1a92463c92f37baca</A></td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13134">easytags.zip</a></td>
-    <td class="rowodd" valign="top" nowrap><b>1.6.3</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2010-06-06</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13148">easytags.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.7</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-06-09</i></td>
     <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=14483">Peter Odding</a></i></td>
-    <td class="rowodd" valign="top" width="2000">* Moved script-local function s:unique() to autoload script:<br>&nbsp;&nbsp;<a target="_blank" href="http://github.com/xolox/vim-easytags/commit/8d13bd28ed9c5bfeef4ac09c2981821e1cf0fdc1">http://github.com/xolox/vim-easytags/commit/8d13bd28ed9c5bfeef4ac09c2981821e1cf0fdc1</A><br><br>* Wrapped public facing functions in try/catch blocks:<br>&nbsp;&nbsp;<a target="_blank" href="http://github.com/xolox/vim-easytags/commit/5bd20f02ebfd7c7bf5a33a2cd31a7d76a54911dd">http://github.com/xolox/vim-easytags/commit/5bd20f02ebfd7c7bf5a33a2cd31a7d76a54911dd</A><br><br>* Bug fix for undefined variable in easytags#get_tagsfile()<br>&nbsp;&nbsp;<a target="_blank" href="http://github.com/xolox/vim-easytags/commit/5bd20f02ebfd7c7bf5a33a2cd31a7d76a54911dd#L0L107">http://github.com/xolox/vim-easytags/commit/5bd20f02ebfd7c7bf5a33a2cd31a7d76a54911dd#L0L107</A></td>
+    <td class="rowodd" valign="top" width="2000">* Added &quot;easytags_ignored_filetypes&quot; option<br>&nbsp;&nbsp;<a target="_blank" href="http://github.com/xolox/vim-easytags/commit/6dd0b7a882d8102f5cff1b2acc927b91cc03e514">http://github.com/xolox/vim-easytags/commit/6dd0b7a882d8102f5cff1b2acc927b91cc03e514</A><br><br>* Updated latest zip link in README<br>&nbsp;&nbsp;<a target="_blank" href="http://github.com/xolox/vim-easytags/commit/cfeac5a045f38799edf3076211eb791e39a5dee6">http://github.com/xolox/vim-easytags/commit/cfeac5a045f38799edf3076211eb791e39a5dee6</A><br><br>* Alias support & defaults for C/C++/Obj-C/Obj-C++<br>&nbsp;&nbsp;<a target="_blank" href="http://github.com/xolox/vim-easytags/commit/61b99f078557d65331e72de60d145e16b8bbb88e">http://github.com/xolox/vim-easytags/commit/61b99f078557d65331e72de60d145e16b8bbb88e</A></td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13130">easytags.zip</a></td>
-    <td class="roweven" valign="top" nowrap><b>1.6.2</b></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13134">easytags.zip</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.6.3</b></td>
     <td class="roweven" valign="top" nowrap><i>2010-06-06</i></td>
     <td class="roweven" valign="top" nowrap>7.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=14483">Peter Odding</a></i></td>
-    <td class="roweven" valign="top" width="2000">Initial upload with fixed references to www.vim.org scripts entry</td>
+    <td class="roweven" valign="top" width="2000">* Moved script-local function s:unique() to autoload script:<br>&nbsp;&nbsp;<a target="_blank" href="http://github.com/xolox/vim-easytags/commit/8d13bd28ed9c5bfeef4ac09c2981821e1cf0fdc1">http://github.com/xolox/vim-easytags/commit/8d13bd28ed9c5bfeef4ac09c2981821e1cf0fdc1</A><br><br>* Wrapped public facing functions in try/catch blocks:<br>&nbsp;&nbsp;<a target="_blank" href="http://github.com/xolox/vim-easytags/commit/5bd20f02ebfd7c7bf5a33a2cd31a7d76a54911dd">http://github.com/xolox/vim-easytags/commit/5bd20f02ebfd7c7bf5a33a2cd31a7d76a54911dd</A><br><br>* Bug fix for undefined variable in easytags#get_tagsfile()<br>&nbsp;&nbsp;<a target="_blank" href="http://github.com/xolox/vim-easytags/commit/5bd20f02ebfd7c7bf5a33a2cd31a7d76a54911dd#L0L107">http://github.com/xolox/vim-easytags/commit/5bd20f02ebfd7c7bf5a33a2cd31a7d76a54911dd#L0L107</A></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13130">easytags.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.6.2</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-06-06</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=14483">Peter Odding</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Initial upload with fixed references to www.vim.org scripts entry</td>
 </tr>
 </table>
 <!-- finish off the framework -->

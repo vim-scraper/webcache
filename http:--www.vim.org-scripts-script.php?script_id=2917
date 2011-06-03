@@ -167,7 +167,7 @@
   <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
   <td>
     Rating <b>4/1</b>,
-    Downloaded by 382  </td>
+    Downloaded by 412  </td>
   <td class="lightbg">
   <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
   </td>
@@ -223,84 +223,92 @@ Click on the package to download.
     <th valign="top">release notes</th>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=14160">tplugin.vba</a></td>
-    <td class="rowodd" valign="top" nowrap><b>0.11</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2010-11-01</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15733">tplugin.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.12</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2011-05-26</i></td>
     <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
-    <td class="rowodd" valign="top" width="2000">Please see <a target="_blank" href="http://github.com/tomtom/tplugin_vim/commits/master/">http://github.com/tomtom/tplugin_vim/commits/master/</A></td>
+    <td class="rowodd" valign="top" width="2000">- Run helptags with silent!<br>- vcsdo: Finalize the name of the log buffer as script-local variable<br>- Experimental support for &lt;VIMPLUGIN&gt; tags used in vx* plugins.<br>- .gitignore<br>- Experimental support for parsing *-addon-info.txt and simpler dependency management<br>- s:AutoloadFunction(): Properly support autoload funcs in subdirectories<br>- &rtp wasn't properly updated in certain situations<br>- Experimental: Scan sources for VimEnter autocommands<br>- autoload/tplugin/vcscommand: Adapt to new arguments<br>- FIX: scanning of autocmds: Don't use \k<br>- autoload/tplugin/fugitive: Don't call #fugitive_utility#VimEnter<br>- SetRoot(): Use inputdialog() to display &quot;Rescanning roots: Please be patient&quot; message<br>- TPluginRequire: Remove check for s:done[rootrepo] (over-optimization)<br>- s:TPluginComplete(): show all known repos as completion candidates<br>MD5 checksum: 8ff9f5f7c97d3e306bb543a60cf16271</td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13976">tplugin.vba</a></td>
-    <td class="roweven" valign="top" nowrap><b>0.10</b></td>
-    <td class="roweven" valign="top" nowrap><i>2010-10-02</i></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=14160">tplugin.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.11</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-11-01</i></td>
     <td class="roweven" valign="top" nowrap>7.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
-    <td class="roweven" valign="top" width="2000">- Make helptags of repositories that weren't yet loaded available to the user.<br>- Renamed variables: g:tplugin#autoload_exclude, g:tplugin#scan<br>- Custom autoload definitions for some 3rd party plugins (PoC)</td>
+    <td class="roweven" valign="top" width="2000">Please see <a target="_blank" href="http://github.com/tomtom/tplugin_vim/commits/master/">http://github.com/tomtom/tplugin_vim/commits/master/</A></td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13660">tplugin.vba</a></td>
-    <td class="rowodd" valign="top" nowrap><b>0.9</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2010-08-24</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=13976">tplugin.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.10</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-10-02</i></td>
     <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
-    <td class="rowodd" valign="top" width="2000">- Renamed #TPluginInclude to @TPluginInclude<br>- Added support for @TPluginMap, @TPluginBefore, @TPluginAfter annotations<br>- TPluginMap() restores the proper mode<br>- Load after/autoload/* files<br>- ...</td>
+    <td class="rowodd" valign="top" width="2000">- Make helptags of repositories that weren't yet loaded available to the user.<br>- Renamed variables: g:tplugin#autoload_exclude, g:tplugin#scan<br>- Custom autoload definitions for some 3rd party plugins (PoC)</td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=12831">tplugin.vba</a></td>
-    <td class="roweven" valign="top" nowrap><b>0.8</b></td>
-    <td class="roweven" valign="top" nowrap><i>2010-04-14</i></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=13660">tplugin.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.9</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-08-24</i></td>
     <td class="roweven" valign="top" nowrap>7.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
-    <td class="roweven" valign="top" width="2000">- Delete commands only when they were defined without a bang; make sure all commands in a file defined without a bang are deleted<br>- g:tplugin_scan defaults to 'cfpt'<br>- Don't register each autoload function but deduce the repo/plugin from the prefix.<br>- g:tplugin_scan defaults to 'cfpta'<br>- TPluginCommand and TPluginFunction are functions. Removed the commands with the same name.<br>- #TPluginInclude tag<br></td>
+    <td class="roweven" valign="top" width="2000">- Renamed #TPluginInclude to @TPluginInclude<br>- Added support for @TPluginMap, @TPluginBefore, @TPluginAfter annotations<br>- TPluginMap() restores the proper mode<br>- Load after/autoload/* files<br>- ...</td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=12443">tplugin.vba.gz</a></td>
-    <td class="rowodd" valign="top" nowrap><b>0.7</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2010-02-20</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=12831">tplugin.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.8</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-04-14</i></td>
     <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
-    <td class="rowodd" valign="top" width="2000">- TPluginScan: try to maintain information about command-line completion (this won't work if a custom script-local completion function is used)<br></td>
+    <td class="rowodd" valign="top" width="2000">- Delete commands only when they were defined without a bang; make sure all commands in a file defined without a bang are deleted<br>- g:tplugin_scan defaults to 'cfpt'<br>- Don't register each autoload function but deduce the repo/plugin from the prefix.<br>- g:tplugin_scan defaults to 'cfpta'<br>- TPluginCommand and TPluginFunction are functions. Removed the commands with the same name.<br>- #TPluginInclude tag<br></td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=12391">tplugin.vba.gz</a></td>
-    <td class="roweven" valign="top" nowrap><b>0.6</b></td>
-    <td class="roweven" valign="top" nowrap><i>2010-02-16</i></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=12443">tplugin.vba.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.7</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-02-20</i></td>
     <td class="roweven" valign="top" nowrap>7.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
-    <td class="roweven" valign="top" width="2000">- CHANGE: The root specific autoload files are now called '_tplugin.vim'<br>- Provide a poor-man implementation of fnameescape() for users of older versions of vim.<br>- If the root name ends with '*', the root is no directory tree but a single directory (actually a plugin repo)<br>- s:TPluginComplete(): Hide tplugin autoload files.<br></td>
+    <td class="roweven" valign="top" width="2000">- TPluginScan: try to maintain information about command-line completion (this won't work if a custom script-local completion function is used)<br></td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=12275">tplugin.vba.gz</a></td>
-    <td class="rowodd" valign="top" nowrap><b>0.5</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2010-02-02</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=12391">tplugin.vba.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.6</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-02-16</i></td>
     <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
-    <td class="rowodd" valign="top" width="2000">- Support for ftdetect<br>- Support for ftplugins in directories and named {&FT}_{NAME}.vim<br>- :TPlugin accepts &quot;-&quot; as argument, which means load &quot;NO PLUGIN&quot;.<br>- :TPluginScan: don't use full filenames as arguments for TPluginFiletype()<br>- FIX: Concatenation of filetype-related files<br>- FIX: Don't add autoload files to the menu.<br>- FIX: Don't load any plugins when autoloading an &quot;autoload function&quot;<br>- FIX: Filetype-related problems<br>- FIX: s:ScanLine: Don't create duplicate autoload commands.<br>- FIX: s:ScanRoots(): Remove empty entries from filelist<br>- g:tplugin_autoload_exclude: Exclude repos from autoloading<br>- If g:tplugin_autoload == 2, run |:TPluginScan| after updating tplugin.<br>- Moved autoload functions to macros/tplugin.vim -- users have to rescan their repos.<br>- Per repo metadata (ROOT/REPO/tplugin.vim)<br>- Relaxed the rx for functions<br>- Replaced :TPluginMap with a function TPluginMap()<br>- Speed up :TPluginScan (s:ScanRoots(): run glob() only once, filter file contents before passing it to s:ScanSource())<br>- TPluginMap(): Don't map keys if the key already is mapped (via maparg())<br></td>
+    <td class="rowodd" valign="top" width="2000">- CHANGE: The root specific autoload files are now called '_tplugin.vim'<br>- Provide a poor-man implementation of fnameescape() for users of older versions of vim.<br>- If the root name ends with '*', the root is no directory tree but a single directory (actually a plugin repo)<br>- s:TPluginComplete(): Hide tplugin autoload files.<br></td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=12127">tplugin.vba.gz</a></td>
-    <td class="roweven" valign="top" nowrap><b>0.3</b></td>
-    <td class="roweven" valign="top" nowrap><i>2010-01-19</i></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=12275">tplugin.vba.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.5</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-02-02</i></td>
     <td class="roweven" valign="top" nowrap>7.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
-    <td class="roweven" valign="top" width="2000">- TPluginBefore, TPluginAfter commands to define inter-repo dependencies<br>- Support for autoloading filetypes<br>- Support for autoloading &lt;plug&gt; maps<br>- Build helptags during :TPluginScan (i.e. support for helptags requires <br>autoload to be enabled) - Call delcommand before autoloading a plugin because of an unknown command<br>- TPluginScan: Take a root directory as the second optional argument<br>- The autoload file was renamed to ROOT/tplugin.vim<br>- When adding a repository to &rtp, ROOT/tplugin_REPO.vim is loaded<br></td>
+    <td class="roweven" valign="top" width="2000">- Support for ftdetect<br>- Support for ftplugins in directories and named {&FT}_{NAME}.vim<br>- :TPlugin accepts &quot;-&quot; as argument, which means load &quot;NO PLUGIN&quot;.<br>- :TPluginScan: don't use full filenames as arguments for TPluginFiletype()<br>- FIX: Concatenation of filetype-related files<br>- FIX: Don't add autoload files to the menu.<br>- FIX: Don't load any plugins when autoloading an &quot;autoload function&quot;<br>- FIX: Filetype-related problems<br>- FIX: s:ScanLine: Don't create duplicate autoload commands.<br>- FIX: s:ScanRoots(): Remove empty entries from filelist<br>- g:tplugin_autoload_exclude: Exclude repos from autoloading<br>- If g:tplugin_autoload == 2, run |:TPluginScan| after updating tplugin.<br>- Moved autoload functions to macros/tplugin.vim -- users have to rescan their repos.<br>- Per repo metadata (ROOT/REPO/tplugin.vim)<br>- Relaxed the rx for functions<br>- Replaced :TPluginMap with a function TPluginMap()<br>- Speed up :TPluginScan (s:ScanRoots(): run glob() only once, filter file contents before passing it to s:ScanSource())<br>- TPluginMap(): Don't map keys if the key already is mapped (via maparg())<br></td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=12050">tplugin.vba.gz</a></td>
-    <td class="rowodd" valign="top" nowrap><b>0.2</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2010-01-10</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=12127">tplugin.vba.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.3</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-01-19</i></td>
     <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
-    <td class="rowodd" valign="top" width="2000">- Experimental autoload for commands and functions (à la AsNeeded)<br>- Improved command-line completion for :TPlugin<br>- The after path is inserted at the second to last position<br>- When autoload is enabled and g:tplugin_menu_prefix is not empty, build a menu with available plugins (NOTE: this is disabled by default)<br></td>
+    <td class="rowodd" valign="top" width="2000">- TPluginBefore, TPluginAfter commands to define inter-repo dependencies<br>- Support for autoloading filetypes<br>- Support for autoloading &lt;plug&gt; maps<br>- Build helptags during :TPluginScan (i.e. support for helptags requires <br>autoload to be enabled) - Call delcommand before autoloading a plugin because of an unknown command<br>- TPluginScan: Take a root directory as the second optional argument<br>- The autoload file was renamed to ROOT/tplugin.vim<br>- When adding a repository to &rtp, ROOT/tplugin_REPO.vim is loaded<br></td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=12015">tplugin.vba.gz</a></td>
-    <td class="roweven" valign="top" nowrap><b>0.1</b></td>
-    <td class="roweven" valign="top" nowrap><i>2010-01-05</i></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=12050">tplugin.vba.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.2</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-01-10</i></td>
     <td class="roweven" valign="top" nowrap>7.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
-    <td class="roweven" valign="top" width="2000">Initial upload</td>
+    <td class="roweven" valign="top" width="2000">- Experimental autoload for commands and functions (à la AsNeeded)<br>- Improved command-line completion for :TPlugin<br>- The after path is inserted at the second to last position<br>- When autoload is enabled and g:tplugin_menu_prefix is not empty, build a menu with available plugins (NOTE: this is disabled by default)<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=12015">tplugin.vba.gz</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.1</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-01-05</i></td>
+    <td class="rowodd" valign="top" nowrap>7.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Initial upload</td>
 </tr>
 </table>
 <!-- finish off the framework -->

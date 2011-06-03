@@ -166,8 +166,8 @@
 <tr>
   <td class="lightbg"><b>&nbsp;script karma&nbsp;</b></td>
   <td>
-    Rating <b>60/22</b>,
-    Downloaded by 2386  </td>
+    Rating <b>65/24</b>,
+    Downloaded by 2458  </td>
   <td class="lightbg">
   <b>&nbsp;Comments, bugs, improvements&nbsp;</b>
   </td>
@@ -223,36 +223,44 @@ Click on the package to download.
     <th valign="top">release notes</th>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=14237">checksyntax.vba</a></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=15729">checksyntax.vba</a></td>
     <td class="rowodd" valign="top" nowrap><b>1.01</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2010-11-11</i></td>
+    <td class="rowodd" valign="top" nowrap><i>2011-05-26</i></td>
     <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
-    <td class="rowodd" valign="top" width="2000">- Experimental support for python: pyflakes, pylint<br>- redraw before calling CheckSyntaxSucceed/CheckSyntaxFail<br>- Make sure we're in the right buffer<br>MD5 checksum: f94781c5748200e809a28562a692ed6b</td>
+    <td class="rowodd" valign="top" width="2000">- checksyntax#Check: Check &modified before anything else<br>- .gitignore<br>- Support for &quot;modified&quot; property<br>- Check executable() when setting the *.auto property.<br>- When eclim is installed: Set g:checksyntax.php.auto, not b:checksyntax.php.auto<br>- Do not map `&lt;F5&gt;` if it is used already.<br>- Use either location list (default) or optionally the quickfix list<br>- CheckSyntaxFail(): call .Open(); fixes #6<br>MD5 checksum: 4425f1434baa8795fbccec38721eef67</td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=14146">checksyntax.vba</a></td>
-    <td class="roweven" valign="top" nowrap><b>1.0</b></td>
-    <td class="roweven" valign="top" nowrap><i>2010-10-29</i></td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=14237">checksyntax.vba</a></td>
+    <td class="roweven" valign="top" nowrap><b>1.01</b></td>
+    <td class="roweven" valign="top" nowrap><i>2010-11-11</i></td>
     <td class="roweven" valign="top" nowrap>7.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
-    <td class="roweven" valign="top" width="2000">- checksyntax_compiler_{&ft} & checksyntax_cmd_{&ft} variables can be buffer local<br>- The info maintained as g:checksyntax_* variables is now kept in a dictionary named g:checksyntax<br>- Support for gjslint<br>- Some bug fixes (e.g. tidy)<br></td>
+    <td class="roweven" valign="top" width="2000">- Experimental support for python: pyflakes, pylint<br>- redraw before calling CheckSyntaxSucceed/CheckSyntaxFail<br>- Make sure we're in the right buffer<br>MD5 checksum: f94781c5748200e809a28562a692ed6b</td>
 </tr>
 <tr>
-        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=11435">checksyntax.vba.gz</a></td>
-    <td class="rowodd" valign="top" nowrap><b>0.5</b></td>
-    <td class="rowodd" valign="top" nowrap><i>2009-09-26</i></td>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=14146">checksyntax.vba</a></td>
+    <td class="rowodd" valign="top" nowrap><b>1.0</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2010-10-29</i></td>
     <td class="rowodd" valign="top" nowrap>7.0</td>
     <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
-    <td class="rowodd" valign="top" width="2000">- use vim compilers if available (e.g., tidy, xmllint ...)<br>- Support for jsl (javascript lint).<br>- Support for jlint.<br>- Support for lua (thanks to norman)<br>- Don't automatically check php files if eclim is installed.<br>- Allow auto_* parameters to be buffer local.<br>- FIX: Unlet current_compiler, use g:current_compiler<br>- FIX: garbled screen: use redraw! (thanks to Vincent de Lau)<br>- FIX: makeprg was restored in the wrong window<br></td>
+    <td class="rowodd" valign="top" width="2000">- checksyntax_compiler_{&ft} & checksyntax_cmd_{&ft} variables can be buffer local<br>- The info maintained as g:checksyntax_* variables is now kept in a dictionary named g:checksyntax<br>- Support for gjslint<br>- Some bug fixes (e.g. tidy)<br></td>
 </tr>
 <tr>
-        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=4889">checksyntax.zip</a></td>
-    <td class="roweven" valign="top" nowrap><b>0.3</b></td>
-    <td class="roweven" valign="top" nowrap><i>2005-12-12</i></td>
-    <td class="roweven" valign="top" nowrap>6.0</td>
+        <td class="roweven" valign="top" nowrap><a href="download_script.php?src_id=11435">checksyntax.vba.gz</a></td>
+    <td class="roweven" valign="top" nowrap><b>0.5</b></td>
+    <td class="roweven" valign="top" nowrap><i>2009-09-26</i></td>
+    <td class="roweven" valign="top" nowrap>7.0</td>
     <td class="roweven" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
-    <td class="roweven" valign="top" width="2000">Initial upload</td>
+    <td class="roweven" valign="top" width="2000">- use vim compilers if available (e.g., tidy, xmllint ...)<br>- Support for jsl (javascript lint).<br>- Support for jlint.<br>- Support for lua (thanks to norman)<br>- Don't automatically check php files if eclim is installed.<br>- Allow auto_* parameters to be buffer local.<br>- FIX: Unlet current_compiler, use g:current_compiler<br>- FIX: garbled screen: use redraw! (thanks to Vincent de Lau)<br>- FIX: makeprg was restored in the wrong window<br></td>
+</tr>
+<tr>
+        <td class="rowodd" valign="top" nowrap><a href="download_script.php?src_id=4889">checksyntax.zip</a></td>
+    <td class="rowodd" valign="top" nowrap><b>0.3</b></td>
+    <td class="rowodd" valign="top" nowrap><i>2005-12-12</i></td>
+    <td class="rowodd" valign="top" nowrap>6.0</td>
+    <td class="rowodd" valign="top"><i><a href="/account/profile.php?user_id=4037">Tom Link</a></i></td>
+    <td class="rowodd" valign="top" width="2000">Initial upload</td>
 </tr>
 </table>
 <!-- finish off the framework -->
